@@ -1,0 +1,108 @@
+MODSIM World 2015
+Web Enabled Selection Method for Key Performance Indicators for Manufacturing
+Kaleen Lawsure, Barry Ezell, Andrew Collins
+Virginia Modeling, Analysis and Simulation Center
+Suffolk, VA
+{klawsure, bezel, ajcollin}@odu.edu
+John Horst
+National Institute for Standards and Technology
+Gaithersburg, MD john.horst@nist.gov
+ABSTRACT
+Patrick Hester
+Old Dominion University
+Norfolk, VA pthester@odu.edu
+Key Performance Indicators (KPI) are becoming an essential part of a manufacturing organization’s ability to monitor and ensure its strategic health. Furthermore, selecting the right mix of KPIs, in line with an organization’s strategic goals, is also essential. This paper outlines the development of a web-enabled database tool to support a selection method for KPIs for manufacturing which was developed by National Institute of Standards and Technology (NIST). In the method, KPIs are selected to effectively achieve certain criteria for a target manufacturing process. Subject matters experts use the tool to perform scoring of criteria weights and KPI/criteria pairs. These scores are analyzed and iterated in order to determine balanced KPI sets, which best satisfy the chosen criteria and the stated critical objectives. A prototype tool, a web-enabled database, was developed for the purpose of facilitating the pilot implementation of the NIST methodology at select manufacturing plants. This paper provides a description of the NIST methodology and the tool development.
+ABOUT THE AUTHORS
+Kaleen Lawsure is a project scientist at the Virginia Modeling, Analysis and Simulation Center of Old Dominion University. Ms. Lawsure provides analytic support for research conducted in the domains of Homeland Security and Emergency Management. Her most recent work has supported web-enabled database development and management for state and regional support for grant allocation of Department of Homeland Security funds.
+Barry Ezell, Ph.D., is an associate research professor and Chief Scientist at Old Dominion University’s Virginia Modeling Analysis and Simulation Center (VMASC). Barry is best known for his contributions in terrorism risk analysis, critical infrastructure and industrial control system risk analytics. Barry has 26 years of experience in military decision-making, operations research and risk analysis in IC, DOD, and DHS. Barry’s expertise is in cost benefit analysis, quantitative risk assessment and multiple objective decision analysis to inform decision-making. Barry has taught several short courses in decision and risk analysis to risk analyst from industry and DHS, IC, FFRDCs and DOD. Barry currently serves as the President of the Security Analysis Risk Management Association.
+Andrew J. Collins, Ph.D., is a Research Assistant Professor at the Virginia Modeling, Analysis, and Simulation Center, a research center of Old Dominion University. He obtained a Ph.D. in Operations Research from the University of Southampton in 2009. He is currently focused on the applications of agent-based modeling to real world problems like housing foreclosures, crowd evacuations and insurgency. He is also interested in the impact of visual rhetoric on the presentation of simulation results.
+John Horst is a project leader at the Engineering Laboratory of the National Institute of Standards and Technology. His current research seeks to develop methods and models to enable real-time control at the production level of manufacturing. He has also published research on topics such as an open architecture motion controller for a coordinate measuring machine, a hash table based algorithm for object pose estimation from a single monocular vision sensor, a spatial/temporal algorithm for computing the distance to objects from a sequence of images, an algorithm for efficient data reduction of curves in n-dimensional space, an algorithm to generate a smooth trajectory for an autonomous on-road vehicle, and a novel quantitative metric for machine intelligence.
+2015 Paper No. 43 Page 1 of 9
+
+MODSIM World 2015
+Patrick Hester, Ph.D., is an Associate Professor of Engineering Management and Systems Engineering at Old Dominion University. He received a Ph.D. in Risk and Reliability Engineering and Management from Vanderbilt University and a B.S. in Naval Architecture and Marine Engineering from the Webb Institute. Dr. Hester has been involved in research and consulting activities involving systemic thinking, multi-criteria decision analysis, and performance measurement and management for diverse agencies, including Naval Surface Warfare Center Dahlgren Division, NASA Langley Research Center, and U.S. Department of Homeland Security. His research interests include systemic thinking, stakeholder analysis, enterprise performance measurement and management, and multi- criteria decision analysis, and he is a member of the Institute of Industrial Engineers, Performance Management Association, and the International Society on Multiple Criteria Decision Making. His current research is summarized in his 2014 book, Systemic Thinking: Fundamentals for Understanding Problems and Messes.
+2015 Paper No. 43 Page 2 of 9
+
+Web Enabled Selection Method for Key Performance Indicators for Manufacturing
+Kaleen Lawsure, Barry Ezell, Andrew Collins
+Virginia Modeling, Analysis and Simulation Center
+Suffolk, VA
+{klawsure, bezel, ajcollin}@odu.edu
+INTRODUCTION
+John Horst
+National Institute for Standards and Technology
+Washington, DC john.horst@nist.gov
+Patrick Hester
+Old Dominion University
+Norfolk, VA PTHester@odu.edu
+This paper describes the development of a web-based tool to implement the Key Performance Indicators (KPI) selection methodology developed by Horst and Weiss (2015) for any manufacturing process. This methodology involves a facilitated meeting of key stakeholders for selection of KPI sets. Quantitative scores for both the KPI and the metrics are used to score those KPIs in the manufacturing process. The web-based tool was developed to provide an easily accessible input mechanism for the meeting participants as well as the automation of the different calculations need for this methodology.
+The next section discusses KPIs and the need for the new selection methodology for manufacturing processes. This is followed by a brief overview of the method and a discussion on the tool development. The paper wraps up with conclusions on the approach.
+BACKGROUND
+Performance measurements, and particularly KPIs, provide managers and decision-makers with a snapshot of their business operations, specifically how well the business is achieving its goals. Quantitative measures to aid in decision making have been used since the inception of decision analysis (Keeney, 1982; von Neumann & Morgenstern, 1944). KPIs are used to reflect both the overall performance of a business and the performance of just one part of it. The method of selection described in this paper focuses on manufacturing systems.
+Deriving KPIs is not a simple accounting task, as it must include a deep understanding of the business or operation to be successful (Meyers & Hester, 2011), such as, an understanding of the organizational mission and system context. As such, different Performance Measurement Systems (PMS) have been proposed to determine and monitor KPIs. Probably the most well-known approach is the Balanced Scorecard (Kaplan, 2008; Kaplan & Norton, 1996). This approach stresses causal linkages between four perspectives—financial, internal, customer, and learning that are built to support an organization’s vision and strategy (Baggett & Hester, 2013). Other PMS include the Performance Prism (Neely, Adams, & Kennerley, 2002) and the Performance Measurement Matrix (Keegan, Eiler, & Jones, 1989).
+Though there are different PMS available, it is estimated that 70% of such systems fail after they are implemented (Baggett & Hester, 2013; Neely & Bourne, 2000). One reason for this is that organizations often blindly follow PMS design perspectives and allow the PMS framework to constrain the implementation, leading to “excessive, redundant or flawed measures that drive inappropriate behaviors” (Paranjape, Rossiter, & Pantano, 2006). It has also been suggested that PMS implementations often fail as a result of unbalanced and irrelevant metrics, resulting in significant organizational cost and wasted opportunities (Baggett & Hester, 2013). Complexity and the cognitive load required for the above mentioned approaches might also be a reason for their failure. George Miller famously pointed out that human can only process five to nine pieces of information at one time (Miller, 1956), and techniques like the Balanced Scorecard and Performance Measurement Matrix require the user to consider potentially dozens of relationships at one time. Thus there is a demand for simple KPI selection processes. One such process has been suggested by Horst and Weiss (2015), which focuses on manufacturing processes and excludes much of the complexity found in other PMS.
+2015 Paper No. 43 Page 3 of 9
+MODSIM World 2015
+
+METHOD
+The method of KPI selection derived by Horst and Weiss (2015) involves a series of sequential stages for the stakeholders to be guided through. These steps are: (1) selection of effectiveness criteria and feasible KPIs, (2) scoring of the importance to the target manufacturing process of each of the effectiveness criteria, (3) scoring each KPI for how well it satisfies each effectiveness criteria, (4) determination of overall KPI scores, (5) discussion and selection of KPI sets (including scoring how balanced the KPIs are), (6) comparing normalized scores from each set, and (7) selecting and implementing the set with the highest score.
+The first stage of the process is for the stakeholder to decide what KPIs will be considered and what effectiveness criteria will be used. Suggested criteria are: aligned, quantifiable, relevant, predictive, standardized, verified, accurate, timely, traceable, independent, actionable, buy-in, understandable, documented, and inexpensive (ISO, 2014). For the definitions of the effectiveness criteria, see (ISO, 2014). The selection of KPIs will depend on the industry and current stakeholder preference. There are many KPIs to choose from and Marr (2012) identifies 75, including; Six Sigma level, Project Schedule Variance (PSV), First Past Yield, and Machine downtime.
+The second stage of the process involves scoring of the importance of each of the effective criterion. It is suggested that a scale from 1 to 10 be used, although a Likert scale would work just as effectively. This scoring is done by each attendee, who then scores each KPI against each criterion, using the same scale.. The selection of scores for each KPI with respect to each criterion can be a time consuming activity and may result in decision fatigue (Baumeister & Tierney, 2011). Thus, is it imperative that a limited number of KPIs are selected in any initial implementation of this process.
+Once all the attendees have scored all the criteria and the KPIs for each criterion, each KPI is given a score, by each participant. The score is determined by equation (1):
+(1)
+Where M is the number of criteria, Eik is the ith KPI score from the kth stakeholder. Eijk is the ith KPI score, from the kth stakeholder, for the jth effectiveness criterion. The weight of the jth criterion, from the kth stakeholder, is given by wjk. Scores are given by each participant and are based on their own weighting of the effectiveness criteria. To try and avoid any bias for certain criterion, another possible approach is to use stakeholder average weightings for the effectiveness criteria, which is shown in equation (2):
+(2)
+The equations can also be used to score a subset of KPIs as well, for example, those that have the immutable criteria. Immutable criteria are those KPIs with values that cannot be changed or influenced by stakeholders. For example, the quantifiable criterion is immutable because quantifiable KPI cannot be influenced by stakeholders. Alternatively, the timely criterion can be influenced by the way the internal stakeholders process the KPI. These scores are discussed among the stakeholders and changes are made as appropriate. For instance, a participant might have scored a KPI incorrectly due to a misunderstanding of the definitions. Based on this discussion, KPI sets are selected and scored (then normalized because each set might have a different number of KPIs in it). Based on this scoring the set with highest score is selected and implemented.
+MODSIM World 2015
+  2015 Paper No. 43 Page 4 of 9
+
+TOOL DEVELOPMENT
+A web-enabled database (Figure 1) was developed, using FileMaker Pro®1, to facilitate data entry and analysis of stakeholder decisions for the methodology described above. This platform enabled the creation of multiple user layouts and views of the database, providing security and an easily accessible interface for the overall KPI selection method. The database facilitates both administrative (Figure 2) and stakeholder (Figure 3) tasks. Administrative tasks include identifying a target manufacturing process, process critical objectives, relevant KPIs, and scoring criteria.
+Figure 1. System Architecture
+Figure 2. Administrative Workflow
+1 Certain commercial companies and their equipment, instruments, or materials are identified in this paper in order to adequately specify certain concepts. Such identification does not imply any judgment of the companies or their products, whether favorable or unfavorable, nor is it intended to imply that the materials or equipment identified are necessarily the best available for their intended function.
+MODSIM World 2015
+   2015 Paper No. 43 Page 5 of 9
+
+Figure 3. Stakeholder Workflow
+After an initial setup, stakeholders are able to access the database and see any auto-populated information provided by the administrator. Stakeholders then can, as individuals or as a group, provide criteria assessments of relative importance of criteria to a target process. This is achieved using a human measurement scale from “not important at all” to “absolutely important.” First, stakeholders assessed the criteria as individuals. These scores are averaged and are used to stimulate a group discussion on criteria. This discussion might result in a reassessment of the criteria by stakeholders. Ultimately, the group will need to decide on how each criterion should be scored for use in the assessment of the KPIs.
+KPIs will then be evaluated based on how well they satisfied each criterion on a scale from “not satisfying at all” to “totally satisfying.” Individual stakeholders conduct an initial assessment (Figure 4), then again as a group. Based on both individual and group inputs, an effectiveness score for each KPI is generated for both mutable and immutable criteria, as well as the mean and standard deviation for each KPI criteria pair score. Based on group discussion of results and iterative scoring a prioritized list of KPIs is generated.
+Figure 4. KPI Criteria Pair Scoring Example
+The final step in the process is for the stakeholders to select KPI sets, based on their relevance, to the identified critical objectives. Using KPI sets of five to nine KPIs for each critical objective, an additive KPI set score is generated based on final group decisions (Figure 5). Manufacturers can then choose a KPI set for implementation and validation through actual trial runs.
+MODSIM World 2015
+  2015 Paper No. 43 Page 6 of 9
+
+ Database Enhancements and Limitation
+Figure 5. KPI Set Example
+The database tool allows companies to create master KPI and criteria lists from which to choose relevant scoring pairs based on different targeted processes. This allows companies to have multiple working groups focusing on different aspects of the manufacturing process, providing enough flexibility to be able to assess other areas of interest, such as safety and costumer focus.
+The database administrator is able to add or delete critical objectives, criteria, or KPIs which automatic updates to all users thus allow real-time updating of the databased based on group discussions and decisions. These updates are reflected in automatically generated tables within the interface. These tables, while scrollable, were truncated to the limited size of the on screen layout making readability difficult. Therefore, users have been given the option of opening a stacked window allowing access to the master criteria (Figure 6) and KPI lists. These lists provide additional information and selection options for stakeholders within the confines of a limited screen real estate environment to access the database.
+2015 Paper No. 43 Page 7 of 9
+MODSIM World 2015
+
+Figure 6. Criteria Master List Example
+As this methodology is iterative in nature, the database does not capture all the changes made throughout the process. Only the final assessment and scoring decisions are captured in the current tool. Further phases of tool development will capture each of the individual and group decision points. Furthermore, capturing individual and group notes or action items is a priority, especially given this limitation. A “Notes” or “To Do” action item table has been enabled through a floating stacked pop-up window.
+Further development is also required to improve printing and reporting capabilities. FileMaker Pro®, while a powerful database management tool, has limited web publishing capabilities. The WebDirect feature, used to access the database online, does not accommodate printing by any means other than directly from the web browser. The raw data may be exported, but refined output products must be developed and accessed within the desktop application.
+On 16 December 2014, a pilot application of the tool for a large chemical company was used to support the KPI methodology. One manufacturing process was targeted to evaluate for environment, health and safety (EH&S). We identified many interface uses and limitations that will be useful in the development of the system. This pilot application provided a lot for insightful feedback for the project team which will be incorporated in future versions of the model.
+CONCLUSION
+The paper provides an overview for a NIST approach to the selection of Key Performance Indicators (KPI), and discusses why there was a demand for such an approach. To ensure the practical implementation of the approach, a web-based tool was developed using File Maker Pro. The combined methodology and tool provide an overall toolset for KPI selection for manufacturing processes.
+ACKNOWLEDGEMENTS
+The authors wish to thank the National Institute of Standards and Technology (NIST) for funding the project, Applied Research using Multi-attribute Value Theory in the Design of Key Performance Indicator Effectiveness for Sensing and Control Smart Manufacturing (2014-NIST-MSE-01), which the work presented in this paper is part.
+2015 Paper No. 43 Page 8 of 9
+MODSIM World 2015
+ 
+REFERENCES
+Baggett, K. S., & Hester, P. T. (2013). Built To Fail? A Literature Review Of R&D Organization Performance Measurement System Assessment. Technology Interface International Journal, 14(1), 89-98.
+Baumeister, R. F., & Tierney, J. (2011). Willpower: Rediscovering the greatest human strength: Penguin.
+Horst, J., & Weiss, B. (2015). A Method for Effective and Efficient Selection of Balanced Key Performance Indicators. Washington, DC: National Instituation of Standards and Technology.
+ISO (2014). ISO 22400-1:2014 Automation systems and integration — Key performance indicators (KPIs) for manufacturing operations management — Part 1: Overview, concepts and terminology.
+Kaplan, R. S. (2008). Conceptual foundations of the balanced scorecard. Handbooks of Management Accounting Research, 3, 1253-1269.
+Kaplan, R. S., & Norton, D. P. (1996). Using the balanced scorecard as a strategic management system. Harvard business review, 74(1), 75-85.
+Keegan, D. P., Eiler, R. G., & Jones, C. R. (1989). Are your performance measures obsolete? Management accounting, 70(12), 45-50.
+Keeney, R. L. (1982). Decision Analysis: State of the Field: DTIC Document.
+Marr, B. (2012). Key Performance Indicators (KPI): The 75 measures every manager needs to know: Pearson UK. Meyers, T. J., & Hester, P. (2011). Toward the What and How of Measuring R&D System Effectiveness. Paper presented at the Proceedings of the 7th European Conference on Management, Leadership and Governance: SKEMA Business School, Sophia-Antipolis, France, 6-7 October 2011.
+Miller, G. A. (1956). The magical number seven, plus or minus two: some limits on our capacity for processing information. Psychological Review, 63(2), 81.
+Neely, A. D., Adams, C., & Kennerley, M. (2002). The performance prism: The scorecard for measuring and managing business success: Prentice Hall Financial Times London.
+Neely, A. D., & Bourne, M. (2000). Why measurement initiatives fail. Measuring business excellence, 4(4), 3-7. Paranjape, B., Rossiter, M., & Pantano, V. (2006). Performance measurement systems: successes, failures and future–a review. Measuring business excellence, 10(3), 4-14.
+von Neumann, J., & Morgenstern, O. (1944). Theory of games and economic behaviour: Princeton University Press.
+2015 Paper No. 43 Page 9 of 9
+MODSIM World 2015

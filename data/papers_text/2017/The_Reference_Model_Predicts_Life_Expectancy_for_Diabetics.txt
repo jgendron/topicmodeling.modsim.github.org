@@ -1,0 +1,361 @@
+The Reference Model Predicts Life Expectancy for Diabetics
+Jacob Barhak Author3 Name
+Austin, TX
+City, State jacob.barhak@gmail.com
+ABSTRACT
+The Reference Model for disease progression combines multiple disease models to predict clinical outcomes. Recent advances allow merging multiple models extracted from multiple populations in different times to best fit multiple cohorts reported by different clinical trials across several decades. Merging the models showed that models are getting outdated due to medical practice improvement. Introducing temporal correction to the models to account for model outdating allows creating a new model combination that improves the fitness. This suggests that future predictions of a model should include temporal correction. This is particularly true when discussing long term predictions such as life expectancy. In this paper, the life expectancy of diabetic patients is assessed categorized by 6 dimensions: age, gender, blood pressure, cholesterol, A1C, and Smoking. Those predictions are compared to predictions made with and without temporal correction to figure out how many life years can be saved by medical progress made during a patient’s lifetime.
+ABOUT THE AUTHORS
+Jacob Barhak specializes in chronic disease modeling with emphasis on using computational technological solutions. Dr. Barhak has diverse international background in engineering and computing science. He received his Ph.D. in 2003 from the Technion Israel Institute of Technology. From 2003 to 2006 he worked at an NSF Engineering Research Center at the University of Michigan focusing on inspection systems and personalization. From 2006 to 2012 he worked on developing disease modeling tools for the Michigan model for diabetes at the University of Michigan. The Reference Model for disease progression was independently self-developed by Dr. Barhak in 2012. He is the developer of the MIcro Simulation Tool (MIST).
+2017 Paper No. 0013 Page 1 of 10
+MODSIM World 2017
+
+INTRODUCTION
+The Reference Model Predicts Life Expectancy for Diabetics
+Jacob Barhak Author3 Name
+Austin, TX
+City, State jacob.barhak@gmail.com
+Chronic disease such as diabetes has a significant impact on human life. This impact can be measured economically, through quality of life measures such as utility scores or, perhaps more comprehendible, through life expectancy.
+Life expectancy can be accessed through life tables that are regularly published based on statistical analysis of the past. However, those tables change on a regular basis as seen in (CDC, Online). The data is therefore represented as multiple tables that represent life expectancy for different snapshots in time, adding one more dimension to the table – time.
+So when making future predictions, it is important to consider time as a factor, especially if we are predicting lifespan when many changes can happen through a lifetime of a person. After all, our life span has improved significantly through the centuries and in the last few decades. Even in the recent past there were significant improvements made with diabetics as reported in (Gregg et. al., 2012) that had a positive impact on lifetime.
+So the question becomes: how to identify medical trends and incorporate those to predicting lifespan and other long term predictions?
+It is important to state that any future predictions should never be considered accurate since the assumption that the future will behave like the past is not reasonable. There are too many examples to the contrary. However, understanding trends and seeing the range of possibilities is important to grasp possible future trends.
+This is especially important when different models come up with a variation of predictions. This is a regular phenomenon observed at the Mount Hood diabetes challenge (The Mount Hood Modeling Group, 2007), (Palmer, 2013) (Mount Hood Steering Committee, Online) where diabetes modelers meet and compare and contrast their models. Different models regularly report different results in this biennial meeting, even though modelers are given challenges where inputs are regulated to reduce misinterpretation.
+The Reference Model is an attempt to deal with multiple models reporting different results and participated in the last 3 Mount Hood challenges. The last challenge had an exercise involving generating life tables and this paper expands that exercise and adds new results obtained with the model as explained hereafter.
+THE REFERENCE MODEL TECHNOLOGY
+The Reference Model is an ensemble model that contains multiple models. It merges these models and decides on the weight of each model in the mix through validation towards multiple clinical trials.
+The Reference Model has evolved since it was first introduced half a decade ago in 2012. Its evolution has been described in detail in multiple publications, (Barhak, 2013), (Barhak, 2014), (Barhak, 2015a), (Barhak, 2015b). It started as a validation method that scores fitness of models to observed clinical trial outcomes using High Performance Computing (HPC). It has recently evolved to have the ability to merge models and make them cooperate as well as compete as described in (Barhak & Garrett, 2016), (Barhak, 2016a).
+This recent technological evolution allows adding assumptions to the mix of models and identifying their influence. In fact it can compute a new model from multiple model components including assumptions that best fit observed
+2017 Paper No. 0013 Page 2 of 10
+MODSIM World 2017
+
+data. This technique was used to add a computational element that corrects models from being outdated. Before this technique was introduced, it was only possible to compare a model that includes such a corrective element to another model that lacks such an assumption as in (Barhak, 2015b). Such a correction for models getting out of date proved advantageous in the past, yet it was not possible to calculate rates of improvement. The latest development described in (Barhak & Garrett, 2016), (Barhak, 2016a) allowed for calculating the best model that includes such a correction as well as calculating the rate of improvement for prevention and post event treatment (Barhak, 2017). The resulting model reported significant improvement compared to a control model without temporal correction and reported similar improvement in prevention and post event treatment.
+Note that the best model is a mixture of models that fit best observed data from 47 cohorts from 9 clinical studies: 1) ASPEN (Atorvastatin Study for Prevention of Coronary Heart Disease Endpoints in Non-Insulin-Dependent Diabetes Mellitus), 2) ADVANCE (Action in Diabetes and Vascular Disease: Preterax and Diamicron Modified Release Controlled Evaluation), 3) ACCORD (Action to Control Cardiovascular Risk in Diabetes), 4) UKPDS (United Kingdom Prospective Diabetes Study), 5) KP (Kaiser Permanente), 6) NDR (Swedish National Diabetes Register), 7) Look AHEAD (Action for Health in Diabetes), 8) ADDITION (Anglo-Danish-Dutch Study of Intensive Treatment In PeOple With screeN Detected Diabetes in Primary Care), 9) CARDS (Collaborative Atorvastatin Diabetes Study).
+Both the control model and the model with temporal correction report the best fitting mixture of assumptions and models. So the hypothesis tested is not only if correcting for time passing since model creation is helpful, for a specific model, it also incorporates hypothesis embedded in different model mixtures. Since the model with temporal correction was significantly better than the best control model mixture it intensifies the conclusion that temporal correction is useful.
+It is even more important when predicting long term phenomena such as life expectancy like the intention in this paper.
+LIFE EXPECTANCY TABLES
+Once the most fitting model mixture is determined, it is possible to run a simulation for a specific population until death and determine the life expectancy.
+A population can be composed of a replica of a single person with certain characteristics. It is possible to run multiple simulations for different populations of a certain person, each time changing one parameter to study the effect of this parameter on life expectancy. This was the exercise defined in Challenge 2 in the Mount Hood challenge in 2016 (Mount Hood Steering Committee, online).
+The Mount Hood challenge introduced a base individual and then changed some parameters in that synthetic individual. Variation results were summarized in multidimensional table that allows assessing life expectancy. The 6 parameters that were variants are age, gender, smoking, Glycated hemoglobin (A1c), blood pressure (BP), Lipid ratio. These are considered as major factors that affect diabetes and therefore interesting to explore in tabular form.
+The Reference Model implemented the base individual as: white with 5 years of diabetes without prior Myocardial Infarction (MI) or stroke nor any other major complication with average Body Mass Index (BMI) of 27.5 and 5.2 standard deviation. For the purpose of temporal correction the person was considered to be contemporary with measurements taken in 2017. The 6 parameters of interest were changed in 960 simulations = 2x2x4x3x4x5 using the following breakout.
+2 Gender categories (Male, Female)
+2 smoking categories (Smoking, Non Smoking)
+4 age categories (45,55,65,75) counted in years
+3 A1c categories (6,8,10) counted in %.
+4 Systolic Blood Pressure (SBP) categories (120,140,160,180) counted in mmHg.
+5 lipid ratio categories (4,5,6,7,8) were lipid ratio is defined as Total cholesterol divided by High-Density Lipoprotein (HDL) cholesterol each reported in the same units e.g. mmol/L.
+2017 Paper No. 0013 Page 3 of 10
+MODSIM World 2017
+
+The 960 cell tables are an extension beyond the model implementation used for the Mount Hood challenge as recorded in (Barhak, 20016b), that had 720 cells. Those results needed recalculation since the comparison between trials was using different population structure and results needed verification. Furthermore, the comparison in the challenge itself was reduced to a smaller dataset and the full comparison was not provided. This paper corrects this by presenting the larger 960 cell table and expanding comparison to previous results obtained in (Leal & Gray, 2009).
+More importantly, the life expectancy was presented for two scenarios, one with temporal correction and one without using model mixtures reported in (Barhak, 2017).
+RESULTS
+Table 1 and Table 2 show the life expectancy table in the two scenarios modeled. Table 1 shows life years left for the best mixture of models that best fit observed outcomes where models were not corrected for getting outdated – this means we are using the risk equations as reported in the literature by their creators. Table 2 shows the results for the temporal correction case where the best mixture of models included adding a correction term that accounted for model outdating in time passing since the model was created until its use – in our case 2017. Recall that the model in Table 2 reported better fit to the same observed results than the model in Table 1 in (Barhak, 2017). Table 3 shows summary statistics for each category tested and the difference between the life years left between the temporal correction and the control scenarios.
+The Reference Model uses High Performance Computing (HPC) techniques that allows calculating the table cells in tables 1 and 2 in parallel. Each table cell reports the average life years remaining for a cohort after repeating the simulation 10 times, each time for 1000 individuals, where each of those individuals is almost identical based on the cell characteristics. However, each person has more than 40 parameters governing it and generated individuals had variability in those parameters. Except from age that increased each year all parameters were held constant throughout simulation, thus treatment has not been modeled explicitly and the assumption is that the risk equations embed treatment effects.
+Since simulation is performed through Monte-Carlo techniques some small fluctuations can be expected between cells due to Monte-Carlo noise. Each cell was executed 10x1000 times for many years starting from the age specified till age 100 is reached. The fluctuation is small as can be seen by the continuous color map. Nevertheless, fluctuation is easily visible in Table 2 where small differences for any parameter other than age and sometimes have illogical results where a higher risk person has higher life expectancy. It is possible to reduce the Monte-Carlo error further by repeating simulations more times. As a thumb rule to get one more digit of accuracy in the life expectancy, we need to run the same simulation 100 times and average results. However, for the purpose of this work, it was not practical and will not add additional insight – the picture is clear with the amount of computing power invested already in the simulation. Simulation of each scenario took roughly 2 weeks on a cluster consisting of 16 CPU cores which is roughly equivalent of 8 months of computing time on one CPU.
+It is clear from looking at the color coded images that the model with temporal correction is highly sensitive to the age parameter where other parameters have much lesser effect. Moreover, it predicts much higher life expectancy than the control model. Table 3 shows this clearly in all categories with the most significant parameter changed being age where the difference between average life years in the control and temporal correction for age 45 was 10.6 years. These results suggest that improvements in prevention and medical treatment can add a decade of a lifetime to a middle aged patient. Again this is under the assumption that medicine will continue advancing in the rate observed in the last few decades.
+To get another reference point, some cell values were compared to results in (Leal & Gray, 2009). Four extreme life expectancy points were compared and are presented in Table 4 that includes both scenarios in this paper. Even the control scenario created in this paper is predicting more life years than (Leal & Gray, 2009) and the temporal correction model predicts even more life years for those representative points.
+2017 Paper No. 0013 Page 4 of 10
+MODSIM World 2017
+
+ Table 1. Life year estimate using the control model mixture without temporal correction
+Gender Male
+Age SBP 45 120
+SBP Age
+Gender Male
+Female
+45 120
+140 33.2 32.4 31.6 30.9 29.9 160 32.0 31.3 30.2 29.5 28.4 180 31.5 30.3 29.3 28.3 27.2
+34.5 33.6 32.8 32.2 31.2 32.9 32.1 31.0 30.4 29.4 31.9 30.9 29.8 29.0 27.9 30.9 29.9 29.0 27.8 26.8
+31.2 30.2 29.2 28.3 27.4
+Gender
+Age SBP
+Gender
+Smoke? Non Smoking Smoking Smoke? A1c6 8 10 6 8 10 A1c
+LipidRatio45678
+45678
+45678
+45678
+45678
+4 5 6 7 8 LipidRatio
+31.9 31.1 30.1 29.1 28.3 140 30.1 28.8 27.8 26.7 25.9 160 29.4 27.8 26.7 25.7 24.4 180 28.2 26.9 26.0 24.4 23.4
+31.4 30.5 29.2 28.5 27.9 29.6 28.4 27.6 26.3 25.1 28.6 27.3 26.2 25.1 23.7 27.7 26.4 25.2 24.1 22.7
+27.7 26.5 25.5 24.8 23.5
+55 120
+140 22.6 22.0 20.9 20.1 19.3 160 22.0 21.0 20.1 19.3 18.4 180 21.5 20.3 19.4 18.5 17.7
+23.7 22.8 22.1 21.4 20.7 22.4 21.4 20.5 19.7 18.8 21.9 20.8 19.8 18.9 17.8 21.1 20.0 19.0 18.1 17.0
+20.5 19.6 19.1 18.2 17.3
+24.0 23.2 22.6 21.8 21.2
+65 120
+140 16.1 15.4 14.9 14.2 13.5 160 15.7 15.1 14.4 13.5 13.0 180 15.4 14.6 13.8 13.2 12.5
+16.9 16.1 15.6 14.9 14.4 16.1 15.2 14.5 13.9 13.3 15.5 14.7 14.0 13.4 12.7 15.1 14.2 13.5 12.8 12.1
+14.3 13.7 13.1 12.4 11.8
+16.9 16.5 15.8 15.3 14.6
+75 120
+140 10.7 10.2 9.7 9.4 8.9 160 10.3 10.0 9.4 9.0 8.5 180 10.2 9.8 9.2 8.8 8.3
+11.0 10.5 10.1 9.8 9.3 10.5 10.0 9.6 9.1 8.7 10.2 9.6 9.2 8.9 8.5 10.2 9.5 9.0 8.5 8.1
+9.3 8.9 8.4 8.0 7.7
+11.2 10.7 10.3 10.0 9.6
+34.8 34.2 33.3 32.8 31.9
+55 120
+140 25.3 24.8 24.0 23.2 22.3 160 24.7 24.0 23.2 22.5 21.8 180 24.0 23.2 22.4 21.6 20.6
+26.2 25.7 25.0 24.5 23.7 25.2 24.5 23.4 22.9 22.1 24.3 23.8 22.9 22.0 21.2 23.8 22.8 22.1 21.1 20.3
+23.3 22.5 21.8 20.9 20.5
+26.6 26.0 25.4 24.8 24.2
+65 120
+140 18.2 17.8 17.2 16.6 16.1 160 17.8 17.3 16.8 16.1 15.6 180 17.4 16.8 16.1 15.5 14.8
+18.7 18.2 17.7 17.4 16.8 18.2 17.4 16.9 16.4 15.8 17.6 17.0 16.5 15.9 15.2 17.2 16.4 15.9 15.2 14.6
+18.6 18.1 17.5 17.0 16.5 17.8 17.1 16.6 16.0 15.4 17.4 16.8 16.0 15.5 15.0 16.9 16.3 15.7 15.0 14.3
+16.7 16.4 15.7 15.3 14.7 15.9 15.4 14.8 14.3 13.7 15.4 14.8 14.4 13.8 13.0 15.0 14.4 13.7 13.2 12.5
+16.7 16.2 15.8 15.1 14.6 15.6 15.2 14.6 13.9 13.4 15.3 14.5 13.9 13.3 12.8 14.9 14.0 13.4 12.8 12.2
+120 65
+19.0 18.5 18.0 17.8 17.0
+75 120
+140 12.1 11.7 11.3 11.0 10.6 160 11.8 11.5 11.1 10.6 10.3 180 11.6 11.2 10.8 10.4 10.0
+12.4 12.0 11.6 11.3 11.0 11.9 11.5 11.2 10.9 10.5 11.7 11.3 10.9 10.5 10.1 11.3 11.0 10.5 10.2 9.8
+12.2 11.8 11.5 11.2 10.8 11.9 11.5 10.9 10.5 10.2 11.5 11.2 10.7 10.3 9.7 11.3 10.9 10.4 10.0 9.6
+10.9 10.6 10.3 9.9 9.5 10.5 10.0 9.7 9.3 9.0 10.2 9.8 9.4 9.0 8.6 10.0 9.5 9.0 8.7 8.3
+10.7 10.4 10.0 9.8 9.4 10.3 9.8 9.5 9.1 8.7 10.0 9.6 9.1 8.9 8.4
+120 75 9.9 9.5 9.0 8.6 8.1 160
+12.5 12.3 12.0 11.4 11.3
+31.0 29.9 29.1 28.1 27.2 29.1 27.9 27.0 25.5 24.4 28.2 26.9 25.8 24.6 23.5 27.3 25.8 24.5 23.3 22.3
+28.7 27.6 26.8 25.6 24.7 26.3 25.2 24.1 22.9 21.7 25.4 23.9 22.6 21.7 20.5 24.3 22.8 21.6 20.4 19.1
+28.1 27.0 26.2 25.3 24.1 26.1 24.7 23.3 22.3 21.1 25.0 23.3 22.5 21.1 19.8 23.9 22.5 21.2 19.7 18.6
+120 45 25.8 24.2 23.1 21.8 20.6 140
+24.7 23.0 21.7 20.4 19.2 160
+23.1 22.0 20.6 19.3 18.0 180
+23.5 22.5 21.8 20.9 20.3 22.0 21.0 20.1 19.2 18.4 21.2 20.2 19.2 18.4 17.5 20.6 19.5 18.6 17.7 16.6
+21.5 20.5 19.8 19.1 18.2 20.0 18.8 18.0 17.0 16.1 19.1 18.0 17.1 16.1 15.4 18.4 17.4 16.3 15.3 14.4
+21.2 20.1 19.5 18.4 17.9 19.4 18.4 17.5 16.8 15.6 18.8 17.7 16.7 15.7 14.9 18.1 16.9 15.9 15.0 14.0
+120 55 19.2 18.1 17.2 16.0 15.5 140
+18.4 17.4 16.4 15.3 14.3 160
+17.5 16.4 15.6 14.4 13.7 180
+16.5 15.8 15.3 14.7 14.1 15.8 14.9 14.2 13.7 12.9 15.2 14.5 13.9 13.1 12.3 15.0 14.2 13.2 12.6 11.9
+14.7 14.3 13.8 13.2 12.5 13.9 13.3 12.7 11.9 11.4 13.5 12.8 12.2 11.4 10.7 13.1 12.3 11.7 10.9 10.2
+14.7 13.8 13.3 12.9 12.2 13.8 12.9 12.3 11.7 10.8 13.3 12.6 11.8 11.0 10.5 12.8 12.1 11.3 10.6 9.9
+120 65 13.5 12.8 12.0 11.3 10.7 140
+13.0 12.3 11.6 10.8 10.2 160
+12.6 11.6 11.0 10.3 9.7 180
+10.8 10.3 10.0 9.5 9.1 10.3 9.8 9.4 8.9 8.4 10.2 9.6 9.1 8.6 8.1
+9.7 9.1 8.8 8.4 8.1 9.1 8.6 8.3 7.8 7.3 8.9 8.4 8.0 7.5 7.1 8.6 8.1 7.7 7.2 6.9
+9.5 9.0 8.7 8.3 7.9 8.9 8.4 8.1 7.6 7.2 8.7 8.2 7.8 7.4 7.0 8.4 8.0 7.5 7.1 6.7
+120 75 8.8 8.3 7.8 7.4 7.0 140
+8.5 8.0 7.5 7.1 6.7 160
+8.3 7.6 7.4 6.8 6.4 180
+9.9 9.2 8.7 8.3 7.9
+34.0 33.5 32.5 31.8 31.1 32.6 31.7 30.6 29.7 28.7 31.4 30.5 29.3 28.5 27.5 30.5 29.4 28.2 27.2 25.9
+31.8 30.9 29.9 29.3 28.4 29.5 28.8 27.7 26.9 25.7 28.3 27.3 26.2 25.5 24.2 27.4 26.3 24.9 23.9 22.9
+31.3 30.6 29.6 29.1 27.6 29.2 28.2 27.3 26.5 25.4 28.0 27.0 25.7 24.9 23.7 26.9 25.8 24.5 23.6 22.2
+120 45 28.8 27.8 26.6 26.0 24.7 140
+27.7 26.5 25.4 24.5 23.3 160
+26.5 25.3 23.9 23.2 21.7 180
+Female
+26.2 25.5 24.6 24.1 23.3 24.8 24.3 23.3 22.7 21.7 24.1 23.3 22.3 21.6 20.7 23.4 22.5 21.6 20.9 19.8
+23.7 23.3 22.6 21.8 21.1 22.3 21.7 21.0 20.2 19.2 21.7 20.7 19.9 19.1 18.2 20.8 20.0 19.2 18.4 17.2
+23.5 22.8 22.0 21.5 20.8 22.3 21.3 20.6 19.9 19.1 21.4 20.7 19.8 18.8 17.9 20.6 19.6 18.8 17.7 16.9
+120 55 21.8 20.9 20.3 19.5 18.5 140
+21.0 20.1 19.3 18.4 17.4 160
+20.0 19.2 18.3 17.6 16.6 180
+4 5 6 7 8 LipidRatio A1c6 8 10 6 8 10 A1c
+45678
+Smoke? Non Smoking Smoking Smoke?
+LipidRatio45678
+45678
+45678
+45678
+9.6 9.3 8.9 8.5 8.2
+9.7 9.1 8.8 8.4 7.9 180
+SBP Age
+16.3 15.9 15.3 14.9 14.1
+15.4 14.9 14.3 13.8 13.1 140 15.1 14.4 13.7 13.1 12.5 160 14.6 13.7 13.1 12.4 11.9 180
+10.7 10.2 10.0 9.6 9.2
+10.2 9.8 9.3 9.1 8.5 140
+2017 Paper No. 0013 Page 5 of 10
+MODSIM World 2017
+
+ Gender Male
+Age SBP 45 120
+SBP Age
+Gender Male
+Female
+45 120
+140 39.7 39.9 40.1 39.9 39.8 160 40.0 40.0 39.9 39.9 39.8 180 40.0 39.7 39.7 39.8 39.6
+39.9 40.1 39.9 39.9 40.0 40.2 39.9 40.0 39.9 39.6 39.8 39.8 39.6 40.0 39.6 39.9 40.0 39.8 39.8 39.8
+37.6 37.6 37.7 37.7 37.5
+Gender
+Age SBP
+SBP Age
+Gender
+Smoke? Non Smoking Smoking Smoke? A1c6 8 10 6 8 10 A1c
+LipidRatio45678
+45678
+45678
+45678
+45678
+4 5 6 7 8 LipidRatio
+37.7 37.6 37.6 37.5 37.5 140 37.6 37.5 37.4 37.6 37.7 160 37.7 37.7 37.5 37.5 37.5 180 37.6 37.7 37.7 37.6 37.4
+37.6 37.7 37.4 37.7 37.4 37.7 37.7 37.5 37.8 37.4 37.5 37.5 37.7 37.5 37.5 37.2 37.4 37.3 37.6 37.5
+35.4 35.5 35.2 35.3 35.5
+55 120
+140 28.7 28.6 28.6 28.8 28.5 160 28.7 28.5 28.6 28.4 28.6 180 28.7 28.5 28.7 28.6 28.3
+28.9 28.6 28.7 28.7 28.6 28.5 28.5 28.5 28.7 28.6 28.5 28.6 28.4 28.5 28.5 28.7 28.5 28.5 28.6 28.3
+26.7 26.6 26.3 26.5 26.5
+28.8 28.6 28.7 28.9 28.5
+65 120
+140 20.4 20.6 20.3 20.3 20.3 160 20.4 20.4 20.3 20.3 20.2 180 20.5 20.4 20.3 20.1 20.2
+20.5 20.5 20.4 20.2 20.6 20.5 20.3 20.2 20.2 20.2 20.4 20.5 20.4 20.1 20.2 20.5 20.3 20.3 20.1 20.2
+18.6 18.6 18.4 18.5 18.4
+20.5 20.2 20.6 20.3 20.2
+75 120
+140 13.3 13.3 13.3 13.4 13.2 160 13.4 13.4 13.3 13.3 13.1 180 13.4 13.3 13.2 13.1 13.2
+13.4 13.2 13.3 13.4 13.3 13.3 13.4 13.2 13.2 13.2 13.3 13.4 13.2 13.2 13.2 13.3 13.3 13.3 13.2 13.2
+11.8 11.9 11.7 11.7 11.8
+13.3 13.2 13.3 13.3 13.2
+39.8 40.0 40.0 40.0 39.8
+55 120
+140 30.8 30.7 30.8 30.8 30.7 160 30.6 30.8 30.5 30.7 30.7 180 30.7 30.5 30.6 30.5 30.8
+30.9 30.8 30.8 30.8 30.7 30.7 30.8 30.6 30.5 30.4 30.8 30.7 30.4 30.9 30.5 30.6 30.6 30.6 30.8 30.4
+28.7 28.8 28.4 28.8 28.4
+30.8 30.7 30.6 30.8 30.8
+65 120
+140 22.1 22.0 22.2 22.1 21.9 160 22.4 22.1 22.1 22.2 22.1 180 22.0 22.2 22.2 22.0 21.9
+22.3 22.3 22.0 22.0 22.1 22.3 22.2 22.1 22.1 22.3 22.1 22.1 22.0 21.9 22.0 22.2 22.2 22.1 21.9 22.1
+22.3 22.1 22.2 22.1 22.1 22.2 22.2 21.8 22.1 22.1 22.3 22.1 22.0 22.1 21.9 22.1 22.1 22.0 21.8 21.9
+20.3 20.4 20.1 20.3 20.4 20.3 20.3 20.2 20.1 20.0 20.2 20.3 20.2 20.2 20.1 20.2 20.2 20.2 20.1 20.1
+20.4 20.2 20.1 20.2 20.1 20.3 20.0 20.2 20.1 20.0 20.0 20.2 20.2 20.1 20.0 20.2 20.0 20.1 20.1 20.0
+120 65
+22.1 22.1 22.2 22.1 22.3
+75 120
+140 14.7 14.8 14.5 14.6 14.7 160 14.8 14.8 14.7 14.7 14.6 180 14.7 14.6 14.7 14.7 14.5
+14.8 14.8 14.7 14.6 14.7 14.7 14.6 14.7 14.6 14.6 14.7 14.6 14.7 14.6 14.5 14.8 14.6 14.7 14.6 14.5
+14.7 14.6 14.7 14.8 14.7 14.8 14.8 14.7 14.7 14.6 14.8 14.7 14.6 14.7 14.7 14.7 14.7 14.5 14.6 14.5
+13.2 13.4 13.2 13.1 13.1 13.2 13.2 13.1 13.2 13.1 13.1 13.0 13.2 13.1 13.0 13.1 13.2 13.0 13.0 12.9
+13.2 13.1 13.1 13.1 13.1 13.2 13.1 13.2 13.2 13.1 13.2 13.2 13.1 13.1 13.1 13.3 13.1 13.0 13.1 13.1
+120 75
+14.7 14.9 14.7 14.8 14.7
+37.5 37.5 37.3 37.5 37.4 37.5 37.4 37.6 37.6 37.2 37.8 37.4 37.6 37.5 37.4 37.5 37.6 37.5 37.4 37.2
+35.6 35.4 35.4 35.4 35.3 35.4 35.3 35.2 35.3 35.0 35.4 35.4 35.2 35.2 35.2 35.6 35.3 35.2 34.8 35.1
+35.5 35.2 35.5 35.6 35.2 35.5 35.2 35.2 35.3 35.2 35.3 35.1 35.3 35.1 35.1 35.3 35.3 35.3 35.1 35.2
+120 45 35.3 35.1 35.2 35.2 35.2 140
+35.2 35.2 35.2 35.0 35.0 160
+35.4 35.1 35.0 35.0 34.8 180
+28.6 28.7 28.6 28.6 28.3 28.8 28.6 28.6 28.6 28.6 28.6 28.6 28.2 28.5 28.5 28.6 28.4 28.5 28.3 28.4
+26.7 26.5 26.4 26.5 26.6 26.5 26.3 26.4 26.3 26.4 26.5 26.2 26.2 26.3 26.3 26.6 26.5 26.3 26.4 26.4
+26.6 26.5 26.3 26.5 26.5 26.5 26.6 26.3 26.6 26.3 26.4 26.3 26.4 26.4 26.3 26.3 26.4 26.3 26.3 26.0
+120 55 26.6 26.4 26.3 26.4 26.2 140
+26.6 26.4 26.3 26.2 26.4 160
+26.3 26.2 26.2 26.2 26.1 180
+20.5 20.2 20.4 20.4 20.3 20.5 20.5 20.3 20.3 20.3 20.3 20.3 20.0 20.1 20.1 20.2 20.4 20.2 20.2 20.2
+18.4 18.5 18.5 18.5 18.4 18.6 18.4 18.6 18.5 18.4 18.4 18.5 18.5 18.4 18.3 18.5 18.5 18.5 18.3 18.2
+18.4 18.5 18.4 18.5 18.4 18.4 18.4 18.4 18.3 18.3 18.4 18.4 18.4 18.4 18.2 18.6 18.3 18.1 18.3 18.2
+120 65 18.4 18.4 18.4 18.3 18.2 140
+18.6 18.3 18.3 18.3 18.2 160
+18.6 18.4 18.5 18.3 18.1 180
+13.4 13.4 13.4 13.2 13.2 13.4 13.3 13.3 13.3 13.3 13.3 13.3 13.2 13.2 13.2 13.4 13.3 13.2 13.2 13.1
+11.9 12.0 11.8 11.9 11.6 11.9 12.0 11.8 11.7 11.6 11.8 11.8 11.7 11.7 11.6 11.8 11.9 11.7 11.7 11.6
+12.0 11.8 11.8 11.8 11.9 11.9 11.8 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.9 11.8 11.7 11.8 11.7
+120 75 11.7 11.9 11.8 11.7 11.7 140
+11.7 11.6 11.8 11.6 11.6 160
+11.8 11.7 11.7 11.7 11.7 180
+39.7 40.0 40.0 39.9 39.7 40.2 40.1 39.9 39.9 39.9 39.8 39.9 39.8 40.0 39.7 39.9 39.7 39.9 39.8 39.8
+37.7 38.0 37.5 37.6 37.4 37.9 37.7 37.6 37.8 37.5 37.6 37.7 37.6 37.5 37.4 37.6 37.4 37.6 37.6 37.4
+37.8 37.7 37.6 37.8 37.6 37.7 37.7 37.6 37.5 37.6 37.5 37.4 37.5 37.7 37.5 37.7 37.7 37.5 37.4 37.4
+120 45 37.8 37.7 37.5 37.6 37.7 140
+37.7 37.6 37.7 37.4 37.5 160
+37.7 37.6 37.6 37.4 37.3 180
+Female
+31.0 30.7 30.7 30.8 30.7 30.8 30.7 30.5 30.8 30.6 30.8 30.8 30.5 30.5 30.6 30.8 30.6 30.6 30.4 30.5
+28.6 28.5 28.6 28.8 28.5 28.6 28.6 28.4 28.7 28.4 28.7 28.5 28.4 28.5 28.6 28.6 28.4 28.4 28.4 28.4
+28.6 28.8 28.5 28.5 28.4 28.4 28.6 28.7 28.6 28.5 28.9 28.6 28.4 28.4 28.2 28.5 28.6 28.3 28.6 28.3
+120 55 28.7 28.7 28.3 28.6 28.5 140
+28.7 28.4 28.2 28.3 28.3 160
+28.4 28.6 28.5 28.3 28.1 180
+4 5 6 7 8 LipidRatio A1c6 8 10 6 8 10 A1c
+45678
+Smoke? Non Smoking Smoking Smoke?
+LipidRatio45678
+45678
+45678
+45678
+20.2 20.3 20.2 20.2 20.1
+20.2 20.3 20.2 20.1 20.0 140 20.1 20.3 20.1 20.0 20.0 160 20.1 20.1 20.0 20.0 19.9 180
+13.2 13.2 13.2 13.0 13.1
+13.3 13.2 13.2 13.1 13.0 140 13.1 13.2 13.0 13.1 13.1 160 13.3 13.1 12.9 13.0 12.9 180
+2017 Paper No. 0013 Page 6 of 10
+Table 2. Life year estimate using the model mixture with temporal correction
+MODSIM World 2017
+
+ Table 3. Summary statistics of life years per category with control, temporal correction, and differences
+2017 Paper No. 0013 Page 7 of 10
+Control Temporal Correction Difference
+Mean STD Min Max Mean STD Min Max Mean STD Min Max
+17.8 7.0 6.4 34.8 24.9 16.5 6.5 6.4 31.9 23.9 19.1 7.2 7.9 34.8 25.8 19.2 7.3 7.9 34.8 25.9 16.5 6.5 6.4 31.8 23.9 27.0 3.5 18.0 34.8 37.6 20.4 2.7 13.7 26.6 28.5 14.5 2.0 9.7 19.0 20.2
+9.5 1.3 6.4 12.5 13.2 18.2 7.1 6.9 34.8 24.9 17.8 7.0 6.7 34.5 24.9 17.5 6.9 6.4 34.0 24.9 19.4 7.6 7.7 34.8 24.9 18.0 7.0 7.0 33.2 24.9 17.3 6.7 6.7 32.0 24.9 16.6 6.4 6.4 31.5 24.8 19.3 7.3 8.3 34.8 25.0 18.5 7.1 7.6 34.2 24.9 17.8 6.9 7.4 33.3 24.9 17.1 6.8 6.8 32.8 24.9 16.4 6.5 6.4 31.9 24.8
+9.2 11.6 40.2 9.0 11.6 37.8 9.4 12.9 40.2 9.3 13.1 40.2 9.0 11.6 38.0 1.6 34.8 40.2 1.5 26.0 31.0 1.3 18.1 22.4 1.0 11.6 14.9 9.2 11.6 40.1 9.2 11.7 40.2 9.2 11.6 40.2 9.2 11.6 40.1 9.2 11.6 40.2 9.2 11.6 40.0 9.2 11.6 40.0 9.2 11.7 40.2 9.2 11.6 40.1 9.2 11.7 40.1 9.3 11.6 40.0 9.2 11.6 40.0
+7.1 3.1 7.4 3.2 6.7 2.8 6.7 2.8 7.4 3.3
+10.6 2.5 8.2 1.8 5.8 1.2 3.7 0.7 6.8 3.0 7.1 3.1 7.4 3.2 5.6 2.1 6.9 2.8 7.6 3.1 8.2 3.4 5.7 2.4 6.4 2.6 7.1 2.9 7.8 3.1 8.4 3.4
+2.1 16.8
+2.1 16.8
+2.2 15.7
+2.1 15.0
+2.2 16.8
+5.1 16.8 4.2 12.5 3.1 8.4 2.1 5.2 2.1 16.0
+2.3 16.6
+2.4 16.8
+2.1 12.0 2.6 14.7 2.8 15.8 3.1 16.8 2.1 12.3 2.5 13.1 2.7 14.5 3.2 15.8 3.4 16.8
+Overall
+Male
+Female Smoking Non Smoking Age 45
+Age 55
+Age 65
+Age 75
+A1c 6
+A1c 8
+A1c 10
+SBP 120 SBP 140 SBP 160 SBP 180 Lipid Ratio 4 Lipid Ratio 5 Lipid Ratio 6 Lipid Ratio 7 Lipid Ratio 8
+Comparison point
+Male, No Smoke, Age 55, A1c 6, SBP 120, Lipid Ratio 4 Male, Smoking, Age 75, A1c 10, SBP 180, Lipid Ratio 8 Female, No Smoke, Age 55, A1c 6, SBP 120, Lipid Ratio 4 Female, Smoking, Age 75, A1c 10, SBP 180, Lipid Ratio 8
+Table 4. Comparison to previous published results of life expectancy
+Previous Results in (Leal & Gray, 2009)
+21.1 4.3 21.9 5.9
+Control Temporal Model Correction
+Model 24.0 28.8 6.4 11.7 26.6 30.8 7.9 12.9
+MODSIM World 2017
+
+DISCUSSION
+The fact that (Leal & Gray, 2009) present somewhat similar results to the control scenario in this paper indicate that there is some level of agreement between prediction models. However, the small improvement of about 2 years presented by the control scenario already indicates that life expectancy is rising since the control scenario is computed with information that includes newer elements. Although the UKPDS team have presented a recent model in (Hayes & Leal 2013) the model is still based on a cohort that started in 1977 and therefore the model may not be exposed to recent advances in medicine. This may explain how a model mixture validated against a spread of clinical studies may be more optimistic. Moreover, there was a slight deviation from the Mount Hood instructions in defining the base individual, e.g. the average BMI was defined as 27.5 rather than the requested 29.8. This may be a contributing factor to the difference and the optimistic prediction of the control scenario.
+Yet optimism grows much further when incorporating a correction for model outdating as in the temporal correction scenario. The temporal correction scenario predicts 7.1 more life years than the control scenario on average when considering all table cells. The most extreme change in prediction was that a very sick smoking male with high SBP, A1c and Cholesterol issues will live 16.8 more years in the temporal correction model compared to the control model. This can be interpreted as an improvement rate of medical practice almost as fast as the disease progression. This is significant and the question now becomes how reasonable are the numbers and what model should decision makers believe when considering future resource allocation.
+Decision makers should first consider the data upon which the models are based on and the assumptions they are taking. For example, if the decision maker wants a worst case scenario for the UK population or for a population that has a medical system equivalent to the UK a few decades ago it would make sense giving a large weight to the (Leal & Gray, 2009) predictions. However, if the prediction is needed for another modern population or if the decision maker wants to include contemporary information and not be based on data several decades old, the control or temporal correction scenarios should be considered. The decision maker should then consider if they believe that medicine will continue improving in the rate that it was improved in the last few decades. If the decision maker is optimistic about medical progress, then choosing the temporal correction prediction is reasonable – after all it reported better fitness in (Barhak, 2017). However, if the decision maker is pessimistic and believes that medical progress will continue at a slower pace, then predictions closer to control scenario should be considered.
+There are arguments that can promote both pessimistic and optimistic views and those cannot be quantified easily. For example, it is unclear how introduction of new EMR systems and promising medical devices will impact future medical improvement. Medical improvement can be drastic and may have beneficial effect, perhaps even beyond the temporal correction scenario, or it may suffer of long technology adoption syndromes that will slow down progress compared to what we have been used to in the last few decades. Therefore, since the future is unclear it is useful to have a variety of models that plot a possible range of options incorporating assumptions into the model.
+The Reference Model easily allows plotting several trajectories using information obtained from multiple models that are validated against observed results from multiple populations. This provides a solid base for comparison and helps decision makers by allowing them to present different queries and “what if” scenarios to figure out reasonable future trajectories.
+Moreover, the technology allows for coping with errors since many data pieces have been accumulated already and the system keeps on growing. For example, after model mixture has been determined and results reached an error was discovered switching two numbers in the ACCORD trial results that the system validates against out of 224 results recorded from 47 cohorts. This erroneous number switch is unlikely to affect the results shown here because there are many more numbers to support validation, yet more importantly since the system generates results using multiple other models that were independently created and validates against their respective populations. The Reference Model just decides on the best mixture of these models that fits the existing data. A fluctuation in the mixture of models will occur in the near future when the model accumulates more risk equations and population data – and more data is flowing in rapidly.
+At the time of writing those words a new simulation is underway that almost doubles the number of population cohorts used in validation by using information accumulated in (ClinicalTrials.gov, Online).
+2017 Paper No. 0013 Page 8 of 10
+MODSIM World 2017
+
+REPRODUCIBILITY INFORMATION
+The results for this paper were calculated on a 16 core cluster with 5 nodes running Ubuntu 12.04 Linux using Sun Grid Engine and Python 2.7.8 deployed by Anaconda 2.0.1 (64-bit). The Reference Model results were generated using MIST version (0,94,1,0) with Inspyred version 1.0 and model file version 45. Results are archived in: MIST_RefModel_2016_11_17_MODSIM2017.zip for temporal correction results and in MIST_RefModel_2017_01_02_MODSIM2017.zip for control results. Numbers appearing in paper were rounded for display purposes. The results displayed are based on models optimized towards an outcome that contained a switch between CVD outcomes in two ACCORD trial cohorts. This error was discovered after results were computed and is reported here for future reference in case a third party tries to reproduce this work.
+ACKNOWLEDGEMENTS
+This paper used the Micro Simulation Tool (MIST) that is based on IEST. The IEST GPL disease modeling framework was initially supported by the Biostatistics and Economic Modeling Core of the MDRTC (P60DK020572) and by the Methods and Measurement Core of the MCDTR (P30DK092926), both funded by the National Institute of Diabetes and Digestive and Kidney Diseases. The modeling framework was initially defined as GPL and was funded by Chronic Disease Modeling for Clinical Research Innovations grant (R21DK075077) from the same institute. The Reference Model for Disease Progression and MIST framework were developed without financial support.
+REFERENCES
+CDC, National Center for Health Statistics, Life Tables, Online: https://www.cdc.gov/nchs/products/life_tables.htm accessed 1/22/2017
+Gregg E. W., Cheng Y. J., Saydah S., Cowie C., Garfield S., Geiss L., and Barker L. 2012. “Trends in Death Rates Among U.S. Adults With and Without Diabetes Between 1997 and 2006 - Findings from the National Health Interview Survey”. Diabetes Care Vol. 35(6) pp. 1252–1257. https://doi.org/10.2337/dc11-1162
+Palmer A.J., & The Mount Hood 5 Modeling Group (2013). Computer Modeling of Diabetes and Its Complications: A Report on the Fifth Mount Hood Challenge Meeting, Value in Health, 16(4), 670-685. http://dx.doi.org/10.1016/j.jval.2013.01.002
+The Mount Hood 4 Modeling Group (2007). Computer Modeling of Diabetes and Its Complications, A report on the Fourth Mount Hood Challenge Meeting. Diabetes Care, (30), 1638–1646. http://dx.doi.org/10.2337/dc07-9919
+Mount Hood Steering Committee. Economics, simulation modelling & diabetes, 2016 Mt Hood Challenge, Online : http://www.mthooddiabeteschallenge.com/ accessed 1/22/2017
+Barhak J. (2013), MIST: Micro-Simulation Tool to Support Disease Modeling. SciPy, 2013, Bioinformatics track, https://github.com/scipy/scipy2013_talks/tree/master/talks/jacob_barhak Video retrieved from: http://www.youtube.com/watch?v=AD896WakR94
+Barhak J. (2014). The Reference Model for Disease Progression – Data Quality Control. Monterey CA. Paper retrieved from: http://dl.acm.org/citation.cfm?id=2685666 Presentation retrieved from: http://sites.google.com/site/jacobbarhak/home/SummerSim2014_Upload_2014_07_06.pptx
+Barhak J. (2015a). The Reference Model uses Object Oriented Population Generation. SummerSim 2015. Chicago IL, USA. Paper retrieved from: http://dl.acm.org/citation.cfm?id=2874946 Presentation retrieved from: http://sites.google.com/site/jacobbarhak/home/SummerSim2015_Upload_2015_07_26.pptx
+MODSIM World 2017
+          2017 Paper No. 0013 Page 9 of 10
+
+Barhak J. (2015b). The Reference Model for Disease Progression and Latest Developments in the MIST, PyTexas 2015. College Station, TX. Presentation retrieved from: http://sites.google.com/site/jacobbarhak/home/PyTexas2015_Upload_2015_09_26.pptx Video retrieved from: https://www.youtube.com/watch?v=htGRRjia-QQ
+Barhak J., Garrett A., & Pruett W. A. (2016). Optimizing Model Combinations, MODSIM world, Virginia Beach, VA. Paper retrieved from: http://www.modsimworld.org/papers/2016/Optimizing_Model_Combinations.pdf Presentation: http://sites.google.com/site/jacobbarhak/home/MODSIM2016_Submit_2016_04_25.pptx
+Barhak J. (2016a), The Reference Model for Disease Progression Combines Disease Models. I/IITSEC 2016 28 Nov – 2 Dec Orlando Florida. Paper: http://www.iitsecdocs.com/volumes/2016 Presentation: http://sites.google.com/site/jacobbarhak/home/IITSEC2016_Upload_2016_11_05.pptx
+Barhak J. (2016b), The Reference Model Results for the Mount Hood Diabetes Challenge. Online:
+http://sites.google.com/site/jacobbarhak/home/TheReferenceModel_MH2016_Submit_2016_09_04.zip
+Barhak J. (2017), The Reference Model Estimates Medical Practice Improvement in Diabetic Populations. SpringSim, April 23 –26, 2017, Virginia Beach Convention Center, Virginia Beach, Virginia, USA.
+Leal J., Gray A.M. & Clarke P.M. (2009), Development of life-expectancy tables for people with type 2 diabetes. European Heart Journal, Volume 30, Issue 7, http://eurheartj.oxfordjournals.org/content/30/7/834
+Hayes A.J., Leal J., Gray A.M., Holman R.R., & Clarke P.M. (2013). UKPDS outcomes model 2: a new version of a model to simulate lifetime health outcomes of patients with type 2 diabetes mellitus using data from the 30 year United Kingdom Prospective Diabetes Study: UKPDS 82. Diabetologia, 56(9), 1925-33. http://dx.doi.org/10.1007/s00125-013-2940-y
+ClinicalTrials.Gov A service of the U.S. National Institutes of Health. Online: https://clinicaltrials.gov/ accessed 1/27/2017
+MODSIM World 2017
+         2017 Paper No. 0013 Page 10 of 10

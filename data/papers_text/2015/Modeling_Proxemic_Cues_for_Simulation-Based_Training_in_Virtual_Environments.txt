@@ -1,0 +1,162 @@
+Modeling Proxemic Cues for Simulation-Based Training in Virtual Environments
+Crystal S. Maraj, Stephanie J. Lackey, Karla A. Badillo-Urquiola, & Eric C. Ortiz University of Central Florida Institute for Simulation and Training Orlando, FL cmaraj@ist.ucf.edu, slackey@ist.ucf.edu, kbadillo@ist.ucf.edu, eortiz@ist.ucf.edu
+Irwin L. Hudson
+U.S. Army Research Laboratory
+The Human Research and Engineering Directorate
+Simulation and Training Technology Center Orlando, FL irwin.hudson@us.army.mil
+The ability to read the human terrain is an invaluable skill set developed by Warfighters to identify irregular behavior in any environment. Traditional training methods (i.e., classroom-based instruction) have evolved to include Simulation- Based Training (SBT). SBT allows virtual representation of behavioral cues for enhancing combat training skills. Accurately modeling human behavior cues in a Virtual Environment (VE) is critical for success. Past research has highlighted difficulties with visually representing proxemics behavioral cues in a VE, however recent efforts have been made to offer insight into design requirements. Proxemics involves the spatial distancing between individuals given the climate of the situation and environment. This research seeks to identify design requirements and recommendations for representing proxemic cues within a VE. Specifically, this paper focuses on the development process of identifying, designing, and representing virtual models that exhibit proxemic cues. Finally, the paper discusses limitations and future directions for behavior cue training.
+ABOUT THE AUTHORS
+Crystal S. Maraj is a Graduate Research Assistant at the Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab since summer 2010. She has attained her Bachelor’s degree in Psychology and M.S. degree in Modeling and Simulation (M&S) from the University of Central Florida (UCF). Previous research and work experience focused on improving pilot training for the operation of automated aircrafts under the Federal Aviation Administration (FAA). Concurrently, she also worked and gained experience in the Mental Health field. Currently, Ms. Maraj is attaining her PhD in the Human Systems track within UCF’s M&S program. Her research interests center on Virtual Environments for training, specifically the design of technical attributes including improvement in trainee performance and training system utility.
+Stephanie J. Lackey earned her Master’s and Ph.D. degrees in Industrial Engineering and Management Systems with a specialization in Simulation, Modeling, and Analysis at the University of Central Florida (UCF). Her research focused on prediction, allocation, and optimization techniques for digital and analog communications systems. Dr. Lackey conducted high-risk research and development aimed at rapid transition of virtual communications capabilities to the Field and Fleet as a computer engineer with the United States Naval Air Warfare Center Training Systems Division (NAWC TSD). She joined UCF Institute for Simulation and Training’s (IST) Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab in 2008, and assumed the role of Lab Director in 2010. Dr. Lackey leverages her experience in advanced predictive modeling to the field of human performance in order to develop methods for improving human performance in simulation-based training environments and human-robot interfaces.
+Karla A. Badillo-Urquiola is a Graduate Research Assistant at the Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab. She recently graduated from the University of Central Florida (UCF) as a Ronald E. McNair Scholar with her Bachelors of Science degree in Psychology, a minor in Writing and Rhetoric, and a certification in Interpretation and Translation. In January of 2012, she earned the UCF Undergraduate Researcher of the Month award. Her research interests include: simulation-based training; immersive virtual training environments; physiological & human factors; behavior cue detection; terrorism and counter-terrorism. As a recipient of the McNair Graduate Fellowship Program, Mrs. Badillo-Urquiola will begin to pursue her Master of Science in Modeling and Simulation in fall 2014. Her ultimate goal is to earn a Ph.D. in Modeling and Simulation.
+MODSIM World 2015
+     2015 Paper No. 1 Page 1 of 9
+ABSTRACT
+
+Eric C. Ortiz is a Virtual Learning Environment Developer for the Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab at the University of Central Florida’s Institute for Simulation and Training (UCF-IST). He is currently a student in the Modeling and Simulation Ph.D. program at UCF. Mr. Ortiz has over 20 years of experience in the development of military simulations, serious games, and digital media production. Eric is a subject-matter expert (SME) in 3D modeling and production pipelines, VE-related software, video production, and interactive technologies.
+Irwin L. Hudson is the Science & Technology Manager responsible for leading the Simulation and Training Technology Center’s (STTC’s) Unmanned Ground Systems Research. This research focuses on Human–Robot Interaction, Physiologically-based Interaction, Unmanned Ground Vehicles, Remote Weapon Systems, Virtual Combat Profiling, and STEM Outreach. Mr. Hudson is Contract Officer Representative (COR) for several robotic research efforts. He also serves as the Assistant Contract Officer Representative (ACOR) to Dr. Neal Finkelstein for the Research Academic and Operational Support (RAOS) Indefinite Delivery, Indefinite Quantity (IDIQ) contract, which supports a large percentage of the research and development budget for STTC’s Blended Simulation Research Branch (BSRB). Irwin earned his Bachelor of Science degree in 1991 from Mississippi State University in Computer Engineering with minors in Math and Human Factors. He obtained his Master of Science degree in Modeling and Simulation (M&S) in the fall of 2013 from the University of Central Florida (UCF). He is currently pursuing his Ph.D. in M&S from UCF.
+2015 Paper No. 1 Page 2 of 9
+MODSIM World 2015
+
+Modeling Proxemic Cues for Simulation-Based Training in Virtual Environments
+Crystal S. Maraj, Stephanie J. Lackey, Karla A. Badillo-Urquiola, & Eric C. Ortiz University of Central Florida Institute for Simulation and Training Orlando, FL cmaraj@ist.ucf.edu, slackey@ist.ucf.edu, kbadillo@ist.ucf.edu, eortiz@ist.ucf.edu
+INTRODUCTION
+Irwin L. Hudson
+U.S. Army Research Laboratory
+The Human Research and Engineering Directorate
+Simulation and Training Technology Center Orlando, FL irwin.hudson@us.army.mil
+MODSIM World 2015
+     Combat Profiling training enhances a Warfighter’s observation and perceptual skills within evolving combat environments (Wang-Costello, Tarr, & Marraffino, 2013). Training consists of establishing a baseline for observing human terrain using the six domains of Combat Profiling. These domains include: biometrics, kinesics, proxemics, geographics, heuristics, and atmospherics (Spiker, Williams, & Lethin, 2010). Once a baseline is determined, effective decision-making procedures can mitigate risks. One method of training Warfighters to sharpen behavior cue detection skills is the use of Simulation-Based Training (SBT) (Schatz, Wray, Folsom-Kovarik, & Nicholson, 2012; Wang-Costello, Tarr, & Marraffino, 2013).
+SBT affords the opportunity to train individuals to observe and detect abnormal behavior in the environment. Past research efforts have focused on creating computer animations that exhibit kinesics (i.e., study of non-verbal behavior cues (Birdwhistell, 1970)) and biometrics (i.e., involuntary behaviors exhibiting various emotional states (Salcedo, Maraj, Lackey, & Ortiz, 2013)) applied to Virtual Environments (VEs). Kinesic cues such as clenched fists and wringing hands, as well as biometric cues including reddening of the face and sweating (Lackey, Badillo-Urquiola, & Ortiz, 2014; Lackey, Badillo-Urquiola, & Ortiz, 2014) are considered easier to display because they are personal cues, meaning that the cues are represented on the 3D model prototype.
+Another domain under the umbrella of Combat Profiling is proxemics. Proxemics interprets spatial relationships within the context of psycho-social influences, culturally accepted behavior, and tactical objectives. While kinesics and biometrics highlight personal characteristics or behaviors, proxemics focuses on the distance between two points or persons of contact within the environment. Moreover, there are several factors that influence proxemics including high- and low-context environments (Hall, 1989; Herrera, Novick, Dusan, & Traum, 2011), culture (Hall, 1990; Watson, 1970), and interpersonal relationships (Evans & Howard, 1973).
+Past studies of proxemics have presented limited interaction between the virtual agent and the human, where the virtual agent remains static in the VE while the participant is perceived to have movement using a Head-Mounted Display (HMD) (Bailenson, Blascovich, Beall, & Loomis, 2001; Llobera, Spanglang, Ruffini, & Slater, 2010). Moreover, the proximal distance between the location of the participant and virtual agent may impact user perception of the distance created within the real and simulated world.
+Another limitation tied to accurately representing proxemic cues in a VE is the placement or distance of the virtual agents within the 3D space. In the real-world, humans perceive the environment largely through the visual system. In a VE, the first-person view is replaced by a virtual camera. The virtual camera has to be correctly adjusted according to variables such as depth of field and focal points (Milgram & Colquhoun Jr., 1999). The ability to precisely represent these variables in a VE is not without its challenges. Virtual cameras have limited ability to represent depth (De Boeck, Cuppens, De Weyer, Raymaekers, & Coninx, 2004; De Boeck J. A., 2007). This is essential when representing distances between objects and agents. Another challenge in virtual camera attributes is height (Tittle , Roesler, & Woods, 2002). If a virtual camera is set too low or too high, it can skew the perspective of the agents making it difficult to determine the distance of two agents placed near each other.
+When developing 3D models that portray proxemic cues, there are several steps to consider in the design process required for VE representation. The first step in developing 3D models to display proxemic cues is to understand the levels of
+2015 Paper No. 1 Page 3 of 9
+
+fidelity needed based on distance. Fidelity impacts how detailed the model of a virtual agent must be in order to correctly depict space or distance. In VE’s, Levels of Detail (LOD) are determined by the closeness of the camera in relation to the focal point. An object that is near must have a higher LOD rather than one that is farther away. LODs are essential to computer processing requirements in VEs. If a virtual agent is placed close to another agent and then situated close to the camera, then the agent closest to the camera requires a higher LOD. These LOD levels directly determine how much processing power is used by the computer running the VE. Computer processing requirements can be an issue if (1) all the virtual agents are adjacent and in close proximity to the camera or (2) at a high LOD. A computer running a VE at a constant high rate of LOD may experience issues with lag or ‘jumpy’ animations limiting the realism for precise depiction of proxemic cues.
+Another step in the representation of proxemic cues is to determine if virtual agents are dynamic or static. Dynamic agents have animated movements whereas static agents stand still or do not move. These contributing factors are directly related to LODs especially if the virtual agents are walking around or in a crowd setting. Virtual agent movements must exhibit real-world movements in an effort to appear realistic within the VE.
+Finally, the virtual agents as well as the environmental context are deciding factors for accurately representing proxemic cues. A virtual agent that is controlled by the simulation or via Artificial Intelligence (AI) will move and behave according to specific pre-determined patterns. This movement should also be controlled by the situational context of the scenario. An AI controlled virtual agent may move between LODs or not respond to in-game physics limiting the level of realism necessary to display customized proxemic cues.
+Representing proxemic cues in a VE offers the opportunity to practice advanced cue detection in a safe, simulated environment prior to entering the operational environment.
+APPROACH
+A Behavior Cue Catalog (BCC) defining 3D specification requirements was developed to directly support continuing SBT research efforts. This paper summarizes the proxemics portion of the BCC by providing proxemic cue design specifications. Sample visual representations of proxemic cues are provided.
+Define Requirements and Design Process
+The design specifications provided in this paper were documented based upon a literature review and Subject Matter Expert (SME) input. The following section provides relevant details on this method.
+Literature Review
+A culmination of Edward T. Hall’s previous research on Proxemics (Hall, 1981; Hall, 1989; Hall, 1990), was utilized as a foundation for comprehending proxemic cues. An extensive literature review was conducted to expand this body of knowledge, referencing a variety of disciplines, including: anthropology, psychology, sociology, communications, criminal justice, political science, health, and medical professions. Historic and contemporary scholarly sources (i.e., books, journal articles, and conference papers) were examined. Additional consultation was received from SMEs. The outcome of this literature review provided a list of proxemic cues that will be investigated in the following sections.
+Documenting Specifications
+Following the identification process, prioritization of the cues was completed with the guidance of SMEs. Each proxemic cue was given a clear and concise description, along with implications for creating virtual models.
+Develop Prototype Models
+Sample models of the cues created as well as the images generated in the Military Open Simulator Enterprise Strategy (MOSES) Virtual World are provided within the paper. For a complete description on the process of creating the sample models, please refer to Lackey, Badillo-Urquiola, Ortiz, & Hudson, 2015.
+2015 Paper No. 1 Page 4 of 9
+MODSIM World 2015
+
+RESULTS
+Low-Context Cultures
+Low-context cultures are closely associated with individualistic beliefs and values. Within low-context cultures, distances between individuals tend to be greater in comparison to high-context cultures. Emphasis is placed on the information conveyed through verbal cues and less on the context of the environment (Leathers, Successful Intercultural Communication, 1997). Examples of these distant societies are the European and North American cultures (Leathers, Successful Intercultural Communication, 1997).
+High-Context Cultures
+High-context cultures are identified with collectivistic beliefs and values. In high-context cultures, distances between individuals tend to be reduced as opposed to those of low-context cultures. Interpretation of information depends largely on environmental cues and less on verbal communication (Leathers, Successful Intercultural Communication, 1997). Arab and Latin cultures are representative samples of these closer societies (Leathers, Successful Intercultural Communication, 1997). The following image, Figure 1, illustrates the difference in spacing between low- and high-context cultures.
+Figure 1. Low-context culture vs. High-context culture
+Distance
+Distance is a numerical description of the space between two or more entities. Edward T. Hall (Hall, The hidden dimension, 1990) developed a taxonomy for spatial distances based on the interaction of both humans and animals. Each category has two zones (i.e., close and far zone). Typically high-context cultures will communicate in the close phase, while low-context cultures normally interact in the far phase. Factors that may alter the dimensions of these distances are: degree of acquaintance, personality, noise level, illumination, and culture norms. Figure 2 provides a representation of the four distal zones. These zones can also be referred to as proxemics reaction bubbles, because as an individual is approached by another person, at these specified distances, psychological and physiological reactions will activate. The following sections give detailed descriptions of each distance.
+MODSIM World 2015
+ 2015 Paper No. 1 Page 5 of 9
+
+ Intimate Distance
+Figure 2. Proxemic Reaction Bubbles adapted from Mishra 2013
+Typical actions conducted in this category are embracing, touching, whispering. Low-context cultures may consider interaction at this distance as inappropriate for the public domain (Hall, 1990; Leathers, 1997).
+Close zone: 0 to 6 inches
+Far zone: 6 to 18 inches
+Personal Distance
+Interactions at this distance occur among close friends or family. Individuals have the ability to hold or grasp each other, however body heat is difficult to sense (Hall, 1990; Leathers, 1997).
+Close zone: 1.5 to 2.5 feet
+Far zone: 2.5 to 4 feet
+Social Distance
+An interchange among acquaintances normally takes place at this distance. Situations that commonly take place in this category are professional meetings or business transactions (Hall, 1990; Leathers, 1997).
+Close zone: 4 to 7 feet
+Far zone: 7 to 12 feet
+Public Distance
+The interaction for public speaking takes effect at this stage. Facial expressions and body movements are dramatized for precise transmission of message (Hall, 1990; Leathers, 1997).
+Close zone: 12 to 25 feet
+Far zone: greater than 25 feet
+Space
+Space is a dynamic, unconfined area influenced by the context of the environment or scenario. Rapoport (Rapoport, 1982) modified Hall’s (Hall, 1990) organizational model of space to fixed-feature, semifixed-feature, and nonfixed-feature space. The subsequent segments thoroughly explain each type.
+2015 Paper No. 1 Page 6 of 9
+MODSIM World 2015
+
+Fixed-feature Space
+The arrangement of a space by its function. The elements in this space gradually or rarely change; they are typically stationary. Examples of fixed-feature elements are walls, ceilings, floors, streets, buildings, or cities. The manner in which the elements are organized, their size, location, and arrangement communicate meaning (Hall, 1990; Leathers, 1997; Rapoport, 1982).
+Semifixed-feature Space
+The arrangement of entities in a given space. Semifixed-feature spaces can be either sociofugal (i.e., grid-like space arrangements) or sociopetal (i.e., radial space arrangements). Sociofugal spaces tend to keep individuals apart, while sociopetal spaces bring them together. Elements included in this type of space are furniture, curtains, advertising signs, lawn decorations, plants, animals, etc. The arrangement of these elements is more flexible than fixed-feature elements. Semifixed-feature elements have the ability to easily and quickly change (Hall, 1990; Leathers, 1997; Rapoport, 1982).
+Nonfixed-feature Space
+The space directly surrounding an individual’s body that he or she claims as his or her own. It varies based on the person’s size, emotional state, and sex. The boundaries are invisible and are created by nonverbal behaviors (Hall, 1990; Leathers, 1997; Rapoport, 1982).
+Proxemic Push
+A proxemic push can occur in a situation where an individual is uninterested in the conversation. Behavior cues (e.g., kinesic cues) are used to create space (or distance). For example, the individual can cross their arms, creating a barrier, or turn away body away (Van Horne, 2011). In Figure 3 individuals A and B are having a conversation. They create a proxemic push between them and individual C through their body language. Individual B displays the kinesic cue hands on hips with palms down which is a dominant stance to portray that she is in control of the conversation and blocking off individual C (Lackey, Badillo-Urquiola, & Ortiz, 2014). Individual B is slightly turned away from individual C to create a barrier and not permit individual C into the conversation.
+Figure 3. Proxemic Push
+Proxemic Pull
+Using behavior cues (e.g., kinesic cues) to reduce space (or distance). The body is not in a fight or flight position. On the contrary, individuals invite others towards them. Positive proxemic pulls typically occur when there is a pre-existing relationship, level of attraction or there is curiosity. However, there are instances in which a proxemics pull has a negative intent associated with it. A negative proxemic pull can take place under threatening situations or when the body is preparing for fight or flight (Van Horne, 2012; Van Horne, 2012; Van Horne, 2011). Figure 4 depicts individual A and
+MODSIM World 2015
+ 2015 Paper No. 1 Page 7 of 9
+
+individual B having a conversation. In contrast with Figure 3, individual B is no longer using the hands on hips cue. Instead, individual C is invited into the conversation by individuals A and B, creating a proxemic pull.
+Figure 4. Proxemic Pull
+LIMITATIONS
+As previously mentioned, there are several limitations associated with properly displaying proxemic cues on virtual agents such as distances between agents, LODs, camera attributes, and mobility of the agent (static or dynamic). These challenges can hinder the way the virtual agents appear and interact within the environment. They are also directly linked with the believability of the proxemic cues. Believability is essential for behavior cue detection training in a VE. Inaccurate representation of the cues reduces believability and may negatively impact training.
+There are steps to rectifying limitations regarding believability for displaying proxemic cues in a VE. Instances where distance between agents is a factor, a scenario designer/developer needs to ensure that all virtual agents are properly aligned and within the correct perspective for a realistic representation. Assigning different LODs contingent upon the distance of the agent (i.e., closer or farther away) will reduce the computer’s processing time, improving the precision of the animations. Furthermore, maintaining consistency among all camera attributes will ensure viewers have identical views of the scenario. Finally, if a virtual agent is static, pre-posing allows the creation of a pre-determined stance on an agent that can be imported into the VE to increase believability. If the agents are dynamic, maintaining animation attributes is essential to the believability of accurate representations within a VE.
+CONCLUSION
+This research paper presented design requirements for creating proxemic cues within a VE. Proxemic cues focus on environmental influences such as low- and high-context environments, distance, space, and proxemic push/pull for behavior cue modeling. Future research recommendations include validation of the proxemic cues to ensure their usefulness based on the design requirements aforementioned.
+Also, future research into this topic area may want to consider the effects of gender relationships (e.g., same-sex or opposite sex) and crowding (e.g., elevators, buses, and lobbies) on the dynamics of proxemic cues within VEs. These variables can assist with identifying a baseline relative to the nature of the situation or provide insight into deceptive behaviors. Learning to effectively observe and recognize proxemic cues contributes to the process of encoding and decoding information for human behavior cue analysis.
+ACKNOWLEDGEMENTS
+This research was sponsored by the Army Research Laboratory and was accomplished under Cooperative Agreement Number W911NF-12-R-001102 and W911NF-12-R-0011. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either express or implied of the
+MODSIM World 2015
+ 2015 Paper No. 1 Page 8 of 9
+
+Army Research Laboratory of or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation herein.
+REFERENCES
+Bailenson, J. N., Blascovich, J., Beall, A. C., & Loomis, J. M. (2001). Equilibrium Theory Revisted: Mutual Gaze and Personal Space in Virtual Environments. Presence, 583-598.
+Bente, G., Senokozlieva, M., Pennig, S., Al-Issa, A., & Fischer, O. (2008). Deciphering the secret code: A new methodology for the cross-cultural analysis of nonverbal behavior. Behavior Research Methods, 40, 269-277.
+Birdwhistell, R. L. (1970). Kinesics and Context . Philadelphia: University of Pennsylvania Press.
+De Boeck, J. A. (2007). A User and Designer Perspective on Multimodel Interaction in 3D Environments. PhD Thesis. De Boeck, J., Cuppens, E., De Weyer, T., Raymaekers, C., & Coninx, K. (2004). Multisensory interaction metaphors
+with haptics and proprioception in virtual environments. In Proceedings of the third Nordic conference on
+Human-computer interaction (pp. 189-197). ACM.
+Evans , G. W., & Howard, R. B. (1973). Personal space . Psychological Bulletin, pp. 334-344.
+Hall, E. T. (1981). The silent language. New York: Anchor Books.
+Hall, E. T. (1989). Beyond culture. New York: Anchor Books a Division of Random House, Inc.
+Hall, E. T. (1990). The hidden dimension. New York: Anchor Books.
+Herrera, D., Novick, D., Dusan , J., & Traum, D. (2011). Dialog Behaviors across Culture and Group Size. HCI
+International . Orlando, FL.
+Lackey, S. J., Badillo-Urquiola, K., & Ortiz, E. (2014). A process for Developing Accurate Kinesics Cues in Virtual
+Environments. Interservice/Industry Training, Simulation, and Education Conference . Orlando: Florida. Lackey, S., Badillo-Urquiola, K., & Ortiz, E. (2014). Research-Driven Recommendations for Implementing Biometric
+Cues in Virtual Environments. MODSIM World 2014. Hampton,VA.
+Leathers, D. G. (1997). Proxemic Communication. In D. G. Leathers, Successful Nonverbal Communication:
+Priniciples and Applications. Boston: Allyn & Bacon.
+Leathers, D. G. (1997). Successful Intercultural Communication. In D. G. Leathers, Successful Nonverbal
+Communication: Priniciples and Applications. Boston: Allyn & Bacon.
+Llobera, J., Spanglang, B., Ruffini, G., & Slater, M. (2010). Proxemics with Multiple Dynamics Characters in an
+Immersive Virtual Environment. ACM Transactions on Applied Perception, 12 pages.
+Milgram, P., & Colquhoun Jr., H. (1999). A taxonomy of real and virutal world display intergration . In Mixed reality:
+Merging real and virtual worlds (pp. 5-30).
+Mishra, R. (2013). Politics of proxemics and haptics in work space: Handshakes and power-play . Nirma University
+International Conference on Engineering (NUiCONE) (pp. 1-4). Ahmedabad: IEEE.
+Rapoport, A. (1982). The meaning of the built environment. Tucson: The University of Arizona Press.
+Salcedo, J. S., Maraj, C., Lackey, S., & Ortiz, E. (2013). Effects of Visual Fidelity on Biometric Cue Detection in
+Virtual Combat Profiling Training. Human Computer Interaction International (pp. 388-396). Verlag Berlin
+Heidelberg: Springer .
+Schatz, S., Wray, R., Folsom-Kovarik, J., & Nicholson, D. (2012). Adaptive perceptual training in a virtual enviornment
+. Proceedings of the Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC).
+Orlando, FL.
+Spiker, J. A., Williams, G., & Lethin, C. (2010). Training tactical behavior profiling skills for irregular warfare.
+Interservice/Industry Training Simulation & Education Conference . Orlando Fl: National Training Systems
+Association.
+Tittle , J. S., Roesler, A., & Woods, D. D. (2002). The remote perception problem . In Proceedings of the Human
+Factors and Ergonomics Society Annual Meeting (pp. 260-264). SAGE Publications.
+Van Horne, P. (2011, November 18). Understanding body language: Interested vs. Uninterested. Retrieved from The
+CP Journal: http://www.cp-journal.com/2011/11/understanding-body-language-interested-vs-uninterested/ Van Horne, P. (2012, February 9). From science to the streets - Where proxemic pull came from. Retrieved from The
+CP Journal: http://www.cp-journal.com/2012/02/from-science-to-the-streets-where-the-proxemic-pull-came-
+from/#more-770
+Van Horne, P. (2012, February 10). The Ugly Side of Proxemic Pulls. Retrieved from The CP Journal: http://www.cp-
+journal.com/2012/02/the-ugly-side-of-proxemic-pulls/
+Wang-Costello, J., Tarr, R., & Marraffino, A. (2013). A Validation Study for the Combat Hunter Computer-Based Pre-
+Trainer. Interservice /Industry Training, Simulation, Education Conference . Orlando, FL. Watson, O. M. (1970). Proxemic behavior: A cross-cultural study. The Hague: Mouton.
+2015 Paper No. 1 Page 9 of 9
+MODSIM World 2015

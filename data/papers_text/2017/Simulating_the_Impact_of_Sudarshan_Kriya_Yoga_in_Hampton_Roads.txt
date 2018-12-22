@@ -1,0 +1,271 @@
+Simulating the Impact of Sudarshan Kriya Yoga in Hampton Roads
+Saturnina Nisperos, Sonali Kakde, Frederic McKenzie
+Old Dominion University, Department of Modeling, Simulation & Visualization Engineering Norfolk, VA
+snisp001@odu.edu, skakd001@odu.edu, rdmckenz@odu.edu
+ABSTRACT
+Rising stress levels is a significant problem in the USA. The average stress levels increased to 5.1 in 2015 compared to 4.9 in 2014 (American Psychological Association, 2016). People who do not have tools to manage their stress are more likely to acquire cardiovascular disease (CVD) – the leading cause of death in the USA. In Hampton Roads, an average of 23% of Medicare beneficiaries were treated for heart disease (Greater Hampton Roads, 2014). For affected individuals, it not only implies health risks but also increased medical expenditures which can lead to financial issues – the top stressor in the USA. Therefore, interventions are needed to manage the risk of CVD.
+Harvard Health Publications (2009) indicates that yoga reduces the stress perceived and modulates stress response systems. Sudarshan KriyaYoga (SKY), a form of yogic breathing, is unique method for balancing the autonomic nervous system and influencing psychologic and stress related disorders (Brown & Gerbarg, 2005).
+An agent-based model was developed in this study to simulate the micro and macro-level impact of adopting SKY in Hampton Roads, particularly on managing stress, preventing CVD and reducing the associated medical expenses. The validation results indicate that the difference between the published results of research studies on SKY and the simulation results are not statistically significant. Simulation results show that people who practice SKY have generally lower and normal SBP, BMI and stress level while those who don’t, have generally higher and falls on the high-risk category. The analysis of variance suggests that the increase in SKY population in Hampton Roads provides an extremely significant effect in decreasing the percentage of CVD high risk population, associated expenses and the overall stress level in the region. In addition, advertising SKY offers greater impact on improving the risk factors and reducing the expenses associated to CVD in Hampton Roads.
+ABOUT THE AUTHORS
+Saturnina Nisperos is a Ph.D. in Modeling and Simulation student at the MSVE department of ODU. She has a BS in Computer Science and MS in Information Technology. She is a Fulbright grantee from the Philippines and affiliated with Mariano Marcos State University as assistant professor of computer science. Her current research interest is on developing decision support systems employing optimization, discrete event and agent-based modeling techniques.
+Sonali Kakde is pursuing her M.S. in Modeling and Simulation at the MSVE department of ODU. She received her Bachelor in Industrial Electronics Engineering from B.N. College of Engineering Pusad, India. Her current research is on Children Heart-Double outlet right ventricle (DORV), a rare form of congenital heart disease. She was part of a project which was in collaboration with the investigators from Beth Israel Deaconess Medical Center of Harvard Medical School, Boston. She is also affiliated to the Art of Living foundation where she has been teaching yoga and breathing techniques since 2009.
+Frederic McKenzie is a professor and department chair of the MSVE Department at ODU where he currently serves as Principal Investigator (PI) and Co-PI on projects involving software architectures for simulation, behavior representation in simulations, and medical modeling and simulation. To date, his projects in these areas have led to several publications relating research in modeling human-like intelligent agents including crowds, formal descriptions of distributed simulation architectures, objective measures of successful prostate surgery, and augmenting standardized patients. Many of these projects also involve virtual reality and scientific visualization. Dr. McKenzie received his Ph.D. in computer engineering from the University of Central Florida in 1994. Both his M.S. and Ph.D. work have been in artificial intelligence - focusing on knowledge representation and model-based diagnostic reasoning.
+2017 Paper No. 42 Page 1 of 10
+MODSIM World 2017
+
+Simulating the Impact of Sudarshan Kriya Yoga in Hampton Roads
+Saturnina Nisperos, Sonali Kakde, Frederic McKenzie
+Old Dominion University, Department of Modeling, Simulation & Visualization Engineering Norfolk, VA
+snisp001@odu.edu, skakd001@odu.edu, rdmckenz@odu.edu
+INTRODUCTION
+Rising stress levels is a significant problem in the USA. The average stress levels increased to 5.1 in 2015 compared to 4.9 in 2014 (American Psychological Association, 2016). For people in the USA, among the biggest causes for stress are job pressure, money, health, and relationships (Statistic Brain, 2016). Moderate stress can be a driving force to live life but too much stress increases our muscle tension, blood pressure and heart rate. When stressed, some people resort to harmful practices like smoking, drugs, alcohol abuse or overeating. Over a period of time, these factors can lead to high risk of cardiovascular disease (CVD) – the leading cause of death in the USA.
+People who do not have tools to manage their stress are more likely to acquire CVD. In Hampton Roads, an average of 23% of Medicare beneficiaries were treated for heart disease (Greater Hampton Roads, 2014). For affected individuals, it not only implies health risks but also increased medical expenditures which can lead to financial issues – the top stressor in the USA. Therefore, interventions are needed to manage the risk of CVD.
+Research studies recommend breathing techniques as a way to deal with stress. Harvard Health Publications (2009) indicates that yoga reduces the stress perceived and modulates stress response systems. Sudarshan Kriya Yoga (SKY), a form of yogic breathing, is unique method for balancing the autonomic nervous system and influencing psychologic and stress related disorders (Brown & Gerbarg, 2005). Among the listed benefits of regular SKY practice are reduced depression, anxiety, PTSD (Post-traumatic stress disorder) and enhanced cardio-respiratory function such as reduced heart rate, reduced blood pressure and improved cholesterol, antioxidant status and immune system function (Descilo, et al., 2010; Narnolia, et al., 2014). SKY also reduces impulsivity and addictive behaviors (Ghahremani, et al., 2013; Kharya, et al., 2014) and improve emotional regulation (Gootjes, Franken, & Strien, 2011). Rhythmic breathing technique practices such as SKY has the potential to manage the risk factors of CVD and slash associated medical costs.
+This study aimed to develop an agent-based model to simulate the adoption of SKY in the Hampton Roads area. Its effect on the stress level, body mass index (BMI), systolic blood pressure (SBP) and medical expenses was examined. The simulation results were used to analyze the micro and macro-level impact of SKY, particularly on managing stress, preventing CVD and reducing associated medical expenses.
+RELATED STUDIES
+Stress and CVD
+Having a stressful life can cause people to adopt unhealthy habits such as smoking and overeating which are risk factors for CVD. According to the World Heart Federation (WHF) (2014), being stressed can bring changes in body behavior which affects the blood and nervous system and inflict a negative impact on heart health. WHF further cites that a study found a linear progression between self-reported psychological stress and damage to the carotid artery and those who cannot manage their work well had the highest risk of heart disease. In studying the impact of chronic psychosocial stress in otherwise healthy subjects, Lucini, Fede, Parati, & Pagani (2005) observed that subjects who have higher perception of stress have higher values of SBP and diastolic blood pressure (DBP) compared to those who have no stress related symptoms. Moreover, a number of research studies have examined the relation of stress to CVD and the results indicate that stress plays an important role in many types of chronic health problems including cardiovascular disease (National Institute for Occupational Safety and Health, 2014).
+2017 Paper No. 42 Page 2 of 10
+MODSIM World 2017
+
+CVD risk factors are conditions or habits that increase the chance of a person to develop the disease. Risk factors listed by National Heart, Lung, and Blood Institute (2014) are high blood pressure, high blood cholesterol, diabetes and prediabetes, smoking, being overweight or obese, being physically inactive, having a family history of early heart disease, having a history of preeclampsia during pregnancy, unhealthy diet and age. Several factors can raise blood pressure, including stress, smoking, caffeine, binge drinking, certain over-the-counter and prescribed medications and even cold temperatures (Gholipour, 2015).
+Research studies also show that stress may influence weight. Harding, et al. (2014) conducted a survey on total of 5,118 participants and they prospectively followed them from 2000 to 2005.Using linear regression, the relationship of stress at baseline and the change in BMI was evaluated. The participants who had high levels of perceived stress at baseline gained a greater mean change in BMI compared to those with low stress perception. BMI is a risk factor of diabetes which in turn is a risk factor of CVD. The WHO/ISH risk prediction charts of the World Health Organization (2007) predicts the 10-year risk of CVD of an individual according to the risk factors specifically age, sex, blood pressure, smoking status, total blood cholesterol and presence or absence of diabetes mellitus.
+CVD Medical Expenses
+CVD is the number one cause of death around the world and nearly 801,000 (about 1 of every 3 deaths) people in the USA died from CVD in 2013 (World Heart Federation, 2014). The projected total costs of CVD in the United States for 2020 is $804 billion dollars (Mozaffarian, et al., 2015) and the direct and indirect costs of CVD and stroke are estimated to total more than $316 billion including health expenditures and lost productivity (American Heart Association, 2017). Moore, Levit, & Elixhauser (2014) reports that the mean hospital costs per stay in 2012 is $10,400 and it increases to an average of 1.8% annually. Furthermore, the average cost to a traditional health insurer for the first 90 days following a heart attack is $38,501 and in the year after. Medicare spends over $14,000 per patient on hospital bills, outpatient care and additional amounts for physicians and these costs are increasing at a rate of 4 percent annually (Nesvisky, Matt, 2017).
+Sudarshan Kriya Yoga (SKY)
+Breathing is such an integral part of daily life and breath is the most important source of energy. Meditation experts claim that the body is designed to release more than 70% of toxins through breathing (Hendricks, 2010; Thompson, 2012; Jahnke, 2016). Breathing techniques such as SKY have been proven to offer significant health benefits. By observing the control and study group who practiced SKY, Kjellgren, Bood, Axelsson, Norlander, & Saatcioglu (2007) found that the SKY group lowered their anxiety, depression and stress level and had a higher degree of optimism. Natnolia, et al. (2014) also examined the effect of SKY on cardiovascular parameters and comorbid anxiety in hypertension patients, their results show that SKY provides the patient statistically significant benefit in SBP, DBP, pulse rate, lipid profile and Hamilton anxiety score.
+Other research studies indicate that SKY enhances the cardiovascular and respiratory function such as reduced heart rate in both healthy and health compromised individuals (Somwanshi, Handergulle, Adgaonkar, & Kople, 2013; Agte & Chiplonkar., 2008); reduces the blood pressure in both healthy and health compromised individuals (Agte, Jahagirdar, & Tarwadi, 2011); improves the cholesterol and triglyceride (lipid) profile as early as 3 weeks, with no change in diet (Agte & Tarwadi, 2004); and demonstrates antidepressant effects in inpatients of alcohol dependence (Vedamurthachar, Janakiramaiah, Hegde, & Gangadhar, 2006).
+AGENT-BASED MODEL
+Agent-based modeling was employed to simulate the effect of adopting SKY as intervention to manage the risk of CVD. An agent represents a person and the properties assigned represent the associated CVD risk factors. Figure 1 shows the conceptual framework of the system which mainly considers the medical expenses and the interaction among agents as factors affecting their stress
+level. SKY is introduced as intervention which stimulates reduction on the stress level of agents who practice it.
+The overall flow of the model in Figure 2 is
+MODSIM World 2017
+  2017 Paper No. 42 Page 3 of 10
+Figure 1. Conceptual Framework
+
+ Figure 2. Model flowchart
+divided in two major parts – the initialization and the simulation. The initialization sets the CVD risk matrix, agents’ properties, and the interconnection among agents. The CVD risk matrix was adopted from the WHO/ISH risk prediction chart which specifies the 10-year risk of having a major cardiovascular event (World Health Organization, 2007). To determine the agents’ corresponding CVD risk index, their properties (age, sex, blood pressure, smoking status, and manifestation of diabetes mellitus) are mapped to the CVD risk matrix. Moreover, the agents are either practicing SKY or not, a CVD or non-CVD patient and the network denotes the relationship that a person may have with others (e.g. family, work or friend). The model does not account for birth and death of agents and the concept of hereditary CVD.
+Table 1. Simulation rules
+MODSIM World 2017
+   Activity
+  Rule
+     References
+    Interact with other agents
+An agent may hassle or uplift linked agents thereby increasing or decreasing their stress level.
+An agent with higher stress level has greater chance of causing hassle than uplifting others.
+  (DeLongis & Folkman, 1988)
+   Perform SKY
+  SKY decreases BMI, SBP and stress level
+     (Narnolia, et al., 2014)
+    Take hypertension medication
+ Agents with hypertension take medication Hypertension medication decreases BMI, SBP
+   (American Heart Association, 2016) (Narnolia, et al., 2014)
+    Update agent properties
+The BMI and SBP of an agent are increased when under stress
+BMI identifies the diabetes risk of an agent
+An agent may incur CVD. The higher the CVD risk the greater the chances are.
+  (Lucini, Fede, Parati, & Pagani, 2005) (Harding, et al., 2014)
+(National Institute of Diabetes and Digestive and Kidney Diseases, n.d.)
+(World Health Organization, 2007)
+   Spend on CVD medical expenses
+ An agent who incur CVD spends amount on medical expenses.
+Increased medical expenditures can lead to financial issues which may affect stress level.
+    (Moore, Levit, & Elixhauser, 2014)
+(American Psychological Association, 2016)
+   Advertise SKY
+   When Advertise SKY feature is enabled, an agent is assumed to have 5% chance of being persuaded by ads and other agents to enroll and practice SKY
+       2017 Paper No. 42 Page 4 of 10
+
+In every simulation iteration, 1) the agents interact and may hassle or uplift each other, 2) the SKY agents perform the yoga, 3) agents with hypertension take medication, and 4) CVD patients spend on CVD medical expenses. These activities impose changes on the stress level, BMI and SBP of the agents and subsequently affect their CVD and diabetes risks. The higher the CVD risk, the greater the chance of an agent to incur CVD. To visualize the impact of increasing the number of SKY practitioners, agents may also be influenced by ads and their network to practice SKY. Each iteration is equivalent to one month. Table 1 summarizes the rules associated in each activity and the research studies where the rules were based from.
+The model was built using Netlogo, adapting the Spread of Disease model by (Rand & Wilensky, 2008) and employing the network variant to represent the social network among agents. Stress is modeled as the disease which affects the CVD risk of the agents and SKY is introduced as mitigation. The model interface (see Figure 3. SKY- ABM interface) allows the user to adjust the percent of agent population, percent of the population that performs SKY, the number of connections that an agent may have. Enabling the “Advertise SKY” will give the SKY agents the ability to convince others to do SKY. The simulation outputs the projected 10-year population of high risk CVD agents, number of agents who incur CVD and their medical expenses and total SKY agents. SKY, CVD high risk and normal agents are color coded as blue, red and yellow agents, respectively.
+Figure 3. SKY-ABM interface
+MODEL VALIDATION
+To validate the model, its result, specifically the BMI and SBP parameters were compared to the research results of Narnolia, et al. (2014), Agte, Jahagirdar, & Tarwadi (2011) and Wolff, Sundquist, Lönn, & Midlöv (2013). In the study of Narnolia, et al. (2014), they compared the effect of SKY on the cardiovascular parameters of hypertensive patients. The study group were asked to do SKY for three months along with their antihypertensive medication while the control group maintained their medication and did not perform other intervention methods. On the other hand, Agte et al. (2011) studied the effect of two-month practice of SKY on some biochemical and physiological parameters of hypertensive and normotensive patients. The hypertensive patients were also on medication for hypertension. Lastly, Wolff et al. (2013) examined the effect of yoga intervention to patients with hypertension who are taking antihypertensive medication. The study groups were divided into patients who did yoga in class and yoga at home for 12 weeks and a control group with no changes made.
+MODSIM World 2017
+ 2017 Paper No. 42 Page 5 of 10
+
+The baseline characteristics (age, sex, BMI, SBP) of the patients were used as input parameter values for the simulation and a random normal distribution was assumed. No information was provided about the smoking status of the patients; hence, the smoking status was assigned randomly.
+Table 2. Comparison of simulation output with results of related studies shows the comparison of results between the agent-based model and the three research studies. The unpaired t-test results indicate that the difference between the research studies and simulation results are not statistically significant at 0.05 level.
+Table 2. Comparison of simulation output with results of related studies
+MODSIM World 2017
+    Study
+       Group
+    Experiment
+   SKY-ABM
+   p-value
+      Mean
+     SD
+   Mean
+     SD
+    BMI
+    Narnolia et al.
+   Control group (non yoga)
+   26.24
+     0.16
+   26.93
+     4.93
+     0.33
+      Study group (yoga)
+  25.97
+   2.94
+  26.49
+   5.19
+   0.54
+    SBP
+    Narnolia et al.
+   Control group (non yoga)
+   136.72
+     8.84
+   139.21
+     11.96
+     0.25
+      Study group (yoga)
+  131.12
+   6.24
+  130.82
+   11.58
+   0.87
+    Agte et al.
+Normotensive (male)
+ 120.60
+  12.40
+115.75
+  4.18
+ 0.27
+       Normotensive (female)
+   130.00
+     12.40
+   127.51
+     13.02
+     0.58
+    Hypertensive (male)
+ 111.70
+  10.00
+111.09
+  11.19
+ 0.88
+     Hypertensive (female)
+  127.00
+    14.10
+ 122.95
+    11.06
+   0.42
+    Wolff et al.
+   Study group (yoga class)
+   144.30
+     3.10
+   137.32
+     17.00
+     0.08
+      Study (home yoga)
+  138.40
+   3.20
+  136.09
+   15.39
+   0.52
+      Control (non yoga)
+  142.60
+   3.00
+  144.77
+   16.88
+   0.55
+  IMPACT OF SKY IN HAMPTON ROADS
+To simulate the micro and macro-level impact of SKY in addressing CVD, the population profile of Hampton Roads was used as input parameter value of the model. Data were gathered from government agency websites that provide statistics about Hampton Roads population, age, sex (Virginia Employment Commission, 2017), overweight, obesity (Greater Hampton Roads, 2014), smoking (Virginia Performs, 2016) and hypertension rates (Center for Disease Control and Prevention, 2016; American Heart Association, 2016). The agents’ properties were assigned using the mean and ranges provided in the data sources and Gaussian distribution was assumed. The sensitivity of the associated CVD output parameters (high risk population, patient population, expenses, BMI, SBP and stress level) were examined by varying the percent population of those who practice SKY from 0 to 50.
+Figure 4 compares the mean SBP, BMI and stress level of the people doing SKY and those that are not (Non-SKY). The graph shows that the mean risk factors value of the SKY population is lower in general compared to the non- SKY population. The SBP of the SKY group are mostly normal while the non-SKY group are under hypertension category. Furthermore, the BMI of those who practice SKY generally falls under normal or healthy weight while the non-SKY falls under overweight or obese category.
+Figure 5 illustrates the projected percentage population of those who are more likely to incur a CVD (High Risk) and who acquired CVD (Patient) and the associated expenses for the CVD patients (Expenses). The graph depicts that as the percentage population of those who practice SKY increases, the percentage of CVD high risk and patient population and the total CVD medical expenses in Hampton Roads decreases. The percentage of decrease, compared to the result when the population of SKY is zero, is relative to the percentage of the SKY population. This signifies that the risk of incurring a CVD by the people who practice SKY is reduced, thereby decreasing the overall population of CVD high risk, patients and total medical expenses in the region.
+2017 Paper No. 42 Page 6 of 10
+
+Figure 4. BMI, SBP and Stress Comparison of SKY and Non-SKY Agents
+Figure 5. Effect of SKY to CVD Population and Expenses
+The analysis of variance of the different percentage of SKY population in Table 3. Analysis of variance of the different percentage of SKY population shows that the increase in SKY population in Hampton Roads provides an extremely significant effect (p-value < 0.001) in decreasing the percentage of CVD high risk population, associated expenses and the overall stress level in the region. The more people who practice SKY, the lesser the CVD high risk population, medical expenses and stress level gets. It is therefore significant to examine the effect of advertising SKY in the community.
+MODSIM World 2017
+  2017 Paper No. 42 Page 7 of 10
+
+Table 3. Analysis of variance of the different percentage of SKY population
+MODSIM World 2017
+  High Risk (%)
+Expenses (USD)
+  Stress Level
+SKY (%)
+Mean Var
+Mean Var
+Mean Var
+0 10 20 30 40 50
+23.27 1.39 20.89 1.03 18.59 1.75 15.82 0.64 13.64 0.73 10.96 0.94
+11,875,198.22 6.8E+11 10,959,408.86 4.8E+11 9,552,693.24 4.7E+11 8,469,485.72 3.1E+11 7,391,452.15 2.9E+11 5,979,943.81 2.6E+11
+4.66 0.001 4.52 0.002 4.36 0.001 4.22 0.001 4.07 0.001 3.92 0.001
+  p-value
+ < 0.0001
+< 0.0001
+  < 0.0001
+     The Advertise SKY feature of the model was enabled to visualize the impact of advertising SKY in Hampton Roads. With the assumption that 10% of the population are SKY agents and that a person has a 5% chance of being convinced by others, the sensitivity of the CVD output parameters (high risk population, patient population, expenses) were examined by varying the network size of each agent. Figure 6. Effect of SKY advertisement to CVD Population and Expenses denotes that as the network size increases, the projected percentage of CVD high risk and patient population and the total CVD medical expenses in Hampton Roads is significantly decreased in 10-year span. The network size alludes that the more SKY is advertised, the greater the chance that people learn about it and be convinced to practice it which in effect will offer greater impact in improving the risk factors and reducing the expenses associated to CVD in the region.
+Figure 6. Effect of SKY advertisement to CVD Population and Expenses
+Nielsen (2012) mentions that recommendations from friends and family (92% trust rating) is trusted above all forms of advertising. However, there is still limited number of people who are aware of and who practice SKY in Hampton Roads. The use of other advertising media would facilitate the increase in awareness of Hampton Roads residents about SKY as possible intervention to manage the risks of CVD. Other highly trusted forms of advertising cited by Nielsen (2012) are consumer opinions posted online (70%), editorial content such as newspaper article (58%), branded websites (58%), email sign up (50%), ads on TV (47%), brand sponsorships (47%), ads in magazines (47%), billboards and other outdoor advertising (47%).
+ 2017 Paper No. 42 Page 8 of 10
+
+CONCLUSION
+An agent-based model was developed in this study to simulate the micro and macro-level impact of adopting SKY in Hampton Roads, particularly on managing stress, preventing CVD and reducing the associated medical expenses. The model was built using Netlogo and data from published researches related to stress, CVD and the effect of SKY to CVD risk factors. Validation was achieved by comparing the results of the simulation with that of conducted and published SKY researches. To examine the impact of SKY in 10-year span, the Hampton Roads population data was used as input to the system.
+The validation results indicate that the difference between the published results of research studies on SKY and the simulation results are not statistically significant. Simulation results show that people who practice SKY have generally lower and normal SBP, BMI and stress level while those who don’t, have generally higher and falls on the high-risk category. The analysis of variance suggests that the increase in SKY population in Hampton Roads provides an extremely significant effect in decreasing the percentage of CVD high risk population, associated expenses and the overall stress level in the region. In addition, advertising SKY offers greater impact on improving the risk factors and reducing the expenses associated to CVD in Hampton Roads.
+REFERENCES
+Agte, V. V., & Chiplonkar., S. A. (2008). Sudarshan Kriya Yoga for improving antioxidant status and reducing anxiety in adults. Alternative and Complementary Therapies, 96-100.
+Agte, V. V., & Tarwadi, K. (2004). Sudarshan Kriya Yoga for treating type 2 diabetes: a preliminary study. Alternative and Complementary Therapies, 220-222.
+Agte, V., Jahagirdar, M., & Tarwadi, K. (2011). The effects of Sudarshan kriya Yoga on some physiological and biochemical parameters in mild hypertensive patients. Indian Journal Physiol Pharmacol, 183-187.
+American Heart Association. (2016, October). Understanding blood pressure readings. Retrieved from http://www.heart.org/HEARTORG/Conditions/HighBloodPressure/AboutHighBloodPressure/Understandin g-Blood-Pressure-Readings_UCM_301764_Article.jsp#.WJYklvkrLIV
+American Heart Association. (2017). Heart disease and stroke statistics 2017.
+American Psychological Association. (2016). Stress in America: The impact of discrimination. Stress in AmericaTM
+Survey.
+Brown, R., & Gerbarg, P. (2005). Sudarshan Kriya Yogic breathing in the treatment of stress, anxiety, and
+depression: part II - clinical Applications and guidelines. The Journal of Alternative and Complementary
+Medicine, 711-717.
+Center for Disease Control and Prevention. (2016, September). Obesity prevalence in 2015 varies across states and
+territories. Retrieved from https://www.cdc.gov/obesity/data/prevalence-maps.html
+DeLongis, A., & Folkman, S. (1988). The impact of daily stress on health and mood: psychological and social
+resources as mediators. Journal of Personality and Social Psychology, 486-495.
+Descilo, T., Vedamurtachar, A., Gerbarg, P. L., Nagaraja, D., Gangadhar, B. N., Damodaran, B., . . . Brown, R. P.
+(2010). Effects of a yoga breath intervention alone and in combination with an exposure therapy for post- traumatic stress disorder and depression in survivors of the 2004 South-East Asia tsunami. Acta Psychiatrica Scandinavica, 289-300.
+Ghahremani, D., Oh, E., Dean, A., Mouzakis, K., Wilson, K., & London, E. (2013). Effects of the youth empowerment seminar on impulsive behavior in adolescents. Journal of Adolescent Health, 139-141.
+Gholipour, B. (2015, January). Blood Pressure: highs, lows & what's normal. Retrieved from LiveScience: http://www.livescience.com/42219-blood-pressure.html
+Gootjes, L., Franken, I., & Strien, J. V. (2011). Cognitive emotion regulation in yogic meditative practitioners. Journal of Psychophysiology, 87-94.
+Greater Hampton Roads. (2014, September). Community Indicators Dashboard. Retrieved from http://www.ghrconnects.org/
+Harding, J. L., Backholer, K., Williams, E. D., Peeters, A., Cameron, A. J., & Hare, M. J. (2014). Psychosocial stress Is positively associated with body mass index gain over 5 years: evidence from the longitudinal AusDiab study. Obesity, 277-286.
+Harvard Health Publications. (2009, April). Yoga for anxiety and depression. Retrieved from http://www.health.harvard.edu/mind-and-mood/yoga-for-anxiety-and-depression
+2017 Paper No. 42 Page 9 of 10
+MODSIM World 2017
+
+Hendricks, G. (2010). Conscious breathing. Bantam.
+Jahnke, R. (2016, August). Breath Practice — The Amazing Benefits of Breathing. Retrieved from Feel the Qi:
+http://drjahnke.feeltheqi.com
+Kharya, C., Gupta, V., Deepak, K., Sagar, R., Upadhyav, A., Kochupillai, V., & Anand, S. (2014). Effect of
+controlled breathing exercises on the psychological status and the cardiac autonomic tone. Indian Journal
+Physiol Pharmacol, 211-221.
+Kjellgren, A., Bood, S. Å., Axelsson, K., Norlander, T., & Saatcioglu, F. (2007). Wellness through a comprehensive
+yogic breathing program - a controlled pilot trial. BMC Complement Altern Med, 43.
+Lucini, D., Fede, G. D., Parati, G., & Pagani, M. (2005). Impact of chronic psychosocial stress on autonomic
+cardiovascular regulation in otherwise healthy subjects. Hypertension, 1201-1206.
+Moore, B., Levit, K., & Elixhauser, A. (2014, October). Costs for hospital stays in the United States. Retrieved from
+Agency for Healthcare Research and Quality: http://www.hcup-us.ahrq.gov/reports/statbriefs/sb181-
+Hospital-Costs-United-States-2012.pdf
+Mozaffarian, D., Benjamin, E. J., Go, A. S., Arnett, D. K., Blaha, M. J., Cushman, M., & Ferranti, S. d. (2015, Jan
+27). Heart disease and stroke statistics - 2015 Update. Retrieved from heart.org: https://www.heart.org/idc/groups/heart- public/@wcm/@sop/@smd/documents/downloadable/ucm_449849.pdf
+Narnolia, P., Binawara, B., Kapoor, A., Mehra, M., Gupta, M., Tilwani, K., & Maharia, S. (2014). Effect of Sudarshan Kriya Yoga on cardiovascular parameters and comorbid anxiety in patients of hypertension. Scholars Journal of Applied Medical Sciences, 3307-3314.
+National Heart, Lung, and Blood Institute. (2014, July). What are the risk factors for heart disease? Retrieved from https://www.nhlbi.nih.gov/health/educational/hearttruth/lower-risk/risk-factors.htm
+National Institute for Occupational Safety and Health. (2014, June). Stress at work. Retrieved from https://www.cdc.gov/niosh/docs/99-101/
+National Institute of Diabetes and Digestive and Kidney Diseases. (n.d.). Risk factors for Type 2 diabetes. Retrieved from https://www.niddk.nih.gov/health-information/health-communication-programs/ndep/am-i-at- risk/diabetes-risk-factors/Pages/diabetesriskfactors.aspx
+Nesvisky, Matt. (2017). Economic benefit of heart attack treatments outweigh the cost. Retrieved from The National Bureau of Economic Research: http://www.nber.org/digest/oct98/w6514.html
+Nielsen. (2012, April). Consumer trust in online, social and mobile advertising grows. Retrieved from http://www.nielsen.com/us/en/insights/news/2012/consumer-trust-in-online-social-and-mobile-advertising- grows.html
+Rand, U., & Wilensky, W. (2008). NetLogo spread of disease model. Retrieved from Center for Connected Learning and Computer-Based Modeling: http://ccl.northwestern.edu/netlogo/models/SpreadofDisease
+Somwanshi, S., Handergulle, S., Adgaonkar, B., & Kople, D. (2013). Effect of Sudarshankriya Yoga on cardiorespiratory parameters. International Journal of Recent Trends in Science and Technology, 62-66.
+Statistic Brain. (2016, July). Stress Statistics. Retrieved from http://www.statisticbrain.com/stress-statistics/ Thompson, T. (2012). Mid-Life NOT a Crisis: Increase Health and Vitality at Any Age. New Jersey: BookBaby. Vedamurthachar, A., Janakiramaiah, N., Hegde, J. M., & Gangadhar, B. (2006). Antidepressant efficacy and
+hormonal effects of Sudarshan Kriya Yoga (SKY) in alcohol dependent individuals. Journal of Affective
+Disorders, 249-253.
+Virginia Employment Commission. (2017). Virginia community profile Hampton Roads PDC. Virginia Performs. (2016, April). Smoking. Retrieved from
+http://vaperforms.virginia.gov/indicators/healthfamily/smoking.php
+Wolff, M., Sundquist, K., Lönn, S. L., & Midlöv, P. (2013). Impact of yoga on blood pressure and quality of life in
+patients with hypertension – a controlled trial in primary care, matched for systolic blood pressure. BMC
+Cardiovascular Disorders.
+World Health Organization. (2007). WHO/ISH Risk prediction charts.
+World Heart Federation. (2014). Cardiovascular diseases in the USA.
+World Heart Federation. (2014). Stress. Retrieved from http://www.world-heart-federation.org/cardiovascular-
+health/cardiovascular-disease-risk-factors/stress/
+2017 Paper No. 42 Page 10 of 10
+MODSIM World 2017

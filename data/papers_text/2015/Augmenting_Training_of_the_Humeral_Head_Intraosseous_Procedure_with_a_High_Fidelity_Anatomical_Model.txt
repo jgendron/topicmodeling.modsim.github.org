@@ -1,0 +1,186 @@
+Augmenting Training of the Humeral Head Intraosseous (IO) Procedure with a High Fidelity Anatomical Model
+Teresita M. Sotomayor
+US RDECOM ARL HRED STTC Orlando, FL Teresita.M.Sotomayor.civ@mail.mil
+Angela Alban Simetri, Inc Winter Park, FL angela@simetri.us
+ABSTRACT
+Traumatic life-threatening injuries often need immediate intravenous access for the delivery of fluids and medications. Although medics, nurses, and physicians are highly trained in obtaining intravenous access, when access is difficult or altogether impossible to achieve, alternative methods to accomplish fluid and medication administration are essential. Humeral head Intraosseous (IO) infusion is the process of delivering fluids directly into the marrow of the humerus to provide a non-collapsible entry point into the circulatory system. This technique is used in emergency situations to provide fluids and medication quickly when intravenous access is not available or not feasible. The U.S. Army Research Laboratory (ARL) executed a Small Business Innovative Research (SBIR) initiative to analyze the scientific, technical, commercial merit, and feasibility of using a low-cost medical simulator for training medical personnel in Army Combat Training Schools the Humeral head IO procedure. As part of the initial phase, ARL conducted research and developed a capability to fill the gap in training this procedure. This paper will discuss how training requirements impacted the design and development of the Humeral head IO model and how subject matter expertise was utilized to identify performance metrics. Data from user evaluations exploring benefit to training, system usability (ease of use), anatomical accuracy, physiological accuracy, realism, and motivation to use will be presented.
+ABOUT THE AUTHORS
+Dr. Teresita Sotomayor is a chief engineer and subject matter expert in the area of severe trauma simulation at the U.S. Army Research Laboratory (ARL), Human Research and Engineering Directorate (HRED), Simulation and Training Technology Center (STTC). Her expertise in user-centric design and technology effectiveness evaluations has been instrumental in the development and transition of modeling and simulation solutions in support of medical training. She is a graduate of the University of Puerto Rico (Mayaguez Campus) with a degree in Industrial Engineering. She holds a Master of Science degree in Operations Research Stochastic Simulation from The George Washington University and a Doctorate in Modeling and Simulation from the University of Central Florida. She is a member of the Army Acquisition Corps since 2003 and has over 26 years of experience in the modeling, simulation, and training domain.
+Ms. Angela M. Alban is President and CEO of SIMETRI, Inc., based in Winter Park, Florida. She has extensive experience in a wide range of disciplines (research, development, production, business development, and management), enabling her to oversee all SIMETRI initiatives, including medical training and treatment by merging medical science with modeling and simulation technology. Ms. Alban has a degree in Mathematics and Computer Science from Emory University and a Master of Science in Computer Engineering from the University of Central Florida. She completed the Defense Systems Management College Advanced Program Manager's Course to parallel 19 years of experience in the Simulation and Training Industry.
+2015 Paper No. 6 Page 1 of 9
+MODSIM World 2015
+
+Augmenting Training of the Humeral Head Intraosseous (IO) Procedure with a High Fidelity Anatomical Model
+Teresita M. Sotomayor, Ph.D. US RDECOM ARL HRED STTC Orlando, FL Teresita.M.Sotomayor.civ@mail.mil
+INTRODUCTION
+Angela M. Alban SIMETRI, Inc Winter Park, FL angela@simetri.us
+Over the past several years, the British Medical Emergency Response Team (MERT) and U.S. Air Force Search and Rescue Unit (also known as PEDRO) have been administering fluids to patients at point of injury and in route through the use of the humeral head Intraosseous (IO) procedure. Humeral head IO infusion is the process of injecting fluids directly into the marrow of the humerus, or upper arm bone (also known as greater tubercle of the humerus) to provide a non-collapsible entry point into the circulatory system. This technique is used in emergency situations to provide fluids and medication quickly when intravenous (IV) access is not available or not feasible and it has proven to be extremely effective (Tobias & Ross, 2010). As part of their teams, the MERT includes an emergency medicine physician and the PEDRO includes pararescue trained medical providers. These providers trained on cadavers prior to deployment. The U.S. Army Center for Pre-Hospital Medicine (CPHM) at Fort Sam Houston, Texas provides medical training to providers of all levels. CPHM’s program of instruction (POI) currently lacks an adequate training model for the humeral head IO procedure. In order to fill the gap in training, the U.S. Army Research Laboratory (ARL) executed a Small Business Innovative Research (SBIR) initiative to analyze the scientific and technical feasibility of using a low-cost medical simulator for training U.S. military medical personnel. As part of the initial phase, ARL researched and developed a capability to train this procedure. This research focused on identifying innovative technologies, technical risks of the approach, costs, and benefits associated with development and use of the prototype. Additionally, a usability study was conducted with providers to gather feedback and assess whether the initial prototype met training requirements.
+BACKGROUND
+The CPHM is the proponent for the Tactical Combat Medical Care (TCMC) course, which provides Role I military medical providers (Physician Assistants (PA), nurses, and doctors) and senior medical Non-Commissioned Officers (NCO) with an introduction to pre-hospital trauma care. Role I, battlefield medical care is delivered from the point of injury through the battalion aid station or brigade support medical company and it continues until the casualty is delivered to surgical care. The purpose of the training is to provide professionals normally associated with higher echelons of care, with an understanding of the realities of combat related trauma at the point of injury. It also provides them with practical working knowledge on how to deal with the injured patient in a combat environment. The course is based on known trauma resuscitation methods and lessons learned from past and current combat environments. Training consists of didactic lecture, hands-on practical training (TCMC, 2013) and on Tactical Combat Casualty Care (TCCC) principles.
+The POI at TCMC includes the IO infusion procedures as part of their training curriculum. This technique used to access blood vessels within the bone marrow typically concealed in a structured bony wall that is rigid in nature. Unlike the body’s peripheral veins, the IO space does not collapse when the patient is in shock (Communicore, 2006). Even though the use of this procedure was prevalent during the Second World War by the U.S Military, its use faded with the introduction of the plastic intravenous (IV) catheter. IO access re-emerged as a viable field alternative to IV fluid introduction during the recent conflicts in Iraq and Afghanistan. As of 2010, the U.S. Committee on the TCCC guidelines recommends using IO infusion in any resuscitation scenario in which IV access is not feasible (Weiser et al., 2012).
+2015 Paper No. 6 Page 2 of 9
+MODSIM World 2015
+
+An IO insertion can be performed at several different points on a patient’s body, including the sternum, tibia, and humeral head (Figure 1). The location of IO insertion depends on the equipment available to the care provider. The U.S. Army currently utilizes the EZ-IO® Intraosseous Infusion System for Humeral head IO insertions. An insertion time by trained operators of as little as 20-40 seconds makes this technology particularly attractive for use on the battlefield. (Weiser et al., 2012; Carness et al., 2012; Sarkar & Philbeck, 2009). This system is currently included only in TCMC Role I medical equipment sets for the U.S. Army, but a greater distribution of this life-saving technology within the Army is desired.
+CPDM currently does not have an adequate shoulder training model for the HIO procedure. The current training model utilized in the POI is cadaver tissue. It is cost prohibitive to use cadavers for the number of students attending CPDM each year. Consequently, the humeral head IO device has not been placed in the U.S. Army Medical Equipment Sets (MES) to avoid issuing a lifesaving medical device without proper training. In addition, it is not logistically feasible to train all providers in Emergency Medicine. As a result of not having an adequate training model to train our deploying providers, the U.S. Army is currently behind the power curve on treating combat wounded service members on the modern battlefield in regards to the use of the IO. By making IO insertion training available to all soldiers, the Army can expect to see a reduction in battlefield deaths through the appropriate use of IO devices in the field. A low-cost, hands-on training capability is needed, with sufficient fidelity to train soldiers effectively in the field use of IO devices for humeral head insertions, and create “muscle memory” for this task.
+Figure 1. Diagram of the humeral head area. (Vidacare, n.d.) TECHNICAL OBJECTIVES
+The research effort focused on the development and evaluation of a simulation-based shoulder model IO training capability, based on the requirements defined by TCMC. The system should:
+- Support established training objectives.
+- Provide a capability to judge proficiency performance.
+- Support practice of both cognitive and psychomotor skills.
+- Simulate entire torso from sternal notch to just below umbilicus with complete bilateral upper extremities.
+- Allow for proper positioning of the affected upper extremity prior to insertion of the device.
+- Have flexible upper extremities, including elbow, to allow positioning of the hand over the umbilicus to
+ensure proper position for device insertion, affording training on both the left and right humeral heads.
+- Allow for improper positioning of the extremity by the student, affording an opportunity for remedial
+training.
+- Include palpable anatomical landmarks to determine proper insertion site of device.
+- Include injectable simulated bone to confirm placement and flow.
+- Have replaceable humeral head simulated bones.
+MODSIM World 2015
+ 2015 Paper No. 6 Page 3 of 9
+
+The technical objectives were decomposed into a revised list of requirements that were based on the POI and refined with SME inputs during the requirements analysis phase of the program in an effort to refine the technical objectives for the program resulting in the following set of requirements:
+• Accurate and realistic feel of the humerus underneath the skin/muscle tissue layers, to allow trainees to palpate the bone and identify the greater tubercle.
+• Ability to incorrectly/correctly insert the 45mm EZ-IO needle through the simulated skin/muscle tissue at the correct/incorrect angle and simulated bone using the EZ-IO Power Driver (or manually, if such training is desired), with appropriate feel and resistance.
+• Support for multiple insertions with minimal need to change components.
+• Ability to anchor the catheter into the simulated arm.
+• Ability to attach a syringe and apply negative pressure for confirmation of correct needle location (through
+visual indication of red fluid being pulled into the tubing).
+• Ability to introduce fluids through the EZ-IO catheter which will be consumed by the device.
+• Skin that allows the use of iodine and/or alcohol without breaking down or discoloring.
+TECHNOLOGY DEVELOPMENT
+During Phase I the team concentrated their efforts in developing a low-cost simulation-based training capability that allows students to build “muscle memory” for a task which will likely be performed in a high-stress situation. One of the considerations was that the part task trainer (PTT) must be able to afford the use of the actual EZ-IO® Power Driver (Figure 2) and 45mm needles. Compatibility with the 45 mm needles was important because estimation of correct needle length by observation of skin depth before attempting bone penetration is attempted is a critical criterion in the training program (Day, 2011).
+Figure 2. Humeral head IO insertion using the EZ-IO drill.
+A prototype, proof-of-concept device was developed to explore and demonstrate the means to meet the Army’s requirements for training. The PTT was designed to teach students to find the correct anatomical landmarks, to insert the IO needle at the correct location and proper angle, to verify proper insertion, and to prepare the catheter correctly to introduce fluids. The first phase of the program focused on providing reusable and replaceable simulated skin, muscle, and bone. A modular approach minimizes the expendable items that must be replaced throughout the life of the device.
+The proof-of-concept PTT consists of a single arm with appropriate structures and characteristics, and has the following major components (Figure 3):
+• Simulated bones (replaceable) and joints with realistic feel and appropriate anatomical landmarks.
+• Simulated muscle and skin with realistic haptic feedback.
+• Base to position arm and hold arm in place during medical procedure.
+MODSIM World 2015
+ 2015 Paper No. 6 Page 4 of 9
+
+Figure 3. Humeral head IO insertion demonstration using the EZ-IO® drill on the PTT prototype.
+During Phase I, the design process focused on durability, realism, reusability, and low lifecycle costs. Training with the PTT involved using the EZ-IO Power Driver from a standard EZ-IO manufacturer’s kit. The PTT was constructed to minimize waste and use of expendables, in order to control long term costs. This aspect of the design was closely evaluated and addressed with respect to the bone, skin, and underlying tissue that must be poked, prodded, and drilled as a normal part of training. The prototype PTT was designed with considerations for future attachment in mind. Although the prototype arm is a standalone device, it will need to be easily attached to the torso that is projected to be produced during Phase II. The design of the initial PTT prototype is modular to facilitate attachment and replacement as well as to minimize the scope and cost of consumables.
+USER EVALUATIONS
+Initial usability studies were performed in May 2014 at the City of Orlando Fire Department EMS Division, the Orange County Fire and Rescue Training Center and Command School, and the University of Florida College of Medicine Center for Simulation Education and Safety Research in Jacksonville, Florida. Test users included Emergency Medical Technicians (EMT), Paramedics, and Trauma Physicians. A final usability evaluation was conducted at in July 2014 at the Center for Pre- Hospital Medicine (CPHM) at Fort Sam Houston, Texas. The focus of the study was to evaluate the usability of the system to support training objectives and to assess if the system is intuitive, effective, and subjectively acceptable to users (Nielsen, 1993). The usability study consisted of two major activities:
+1. Observation of trainees and trainers interacting with the system - SMEs were briefed on the capabilities of the humeral head initial prototype. Following the demonstration, the SMEs were asked to perform the IO procedure on the PTT. The SMEs were observed during their execution of the different tasks.
+2. Feedback on their reactions was captured through surveys and through participation in structured focus group interviews. Once they had completed the procedures, the SMEs were asked to complete a questionnaire to assess system usability and reaction to the training system. A focus group was conducted to assess if the training system supports the training objectives of the POI. The data collected, provided user feedback in terms of: Benefit to Training, System Usability (ease of use), Anatomical Accuracy, Physiological Accuracy, Realism, and Motivation to use.
+None of the data collected included any personally identifiable information.
+2015 Paper No. 6 Page 5 of 9
+MODSIM World 2015
+ 
+DATA ACQUISITION AND RESULTS
+After utilizing the system, participants were given one survey questionnaire with 20 usability questions. Participants were asked to evaluate their experience by responding to questions regarding the critical tasks required to perform the procedure that can be performed using the system. Participants answered the questions by selecting options on a scale from 1 (strongly disagree) to 7 (strongly agree), with higher scores signifying a better experience. The questionnaires developed as part of this effort included questions in five different constructs: Meets Training Objectives, Usability, Realism, Physiological/Anatomical Accuracy, and Motivation to Use. The constructs were developed based on subject matter expert (SME) feedback during the requirements definition phase. A summary of the calculated mean responses obtained from the students and instructors on the initial prototype is provided in Table 1.
+Table 1. Summary of Results (Mean Responses)
+MODSIM World 2015
+        Paramedics
+     Physicians
+      Physician Assistants
+   Factor
+   City of Orlando
+   Orange County
+  UF College of Medicine
+ TCMC
+   Number of Participants
+   13
+   8
+     29
+   3
+   Meets Training Objectives
+   6.67
+   6.74
+     6.32
+   7
+   Usability
+   6.31
+   6.26
+     6.07
+   6.67
+   Realism
+   5.59
+   5.86
+     5.23
+   6.88
+   Physiological/Anatomical Accuracy
+   5.15
+   6.00
+     5.60
+   6.5
+   Motivation to Use
+     6.83
+     6.80
+       6.07
+      6.84
+  A summary of the average responses per group obtained from the students and instructors on the initial prototype is provided in Figure 4.
+Figure 4. Average Scores per Group
+  7.00$ 6.00$ 5.00$ 4.00$ 3.00$ 2.00$ 1.00$ 0.00$
+6.67$
+Benefit$to$ training/$ Mee9ng$training$ objec9ves$
+6.83$
+         6.31$
+Usability$
+5.59$
+Realism$
+5.15$
+                     City$of$Orlando$ Orange$County$ UF$CoM$
+TCMC$
+                  Physiological/ Mo9va9on$to$Use$ Anatomical$
+Accuracy$
+2015 Paper No. 6 Page 6 of 9
+
+To complement the questionnaires, users were also asked to provide their opinions about the prototype during focus group discussions. Below is a summary list of significant findings obtained through both the questionnaires and these focus groups:
+• The participants commented that the humeral head I/O training system could be beneficial to the current training curriculum.
+• Overall, the participants concluded that the system was user friendly, easy to maintain, and reset between uses.
+• The majority of the participants responded positively to questions regarding the system’s ability to meet
+training objectives.
+• The highest scores were observed in the category of “Motivation to Use” for all groups; it is expected that this
+is the case because no realistic training system exists on the market.
+LESSONS LEARNED
+Working closely with the user community during the requirements and task analyses proved to be invaluable during the concept definition and system design phases of the effort. Despite the number of hours spent eliciting requirements from SMEs, the team encountered procedural nuisances across different POIs. For example, the Instructors at the City of Orlando Fire Department and Orange County Fire and Rescue do not extract bone marrow (also referred to as flash) after inserting the needle catheter into the humeral head. They omit this step, which is a critical task in the Army POI. Had the research team not met with Army SMEs prior to designing the system and had limited requirements to those of these two fire and rescue departments, this critical requirement would not have been incorporated into the system. By conducting the usability study across users from different organizations and levels of care, more comprehensive feedback was gathered. By conducting usability studies early in the development cycle, potential issues were prevented from being identified late in the cycle. As a result, the team was able to mitigate cost and schedule risks by addressing inconsistencies early during the design phase of the effort.
+CONCLUSIONS
+Traumatic life-threatening injuries often need immediate intravenous access for the delivery of fluids and medications. In combat environments, the urgency of such procedures is often heightened in treating critical injuries. Although medics, nurses, and physicians are highly trained in obtaining intravenous access, when access is difficult or altogether impossible to achieve, alternative methods to accomplish fluid and medication administration are essential. The Humeral head IO training system offers a high fidelity training capability for this life-saving procedure. The limited performance of this procedure is due to a lack of training because no anatomically and physiologically accurate training device exists. By making IO insertion training available to all soldiers, the Army can expect to see a reduction in casualties through the appropriate use of IO devices in the field. A low-cost, hands- on training capability with sufficient fidelity to train soldiers effectively in the field use of IO devices for humeral head insertions, providing them with “muscle memory” for this task, is needed. Severe trauma at the point of injury creates major challenges to first responders as they are not mentally prepared to treat the injuries encountered on the battlefield. The research that ARL STTC is conducting under a SBIR will result in realistic training focusing on anatomical and physiological accuracy as well as providing a training capability for a medical procedure being introduced in-theater.
+Results from the usability evaluations conducted with the City of Orlando Fire Department, Orange County Fire and Rescue, University of Florida Department of Emergency Medicine, and U.S. Army Center for Pre-Hospital Medicine indicate that the system is easy to use and an improvement on what is being used in the current POI. Usability areas explored included Meets Training Objectives, Usability, Realism, Physiological/Anatomical Accuracy, and Motivation to Use. Feedback from the focus group discussions is being evaluated and incorporated into the system design. The intent of the usability study was to collect quantitative and qualitative metrics to better understand the impact of increasing fidelity during training.
+FUTURE WORK
+At the end of Phase I of the humeral head IO training system SBIR, it was determined that Phase II should focus on an expanded and improved version of the Phase I prototype with additional capabilities, improved realism and
+2015 Paper No. 6 Page 7 of 9
+MODSIM World 2015
+
+Physiological/Anatomical Structure greater user-friendliness, better reliability, and a specific design for commercialization. The following overarching objectives could apply to the Phase II effort:
+• Improve the Phase I prototype PTT for practical use in the field.
+• Incorporate recommendations, findings, and new requirements elicited from military and civilian end users
+and Subject Matter Experts (SMEs) during Phase I.
+• Apply the Phase I technology to the creation of a humeral head IO training capability for Laerdal manikins.
+• Simplify end-user operation, maintenance, and logistic support.
+• Identify and reduce cost drivers for better positioning in the commercial medical training device market.
+The approach to achieving these objectives could involve the following:
+• Expand the humeral head IO PTT into a complete torso with two fully articulating arms, allowing performance of the humeral head IO procedure on either side.
+• Add requested features from Phase I usability studies and focus groups, including support for FAST IO and Thermal Angel.
+• Add automated capability to simplify device set up and reset, reducing instructor burden.
+• Research and develop a humeral head IO capability that can be integrated into existing Laerdal manikin
+arms.
+• Add Computer-Aided Instruction (CAI) in the form of a video game as an adjunct to the PTT.
+• Create commercial-grade documentation for end users (Operation and Maintenance Manuals).
+• Research methods to lower lifecycle cost and ease of use/storage/transport.
+• Engineer the device design to facilitate manufacturing and production (commercialization).
+The results from Phase I usability evaluations (Figure 4) seem to indicate that an area to focus on should be improving realism and physiological/anatomical structure of the system. It would also be important to get a better understanding of why these areas resulted in the lowest scores and if those shortcomings have a negative impact on training or performance in real situations. The team plans to address these results during development of the Phase II device and subsequent usability testing which will take place at two points in the development process. The first testing event should take place when approximately 65% of work on the device has been completed, and the PTT is in a usable but not yet commercially viable state. This testing could be conducted to obtain early feedback on new features and improvements that have been made under the Phase II effort, and the timing of the testing is such that we will be able to make changes to the final device if required based upon user feedback. The second testing event should occur after the humeral head IO PTT has been completed, to demonstrate its capabilities and readiness for use. To ensure that requirements are being addressed across the medical training spectrum, usability testing should be carried out at multiple sites with different types of users, including emergency medical service practitioners (City of Orlando, Orange County, and City of Winter Park), emergency medicine trainers (University of Florida, Florida College of Emergency Physicians), and military users (Fort Sam Houston and other medical training sites).
+ACKNOWLEDGEMENTS
+The authors would like to acknowledge and thank Dr. Brian Hill (U.S. Army Center for Pre- Hospital Medicine), Dr. Jeff Mott (University of North Texas Health Science Center), Dr. Andy Godwin, Dr. Lisa Jacobson, and Colleen Kalynych (University of Florida College of Medicine Center for Simulation Education and Safety Research), Rich Wales (City of Orlando Fire Department EMS Division), and Elizabeth Todak (Orange County Fire Department) for facilitating the usability studies and user evaluations of the initial prototype system.
+2015 Paper No. 6 Page 8 of 9
+MODSIM World 2015
+
+REFERENCES
+Allman, K., McIndoe, A., & Wilson, I. (2009). Emergencies in Anaesthesia. New York: Oxford University Press. Carness, J.M., Russell, J.L., Lima, R.M., Navarro, L.H., & Kramer, G.C. (2012). Fluid resuscitation using the
+intraosseous route: Infusion with lactated ringers and hetastarch. Military Medicine, 177(2), 222-228. Communicore (2006). Emergency Vascular Access: Technology, Economics, and Deployment in a Multi-
+Dimensional Setting, Washington: Communicore.
+Day, M. W. (2001). Intraosseous devices for intravascular access in adult trauma patients. Crit Care Nurse,
+31(2),76-90.
+Luck, R. P., Haines, C., & Mull, C. C. (2010). Intraosseous access. Journal of Emergency Medicine, 39(4), 468-75.
+PR Newswire (2013). Vascular access device market in the U.S. to reach over $4.6 billion by 2016. June 22, 2013, Retrieved from http://www.prnewswire.com/news-releases/vascular-access-device-market-in-the-us-to- reach-over-46-billion-by-2016-88899132.html
+Sarkar, D., & Philbeck, T. (2009). The use of multiple intraosseous catheters in combat casualty resuscitation. Military Medicine, 174(2), 106-108.
+Tobias, J. D., & Ross, A. K. (2010). Intraosseous infusions: a review for the anesthesiologist with a focus on pediatric use. Anesthesia & Analgesia, 110 (2), 391–401.
+Vidacare Corporation (n.d.). EZ-IO AD® Proximal Humeral Access Training Program.
+Weiser, G., Hoffman, Y., Galbraith, R., & Shavit, I. (2012). Current advances in intraosseous infusion – A
+systematic review. Resuscitation, 83, 20-26.
+2015 Paper No. 6 Page 9 of 9
+MODSIM World 2015
