@@ -1,0 +1,88 @@
+Rapid USV Prototyping System (RUPS)
+Beau Branch, Samantha Collins, Lee Dumaliang, Nathan Gonda, Timothy Lane, Kari Miles, Melissa Periman, Dominic Scerbo
+Department of Modeling, Simulation and Visualization Engineering, Old Dominion University Norfolk, Virginia 23508
+Bbran016@odu.edu, scoll003@odu.edu, lduma002@odu.edu, ngond002@odu.edu, tlane006@odu.edu, kmile006@odu.edu, mperi003@odu.edu, dscer001@odu.edu
+ABSTRACT
+The Old Dominion University Modeling and Simulation senior design class is developing a system to rapidly model prototypes of Unmanned Surface Vehicles (USVs). The system is a component of a larger system the Naval Sea System Command plans to use to develop test strategies for autonomous USVs. The purpose of this paper is to describe the high-level design of the system. The Rapid USV Model Prototyping System (RUMPS) consists of three components: a motion model which is a mathematical representation of the motion of a USV, a tool that aids in the creation of the parameters for the USV motion model, and a visualization of the trajectory of the USV’s motion and performance metrics. Additionally, software packages and dynamics engines that may be applicable to the integration of a USV motion model. The system will be verified to ensure proper integration of the system components. The system will also be validated by comparing the motion model’s behavior to that of an actual boat representative to a USV. This paper also describes how each component in the system works, identifies relevant software applicable to the implementation of a USV model, and describe the process to conduct validation.
+ABOUT THE AUTHORS
+All authors of this paper are seniors at Old Dominion University expecting to graduate May, 2017 in the undergraduate program for Modeling, Simulation, and Visualization Engineering.
+Beau Branch: is minoring in mathematics and is interested in predictive models, data analysis, and physics modeling.
+Samantha Collins: is currently an undergraduate research assistance. She is also minoring in computer science and will pursue a Master’s degree in Modeling and Simulation Engineering (M&S).
+Lee Dumaliang: is currently an undergraduate research assistance. He is also minoring in computer science and engineering management and is interested in pursuing a career in software development.
+Nathan Gonda: is currently an undergraduate research assistance and does game development. He also has an Associate’s Degree in computer science and will pursue a Master’s degree in M&S.
+Timothy Lane: is minoring in international studies. He has an Associate’s Degree in Simulation and Game Programming and enjoys the broad potential that M&S offers.
+Kari Miles: is minoring in film studies and is interested in game development.
+Melissa Periman: is minoring in computer engineering with interest in flight simulation.
+Dominic Scerbo: currently works for Booz Allen Hamilton. He is also the president of The Society of Modeling and Simulation, minoring in Biomedical Engineering and is interested in Medical Simulations.
+2017 Paper No. 39 Page 1 of 8
+MODSIM World 2017
+
+Rapid USV Prototyping System (RUPS)
+Beau Branch, Samantha Collins, Lee Dumaliang, Nathan Gonda, Timothy Lane, Kari Miles, Melissa Periman, Dominic Scerbo
+Department of Modeling, Simulation and Visualization Engineering, Old Dominion University Norfolk, Virginia 23508
+Bbran016@odu.edu, scoll003@odu.edu, lduma002@odu.edu, ngond002@odu.edu, tlane006@odu.edu, kmile006@odu.edu, mperi003@odu.edu, dscer001@odu.edu
+INTRODUCTION
+Unmanned Surface Vehicles (USVs) are small mobile vessels that can be controlled by either autonomous software or telecommunication operators. The Navy is a large advocate for USV technology because of their ability to complete missions that would otherwise be impossible, or too dangerous. The Naval Sea Systems Command Warfare Center (NSWC) have a great deal invested in USVs. The NSWC created the Combat Craft Division (CCD) to test and engineer the capabilities of watercraft. CCD use modeling and simulation, as well as test facilities, to test their watercraft designs.
+CCD has asked the capstone team to develop a way to rapidly create and test USVs using modeling and simulation. The simulation needs to allow the user to rapidly design a USV based on specified characteristics and test it under certain conditions. The capstone team’s proposed solution for the problem is the system referred to as RUPS, Rapid USV Prototyping System.
+This paper summarizes the capstone team’s proposed solution for CCD. A conceptual design section will summarize the design of the different components including, the motion model, the conversion tools, the simulator, the generation tool, and the visualization. A section on verification and validation (V&V) will show the capstone team’s plan to conduct V&V. The last sections will conclude the paper and acknowledge the participants outside of the capstone team.
+BACKGROUND
+Naval Sea Systems Command Warfare Center (NSWC) Combat Craft Division (CCD) has been in operation since 1967 (Combat, 2017). It is responsible for designing and engineering watercraft for the United States Department of Defense. At CCD, naval architects and engineers test and evaluate cutting edge improvements in watercraft design and use. These boats are used in multiple missions involving the military and government agencies. They are created for high performance and adaptability.
+Currently CCD uses different testing methods to accomplish the testing phase of watercraft design. They use scale testing in deep water basins. This testing involves creating small scale models of the watercraft and testing the design in different environmental changes. CCD also uses full scale testing which involves testing the prototype created in a more realistic environment such as the Chesapeake Bay area. CCD also currently uses modeling and simulation to test complex environment conditions on the watercraft that may not be easily produced in full-scale testing. These simulations are not quick and require training to use.
+A new design tool that uses modeling and simulation would help CCD to rapidly develop USVs and test them before committing to a full scale or small scale prototype. Developing a tool that is easy to learn and quick to use will allow CCD to use the advantages that simulation provides in the field of testing and development. The capstone team will be responsible for fitting the RUPS developing tool into the testing practices that CCD already employs.
+2017 Paper No. 39 Page 2 of 8
+MODSIM World 2017
+
+CONCEPTUAL DESIGN
+The USV system can be broken up into four major components: Control Method, Environment, Physical USV and Sensors. The Control Method refers to either an autonomous algorithm or a tele-operator. The Environment refers to outside effects on the USV such as: wind, wave, current or obstacles within the specified area. Sensors are devices placed on the USV that can help the control method to detect the environment surrounding it. For example, a GPS can be used as a sensor on a USV. The diagram shown in Figure 1 displays the relationship between the four components.
+Figure 1. Architecture of USV System
+As discussed previously, the capstone team is tasked with developing a method for CCD to test the USV system more efficiently and effectively by introducing modeling and simulation. Each of the major components will be modelled and then simulated within a simulation scenario. The physical USV will be represented by a motion model while the other components can be represented in multiple methods such as: models or scripting.
+The capstone team is only responsible for developing the model for the physical USV while CCD is responsible for modeling the environment, sensors and control. To make this simulation quick and easy to use, it is necessary for the capstone team to develop other supporting programs. These supporting programs are: Generation Tool, Simulator and Visualization. Figure 2 defines which components the capstone team is responsible for and CCD is responsible for.
+MODSIM World 2017
+ 2017 Paper No. 39 Page 3 of 8
+
+GENERATION TOOL
+The generation tool is used to create a file that defines the USV characteristics per the user’s design. The user should be able to input the parameters that define the model. The generation tool should be easy to use to allow the user to quickly develop a USV that can be tested in the simulation. The information that is input into the generation tool can be saved as a file that is in the XML or TXT format. The conversion tool will take the files needed to run the simulation and translate them to the forces and inputs for the motion model. This relationship can be seen in Figure 3.
+Figure 3. Input and Outputs of Generation Tool
+The generation tool will also provide a simple graphic that shows the characteristics of the USV. The graphic should be simple enough to gain an understanding of the created USV. It should also clearly depict the location of the edited characteristics of the USV. Figure 4 shows a possible graphic that could be used to depict a dual hull USV.
+MODSIM World 2017
+ Figure 2. Use Case Diagram of RUPS
+ 2017 Paper No. 39 Page 4 of 8
+
+Figure 4. Example of Visualization Capabilities for Generation Tool
+To accurately find the important characteristics of the USV methods must be developed to extract information from the provided data. One example is Figure 5 that shows one of the possible ways to determine where the center of mass is located. In this example, you can increase the mass in each of the boxes which represent sections of the boat. The algorithm will be able to determine the location and show the heavier presence by darkening the boxes. This is just one of the possible tools that can be developed to make the generation tool easier to use.
+Figure 5. Example Parameter Extraction Method
+The generation tool is used to create the model USV so that the characteristics of the boat can be read into the motion model. To do this the characteristics will be saved as files to a repository that the conversion tool can access to apply to the model. These repositories can store different types of boats so that the users can access older or newer USVs.
+SIMULATOR
+The simulator encompasses the major components of the simulation: Control, Motion Model, Environment Conversion, Control Conversion, Environment and Sensors. The simulator is responsible for controlling the simulation and making sure that the components are cooperating and communicating properly. The simulator will have a graphical user interface (GUI) which allows the user to change certain parameters of the simulation such as: time step and length of simulation.
+MOTION MODEL
+A motion model refers to a set of equations to describe the motion of a specific object. For this application, the motion model will represent the USV designed by the user. The motion model is necessary to calculate the new state of the USV given specific conditions such as: environmental forces and control commands. The capstone team has
+MODSIM World 2017
+  2017 Paper No. 39 Page 5 of 8
+
+determined that the motion model will accept inputs from the control method and environment as forces acting on the USV. The motion model will translate these forces into movement and then output the current state of the USV.
+CONVERSIONS
+There are two different conversions within the Simulator: Environment Conversion and Control Conversion. These tools are responsible for the input into the motion model from the external factors Environment and Control. The conversion tools will be able to take the input from those factors and transform them into force vectors with a location and pass it to the motion model. The motion model should receive the conversion tools output and be able to calculate the position and motion of the simulated USV. The capstone team is responsible for a basic tool that can accept the external forces that they have planned, environment and control. A more complex conversion tool should be able to handle more external forces that can allow the simulation as a whole be more extensible.
+VISUALIZATION
+The Visualization is used to represent the USV and its behaviors during the simulation. The Visualization will communicate back to the user an accurate depiction of the model in the simulation. Below shows the interaction of the Visualization with the rest of the architecture. The Visualization will take in the output of the simulation and display the performance of the simulation. The inputs and outputs of the Visualization are shown in Figure 6. It will do this by clearly displaying the performance metrics and an accurate representation of the simulation. Some of the proposed ideas about the simulation include the ability to display multiple runs or see a single run of the simulation, make an accurate analysis of the simulation’s output, and see the overall motion of the model in a coordinate based system.
+Figure 6. Inputs and Outputs of Visualization
+The first proposed idea for the Visualization concerns the ability to read the output of multiple runs of the simulation. Figure 7 displays an example of what a single run might look like from a run of the simulation. This data can be used to gain details on how the USV responds to the commands and controls that it was given in the simulation. A multiple run visualization will display each run overlapped with each other as seen in Figure 7. The variation in the pathcanhelpidentifytheeffecttheenvironmentandthecontrolshaveontheUSV.Multiplerunsare notappliedto a 3D visualization though. The data gained from a multiple run on a 3D visualization would be like the data gained from a 2D visualization.
+Figure 7. Example of Display for Visualization.
+MODSIM World 2017
+  2017 Paper No. 39 Page 6 of 8
+
+Below displays one of the possible layouts of the Visualization. The pathing of the boat is clearly seen on the left- hand side and the different performance metrics such as velocity, acceleration, and different degrees of freedom are shown on the right. An example can be seen in Figure 8. The user should also be able to access the different runs of the different USVs. And in the case of multiple runs the graph on the left will look more like the multiple run graph in Figure 7.
+Figure 8. Example of Display for Visualization with Graphs. VERIFICATION AND VALIDATION
+To prove that the simulation is accurate and appropriate verification and validation must be conducted. Verification is confirming that the model is built right and the coding accurately depicts the design. Validation involves the testing of the model to make sure that the simulation accurately depicts the real-world scenario that it represents. These processes include multiple iterations of testing to improve accuracy of the model. Verification is performed on the simulation as the design and implementation is carried out. Validation is a larger process that is done when the first drafts of the prototype are created. It is typically done to test the final steps of the prototype.
+For the validation of the prototype the capstone team will use some of the resources that they can get to validate the project. These resources include physical validation, and literary comparisons. For physical validation, the capstone team has researched multiple options that can be used. The sailing center has small dinghies like the vessels used by CCD shown in Figure 9. The capstone team could use different tracking technology to map the motions of the boat in a controlled environment. The capstone team has also contacted the Mechanical Aerospace Engineers (MAE) that are working on a small USV tri-hull vessel. This vessel can be used in a controlled environment such as the ODU pool for accurate validation. Movement data can be collected from this with the sensors and data collection that the MAE team has added on the vessel. As a last resort, literary comparison can also be used to validate the model. The capstone team has researched multiple papers and projects that have conducted similar tests. This comparison is not an exact real life comparison therefore it will be a secondary resource for the validation.
+Figure 9. Sailing Center Boats.
+CONCLUSION
+CCD is responsible for the testing and developing of USVs for the Naval Sea Systems Command Warfare Center. To do this well and efficiently they need to develop ways to rapidly create USV prototypes. RUPS has the potential to develop and test virtual USV designs easily and quickly. The capstone team is planning to have a prototype of the RUPS system developed by April. This prototype will be able to prove the extensibility and use of the RUPS design.
+MODSIM World 2017
+  2017 Paper No. 39 Page 7 of 8
+
+ACKNOWLEDGEMENTS
+The capstone team thanks the participation, support, and guidance from Drs. Jim Leathrum and Roland Mielke of the department of Modeling and Simulation Engineering at Old Dominion University. The capstone team also gives special thanks to Dr. Tim Coats of CCD for the cooperation and opportunity that he brought to the table. Special thanks are also extended to Dr. Yiannis Papelis for his role as the ODU technical point of contact.
+REFERENCES
+Combat Craft Division Norfolk Virginia, Retreived January 30. http://www.navsea.navy.mil/Home/Warfare- Centers/NSWC-Carderock/Who-We-Are/Norfolk-Virginia/
+MODSIM World 2017
+  2017 Paper No. 39 Page 8 of 8

@@ -1,0 +1,73 @@
+Targeted Fidelity: Cutting Cost by Increasing Focus
+Trey Morabito Adayana Government Group Orlando, Florida TMorabito@Adayana.com
+ABSTRACT
+As the training industry continues to work with budget constraints, full-mission simulators (FMS) with massive worlds and next-generation graphics seem completely out of scope. Applying techniques from the way video games are rendered allows companies to focus their efforts and work toward delivering high-value simulations at a fraction of the cost.
+When a game engine renders an amazingly large, beautiful city in sandbox games such as Grand Theft Auto, players do not notice that all the assets in the distance are rendered at a much lower fidelity than the assets and models that are closest to them. This “culling” process allows the player to see the important aspects in high fidelity, while remaining immersed in a world where the background has been rendered more efficiently.
+Targeted Fidelity is the concept of applying this process to training and simulation. Targeted Fidelity provides an increase in scope, model resolution, or other details in areas required by learning objectives, while at the same time allowing for a decrease in scope, model resolution, and so on, for less important areas. Rendering the secondary and tertiary objectives at lower fidelity allows students to continue their immersion in the simulation, while drastically lowering the cost of the training product itself.
+Applying the concept of Targeted Fidelity to graphics, instructional systems design, hardware, and peripherals will focus the deliverable product much more accurately, providing more cost-effective solutions.
+ABOUT THE AUTHORS
+Trey Morabito is currently the Associate Director of Immersive Learning at Adayana Government Group. Specializing in innovation and management of modeling and simulation training programs, he holds a master’s degree in Interactive Entertainment from the University of Central Florida’s FIEA and a bachelor’s degree in English from the University of Central Florida. Trey has led training on programs worldwide, including areas of operation in Italy, Colombia, Singapore, and the US. He has worked on aircraft from the M-346 and SF-260TW to the CH-47 and F16D, as well as multiple weapons, vehicles, and scenario-based training.
+2016 Paper No. 54 Page 1 of 6
+MODSIM World 2016
+
+Targeted Fidelity: Cutting Cost by Increasing Focus
+Trey Morabito Adayana Government Group Orlando, Florida TMorabito@Adayana.com
+INTRODUCTION
+As the training industry continues to work within budget constraints, full-mission simulators (FMS) with massive worlds and next-generation graphics can be a daunting venture for the average program. The estimated cost for a single FMS used to train pilots on the new F-35 is around $20 million, according to the Air Force’s fiscal 2012 budget submission (Majumdar, 2011). It is true that the price of a simulator—or any good for that matter—doesn’t always translate accurately to efficiencies or quality, one expects that the more it costs, the better it should train. With limited funds, though, most programs assume they can’t afford an FMS and must instead decide where to focus their investment to provide the greatest return.
+This paper suggests that organizations appropriate strategies from the video game industry as a way to help focus their efforts and work toward delivering high-value simulations at a fraction of the cost.
+TARGETED FIDELITY
+Defining Fidelity
+Simulation fidelity is increasingly becoming a topic of discussion in military simulation acquisitions (Northam, 2000); yet it is considered “an area in which there exist many incomplete, inconsistent, and widely scattered views, concepts, and approaches” (Roza, 2005).
+As a baseline we will consider the definition according to the Simulation Interoperability Standards Organization:
+According to the SISO, fidelity is “the degree to which a model or simulation reproduces the state and behavior of a real world object or the perception of a real world object, feature, condition, or chosen standard in a measurable or perceivable manner;” it is “a measure of the realism of a model or simulation; faithfulness. Fidelity should generally be described with respect to the measures, standards, or perceptions used in assessing or stating it (What is Fidelity, 2011).
+When a game engine renders an amazingly large, beautiful city in sandbox games such as Grand Theft Auto, players don’t notice that all the assets in the distance are rendered at a much lower fidelity than the assets and models that are closest to them. This “culling” process allows the player to see the important aspects in high fidelity, while remaining immersed in a world where the background has been rendered more efficiently, as in Figure 1.
+MODSIM World 2016
+ 2016 Paper No. 54 Page 2 of 6
+
+Graphical Fidelity
+Figure 1: Grand Theft Auto V (Rockstar Games)
+Assuming the age range when they receive the most training is between 18 and 30 years old, 35.9% of the military (Office of the Deputy Assistant Secretary of Defense, 2013). We know that if they have even only dabbled in video games at some point in their lives, they have been a part of the progression of graphics in gaming and have a certain level of expectations, also known as the horizon of expectations. If these expectations are not met, the trainees will be distracted.
+Interacting with the graphic in Figure 2 from 1992 would be extremely distracting for anyone in this demographic, but the evolution of the character from the Uncharted series in Figure 3 is more subtle. While the rendering from Uncharted 4 in Figure 3 is the “highest fidelity” character, it is safe to say that the trainee would not lose any efficiency or training quality through distraction by interacting with the character from the first Uncharted game.
+Figure 2: Doom Series Video Game (id Software) Figure 3: Uncharted Series (Naughty Dog)
+That being said, we can lower the fidelity even more on areas that are not necessary to complete Learning Objectives. In Figure 4, the shell of the vehicle itself is not important to the Learning Objectives, so in this case it was modeled at a lower resolution to save time, money, and processing power on the machine. The highlighted portion, however, is where the main lesson takes place, so it was modeled with extreme precision. This allows the trainee to focus on the high fidelity areas without being distracted by an inordinate amount of contrast between the two. In effect, it gives the student tunnel vision.
+MODSIM World 2016
+   2016 Paper No. 54 Page 3 of 6
+
+System and Peripheral Fidelity
+The same process can be applied when designing systems and peripherals for simulations. If the requirement calls for an aircraft simulation to train purely on the radar screen of a multifunctional display (MFD), it is overkill to then have students train to these requirements in a Full Mission Simulator (FMS). In this case, even a Part Task Trainer (PTT), which is inherently a decrease in fidelity, with Hands on Throttle and Stick (HOTAS) and pedals is too much. There is also no reason to simulate a complete flight model system if the only system shown is the radar. The goal here is to take the requirements and break them down according to the learning objectives to find the meat of the training and, again, give the trainee tunnel vision. The training should focus the trainee on the requirements while providing enough peripheral fidelity so as not to distract.
+DIMINISHING RETURNS
+Total Fidelity
+If time, money, resources, and computing power were no issue, it could stand to reason that the best training simulator would be as close to reality as possible, verging on total fidelity. There are currently simulators that attempt this with full cockpit switches, HOTAS, and large monitors for out-the-window views as well as 6DOF (6 Degrees of Freedom) motion platforms.
+The Alessi Hypothesis states that owing to the law of diminishing returns, there is a point beyond which one additional unit results in diminishing returns. This hypothesis also proposes that this point is based on the training stage of the learner and can occur during a much lower fidelity simulation based on the learner’s experience. Therefore, total fidelity may only be truly effective for experts who are able to process all of the visual, aural, and other contextual data, especially during complex tasks such as flight simulation. (Noble, 2002).
+Concentration versus Distraction
+Providing an area rich in detail within a less-detailed environment will draw learners’ attention to the detailed area without the distraction of surrounding details. Indirect control through lighting and other cues could also be used to keep the learner focused, but more importantly, the detailed area works as a selective focus to the eye, de- emphasizing the other parts. As Alessi proposes, when the focus area is too large with too many vital stimuli, the learner gets confused and the experience verges on negative training (Noble, 2002).
+2016 Paper No. 54 Page 4 of 6
+MODSIM World 2016
+ Figure 4: Stryker VTT
+
+USE CASES AND RECOMMENDATIONS
+Breaking it Down
+The conclusion here is that each training aspect must be broken down by learning objectives, the requirements associated with the exercise, and the expected training stage of the learner. Once these aspects are defined and, wherever possible simplified, software selection and media analysis can begin. The key is to ask “why?” for each piece that is selected, eliminating or decreasing fidelity in the items that would be extraneous or distracting.
+This level of discretion during the selection and design process will better allow for learner focus and training transfer. This is not to say that more fidelity, whether graphical, systematic, or physical, cannot be added in later. Starting with the key building blocks and iterating throughout will allow for a truly productive evaluation phase.
+DISCUSSION
+Implications for Training
+For years, studies have shown that while an expert may not have a high transfer of training effectiveness on a lower or targeted fidelity device (Taylor, 1999), there are definitely stages in training during which the pared-down version increases effectiveness (Noble, 2002).
+Experts, by definition, need less training and tend to be less prevalent in the population of the general training group. That being said, if an FMS is needed to effectively train them, the total number of FMS stations only needs to near the percentage of the experts being trained. Meanwhile, learners with less experience can train on less-expensive, lower-fidelity devices that are specific to needed tasks and systems. Whether they are training on part task trainers, laptops, or even mobile devices, as long as the fidelity of the training scenario matches their current stage of experience, they will be training effectively (Noble, 2002).
+Implications for Military
+Beginning with an appropriate analysis will save the military money as they forego an extra FMS for smaller versions of the simulation with targeted fidelity. Training specific tasks on low cost devices before entering a near total fidelity device will lower training budgets by cutting cost on development, allowing a more rapid development of new training scenarios, and decreasing training time by increasing training effectiveness.
+By taking advantage of industry experts, accepting the effectiveness of targeted fidelity training, and building custom training solutions, the training process can evolve to fully realize its’ potential in the use of multiple devices for a truly transformational, “train anywhere” approach.
+2016 Paper No. 54 Page 5 of 6
+MODSIM World 2016
+
+REFERENCES
+Majumdar, D. (2011, December 27). Advanced Simulator Enhances F-35 Training. Retrieved from Air Force Times:
+http://archive.airforcetimes.com/article/20111227/NEWS/112270301/Advanced-simulatorenhances-F-35-
+training
+Northam, G, (2000). Simulation Fidelity – Getting in Touch with Reality, Retrieved from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.170.9052&rep=rep1&type=pdf
+Roza, Z.C., (2005). Simulation Fidelity Theory and Practice, Retrieved from http://repository.tudelft.nl/view/ir/uuid:a5afd816-4b04-459d-b54c-da93e3b8a0d7/
+What is Fidelity?, (2011). Retrieved from https://msenterprise.jhuapl.edu/RPG/Special_Topics/Fidelity/fidelity.htm
+Office of the Deputy Assistant Secretary of Defense, (2013). 2013 Demographics Report, Retrieved from http://download.militaryonesource.mil/12038/MOS/Reports/2013-Demographics-Report.pdf
+Noble, C., (2002). The Relationship Between Fidelity and Learning in Aviation Training and Assessment, Retrieved from http://ntl.bts.gov/lib/000/700/744/JAT_7-3-5.pdf
+Taylor, H., Lintern, G., Hulin, C., Talleur, D., Emanuel, T., Phillips, S., (1999). Transfer of Training Effectiveness of a Personal Computer Aviation Training Device, Retrieved from http://www.tandfonline.com/doi/abs/10.1207/s15327108ijap0904_1
+MODSIM World 2016
+        2016 Paper No. 54 Page 6 of 6
