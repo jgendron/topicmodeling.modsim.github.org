@@ -1,0 +1,6 @@
+Dr. Rafael Matos
+Whitney, Bradley and Brown Inc.
+Inc. Reston, VA
+rmatos@wbbinc.com
+Mr. Don Styer Whitney, Bradley and Brown Inc. Virginia Beach, VA dstyer@wbbinc.com
+Abstract: Organizations today are under increased pressure to respond to rapidly changing conditions. Managers are faced with having to make complex, expensive decisions, riddled with risk and uncertainty. This paper presents results where decision analysis helped organizations make better-informed decisions, faster. Through the use of collaboration, mathematical, and organizational behavior tools this paper presents several technologies that add rigor to the decision support process through an emphasis on refining the objective, finding evidence, analysis, visualization and a taking action framework. From heuristics and optimization to simulation and predictive models, this paper shows where computer based techniques provided traceable, repeatable methodologies that assisted organizations in decision support. This paper provides empirical and parametric evidence that show how modeling and simulation can provide faster, more accurate reporting, improved decision making, improved customer service and reduced costs.

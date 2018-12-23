@@ -1,0 +1,3 @@
+the Department of Homeland Security has developed a national strategic program geared toward education, the National Initiative for Cybersecurity Careers and Studies (NICCS). This program has developed the National Cybersecurity Workforce Framework which âprovides a blueprint to categorize, organize, and describe cybersecurity work into Specialty Areas, tasks, and
+knowledge, skills and abilities (KSAs)â (NICCS, 2015).
+Cyber Security Instruction Environment (CYSTINE) for penetration testing with cognitive agent defenders and 3) the use of red-team verse blue-team, live simulation, exercises as realistic, challenging experiences for computer network defense.

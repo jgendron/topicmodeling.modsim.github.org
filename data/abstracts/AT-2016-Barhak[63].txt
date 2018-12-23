@@ -1,0 +1,7 @@
+W. Andrew Pruett
+University of Mississippi Medical Center Jackson, Mississippi wpruett@umc.edu
+Optimizing Model Combinations
+Consider a situation where multiple models are available to solve a certain modeling problem. Their performance varies on new data since they were developed based on different datasets by different modelers. One modeling approach is to select the most fitting model to some reference data through competition. Another approach, recently popular in challenges, is to combine the models into an ensemble model. Using combination, each model has a potential to influence the combined model and is superior to plain competition when possible since knowledge is accumulated rather than selected.
+There are several challenges in combination. One is determining the importance of each model. This challenge increases in difficulty where models are simulated using random methods such as Monte-Carlo. These simulations typically have accuracy related to time by square root order. So efficiency with respect to time and computing power required is a factor.
+This paper will discuss theoretical methods for combining models using very simple examples. Some implementations are discussed with reference to code examples. Advantages and drawbacks of the different techniques are discussed to allow modelers choose the preferred combination approach. Implications on accuracy and computing power and use of parallelization techniques are discussed.
+A disease modeling application using one of the techniques is briefly discussed.

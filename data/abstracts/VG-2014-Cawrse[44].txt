@@ -1,0 +1,5 @@
+The medical profession often uses sophisticated and costly training equipment specifically designed for the medical capabilities.
+This
+provide hands-on
+savings and is commonly available; however, there are computational challenges that must be overcome to provide validation for medical procedures. These challenges include developing validation tools for performance assessment and extending existing interfaces for better object and skeletal tracking.
+challenges defined above and how the commercially available Microsoft KinectTM is utilized to effectively train users. The results show the feasibility of high-tech low-cost solutions applicable for use in the medical community.

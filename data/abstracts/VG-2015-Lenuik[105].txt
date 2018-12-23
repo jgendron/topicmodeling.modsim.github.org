@@ -1,0 +1,6 @@
+Rodger Willis2 Design Mill, Inc.
+Dubuque, IA1; Charleston, SC2
+sam_murley@designmillinc.com, nathan_greiner@designmillinc.com, rodger_willis@designmillinc.com
+Mixed Reality: The New Reality in DoD Decision Making
+Samuel R. Murley1, Nathan Greiner1,
+Decision making often requires an understanding of where we are, where we want to go, and the options for traversing this distance. Where augmented reality enhances a view of Ôwhere we areÕ and virtual reality creates a view of Ôwhere we want to go,Õ Mixed Reality serves the user who needs to see both. The United States Marine Corps is embarking on this new reality to enhance their trade space analysis tool known as FACT Ð Framework for Assessing Cost and Technology. With the upgrade to Mixed Reality in FACT, users view new designs (Ôwhere we want to goÕ) overlaid on existing systems (Ôwhere we areÕ) to best understand design options and implications. This paper details the development process and reviews potential future applications of Mixed Reality.
