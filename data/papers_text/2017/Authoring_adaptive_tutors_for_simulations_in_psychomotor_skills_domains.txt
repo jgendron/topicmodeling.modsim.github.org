@@ -1,0 +1,170 @@
+ Authoring adaptive tutors for simulations in psychomotor skills domains
+Debbie Brown, Benjamin Bell, Ph.D. Eduworks Corporation Corvallis, OR Debbie.Brown@Eduworks.com, Benjamin.Bell@Eduworks.com
+Benjamin Goldberg, Ph.D.
+U.S. Army Research Laboratory, HRED-ATSD, STTC Orlando, FL Benjamin.S.Goldberg.civ@mail.mil
+ABSTRACT
+Psychomotor skills are foundational to numerous competencies composing the U.S. Army’s vision for 21st Century Soldier Competencies as expressed in the Army Learning Model (ALM). Training these kinds of skills is being addressed in part through the use of sophisticated intelligent tutoring systems (ITS) that tailor and adapt instruction during individual learning interactions. While ITS are an effective approach to training psychomotor skills, developing these systems remains a costly and time-consuming enterprise, despite the emergence of ITS authoring tools which remain limited in scope, capability, and generalizability across Army-relevant domains.
+We report on development of AI-supported authoring for militarily-relevant psychomotor tasks based on a fielded trainer in a psychomotor domain (marksmanship). We will present our approach to ITS authoring with an AI agent that encapsulates knowledge useful in guiding the authoring process, to include pedagogical knowledge tailored to instruction and assessment of psychomotor skills. Utilizing the Generalized Instructional Framework for Tutoring (GIFT) and its tools and methods for supporting and streamlining ITS development, we discuss how a more specialized ITS authoring tool can embed the authoring process in a dialogue between automated tool and training author.
+In this paper we present our findings that characterize distinctive elements of the psychomotor domain, including specific competencies and how they are learned and assessed, factors that tutoring systems in this domain of learning must accommodate. By focusing on a specific category of skill performance and not on a specific metaphor for instruction, we will illustrate how authoring tools can support development of simulation-based psychomotor skills training.
+ABOUT THE AUTHORS
+Debbie Brown is a software engineer and senior learning technologist at Eduworks Corporation focusing on web application implementations that use AI and machine learning to semi-automate user-centered workflows and enable advanced adaptive eLearning tools and experiences. She has been conducting eLearning R&D projects for 20 years, and operating as a software engineer in government, academic, and workforce settings for 30 years. She holds an MS in Instructional Systems and a BS in Computer Engineering from Mississippi State University.
+Benjamin Bell is the president of Eduworks Government Solutions and a recognized expert in the application of artificial intelligence to decision support, simulation, training, and human-machine interaction. He has practiced in the field of artificial intelligence for over twenty years, leading funded research and development in applied settings, largely for military applications. He holds a Ph.D. from Northwestern University and is a graduate of the University of Pennsylvania.
+Benjamin Goldberg is a member of the Learning in Intelligent Tutoring Environments (LITE) Lab at the U.S. Army Research Laboratory’s (ARL) Human Research and Engineering Directorate (HRED) in Orlando, FL. He has been conducting research in the Modeling & Simulation community for the past eight years with a focus on adaptive learning in simulation-based environments and how to leverage Artificial Intelligence tools and methods to create personalized learning experiences. Currently, he is the LITE Lab’s lead scientist on instructional management research within adaptive training environments and is a co-creator of the Generalized Intelligent Framework for Tutoring (GIFT). Dr. Goldberg holds a Ph.D. from the University of Central Florida in Modeling & Simulation.
+2017 Paper No. 16 Page 1 of 10
+MODSIM World 2017
+
+ Authoring adaptive tutors for simulations in psychomotor skills domains
+Debbie Brown, Benjamin Bell, Ph.D. Eduworks Corporation Corvallis, OR Debbie.Brown@Eduworks.com, Benjamin.Bell@Eduworks.com
+OVERVIEW
+Benjamin Goldberg, Ph.D.
+U.S. Army Research Laboratory, HRED-ATSD, STTC Orlando, FL Benjamin.S.Goldberg.civ@mail.mil
+Psychomotor skills, foundational to many of the competencies relevant to the Army Learning Model (ALM), are trained in part through the use of simulation-based intelligent tutoring systems (ITS) that tailor and adapt instruction during individual learning interactions. The Army has invested in ITS capabilities across a spectrum of skills training simulations including psychomotor skills like marksmanship and tactical combat casualty care. While ITS are an effective approach to training psychomotor skills, developing these systems remains a costly and time- consuming enterprise. For the Army to successfully realize the ALM vision, creating ITS must be an affordable, replicable, reusable process. Currently, though, ITS authoring tools are limited in scope, capability, and generalizability across Army-relevant domains, so the time, expertise and resources needed to create ITS persist.
+Some authoring systems are general-purpose tools that provide an author with a great deal of leeway. In contrast, authoring tools that address the development of a specific kind of ITS can be more powerful because they embody (and help authors adhere to) a set of assumptions about what the authored product will look like and how it will behave. The Psychomotor Skills Training Agent-based Authoring Tool (PSTAAT) is an agent-supported authoring tool for military-relevant psychomotor tasks, tailored to the properties of psychomotor skills. PSTAAT will address the need for simulation-based psychomotor skills training by supporting authoring with an agent that encapsulates knowledge useful in guiding the authoring process, to include pedagogical knowledge tailored to instruction in, and assessment of psychomotor skills.
+CHARACTERIZING PSYCHOMOTOR SKILL
+We begin with a brief discussion of properties that distinguish training of psychomotor skills from skills training in other domains (cognitive and affective, after Bloom, et al., 1956). Psychomotor skills involve movement and coordination but generally de-emphasize verbal processes, and are prevalent in almost every mission a Soldier might be tasked to accomplish. Tasks like fast-roping, assembling a Trident Pier, meal preparation, applying a tourniquet, flying a CH-47, aiming a weapon, or traversing a stream illustrate the prevalence and importance of psychomotor skills in performing the duties of a Soldier in today’s Army.
+Psychomotor skills typically include physical movement, coordination, and use of gross, fine, or combined motor- skills. Learning these skills (like all learning) requires practice. Tutoring systems to train psychomotor skills would thus emphasize practice of some kind, opportunities for skill performance with coaching and feedback, and assessed skill demonstration. However the metrics for assessing performance of psychomotor skills is one differentiating property. Measures such as speed, precision, volume, distance, or technique are examples of how psychomotor skill performance might be generally measured, which is a factor that tutoring systems in this domain of learning must accommodate.
+To derive a reference model, we compared psychomotor domain models that follow Bloom’s basic tenets including theories advanced by Dave (1970), Simpson (1972), Harrow (1972), and Romiszowski (1999). Table 1 compares progression towards mastery as presented in each model (mastery levels shown as increasing from the top of the table downward).
+2017 Paper No. 16 Page 2 of 10
+MODSIM World 2017
+
+ Table 1. Psychomotor skills mastery progression as depicted in models following Bloom’s basic outline.
+From these models, we adopt a simplified synthesis of these psychomotor taxonomies (Table 2) suitable for designing the PSTAAT authoring tool.1
+Table 2. Psychomotor skills domain model, synthesized from models compared in Table 1
+MODSIM World 2017
+    Bloom
+        Dave
+        Simpson
+      Harrow
+        Romiszowski
+             Perception (awareness)
+   Reflex Movement
+      Acquiring Knowledge
+      Imitation (copy)
+  Imitation (copy)
+   Set
+  Basic Fundamental Movements
+  Executing Actions
+      Manipulation
+      Manipulation
+     Guided Response
+      Perceptual Abilities
+      Transfer
+      Develop Precision
+      Develop Precision
+     Mechanism
+      Physical Abilities
+      Automatization
+      Articulation
+      Articulation
+     Complex Overt Response
+      Skilled Movements
+      Generalization
+      Naturalization
+      Naturalization
+     Adaptation
+      Non-discursive
+                   Origination
+                    Level
+        Definition
+    Example
+     Observing
+      Active mental attending of a physical event.
+    The learner watches a more experienced person. Other mental activity, such as reading may be a part of the observation process.
+       Imitating
+  Attempted copying of a physical behavior.
+  The first steps in learning a skill. The learner is observed and given direction and feedback on performance. Movement is not automatic or smooth.
+        Practicing
+    Trying a specific physical activity over and over.
+      The skill is repeated over and over. The entire sequence is performed repeatedly. Movement is moving towards becoming automatic and smooth.
+        Adapting
+       Fine tuning. Making minor adjustments in the physical activity in order to perfect it.
+         The skill is perfected. A mentor or a coach is often needed to provide an outside perspective on how to improve or adjust as needed for the situation.
+   Our summary analysis established a foundation for developing an agent to support the authoring of simulation-based ITS focused on psychomotor skills as discussed in the next section.
+1 This synthesis appears on several university websites without attribution to an original source, including Rowan University (http://users.rowan.edu/~cone/curriculum/psychomotor.htm) and Penn State University (http://archive.tlt.psu.edu/learningdesign/objectives/psychomotor.html).
+ 2017 Paper No. 16 Page 3 of 10
+
+ SUPPORTING AUTHORING OF SIMULATION-BASED PSYCHOMOTOR SKILLS TUTORS
+To make the creation of ITS an affordable, replicable and reusable process, the Army Research Laboratory has been developing the Generalized Instructional Framework for Tutoring (GIFT) as a suite of tools and methods for supporting and streamlining ITS development (e.g., Sottilare, 2012; Sottilare, Goldberg, Brawner & Holden, 2012). PSTAAT is intended to support authoring for a specific kind of ITS, encapsulating knowledge and assumptions about psychomotor skills training and assessment. PSTAAT uses an exemplar ITS to provide relevant illustrations for authoring and to provide a target outcome to inform the design of the authoring tool itself. This approach offers the possibility of taking an ITS built for a legacy framework and adapting it incrementally to instantiate a new ITS, a process we call guided case adaptation (Bell, 2003).
+Exemplar Psychomotor Skills Tutor
+The Adaptive Marksmanship Trainer (AMT), our exemplar ITS, was created in the GIFT to enhance an existing Engagement Skills Trainer (EST) that uses instrumented emulators of several types of firearms. AMT enhances this system by incorporating adaptive tutoring and automated performance measures (Goldberg, Amburn, Brawner & Westphal, 2014). The EST makes use of a Meggitt FATS® M100 Simulation Training System and a Zephyr BioHarness to support engagement skills training. The AMT and its integration with GIFT is depicted in Figure 1.
+Figure 1. Overall architecture of the exemplar ITS
+AMT processes input from 5 different sensors (breathing, barrel movement, trigger squeeze, sight picture, and shot count) to observe the learner while performing marksmanship drills. AMT uses a layered concept organization to provide adaptive, contextual feedback with remedial training specific to the learner’s detected performance levels for each reading (above, at, or below expectation).
+MODSIM World 2017
+ 2017 Paper No. 16 Page 4 of 10
+
+ MODSIM World 2017
+ Figure 2. Basic sensor to concept mapping in the exemplar ITS Generalizing the Exemplar
+In creating a normative abstraction of the AMT authoring process, we identify steps in the workflow that can be used as the basis for a general-purpose development sequence in an authoring tool. Our workflow analysis excluded integration of hardware sensors (which is important but beyond the scope of the authoring tool). We identified three types of authoring tasks implicit in AMT: skills profiling, sensor mapping, and course object(s) definition (i.e., activities and sequencing). The PSTAAT authoring agent provides contextual authoring support for each of these general purpose task areas, and emphasizes the use of psychomotor domain instructional approaches and adaptive feedback strategies in the form of templates and examples. The PSTAAT authoring agent is thus derived from analysis of the exemplar ITS combined with a literature review of ITS authoring techniques and psychomotor domain requirements. The agent initially address the following categories of authoring support:
+● GIFT course structure and implementation (including course object(s) definition)
+● Psychomotor instructional design and strategies (including skills profiling)
+● Sensor model application and configuration (including sensor mapping)
+● Reusability and standards
+Each of these areas of authoring support is discussed in the following section.
+AUTHORING SUPPORT IN PSTAAT
+PSTAAT capabilities are designed with authoring support components to be contextually incorporated into the GIFT course authoring workflow. They are envisioned as agent-driven interactions with feedback geared towards specific ITS design and development needs.
+GIFT Course Structure and Implementation
+In order to provide psychomotor domain-specific authoring agent support within the GIFT Course Creator, PSTAAT introduces the construct of a Psychomotor Activity course object. A psychomotor activity uses configured sensors as inputs and provides adaptive content delivery for the configured concepts through the implementation of a psychomotor instructional approach and the application of one or more psychomotor profile(s). The psychomotor activity connects concept state transitions (identified by the logic model in a psychomotor profile) to instructional strategies and feedback that may be sequenced by the GIFT Domain Module (see Figure 3).
+2017 Paper No. 16 Page 5 of 10
+
+ MODSIM World 2017
+ Figure 3. Example Psychomotor Course Object in PSTAAT
+The authoring agent will assist during the adaptive psychomotor activity construction process by auto-generating a GIFT-compliant template for the ITS organized by the selected psychomotor instructional approach into phases and configured for the selected psychomotor profile(s) at each phase. Once the ITS template has been generated, the authoring agent will auto-populate the psychomotor activity with placeholder learner states and guide the author through development of instructional strategies to complete the tutor. PSTAAT will also assist with ITS testing by providing an activity preview feature. In preview mode, the author can step through a tutor manually selecting each possible instructional response to validate the situational appropriateness of content and feedback.
+Psychomotor Instructional Approach and Feedback Strategies
+Much of the initial work for instructional design takes place during a needs assessment process. It is important that the course author has a clear understanding of the domain, the background of the intended audience, technical resources and limitations, and a plan for the instructional goals, strategies, and expected outcomes of the tutor. In the specialized case of psychomotor skills training, the tutor must also have the ability to sense and observe the learner’s task performance and readily adapt with appropriate instruction in any situation. In order to do this, the ITS must recognize “states” in the learner’s skill performance data and respond with specific feedback and training material. Therefore, the content should be robust enough to support a wide range of previous knowledge and skill experience. As part of the instructional design process for a GIFT tutor, the author must identify specific training concepts and associate each concept to one or more observable performance metrics.
+Within the PSTAAT psychomotor activity, an author may choose from a set of psychomotor instructional approach templates. An instructional approach template represents a set of GIFT components organized in a sequence of instructional phases. The author’s personal understanding of the domain coupled with informative guidance from the authoring agent will direct the selection of an appropriate psychomotor instructional approach for the tutor’s intended behavior and outcomes. With guidance and examples from the authoring agent, the author provides response feedback strategies for all relevant learner states in each instructional phase by filling in activity design gaps with remedial content and contextual feedback. The instructional approach and feedback strategies are validated by the author through the use of the PSTAAT preview mode. Figure 4 depicts the authoring agent’s interactions during psychomotor activity building.
+2017 Paper No. 16 Page 6 of 10
+
+ Figure 4. PSTAAT authoring agent dialog for psychomotor activity building Sensor Model Application and Configuration
+As discussed in the previous section, a psychomotor domain ITS must have the ability to observe task performance and interpret the data collected to identify the learner’s current state. The incorporation of sensors and the association of sensory data to performance thresholds is critical to this process. This work is also a data-driven, perhaps tedious task that is highly dependent upon the sensor hardware and the contextual authenticity in which the sensor will be used to observe psychomotor task performance. Yet, it is a component of work that can be and should be isolated from the instructional design of the ITS.
+In PSTAAT, the “psychomotor profile” provides the logic to inform concepts based on sensor inputs. The resulting configuration of sensor inputs for each concept includes the settings for at, below, and above expectation performance levels. A psychomotor profile may be selected from a set of existing profiles when designing a PSTAAT psychomotor activity. In order to encourage reuse and further streamline the ITS development process, psychomotor profiles may be imported, modified, exported, and reused within the PSTAAT environment.
+Figure 5. Example Psychomotor Profile in PSTAAT with 3 sensors and 2 concepts
+MODSIM World 2017
+  2017 Paper No. 16 Page 7 of 10
+
+ During the psychomotor profile building process, the authoring agent will implement a combination of performance support and machine learning techniques to both streamline and facilitate sensor modeling. To create the logic model for a profile, PSTAAT will require “case data” describing the sensor inputs gathered for a concept. The user will have the option to import existing case data or use an integrated machine learning process to collect case data and allow the PSTAAT authoring agent to guide the modeling process. In instances when normative sensor input performance levels are known, the user will also be able to manually enter the values for the logic model. An example result from this process is depicted in Figure 5.
+We anticipate PSTAAT’s integrated process for building a psychomotor profile using supervised machine learning to follow a two-step process, where the first step enables the algorithm to learn how to estimate the categorical results (below, at, or above expectation) and the second helps the author to set proper thresholds. The list below outlines one approach to this process:
+1. Author creates a Psychomotor Profile, selects and calibrates sensors, and defines a data collection trigger;
+2. Author (or an expert) demonstrates the psychomotor activity, with sensors active, at different performance
+levels (e.g., below, at, and above expectation);
+3. Author reviews sensor data and chooses to accept or reject each demonstration case; Author optionally
+annotates each case with expert feedback;
+4. Repeat starting at Step 2 until machine learning model has an adequate number of cases to be able to
+estimate the result of the activity;
+5. Author (or an expert) demonstrates a case;
+6. Repeat starting at Step 5 until system is satisfied that it can assess sensor data and convert it to concept
+performance levels. If weaknesses are found in the system, go to Step 2.
+Figure 6. Authoring agent dialog to build a psychomotor profile using Machine Learning
+During this process, the system is using supervised training methods to construct one or more machine learning models that will be used to convert sensor data into concept performance levels. Several machine learning models exist for this type of training, including decision trees, neural networks, and more. Throughout the sensor modeling process, the authoring agent acts as the expert coach and provides analytical feedback on the estimated model accuracy. A sample dialog with the authoring agent is depicted in Figure 6.
+MODSIM World 2017
+ 2017 Paper No. 16 Page 8 of 10
+
+ Reusability and Standards
+There are a number of best practices that can be employed by an ITS authoring tool to improve the prospects of reuse. To maintain consistency, PSTAAT will leverage existing GIFT Cloud components and adopt any improved workflows wherever possible. PSTAAT is most similar to the “Adaptive Courseflow” course object in the Course Creator; however, there are several notable differences.
+In an effort to increase efficiency with continued use, the PSTAAT authoring environment is designed to take advantage of reusable instructional approach templates, instructional feedback templates, and psychomotor profiles. The Psychomotor Activity course object provides template and profile management features for this purpose. PSTAAT will provide a number of built-in templates, many of which will be extracted from the exemplar ITS. However, PSTAAT users will also have the ability to create new custom templates and profiles. Reuse of custom items is extended beyond the scope of a single course through export and import of JSON object representations of templates and profiles. When applicable, schema.org models will be leveraged in these representations.
+The authoring agent can encourage the practice of reusing objects through properly sequenced guidance and the availability of convenient export/import options. The agent can also provide examples and guidance on how to organize concepts to improve the prospects of reuse. Similarly, when the authoring agent auto-generates portions of an ITS, the components will be assigned predictable, human-readable names that can be used to interpret instructional phase, concept, and sensor associations. Consistent naming conventions and the use of common web standards will ease the overhead associated with maintenance of the PSTAAT ITS as well as the interpretation of completed ITS course files. This practice also ensures a level of quality control for the tutors.
+ARCHITECTURE OF THE AUTHORING AGENT
+PSTAAT will contribute to GIFT a new authoring component called a Psychomotor Activity Course Object. This component will be composed of a UI featuring a contextual agent integrated into the GIFT Authoring Tool. This agent will guide the user through the creation of a psychomotor activity including the creation of a psychomotor profile via a sequence of guided dialogues.
+Figure 7: PSTAAT Agent Functional Block Diagram
+As seen in Figure 7, the agent will be composed of a set of dialogue screens that, based on input from the user and the state of the ITS, will guide the user through the psychomotor activity creation process. The agent will be informed on the addition and use of sensors, concepts, the creation and training of a Psychomotor Profile, and the configuration of the Psychomotor Activity, including the creation and association of instructional strategies.
+A Psychomotor Activity will be associated with a Psychomotor instructional approach (representing a subset of Psychomotor Domain training phases), one or more Psychomotor Profiles, and any content associated with Instructional Strategies that are to be used for remediation. Additional configuration options may be necessary as the ITS design and development occurs.
+MODSIM World 2017
+ 2017 Paper No. 16 Page 9 of 10
+
+ A Psychomotor Profile is composed of links to a set of sensors, a set of concepts, configuration settings related to the capture of a psychomotor event (as an example: Capture the last second when the trigger is pressed), a Psychomotor Logic Model that interprets captured sensor data and assigns values to concepts, and links to cases used in training the Psychomotor Logic Model.
+The execution of a Psychomotor Activity will be done using an agent similar to the Psychomotor Agent in accordance with the pedagogical routines defined in the Activity. It will provide generalized feedback appropriate for each Psychomotor Domain along with content appropriate for the instructional strategy.
+SUMMARY
+Authoring tools are need to streamline the development of simulation-based ITS, to help the Army achieve its ALM objectives and more broadly to ensure force-wide readiness. General-purposes authoring frameworks have limitations that could be mitigated using select, specialized instances of tools that focus on specific categories of skill performance. In this paper, we introduced PSTAAT, a specialization of the GIFT authoring framework that supports the development of simulation-based ITS in the psychomotor domain. We presented our conceptual basis for this project and discussed our preliminary approach. This project is ongoing, and future work will demonstrate how an author can readily create and adapt psychomotor skills instruction using PSTAAT.
+ACKNOWLEDGEMENTS
+Work reported herein is supported by the U.S. Army Research Laboratory under contract W911NF-16-C-0106.
+REFERENCES
+Bell, B. (2003). Supporting Educational Software Design with Knowledge-Rich Tools (2003). In T. Murray, S. Blessing, and S. Ainsworth (Eds.), Authoring Tools for Advanced Technology Learning Environments: Toward cost-effective adaptive, interactive, and intelligent educational software. Kluwer Academic Publishers: Dordrecht, Netherlands.
+Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., and Krathwohl, D. R. (1956). Taxonomy of educational objectives: The classification of educational goals. Handbook I: Cognitive domain. New York: David McKay.
+Dave, R.H. (1970). Psychomotor levels. In R.J. Armstrong (Ed.), Developing and Writing Behavioral Objectives. Tucson, Arizona: Educational Innovators Press.
+Goldberg, B., Amburn, C., Brawner, K., & Westphal, M. (2014). Developing models of expert performance for support in an adaptive marksmanship trainer. In Proceedings of the Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC).
+Harrow, A. (1972) A Taxonomy of Psychomotor Domain: A Guide for Developing Behavioral Objectives. New York: David McKay.
+Romiszowski, A. (1999). The development of physical skills: Instruction in the psychomotor domain. In Instructional-design theories and models: a new paradigm of instructional theory (Vol. 2). Mahwah, NJ: Lawrence Erlbaum Associates.
+Simpson E.J. (1972). The Classification of Educational Objectives in the Psychomotor Domain. Washington, DC: Gryphon House.
+Sottilare R. (2012). Considerations in the development of an ontology for a Generalized Intelligent Framework for Tutoring. International Defense and Homeland Security Simulation Workshop, in Proc. of the I3M Conference. Vienna, Austria, September 2012.
+Sottilare, R.A., Goldberg, B.S., Brawner, K.W., and Holden, H.K. (2012). A Modular Framework to Support the Authoring and Assessment of Adaptive Computer-Based Tutoring Systems (CBTS). In Proc. of Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC), Dec, 2012.
+2017 Paper No. 16 Page 10 of 10
+MODSIM World 2017

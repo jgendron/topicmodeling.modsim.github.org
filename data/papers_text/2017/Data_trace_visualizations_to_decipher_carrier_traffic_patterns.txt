@@ -1,0 +1,89 @@
+Data trace visualizations to decipher carrier traffic patterns
+Paul Mario Koola, Perakath Benjamin Knowledge Based Systems Inc. College Station, Texas pkoola@kbsi.com, pbenjamin@kbsi.com
+ABSTRACT
+In this paper we present visualizations that decipher the hidden rules or logic of complex traffic patterns that help analysts understand and improve operations. We demonstrate this technology on aircraft carriers using simulated notional data from hundreds of simulations and plotting their statistical variations. Operations on aircraft carriers are often described as controlled but complex. Complex organizational systems, such as those that govern and effect aircraft movement onboard carriers, do not operate on predetermined low level rules but rather adapt and learn based on high-level guidelines. Critical situations that are often new or unique are best tackled by adaptive and well-trained organizations. One approach to building a scalable and adaptable organization is to use simulation based training. This approach enables familiarizing stakeholders with repetitive patterns of behaviors and also exploring what if scenarios never before attempted.
+We present typical examples of data statistics, visual analytics, and rule and pattern analysis from carrier deck notional data. These techniques help analysts explore the data and its patterns to improve operational processes. These tools could also support Validation and Verification (V&V) of the rules engine of the simulator.
+The algorithms and logic developed in this paper are scalable across domains. The methodology, algorithms and tools have a number of potential customers in the Navy community, the broader Department of Defense community and the commercial sector. This technology will scale to manage the traffic pattern of any asset moving in groups subject to complex spatio- temporal constraints. Some of the possible application domains are depot maintenance, a manufacturing shop floor, airport traffic management and even theme parks where people move in groups.
+ABOUT THE AUTHORS
+Paul Mario Koola, Ph.D. was a research scientist at Knowledge Based Systems Inc., Texas, USA and a principal investigator managing AI and machine learning projects. He is currently a Professor at Texas A&M Ocean Engineering Department and a consultant to KBSI.
+Perakath Benjamin, Ph.D. is the VP R&D at Knowledge Based Systems Inc., Texas, USA and manages KBSI’s research project portfolio.
+MODSIM World 2017
+ 2017 Paper No. 36 Page 1 of 9
+
+Data trace visualizations to decipher carrier traffic patterns
+INTRODUCTION
+In this paper we present visualizations that decipher the hidden rules or logic of complex traffic patterns that help analysts understand and improve operations. We demonstrate this technology on aircraft carriers using simulated notional data from hundreds of simulations and plotting their statistical variations. Stoller Newport News Nuclear provided the notional data for this work and their domain experts provided the useful insights and discussions we have had, educating us on carrier operations. The Office of Naval Research (ONR) SBIR Program funded this TraceLogic effort (Koola et. al. 2016).
+Operations on aircraft carriers are often described as controlled but complex. Complex organizational systems, such as those that govern and effect aircraft movement onboard carriers, do not operate on predetermined low level rules but rather adapt and learn based on high-level guidelines (Rochlin et. al., 1987). Critical situations that are often new or unique are best tackled by adaptive and well-trained organizations. One approach to building a scalable and adaptable organization is to use simulation based training. This approach enables familiarizing stakeholders with repetitive patterns of behaviors and also exploring what if scenarios never before attempted.
+We present typical examples of data statistics, visual analytics, and rule and pattern analysis from carrier deck notional data. These techniques help analysts explore the data and improve the operational process. These tools could also support Validation and Verification (V&V) of the rules engine of the simulator.
+The algorithms and logic developed in this paper are scalable across domains. The methodology, algorithms and tools have a number of potential customers in the Navy community, the broader Department of Defense community and the commercial sector. This technology will scale to manage the traffic pattern of any asset moving in groups subject to complex spatio-temporal constraints. Some of the possible application domains are depot maintenance, a manufacturing shop floor, airport traffic management and even theme parks where people move in groups.
+NOTIONAL CARRIER SIMULATION ENVIRONMENT
+The notional carrier consisted of five fixed wing aircraft types classified as:  two 10 aircraft squadrons of Fighter 1,
+ one 12 aircraft squadron of Fighter 2,
+ one 12 aircraft squadron of Fighter 3,
+ one 5 aircraft squadron of Electronic Warfare and  one 5 aircraft squadron of Electronic Attack
+In normal operations these aircraft would be launched from four different catapults. One of our goals was to study the patterns of behavior when different catapults were not operational. The data set has hundreds of repeat simulations for each experimental condition of catapult failures. This complex decision making operation needs aircraft to be rescheduled based on many criteria some of which are aircraft parking near or on the catapults, sequence of aircraft launched to support mission, etc. These simulations involved thousands of aircraft launches for hundreds of events over a period of days of continuous surge operations and also for a month of normal operation. Events are groups of aircraft flying together to achieve a mission intent.
+To analyze the huge amount of data we built a GUI tool called CarrierLogic that could slice and dice and extract patterns of behavior of these aircraft subject to the operational constraints imposed on them. Since most of the patterns are complex we decided to present the results back to the domain experts in visual form. These experts can decipher
+MODSIM World 2017
+     Paul Mario Koola, Perakath Benjamin
+     Knowledge Based Systems Inc.
+     College Station, Texas
+     pkoola@kbsi.com, pbenjamin@kbsi.com
+    2017 Paper No. 36 Page 2 of 9
+
+patterns in these data visuals that those not accustomed to this domain cannot. The tool also provides a comparison tool to compare two different scenarios at a time to give deeper insights into the variations in the scenarios. The next section presents some of the typical results from the tool.
+EVENT CLUSTERS
+Event Clusters (EC) are groups of aircraft that fly out together to achieve a given mission. Figure 1 shows a zoomed in plot of the event clusters, when “All Catapults” are working. The different markers types and colors, signify different aircraft types. This cluster plot has Launch Time on the X-Axis and Land Time on the Y-Axis but corrected to display the clusters more meaningfully. The time gap between events can be clearly seen and the intensity of launches inside the event cluster can also be comparatively gauged. The data set has hundreds of repeat simulations for each experimental condition of catapult failure. The tool allows the user to pick experimental scenarios and repeat simulations to compare against. To an expert in deck operations the grouping of aircraft and their sequence of launch will make a lot more sense.
+Figure 1: Event Clusters (EC) Plot_1 Zoomed In
+SORTIE GENERATION RATE (SGR)
+Sortie Generation Rate (SGR) is a key metric in understanding intensity of operations on a carrier. In Figure 2 we present a screen shot from the tool showing the computed and visual plots of the SGR intensities for different types of aircraft launched from different catapults. The mean SGR for different aircraft are computed and displayed in the legend. The mean SGR for every catapult is displayed on the title of every subplot. The instantaneous intensity of launch could be as high as 30 launches per hour. Fighter aircraft have the highest mean SGR over other aircraft types as expected.
+For this notional carrier Catapult 2 has the highest intensity of launch. This could be due to parking layout on deck chosen, proximity of aircraft type and mix close to the catapult etc. Given this fact, ensuring the availability of catapult 2 is of critical importance to obtaining maximum sortie generation rate. Alternate parking layouts can switch the high SGR burden to other catapults. This is a specific example of a what-if alternate scenario that can be studied to make the organization more robust.
+MODSIM World 2017
+ 2017 Paper No. 36 Page 3 of 9
+
+PATH PLOTS
+Path Plots (PP) show the paths traversed by aircraft on deck from their parking spots till they are launched and also after they land and go to their assigned parking spots. The path traversed is a function of catapults available, where aircraft are parked and also interference based on other parked locations and path interferences. Fueling and weapons loading are other hidden constraints.
+The tool provides the carrier deck layout at the bottom and a user interface to select the aircraft types with the plot attributes of color, line style and marker style above the deck layout. If only one aircraft type is selected then each of the 100 repeat simulation data is presented in different colors as shown in Figure 3 for Fighter 1.
+The thickness of each line is proportional to its frequency of path usage. Since a red solid line with point marker was selected, the last repeat data is plotted using this selected red line style. As can be seen there is a lot of path variation between repeat runs. These path variations will make sense to domain experts and provide them a quick way to understand the nuances imposed by the rules engine. Ultimately our goal has been to provide a visual means to help experts modify the rules engine to better operations. All experimental variations (Catapult Failures) are presented in separate tabs shown in Figure 3, Figure 4, Figure 5, Figure 6 and Figure 7 for the cases All Cats, Cat 1 Removed, Cat 2 Removed, Cat 3 Removed and Cat 4 Removed, respectively. These plots show the complexity of path traversals changes for different experimental cases of catapult failures. Studied in conjunction with SGR (Figure 2) these path visuals will help better inform experts of improving the robustness of carrier operations.
+Figure 8 shows the comparison between Cargo (Yellow) and Fighter 1 (red) paths for the All Cats case. Figure 9 shows the zoomed in version of Figure 8. By wisely choosing different combinations of aircraft to compare the expert user can study the implications of the rules specified in the simulation engine that has evolved over the years.
+To experts in the domain, this interactive visual functionality of comparing paths across aircraft types, helps them understand the nuances of deck operations at a level not possible before. The zooming and panning functionality of the visuals will help the experts further analyze the operations imposed by their rules. The locations around the edges of the carrier deck are where most of the aircraft are parked and where all paths initiate or end.
+2017 Paper No. 36 Page 4 of 9
+MODSIM World 2017
+ Figure 2: SGR Plot_1
+
+MODSIM World 2017
+ Figure 3: Paths – Fighter 1 (All Cats)
+ 2017 Paper No. 36 Page 5 of 9
+Figure 4: Paths – Fighter 1 (Cat 1 Removed)
+
+MODSIM World 2017
+ Figure 5: Paths – Fighter 1 (Cat 2 Removed)
+ 2017 Paper No. 36 Page 6 of 9
+Figure 6: Paths – Fighter 1 (Cat 3 Removed)
+
+MODSIM World 2017
+ Figure 7: Paths – Fighter 1 (Cat 4 Removed)
+ 2017 Paper No. 36 Page 7 of 9
+Figure 8: Paths – Cargo Vs Fighter 1 (All Cats)
+
+SUMMARY
+Based on the ONR funded SBIR TraceLogic project we had demonstrated Automated Rule Learning from Data Traces that produced methods, processes and algorithms to decipher the hidden rules or logic of complex traffic patterns – traces of aircraft, people and equipment on Aircraft Carriers.
+Based on the success of these techniques a tool CarrierLogic was built to help analysts explore carrier data with an intent to improve the process. Typical examples of data statistics and visual analytics have been presented. These tools could support Validation and Verification (V&V) for the rules engine of the simulator, enable experts in the domain to discuss higher level strategies for deck operations and use visuals generated as an additional aid in teaching the nuances of deck operations planning.
+There are different aspects of Validation and Verification (V&V) that these visual analytics tool support. The Event Clusters (EC) and Sortie Generation Rate (SGR) visuals in combination ensure that the required type and number of aircraft are launched and landed given the catapult specification launch rates and operational status. Any catapult capacity violations can be deciphered from the analytic computations. The SGR broken down by catapults and aircraft types give added confidence check points into the operations on the carrier deck.
+The EC and SGR plots shows the combination of aircraft types involved in each mission and the ordered sequence indicating their relative position in the group launch. These visuals could be used as teaching aids to those new to deck operations to demonstrate a global picture.
+The Path Plots (PP) though complex aid the experts in the domain to understand the paths traversed due to constraints of aircraft parking, path obstructions, failure rates, fuel and weapons loading, manpower requirement, etc. These visuals are not easily explainable as they are the superposition of multiple competing constraints that have complex implications. However, it is our experience that experts in the domain have been able to spot the implications of the path plots just looking at this graphic that most non-experts struggle to understand. This led to the development of a comparison capability in the tool that experts could use to further compare and contrast different scenarios such as catapult failures and its implications. The multi-tab displays for different cases of catapult failure were developed based on domain expert tool use observations.
+2017 Paper No. 36 Page 8 of 9
+MODSIM World 2017
+ Figure 9: Paths – Cargo Vs Fighter 1 (All Cats) – Zoomed
+
+The visual and analytics exploratory tool CarrierLogic to study complex phenomenon of traffic patterns could lead to better understanding of the domain and also could provide facilitate better optimized operations.
+Future work includes combination catapult failures, alternate parking placements, alternate path planning algorithms, integrating UAV’s into the aircraft mix, etc.
+The algorithms and logic developed in this paper are scalable across domains. The methodology, algorithms and tools have a number of potential customers in the Navy community, the broader Department of Defense community and the commercial sector. This technology will scale to manage the traffic pattern of any asset moving in groups subject to complex spatio-temporal constraints. Some of the possible application domains are depot maintenance, a manufacturing shop floor, airport traffic management and even theme parks where people move in groups.
+ACKNOWLEDGEMENTS
+We thank Marco Estrada, Justin Ausura and Rob Lisle of Stoller Newport News Nuclear for providing the notional data for this work and also for the useful insights and discussions we have had, educating us on carrier operation and possible new end uses for such analysis such as Validation and Verification (V&V).
+The authors also wish to thank the Office of Naval Research (ONR) SBIR Program for funding the TraceLogic effort. The Technical Point of Contact (TPOC) Mr. Marc Steinberg’s support is highly appreciated.
+The views and opinions expressed in this paper are those of the authors and do not necessarily reflect the official policy or position of any agency of the U.S. government.
+REFERENCES
+Koola, P. M., Ramachandran S., & Vadakkeveedu K. (2016). TraceLogic: Rule Extraction and Visualization from Data Traces, Paper # 65, MODSIM World 2016.
+Rochlin, G. I., Todd R. L., and Karlene H. R. (1987). “The Self-Designing High-Reliability Organization: Aircraft Carrier Flight Operations at Sea.” Naval War College Review., Retrieved Jan 28, 2017 from http://govleaders.org/reliability.htm.
+MODSIM World 2017
+ 2017 Paper No. 36 Page 9 of 9

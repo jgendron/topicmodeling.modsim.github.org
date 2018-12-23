@@ -1,0 +1,270 @@
+Experiential Correlation of Vehicle Dynamics Simulation to Self-reported Driving, Learning, and Gaming styles
+Kevin F. Hulme, Ph.D., CMSP University at Buffalo Motion Simulation Laboratory Buffalo, NY hulme@buffalo.edu
+Edward M. Kasprzak, Ph.D. EMK Vehicle Dynamics, LLC Buffalo, NY
+Edward.m.kasprzak@emkvdynamics.com
+ABSTRACT
+Karen L. Morris, MPH University at Buffalo Center for Children and Families Buffalo, NY kmorris2@buffalo.edu
+MODSIM World 2017
+   For the last half century, there has been a dramatic increase in the use of modeling and simulation (M&S) applications in training and education. M&S can be leveraged to enhance conventional mechanisms for knowledge retention by bridging the gap between classroom theory and real-world application to better enable engaging, experiential participation in the learning process.
+This paper discusses the technical and experimental design of a game-based simulation environment for an existing road vehicle dynamics (RVD) university course. The basis of the simulation experiment is to provide an environment for learners to actively discover the interplay between two key vehicle parameters (i.e., vehicle weight distribution and roll-stiffness distribution) while driving upon an oval speedway. The goal of the learner, in real-time, is to optimize these parameters to maximize vehicle performance (i.e., to minimize lap time). Simultaneously, our objective as educators is to observe how simulator-measured experimental performance correlates to self-reported tendencies (e.g., driving style; learning style; video gaming preferences) relevant to driving and dynamics education.
+Our holistic goal is to determine if and to what degree M&S-based instruction is better suited towards certain types of drivers or learners, which might inform how to maximize the effectiveness of the delivery of M&S in future training and education curricula. While the M&S environment and experimental protocol described here is intended primarily for education and training, it has extensibility to other applications (e.g., pilots for aircraft), and enables related applications in transportation and human factors research.
+ABOUT THE AUTHORS
+Dr. Kevin F. Hulme, CMSP received his Ph.D. from the Department of Mechanical and Aerospace Engineering at the University at Buffalo (UB), specializing in multidisciplinary analysis and optimization of complex systems. For the past decade, Dr. Hulme has served as the technical lead of the UB School of Engineering and Applied Sciences Motion Simulation Laboratory. His recent areas of application focus include: modeling and simulation, standardization of simulation in teen driver safety, fidelity requirements in simulation system specification, multi- participant civilian driving simulation, the application of simulation in transportation safety, and multi-measure assessment of distractions on driver performance.
+Dr. Edward M. Kasprzak is the president of EMK Vehicle Dynamics, LLC. He consults almost exclusively to Milliken Research Associates (MRA), a vehicle dynamics engineering firm based in Western New York. For the past two decades he has engaged in a variety of projects for passenger car companies, racing teams and tire companies, including analytical studies, computer modeling, experimental instrumentation, prototype design/development and feasibility studies. He taught for fourteen years in the Department of Mechanical and Aerospace Engineering at the University at Buffalo, including nine as an Adjunct Assistant Professor. He was the instructor of the Road Vehicle Dynamics (RVD) engineering course within which the described simulation experiments were incorporated.
+Ms. Karen L. Morris, MPH/CPH received her Master’s Degree in Public Health from the University at Buffalo in 2011. Since 2005, Karen has served as a Research Coordinator with the Center for Children and Families at the University at Buffalo. She has experience in the development, coordination and execution of community interventions to improve the health and wellness of various at-risk populations. Most recently, she has served as Project Coordinator for an NIH-funded intervention trial that aims to improve driving outcomes of teen drivers, and has experience leading young adults through simulated risky-driving training experiences.
+2017 Paper No. 5 Page 1 of 12
+
+Experiential Correlation of Vehicle Dynamics Simulation to Self-reported Driving, Learning, and Gaming styles
+Kevin F. Hulme, Ph.D., CMSP University at Buffalo Motion Simulation Laboratory Buffalo, NY hulme@buffalo.edu
+Edward M. Kasprzak, Ph.D. EMK Vehicle Dynamics, LLC Buffalo, NY
+Edward.m.kasprzak@emkvdynamics.com
+Karen L. Morris, MPH University at Buffalo Center for Children and Families Buffalo, NY kmorris2@buffalo.edu
+MODSIM World 2017
+   INTRODUCTION AND MOTIVATION
+The discipline of Modeling & Simulation (M&S) has long been used as a basis for technical decision making. Mathematical computer models can provide a mechanism to explore system behavior in a manner that can be prohibitive for real-world application (NSF, 2006). In recent times, there has been a dramatic increase in the use of M&S-based gamification for training to enable active (rather than passive) participation in the learning process. In this manner, M&S can be leveraged to enhance conventional mechanisms for knowledge retention by effectively bridging the gap between classroom theory and real-world application. Refer to Figure 1, which depicts the class learning pyramid (Dale, 1969), and which demonstrates the relative success of active teaching methods (e.g., real- time simulation) over passive, non-participatory learning methods. An early effort (e.g., Herz and Merz, 1998) relevant to the field of Business employed experimental design to determine if economic simulation games support the learning process. Preliminary results indicated that these games support the various stages of learning more efficiently than traditional (passive) instruction. More recent scientific efforts (e.g., Abdulmohsen, 2010) in Health Care employed experiential learning, and utilized simulation aides to replicate clinical scenarios to increase medical provider competency. Engineering research (e.g., Hulme et al., 2010) included game-based M&S as a core component, and saw the administration of multiple measure types (quantitative, qualitative, self-report, longitudinal) to assess trainee performance and knowledge transfer, and to rate instructional preferences. However, critically lacking in these past efforts was a mechanism to observe correlations between performance (i.e., as measured by the simulation applications), and self-rated real-world proficiency.
+Figure 1 – Learning Pyramid Figure 2 – Stability Control (speed vs. heading)
+In this paper, we discuss the design and integration of a game-based simulation environment into an existing road vehicle dynamics (RVD) university course curriculum. The basis of our experiment is to provide an environment for learners to actively discover the interplay between two key vehicle parameters (vehicle weight distribution, and roll- stiffness distribution) while driving at elevated speeds upon an oval speedway. The goal of the learner, in real-time, is to optimize these parameters to maximize vehicle performance. Simultaneously, our objective as educators is to better determine if simulator-measured experimental performance correlates to relevant self-reported tendencies: 1) driving style preferences, 2) learning style preferences, and 3) video gaming preferences. Using this data, our penultimate goal is to determine if M&S-based instruction is better suited towards certain types of drivers or learners, which might inform an improved understanding for how to maximize the effectiveness of the delivery of M&S in future training and education curricula. Although our M&S application is geared towards civilian road vehicle dynamics education, possible broader impacts of this work include military training (e.g., optimization of pilot flight style), and intelligent transportation systems (e.g., human factors assessment and evaluation). In the next section, we detail the emerging nature of our M&S concept, and highlight the innovation of our applied technology.
+  2017 Paper No. 5 Page 2 of 12
+
+CONCEPT INNOVATION
+In this paper, we describe the novel application of M&S in the context of vehicle dynamics education. The simulation training environment that has been developed and deployed allows participants to modify vehicle parameters in real- time in an attempt to optimize performance. Specifically, learners will augment properties that influence vehicle stability control which will emphasize the critical relationship between vehicle speed and heading (e.g., transitioning between straightaway and curved track segments); refer to Figure 2.
+The instructional strategies outlined in this work promote advanced learning by leveraging M&S to enable system interaction that is not feasible within a traditional (passive) classroom setting, nor practical within a physical “real world” training environment. The instructional features incorporated by the simulator (e.g., preset/reset capability, assignment/parameterization of task conditions, real-time performance analysis and monitoring) enhance student learning and facilitate instructor interaction (Vincenzi et al., 2008). Furthermore, by collecting supplementary self- report data to accompany observed participant simulator performance, our primary aim is to identify training mechanisms that will permit improved delivery of M&S content offered within future training curricula. In the next section, we describe the research facilities leveraged for this effort.
+RESEARCH FACILITIES
+Our high-fidelity motion simulator was leveraged for the research experiments described in this paper. Refer to Figures 3-5. The primary functional components of the simulator include the following: a 6-DOF electric hexapod platform, a two-seat Sedan passenger cabin, a USB racing-themed steering wheel (with buttons and paddle shifters that enable vehicle parameter adjustment in real-time, “on the fly”) foot pedals (w/ spring resisted gas and clutch, and dual-spring pressure modulation on the brake pedal), and a 2.1 stereo sound system and a full-sized subwoofer. The visual display system features a 16’ diameter, 6’ high, 360-degree surround “Ring screen”, front-projected by a sequence of six truss-mounted projectors. Edge blending and screen warping are accomplished both in software and in hardware. The overall display resolution is 8192 pixels (circumference) x 768 pixels (height).
+Figure 3 – Display environment Figure 4 - Motion platform
+COURSE DESCRIPTION AND RELEVANT THEORY
+The simulation environment is incorporated into a technical elective engineering course on automobile vehicle dynamics, formally entitled Road Vehicle Dynamics (RVD), an introductory course on the basics of automobile motion, stability, and control. This includes a review of tire performance and modeling, exploration of the elementary Bicycle Model of vehicle dynamics, and the development of a more detailed Four-wheel Model (Milliken and Milliken, 1995). Our Four-wheel model is a suitably realistic model of a vehicle as it includes nonlinear tire behavior and treats all four wheels individually. Wheel loads are calculated continuously, and vary with vehicle operating conditions. These serve as inputs to the tire model, which has load-dependent behavior based on real-world tire data collected at Calspan’s Tire Research Facility (TIRF), and modeled using a subset of the non-dimensional tire model (Kasprzak et al., 2006). Calculation of the normal load includes both the static wheel load component center-of-gravity (CG) location (front-to-rear), and the effects of load transfer while driving. CG height, roll axis height/inclination, and
+MODSIM World 2017
+  2017 Paper No. 5 Page 3 of 12
+
+roll stiffness distribution (RSD) (front-to-rear) all contribute to the load transferred (see Figure 6) during lateral and longitudinal accelerations. Inputs to our vehicle models are steer angle and tire (longitudinal) force, the latter of which is proportional to the throttle and brake positions. Outputs include vehicle velocities, accelerations, tire forces, and tire operating conditions. A secondary goal of the course is to apply general engineering skills learned during the first three years of the engineering curriculum to the specific field of vehicle dynamics. This gives students the satisfaction of being able to apply their engineering skills to a particular topic, and mimics the process of merging these foundational abilities with details of a specific knowledge area - as will be required when entering the workforce.
+Figure 5 – Simulator controls Figure 6 – Roll Axis and Roll Stiffness
+Figure 7 – Oversteer/Understeer Conditions Figure 8 – Front vs. Rear roll stiffness
+In the laboratory experiments outlined in this work, participants experiment with two key vehicle parameters within the described Four-wheel model. The first is to determine the influence of weight distribution (i.e., Center-of-Gravity, or CG), front-to-rear, on the handling of the vehicle. A front-heavy vehicle will tend to understeer, while a rear-heavy car will tend to oversteer. The intermediate condition is “neutral steer”, which offers an ideal blend of both characteristics. Refer to Figure 7. The second is to determine the influence of roll stiffness distribution (RSD), front- to-rear, on stability and performance. With a four-wheeled vehicle cornering at such a critical speed:
+ If you have a majority of front roll stiffness (relative to the rear) you will be forcing majority load on the inside front tire, which operates less efficiently, and will consume grip faster than the rear. (Figure 8-green)
+ If you have a majority of rear roll stiffness (relative to the front), you will be forcing majority load on the inside rear tire. Here, the inside rear tire is overworked and consumes grip up faster than the front. (Figure 8-red)
+By experimenting with these critical vehicle parameters, learners will gain valuable insight on resulting performance, specifically optimal handling characteristics, in real-time, “on the fly”. The depth of comprehension gained from this experiential exposure will be greater than would be achieved through passive instruction alone, and more safe/practical than by way of actual field testing (e.g., in a real car, at high speeds on a test track). In the next section, we describe the explicit details of the vehicle dynamics simulation-based RVD experiment.
+RVD EXPERIMENT DESCRIPTION
+The simulation environment is an oval racetrack called “Spencer Speedway” (modeled after the actual speedway, located regionally in Williamson, NY). Refer to Figures 9 and 10. This track was introduced to assist vehicle dynamics students to better understand how travel speed effects vehicle control. This course allows drivers to experience the delicate balance between throttle (i.e., longitudinal travel speed) and vehicle heading (i.e., degree of turning). By driving multiple laps in succession, young learners can repeatedly practice behavior at the track transitions (i.e., entry/exit) which are the most difficult segment to master. The simulator has been programmed to
+MODSIM World 2017
+    2017 Paper No. 5 Page 4 of 12
+
+capture data for each excursion: (x,y) position, vehicle speed (m.p.h.), and forces/accelerations on the vehicle (e.g., front and rear tire forces as the vehicle transitions from straightaway to turning segments).
+Figure 9 – Spencer Speedway (virtual, POV) Figure 10 – Spencer Speedway (actual, ISO view)
+Our experimental protocol is presented in Table 1. Each session begins with a number of pre-surveys and self-report questionnaires issued in advance of the simulator exercises. These include the following:
+ The Jerome Driving Questionnaire (JDQ) (Jerome and Segal, 2012), a visual analog scale that provides self-report
+and collateral data related to driving history and style. Preliminary results indicate that the JDQ has a four factor structure (i.e., attention, impulsivity, alertness and emotional) and has demonstrated to have predictive validity in assessing risk of future driving problems in young drivers.
+ The Driver Behavior Questionnaire (DBQ) (Parker et al., 1995) provides a distinction between different driving conduct by investigating a three-fold typology of negative driving behaviors: 1) lapses, are absent-minded behaviors with consequences mainly for the perpetrator; 2) errors, are typically failures of observation that may be hazardous to others; 3) violations, involve deliberate infraction of safe driving practice.
+ The Learning Styles Inventory (LSI) (Bixler, 2016) is implemented to evaluate how a subject prefers to learn or process information. The three substyle of learning are visual, auditory, and tactile. This knowledge can enable educators to develop strategies to enhance and optimize learning potential.
+Table 1 – Experimental Protocol Table 2 – Basic cohort details
+MODSIM World 2017
+   Activity
+ Details (% front CG/% front RSD), Duration
+Pre-surveys (3)
+ n/a, 15 minutes
+Drive #1/Acclimation
+ 60/60, 3 minutes
+Drive #2
+ 60/51, 3 minutes
+Drive #3
+ User adjustable (60/60 baseline), 5 minutes
+(break)
+ n/a, 5 minutes
+Drive #4
+ 51/60, 3 minutes
+Drive #5
+ User adjustable (51/60 baseline), 5 minutes
+Post-surveys (2)
+ n/a, 5 minutes
+  Total:
+  45 minutes (approximate)
+  Subject #
+Drove in class?
+ Classification
+1
+No
+ RVD Student
+2
+Yes (driver)
+ RVD Student
+3
+No
+ RVD Student
+4
+No
+ RVD Student
+5
+No
+ RVD Student
+6
+Yes (driver)
+ RVD Student
+7
+No
+ RVD Student
+8
+Yes (driver)
+ RVD Student
+9
+No
+ Non-RVD Student
+10
+Yes (passenger)
+ RVD Student
+11
+No
+ Expert
+  12
+ No
+   Expert
+                      Once these surveys are completed, the simulation drives are then endeavored. Instructions for each drive are simple: drive counterclockwise around the oval speedway as rapidly as you feel comfortable. The objective is to identify vehicle parameters that enable the fastest legal lap. A legal lap is defined whereby the driver’s simulation vehicle remains on the track for the entire duration of the lap, and that no perimeter cones are struck during the lap. The first drive takes place on a “stable” vehicle configuration, with both the vehicle center-of-gravity (CG) and roll-stiffness distribution (RSD) parameters leaning towards the front of the vehicle (i.e., 60% front). This easily drivable vehicle also serves as an “acclimation” to the simulator. The second drive maintains the vehicle CG (% front) at 60, but reduces the stability of the vehicle by reducing RSD (% front) to 51. Each of the first two drives is three minutes in duration, which should be enough time for a minimum of 4 completed track laps. The third experimental drive expands the simulation time to five minutes. Here, the baseline CG/RSD is 60/60, just like the first vehicle, but during this
+2017 Paper No. 5 Page 5 of 12
+
+drive, the RSD (% front) is user-adjustable during the drive, in real-time. Theoretically, this allows the driver to adjust and fine-tune that parameter to their preference, while maintaining a vehicle with a 60% front CG. After the third drive, the driver is given a five-minute break. Thereafter, the fourth drive takes place, which gives the driver three minutes to encounter a vehicle with a reduced CG (% front) of 51, and a RSD (% front) of 60. Finally, the fifth drive is five minutes in duration, and begins with a baseline 51/60 CG/RSD vehicle just like the previous drive, but allows the CG (% front) for real-time adjustment and fine-tuning during the drive. After all five experimental drives are completed, the participant is issued two post-surveys:
+1) A brief questionnaire (i.e., six Likert-style questions) regarding use of video games for entertainment, and opinions regarding if gaming and simulation should be utilized (with greater prevalence) in serious-minded educational contexts. Our survey was largely inspired by Magnussen et al. (2014), who analyzed the feasibility of using gaming as a platform for student participation in scientific research.
+2) The Motion Sickness Assessment Questionnaire (MSAQ) (Gianaros et al., 2010), queries how drivers feels to assess if, and to what degree, our simulator had a negative impact on participants (e.g., nausea, dizziness, headache). There are 16 questions total, each on a 10-point Likert scale, with each addressing one of four possible symptom types (i.e., Gastrointestinal; Central; Peripheral; Sopite-related). MSAQ rating results in scores for each of these four categories, as well as an “overall” sickness score.
+Our cohort details are presented in Table 2. There were 12 participants in all, including ten students and two “expert” drivers. Nine of the ten students participated upon an abbreviated version of the experiment within the RVD class, and one additional student volunteered to perform the experiment having not been part of the RVD class. Table 2 also denotes if each participant drove (or served as passenger) on the simulator as a portion of the RVD class. (i.e., Due to the class size, not all students were able to serve as driver or passenger as a part of the class exercise, which is partially why these “extended” simulator sessions were offered after hours). The “experts” were the course instructor and the simulator operator, both of whom served as the primary designers/modelers of the simulation environment itself. In the next section, we present the results of our experiments.
+RESULTS AND ANALYSES
+We decompose this presentation into three primary subsections: a) quantitative results from our simulator-printed score sheets, b) self-report summaries from the pre- and post-surveys, and finally, c) correlations identified between these various data types. For these analyses, Microsoft Excel and the Statistical Package for Social Sciences (SPSS) were leveraged.
+MODSIM World 2017
+  Figure 11 – Lap Efficiency Figure 12 – Optimal Drives
+Quantitative (Simulator) Data
+Insightful driver performance data was captured in real-time by the simulator itself, for each driver, and for each of the five drive conditions. We must first make note of two exceptions that have an impact on the results reported. First, Driver #7 only completed the first three drive conditions due to poor/timid performance, and operator-suspected simulator adaptation syndrome (Gálvez-García, 2015). Therefore, this driver has no data for the fourth and fifth drive conditions. Second, Driver #8 completed a total of six drives due to a simulator malfunction. (i.e., Drive condition #1 was repeated two times). All six datasets were included in this participants driving trends noted below.
+Figure 11 presents a plot of total laps and legal laps (i.e., no cones struck) for each participant across all five drives. The vertical axis along the right side of the plot offers an “efficiency” metric (i.e., legal laps/total laps) for all drivers
+2017 Paper No. 5 Page 6 of 12
+
+in the cohort. In other words, a student who drove favorably in the simulator would have a large total lap count (i.e., they drove rapidly, with small lap times) and they would also have a high efficiency metric (i.e., they drove with control/discipline). As a metric for comparison, averages, for the entire cohort, were as follows: Total Laps: 29.1, Legal Laps: 22.6, Efficiency: 77.5%. The observed tendency is that drivers who attempted more laps placed more value in obtaining a “top speed” lap while willing to sacrifice some degree of accuracy (efficiency) in doing so. For example, Driver #2 completed 35 laps, the second highest in the cohort. Their efficiency was 65.7%, which was the second lowest in the cohort. Conversely, Driver #1 only drove total 27 laps (lower than the cohort average), but at an efficiency of 88.9%, which was well above the cohort average. An obvious exception to this generality is Driver #8, who drove more laps (36) at a higher efficiency (94.4%) than all other drivers in the cohort. However, note that this driver had one extra dataset, as noted previously.
+Figure 12 presents a dual axis plot that shows the fastest lap driven by each participant (left-vertical axis), and the drive condition (ranging from 1-5; see Table 1) during which the optimal lap was achieved (right-vertical axis). Both of the “expert” drivers (#11 and #12) had optimal lap times that were below 29 seconds, as did cohort Driver #2. Simultaneously, the expert drivers were able to achieve driving efficiencies that were in the vicinity of (76.5%) or above (88.2%) the cohort average, respectively. Not surprisingly, Driver #2’s efficiency (65.7%), as seen in Figure 11, was well below the cohort average. It is noteworthy that eight of the twelve cohort drivers achieved their optimal lap during drive conditions #3 or #5, where: a) drivers had a full five minutes to drive (instead of just three), and b) real-time parameter adjustment was possible during the drive. A notable exception was Driver #7, whose optimal drive time of 38.22 sec was much slower than the cohort average optimal time (calculated as 30.5 sec). This driver was the only participant who favored drive condition #1, which is a very stable, very understeer vehicle. It is therefore not surprising that this driver was excessively timid and completed, by far, the fewest number of total laps across all drives (ten – refer to Figure 11). Note that this driver had two fewer datasets, as described previously.
+Figure 13 – Cone strikes and spinouts Figure 14 – Optimal lap times across (5) drive conditions
+Figure 13 displays the number of cone strikes and spinouts, per driver, normalized per mile driven, across all five experimental trials. (Note that due to their comparatively lower values, exact values are displayed for the “spinouts” data series. Likewise, the cohort averages for normalized cone strikes and spinouts were 4.23 and 0.48, respectively). Obviously, an ideal experimental drive would exhibit low values for both parameters; a cone strike negates the possibility of a “legal” lap time, and a spinout causes a time delay that obviates the possibility of an “optimal” lap, until the next lap go-round. Therefore, this plot presents some measure of the “accuracy” of each driver. Comparing Figure 13 to Figures 11-12, a few general observations can be made. First, simulator drivers who achieved a high degree of efficiency (per Figure 12) often also achieved a high degree of accuracy (per Figure 13). The fastest three drivers (#2, #11, and #12) all had optimal lap times that were below 29 seconds (Figure 12), and exhibited cone strike and spinout results that were in the vicinity of, or well below the cohort averages. At the other end of the spectrum, drivers who were not accurate, either in terms of cone strikes, or spinouts (or both) tended to have “optimal” lap times that were slower relative to the remainder of the cohort. This was particularly observed for cohort Drivers #5 and #7, whose fastest lap times were considerably higher than the 30.5 second cohort average. Driver #10, who had the highest spinout average in the entire cohort, managed an optimal lap time of under 30 seconds. In many cases, a “fast” lap was often followed by a reckless lap (prone to errors and reduced accuracy), due to the driver barreling across the finish line without advance regard to ones driving performance on the subsequent lap.
+Figure 14 offers an optimal lap histogram for each of the twelve drivers across each of the five experimental drive conditions, and provides some indication of overall proficiency for each driver. Optimal lap times are listed in five
+MODSIM World 2017
+  2017 Paper No. 5 Page 7 of 12
+
+thresholds: < 29s (an exceptional lap), < 30s (a very good lap), <31s (a good lap), <32s (a fair lap), and > 32s (which could range from “fair” to “poor”, but is certainly not an ideal lap time). Expert Drivers #11-#12 raised the bar for the entire cohort; each had three exceptional laps (< 29s), and two very good laps (< 30s). Note that very few of the non-expert drivers were able to achieve lap times (for any of the five drive conditions) that were under 30 seconds. The exceptions were Driver #2 (who impressively achieved two laps <29s, and three laps <30s), and Drivers #3, #6, and #10 (who each achieved three laps <30s). Conversely, numerous drivers in the cohort offered optimal lap times that were less competitive; Driver #4 drove one respectable optimum lap that was < 31s, but had four (two sets of two) fastest laps that were < 32s and > 32s, respectively. Driver #5 had three optimal laps that were < 32s, and two that were >32s. Driver #7 only completed three drives, and all optimum lap times were > 32s. Generally speaking, those drivers with more favorable lap times (Figure 14) regardless of specific drive condition (Figure 12) tended to drive with greater efficiency (Figure 11), and with greater accuracy (Figure 13) as compared to the remainder of the cohort.
+Self-reported Data
+In this subsection, we analyze the results from our pre/post survey data in a self-contained manner. We start with reporting results from three surveys that were issued prior to the five simulator trials. Beginning with the JDQ (e.g., collateral data related to driving history and style), we offer general driving-relevant details about our cohort. Refer to Table 3, which lists data pertinent to driving history. Listed for each category are the cohort averages, with the standard deviation offered parenthetically. Note that on average, this was a relatively young cohort (25.4 years), with a moderate amount of driving experience (8.4 years), and a relatively low distance driven per week (106.2 miles). Regarding the JDQ survey data that queried elements of individual driving style, refer to Table 4. In this Table, we list, in descending order, the three highest and three lowest (cohort average) self-report ratings each assessed on a 5- point Likert scale. Drivers self-reported their alertness and anticipation as being higher than average, while also noted their periodic use of excessive speed while driving. On the lower end of the scale, our cohort did not feel susceptible to lapses in concentration, a feeling of drowsiness, nor a particular propensity to panic under situations of duress.
+Table 3 – JDQ history data (cohort average) Table 4 – JDQ Driving Style results
+In an effort to concentrate on targeted subsets of specific negative driving behaviors (e.g., errors, lapses, and violations), we also issued the DBQ, which likewise reports on a 5-point Likert scale. Some highlights from our associated observations can be seen in Figure 15. Cohort averages are shown in blue, with corresponding standard deviations (per series) shown in orange. Note that the entire cohort self-rated the highest (i.e., poorest driving performance) in terms of violations, followed by lapses, followed by errors. The cohort drivers with the highest and lowest overall self-ratings for each of the three categories are as follows: errors (Driver #8: 2.6, Driver #11: 1.1); lapses (Driver #1: 3.6, Driver #5: 1.2); violations (Driver #12: 4.1, Driver #7: 1.0). Finally, it may be worth noting the three (out of 28 total) specific queries that had the highest average cohort rating for each of the three categories. They were: errors: “19. Did you ever forget where you left your car in a parking lot/ramp?” (2.83 ±1.26); lapses: “26. Did you ever realize that you have no clear recollection of the road along which you have just been traveling?” (2.92 ±1.56); violations: “28. Do you ever disregard the speed limit on a highway?” (2.92 ± 1.44).
+Our final self-report survey issued pre-experiment was to investigate learning style and information processing preferences by way of the LSI. An overview of results can be observed in Figure 16, which again reports data on a 5- point Likert scale. Cohort averages are shown in blue, with corresponding standard deviations (per series) shown in orange. Note that the entire cohort self-rated the highest in terms of visual learning preferences, followed by auditory, followed (closely) by tactile. The cohort drivers with the highest and lowest overall self-ratings for each of the three categories are as follows: auditory (Driver #7: 4.1, Driver #12: 2.0); visual (Driver #5: 4.5, Driver #8 and #9 (tie): 3.8); tactile (Driver #1 and #5 (tie): 3.9, Driver #12: 1.5). Finally, it may be worth noting the three (out of 24 total) specific queries that had the highest average cohort rating for each of the three categories. They were: auditory: “8. I can tell if sounds match when presented with pairs of sounds.” (3.83 ± 0.93); visual: “2. I prefer to see information written on a chalkboard and supplemented by visual aids and assigned readings.” (4.41 ± 0.79); tactile: “6. I enjoy working with my hands or making things.” (4.41 ± 1.00).
+MODSIM World 2017
+ Age
+ 25.4 (7.9)
+Times required to pass road test
+ 1.2 (0.4)
+Years Driving
+ 8.4 (7.9)
+Miles driven each week
+ 106.2 (108.4)
+Collisions this year
+ 0.4 (0.6)
+Speeding tickets this year
+ 0.6 (1.0)
+  Other tickets this year
+  0.2 (0.4)
+  Category
+ avg (std)
+ Alertness with driving conditions
+  4.25 (0.75)
+ Anticipation while driving
+  4.25 (1.14)
+ Excessive speeding while driving
+  2.66 (1.23)
+ Difficulty concentrating when driving
+  1.83 (0.84)
+ Feeling of drowsiness when driving
+  1.66 (0.78)
+  Tendency to panic while driving
+   1.16 (0.39)
+             2017 Paper No. 5 Page 8 of 12
+
+MODSIM World 2017
+  Figure 15 – DBQ Results Figure 16 – LSI Results
+After the simulation trials were completed, we issued two additional brief surveys. The first was a series of six Likert- style questions, inspired by past research which analyzed the feasibility of using gaming as a platform for student participation in scientific research. Basic results are summarized in Table 5. We can gain valuable insight from the average cohort results reported. Most fundamentally, our data illustrates that our cohort saw value in using game- based simulation as a component of the course curriculum, with an overall average rating of 4.08 on a 5-point Likert scale. Many of the participants self-reported to have past gaming experience, to gain practical life-skills from playing games, and would like to see more applied M&S embedded within course curricula, both for skills reinforcement, and to gain an improved understanding of subject matter.
+Table 5 – Cohort video gaming tendencies
+  Query
+ Most Common Response
+1. How often do you play video games?
+ 1-4 hours per week (7 out of 12)
+2. What can you learn from playing video games?
+ Hand-eye coordination; how to plan and use strategy (tie; 11 out of 12)
+3. Instructors should use game-based instruction...(frequency)
+ MORE often in the classroom (11 out of 12)
+4. Instructors should use game-based instruction as...(purpose/content)
+ Reinforcement of basic skills (7 out of 12)
+5. What was the most interesting aspect of the game-based simulations you experienced in RVD?
+ To gain an improved understanding of subject matter (6 out of 12)
+ 6. Comparing before this experiment and after, how much did you learn about RVD from these exercises?
+    4.08/5.0 (±0.67)
+            Lastly, the cohort was issued a brief survey, the MSAQ, to assess any adverse symptoms relating to adaptation to the simulator environment. As expected, with a younger cohort, reported symptoms were very minor. The cohort average cumulative MSAQ rating was a 10.8 (on a 100 scale), with a maximum rating of 37.5 (Driver #6), and a minimum rating of 0.0 (Driver#1 and #4). The highest rated sickness subscale was Central (16.85/100), followed by Peripheral (14.41), Sopite-related (6.71), and Gastrointestinal (4.62). Of the 16 questions on the MSAQ, the two highest rated symptoms were both in the Central category: “6. I felt lightheaded” (2.16/9.0), and “9. I felt disoriented” (1.75/9.0). The third highest rated symptom was from the Peripheral category: “12. I felt hot/warm” (1.66/9.0).
+Correlation Analysis (Simulator/Self-report)
+In this final subsection, our goal is to identify any trends between measured simulator performance and self-reported life styles/trends/tendencies. As a foundation for our discussion, (and for our formal statistical analysis via SPSS), we approached this sub-analysis with two basic hypotheses:
+1) Hypothesis #1: Self-ratings on the DBQ (considering each of the three rating subcategories: errors, lapses, and violations) are likely to positively correlate to performance demerits on the driving simulator. In other words, a driver who is highly prone to self-reported errors/lapses/violations would be more likely to perform poorly on the driving simulator. Selected outcome measure: attempt to correlate simulator driving deficiencies by way of normalized cone strikes (violations) and spinouts (errors) across all five experimental drives.
+2) Hypothesis #2: Self-ratings on the LSI are likely to positively correlate to simulator performance in accordance with criticality of the learning style to the specific training application. In other words, all three rating
+   2017 Paper No. 5 Page 9 of 12
+
+subcategories of the LSI (i.e., visual, haptic, and audio) are known in the M&S community to serve as essential components of a high-fidelity driving simulation environment. From past experience, we expect the visual element to be most critical to favorable simulator performance, with both the haptic and audio elements serving as supplementary (rather than primary) simulation cues. Selected outcome measure: attempt to correlate “learning” (improvement) on the simulator by way of lap time reduction across all five experimental drives.
+Overall, the results of our correlation analyses were not statistically significant. We attributed this primarily to the small sample size (N=12), a cohort which included two non-student (expert) drivers, as well as one student driver whose overall performance was prohibitively substandard. For sufficient statistical power, a cohort of multiple hundred student participants might be required. We nonetheless offer a brief discussion in an effort to explain what we expected to observe, justify what we actually observed, and critically, establish basic trends for future analysis.
+Regarding hypothesis #1, we expected to find positive correlation between cone strikes (violation) when comparing the quantitative data culled from the simulator, and self-report data collected from the DBQ. What was observed was the exact opposite – a negative correlation. The normalized cone strikes scatter plot is displayed in Figure 17; normalized cone strikes on the y-axis, and average DBQ Likert-score (for all “violation” categories) is seen on the x- axis. At first glance, this result is counterintuitive. The data suggests that drivers who self-reported to have inferior tendencies during actual driving actually performed better (i.e., fewer violations) on the simulator trials. This might be explained by the fact that good natural drivers felt more comfortable in the simulator environment, and therefore felt more compelled to take risks to optimize experimental performance. At the same time, inferior natural drivers, knowing their own real-world limitations, may have innately approached the simulator environment with greater caution, placing more emphasis on mastering basic skills than on attempting unachievable mastery. A similar trend (not shown) was observed with our attempt at correlating simulator errors (spinouts) to self-reported DBQ errors; the relationship was likewise inverse in nature.
+Figure 17 – DBQ Correlation (cone strikes) Figure 18 – LSI Correlation (lap time improvement)
+Regarding hypothesis #2, we expected to find positive correlation between lap-time improvements across all experimental drives, measured in seconds, when comparing the quantitative data culled from the simulator, and self- report data collected from the LSI. Here, “improvement” has been quantified by the difference between each participant’s mean average lap time and their mean optimum lap time, across all five drive conditions. Although the goodness-of-fit was not ideal, results trended more towards our stated hypothesis. Specifically, there was positive correlation between each of the LSI rating subscales (visual: see Figure 18, haptic, and audio) and observed simulator improvement. Furthermore, and notwithstanding the lack of statistical significance and relatively low goodness-of- fit to our correlation analyses, it was satisfying to observe that the slope of the “visual” correlation fit (1.359) was steeper than the corresponding slopes of the audio (1.111) and haptic (1.021) linear curve fits (graphs not shown). This supports our expectation that the visual learning element would be most critical to favorable simulator performance, followed by the other two cues which are more supplementary in nature.
+In the next section, we summarize this paper with our key findings from quantitative simulator data, self-report data acquired from our surveys (pre/post), and an overview of our attempts at correlating the two data sources.
+CONCLUSIONS
+We presented the design and development of an M&S training exercise into an RVD course curriculum. The goal of the learner was to optimize vehicle performance while our objective as educators was to better determine if simulator-
+MODSIM World 2017
+   2017 Paper No. 5 Page 10 of 12
+
+measured experimental performance correlates to relevant self-reported tendencies. Such an analysis could enable improvements within future training frameworks by assessing if M&S-based instruction is better suited towards certain types of drivers or learners. We conclude this paper by summarizing highlights from our data observations:
+ Overall performance in the simulator was quantified by way of: efficiency; total number of laps completed (and
+the associated number of legal laps) (Figure 11), optimum lap time per drive condition (Figure 12), accuracy; as defined by a minimum number of cone strikes and spinouts (Figure 13), and proficiency; a histogram of optimum lap times, relative to critical lap time thresholds, across all five experimental drive conditions (Figure 14). Generally speaking, those cohort drivers with more favorable lap times, regardless of specific drive condition, tended to drive with greater efficiency, and with greater accuracy as compared to the remainder of the cohort.
+ The JDQ provided data regarding the driving history of our cohort, and preliminary observations relevant to driving style. Notably, we observed high self-ratings for alertness, anticipation, and excessive speed, and low self-ratings (i.e., not prone to) lapses due to concentration, panic, or drowsiness. These self-report ratings were not surprising due to the relative youth of our student cohort. Namely, young drivers tend to dramatically overestimate their driving capabilities and have minimized perception of risk, (Ivers et al., 2009), and young drivers are much more prone to critical errors due to inexperience (Dellinger, 2012).
+ The DBQ provided an indication that the cohort, taken as a whole, is most prone to violations (e.g., excess speed), followed by lapses (e.g., no recollection of recent travel path), followed by errors (e.g., forget where you parked).
+ The LSI provided an indication that the cohort, taken as a whole, most favors Visual learning styles, followed by
+auditory styles (e.g., matching pairs of like sounds), followed by tactile styles (e.g., like to work with hands).
+ We hypothesized that self-ratings on the DBQ are likely to positively correlate to performance demerits (e.g., violations, errors) on the driving simulator. Instead, we observed negative correlations, and suspect that this may be due to good natural drivers felt more comfortable in taking risks, while inferior natural drivers realized their
+own limitations and placed more emphasis on mastering basic skills in the simulator.
+ We hypothesized that self-ratings on the LSI are likely to positively correlate to simulator performance in accordance with criticality of the learning style to the specific training application. Although low in significance and goodness-of-fit, this relationship was observed, as was an expected strength of the “visual” correlation, which
+is known to typically be the most valuable cue within a multi-sensory M&S training environment.
+In the next section, we offer two primary suggestions for how the simulation framework and data analysis strategy established in this paper are being expanded for related efforts.
+FUTURE WORK
+We envision multiple areas to expand the M&S training framework outlined in this paper. Primarily, we will apply a similar simulator-based test protocol to a standardized test specification. Currently, the authors are working on implementing a suite of simulator-based off-road experiential learning exercises based on the well-known Moose Test evasive maneuver (ISO 3888-2) (Figure 19), typically performed to determine how well a certain vehicle evades a suddenly appearing obstacle (Schmitt, 2012). Such an examination would be more safely performed within a simulator (Figure 20) than in an actual field test, particularly with novice drivers. Further, the simulator implementation would serve as a practical proving grounds for correlating simulator performance – upon an actual vehicle test maneuver - with relevant self-report metrics. A second simulator implementation is underway (Hulme et al., 2017), also related to experiential performance assessment, and will investigate human behaviors in occupational roles within a Live-Virtual environment. For teenagers, it is particularly important to understand the type and intensity of functional problems within workplace settings. The penultimate goal is to reduce occupational impairment, which remains a critical impetus of our continued M&S Training and Education efforts.
+Figure 19 – Moose Test evasive maneuver Figure 20 – Moose Test (virtual design)
+MODSIM World 2017
+  2017 Paper No. 5 Page 11 of 12
+
+ACKNOWLEDGEMENTS
+The authors would like to thank Moog, Inc. (East Aurora, NY) for their ongoing technical and financial assistance, and support for incorporation of applied simulation in Science, Engineering, Technology, and Mathematics (STEM).
+REFERENCES
+Abdulmohsen H. Al-Elq, (2010). “Simulation-based Medical Teaching and Learning”, J Family Community Med. 2010 Jan-Apr; 17(1): 35–40, doi: 10.4103/1319-1683.68787.
+Bixler, B., (2016). “Learning Style Inventory”, (web link), http://www.personal.psu.edu/bxb11/LSI/LSI.htm, retrieved: August 11, 2016.
+Dale, E., (1969). “Audio-Visual Methods in Teaching”, Holt, Rinehart, & Winston, New York.
+Dellinger, A., (2012). “Reasons Why Teenagers and Older People Are the Riskiest Drivers”, Consumer Reports
+Magazine, October.
+Gálvez-García, G., (2015). “A comparison of techniques to mitigate Simulator Adaptation Syndrome”, Ergonomics.
+2015;58(8):1365-71. doi: 10.1080/00140139.2015.1005168.
+Herz, B., and Merz, W., (1998). “Experiential Learning and the Effectiveness of Economic Simulation Games”,
+Simulation Gaming, June 1998, Vol. 29, No. 2, pp. 238-250, doi: 10.1177/1046878198292007.
+Hulme, K.F., Lewis. K.E., Kasprzak, E.M., Russo, D.-M., Singla, P., and Fuglewicz, D.P., (2010). “Game-based Experiential Learning in Dynamics Education Using Motion Simulation.” The Interservice/Industry Training,
+Simulation and Education Conference (I/ITSEC), Orlando, FL, November, 2010.
+Hulme, K.F. Fabiano, G.A., Sodano, S., (2017) (abstract submitted for consideration). “Laboratory Assessment of
+Behaviors in Occupational Roles (LABOR) within a Live-Virtual environment”, The Interservice/Industry
+Training, Simulation and Education Conference (I/ITSEC), Orlando, FL, December, 2017.
+Ivers, R., Senserrick, T., Boufous, S., Stevenson, M., Chen, H., Woodward, M., and Norton, R., (2009). “Novice Drivers' Risky Driving Behavior, Risk Perception, and Crash Risk: Findings from the DRIVE Study”, Am J
+Public Health. 2009 September; 99(9): 1638–1644, doi: 10.2105/AJPH.2008.150367
+Jerome, L., and Segal, A. (2012). “Chapter 26: Validation of a Driving Questionnaire for Patients with ADHD: the Jerome Driving Questionnaire”, pp. 383-402, taken from: “Driver Behaviour and Training, Volume 5” Ed: Lisa
+Dorn, Ashgate Publishing Ltd.
+Kasprzak, E., Milliken, D., and Lewis, K., (2006). “Tire Asymmetries and Pressure Variations in the Radt/Milliken
+Non-dimensional Tire Model,” SAE Automotive Dynamics, Stability and Controls Conference and Exhibition,
+Novi, MI, Paper 2006-01-1968.
+Magnussen, R., Hansen, S.D., Planke, T., and Sherson, J.F., (2014). “Games as a Platform for Student Participation
+in Authentic Scientific Research”, The Electronic Journal of e-Learning Volume 12 Issue 3 2014, (pp. 259-270) Milliken, W.F., and Milliken, D.L., (1995). “Race Car Vehicle Dynamics”, SAE International, Warrendale, PA, USA. National Science Foundation (NSF), (2006). “Report on Simulation-Based Engineering Science: Revolutionizing
+Engineering Science through Simulation”, Blue Ribbon Panel, NSF Press, May, 2006.
+Parker, D., Reason, J.T., Manstead, A., and Stradling, S.G., (1995). “Driving Errors, Driving Violations and Accident
+Involvement,” Ergonomics, 38, 1036 – 1048.
+Schmitt, B., (2012). “Chrysler Fails Moose Test and Breaks First Commandment”, The Truth about Cars (online
+news blog), http://www.thetruthaboutcars.com/2012/07/chrysler-fails-moose-test-and-breaks-first-
+commandment/, published July 12, 2012.
+Vincenzi, D.A., Wise, J.A., Mouloua, M., and Hancock, P.A., (Eds.) (2008). “Human Factors in Simulation and
+Training”, Ch. 1, Pg. 14, CRC Press, Boca Raton.
+MODSIM World 2017
+   2017 Paper No. 5 Page 12 of 12

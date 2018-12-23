@@ -1,0 +1,257 @@
+On Developing a Taxonomy of Perceptual–Cognitive Skills for Use in Military Training
+Gian Colombo, Sae Schatz, Clarissa Graffeo
+MESH Solutions, LLC (a DSCI Company)
+Orlando, FL
+gcolombo@mesh.dsci.com, sschatz@mesh.dsci.com, cgraffeo@mesh.dsci.com
+ABSTRACT
+Ami Bolton Office of Naval Research Washington, D.C. amy.bolton@navy.mil
+MODSIM World 2014
+    To succeed in their mission, today’s military ground forces must maintain constant awareness, accurately assess possible threats, anticipate enemy actions, and preemptively address dangers by “reading” subtle cues within the complex battlespace. In other words, military must possess keen perceptual skills. Unfortunately, explicit perceptual training is rarely offered to most enlisted personnel. Thus, our broad research goals are to better define a continuum of perceptual skills and develop a range of instructional methodologies and technologies to support their instruction for military personnel. We began this effort by first examining the existing academic literature, seeking a readymade catalog of perceptual skills to use as an organizing framework for our research. However, existing theory lacks sufficient precision for our applied training task. Consequently, because a suitable “roadmap” of perceptual skills could not be found, we sought to develop one. In this paper we discuss the creation process of our perceptual– cognitive skills taxonomy. First, we briefly describe 15 taxonomies related to perception that provide insight into perceptual training but fail to comprehensively define the range of perceptual skills. Second, we discuss three best practices for the development of a comprehensive skill taxonomy, which we uncovered through our development process. Finally, we close the paper by briefly describing our proposed taxonomy of perceptual–cognitive skills.
+ABOUT THE AUTHORS
+Gian Colombo is a Senior Instructional Systems Designer at MESH Solutions, LLC (a DSCI company). He holds a Master’s degree in Applied Learning and Instructional Systems Design from the University of Central Florida. His current work focuses on the development of instructional tools and strategies to aid in perceptual training while furthering the current body of research to better classify the associated skills. Recently, Gian designed and developed a training package for perceptual skill sustainment and enhancement for small-unit leaders under the Perceptual Training Systems and Tools (PercepTS) effort. He also led the research and design efforts toward designing a computer-based training (CBT) system to support USMC Combat Hunter preparation and training.
+Sae Schatz is the Chief Scientist at MESH Solutions, LLC (a DSCI Company), where she researches contemporary issues in military training and education. She recently acted as chief scientist for the NTSA award-winning Border Hunter research effort and was one of the primary performers on the NTSA award-winning Next generation Expeditionary Warfare Intelligent Training (NEW-IT) project. She currently leads the research team for the Office Naval Research-sponsored Perceptual Training Systems and Tools (PercepTS) initiative, which seeks to train advanced perceptual skills to Marines.
+Clarissa Graffeo is a social science researcher at MESH Solutions, LLC (a DSCI Company). She has a background and expertise leading research and development efforts in the areas of training technology (particularly game-based training) and multidisciplinary humanities and social science research. She currently leads the Patterns of Life component for the Office Naval Research-sponsored Perceptual Training Systems and Tools (PercepTS) initiative, which seeks to train advanced perceptual skills to Marines.
+Ami Bolton is a Program Officer at the Office of Naval Research (ONR). She has a Ph.D. in Human Factors from the University of Central Florida.
+2014 Paper No. 1444 Page 1 of 11
+
+On Developing a Taxonomy of Perceptual–Cognitive Skills for Use in Military Training
+Gian Colombo, Sae Schatz, Clarissa Graffeo
+MESH Solutions, LLC (a DSCI Company)
+Orlando, FL
+gcolombo@mesh.dsci.com, sschatz@mesh.dsci.com, cgraffeo@mesh.dsci.com
+INTRODUCTION
+Ami Bolton Office of Naval Research Washington, D.C. amy.bolton@navy.mil
+MODSIM World 2014
+    Military personnel face a range of dynamic and ambiguous combat environments. Today’s ground forces, in particular, operate in irregular and asymmetrical contexts where they are asked to perform a wide range of constantly evolving duties and interact with culturally diverse urban areas. To succeed in these missions, personnel must be able to accurately assess threat levels, anticipate enemy actions, and preemptively address dangers by “reading” subtle cues within the complex battlespace (Schatz, Dolletski-Lazar, Colombo, Taylor, & Vogel-Walcutt, 2011). In other words, military must possess keen perceptual skills. Unfortunately, little perceptual training is currently offered to most enlisted personnel. In the Marine Corps, for instance, only three programs (marksmanship, IED defeat, and Combat Hunter training) explicitly integrate aspects of perceptual instruction, and these programs do so in a nonintegrated, partial manner without the aid of tailored instructional strategies (Schatz et al, 2011). Furthermore, despite the long history of research on perception and perceptual training (e.g., Gibson & Gibson, 1955; Gibson, 1969; Goldstone, 1998) an actionable, broad-spectrum categorization for perceptual skills has not yet been developed. Thus, our broad research goals are to (1) better define a continuum of perceptual skills, (2) identify best practices for engendering those competencies, and (3) develop a range of instructional methodologies and technologies to support perceptual training in military contexts.
+We began by examining the academic literature, seeking an existing catalog of perceptual skills to use as an organizing framework for our research initiative. After an extensive review, we could find only a single taxonomy of perceptual skills: Moore’s (1970) Taxonomy of Perception. While other taxonomies of specific, associated competences are available (e.g., wayfinding or vigilance), Moore’s appears to be the only attempt to comprehensively arrange perceptual skills into a taxonomic format. While useful and insightful, her work suffers from some limitations that restrict its utility. Specifically, it inadequately represents up-to-date information processing models (i.e., research conducted after the maturation of the cognitive revolution); it provides only short behavioral descriptions of the included skills, and these cursory explanations are too ambiguous to facilitate training; finally, the taxonomy lacks sufficient precision for our task.
+Consequently, because a suitable “roadmap” of perceptual skills could not be found, we sought to create a broad- spectrum taxonomy to directly support perceptual skills training. In this paper we discuss the development of our perceptual–cognitive skills taxonomy and share best practices. First, the paper briefly describes 15 taxonomies related to perception: four cognitive, five perceptual, two psychomotor, and four “other” frameworks involving human performance, situations, attention, and human error, respectively. These taxonomies provided explicit inputs to our process, such as construct definitions of key concepts, and they also offered implicit contributions by modeling best practices for taxonomic creation (or in some cases, by demonstrating errors to avoid). Second, we provide three of these best practices for taxonomy development derived from the literature review and our development process. Finally, we close by briefly describing our proposed taxonomy of perceptual–cognitive skills.
+BACKGROUND
+Researchers have developed several definitions for perception, such as “...a process of extracting information from the stimulus” (Moore, 1970, p. 409), “the process of acquiring, interpreting, selecting and organizing sensory information” (Grunwald, 2008, p. 653), or “...the processes that transform sensation to a representation that can be
+2014 Paper No. 1444 Page 2 of 11
+
+processed by cognition” (Raftopoulos, 2009, p. 51). Though these definitions vary, they consistently describe perception as a process that begins with the sensation of environmental stimuli but moves through interpretative and cognitive functions in order to construct meaning. Briefly, perception begins with sensation, which entails initial reception of stimulus information as well as the encoding of this information into sensory memory. Sensation is sometimes considered the “hardware” of the perceptual process (Caserta, 2007) because it involves automatic responses that are outside conscientious control (Baddeley, Hitch, & Allen, 2009) and are therefore unlikely to be improved through training. After a stimulus is sensed it may be interpreted. In order to interpret stimulus information it must first be attended to, then the information must be processed (e.g., detection, recognition, sensemaking, situation awareness) in working memory, which is where perceptual–cognitive skills, or the “software” of perception, are introduced. With mediation from metacognitive and self systems, further skills are represented, specifically ones pertaining to selecting responses, planning, and executing. To more clearly draw out and emphasize the cognitive components of perception, researchers have used terms such as perceptual-cognition (e.g., Ward et al., 2008), perceptual–cognitive skill (e.g., Caserta, 2007), or cognitive-perceptual (e.g., Aleman & Laroi, 2008; Moore, 1970). These names better emphasize the presence of both cognitive and perceptual processes across the continuum of lower-order (e.g., detection, identification of size and shape constancy) to higher-order (e.g., situation awareness, anticipation) skills and abilities.
+A cursory review of the literature reveals numerous identified perceptual–cognitive skills, but usage of these constructs and other key perception-related terminology is inconsistent. The terms exhibit differing levels of granularity, sometimes have overlapping definitions, and are differentially used by various academic domains (e.g., sports psychology versus psychophysics). A consolidated, standardized taxonomy would help address such issues. In our literature review, however, we only located a single attempt by Moore (1970) to identify and organize the full range of perceptual–cognitive skills.
+Despite its scope, careful construction, and solid theoretical/empirical foundations, Moore’s taxonomy suffers from some limitations that prohibit us from leveraging it directly. First, it is based largely upon stimulus-response theory and, as such, does not incorporate current cognitive theories of information processing. Instead, it treats cognition as a “black box” and, consequently, the levels of the taxonomy are not associated with specific or meaningful mental processes. Second, it provides only short, ambiguous behavioral descriptions of included abilities, thus limiting its practical utility. For instance, one of the five abilities listed at the highest level of the taxonomy is “demonstration of artistry and creativity in any medium” (Moore, 1970, p. 386). Regardless of whether or not this capacity is appropriate to include in a perceptual taxonomy, its description does not readily support actionable use; if a curriculum developer, for instance, attempted to use this taxonomy to help train perceptual–cognitive skills, such general descriptions would offer little insight for what to emphasize, how to deliver the training, or how performance might be measured. Third, the levels of the taxonomy lack precision; i.e., intuitively dissimilar elements are categorized in the same taxon. For instance, distinguishing curves from rectangles is classified alongside responding to written directions, even though these two competencies seem fundamentally different. Furthermore, for our training development purposes the instructional strategies and assessment methods that best support each of these competencies would likely be quite different; hence, the structure of the taxonomy limits its utility as a guide for training development. For these reasons, a different taxonomy is needed to support perceptual– cognitive skills training.
+REVIEW OF RELATED TAXONOMIES
+In order to develop this revised perceptual–cognitive skills taxonomy, we examined a number of taxonomies from the related domains of perception, cognition, and psychomotor skills. We included psychomotor taxonomies in our review, as psychomotor functions often incorporate perceptual processes (e.g., hand-eye coordination). Search terms included “perceptual + taxonomy,” “perception + taxonomy,” “cognition + taxonomy,” “cognitive + taxonomy,” and “psychomotor + taxonomy.” Based on this search, we identified 31 taxonomies relevant to perceptual, cognitive, or psychomotor human performance. We further narrowed this pool based on whether or not the taxonomy used objective criteria, whether it was sufficiently representative of a “type” (i.e., its application or subject), and/or whether it provided a clear methodology which would inform our own taxonomy development. This resulted in a final group of 15 relevant taxonomies: four cognitive, five perceptual, two psychomotor, and four “other” frameworks involving human performance, situations, attention, and human error, respectively. In this
+2014 Paper No. 1444 Page 3 of 11
+MODSIM World 2014
+
+ section we discuss the taxonomies within each major domain grouping and describe their contributions to our own taxonomy. A summary of the reviewed taxonomies can be found in Table 1 below.
+Citation
+Krathwohl (2002)
+Moore (1970)
+Parasuraman, Warm, & Dember (1987)
+Wiener, Buchner, & Holscher (2009)
+Kirkpatrick & Douglas (2002)
+Bloom, Englehart, Furst, Hill & Krathwohl (1956)
+Frederiksen (1972)
+Marzano & Kendall (2007)
+Guilford (1959) Uttal (1981)
+Harrow (1972)
+Fleishman & Quiantance (1984)
+Simpson (1966)
+Chun, Golomb & Turk-Browne (2011)
+Rantanen, E., Palmer, B., Wiegmann, D., & Musiorski, K. (2006)
+Title
+Revised Taxonomy of Educational Objectives
+Taxonomy of Perception
+Vigilance: Taxonomy and Utility
+Taxonomy of Human Wayfinding Tasks: A Knowledge Based Approach
+Application-based Evaluation of Haptic Interfaces
+A taxonomy of educational objectives
+Toward a taxonomy of situations
+The new taxonomy of educational objectives
+Three faces of intellect
+A taxonomy of Visual Processes
+A Taxonomy of the Psychomotor Domain
+Taxonomy of Human Performance
+The Classification of Educational Objectives, Psychomotor Domain
+A taxonomy of External and Internal Attention
+Five-dimensional taxonomy to relate human errors and technological interventions in a human factors literature database.
+Application Domain
+2014 Paper No. 1444 Page 4 of 11
+Table 1. Summary of Relevant Taxonomies Domains Covered
+Utility
+  
+
+ 
+2 1 4
+1
+1
+Education  Education  Vigilance 
+Wayfinding  Haptic 
+1 1
+ Behavior 
+2 3   1   2   1   1 2
+5
+Education  Intellectual 
+skills
+Visual  Processes
+Education  Task/Job 
+Analysis
+Education 
+Attention  Human Factors 
+MODSIM World 2014
+Cognitive Psychomotor Perceptual Other
+Dimensions
+Proposed Tested
+interfaces Education
+
+Cognitive Taxonomies
+We identified four cognition-focused taxonomies, which helped inform our own taxonomy by providing: (1) usable skill definitions, and (2) categorization methods that reflected cognitive processing models. Perception and cognition are intrinsically linked, in that foundational knowledge, past experience, and decision-making skills are all critical facets of perceptual performance. As such, these cognitive taxonomies allowed us to better reflect this perceptual– cognitive relationship in our own taxonomy by providing cognitive skills that we could incorporate, and by demonstrating the use of cognitive processing models as an organizational framework.
+Older taxonomies (e.g., Bloom et al., 1956; Guilford, 1959; 1988) were moderately helpful, specifically in providing key principles (e.g., consistent use of terminology) and definitions. Guilford’s Structure of Intellect consists of three major dimensions (Operations, Contents, and Products) that represent facets of a mental task (Sternberg & Grigoenko, 2001). Operations generally represent the process of thinking, where memory, convergent and divergent thinking, cognition, and evaluation occur; Contents commonly reflect the object, or target of our thinking (e.g., semantic, symbolic, etc.); whereas Products represent characteristics of the outcome or result of our thinking (e.g., relations, implications, etc.). Combining these, Guilford provides illustrative examples of various cognitive skills, some of which (e.g., foresight) helped illuminate the benefits of considering a second dimension in our taxonomy. Despite these contributions, Guilford’s model was too complex to serve as a basis for a working taxonomy that can be easily used to plan instruction and align training strategies. Further, the model treats memory as a distinct level in mental operations, thus eliminating it as a component of various cognitive skills associated with other operational levels; this does not accord with contemporary information processing models.
+Bloom’s (1956) taxonomy of educational objectives, though useful in providing a simpler framework with clearer definitions, was similarly limited in reflecting information processing models. The original taxonomy orders simple to complex behaviors that reflect cognitive skills along a single dimension with six levels: knowledge, comprehension, application, analysis, synthesis, and evaluation. Though a useful starting point, these levels, and the skill definitions included therein, were best understood through later revisions of Bloom’s original work (e.g., Krathwohl, 2002; Anderson et al, 2001; and Marzano & Kendall, 2007). These revisions proved supportive to our efforts, specifically by more directly reflecting cognitive processing. As such, these developments better represent current concepts in learning, specifically where information is selected, prior knowledge activated, and new meanings constructed (Pickard, 2007).
+Marzano and Kendall’s (2007) efforts were especially useful in providing a research-supported criterion (i.e., levels of operational control or conscious effort) on which to base broad categorizations in our taxonomy. Their primary dimension derived from three mental processing systems: Cognitive, Metacognitive, and Self. Its criteria for delineation of mental processes are based on “terms of control” (p. 11), where various processes may have control over, or require more conscious effort than, the operation of subordinate processes. This was specifically useful in addressing perceptual components across a range of cognitive skills and, as such, proved indispensable in designing an all-inclusive taxonomy.
+Perceptual Taxonomies
+The five perceptual taxonomies we included are generally task-oriented, one-dimensional, and applicable within a specific aspect of perception (e.g., spatial or attention) or sensory modality (e.g., visual and tactile). The exception is Moore’s (1970) broad taxonomy of lower- and higher-order perceptual abilities. As we wanted to build a comprehensive taxonomy, we used Moore as a primary basis and leveraged the others as auxiliary support for definitions and related concepts.
+Moore (1970) presents a broad taxonomy of perception ranging from low sensory-based abilities to high cognitive- based skills. Her taxonomy is based upon Bloom and Krathwohl’s cognitive and affective hierarchies, and it derives from a factor-analysis based “structure of the intellect” by Guilford (1959; 1988) as well as the figure-ground studies of Witkin et al. (1962). The taxonomy divides perception into five broad levels: sensation, figure perception, symbol perception, perception of meaning, and perceptive performance. The first four levels correspond to Forgus’ (1966) five-tiered hierarchy for information extraction of perceptual thresholds (detection, discrimination, resolution, identification, and manipulation); the first three levels also align with Hebb’s (1949) hierarchy of perceptual
+2014 Paper No. 1444 Page 5 of 11
+MODSIM World 2014
+
+organization (unity, non-sensory figure ground organization, and identity). A single dimension of Guilford and Hoepfner’s (1959) dimensions of intellect, specifically Contents, is responsible for the major headings. Finally, the taxonomy’s fifth level, perceptive performance, is interpreted as the next logical leap following the prior four levels. Category ordering is governed by the amount of stimulus- and knowledge-based information needed for a given perceptual behavior to occur, and the hierarchical ordering is additive in nature. That is to say, the maturity of “higher” processes requires attainment of “lower” processes as a prerequisite. As such this taxonomy, with its wide- ranging representation, provided a useful, comprehensive perspective for defining and ordering perceptual–cognitive skills.
+Though less comprehensive, several other taxonomies in this category provided some useful insights. For instance, Uttal’s (1981) taxonomy of the visual process, though specific to the sensory/stimulus side of perception, provided support in understanding the lower end of our own taxonomy. The taxonomy contains six levels of processing. Levels 0-2 focus mainly on pre-neural processes, visual receptors, and interactive processes that occur within the retina. Levels 3-4 reflect signal differentiation, figure-ground, and the integration of perceptual information to form useful precepts. These levels largely represent immediate and automatic visual processes, as opposed to Level 5, which is more representative of effortful processing. Degrees of effortful processing can also be realized through Moore’s (1970) list of perceptual abilities, though they were not explicitly incorporated.
+Though only moderately useful in our taxonomic design, several other taxonomies helped define various skills expressly through different tasks and sensory modalities. In particular, the taxonomy for vigilance tasks (Parasuraman & Davies, 1977) supports a method for defining skills. Its overall configuration, containing four distinct dimensions (signal discrimination type, event rate, sensory modality, and source complexity) provides a new perspective from which to view perceptual–cognitive skills. Signal discrimination type represents incoming signals as simultaneous or successive and sensory or cognitive. Event rate considers the rate at which a stimulus is presented in a vigilance task (Parasuraman, Warm & Dember, 1987). Sensory modality pertains to the ‘sense’ involved (e.g., visual, auditory, tactile) and Source complexity reflects the number of incoming signals (e.g., single or multiple). These specific dimensions, and other task-oriented taxonomies (e.g., Weiner, Buchner, & Holscher, 2009; Kirkpatrick & Douglas, 2002), were useful when considering diverse factors that could structure and characterize perceptual–cognitive skills.
+Psychomotor and “Other” Taxonomies
+The psychomotor and “other” taxonomies offered a simple, yet indirect contribution to our efforts—supplying auxiliary support to our overall ordering of levels. Specifically, a composite of smaller models (e.g., psychomotor, task, information processing, etc.) arranged in a multi-dimensional mega-taxonomy by Rantanen, Palmer, Weigmann, & Musirski (2006) offered a usable base to explore both information processing models and frameworks illustrating environmental factors. Rantenen’s taxonomy represents a three-dimensional framework derived from models of human error and information processing, with axes representing the human operation, task, and environment, along with two additional floating dimensions accounting for human error and technology. Based on this taxonomy and others (e.g., Fleishman, Quintance, & Broedling 1984; Chun, Golomb & Turk-Browne, 2011; Harrow, 1972) we recognized that sensory and internally-generated information, conscious control, and information processing were significant in understanding human performance and, by extension, perceptual–cognitive skills. Further exploration into various information processing models (e.g., Atckinson & Shiffrin, 1968; Wickens, 1988; 1992) used in some of these taxonomies was helpful in understanding these interactions.
+BEST PRACTICES FOR TAXONOMY DEVELOPMENT
+Based on the content and development methodologies uncovered by our literature review, as well as our process in building our resulting perceptual–cognitive skills taxonomy, we identified three best practice recommendations for taxonomy development. First, we found that a multidimensional configuration could enhance observation of interactions between items and enable greater precision in defining skills. Second, we determined that the criteria for skill delineation should reflect properties of human information processing. Finally, we realized that isolating sensory modalities presented a limiting factor on the potential skills for inclusion, and thus a sensory-agnostic approach to identifying and defining skills was preferred.
+2014 Paper No. 1444 Page 6 of 11
+MODSIM World 2014
+
+Best Practice 1: Consider Multidimensional Configurations
+Many developers use two- or three-dimensional configurations for their taxonomies (e.g., Guilford, 1959; Parasuraman, Warm, & Dember 1987; Wiener, Buchner, & Holscher 2009). For example, Guilford’s Structure of Intellect contains three dimensions, each consisting of five to six levels, yielding 150 taxons (Guilford, 1956; 1988). By definition, each taxon involves at least one unique factor distinguishing it from the other 149 cells, and these unique qualities can be identified through empirical investigation, careful measurement, and factor analysis (Horn & Knapp, 1973). As such, the additional dimensions within the Structure of Intellect add greater predictive power and, as demonstrated through research on Guilford’s framework, a much more test-able theory (e.g., Bachelor & Michael, 1991).
+Similarly, David Krathwohl (2002), who revised Bloom’s Taxonomy of Educational Objectives, demonstrates the benefits of his two-dimensional structure as compared to Bloom’s original single dimension. With the unidimensional framework, the “noun and verb aspects” (i.e., the instructional content and related learning activities) of each taxon were mixed together, leading to some ambiguity in applied use. By adding a second dimension to the framework, Krathwohl more precisely defined the contents of each factor, and the resulting tabular depiction now provides a “clear, concise, visual representation of a particular course or unit” (p. 218), enabling teachers and other consumers of the taxonomy to better plan and deliver instruction.
+However, it should be noted that multiple dimensions should only be considered when they add functionality. For instance, the taxonomy for linking human error and technological interventions includes five dimensions: three of them are axes on the matrix (human, task, and environment) while the other two (human error and technology) lie within the matrix, acting as a link between and amongst the other three dimensions (Rantenen et al., 2006). Instead of providing additional insight into the construct they generate greater, and potentially unmanageable, complexity.
+As these examples illustrate, appropriate use of multiple dimensions can enhance a taxonomy by refining each taxon’s delineation and improving the robustness of the overall framework. When accurately defined, multiple dimensions may also increase the testability of a taxonomy, its potential utility (as illustrated by Krathwohl’s work), and its overall predictive power. Commonly, two or three dimensions are preferred; any more than these and the utility of the taxonomy may be diminished.
+Best Practice 2: Criteria Should Reflect Human Information Processing
+To better understand the criteria used for separating perceptual–cognitive skills, it is useful to consider it within the framework of human information processing models (e.g., Atkinson & Shiffron, 1968, Wickens & Flach, 1988; 1992). These models provide a foundation on which to base criteria for a taxonomy of perceptual–cognitive skills, specifically by outlining relationships between the memory (e.g., sensory, working, and long-term) and mental (e.g., metacognitive and self) systems that engender specific perceptual–cognitive skills. These relationships may also help shape the categorical levels of a proposed taxonomy by highlighting natural divisions within perception and cognition, such as the divisions between, long-term memory and short-term memory, or conscious and unconscious information processing. As such, a firm understanding of these divisions will support a discrete representation of mental processes within cognitive and perceptual skills taxonomies by adding clarity and rationale to skill categorization.
+MODSIM World 2014
+ When creating a taxonomy, developers should consider whether multiple dimensions provide additional explanatory power. Often, multiple dimensions better reveal interactions among facets of a phenomenon than a single dimension could. Multidimensional configuration may also better support a taxonomy’s specificity, facilitating more precise delineation among taxons and providing additional, discrete inclusion criteria.
+ When creating a taxonomy related to perceptual–cognitive performance, developers should use information processing models as a guide for organization and structure.
+2014 Paper No. 1444 Page 7 of 11
+
+Several cognitive developers represent mental processes within their taxonomies (e.g., Bloom et al., 1956; Anderson et al., 2001; Krathwohl, 2002), though these typically lack an adequate schemes for ordering of processes. For example, Bloom’s original taxonomy ordered cognitive processes by degree of difficulty, where categorization is based on progression from simple to complex. This ordering criterion has led to issues for educators, specifically in applying the structure of this taxonomy to generate test questions. For instance, educators trained on Bloom’s taxonomy were unable to recognize higher-level questions as more difficult than lower-level questions (Marzano and Kendall, 2007). As such, this taxonomy oversimplifies the thought process and its role in learning (see Furst, 1994) and represents levels that are not adequately ordered from an information processing perspective (Marzano, 2001).
+Marzano and Kendall (2007) remedy this to a degree by ordering mental systems within a larger information processing framework. Their developmental approach moved away from the hierarchical ordering of mental processes in terms of difficulty and instead asserted that mental processes “can be ordered in terms of control” (p. 11). Certain processes may have control over the operation of subordinate processes, and therefore require more conscious effort. Uttal’s (1981) taxonomy reflects this criterion by illustrating a divide between automatic, non- deliberate processes and those that are more effortful. This is especially evident in higher-order perceptual–cognitive skills where internal processes, such as resource allocation, retrieving and storing information, or planning, aid in decision-making and problem solving.
+Best Practice 3: Consider a Sensory Agnostic Approach
+Perceptual taxonomies trend toward modality specificity (e.g., Uttal, 1981, Kirkpatrick & Douglas, 2002). While this focus enables greater understanding of an intended modality, for perceptual–cognitive skills it is necessary to first address broad categorization and understanding before progressing to such specificity, as numerous skills and processes may operate across senses. For instance, while “vigilance” was initially tested through the visual sense regarding radar operators’ vigilance decrement (see Mackworth, 1948), it is also applicable to other senses, as the vigilance task taxonomy exemplifies by including sensory modality as a dimension (Parasuraman & Davies, 1977). Another example is Moore (1970), where the phrase “...in all sensory modalities” (p. 384) is used in the first three levels, which focus on lower lever perceptual skills, allowing a more inclusive description.
+We decided on a sensory agnostic approach to minimize the use of excluding descriptions, such as specific sensory functions, thus enabling a broader description of skills and a wider range of applicability across the senses. This was important to ensure focus on the given underlining perceptual–cognitive skill, instead of the specific application of that skill in a particular sensory modality; in other words, to focus on “discrimination” rather than “visual discrimination.” We maintained this approach throughout all levels of the taxonomy to reach a broad foundational emphasis on both perceptual and cognitive skills.
+THE PERCEPTUAL–COGNITIVE TAXONOMY
+Following these best practices and building on our previous work, we developed the following perceptual–cognitive skills taxonomy (see Table 2 below). The taxonomy is a two-dimensional model in which levels of operational control (i.e., amount of conscious thought or control) interconnect with temporal properties (i.e., features of time) to generate broad categories of skill characteristics. Though these have been omitted here for brevity, under each category, or taxon, lies a representative compilation of specific skills. These sub-skills focus and shape perceptual training and instruction. We present the taxonomy briefly here in order to demonstrate the results of the process outlined in this paper; future publications will provide more detail on the content of the taxonomy, as well as how we translated the taxonomy into language that could be easily taught to and operationalized by the military audience.
+MODSIM World 2014
+ When creating a perceptual–cognitive skills taxonomy, a sensory agnostic approach enables broader inclusion and definition of skills by allowing identification of a skill across modalities rather than being specific to a sensory function (i.e., “visual” or “auditory”).
+2014 Paper No. 1444 Page 8 of 11
+
+CONCLUSION
+Table 2: The Perceptual–Cognitive Skills Taxonomy
+Several definitions of perception have been offered by researchers, and just as the process of perception relies upon sensation, so too does it involve interpretation and cognition. As such, the term perceptual–cognitive was adopted to emphasize the presence of both cognitive and perceptual processes across the range of lower- to higher-order skills. While numerous perceptual–cognitive skills can be identified in the literature, they sometimes have differing levels of granularity, overlapping definitions, and are differentially used by various academic domains; hence a need for a broad, taxonomy for these skills was needed. Since one could not be located, we developed a unified taxonomy for perceptual–cognitive skills. During our literature review, we identified three “lessons learned.” First, multidimensional configurations should be considered for enhancing observable interactions and enabling greater precision. Second, properties of Human Information Processing should be reflected in the selected criteria used for
+2014 Paper No. 1444 Page 9 of 11
+MODSIM World 2014
+     TIME
+          Discrete
+Durative
+Projective
+               Regulatory (Metacognitive/ Self)
+To Engage
+Selecting and committing to a given act or response.
+Regulation
+Monitoring and regulation of mental processes and motivation.
+Self-Projective
+Regulating and extending a sense of self outward, towards an estimate of the self in the future.
+               Utilization (High Perceptual- Cognition)
+To Decide
+The resolution or conclusion of matters –of which may contain elements of ambiguity or uncertainty – in a problem space where multiple selections may be present.
+Assessment
+Evaluating and appraising situations, based on-going analysis of features there within (e.g., people, environments, sequence of events, etc.).
+Predictive
+Forecasting the nature of an occurrence, within an forthcoming situation, based on present knowledge that renders the predicted outcome most representative of the evidence provided.
+               Deliberate (Mid Perceptual- Cognition)
+To Analyze
+Methodically examining the structure of information for reasons to gain clarity and/or interpret.
+Directed Awareness
+Having consciousness and cognizance of a situation and its factors.
+Anticipatory
+Realizations in advance of the present situation.
+               Non-deliberate (Low Perceptual- Cognition)
+To Recognize
+Cognizing information previously experienced or having derived from previous experiences and knowledge.
+Perspective
+Understanding environmental surroundings, based on elements occupying that space, and events.
+Contextual Cuing
+Acquiring sensitivity to meaningful prompts and signals based on past experience and environmental surroundings.
+               Reflexive (Sensory)
+To Sense
+Receiving information through sensory organs
+Accommodation
+Adjustment of elements of sensory organs and/or the bodily adjustments directly related to sensory organs.
+N/A
+   ACTION
+
+delineation. Third, a sensory agnostic approach should be employed to avoid the use of limiting inclusions, primarily sensory modalities.
+Since its development, we have leveraged the perceptual–cognitive skills taxonomy in developing instructor guides for training and are also incorporating it into the development of perceptual training simulations. We created a Small-unit Leader Perceptual Training Kit (SUL Kit), consisting of three related manuals: a perception reference manual, which incorporates the taxonomy along with more detailed information on each taxon, a manual containing perceptual training sustainment exercises, and a pocket guide to assist unit leaders in sustaining and building perceptual skills in conjunction with typical drills (e.g., PT, MOUT facility exercises, or Convoy Operations) and in the field. We are also using the taxonomy as a part of our development of simulation-based perceptual training in our Virtual Observation Platform (see Schatz, Wray, Folsom-Kovarik & Nicholson, 2012).
+ACKNOWLEDGEMENTS
+This work is supported in part by the Office of Naval Research. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the Department of Defense or Office of Naval Research. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation hereon. This work was supported, in part, by the Office of Naval Research project N00014-11-C-0193, Perceptual Training Systems and Tools (PercepTS).
+REFERENCES
+Aleman, A., & Larøi, F. (2008). Cognitive-perceptual processes: Bottom-up and top-down. In A. Aleman, F. Larøi (Eds.), Hallucinations: The science of idiosyncratic perception (pp. 91-108). American Psychological Association. doi:10.1037/11751-004
+Anderson, L.W. (Ed.), Krathwohl, D.R. (Ed.), Airasian, P.W., Cruikshank, K.A., Mayer, R.E., Pintrich, P.R., Raths, J., & Wittrock, M.C. (2001). A taxonomy for learning, teaching, and assessing: A revision of Bloom’s Taxonomy of Educational Objectives (Complete edition). New York: Longman.
+Atkinson, R.C., & Shiffrin, R.M. (1968). Human memory: A proposed system and its control process. In K.W. Spence & J.T. Spence (Eds.). The Psychology of Learning & Motivation: Advances in Research & Theory (vol.2, pp. 89-195). New York: Academic Press.
+Bachelor P. & Michael, W.B. (1991). Higher‐order factors of creativity within Guilford's structure‐of‐intellect model: A re‐analysis of a fifty‐three variable data base. Creativity Research Journal, 4(2), 157-175.
+Baddeley, A.D., Hitch, G.J., & Allen, R.J. (2009). Working memory and binding in sentence recall. Journal of Memory and Language, 61(3), 438-456.
+Bloom, B. S., Englehart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956). Taxonomy of educational objectives. The Cognitive Domain Vol. 5. New York: Longman, Green and Co.
+Caserta, R. J. (2007). Multidimension perceptual–cognitive skills training reduces spatio-temporal errors and improves dynamic performance among seniors. Unpublished Dissertation: University of Florida, Retrieved from ProQuest, AAT 3271114.
+Chun, M.M., Golomb, J.D., & Turk-Browne, N.B. (2011). A Taxonomy of External and Internal Attention. Annual Review of Psychology, 62:73–101.
+Fleishman, E. A., Quaintance, M. K., & Broedling, L. A. (1984). Taxonomies of human performance: The description of human tasks. San Diego, CA US: Academic Press. Retrieved from EBSCOhost.
+Forgus, R.H. (1966). Perception: The Basis Problem in Cognitive Development. McGraw-Hill, New York, NY. Furst, E. (1994). Bloom’s Taxonomy: Philosophical and Educational Issues. In Anderson, L. & Sisniak, L. (Eds.) Bloom’s Taxonomy: A Forty Year Retrospective (pp. 28-40). Chicago: The National Society for the Study of
+Education.
+Gibson, E. J. (1969). Principles of perceptual learning and development. New York: Prentice Hall.
+Gibson, J. J., & Gibson, E. J. (1955) Perceptual learning: differentiation or enrichment? Psychological Review 62,
+32- 41.
+Goldstone, R. L. (1998). Perceptual learning. Annual Review of Psychology, 49, 585-612.
+Grunwald, M. (Cognition and Perception Ed.), (2008). Human Haptic Perception. Basel: Birkhauser Verlag.
+2014 Paper No. 1444 Page 10 of 11
+MODSIM World 2014
+
+Guilford, J. P. (1988). Some changes in the structure-of-intellect model. Educational and Psychological Measurement, 48(1), 1-4.
+Guilford, J. P. (1959). Three faces of intellect. American Psychologist 14(8), 469-479.
+Harrow, A.J. (1972). A Taxonomy of the Psycho-motor Domain. New York: David McKay.
+Hebb, D.O. (1949). The Organization of Behavior. Wiley Publishing, New York, NY.
+Horn, J.L., & Knapp, J.R. (1973). Thirty wrongs do not make a right: Reply to Guilford. Psychological Bulletin,
+81(8), 502-504.
+Hoyle, R.H., & Sherrill, M.R. (2006). Future Orientation in the Self-System: Possible Selves,
+Kirkpatrick, A.E., & Douglas, S.A. (2002). Application-based evaluation of haptic interfaces. Haptic Interfaces for
+Virtual Environment and Tele-operator Systems, 32 – 39.
+Krathwohl, D. (2002). A revision of Bloom’s taxonomy: An overview. Theory Into Practice, 41(4), 212-218. Krathwohl, D. R. (1964). The taxonomy of educational objectives: Its use in curriculum building. In C.M. Lindvall
+(Ed.) Defining educational objectives. University of Pittsburgh Press: Pittsburgh, PA.
+Mackworth, N.H. (1948). The breakdown of vigilance during prolonged visual search. Quarterly Journal of
+Experimental Psychology, 1, 5-61.
+Marzano, R. J. & Kendall, J. S. (2007). The new taxonomy of educational objectives (2nd ed.) Thousand Oaks, CA:
+Corwin Press.
+Marzano, R. J. (2001). Designing a new taxonomy of educational objectives. Thousand Oaks, CA: Corwin Press. Moore, M. R. (1970). The Perceptual-Motor Domain and a Proposed Taxonomy of Perception. AV Communication
+Review 18:4, 379-413.
+Parasuraman, R., Warm, J. S., & Dember, W. N. (1987). Vigilance: Taxonomy and utility. In L. S. Mark, J. S.
+Warm, & R. L. Huston (Eds.), Ergonomics and human factors: Recent research (pp. 11-32). New York:
+Springer-Verlag.
+Parasuraman, R., & Davies, D. R., (1977). A taxonomic analysis of vigilance performance. In R.R. Mackie (Ed.),
+Vigilance: Theory, operational performance, and physiological correlates (pp.559-574). New York: Plenum
+Press.
+Pickard, M., (2007) The New Bloom’s Taxonomy: An Overview for Family and Consumer Sciences. Journal of
+Family and Consumer Sciences Education, 25(1).
+Raftopoulos, A. (2009) Cognition and Perception. Cambridge: MIT Press.
+Rantanen, E., Palmer, B., Wiegmann, D., & Musiorski, K. (2006). Five-dimensional taxonomy to
+Schatz, S., Wray, R., Folsom-Kovarik, J. T., & Nicholson, D. (2012). Adaptive perceptual training in a virtual
+environment. In Proceedings of Human Factors and Ergonomics Society, Boston, MA.
+Schatz, S., Dolletski-Lazar, R., Colombo, G., Taylor, A., & Vogel-Walcutt, J. (2011). Advanced perceptual skills: improving their training, evaluation and operational effectiveness. In 10th international conference on
+naturalistic decision making, Orlando, FL.
+Sternberg, R.J., & Grigorenko, E.L. (2001). Unified psychology. American Psychologist, 56(12), 1069-1079.
+Uttal, W. R. (1981). A taxonomy of visual processes. Erlbaum Associates, Hillsdale, NJ.
+Ward, P., Farrow, D., Harris, K. R., Williams, A. M., Eccles, D. W., Ericsson, K. A., (2008). Training perceptual–
+cognitive skills: Can sport psychology research inform military decision training?. Military Psychology 20(1),
+S71-S102.
+Wickens, C. D. (1992). Engineering Psychology and Human Performance, 2nd ed., Harper Collins, New York. Wickens, C. D., & Flach, J. M. (1988). Information processing. In E. L. Wiener, D. C. Nagel, E. L. Wiener, D. C.
+Nagel (Eds.), Human factors in aviation (pp. 111-155). San Diego, CA
+Wiener, J.M. Buchner, S. J. & Holscher, C. (2009). Towards a taxonomy of wayfinding tasks: a knowledge-based
+approach. Spatial Cognition and Computation 9:152–165.
+Witkin, H. A., Dyk, R. B., Fattuson, H. F., Goodenough, D. R., & Karp, S. A. (1962). Psychological differentiation:
+Studies of development. Oxford, UK: Wiley.
+2014 Paper No. 1444 Page 11 of 11
+MODSIM World 2014

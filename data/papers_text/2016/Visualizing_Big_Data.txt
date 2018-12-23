@@ -1,0 +1,178 @@
+Dr. Candace Eshelman-Haynes HQ SACT
+Norfolk, VA candace.eshelman-haynes@act.nato.int
+Jay Gendron
+Booz Allen Hamilton Norfolk, VA gerald.gendron@gmail.com
+ABSTRACT
+Sanci Hall & Brian Hall VolleySim, LLC Newport News, VA {sanci, brian}@volleysim.com
+Visualizing Big Data: Telling a Better Story
+When you tell a story, people lean in; when you start talking about data, their eyes glaze over. We have seen in recent years a growing trend in the power of data to transform our businesses and our lives, but only if we understand and benefit from the insights that data provides. Stories allow us to put high-dimensional and high- velocity data into context by drawing on common ideas or experiences to highlight the impact on human experience. This paper provides insights on how visualization and storytelling relate to big data, the elements of successful data presentation, and expectations in the coming years. Often, the data available to us from enterprise systems is incomprehensible in raw form either because of its sheer volume or the rate at which it changes. Spreadsheets no longer serve the business community with a window into the heart of the data. Yes, there are data summaries that continue to provide value in spreadsheet applications, but tens or hundreds of thousands of rows of data in a spreadsheet are overwhelming to most decision makers. Meanwhile, the business intelligence platforms of the past must keep up with the dynamic nature of data streaming from Twitter, Facebook, and crowdsourcing. The study of data science encourages storytelling, but where are the artists? A visual representation of data that draws from the storytelling tradition can do for graphs what a good story does for a lecture.
+Keywords: storytelling, big data, visualization, data science, data presentation, stories, data presentation, deep learning, decision making, hero's journey, neural network
+ABOUT THE AUTHORS
+Candace L. Eshelman-Haynes Candace Eshelman-Haynes completed her undergraduate work at Hardin-Simmons University in Abilene, Texas with majors in Social Work and Psychology. She holds a Master of Arts degree from Hardin-Simmons in Family Systems. After several years of practice she returned to school at Wright State University in Dayton, Ohio and earned a Master of Science and Doctorate of Philosophy in Human Factors and Industrial/Organizational Psychology. She has been working for NATO Allied Command Transformation since 2006 supporting capability development in the Technology and Human Factors Branch.
+Jay Gendron is a data scientist with Booz Allen Hamilton. He is a business leader, artist, and author who writes on perspectives of how good questions and compelling visualization make analytics accessible to decision makers. He is an award-winning speaker who has presented internationally. Jay volunteers with Code for America – contributing data science skills to improve civic and municipal access to data. He is the founder of the Meetup "try.Py – Learn Python". Jay is authoring a book entitled Introduction to R for Business Intelligence due for release by Packt Publishing this summer. For additional information, please visit https://www.linkedin.com/in/jaygendron.
+Sanci Hall is a volleyball coach and the owner of VolleySim, LLC. She obtained her Bachelor’s degree in Psychology with a minor in Military Science from Missouri State University before she spent 5 years in the U. S. serving as an Army officer. She is a lifelong volleyball player committed to providing her athletes more ways to practice than just what can be done on the court.
+Brian Hall is a former Artilleryman that spent a year in downtown Baghdad dodging indirect fire and IEDs while collecting intelligence and escorting industry officials to various Ministries. After transitioning from the US Army, his experience in Iraq and computer science degree was leveraged to develop military simulations focused on providing additional virtual training for military personnel prior to live exercises.
+2016 Paper No. 44 Page 1 of 11
+MODSIM World 2016
+
+Dr. Candace Eshelman-Haynes HQ SACT
+Norfolk, VA candace.eshelman-haynes@act.nato.int
+Jay Gendron
+Booz Allen Hamilton Norfolk, VA gerald.gendron@gmail.com
+Sanci Hall & Brian Hall VolleySim, LLC Newport News, VA {sanci, brian}@volleysim.com
+Visualizing Big Data: Telling a Better Story
+There are only two or three human stories, and they go on repeating themselves as fiercely as if they had never happened before.
+- Willa Cather, Author
+THIS IS A STORY ABOUT...
+When you tell a story, people lean in; when you start talking about data, their eyes glaze over. We have seen in recent years a growing trend in the power of data and mobile apps to transform our businesses and our lives, but only if we understand and benefit from the insights they provide. Stories allow us to put high dimensional and high velocity data – whether it is numeric or visual – into a workable context by drawing on common ideas or experiences to highlight their impact.
+MEET THE CHARACTERS
+This paper is in a manner of speaking, a story about storytelling. There are four primary “characters”:
+MODSIM World 2016
+ 2016 Paper No. 44 Page 2 of 11
+
+Big Data
+Big data is a relatively young term that has received a lot of attention. John Mashey is attributed with the term in a 1998 presentation he gave as Chief Scientist of SGI (Press, 2013). It has had an impact on the business community because it is a relatable character – a nice feature for storytelling. Big data is characterized by the “3V’s”:
+● Volume – this characteristic is virtually self-explanatory. The amount of data in the world is growing at a high rate. According to New York University’s GovLab (2013), internet data increased by 1,696 percent in the period from 2005 to 2012. Today, an Illumina (2015) next generation gene sequencer can generate one terabyte – 1,000 gigabytes – every day
+● Velocity – not only is there a lot of data being generated but it comes quickly. According to that GovLab (2013) study, 90 percent of all data was created between 2012 and 2013. Velocity requires analysis of a continual stream of data in near-real time. Examples include social media during elections as well as information coming off physical sensors throughout the world
+● Variety – our information-centric world has data readily available in many different forms which not all reside in relational databases having prescribed schemas. Analysts these days can use a feed from Twitter, combine it with data from online shopping sites, and fuse that with open source weather trend data from the National Oceanic and Atmospheric Administration to determine the impact on sales due to perceptions of the weather
+All told, big data will continue to pose a challenge for analysts to not only analyze and understand the data but also summarize the data in a way that can communicate a story. Visualization is a real hero in that instance.
+Neuroscience
+Since the ancient Egyptians correlated a specific type of head injury to loss of speech, people have been studying neuroscience (Finger, 2000). For a long time in neuroscience, brain studies could only be conducted by physically accessing the brain by either removing the brain from a subject to look for evidence of disease or changes, or physically interacting with the brain of a live, conscious subject and asking them to report on the effects. In the last several decades, neuroimaging techniques have advanced significantly and we no longer have to physically poke a person’s brain to see what is happening in there. Thankfully, we now have modern tools such as functional magnetic resonance imaging (fMRI) that allow us to readily ask questions like “why is storytelling so powerful?”
+Cognitive resources available to people for processing information are limited (Sweller, 1988). The more work they put into understanding a presentation, the less energy they have for sustained attention. The rule of seven, plus or minus two, also known as Miller’s Law, is an example of the limited cognitive resources affecting how people work (Miller, 1956). It is because of such cognitive limitations that people tend to glaze over when listening to a typical PowerPoint presentation full of facts and figures. Brain areas that specialize in processing numbers (Shum et al., 2013) or speech do engage during a typical statistical presentation. When presentations involve stories, or when pictures convey stories, something very different happens. Studies conducted with fMRI have shown that our brains react to stories and pictures in much the same way that they react to real experiences (Speer, Reynolds, Swallow, & Zacks, 2009). These studies show that our brains are wired for stories.
+Deep Learning
+Dr. Kirk Borne is an influential figure in the fields of astrophysics and data science. During a 2015 interview, Dr. Borne commented,
+With the new work in deep learning, you see a neural network concept, but it's a very deep multilayer network, rather than the ones you dealt with in the early days, which were basically just one hidden layer plus input and output layers. The deep learning networks have many layers combined as what they call convolutional networks. All the different parameters are combined in different ways at each layer to produce much more intelligent outputs than we ever imagined before. It's more akin to the human brain. Your brain recognizes general things and then works toward specifics. Humans build up interpretations in layers. A deep network is actually doing that kind of thing (Vaughan, 2015, para. 8).
+2016 Paper No. 44 Page 3 of 11
+MODSIM World 2016
+
+Artificial Neural Networks entered the mainstream in 1989 when Yann LeCun et al. (1989) of AT&T Bell Laboratories solved a complex problem of optically reading handwritten digits in ZIP codes. Despite the success, the lack of computational power made this approach difficult to scale. Advances and interest in neuroscience have aided in the resurgence of neural networks. Deep learning and neural networks can predict highly complex phenomenon without requiring understanding of the underlying mechanisms. They use the small algorithms within each “neuron” to interplay with one another to discern an output from input signals. This is very powerful, but the hidden nature of layers makes interpretation of the results difficult. Storytelling helps communicate results.
+Storyteller
+This is your role. It is an art and skill to learn. Here is a look at storytelling.
+STORYTELLING THROUGH WORDS AND VISUALS
+History of Stories
+Paradoxically, the word “story” appears in “history”. The history of storytelling is beyond compare – the very act of understanding history is itself a form of storytelling. Stories have been used to convey human experience from person to person. Some of the earliest stories were probably drawings in the sand and eventually paintings on cave walls. The earliest recorded histories come from around 2000 BC. Evolution has wired our brains to react favorably to stories.
+Joseph Campbell (1972) was an American mythologist who introduced the “Hero’s Journey” as a metastory that expresses the common experience of being human. It is a highly regarded formula for storytelling. He generalizes the flow as
+A hero ventures forth from the world of common day into a region of supernatural wonder: fabulous forces are there encountered and a decisive victory is won: the hero comes back from this mysterious adventure with the power to bestow boons on his fellow man (p. 23).
+Campbell theorized that there is basically one story, one myth structure that characterizes them all and follows the journey of an archetypal hero.
+Elements of a Story
+There has been resurgence in storytelling. Communications consultants are approaching many industry segments with the recipes for successful storytelling. This has revived an interest in storytelling techniques that go back to the ancient Greeks. Blue Hill Research has adapted Campbell’s approach to analytics as shown in Figure 1.
+2016 Paper No. 44 Page 4 of 11
+MODSIM World 2016
+
+ Figure 1. The Hero’s Journey. Eight steps of a story adapted to big data (Park & Haight, 2014).
+There are many variations to this approach. Sometimes communications needs do not fit an epic tale. In the simplest case, a story has a beginning, middle, and an end, but there is still a formula. Andrew Linderman is a Storyteller from New York City. He became a professional storyteller and storytelling coach. As Linderman (2015) notes, storytelling can help in situations ranging from making a startup pitch to rising above the noise in social media channels. His formula varies according to the problem, but each contains key elements of a story:
+● Begin with a problem: it may be large or small, but it should be very specific and understandable
+● Use characters: this does not necessarily mean you must create characters. In fact you may be the
+character. The key to this element is finding a voice to tell the story – this becomes the character
+● Build tension: much like the Hero’s Journey, it is important to engage the audience through heightened
+tension. Linderman notes this may form over the story or over many new sub-stories released over time
+● Provide resolution: this step is familiar to us. Stories on television, film, or stage resolve themselves
+before the event is over. Stories for business should follow the same approach
+● Hint a future problem: if your story is designed to begin a relationship, then suggest something at the end
+of the story that engages the audience to consider what is possible in the future
+Notice the commonalities between the classic Hero’s Journey and Linderman’s approach to storytelling. The goal is to have an objective in mind and communicate a clear message.
+Visualization
+If a picture is worth a 1,000 words, a moving picture is worth a 1,000 static ones, and a truly interactive, user-controlled dynamic picture is worth 1,000 ones that you watch passively.
+- Andries van Dam (1999)
+Visualization is a means to extend storytelling and communicate patterns and trends in the visual realm. The role of visualization in data science – and more so in big data science – is inestimable. John Tukey wrote Exploratory Data Analysis in 1977. Behrens (1997) commented on Tukey’s work saying he “often likened EDA to detective work. The role of the data analyst is to listen to the data in as many ways as possible until a plausible ‘story’ of the data is apparent” (p. 132). Tukey's influence on the data science community remains to this day – still helping analysts listen to the data. Analytics software helps see the data, as opposed to tables of numbers.
+Ultimately, the goal of visualization is to communicate answers to a question. The authors developed a generalized data science pipeline paralleling the elements of a story with a beginning, middle, and an end.
+2016 Paper No. 44 Page 5 of 11
+MODSIM World 2016
+
+Cholera breaks out in London in 1854. The trouble is no one knows what is causing it and over 500 people die in less than two weeks in just one neighborhood. Epidemiologist John Snow plots the various cases (Figure 2) and notices a trend. The outbreaks emanate from a common public water source – problem solved.
+Perhaps among the most intriguing and artistically robust examples is this visualization of Napoleon's march on Moscow from 1812 - 1813 (Figure 3). Tufte (1983) recognizes six variables communicated in two- dimensional space. He says, “It may well be the best statistical graphic ever drawn” (p. 40). The visualization provides many variables that interplay with one another into a beautiful form. It shows the problem the Emperor got into and how it continued to beleaguer him. What if Napoleon had this chart presented to him in staff meeting? Would he have had an “AHA!” moment and chosen to retreat earlier?
+Figure 2. London Cholera Map by John Snow (Cohen, 2014).
+MODSIM World 2016
+ Let us turn to story itself to describe the power of visualization. Consider a story of a crime scene detective. He seeks the answer to the question, “Who ‘dun it?” While working through the case, the detective must go back to his “thinking spot” to consult his model – various notes and pictures on a wall connected with string. This is a visualization of the data that emerges as evidence is found and ideas are postulated. Our detective is looking for the thread that reveals the underlying story. He is waiting for the “AHA! I see” moment. As Cairo (2013) notes, our understanding derives from seeing because we are a visual people. For data scientists, what is the compelling underlying story that makes the data analysis engaging for our audience?
+Keeping in mind the detective story, here is a journey through two top-ranked visualizations as presented in a white paper by Tableau Software (2015). Notice how the elements of the story – from problem to tension to resolution – appear and are communicated from within the visualization.
+  2016 Paper No. 44 Page 6 of 11
+
+MODSIM World 2016
+ Figure 3. Napoleon's Retreat from Moscow by Charles Minard (Tufte, 1983).
+VISUALIZATIONS TURN DREAMS INTO STORIES
+To be the best at nearly anything, you must put intense amounts of time and energy into your endeavor. A challenge for dedicated volleyball coaches is getting their more promising athletes access to limited court times. They continually ask questions like:
+● How do I grow a better volleyball player with no more practice time in the gym than their peers?
+● How do I get the athletes with the greatest potential in the right starting position?
+● How do I help them stand out from thousands of top high school athletes to get college scholarships?
+The solution to these challenges lies in finding innovative ways to physically and mentally train – both inside and outside of the gym. The mental game is just as important as the physical game. No matter the skill level, beginners through advanced athletes can benefit from mental training to complement their physical skills. Whether learning a new skill or refreshing old skills, cognitive athletic training is a relatively new approach.
+Meet T and Her Dream
+Two years ago, the project team of VolleySim met an athlete named T. She was strong. She had a great vertical and reach, and was a quick learner – very smart. When T joined her high school team, she only had two-years’ of experience, far less than her volleyball peers. Though early in her volleyball career, she had big dreams of playing at the college level. She had a natural ability and a real shot at reaching her goal – if her volleyball education started soon and progressed very quickly.
+During T’s coaching sessions, it was apparent that her volleyball knowledge of offense skills was much greater than her defense. She technically and fundamentally knew how to attack the ball, but not how to read her opponent’s body language to defend the court. She endured countless repetitions of hits, tips, and roll shots, leaving her with sore shoulders, banged up arms, legs, and a bruised ego. There had to be another way to help teach athletes like T without turning them – or her coach – into a physical and mental wreck. There needed to be something different to train this skill effectively and efficiently.
+Immersive and simulated approaches provide access to mental volleyball training through mobile devices. They provide a new way to access training at the point of need. Coaches can pull up the app and use it as a guided
+  2016 Paper No. 44 Page 7 of 11
+
+exercise on any size screen during practice or while athletes are waiting for practice. Coaches can place athletes in simulated situations and allow an athlete to make decisions. Then the team helps assess the decisions made and how the trainee could improve their response. Mobile-based apps also allow individual athletes to train while waiting for games to start, or even while travelling to and from practices.
+Data and Learning as a Solution
+Figure 4. VolleySim User Experience. Interface design for mobile learners.
+The VolleySim project was created to allow athletes like T to practice and refine their defensive knowledge using a mobile device (Figure 4) and get feedback on their decisions. Decision making metrics are tracked for every pass by comparing moves on the virtual court to the optimal defensive position. While this metric is presented to T after each pass for her to learn from, it is also tracked and consolidated for each athlete playing VolleySim.
+After four months of collecting decision-making data, the project had information on over 300,000 attempted passes – nearly two decisions every minute – the team realized there would be challenges in communicating the information within the data. Platforms like Excel are limited to extracting only 1,048,576 observations. That capability fits less than a year of data. A solution lies in storytelling and visualization. More specifically, athletes and coaches demand meaningful stories despite the volume and velocity of the data arriving each minute.
+The focus with the early datasets has been machine learning. Linear regression is well suited as a first approach to the data. The data has two continuous variables: an input variable (session length) and a response variable (distance from optimal). Early models, as shown in Figure 5, show some correlation that increased time in mobile sessions decreases the athlete’s distance from the optimal court position. Other machine learning techniques – perhaps deep learning approaches – are being investigated as more data arrives. Unfortunately, this type of visualization lacks relevance for T and her coach. They wanted to know whether playing VolleySim would help her defensive positioning.
+MODSIM World 2016
+ 2016 Paper No. 44 Page 8 of 11
+
+Figure 5. Machine Learning. Linear regression example of data subset to explore relationships.
+Pictures and verse have proven to be a more effective method of telling the data’s story because it is easier to follow. Figure 6 shows the connection between data collected during simulation and the desired outcome on the court. The familiar imagery of the court combined with qualitative and quantitative information has had the desired effect. The story was now clear – more time in VolleySim tends to result in better court position and less missed passes.
+Figure 6. Storytelling Visuals. Showing coaches increasing session time decreases distance error on the court. T Makes Progress
+T spent about 1,500 minutes in VolleySim over three months. Her confidence in her defensive ability has soared. Yes, T continues to physically train hard and practice on the court every chance she can. She also practices her mental reps more often because she is not limited by access to a court. The results: T has become confident in her movements and her ability to read plays. She has the muscle memory skills that allow her to anticipate, react, and move unhindered by “thinking” about the read. All of T’s hard work is paying off. Colleges are recruiting T and she is attending college visits. She is striving to attain her dream of securing a coveted volleyball scholarship. Keeping her head in the game – on the court and on her tablet – is helping T become the best volleyballer she can.
+MODSIM World 2016
+  2016 Paper No. 44 Page 9 of 11
+
+A NEVER ENDING STORY?
+Lessons from History
+Any fool can make something complicated. It takes a genius to make it simple.
+- Woody Guthrie
+Stories are as old as the human race – yet they have made resurgence in the field of consulting. There was a time when the primary form of mass media and information was written and aural presentation of stories. The 1960’s saw the use of folk music to influence decision makers using the “big data” found in the troubles of Vietnam and the Civil Rights movement. Was this new? Not really. It was a resurgence of the 1940’s ballads protesting the woes of a war-torn globe.
+Observations from the Use Case
+First, athletes from all sports continually strive to be better, faster, and work harder than their competition. Many stories are told about the way a star athlete was able to break through the pack and achieve true greatness, but the stories of the athletes that never break through are just as important.
+Additionally, the story of T is still being written, but VolleySim’s story is already able to influence hers, and many others like her, to provide a way to train anywhere and see results in their confidence and ability. Clearly telling T’s story to her coaches and fellow players allows the story of VolleySim to spread through that community and begin to influence the stories of committed and driven athletes all over the world.
+Market Trends
+Today, storytelling has gone commercial. It is a form of communication that has become a popular topic for executive seminars. Meanwhile, visualization continues to prosper as an increasing number of people from the younger generations use YouTube and Snapchat to tell stories. Some use high power tools to build visual experiences. Software like Unity and the JavaScript D3 libraries place very powerful visualization tools in the hands of talented coders. Unofficial trends show the interest is high and will remain there for the foreseeable future.
+Management should realize that good stories are engaging and communicate a clear message in our modern era of multi-channel, high-volume media traffic that plies for the attention of an audience. Decision makers will continue to face increasing challenges to extract the very best information from a growing store of rapidly changing data. There is simply no place for data communication processes that take excessive time to convert analytic results into decision making content. Tools like Tableau have gained acceptance in the marketplace as a tool designed for domain experts, giving them both analytic and visualization capabilities with a relatively low learning curve. Domain experts are increasingly getting the means to have a voice and tell the stories they believe need to be told.
+Concluding Remarks
+Storytelling and visualization are important to the evolution of data science. Specifically, they are the primary means by which data – no matter how deftly obtained and analyzed – are presented and interpreted to make an impact. How will the story of data science unfold in the next decade? Will it be a tale of a hero triumphantly returning with the elixir? Will it be a tale told quietly of how data science was stymied because the knowledge remained captured in a frozen block due to a lack of picture and verse? Our athlete T will be living proof of the story no matter the outcome.
+We live in a world of high-volume, high-velocity, and high-variety data. Sense making of this reality will be aided by robust visualization, and the best visualizations are those that tell a great story to help make better decisions and realize people’s dreams.
+2016 Paper No. 44 Page 10 of 11
+MODSIM World 2016
+
+ACKNOWLEDGEMENTS
+The authors would like to thank Dr. Kirk Borne, Principal Data Scientist for Booz Allen Hamilton, for his mentorship and challenging narrative on data literacy. This challenge is one aided by storytelling.
+REFERENCES
+Behrens, J. T. (1997). Principles and procedures of exploratory data analysis. Psychological Methods, 2(2), 131- 160.
+Cairo, A. (2013). The functional art: An introduction to information graphics and visualization. San Francisco, CA: New Riders.
+Campbell, J. (1972). The hero with a thousand faces. Princeton, NJ: Princeton University Press.
+Cohen, P. (2014). [Graphic showing an 1854 map of London by Dr. John Snow, who helped stop a cholera
+outbreak]. Big mechanism [Web log]. Retrieved from http://www.darpa.mil/program/big-mechanism.
+Dam, A. van. (1999, December). Education: The unfinished revolution. ACM Computing Surveys (CSUR), 31(4),
+Article No. 36. doi:10.1145/345966.346038.
+Finger, S. (2000). Minds behind the brain: A history of the pioneers and their discoveries. New York, NY: Oxford
+University Press.
+GovLab. (2013, August 22). The govlab index: The data universe [Web log]. Retrieved from
+http://thegovlab.org/govlab-index-the-digital-universe/.
+Illumina, Inc. (2015). Sequencing power for every scale. Retrieved from
+http://www.illumina.com/content/dam/illumina-marketing/images/systems/miniseq/takeover/PDF/brochure-
+sequencing-systems-portfolio.pdf.
+LeCun, Y., Boser, B., Denker, J. S., Henderson, D., Howard, R. E., Hubbard, W., & Jackel, J. D. (1989).
+Backpropagation applied to handwritten zip code recognition. Neural Computation 1, 541-551. Retrieved from
+http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf.
+Linderman, A. (2015, August 4). Follow me: 5 steps for telling stories on social media [Web log]. Retrieved from
+https://andrewlinderman.com/2015/08/.
+Miller, G. A. (1956). The magical number seven, plus or minus two: Some limits on our capacity for processing
+information. Psychological Review, 63(2), 81-97. doi:10.1037/h0043158.PMID 13310704.
+Park, H., & Haight, J. (2014, December 11). The analytic hero’s journey. [SlideShare slides]. Retrieved from
+http://www.slideshare.net/BlueHillResearch/the-analytic-heros-journey.
+Press, G. (2013, May 9). A very short history of big data [Web log]. Retrieved from
+http://www.forbes.com/sites/gilpress/2013/05/09/a-very-short-history-of-big-data/#1ca741ee55da.
+Shum, J., Hermes, D., Foster, B., Dastjerdi, M., Rangarajan, V., Winawer, J., . . . Parvizi, J. (2013). A brain area
+for visual numerals, Journal of Neuroscience, 33(16):6709-6715. doi: 10.1523/JNEUROSCI.4558-12.2013. Speer, N. K., Reynolds, J. R., Swallow, K. M., & Zacks, J. M. (2009). Reading stories activates neural
+representations of visual and motor experiences. Psychological Science, 20(8), 989–999. doi:10.1111/j.1467-
+9280.2009.02397.x.
+Sweller, J. (1988, June). Cognitive load during problem solving: Effects on learning. Cognitive Science, 12(2):
+257–285. doi:10.1016/0364-0213(88)90023-7
+Tableau Software. (2015). The 5 most influential data visualizations of all time. Retrieved from
+http://www.tableau.com/top-5-most-influential-data-visualizations.
+Tufte, E. (1983). [Graphic showing Napolean’s advance and retreat from Moscow between 1812 and1813]. The
+visual display of quantitative information. Cheshire, CT: Graphics Press.
+Vaughan, K. (Interviewer) & Borne, K. (Interviewee). (2015). Kirk borne on data science and big data analytics,
+data literacy [Interview transcript]. Retrieved from http://searchdatamanagement.techtarget.com/feature/Kirk- Borne-on-data-science-and-big-data-analytics-data-literacy.
+2016 Paper No. 44 Page 11 of 11
+MODSIM World 2016

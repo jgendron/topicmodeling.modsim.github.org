@@ -1,0 +1,284 @@
+Evidence Based Decision Making: Techniques for Adding Rigor to Decision Support Processes in Complex Organizations
+Dr. Chris Hase Whitney, Bradley and Brown Inc. Virginia Beach, VA chase@wbbinc.com
+ABSTRACT
+Dr. Rafael Matos
+Whitney, Bradley and Brown Inc.
+Inc. Reston, VA
+rmatos@wbbinc.com
+Mr. Don Styer Whitney, Bradley and Brown Inc. Virginia Beach, VA dstyer@wbbinc.com
+Abstract: Organizations today are under increased pressure to respond to rapidly changing conditions. Managers are faced with having to make complex, expensive decisions, riddled with risk and uncertainty. This paper presents results where decision analysis helped organizations make better-informed decisions, faster. Through the use of collaboration, mathematical, and organizational behavior tools this paper presents several technologies that add rigor to the decision support process through an emphasis on refining the objective, finding evidence, analysis, visualization and a taking action framework. From heuristics and optimization to simulation and predictive models, this paper shows where computer based techniques provided traceable, repeatable methodologies that assisted organizations in decision support. This paper provides empirical and parametric evidence that show how modeling and simulation can provide faster, more accurate reporting, improved decision making, improved customer service and reduced costs.
+ABOUT THE AUTHORS
+Dr. Chris Hase is a Senior Operations Research Analyst with WBB. While working at WBB, he has led several studies designed to assist government and private sector decision makers reach conclusions on complex problems. While on active duty, Dr. Hase served in multiple senior operations analysis positions with NATO, The Joint Staff and the Navy Staff supporting requirements analysis. Dr. Hase has an undergraduate degree in zoology from Auburn University, a Master of Science degree in Operations Research from the Naval Postgraduate School, a Master’s in Project Management and PMP certification as well as a Doctor of Philosophy in Organization and Management from Capella University. Additionally he serves as an Adjunct Professor at Strayer University teaching business, mathematics and project management courses in their MBA program.
+Dr. Rafael Matos is a retired naval officer with over 20 years of service in U.S. Navy. He served as a Surface Warfare Officer, as an Operations Research Analyst at the Pentagon, and as Master Instructor of mathematics at the U.S. Naval Academy. He obtained a Master of Science degree in Operations Research from the Naval Postgraduate School and is a Doctor of Philosophy in Organizational Psychology, with a concentration on cognitive decision making. His areas of expertise are statistical analysis, optimization, modeling and simulation, decision analysis, and organizational decision support facilitation.
+Donald M. Styer is a recognized thought leader, results oriented industry expert, and sought after speaker with demonstrated experience in the areas of Innovation, Organizational Design, Business Discovery, Strategic Planning, Resource Planning, Executive Coaching, Decision Support, and Logistics Supply Chain Management. Mr. Styer is retired United States Naval Supply Corps Officer who throughout his distinguished career served in a variety of sea and shore assignments directly resourcing operational requirements and improving service delivery to include; contracting supply chain management, financial management, acquisition, retail sales, and food service operations. He is the principle solution architect of WBB’s Resource Planning and Management (RPM) solution who brings years of experience helping dozens of large global organizations navigate major transformations, realignments, and strategic resource staffing plans.
+2014 Paper No. MS1480 Page 1 of 11
+MODSIM World 2014
+
+Evidence Based Decision Making: Techniques for Adding Rigor to Decision Support Processes in Complex Organizations
+Dr. Chris Hase Whitney, Bradley and Brown Inc. Virginia Beach, VA chase@wbbinc.com
+THE ART OF DECISION MAKING
+Dr. Rafael Matos
+Whitney, Bradley and Brown Inc.
+Inc. Reston, VA
+rmatos@wbbinc.com
+Mr. Don Styer Whitney, Bradley and Brown Inc. Virginia Beach, VA dstyer@wbbinc.com
+“Decision making is a process of choosing among two or more alternative courses of action for the purpose of attaining one or more goals” (Turban et al., 2011, p41). In Mintzberg’s (1980) foundational research on managerial work, decision making was one of the top 10 responsibilities of managers in the daily performance of their work. Making decisions is part of every phase of an operation from organizing, planning, executing, controlling to closing or completing actions. According to Simon (1977), managerial decision making is synonymous with the entire management process. Once thought of as an art, acquired through years of experience and using ones intuition, decision making in organizations today is far more complex requiring institutional processes to be able to track, replicate and defend the who, what, where, and why decisions were made to stakeholders and regulators alike. This paper investigates the process of decision making in complex organizations, recommend techniques for adding rigor to an organizations decision support process and provide analytic evidence that can lead to faster and more accurate decisions that can improve customer service at reduced cost.
+Simon identified four phases of the
+decision making process; intelligence,
+design, choice, and implementation
+(1977). Figure 1 (Turban, et al., 2011,
+p. 46) provides a representation of
+those decision making phases. The
+decision making process begins with
+the intelligence phase. This phase
+examines the organizational
+objectives surrounding the decision,
+initiates problem identification,
+ownership and classification. A
+clearly defined problem statement is
+an output of the intelligence phase.
+The design phase is characterized by
+formulating a model that captures
+elements of the problem and its
+relationship to attributes in the system
+from which it operates. The design
+phase concludes with potential
+alternatives that meet the criteria of
+solving the problem. The choice
+phase includes examining the
+alternatives through qualitative and
+quantitative analysis leading to a
+proposed solution. The final phase
+includes implementation of the
+solution. If implementation is successful, the organization moves forward on to other issues. If implementation is not successful, the decision making process is returned to an earlier phase to repeat the process.
+Turban (2011) identified three conditions in which conditions are made. These include decision making under conditions of certainty, uncertainty, and risk. “In decision making under certainty, it is assumed that complete
+MODSIM World 2014
+ Figure 1. Decision Making Model
+2014 Paper No. MS1480 Page 2 of 11
+
+knowledge is available so that the decision maker knows exactly what the outcome of each course of action will be (as in a deterministic environment)” (Turban et. al., 2011, p. 148). In this environment, modeling and simulation have a limited role since the decision maker has all the information they need. There are some conditions that are rule based and automated decision systems can be employed. The second environment in which decisions are made are under conditions of uncertainty. There are several outcomes for each situation. There is usually insufficient information for the decision maker. Modeling and simulations are key tools that can be used to equip decision makers with the information they seek. “A decision made under risk (also known as a probabilistic or stochastic decision-making situation) is one in which the decision maker must consider several possible outcomes for each alternative, each with a given probability of occurrence” (Turban et. al., 2011, p. 149). This environment is also ripe for analytic tools that include modeling and simulations.
+FRAMEWORK FOR BUSINESS INTELLIGENCE
+In government, for profit and nonprofit institutions, the concept of business intelligence (BI) has gained notoriety as an information system that contains all of the data an executive needs. Indeed, BI is linked to decision making but a BI system is not a decision system in and of itself. BI is relevant in decision support since it is viewed as an overarching term that includes architectures, tools, databases, applications as well as methodologies (Turban et al., 2008). BI is based on the concept of transforming data into information from which decisions are made and actions taken. This is done through interactive access to data and real time data manipulation. BI contains four major components as part of its architecture; a data warehouse, analytical tools, a performance management system for analyzing performance, and a user interface.
+The main benefits of BI are to provide accurate information when needed. Thompson (2004) reported four key benefits of BI systems that included:
+ Faster, more accurate reporting (81%)
+ Improved decision making (78%)
+ Improved customer service (56%)
+ Increased revenue (49%)
+Also, according to Thompson (2004), BI is most commonly seen being used in general reporting, sales and marketing analysis, planning and forecasting, financial consolidation, budgeting, profitability analysis, and statutory reporting.
+DECISION SUPPORT SYSTEMS
+The field of management science takes a scientific approach to managerial decision making by describing a five step process that include (Turban et al., 2011, p13):
+ Define the problem (i.e., a decision situation that may deal with some difficulty or with an opportunity).
+ Classify the problem into a standard category.
+ Construct a model that describes the real-world problem.
+ Identify possible solutions to the modeled problem and evaluate the solutions.
+ Compare, choose, and recommend a potential solution to the problem.
+There are three standard categories for types of decisions based on the underlying problem type. The first includes structured problems that can be supported by automated decision making based on rules such as when to sell. Additional categories include semi structured and unstructured problems that do not lend themselves to automated decisions but require some form of human judgment.
+“The early definitions of a (Decision Support System) DSS identified it as a system intended to support managerial decision makers in semi structured and unstructured decision situations. DSS were meant to be adjuncts to decision makers, extending their capabilities but not replacing their judgment” (Turban et al., 2011, p. 75). Scott-Morton described the major concepts of a DSS in the early 1970s by describing them as “interactive computer-based systems, which help decision makers utilize data and models to solve unstructured problems” (Gorry and Scott- Morton, 1971, p.55). Yet others, Alter (1980), Bonczek et al. (1980), Keen (1980), and Little (1970) provided many
+2014 Paper No. MS1480 Page 3 of 11
+MODSIM World 2014
+
+other definitions of a DSS leading to the conclusion that there is no universally accepted definition of a decision support system. There is general consensus however on key characteristics that can be found in a DSS as shown in figure 2 (Turban et al., 2011, p77). Power (2002) proposed six classification schemes for DSS that have since been adopted by the Association for Information Systems Special Interest Group for Decision Support, Knowledge and Data Management Systems (AIS SIGDSS) that include:
+ Communications driven
+ Data driven
+ Document driven
+ Knowledge driven
+ Model driven
+ Compound system – integrates two or more DSS groups.
+Figure 2 shows key characteristics that not only comprise DSS but BI systems as well. This intersection of DSS and BI systems lends itself to a set of tools and techniques that define business analytics. It is in this arena that computer modeling and simulation can yield the greatest benefits. These benefits include (Turban et al., 2011, p. 45):
+ Manipulating a model (changing decision variables or the environment) is much easier than manipulating a real system. Experimentation is easier and does not interfere with the organization’s daily operations.
+ Models enable the compression of time. Years of operations can be simulated in minutes or seconds of computer time.
+ The cost of modeling analysis is much lower than the cost of a similar experiment conducted on a real system.
+MODSIM World 2014
+       Figure 2. Key Characteristics of a Decision Support System
+2014 Paper No. MS1480 Page 4 of 11
+
+ The cost of making mistakes during a trial-and-error experiment is much lower when models are used than with real systems.
+ The business environment involves considerable uncertainty. With modeling, a manager can estimate the risks resulting from specific actions.
+ Mathematical models enable the analysis of a very large, sometimes infinite, number of possible solutions. Even in simple problems, managers often have a large number of alternatives from which to choose.
+ Models enhance and reinforce learning and training.
+ Models and solution methods are readily available on the Web.
+EVIDENCE BASED DECISION MANAGMENT
+Traditional BI applications are, too often, large monolithic infrastructures that are inflexible and reliant on an information technology department. These systems often answer only pre-defined questions, denying the user the ability to satisfy their curiosity and drill down or look across the data in order to answer questions. The focus is too often on data alone, and not on how the data relates to the vision, mission, strategy, operational readiness requirements, and current decision processes. As processes evolve, these systems do not offer users insight to the data in a manner that supports their evolved responsibilities or the revised metrics. If the processes change, if the decisions being supported change, or if the answers suggest additional questions to the user, the business intelligence capability has typically not had the ability to quickly adapt. The inability of the analyst to explore and ask additional questions of the data leads to frustration and does not effectively support a dynamic decision making process. Ultimately, they do not inform the user (ex: “how do I spend this last dollar?”). Today, leaders and key personnel need to be empowered to explore and discover insights from the data, solve problems, and ultimately make informed decisions in a dynamic environment.
+Yet DSS and BI systems provide an excellent foundation in constructing a framework that is traceable, repeatable, defendable yet flexible enough to adapt to changing customer needs. Building on the methodologies and technologies of DSS and BI systems, Whitney, Bradley, and Brown (WBB) uses a scientific based approach and tool set designed to provide our customer’s needs called Evidence Based Decision Management (EbDM). There are five elements of EbDM that are supported by business discovery applications (see figure 3) that are repeated through a series of sprints (see figure 4) until decision makers are satisfied their objectives have been met.
+Refine Objective:
+The first element, refine the object, begins with an understanding of the objectives of the analysis, the strategic context within how they fit in the organization and the desired end result. It is essential to link organizational data to the most important drivers of value and performance. Decision makers must be able to describe they key questions to be resolved, from which key performance indicators (KPIs) are developed. This in turn informs the main hypothesis, relevant metrics, and the data collection plan.
+Find Evidence:
+The second element in an EbDM approach
+considers finding the right evidence necessary to
+guide sound decision making. Selecting only the appropriate data critical to addressing the key questions is pivotal to finding the right evidence. By understanding the KPIs, organizations are able to quickly sift through large amounts of data and focus only on relevant information. Collecting and integrating relevant evidence is not just limited to quantitative data (numerical data) but also qualitative data (judgment information that provides context).
+MODSIM World 2014
+ Figure 3. Five Elements of Evidence Based Decision Management
+2014 Paper No. MS1480 Page 5 of 11
+
+Evidence comes in multiple forms that provide context such as; numbers, sounds, text, graphics, and pictures. Business discovery applications such as database management systems (DBMS), online analytical processing (OLAP) tools, performance management (BPM/CPM) systems and group support systems (GSS) are often used here.
+Analyze:
+The third element, analyze, focuses on transforming critical data into actionable knowledge. Many organizations are so focused on the collection and distribution of data that there is little effort placed on meaningful analysis. To overcome these shortfalls a rigorous methodology that includes discovery, diagnoses, prescription and prediction is needed.
+ Discovery - The analysis starts with the developing a complete understanding of the descriptive nature of the data. This builds insights that identify statistical associations among events or observations and help to confirm causal relationships. Looking at the data from different perspectives, proves or disproves hypotheses generated during the framing and evidence gathering. The exploration allows for the identification of hidden trends and/or gaps in the data. Discovery is an iterative process of continuous profiling (what it is, who it belongs to, where it is used) and validating (identification and mitigation of flaws) the data.
+ Diagnoses - The key analytics questions and KPIs provide the foundation of the diagnostics analysis. Through the use of business discovery applications such as optimization models, mathematical programming, trend analysis and forecasting a higher degree of analytics can be achieved. This enables the team to quickly drill into root causes and identify/implement appropriate business rules, algorithms, and mathematical models.
+ Prescription - Reports and queries are performed against databases to address decision-makers’ questions and produce prescriptive recommendations. Given the growth of data and the shortened decision cycle time, KPIs are programmed into a business discovery dashboard. This enables the analysts and decision- makers the ability to rapidly identify the issues, refine their questions and develop the necessary information.
+ Prediction – Data is transformed for use in predictive models and integrated into the business discovery platform. The predictive models are used in trend analysis to generate forecasts with well-characterized accuracies about the future or diagnoses. Such forecasts or diagnoses can be harnessed within procedures that generate recommendations to the analyst on how to react to what the data represents. The cycle of data- prediction-action provides a pervasive decision support capability engendering decision confidence.
+The key to EbDM is the ability to rapidly provide a pervasive analytical delivery mechanism enabling a whole new level of analysis, insight, and value to existing data stores with user interfaces that are clean, simple, and straightforward. Using a business discovery platform simplifies the analysis using a variety of user driven interactive and intuitive presentations. The dashboard becomes the “glue” to conducting descriptive, diagnostic, prescriptive, and predictive analysis.
+Visualize:
+It is crucial, when analyzing data, to keep the target audiences and their specific needs in mind. EbDM is only fully effective when the right information is delivered to the right people at the right time. Business discovery tools include geographical information systems (GIS), informational portals, multidimensional presentations and dashboards.
+Throughout the previous steps, stakeholders, analysts, and decision-makers were identified who interact with the data. The basis for the design of the interactive user interface comes from the decision process models and use cases. This provides context to what will follow and ensures that the charts, graphs, and tables are focused squarely on meeting a critical information need of the target audience. This avoids the trap of focusing on “interesting” rather than “valuable” information.
+In traditional models that follow a linear path of analysis, presentation, decision maker feedback, time is wasted between receiving decision maker feedback and cycling back through analysis and presentation to provide answers to the decision makers’ previous questions. In a visualization model that uses adaptive dashboard techniques, the
+2014 Paper No. MS1480 Page 6 of 11
+MODSIM World 2014
+
+linear model is replaced with a circular model where the decision maker is part of the analysis visualization cycle and instead of getting feedback from the decision maker, they are more apt to move into the take action element of EbDM.
+Sometimes, decisions must be made under conditions of risk, when there are multiple outcomes each with its own probability distribution function. Or sometimes there is just insufficient information to make a decision and the data does not exist that can help inform the decision maker. In situations like these a different approach must be taken to assist the decision maker. One methodology designed for situations like these was developed by Eric Ries (2011) called lean startup. Lean startup was initially developed for technology driven startup companies but has been adapted to industry in general faced with the need to make decisions with less than ideal information. Lean startup is a method designed to shorten product development cycles by adopting a combination of business-hypothesis-driven experimentation, iterative product releases, and validated learning principles. Applying a lean startup methodology to EbDM produces a series of repeated cycles or sprints that each produce a viable prototype and build on lessons learned from earlier efforts (see figure 4). Working closely with users, stakeholders, and decision makers to discover, validate, improve, and pivot (if necessary) throughout each iteration. This drives immediate value and provides stakeholders with control over the outcome. The intent is to capture inputs early by starting small, incorporating user collaboration and then building incremental capability. The focus of the process is on critical decisions, processes, required data, and KPIs.
+Take Action:
+Adopting an EbDM approach is meaningless without taking action. Adoption of EbDM enabled by a business discovery application provides widespread analytical capabilities across an organization allowing it to take advantage of fleeting opportunities in a budget-constrained environment. However, streamlined decision processes supported often requires active change management that builds successful practices into the beliefs and culture of an organization, enabling faster and more effective reactions to external events. As described in the visualization element, effective use of dashboards depends on using the right business discovery tools and incorporating the correct KPIs and analytics to deliver the decision maker the information they need to develop a knowledge base sound enough to make a traceable, repeatable, defendable decision. Sometimes this can occur in one event. Other
+MODSIM World 2014
+    Sprint n
+Viable Prototype
+Time
+Figure 4. Employing Lean Startup Methodologies with EbDM
+Final Objective Satisfied
+Viable Prototype
+   Sprint 2
+Framing the Objective – Defining Information Needs
+Decision making under certainty
+Initial Framing Viable Prototype Decision making under uncertainty
+Finding the Evidence – Collecting and Integrating Relevant Data
+   Objective
+Decision making under risk
+Sprint 1
+  2014 Paper No. MS1480 Page 7 of 11
+Knowledge
+
+times, discovery is made and a different prototype of the model must be developed to address different questions and KPIs. Figure 4 captures this iterative process of building on discovery through the use of repetitive prototypes each designed to bring the decision maker closer to providing them the knowledge base they require. Business discovery applications that often apply to this element include multicriteria decision making with pairwise comparisons and analytic hierarchy process (AHP) techniques.
+CASE STUDY: DOD OVERSEAS STUDENT MEAL PROGRAM Background:
+The Department of Defense (DoD) operates a U.S. Department of Agriculture (USDA) compliant meal programs in its schools both in the United States and overseas. The military services run the overseas program but requested that the Department of Defense Educational Activity (DoDEA) assume this responsibility consistent with its role in the domestic program. However, the current program was operating without adequate oversight and accountability. DoDEA required a complete economic analysis of the program to fully understand revenues, costs, and performance prior to assuming responsibility.
+Refine Objectives for DoDEA:
+The challenge for DoDEA was determining what constituted a well-functioning student meal program. Framing this problem and developing an overarching objective required close collaboration with stakeholders associated with the program. During this phase of the project, facilitated decision support sessions were held with key personnel to identify the “As-Is” process. This included how the information flowed through the process, the data that existed, quality issues, and priority tasks. Once the “As-Is” was identified, USDA requirements and several state programs were benchmarked to provide an analysis of the gaps. These gaps allowed the team to quickly formulate KPIs and decision criteria required to centralize a student meal program led by DoDEA.
+Finding the Evidence – Collecting and Integrating Relevant Data
+Evidence was gathered to either support or counter the established hypothesis generated during framing. Only selecting the data that addressed KPIs and was critical for decision was considered. Collection and mapping to decision process provided new insights about the organization. Use cases were built that allowed the team to better understand what data was critical, the source of the data, and what data was missing and needed to be collected. The first use case was an “As-Is” situation used to determine how data was currently collected and how it was used by the analysts. This provided a baseline in determining the data gaps and quality. Once the sources of data were understood and how it was accessed, a high-level data model was built. The data model addressed the following questions:
+ How is the data interrelated?
+ Do we have the data in the correct
+format?
+ Is the data of the right quality?
+ What data are we missing?
+A variety of methods were used to economically collect both qualitative and quantitative data. This included interviews, research, bench marking, surveys, and facilitated working sessions. The use of group-enabled software during workshops inspired breakthrough thinking, accelerated alignment, and built commitment across teams. Use case analysts pulled data from large BI systems in Excel based spreadsheets and models.
+MODSIM World 2014
+ Figure 5. Dashboard Associative Model
+2014 Paper No. MS1480 Page 8 of 11
+
+Analyze – Discovery and Exploration
+A significant challenge for DoDEA was the integration of over 1,200 data feeds covering 57,966 students. This included point of sale information from more than 200 cafeterias, student participation data, cost elements, USDA compliance, program metrics, and priorities necessary to conduct an economic analysis. DoDEA required defensible answers within six months and using traditional spreadsheet data and integration methods would not allow for accurate and timely analysis. To overcome this challenge, the team employed Qlikview to develop a data model and application shown in Figure 5. This allowed the analytical team to focus on the integration and quality of the data vice the spending an inordinate amount of time manipulating the data. The realized benefit was that the whole team could interact with the data through the dashboard allowing for transparent socialization and data gap analysis in real-time. Using a user-driven business discovery platform allowed for rapid analysis bridging the gap between traditional BI solutions and standalone office productivity applications. This enabled analysts and decision makers to quickly integrate data in a meaningful and useful way.
+Visualize – Presenting the Data
+It is crucial, when analyzing data, to keep the target audiences and their specific needs in mind. EbDM is only fully effective when the right information is delivered to the right people at the right time.
+Throughout the previous steps, stakeholders, analysts, and decision-makers were identified who needed to interact with the data. The basis for the design of the interactive user interface came from decision process models and use cases developed in the previous steps. KPIs and criteria were determined for overarching goals, issues, and needs of the dashboard project. This provided context that
+ensured charts, graphs, and tables were focused
+squarely on meeting a critical information need of the
+target audience. This avoided the trap of focusing on
+“interesting” rather than “valuable” information.
+Through the use of interactive dashboards, the analyst
+can review the data analysis real time with
+stakeholders and decision makers, addressing
+questions and providing information real time to
+varying scenarios. Figure 6 shows one of several
+dashboard views used in the DoDEA student meal
+program issue. A user could vary meal cost and meal
+prices real time and look at regional impacts on food
+budgets. The data, KPIs, and analysis were all woven
+into the dashboard to help inform decision makers
+through the use of advanced analytics and comparative analysis on the impacts of varying decisions. Other dashboards looked at the impact of enrollment and cafeteria policies and operating days on revenue. All of the dashboards were designed to address “So what?” questions using KPIs developed in collaboration with stakeholders and decision makers.
+By using dashboards that were designed to address KPIs, the DoDEA student meal issue improved on traditional decision processes:
+ Gained quick visibility on $36 million global program data for the first time.
+ Identified $19 million in unbudgeted financial requirements prior to assuming program responsibility.
+ Enabled stakeholders and decision makers to view financial, compliance, and economic analysis of the
+existing program and impacts of policy decisions.
+ Reduced delivery of economic analysis by 6 months while increasing student meal value.
+ Student meal program dashboard was used to brief senior program stakeholders: resulting in an interactive
+customer experience and real-time discovery and decision-making.
+MODSIM World 2014
+ Figure 6. Student Meal Program Dashboard
+2014 Paper No. MS1480 Page 9 of 11
+
+                                                Take Action – Clarity of Decision Making
+An EbDM approach was used on the DoDEA issue to capture, integrate, assess, and visualize the entire student meal program. A complete financial and compliance analysis of the existing program that provided visibility of all operations was performed to inform leadership decision makers. Based on stakeholder and decision maker input, various options were considered. Use of dynamic dashboard visualization tools shortened the decision times by providing decision makers relevant knowledge. Figure 7 provided an analytic summary to decision makers that allowed them to frame courses of action then decide on an implementation plan. Use of the EbDM methodology provided the following best practices to decision makers that included:
+ Implementing tools that promoted a collaborative and shared analytical environment across the organization.
+ Rewarding sharing of information across functional stovepipes.
+ Using live analytics from a business discovery application in the course of briefings and working sessions
+to collectively ask and answer questions of the data.
+ Removing unnecessary steps from the staffing process to significantly shorten the decision cycle time
+ Providing evidence based business discovery that allows the ability to ask questions of data thus effectively
+gaining insight from relevant data.
+CONCLUSIONS
+EbDM enables leaders to rapidly achieve a cross functional advanced analytic capability. This methodology is scientific based and aligns data collection to strategic value drivers, and collects the best available evidence. This evidence is then used to extract valuable knowledge and sharing analytics in a way that allows all users to act on those insights. This approach:
+ Provides evidence based business discovery that allows the ability to ask questions of data thus effectively gaining insight from relevant data.
+ Installs rapid access to multiple federated data sources to: Monitor – Measure – Manage operational performance, resources, requirements, project status as well as the relationships and dependencies with in context.
+ Provides the analytical tools that support analysts and decision makers, giving them the ability to quickly discover and assess shortfalls in required data, support tradeoff decisions, and assess risk in near real-time.
+ Quickly collaborate across the organization by sharing content and filtered data, annotating elements, sharing snapshots of their data set, or sharing their session and enabling guests to actively make selections.
+MODSIM World 2014
+       High Risk Areas
+Resource Planning, Budgeting, and Distribution
+      Program Training, Evaluation, and Compliance
+      Real Property and Equipment Management
+      Equipment and Supply Sustainment and Mgt
+      Food Service Provider Oversight
+      Program Policies and Procedures
+      USDA Claims Management
+      Critical Considerations
+Alignment of Education and Nutrition
+      Alignment of Responsibility with Resources
+      Separation of SFA/FSMC responsibilities
+      Additional Personnel Requirements
+AdditionalPersonnel, APF
+Additional Personnel, NAF
+Current Level of Effort
+Current Level of Effort (LOE)
+As Is
+Total
+33.0
+COA1
+DoDEA Own Exist
+8
+0
+DoDEA
+3.0
+COA2 Service Own Exist
+15-17
+0
+Services
+8.3
+COA 3A DoDEA
+40
+18
+Exchanges
+21.8
+COA 3B Service
+40
+18
+COA4 Hybrid
+35
+18
+DDESS
+  Current
+ 30*
+22
+  Low Moderate High Risk Risk Risk
+* Only SFA/FSMC, does not include State level
+   Figure 7. Courses of Action Assessment
+                         2014 Paper No. MS1480 Page 10 of 11
+64 Schools, 14 Communites in 7 States plus Puerto Rico
+
+REFERENCES
+Alter, S. L. (1980). Decision supports systems: Current practices and continuing challenges. Reading, MA: Addison-Wesley.
+Bonczek, R. H., Holsapple, C. W., & Whinston, A. B.. (1980). “The Evolving Roles of Models in Decision Support Systems.” Decision Sciences, Vol. 11, No. 2, pp. 337–356.
+Gorry, G. A., & Scott-Morton, M. S.. (1971). “A Framework for Management Information Systems.” Sloan Management Review, Vol. 13, No. 1, pp. 55–70.
+Keen, P. G. W. (1980, Fall). “Adaptive Design for Decision Support Systems.” Data Base, Vol. 12, Nos. 1 and 2, pp. 15–25.
+Little, J. D. C. (1970, April). “Models and Managers: The Concept of a Decision Calculus.” Management Science, Vol. 16, No. 8, pp. 466–485.
+Mintzberg, H. A. (1980). The Nature of Managerial Work. Englewood Cliffs, NJ: Prentice Hall.
+Power, D. J. (2002). Decision Making Support Systems: Achievements, Trends and Challenges. Hershey, PA: Idea
+Group Publishing.
+Ries, E. (2011). The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically
+Successful Businesses. Crown Publishing. ISBN 978-0-307-88791-7.
+Simon, H. (1977). The New Science of Management Decision. Englewood Cliffs, NJ: Prentice Hall.
+Turban, E. R., Sharda, J.E., & Delen (2011). Decision Support and Business Intelligence Systems, 9th Edition.
+Upper Saddle River, NJ: Prentice Hall.
+Turban, E. R., Sharda, J. E., Aronson, & King, D. (2008). Business Intelligence: A Managerial Approach. Upper
+Saddle River, NJ: Prentice Hall.
+2014 Paper No. MS1480 Page 11 of 11
+MODSIM World 2014

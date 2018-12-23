@@ -1,0 +1,147 @@
+A Genetic Model for the Evolution of Complex Technologies and its Application to Economic Development
+Morton Tavel Ph.D Innovation Business Partners Lavallette, New Jersey mort@innovationbp.com
+Devin Markovits Innovation Business Partners Lavallette, New Jersey devin@innovationbp.com
+MODSIM World 2018
+ABSTRACT
+We model the evolution of a complex technology in a specific geographical region by treating it as a living organism evolving genetically in an ecosystem. A simulation of the model is carried out by data-mining all patents issued in that region to inventions using that specific technology. Each patent provides a set of “genes” from a possible genome of the organism, with the “genes” being specific technological areas that the patent office uses to classify the functionalities of an invention. The results of the analysis can be used for decision support and business intelligence by providing a method of “genetically engineering” a technology to make it more “fit” for its local environment. Using the model, we examine how the genetic makeup of an organism changes over time as specific “genes” are selected by its environment. The genes collected from the patents provide a picture of how the species is evolving. The present simulation studies the evolution of Modeling and Simulation (M&S) itself, with the state of Virginia as the local environment. In previous studies using the model, it was shown that environmental factors influence the species genome over time to generate organisms with specific capabilities, with M&S in Michigan supporting the automotive industry and M&S in Texas supporting the energy sector. Thus, the model leverages big data to understand how a complex technology evolves, how the regional environment provides supportive conditions for gene expression, and how to genetically modify the complex technology for future survival and growth.
+ABOUT THE AUTHORS
+Morton Tavel is the Chief Scientist for Innovation Business Partners, Inc. (IBP) since 2007. He has developed network and genetic models and has helped develop a methodology for applying patent analysis to technical problems in the military and industry. Before joining IBP, he was a Professor of Physics at Vassar College from 1967 until 2007. Dr. Tavel’s M.S. was obtained at Stevens Institute of Technology in 1962 in Plasma Physics and his PhD was obtained at Yeshiva University in 1964 in Quantum Field Theory. He was a National Science Foundation Fellow while at both Stevens and Yeshiva. Dr. Tavel was a Research Scientist at Brookhaven National Laboratory from 1964-1967. At Brookhaven he developed a simulation method for solving certain non-linear neutron transport problems. From 1970-1980, he was a consultant for several divisions of the IBM Corporation, where he applied simulated annealing to the design of computer logic.
+Devin Markovits is the co-founder of Innovation Business Partners, Inc. (IBP) and the team lead for invention analysis and technology mining for client solutions development. He has worked with Morton Tavel to develop network and genetic models and has helped develop a methodology for applying patent analysis to technical problems in the military and industry. He has been consulting with the Navy since 2003 and developed models and tools that have been proven successful, such as, “Insight Driven Innovation”, the “Friday Process”, and “COTS to the Rescue” to help teams define the right problem to solve and then solve it the right way by leveraging the world’s investment in research. Devin Markovits received a B.S. in Biology from The State University of New York, New Paltz in 2002
+2015 Paper No. 33 Page 1 of 8
+
+A Genetic Model for the Evolution of Complex Technologies and its Application to Economic Development
+Morton Tavel Ph.D Innovation Business Partners Lavallette, New Jersey mort@innovationbp.com
+INTRODUCTION
+Devin Markovits Innovation Business Partners Lavallette, New Jersey devin@innovationbp.com
+MODSIM World 2018
+  Complex technologies and living organisms share certain features that make it useful to consider one of them (the living organism) as a possible model for the other (the complex technology) when a particular analysis is desired. Specifically, both of them undergo two types of developmental processes, a long-term process that can be called evolutionary and a short-term process that can be called, developmental or epigenetic.
+Because we are interested in how a technology develops on both time scales, we will focus on the relevant analogies between organism development and technology development in structuring the model. In the living organism the evolutionary process is called Darwinian/Mendelian or genetic evolution and the short-term processes are now often collectively called “epigenesis”.
+In the living organism, both long and short-term processes are carried out by actions of an environment on a complex molecule, the genome or DNA. This molecule both stores information describing the past history of the organism and functionally enables a set of processes by which that history can be carried forward. For the evolutionary development the environment is the surroundings that the mature organism inhabits. For the short-term development, the environment is a fetal environment for individual cells and organs and its role is to drive intra-cellular processes that guide development between conception and birth.
+To implement our model, we will consider a technology to be represented by a group of industries, the metaphorical genome to be their collective patent portfolio and the environment, for the evolutionary aspect of the development, to be a commercial environment, possibly localized to a single geographic region that deals with the products of the technology. The analog of fetal development will be considered as the internal corporate or organizational surroundings within which innovation takes place and patented inventions are produced.
+For the genome to be a meaningful concept, we will use the fact that the US Patent and Trademark Office (USPTO) classifies patents according to a coding system in which there are 473 separate primary codes and many more secondary codes that describe different sets of skills and knowledge in distinct broad areas that the patent teaches.
+We will consider these areas to be analogous to genes in the sense that the patent carries the information (instructions) necessary to create and use an invention in that area, just as the genes in a genome, when properly activated by proteins, carries the information necessary to construct some characteristic of the living organism. We will suggest that the patent-based genome can be represented by what we call an Innovation GenotypeTM which allows the sets of genes to be easily visualized as elements of a histogram whose “bins” are labeled by the USPTO codes and whose heights are the numbers of patents that have been assigned those codes from the collection of companies that produced them. This visualization suggests that the relative “strength” (i.e., the height of a bin) of a gene indicates that certain inventive elements in the set of patents have been reinforced (by numbers of patents) by their acceptance in the environment, adding to the “fitness” of a company in its competitive space and, thereby, illustrating the evolution of the technology as a whole.
+2015 Paper No. 33 Page 2 of 8
+
+To support this hypothesis, we have created state-centric genotypes by tracking the patent portfolios of groups of companies on a state-by-state and year-by-year basis and we find that the prevalence of particular genes can be interpreted as the influence of particular state environments in stimulating a company to invent in certain areas.
+We consider this form of evolution to be a form of “speciation,” in which an organism evolves to form a species that is well adapted to thrive in an environment. In addition, the genotype of a company might be artificially “improved” so that its particular areas of expertise would make it more successful (i.e., “fit”) in that state by matching its skill set to the resources that the state provides. Therefore, it is not surprising that companies having expertise in the technology of modeling and simulation that are operating in the state of Michigan (for example) are inventing in areas having to do with modeling and simulation in the automotive area. In effect, we are seeing a form of speciation of the technology of modeling and simulation resulting from selection for fitness by the surrounding industries, just as a species of butterfly might be selected for specific genetic traits of coloration when it evolves in some ecological niche.
+The ability of a genetic model to show the effects of fitness and species formation, even when applied to technologies, is not surprising since that is what genetics is all about. However, the ability of the genetic model to also suggest how that fitness might be improved, is where we believe the strength of the model lies. We believe that this approach can be used to inform economics-based policy and programs currently being used to create regional ecosystems and centers of excellence. It can shape an environment by fostering a higher degree of collaboration between government, universities, and industry, and the result will be the establishment of regional innovation networks that generate new jobs and wealth.
+However, it requires awareness of how the role of the environment fosters economic development policies that will facilitate the movement of intellectual property and human capital between academia, industry, and our Federal labs and institutions. As an example, we have created the genotype for the state of Virginia and show it for a succession of years in Figure 1 below. When we examine the growth of the genotype and restrict it to the top twenty “genes,” Modeling and Simulation does not make the top twenty, but is much further down in the genotype. This suggests at least three things: (1) that Virginia is a fertile environment for M&S to develop and (2) that a prospective developer of M&S should look at the genes that are already present in Virginia and infer from them what the nature of the environment must be, so that the developer can focus M&S in the proper direction, and (3) that some form of genetic “engineering” like gene “splicing” might be considered to stimulate already existing companies to develop M&S in their own research.
+MODSIM World 2018
+  70
+60
+50
+40
+30
+20
+10
+0
+      2010 2011
+2012 2013
+    2015 Paper No. 33 Page 3 of 8
+Figure 1. Virginia Dynamic Genotype 2010-2013
+382 Image analysis
+455 Telecommunications
+709 Electrical computers and digital processing...
+370 Multiplex communications 707 Data processing: database and file... 705 Data processing:
+financial, business... 356 Optics: measuring and
+testing
+250 Radiant energy
+340 Communications: electrical
+701 Data processing: vehicles, navigation, and...
+73 Measuring and testing
+342 Communications: directive radio wave...
+89 Ordnance
+345 Computer graphics
+processing and selective... 359 Optical: systems and
+elements
+102 Ammunition and
+explosives
+428 Stock material or miscellaneous articles
+435 Chemistry: molecular biology and microbiology
+42 Firearms
+604 Surgery
+
+Epigenetics, as opposed to Darwinian genetics does not deal with long term speciation directed by the effects of the external environment on an already mature organism. Epigenetics deals with intra-cellular processes by which the DNA is tended-to by a surrounding “soup” of networked proteins to ensure that the distributed set of genes perform their required activities in the correct spatio-temporal order. If some gene or set of genes becomes defective, the proteins are sometimes capable of providing alternative pathways by which the same or similar effects can be produced. We even find analogs of epigenetic processes in the activities of groups of inventors collaborating to form what we call “Innovation Networks” which make better use of the skills of the individual inventors that culminate in the final patented invention.
+During the inventive process, other networks within the particular organization provide an environment that facilitates (positively or negatively) the inventive process. These networks may include networks of patent attorneys or experts in interpreting regulatory processes that are relevant to the nature of the invention. At this point in our research we have not begun to analyze these epigenetic processes, but we feel that they do play a role in the ultimate development of a technology and can be used fruitfully to identify better ways to solve unexpected problems.
+ANALYSIS
+Figures 2 and 3 below show the results of creating the innovation genotype (Figure 2) and the inventor networks (Figure 3) for the state of Virginia, with our focus being on the particular technology, “Modeling and Simulation” (M&S).
+MODSIM World 2018
+  25 20 15 10
+5 0
+       2015 Paper No. 33 Page 4 of 8
+Figure 2. Virginia Modeling and Simulation Innovation Genotype 2000-2013
+703 Data processing: structural... 382 Image analysis
+705 Data processing: financial,... 434 Education and demonstration
+706 Data processing: artificial... 726 Information security
+702 Data processing: measuring,... 707 Data processing: database and...
+600 Surgery 701 Data processing: vehicles,... 704 Data processing: speech signal...
+370 Multiplex communications 455 Telecommunications 73 Measuring and testing
+342 Communications: directive radio... 374 Thermal measuring and testing 473 Games using tangible projectile
+709 Electrical computers and digital... 717 Data processing: software... 345 Computer graphics processing...
+348 Television 356 Optics: measuring and testing 363 Electric power conversion systems
+365 Static information storage and... 367 Communications, electrical:... 379 Telephonic communications
+381 Electrical audio signal... 436 Chemistry: analytical and... 506 Combinatorial chemistry... 714 Error detection/correction and... 715 Data processing: presentation... 725 Interactive video distribution...
+
+Figure 3. Virginia Modeling and Simulation Inventor Network 2000-2013
+We performed a Boolean search of the patent database for inventions in which the phrase (“modeling” OR “simulation”) appeared in the invention abstract. This search resulted in finding all the companies applying this technology and allowed us to create their inventor networks. These are graphed in Figure 3. Next, using the same dataset, but analyzing their USPTO assigned class codes, we created the innovation genotype. This produces the graphic illustration in Figure 2.
+Figure 2 shows the innovation genotype of M&S in Virginia, which is the set of “genes” that statistically describe the “organism” that the inventors themselves interpret as M&S. It is the sum of all the separate areas of expertise contained in all the M&S networks of Figure 3. This innovation genotype shows the diversity underlying the use of M&S in Virginia. The most dominate gene is USPTO class code 703. The USPTO defines class code 703 as, “Data processing: structural design, modeling, simulation, and emulation.” This is the closest class code to M&S that the USPTO has in its current set of technology classifications. The greatest statistical distribution of genes (the peak at 703) indicates agreement between the inventor’s own assessment of their invention as being M&S and the class code, 703, assigned by the USPTO examiner.
+There are genes that provide a differentiation and it is this differentiation that distinguishes M&S in each of the states we analyzed and thereby creates the M&S “species” associated with a state. An inventor doing M&S in Virginia might develop a model structure to classify objects in an image for the purpose of pattern recognition. As a result, the innovation genotype contains a “gene” for image analysis, which is the second most prevalent technology classification, as represented by the USPTO class code 382. Looking further into the Virginia innovation genotype we see the USPTO class code 705, defined as “Data processing: financial, business practice, management, or cost/price determination”, as the third most prevalent “gene”. Here, M&S is being used to evaluate insurance liabilities using stochastic modeling and sampling techniques, or the modeling of telecommunication switch investments, as well as developing models for project planning. Another set of examples from the Virginia innovation genotype employ M&S for training purposes and fall into USPTO class code 434, “Education and demonstration”. Here we find inventions that simulate the use of weapons systems and aircraft, as well as inventions that model types of surgeries or brain injuries.
+The inventor networks of Figure 3 allows for the analysis of companies engaged in M&S, including the specific inventors in the M&S sector of each company. The structures of these company networks tell something about the way the inventors work together and help to untangle the social from the technical aspects of inventing. Although we have not done so here, once we locate the companies doing M&S, we can then dig more deeply into the full body of
+2015 Paper No. 33 Page 5 of 8
+MODSIM World 2018
+ 
+their IP and create their complete inventor networks. This will enable us to discover how each particular group of M&S inventors contributes more broadly to their company’s complete innovation portfolio. Depending on the wider role of these inventors, such as whether any of them are also in the innovation backbone, we can judge whether M&S influences the entire innovation culture of the company or if it is still restricted to an isolated group working in an emerging technical area.
+Next, borrowing from a previous study that was presented at I/ITSEC 2017, we provide an innovation genotype and inventor network of the state of Michigan. The innovation genotype is charted in Figure 4 and the inventor network is graphed in Figure 5 below.
+Figure 4. Michigan Modeling and Simulation Innovation Genotype 2000-2013
+Figure 5. Michigan Modeling and Simulation Inventor Network 2000-2013
+MODSIM World 2018
+  45
+40
+35
+30
+25
+20
+15
+10
+5 0
+                                         2015 Paper No. 33 Page 6 of 8
+703 Data processing: structural... 701 Data processing: vehicles,...
+73 Measuring and testing 702 Data processing:... 700 Data processing: generic... 318 Electricity: motive power...
+446 Amusement devices: toys 705 Data processing: financial,...
+164 Metal founding 180 Motor vehicles
+236 Automatic temperature and... 246 Railway switches and signals
+324 Electricity: measuring and... 382 Image analysis
+709 Electrical computers and... 714 Error detection/correction... 715 Data processing:... 40 Card, picture, or sign...
+60 Power plants 123 Internal-combustion engines 188 Brakes 219 Electric heating
+315 Electric lamp and discharge... 340 Communications: electrical
+345 Computer graphics... 365 Static information storage... 706 Data processing: artificial... 717 Data processing: software...
+
+While there is some similarities to the Virginia innovation genotype such as the most prevalent gene being class code 703 (the USPTO’s closest classification to M&S), the Michigan innovation genotype contains several “genes” that would express “traits” relating to the automotive industry. Inventors doing M&S in Michigan have used models to estimate energy consumption based on simulated road scenarios, as can be seen in several inventions in class code 701 “Data processing: vehicles, navigation, and relative location.” The third most prevalent class code in the innovation genotype is class code 73 “Measuring and testing” where the inventors are simulating a vehicle impact that involves generating finite element models. The next prevalent class code is 702 “Data processing: measuring, calibrating, or testing”. Looking at the inventions in this “gene”, one finds M&S applications to model and simulate the deposition of a thin film process used in solid-state batteries. Looking deeper into the innovation genotype we also find other classes which indicate that the M&S efforts in Michigan contribute to the automotive industry include class code 123 “Internal-combustion engines”, class code 180 “Motor vehicles”, and class code 188 “Brakes”.
+APPLICATIONS TO ANALYTICS AND DECISION-MAKING
+One objective of this paper is to illustrate that analysis methods applied to innovation networks in the form of patented inventions can be used advantageously for economic development purposes. The results of the analysis can be used to support a range of capabilities from building communities of practice, identifying regional innovation centers, and understanding community structures to achieve economic growth through innovation. In addition, it is an objective of this paper to highlight the role of Modeling and Simulation (M&S) in the advancement of industries pertinent to specific regional economies, though the model could be applied to any complex technologies such as artificial intelligence, nanotechnology, or robotics.
+In the current age, leveraging big data to gather intelligence to make strategic connections and decisions will be of great importance. Increasingly large public data sets are available for analysis that provide insight into the current state of cutting edge technologies in the form of intellectual property.
+Intellectual property is an important driver of economies and all major emerging technologies are captured in the form of patents. In addition, most major economies of the world maintain their own database of intellectual property including the United State Patent and Trademark Office (USPTO), World Intellectual Property Organization (WIPO), China’s State Intellectual Property Office (SIPO) and several others.
+Leveraging the world’s patent databases, it is possible to extract meta-data insights regarding technologies outside an organizations traditional development streams. This meta-data includes invention abstracts about the technology, legal claims, inventor’s names, organizations affiliated with the technology and inventors, the relationships between co-inventors, the relationships between academia, government and industry, the technology class codes assigned to the inventions, as well as other sources of meta-data.
+As shown in the previous section of this paper, we have focused on the meta-data of co-inventors within organizations to create the inventor networks and the technology class codes to create the innovation genotypes, with our focus on the geographic regions of Virginia and Michigan.
+Applying our living organism model, it is our opinion that these types of analysis can be applied to business intelligence and decision support in the following ways.
+ Identify network members who have influence on the spread of knowledge in their field of expertise, the identification of pioneers and leaders.
+ Build a network of innovation networks. Each innovation network is a collection of inventors from a single organization, or an entire industry. Once mapped and visualized, intersections among subject matter experts, academia and industry can been seen, or when not present, formed to create an optimal network for knowledge propagation.
+ Discover linkages between new technologies and other technologies required to construct emerging technologies.
+2015 Paper No. 33 Page 7 of 8
+MODSIM World 2018
+
+ Innovate at the intersections; show how inter- and intra-network linkages suggest the creation of new inventions both in the current area of technology and in additional emerging technologies.
+ Scan the innovation horizons for the possible emergence of new, disruptive technologies or applications.
+Considering the chart above in Figure 1, which shows the Dynamic Genotype of the state of Virginia over a four year period of 2010 through 2013, the chart displays the top twenty “genes” by cumulative growth of inventions in those technology areas. Figure 1 is not the entire picture of the inventive body of Virginia organizations and inventors because the entire innovation genotype is too large to visually include in this paper. The entire innovation genotype for the state of Virginia during that time period is 264 different technology classes, each of which represents a possible area for M&S applications.
+Using the genetic model we have developed, any complex technology, especially enabling technologies like M&S, can be systematically studied and it can be determined if there are opportunities to leverage the technique of M&S to all of the other technologies being developed in any defined region, effectively accelerating the rate of innovation in those technological domains.
+REFERENCES
+"The Evolutionary Ecology of Technological Innovations" by Ricard V. Sole et al., Santa Fe Institute Working Paper 2012-12-022
+"Prediction of Emerging Technologies Based on Analysis of the US Patent Citation Network" Peter Erdi et al., Scientometrics, arXiv:1206.3933v3[cs.SI] 4 Apr 2013
+“Diachronic Biology Meets Evo-Devo: C. H. Waddington’s Approach to Evolutionary Developmental Biology,” Scott F. Gilbert,, Amer. Zool., 40:729-737 (2000)
+"Community structure in social and biological networks" <. Girvan and M. E. J. Newman, PNAS, June 11, 2002, vol. 99, no. 12, 7821-7826
+The Brookings Institute 2013 report “Patenting Prosperity: Invention and Economic Performance in the United States and its Metropolitan Areas”, by Jonathan Rothwell et al
+“STEM Education Key to Innovation and Economic Growth”, National Governors Association
+“Do Patents Facilitate Entrepreneur’s Access to Venture Capital?” by Joan Farre-Mensa, et al, October 6, 2016.
+“Thriving in the Innovation Economy through Collaborations Between Governments, Universities, and Industry”, National Academy of Sciences, Engineering and Medicine – Government-University-Industry Research Roundtable, presented by Innovation Business Partners, February 28, 2017
+MODSIM World 2018
+     2015 Paper No. 33 Page 8 of 8

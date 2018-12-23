@@ -1,0 +1,257 @@
+Ready, Aim, Perform! Targeted Micro-Training for Performance Intervention
+Lisa K. Babcock, M.Ed.; Denise R. Stevens, Ed.D. General Dynamics Information Technology Orlando, Florida Lisa.Babcock@gdit.com, Denise.Stevens@gdit.com
+ABSTRACT
+Julia Carpenter, Ed.D. Victor 12, Incorporated Orlando, Florida JCarpenter@victor12.com
+The purpose of this paper is to report how the implementation of a targeted micro-training program, based on monthly error trend reports, has resulted in significant reduction in performance errors. This training solution, designed to focus on specific performance errors, is based on the principles of micro-training and performance diagnostics as a methodology for addressing performance issues. This paper discusses how this new training program was designed using innovative concepts and implemented to meet a fast-paced, 30-day deployment and implementation schedule. The paper also discusses results metrics that provide evidence of the effectiveness of the training intervention in accordance to the Kirkpatrick Model of Evaluation. The results of the study demonstrates that the program positively impacted performance improvement for both the employee and the organization as a whole.
+ABOUT THE AUTHORS
+Lisa K. Babcock, M.Ed., is a Senior Instructional Designer for General Dynamics Information Technology’s Professional Services and Training Solutions Sector. She has over eight years of experience in field of education, specializing in online teaching and the application of the instructional systems design process. She is a published author and solutions architect for Learning Center of Excellence (LCOE). An experienced instructional systems designer, she has developed a variety of training solutions for agencies such as the Veterans Benefits Administration (VBA), State of Massachusetts, and the Transportation Security Administration (TSA), including instructor-led, web- based, and performance-based training. Additionally, Ms. Babcock has participated in simulation design, video production, and design and development of competency-based training and micro-training for both the Consistency Studies program and for other customers. She earned her B.S. degree in Elementary Education and M.Ed degree in Curriculum and Instruction: Instructional Technology from the University of South Florida.
+Dr. Denise R. Stevens is the Chief Learning Officer for General Dynamics Information Technology’s Professional Services and Training Solutions Sector. She has over 28 years of experience in the application of all aspects of the instructional systems design process and human performance technology in applied research and development for government and education. Dr. Stevens has extensive experience in the design of training and performance support systems and job performance measures. Dr. Stevens has been involved in large-scale training design and development efforts resulting in over 14 national awards. She has been involved with conducting cognitive and behavioral job-task analysis, learning objective development, instructional and performance-centered design for various training platforms (such as web-based, classroom-based, or blended deliveries), conducting test reliability and validity procedures, conducting individual and small-group trials, and sequential validation procedures. She has published work on cultural and linguistic diversity in American schools as well as various government publications on cost and training effectiveness analysis. Dr. Stevens has over 10 years of experience as an Adjunct Professor of Foreign Languages and is currently an Adjunct Professor at the Department of Instructional Design and Technology Master’s Program at the University of Central Florida.
+Dr. Julia Carpenter is a Principal Instructional Systems Designer at Victor 12. She has 24 years’ experience in the area of education, specializing in online teaching and learning and instructional systems design. An experienced instructional systems designer, she has developed a variety of training solutions for government agencies such as the Veterans Benefits Administration and the Department of State, Office of Anti-Terrorism Assistance, including instructor-led, web-based, and performance-based training. She has experience as an online facilitator and designer of
+2018 Paper No. 22 Page 1 of 12
+MODSIM World 2018
+
+undergraduate and graduate-level curricula for the University of Florida, Valencia College, and the Department of Defense Security Service (DSS). She received her doctorate in Curriculum and Instruction, concentrating in Educational Technology, from the University of Florida. She was the recipient of the 2011 iNACOL Online Learning Innovator Award for Outstanding Research and the 2016 United States Distance Learning Association (USDLA) Best Practices Award for Excellence in Distance Learning Teaching. She has earned certification as a CPLP (Certified Professional in Learning and Performance) from the Association for Talent Development (ATD), demonstrating mastery of the talent development profession. Julia also serves as the director of CPLP for the Central Florida ATD chapter.
+Vince Flango, M.Ed., is a former Project Manager and Principal Instructional Systems Designer of General Dynamics Information Technology. Mr. Flango contributed to previous versions of this paper and worked as the Project Manager for the Consistency Studies program.
+Dahlia S. Forde, M.S. formerly served as a Lead Human Performance Technologist/Analyst for Victor 12, Inc. and consultant for government agency programs at General Dynamics Information Technology. Ms. Forde contributed to previous versions of this paper and worked as a Human Performance Technologist for the Consistency Studies program.
+2018 Paper No. 22 Page 2 of 12
+MODSIM World 2018
+
+Ready, Aim, Perform! Targeted Micro-Training for Performance Intervention
+Lisa K. Babcock, M.Ed.; Denise R. Stevens, Ed.D. General Dynamics Information Technology Orlando, Florida Lisa.Babcock@gdit.com, Denise.Stevens@gdit.com
+INTRODUCTION
+Julia Carpenter, Ed.D. Victor 12, Incorporated Orlando, Florida JCarpenter@victor12.com
+In the 1990s, the Department of Veterans Affairs (VA) Veterans Benefits Administration (VBA) spearheaded a new training initiative to centralize, standardize, and formalize their training curricula for each of the 18 job positions that involve determining veterans’ eligibility to receive an array of benefits. This need originated in the fact that at that time training was localized; complex procedures were taught differently across many locations. This yielded inconsistent results. These jobs are procedural in nature and cognitively demanding, and processing veterans’ caseloads is a very complex process. Employees must analyze hundreds of pieces of evidence related to a veteran’s life and medical issues in order to make the best determination that will benefit the veteran while complying with ever-changing laws and regulations. Employees who are hired for these jobs have to be trained from the first day of employment on the multitude of processes that are unique to VA. The complexity of these types of jobs required VA to consider adopting more robust training methodologies, with training events mirroring the job at its highest fidelity. With the Training and Performance Support System (TPSS) program, which is still in use today, VA employees practice job-tasks using simulated case files before taking assessments that are designed as job performance measures.
+The initial results of the TPSS program generated large-scale modules that required facilitation and a large number of hours to complete. For example, the original training for one of the job categories—Rating Specialist—required approximately 345 hours of blended training, with computer-based training modules augmented by cooperative learning, offline practice, and assessments. In addition, the supporting materials for the training were paper-based and cumbersome. The students were expected to work with handbooks, test packets, job aids, and extremely large case files that simulated the kinds of cases they would receive in real life. Lengthy times were set aside for novice students to take the training online in designated training rooms.
+These full-length, blended web-based training courses were utilized to address many issues the VA was facing; however, this was not a tenable long-term solution due to both the required time away from production and cost to support. A few years ago, the VA decided to take a competency-based approach to their training program by recognizing and formalizing training curricula specific to three skill and proficiency levels: novice, intermediate, and Journey-level. Journey-level is defined as individuals who have completed their assigned basic training program (Challenge Program) and have been on the job for at least two years. Along with this new initiative, they realized that they needed to reconfigure their training so that it would better cater to remediation. Training courses were developed into a series of smaller, self-contained learning objects that could stand alone for individualized remedial learning paths, yet could still be part of a larger curriculum. This was referred to as the Learning Object Design Methodology.
+This methodology was then applied to all levels of proficiency and became the basis for resolving journey-level performance issues. VA continuously monitors performance and collects data on job performance error trends. Error reports are generated on a monthly basis. Errors vary from month to month for compensation claims, and range from assigning incorrect effective dates to inaccurately granting or denying claims. To resolve these performance issues, a proposal was made to use a training solution that would specifically target the error trend in the field. This required a paradigm shift in thinking: micro-training courses would be given to all journey-level VA employees in two specific job positions in regional offices across the United States: Veterans Service Representatives and Rating Specialists. To reduce required time away from production, this training solution would focus on one to three specific learning objectives and could be completed in a 60-minute time frame and include a pretest, training, and posttest. To increase efficiency in targeting those making errors, those passing the pretest were considered proficient and not required to complete the training, while those who did not pass received the targeted training. Since all employees in the specific job position were required to take the micro-training, data collection could target error trends in specific individuals
+2018 Paper No. 22 Page 3 of 12
+MODSIM World 2018
+
+making the errors and in regional offices as a whole. The VA agreed to this proposed solution in 2014 and mandated that there would be two micro-training courses per month, one for journey-level Veteran Service Representatives and one for Rating Specialists. The VA was skeptical that micro-training would have a positive impact on reducing errors, but they were open to the possibilities it could bring. The program became known as the “Consistency Studies.”
+MICRO-TRAINING
+The problem facing the VA is similar to what many organizations face today. Organizations want targeted chunks of information that are designed to address specific performance errors delivered as “just-in-time” training. There are many advantages to this approach. Small, bite-sized learning can lead to better learning results and business outcomes (Gutierrez, 2014). Not only is the training piece smaller, but the development time is as well. For the Consistency Studies project, after an error is identified, a complete course with performance-based training, assessments, and media elements is designed, developed, evaluated, and delivered to address the error in less than 30 days.
+Micro-training is based on fundamentals of nano-learning and micro-learning. According to Fahey and Ramos (2015), nano-learning is the packaging and delivery of educational content in extremely short increments—10 minutes or less. Nano-learning is based on the principles of nanotechnology: small, self-contained, and unified. Nano-learning can be as small as one element of training, such as a graphic or short audio clip. Micro-learning refers to short-term-focused learning activities on chunked content units (Kovachev, Cao, Klamma, & Jarke, 2011). Jack Makhlouf (2015) defines micro-learning as a teaching style that involves short bursts of highly engaging and interactive information, delivered to the learner at his or her request. In contrast to forced and lengthy training sessions, the learner in a micro-learning style is in control of what, when and how much he or she is learning. Like nano-learning, micro-learning is hyper- focused on a single objective. It can include embedded comprehension checks, but usually does not include recorded assessments. Organizations that have these small units of training often give credit for completion, but do not record scores in a database.
+Micro-training differs from both micro-learning and nano-learning in length, formality, and assessment. Most government agencies are not willing to be informal with their training. The student’s time and performance must be measured, and credit must be given towards the student’s learning plan. Government agencies, such as the VA, require a data driven, standardized measure to assess overall achievement, and to identify comparable strengths and weaknesses with peers. Micro-training allows conformity to the needs and requirements of a government workforce, but is based on the principles of nano-/micro-learning. The table below identifies ways micro-training compares to nano- and micro-learning:
+Table 1. Comparison Chart: Nano-learning, Micro-learning, Micro-training
+MODSIM World 2018
+     Type
+      Time
+    Characteristics
+    Assessment
+      Examples
+    Nano- learning
+ 10 minutes or less
+ Informal
+ One learning objective
+ Just-in-time training
+ Self-contained and can be taken independently
+ Delivered on range of devices (ideally mobile
+devices)
+ No formal assessment and no recorded scores
+ Reusable
+ Not included; some have comprehensio n checks
+  Very short video or audio clip
+    Micro- learning
+      Short, no exact length: typically measured in minutes (Khurgin, 2015)
+    Usually informal
+ One learning objective
+ Just-in-time training
+ Self-contained and can be taken independently
+ Delivered on range of devices
+ May or may not have assessment
+ Reusable
+   Typically not included; some have comprehensio n checks
+     Short instructional mobile course or video (TED talks)
+   2018 Paper No. 22 Page 4 of 12
+
+Micro-training is developed using established instructional design principles (Davis, 2013) and enables instructional systems designers (ISDs) to:
+ Respond to specific performance weaknesses/errors with specific training and resources
+ Provide guidance and practice on the specific job tasks
+ Provide contextual just-in-time learning using authentic materials
+This type of training enables learners to digest bite-sized pieces of information in a highly engaging and interactive way. The small amounts of information permit faster cognitive processing for faster application (Mayer & Moreno, 2003).
+DESIGNING THE SOLUTION
+Until 2012, the VA focused on measuring learning with pretest/posttest validation studies using a sample from the target audience who failed the pretest. If 90% of the sample passed the posttest, the course met the requirements for validation and learning occurred. Now, although the VA is still concerned about whether learning has occurred, they are also tracking the long-term organizational impact of training on error trends.
+Every month, we worked with the Quality Review and Consistency staff to help narrow the focus of the micro-training to address one to three actionable learning objectives that we use to construct a course. Each Consistency Studies course is made up of three parts: pretest, training, and posttest.
+The Pretest
+The testing strategy used for Consistency Studies tests is a type of job performance measures (JPM) with cognitive components. JPM-type of assessment measures actual work samples of the job (Branson et al., 1975; Kraiger, Ford, & Salas, 1993). This type of criterion-based testing allows for the assessment of specific aspects of errors being made on the job based on the learning objectives. Students are first given a diagnostic pretest to determine if they qualify for the training. The pretest normally contains 4–10 questions based on a fictional account of a veteran’s case situation. Usually one or two very critical documents, such as the veteran’s military discharge paperwork or application for benefits, are included within the scenario (see Figure 1). The questions can be presented singularly or in a pair and are presented to address the error trends targeted for the course. The pretest evaluates the student’s cognitive level of facts, procedures, and supporting knowledge and skills.
+The completed pretest, with all of its components, then goes through a three-step review sequence before being approved for deployment. This includes our internal review by a testing expert and two different customer reviews. As soon as the student completes the pretest, he or she will receive a final score. The student must pass the pretest with a 100% score in order to show mastery and earn credit for the training for the month. If students do not pass the pretest, they are immediately directed to complete the training. Although they are given a score and the questions they answered are identified as correct/incorrect, no remediation is provided (Clark, 2015).
+2018 Paper No. 22 Page 5 of 12
+MODSIM World 2018
+     Type
+      Time
+    Characteristics
+    Assessment
+      Examples
+    Micro- training
+    1 hour
+   Formal
+ Typically cover one to three learning objectives
+ Just-in-time training
+ Self-contained and can be taken independently
+ Delivered via computer
+ Formal assessment and recorded scores
+ Reusable
+ SCORM conformant
+ 508 compliant
+  Pretest/postte st measuring mastery of learning objectives
+   Web-based training with multimedia
+   
+The Training
+The training section of the course uses a contextualized approach to instruction as well as cognitive simulation. Contextualization, according to the definition proposed by Mazzeo, Rab, and Allssid (2003), is a diverse family of instructional strategies designed to seamlessly link the learning of foundational skills or occupational content by focusing teaching and learning squarely on concrete applications in a specific context. Instead of initially teaching skills and knowledge separated from their context and hoping that learners will end up knowing how to transfer what they have learned to life outside the training, this approach starts with real-life contexts and weaves them into every stage of the teaching and learning process. This approach meets the unique needs of the target audience of experienced, rather than entry-level, learners. The experienced audience, having already mastered entry-level content, is presented only the information required to target the performance error. The learner, in a micro-learning style, is in control of what, when and how much he or she is learning.
+In addition to contextualization, another important element utilized in the micro-training approach to instruction is cognitive simulation. David Kieras (1985) defines cognitive simulation as a computer program that represents a hypothetical mental process that operates on symbolic structures. The Consistency Studies courses adapted this approach by having the learners mirroring the mental process needed to accurately process and make decisions on complex hypothetical veteran’s claim to avoid performance errors. After simulating the mental process, learners are given the instructional tools, authentic materials, and practice modeling the cognitive process of addressing specific performance errors and focusing on how to avoid these particular performance errors. This focused simulation approach is valuable in ensuring learners avoid these errors when making decisions on complex real-life veteran’s claims.
+Using instructional strategies such as mentoring, anchored instruction, and simulation, the training section of the course consists of 15 to 30 screens that address each objective. The content for the Consistency Studies course is selected from government-furnished manual references, such as the M21-1 Reference Manual and the 38 CFR Reference Guide, to align with the objectives covered in the pretest, which address specific performance errors. Rather than simply citing manual references, instructional designers present references to target performance errors using contextualized instruction. For example, a conversation between a mentor and less experienced coworker may be presented to simulate an error on a veteran’s claim (see Figure 1). The mentor may discuss a performance error made by the coworker on a veteran’s claim, followed by guidance using a specific manual reference. A job aid, such as a checklist or flowchart, may be presented to anchor instruction to specific manual references. The expertise of our internal and external subject matter experts (SMEs) and the real-life examples provided to us by our customer keep the content authentic.
+Figure 1. Sample Screenshots from Courseware
+The practice instructional exercises are designed to emulate the pretest experience and contextualize instruction. The instructional exercises provide detailed feedback that specifically tells students whether they answered correctly/incorrectly, the correct answer, and the rationale behind the correct answer. This provides guidance to the students’ thought process and allows them to test their newly acquired knowledge in a non-stressful environment. When students reach the summary screen, they are directed to take the posttest.
+MODSIM World 2018
+    2018 Paper No. 22 Page 6 of 12
+
+The Posttest
+To receive credit for the course, the student must score a 100% on the posttest. The student is allowed to take the test an unlimited amount of times until they pass. However, only the first attempt results of the posttest is taken into consideration in the final report. Like the questions in the training, the posttest is very similar to the pretest but with new scenario information. In essence, the training and posttest mirror the pretest in their alignment with the objectives. However, unlike the pretest, but similar to the training, the posttest gives the students feedback and remediation. A statistical analysis between each student’s pretest and posttest scores is conducted (Bonate, 2000).
+Previous Approach
+There are numerous differences between micro-training and the traditional approach used in the design of training. The differences in these design approaches are documented in Table 2. While the micro-training design approach used today focuses on specific performance errors, the previous design approach focused on mastery learning of tasks. For example, one micro-training designed in September 2015 focused on specific performance errors related to ordering VA examinations properly, while a task-focused training designed several years earlier focused on training the task of rating a case on post-traumatic stress disorder (PTSD). One sub-task of the PTSD training is ordering a VA examination for PTSD.
+As a result of the micro-training approach, the length of micro-training is shorter than the length of training designed with task-focused approach. There are two or three learning objectives in micro-training that zero in on correcting a performance error. The task-focused approach, on the other hand, is based on broader learning objectives focused on teaching the task and supporting mastery learning.
+Table 2. Performance Error Approach versus Task Approach Comparison Chart
+MODSIM World 2018
+     Performance-Error-Focused Approach (Micro-training)
+      Task-Focused Approach
+   Focus of training is on avoiding specific performance errors
+     Focus of training is on the task
+    Target audience of micro-training knows all job tasks
+   Target audience knows general prerequisite task (for example, how to rate a general case) but not the specific task being trained
+    Target audience is experienced learners (on the job six months or more)
+     Target audience is experienced learners (on the job six months or more)
+    Training is 30 minutes in length
+       Training is more than 1 hour
+    Two or three learning objectives addressing correcting performance error
+     Four or more learning objectives focused on teaching the task
+    Design of training includes content (including regulations, examples, tools) users need to correct the performance error
+     Design of training includes content (including regulations, examples, tools) users need to learn the task
+    Pretest validates the performance error trend. Those who are not making performance error on the job pass the pretest; those who are making the performance error do not pass and serve as target audience for the micro-training
+   Pretest measures learning gains from the pretest to the posttest. Purpose of pretest is to compare scores of pretest before and after training. Learners failing the pretest and passing the posttest after taking the training have demonstrated mastery learning
+    Exercise and test remediation is narrower and focuses on rationales. Students are provided with reviews of legal references
+       Exercise and test remediation is broader and focuses on breaking down the concept into simpler parts to ensure mastery
+   2018 Paper No. 22 Page 7 of 12
+
+DEVELOPMENT PROCESS
+Each Consistency Studies course is developed two months before it is to be released so that there is adequate time for the review process. Using the ADDIE model, we progress through the various stages of development for each course evaluating at each step.
+Step 1: Kickoff Meeting (Analyze)
+A kickoff meeting is conducted when starting a new Consistency Studies topic. This meeting consists of a collaboration in which the topic is stated by the customer and a review of error trends is completed. During this meeting, the entire team discusses the performance issues and the common errors being made. Then the team determines the learning objectives to be covered in the study to address the errors.
+Step 2: Test Validity (Pretest Design, Development, and Implementation)
+After the kickoff meeting, the learning objectives are refined and a diagnostic pretest is designed and developed. The diagnostic pretest assesses each learning objective. The distractors (or incorrect answer choices) are strategically created to represent the common errors that are made according the error reports. As stated previously, the pretest is created to directly address the objectives that will be covered within the training. The training is created after the pretest so that each screen can align with a specific pretest scenario and question. This allows each screen to be traceable back to a specific learning objective.
+The pretest is a criterion-referenced test (CRT) because it is designed to measure a trainee’s performance based on predetermined criteria or learning objectives. The most common forms of reliability for CRTs are test-retest, parallel forms reliability, internal consistency (e.g., Cronbach alpha), and decision consistency. Due to the circumstance of a quick turnaround time, a small sample of SMEs to take the test, and a small number of items per test (i.e., 4 to 10 items); none of the common reliability methods could be used in its purest form for the Consistency Studies pretest. Instead, prior to the Test Validity meeting, the customer representatives are asked to take the pretest online. The VA provides one expert from each of their review departments.
+The SME results are analyzed, and test items are flagged (for further review) if there is not a consensus on the correct answer. During the Test Validity meeting, the SMEs review the entire test together and provide additional feedback. Along with the test questions and answer choices, the scenarios and supporting documents are thoroughly scrutinized.
+To establish content validity for the pretest, the Lawshe Content Validity Ratio method (Lawshe, 1975) is used. During the Test Validity meeting (after all edits have been made to the test items based on SMEs feedback), the SMEs have to decide whether or not they believe each test item is essential to assess the knowledge, skill, and/or ability that is described in the learning objective that corresponds to the test item. The standard set for Consistency Studies pretest is that all (i.e., 100%) of the SMEs have to agree that the item is essential for the item to be considered valid and retained for use on the test. In addition, content validity is demonstrated using a linkage matrix that links each test item with a learning objective and to specific content in the course.
+Step 3: SME Review (Training and Posttest Design, Development, and Implementation)
+The training portion of the course is created using the in-house course development program through collaboration of the Lead ISD, SME, programmer, and graphic artist (GA). The content is created, formatted, and laid out by the ISD. The ISD will then request assistance from the programmer and GA as needed for graphics and interactivity updates. After the course draft is complete, the course is uploaded to the server for review by customer representatives prior to attending a screen-by-screen review. The same customer representatives who attended the Test Validity meeting also attend this screen-by-screen review.
+Although the training is only 30 minutes long, this meeting normally lasts two hours, as careful consideration is taken for each screen. After the entire group comes to consensus that a screen is accurate, the group will continue to the next screen until the entire course has been reviewed. The majority of changes will be made on the spot during the meeting.
+2018 Paper No. 22 Page 8 of 12
+MODSIM World 2018
+
+Step 4: Deployment
+The entire courseware package is then deployed to the VA’s production server. The course is open for all students for a 27-hour period before closing on the second Tuesday of every month. All results are recorded: the student selections on the pretest/posttest, the time it takes them to complete, the number of times it takes them to pass the posttest, and comments from the survey questions. Every screen on the graphical user interface also has a comment button that allows any student to challenge any content on the screen. Since the courses have been thoroughly reviewed, there has rarely been a major error in the two years of running these studies. (In March 2015, there was an error in the pretest for that month that resulted from a law change that occurred the same day the test was released.)
+All of this data is analyzed at the end of the study period. Our team looks at trends within the comments made, the comparisons between the pretest and posttest, and the difference of performance among the demographic groupings. The data is compiled into a report that goes directly to the Quality Review and Consistency staff.
+After the report is completed, all comments are vetted by our internal team. Any comments concerning content from the field are addressed with a small panel of experts from the VA. After the changes are made, the course is re-released into the field as an option for students to take as part of their formal learning plan.
+RESULTS
+Each Consistency Studies micro-training is evaluated using the Kirkpatrick Training Evaluation Model (Kirkpatrick, 1994). The model has four levels: Level 1 (Reaction), Level 2 (Learning), Level 3 (Behavior), and Level 4 (Results). For the Consistency Studies micro-training, data were captured for three of the four levels. Due to the restrictions of paper length, a set of results from one of the Consistency Studies will be presented. There were 1,730 Rating Specialists who completed the micro-training. The following subsections describe the evaluation of the Consistency Studies micro-training on each of the Kirkpatrick levels.
+Level 1: Reaction
+The first level of evaluation was conducted by having the trainees complete a survey immediately after the training. There was a total of nine survey questions that captured the trainees’ reaction towards the micro-training. Six of the nine questions on the survey used a five-point Likert scale with 1 representing Poor, 3 representing Fair, and 5 representing Excellent; the other three questions on the survey were open-ended questions.
+The six Likert-scale questions asked about the trainees’ overall satisfaction with training, overall satisfaction with lesson quality, ease of navigation through training, value of training for improving job performance, knowledge before training, and knowledge after training. The average ratings for each of the six items were 3.59, 3.67, 3.82, 3.78, 3.60, and 3.88, respectively.
+The three open-ended survey questions asked trainees to indicate things they liked about the training and things they would like to see improved. The vast majority of the comments were positive. The common themes in the comments were: the training was needed, it was simple yet effective, it allowed them to stay current on rating procedures, and they found the training to be a very good tool and reference for Rating Specialists. The unfavorable comments were limited to complaints from participants who were not required to perform the task in their position and therefore thought the training was not for them. The VA divides the position into categories (e.g., pre-development and post- development) so that Rating Specialists can manage the workload more easily. Some Rating Specialists have been in their assigned lanes for years, which has resulted in no exposure to or experience in some of the tasks related to the job. Though this is the case, Rating Specialists are still required to be proficient in all areas of their job.
+Level 2: Learning
+Learning was evaluated by comparing the pretest and posttest scores. A paired-samples t-test was used to analyze the data. Results show a statically significant improvement in scores from pretest (M=70.83, SD=17.83) to posttest
+2018 Paper No. 22 Page 9 of 12
+MODSIM World 2018
+
+(M=88.16, SD=16.88); t(1170)=29.87, p<.0005. The magnitude of the differences in the means was large (eta squared=.43) (Cohen, 1988). This is strong evidence that learning has occurred.
+Results show that 32.37% of trainees passed the pretest; 54.62% of the trainees who did not pass the pretest took the micro-training and passed the posttest on the first attempt. If trainees did not pass the posttest on the first attempt, they were allowed to review the course again and retake the posttest. As a result, 100% of the trainees who did not pass the pretest passed the posttest.
+Level 3: Behavior
+Level 3 evaluation was not performed because it was outside the scope of the contract with the VA. This level of evaluation would require implementation of a systematic methodology to measure the transfer of learned knowledge, skills, and attitudes from training to the job/workplace, and therefore would have required questionnaires and interviews to determine how the trainees assimilated the training.
+Level 4: Results
+Level 4 evaluation results demonstrate that the Consistency Studies micro-training appears to have had a positive impact on the organization. This impact is indicated by reduced error rates on the specific errors that were targeted in the micro-training. Data show that after a Consistency Studies micro-training is deployed, the error reports show a significant decrease in the errors targeted in the training.
+The figure below, Issue Based Error Breakdown for Fiscal Years (FYs) 2014 and 2015, shows a comparison of the frequency of errors of the most prevalent types of error (or error codes) between FYs 2014 and 2015. The highest decrease in errors occurred for the following error codes:
+ B2bb-VA exam was needed - with or without a medical opinion,
+ B2cc-VA medical opinion was needed,
+ B2f-Insufficient VA examination/medical opinion.
+The aforementioned types of errors were targeted in Consistency Studies micro-training courses offered in 2015. Thus, the greatest decrease in errors occurred for the errors that were targeted in the micro-training courses. The error codes that were not targeted in micro-training showed little to no reduction, and in some instances, there was an increase in the errors when comparing results for FYs 2014 and 2015.
+In summary, the September 2015 Consistency Studies micro-training and other related Consistency Studies micro- training courses have shown positive results on the three levels of the Kirkpatrick Training Evaluation Model that were evaluated:
+ Level 1: The trainees have a positive reaction to the courses and assessments.
+ Level 2: Learning is being demonstrated with a significant increase in scores from pretest to posttest.
+ Level 4: The micro-training is having a positive impact on the organization by showing a reduction in error
+rates for specific errors that were targeted in the micro-training.
+2018 Paper No. 22 Page 10 of 12
+MODSIM World 2018
+
+CONCLUSION
+This project has demonstrated that with a micro-training solution, it is possible to balance the demands of a high- volume production environment with mandatory training requirements. The solution relies on the targeting of top error trends each month, creating extremely focused learning objectives, and presenting training in small, manageable chunks that the student could absorb and instantly apply to his or her job duties. The content is presented using contextualized instructional strategies coupled with targeted assessments. The combination of all of these design components contributed to the success of the project. The Consistency Studies program has been very effective in reducing employee performance errors, and as a result, this error reduction has directly contributed to the reduction of the national backlog by ensuring that our nation’s veterans and their dependents receive their benefits in a timely manner.
+Since this particular Consistency Studies project has been completed, numerous additional studies have been implemented with similar positive results. Not only is the VA no longer skeptical about micro-training, but they are planning to expand this type of training intervention program to other job categories and possibly other services. Application of the micro-training process can help any organization that is struggling to maintain a trained workforce with constant production demands. “Micro” may mean “small,” but in this case, it means “better.”
+2018 Paper No. 22 Page 11 of 12
+MODSIM World 2018
+  Issue Based Error Breakdown for FYs 2014 and 2015
+2014 2015
+       D2h-Other D2c-Dependency adjustment D2a-CRDP or other MRP adjustment
+D1j-Incorrect effective date for all other situations... D1f-Informal date of claim -missed or misapplied
+D1d-Increased disability -incorrect effective date based... C2h/g-Under/Over-evaluation
+C1f-Separate evaluation warranted for on SC disability... C1d-Pyramiding (same symptomatology used for...
+1831
+22 27
+22 29
+ C1e-Service connection warranted (general)
+C1d-Service connection warranted (general) *B2f-Insufficient VA examination/medical opinion *B2cc-VA medical opinion was needed
+*B2bb-VA exam was needed - with or without a medical... B1r-VCAA not sent B1i-Special issue development incomplete: Gulf War A2K-Other A2iS-MC or SMP - HB A1j-Increased evaluation A1h-Service connection (SC)
+148 139
+96 92
+0
+100
+Number of Errors Detected
+160 161
+200 300 400
+291
+378
+34 58
+57 57
+2338
+0 11
+37 46
+36 31
+64 63
+69 60
+72
+7
+9
+100
+107 105
+106
+195
+200
+338 356
+ Figure 2. Issue Based Error Breakdown for Fiscal Years (FYs) 2014 and 2015
+Type of Error
+
+For future application and research, we recommend an optional Kirkpatrick Level 3 evaluation component be added to this training intervention process for two possible situations. The first situation is if an organization is not able to conduct an evaluation at Level 4. The second is if an organization wants to cater more to assessing direct behavioral changes on the job for individuals or groups of individuals. Level 3 evaluation procedures will allow an organization with multiple organizational levels and locations to capture important data, such as the negative impact local processes and procedures can have on the transfer of training to the job.
+In addition, another future step could include additional analysis that can be broken down even further to examine a change in the specific areas of job performance that the micro-training course targeted versus areas of job performance that the micro-training course did not address. Adding this step will give us a more holistic and comprehensive insight on the effectiveness of micro-training.
+ACKNOWLEDGEMENTS
+This paper would not have been possible without the support of the staff at the Department of Veterans Affairs and, in particular, the Office of Employee Development and Training (EDT). Notably, we would like to acknowledge Barry Pietrewicz, the Project Manager/Instructional Systems Specialist for the Training Management & Performance, Improvement Division, Office of Employee Development and Training
+REFERENCES
+Bonate, P. (2000). Analysis of Pretest-Posttest Designs Boca Raton, FL, CRC Press LLC.
+Branson, R. K., Rayner, G. T., Cox, J. L., Furman, J. P., King, F. J., Hannum, W. H. (1975). Interservice procedures for instructional systems development. (5 vols.) (TRADOC Pam 350-30 NAVEDTRA 106A). Ft. Monroe, VA:
+U.S. Army Training and Doctrine Command, August 1975. (NTIS No. ADA 019 486 through ADA 019 490). Clark, Don. (2015, September 22) Testing Instruments in Instructional Design. [Web log post]. Retrieved from
+http://nwlink.com/~donclark/hrd/isd/develop_test.html
+Cohen, J. (1988). Statistical power analysis for behavioral sciences. Hillsdale, NJ: Erlbaum.
+Davis, A. (2013) Using instructional design principles to develop effective information literacy instruction: The ADDIE Model. College & Research Libraries News, volume 74(4), 205-207.
+http://crln.acrl.org/content/74/4/205.short
+Gutierrez, K. (2014, April 15) The Age of Bite-sized Learning: What is It and Why It Works. [Web log post]. Retrieved from http://info.shiftelearning.com/blog/bid/342367/The-Age-of-Bite-sized-Learning-What-is-It-and-Why-It- Works
+Fahey, J. and Ramos, M. (2015) Nano-learning: An Exciting New Tool for Professional Development. Dayton, OH: Association for Accounting Administration.
+Khurgin, A. (2015, August 25) Will the Real Microlearning Please Stand Up. [Web log post]. Retrieved from https://www.td.org/Publications/Blogs/Learning-Technologies-Blog/2015/08/Will-the-Real-Microlearning- Please-Stand-Up
+Kiera, David. (1985, March). The Why, When, and How of Cognitive Simulation: A Tutorial. Behavior Research Methods, Instruments, and Computers, 17(2), 279-285.
+Kirkpatrick, D. L. (1994). Evaluating Training Programs: The Four Levels. San Francisco: Berrett-Koehler. Kovachev, D., Cao, Y., Klamma, R., & Jarke, M. (2011) Learn-as-you-go: New Ways of Cloud-Based Micro-learning
+for the Mobile Web. Retrieved from Information Systems and Databases, RWTH Aachen University, Ahornstr. Kraiger, K., Ford, J. K., & Salas, E. (1993). Application of Cognitive, Skill-Based, and Affective Theories of Learning
+Outcomes to New Methods of Training Evaluation. Journal of Applied Psychology, 78(2), 311-328.
+Lawshe, C.H. (1975). A quantitative approach to content validity. Personnel Psychology, 28, 563–575.
+Makhlouf, J. (2015, April 15) Microlearning: Strategy, Examples, Applications, & More. [Web log post]. Retrieved
+from http://elearningmind.com/2015/04/
+Mayer, R. and Moreno, R. (2013) Nine Ways to Reduce Cognitive Load in Multimedia Learning. Educational
+Psychologist, volume 38(1), 45-50.
+Mazzeo, C., Rab, S. Y., & Allssid, J. L. (2003). Building Bridges to College and Careers: Contextualized Basic Skills
+Programs at Community Colleges. Brooklyn, NY: Workforce Strategy Center.
+MODSIM World 2018
+       2018 Paper No. 22 Page 12 of 12

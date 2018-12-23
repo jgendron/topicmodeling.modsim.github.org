@@ -1,0 +1,446 @@
+Landstown High School
+Governor’s STEM Academy Modeling and Simulation Pathway
+James E. Barger Ed.D, Jennifer Mattice, Lisette Diehl
+Landstown High School Governor’s STEM Academy
+Virginia Beach, Virginia
+jebarger@vbschools.com, Jennifer.mattice@vbschools.com, robin.diehl@vbschools.com
+ABSTRACT
+In 2001 Landstown High School was identified by the Virginia Beach City Public Schools Board of Education as the school divisions “Technology Academy” with a charge to offer the students of Virginia Beach state of the art educational opportunities within the fields of Entrepreneurship, Information Technology and Engineering. The Landstown High School Governor’s STEM Academy in Virginia Beach, Virginia was created by the Virginia State Board of Education in 2012.
+The Virginia State Board of Education originally approved the STEM Academy with one pathway, Engineering, that would operate separate from the local technology based academy programs, and upon completion of the Engineering pathway, award each student completing the highly rigorous program a highly coveted Governor’s Seal on their diploma. It quickly became evident that additional Governor’s STEM Engineering based pathways would be required to meet the needs of the industry that the Virginia Educational system, and Virginia Beach City Public Schools, serves. Through the 2012-13 school year data was collected to determine the pathway that would be submitted to expand the offerings at Landstown Governor’s STEM Academy. This paper/presentation will report on the progress of the Landstown Governor’s STEM Academy’s Modeling and Simulation Pathway.
+This paper/presentation will present a framework for other school divisions wishing to establish a high school based Modeling and Simulation Pathway for their students in grades 9-12. The establishment of a framework that can be replicated is critical to the expansion of Modeling and Simulation as a course elective at the high school level.
+ABOUT THE AUTHORS
+Dr. James Barger is the current department chair for the Landstown High School Governor’s STEM Academy in Virginia Beach, Virginia. He is the lead teacher for the Governor’s STEM Robotics Pathway, teaching Introduction to Robotics, Intermediate Robotics and Advanced Robotics. He holds a Bachelor’s degree in Education from Fairmont State University, a Master’s degree in Vocational Administration from Marshall University, and a Doctoral degree in Computer Information Technology from Nova Southeastern University.
+Ms. Lisette Diehl is serving in her eleventh year as the Academy Coordinator at Landstown High School with the Virginia Beach City Public Schools and twenty-ninth year in education. She is the administrator for the Governor’s STEM and Technology Academies programs in Entrepreneurship, Information Technology, and STEM Engineering. She received her Masters of Arts in Education in the field of administration and supervision with honors from Austin Peay State University. She earned her B.A. as a dual major in biology and chemistry (pre-med) cum laude graduate and a member of the Alpha Kappa Mu National Honor Society from Norfolk State University.
+MODSIM World 2016
+  Jennifer Mattice attended the State University of New York at Oswego and received her bachelor's degree in
+ Technology Education. She has completed her Masters of Arts in Education degree in Integrative STEM Education
+ from Virginia Tech. Jennifer has taught for 5 years currently teaching at Landstown High School Governor’s STEM
+ & Technology Academy. She is the modeling and simulation teacher, the sponsor for Lady Eagle Engineers, a coach
+ for FTC Team 5527, Dynamic G.E.A.R.S, a co-advisor for TSA (Technology Student Association), and a co-coach
+ for FRC Team 4969.
+2016 Paper No. 56 Page 1 of 14
+
+Landstown High School
+Governor’s STEM Academy Modeling and Simulation Pathway
+James E. Barger Ed.D, Jennifer Mattice, Lisette Diehl
+Landstown High School Governor’s STEM Academy
+Virginia Beach, Virginia
+jebarger@vbschools.com, Jennifer.mattice@vbschools.com, robin.diehl@vbschools.com
+BACKGROUND/INTRODUCTION
+Landstown High School currently houses the Virginia Beach City Public Schools’ (VBCPS) Technology Academy. The Technology Academy at Landstown High School began operation, in conjunction with the opening of the new comprehensive high school, in the fall of 2001 as a school-within-a-school concept. For the past 15 years, the Technology Academy has provided an innovative learning environment designed for students to acquire skills needed in higher education, in the workplace, and in emerging technology fields. The program’s focus has been to prepare students for advancement to institutions of higher education, advanced technology training, or entry-level jobs.
+Due to the variety of interests of a diverse population within the school, as well as the varied employment opportunities available to the students, the program consists of three major areas of focus: Engineering and Technology, Marketing and Entrepreneurship, and Business and Information Technology. Within these expanded programs of study students are provided with choices to address their interests, abilities, and skills required for future employment. Students may pursue one, two, or three of these programs based on their needs/interests. In conjunction with each program, students are enrolled in an honors-level English curriculum that infuses technical writing and technology. The courses offered within each of the program areas are approved Career and Technical Education (CTE) courses and lead to various industry certifications and CTE completer status.
+Approximately 400 students attend the Technology Academy each year. The graduating class is typically between 90 and 100 students per year. Traditionally this group of graduates is awarded well over one million dollars in scholarship monies to invest in furthering their education.
+RATIONALE
+Since the inception of the existing program in 2001, the Technology Academy has evolved to meet the growing needs of students as mandated by industry and higher education. We intend to continue expansion of our program to address the demands of the 21st-century student and the world that awaits them through the Governor’s STEM Academy. The original rationale for the Technology Academy program in 2001 was based on the emphasis that the existing and future work force must be prepared to meet the challenges posed by technology (e.g., maximizing efficient use of technology and increasing global awareness). The same reasoning is apparent today with a greater
+MODSIM World 2016
+ 2016 Paper No. 56 Page 2 of 14
+
+emphasis on specialization and STEM-related fields. Although the statistics today vary greatly from those of a decade ago, the demand still exists. Names may have changed, but certainly not the compelling nature of the need.
+According to the K–12 STEM Ed Report Card published by the Alliance for Science & Technology Research in America, the Commonwealth of Virginia will need to fill 404,000 STEM-related jobs by 2018. Virginia is one of four states that will lead the nation in the share of total jobs in the area of information technology and marketing career clusters as reported in the most recent Georgetown University Career Clusters forecast for 2008–2018 by the Center for Education and the Workforce. The introduction of specialized fields such as nanotechnology, advanced manufacturing, biotechnology, chemical engineering, geospatial technology, just to name a few, has broadened the scope of areas to address. With continuously evolving technical innovations and the global expansion of its many applications, students today need carefully designed programs of study that allow them to focus their intellectual development in particular fields.
+Our Hampton Roads region currently identifies six major technology industry clusters, namely aerospace, bioscience, coastal energy, modeling and simulation, robotics and unmanned systems, and sensors. Technology developments will require that students not only be prepared to face current demands, but be able to quickly adapt to new ones. Critical thinking and problem-solving are necessary skills, as is flexibility. In previous years, it was thought that basic exposure to these fields in the high school setting would suffice. The past decade has shown that more is needed. In the April 2007 STEM Workforce Challenge report, prepared for the U.S. Department of Labor by Jobs for the Future, it was noted that “... our nation needs to increase the supply and quality of ‘knowledge workers’ whose specialized skills enable them to work productively within the STEM industries and occupations. It will not be sufficient to target baccalaureate and advanced degree holders in STEM fields.” Our challenge at the secondary level is to provide students with not only the current industry-related skills, but to equip them to adjust to the advancing requisites of today’s world. According to Deloitte and the Manufacturing Institute’s recent report on talent in the manufacturing industry, “Over the past five years, most manufacturers have redesigned and streamlined their production lines while implementing more process automation. In short, as the industry has changed, the nature of work that it requires is changing as well.”
+As an existing technology-based academy program, the challenge is designing not only classes, but sequences of studies, that will meet the future needs of our students in specific career pathways. They must have the problem- solving and communication skills necessary for the demands of the workplace now and in the immediate future. It is imperative that they have opportunities to participate in hands-on, project-based learning. Part of their assessment process must offer them the prospect of earning industry certification credentials. Students should be able to partake of on-the-job training and mentoring to provide them with real-life experiences. The curriculum that is delivered in the classroom must emphasize and address these emerging needs.
+2016 Paper No. 56 Page 3 of 14
+MODSIM World 2016
+
+The classroom environment must also model the future workplace. Rigor and relevance are no longer words to define where instruction should go, but rather where it must be. More importantly, these terms do not just apply to those who are identified as academically-high achievers, but for all students. The teachers who provide this instruction must be qualified not only in content delivery, but in its application. Additionally, the staff must be knowledgeable on how to advise their students about career pathways and higher education offerings. The author of the article, “Advancing the STEM Workforce through STEM-centric Career Development,” states, “Only through integration of academic and career and technical education are students best served.” The current Technology Academy program offered at Landstown High School merges the best of both worlds, affording our students multiple opportunities to obtain the technical skills and knowledge base that will be required for the 21st-century learner/worker while pursuing his or her studies at the high school level.
+EXPANSION PROGRAM TO ESTABLISH THE GOVERNOR’S STEM ACADEMY
+To reflect the diversity of our student population and our current program, a cluster from each area of concentration has been selected with a corresponding career pathway for the Governor’s STEM Academy. The skills and knowledge students acquire will give them a competitive edge when pursuing advanced training and postsecondary education. The Engineering and Technology pathway will lead students to acquire industry certifications in areas that meet the high STEM demands of a local work force that supports the large military and industrial presence in our region. Students pursuing the information technology pathway of Web and digital communications will also benefit. The marketing pathway of professional sales will help prepare our students for projected state needs as well as the local needs in the tourism market. Additionally, the three pathways will incorporate the essential workplace readiness skills. Through project-based learning and work-related experiences, students will garner skills in research, communication, project management, collaboration, and leadership. Students in the Governor’s STEM Academy may also participate in the co-curricular organizations of DECA, FBLA, and TSA and the wealth of established competitions and cooperative education opportunities. All of these real-life experiences and applications will further prepare students for their future. Enhanced co-curricular activities and units of study will be designed and utilized to maximize instruction and reinforce learning and applications of skills.
+CURRENT PROGRAM OVERVIEW
+The Landstown High School Technology Academy is located within the comprehensive high school building of Landstown High School at 2001 Concert Drive in Virginia Beach, Virginia. It features a cutting-edge curriculum especially designed for students who demonstrate a profound interest in and talent for technology. Landstown High School is the only high school in the division to offer students an opportunity to focus their learning on engineering and technology, a critical area of the emerging workplace. The primary emphasis of the Technology Academy is to provide students within our division the opportunity to enhance their core curriculum high school experience with specific coursework and skills in the areas of engineering and technology (STEM). Guided by our division’s
+2016 Paper No. 56 Page 4 of 14
+MODSIM World 2016
+
+Strategic Plan for Student Success, “Compass to 2020,” the Technology Academy strives to provide students with a stellar educational background to prepare them for the 21st-century work force, advanced training, and higher education. As a result of these efforts, Landstown High School Governor’s STEM and Technology Academy was ranked as one of the top six percent of all high schools in the country by The Washington Post in 2010. During the 2009–2010 school year, the Engineering and Technology department participated in the Governor’s Exemplary Standard review. The program was awarded the status of “achieving,” only points away from the highest level of “exemplary” status.
+Landstown High School’s general population is comprised of nearly 2,400 students. The Governor’s STEM Academy offers courses to approximately 400 students ranging from grades 9 to 12. Each grade level will consist of about 100 students. Currently 249 students are enrolled in Engineering and Technology courses within the Academy. As a result of a thoughtful recruiting process, the program is well represented by students of all backgrounds, ethnicity, and both genders. Prior to acceptance into the program, students select one or more concentrated career pathways from within the engineering and technology program of study. The innovative learning environment of the Technology Academy provides students the added advantage of combining academic and technical training that will prepare them for a variety of post-graduation choices, such as higher education, advanced technical training, or the job market. The Academy utilizes Web-based and online learning, and our classrooms are equipped with advanced-level computers, software, and equipment. There is flexibility within the program for students to broaden their exposure to multiple career clusters. All Academy classes are CTE-approved courses. Several of the courses, such as Advanced Placement (AP) Computer Science, Physics of Technology, and Honors Academy English, carry core subject credits for mathematics, science, and English. Verified credit can be earned in any course where the student has successfully passed an industry certification examination. The program is preparing to expand its offerings in the social sciences discipline through AP Government classes. Dual enrollment courses were established with the inception of the Technology Academy for the English sequences in conjunction with Tidewater Community College. Additional specialty courses and industry certifications are accessible through the Advanced Technology Center. Landstown High School and Technology Academy currently offer a variety of 22 industry certifications at our site. Each of the program sequences are four-year programs complemented with accompanying industry certifications leading to specific career pathways. Overlapping within departmental offerings allows students to maximize their studies and skills while allowing for flexibility in options after graduation. The Technology Academy core courses offered within the approved program are exclusive to the Academy and are not available at any other high school setting within the division. Upon completion of two full- credit CTE courses, CTE completer status is attained. Students who successfully complete four or more of the approved Technology Academy courses are awarded the Academy seal upon graduation. Students satisfying all of the mathematics requirements for the Advanced Studies diploma (with a B average) in addition to earning an industry certification, acquiring a professional license in a CTE field from the Commonwealth of Virginia, or passing an examination approved by the Board of Education from the Commonwealth that confers college-level credit in the area of technology or computer science will be awarded the Seal of Advanced Mathematics and
+MODSIM World 2016
+ 2016 Paper No. 56 Page 5 of 14
+
+Technology. Those students who complete a prescribed sequence of courses in a CTE concentration and meet all of the additional requirements will receive the Career and Technical Education Seal. The majority of students in the program are seeking Advanced Studies diplomas.
+Students attending the Technology Academy select a minimum of one Academy course to pursue each year on campus. Based on availability, students may take as many Academy classes each year as their schedule will permit. Academy classes are elective classes with complementing core classes including a four-year sequence of honors- level English classes. The program is divided into three programs of study: Engineering and Technology, Business and Information Technology, and Marketing and Entrepreneurship. Each of these programs of study offers detailed sequences of courses to complete for industry certification and to prepare the student for specific STEM career pathways. They are aligned so that students may earn specific industry certifications, Career and Technical Education completer status, and meet the requirements for a specific diploma. For the purposes of this paper we will focus on the Engineering and Technology program of study.
+The Academy program is strongly focused on project-based learning. In keeping with our division strategic plan for student success, “Compass to 2020”, teachers engage students in meaningful, authentic, and rigorous work through the use of innovative instructional practices and supportive technologies that will motivate the students to be self- directed and inquisitive learners. Performance-based assessments are utilized to measure students’ success in meeting 21st-century skills. Augmented curricula are integrated into classroom instruction to address 21st-century skills, as well. Indicators such as follow-up data from employers and colleges are collected to assess graduates’ college and workplace readiness.
+Students enrolled in any Engineering and Technology class are eligible to participate in the corresponding student organization. Engineering and Technology students are affiliated with the Technology Student Association (TSA). TSA is a national student organization devoted to teaching technology education to young people promoting personal growth, leadership, and opportunities in technology, innovation, design, and engineering. Its mission is to inspire students to prepare for careers in a technology-driven world. Members apply and integrate science, technology, engineering, and mathematics concepts through class activities, concept events, and related programs. The teachers promote technology literacy, leadership, and problem solving to the students.
+All students enrolled in the Academy program and meeting the eligibility requirements may participate in the National Technical Honor Society. This organization is devoted to creating and fostering relationships among industry, business, and educational communities. Active students may compete for scholarships and additional career opportunities. Using Pipeline NC, members have access to an innovative Web-based system that allows students to collaborate with businesses and educators.
+2016 Paper No. 56 Page 6 of 14
+MODSIM World 2016
+
+PROGRAM GOALS AND OBJECTIVES
+The overall goals of the Landstown Technology Governor’s STEM Academy are to provide students with the 21st- century technological skills and knowledge necessary to succeed in postsecondary education and in the world of work. Specific Academy objectives include the following:
+ Provide students with guidance in designing their sequential, four-year high school program and postsecondary plan to ensure they make informed decisions.
+ Provide students with the knowledge and skills necessary to succeed in a STEM-related field of technology in a highly competitive 21st-century world.
+ Develop critical-thinking, problem-solving, and decision-making skills required for the 21st-century workplace.
+ Prepare students for postsecondary education and/or the skills for a successful school-to-work transition.
+ Build partnerships with educational institutions, the business community, and the technology industry to
+establish internship and mentorship opportunities, as well as programs for expanded learning to extend, enrich, and refine student learning and link the resources of community, business, and industry to education.
+ Provide a series of sequential courses for students with multiple entry and exit points depending on their individual goals, abilities, and interests in order to ensure excellence and equity.
+ Provide students with opportunities to attend classes that reflect industry standards and allow them to earn industry certifications.
+ Encourage students to participate in competitions to enhance their skills and acknowledge their accomplishments.
+AVAILABLE PATHWAYS
+Currently, within the Governor’s STEM Academy the current pathways are available to student enrolled in the Engineering and Technology Strand:
+ Modeling and Simulation (See Attachment A)
+ Robotics Technology (See Attachment B)
+ Engineering and Technology (See Attachment C)
+2016 Paper No. 56 Page 7 of 14
+MODSIM World 2016
+
+CONCLUSIONS AND FUTURE RESEARCH CONCLUSIONS
+1. It can be concluded based on the data, that the current programs of study are meeting the needs of the areas that they target.
+2. The enrollment for the Academy programs of study is consistent, and interest from the lower middle school grades in the programs remains high.
+FUTURE RESEARCH
+1. After discussions with current parents, employers and school official’s future research will be conducted to determine the feasibility of adding a fourth pathway to the Engineering and Technology program of study. This pathway would target the Computer Science arena.
+REFERENCES
+Center on Education and the Workforce, Georgetown University. Career Clusters: Forecasting Demand for High School through College Jobs, 2008-2018 http://www.nrccte.org/resources/publications/career-clusters-forecasting- demand-high-school-through-college-jobs-2008-2018
+Deloitte and the Manufacturing Institute. Boiling Point? The skills gap in U. S. manufacturing
+Hampton Roads Research Partnership. Innovate! Hampton Roads. November 14, 2011 http://www2.deloitte.com/us/en/pages/manufacturing/articles/boiling-point-the-skills-gap-in-us-manufacturing.html
+International Technology Education Association. Advancing the STEM Workforce through STEM-centric career Development by Rich Feller, September 2011. http://eric.ed.gov/?id=EJ941849
+Jobs for the Future. 2007. The STEM Workface Challenge: the Role of the Public Workforce System in a National Solution for a Competitive Science, Technology, Engineering, and Mathematics (STEM) Work force. http://ajed.assembly.ca.gov/innovationrequiresaskilledworkforce
+The Alliance for Science & Technology Research in America. Virginia’s K–12 STEM Ed Report Card. 2011.
+https://www.usinnovation.org/
+MODSIM World 2016
+      2016 Paper No. 56 Page 8 of 14
+
+    Attachment (A)
+MODELING AND SIMULATION PATHWAY- PLAN OF STUDY
+Commonwealth of Virginia Plan of Study
+Student Name:
+School: Landstown High School and Technology Academy
+Date:
+ence, Technology, Engineering & Mathematics Pathway: Engineering and Technology Focus: Modeling and Simulation
+thway Plan of Study can serve as a guide, along with other career planning materials, as learners continue on a career path. Courses listed within this plan are only recommended coursework o meet each learner’s educational and career goals. This Plan of Study, used for learners at an educational institution, should be customized with course titles and appropriate high school gra
+MODSIM World 2016
+     s well as college entrance requirements.
+  Relati Pat http://www.doe
+ion/career_tech sample_plans http://www.c http://www.c
+- Aeronautic - Agricultur - Applicatio - Architectu - Automotiv - Biomedica Engineer
+- CAD Tech
+- Chemical E
+- Civil Engi
+- Communic
+- Computer
+- Computer
+- Computer
+- Constructi
+- Drafter
+- Electrical/E
+Technician
+- Electrical E
+- Geotherma
+- Industrial E
+- Manufactu Engineer/Tec
+- Marine En
+- Mechanica
+- Metallurgi
+- Mining En
+- Nuclear En
+- Petroleum
+- Product/Pr
+- Survey Te
+- Systems E
+- Transporta
+                            English/ Language Arts
+Mathematics
+Science
+Social Studies/ Science
+Other Required Courses Recommended Electives Learner Activities
+Recommended Career and Technical Courses Source: Administrative Planning Guide http://www.cteresource.org/a pg/
+SAMPLE
+               Graduation Requirements: http://www.doe.virginia.gov/instruction/graduation/index.shtml
+              1115 English 7 or
+1116 Advanced English 7
+3111 Math 7 or
+3220 Algebra I Honors
+4116 Life Science 7 or
+4118 Advanced Science 7
+2356 Social Studies 7
+NOTE: Use state course titles
+8464 Inventions and Innovations
+               1123 English 8 or
+1124 Advanced English 8
+3220 Algebra 1 Honors
+or
+3225 Geometry Honors
+4210 Earth Science or 4310 Biology
+2106 Social Studies 8
+8463 Technological Systems
+           ment: Identify an appropriate career assessment instrument at the middle school level used to help students and their parents plan for high school: zard or other assessment (please indicate): Virginia View ability inventory
+              2130 Technology Academy Honors English
+3225 Honors Geometry
+or
+3137 Algebra II/Trig
+4310 Biology or 4410 Chemistry
+2344 World History part 1 or
+2211 AP Human Geography
+2801 Economics & 6121 Finance Management
+7300 Health & PE Level I 7405 Health & PE Level II/Drivers Education
+Foreign Language: 5110/5120/5130/5140 French I–IV or 5210/5220/5230/5240 German I-IV or 5310/5320/5330/5340 Latin I-IV or
+5410 Russian I or 5510/5520/5530/5540 Spanish I–IV or 5850/5860/5870 Japanese I-III
+9811 Physics of Tech I 9812 Physics of Tech II 8436 Engineering Drawing and Design 8416 Electronic Systems I 8412 Electronic Systems II
+8435 Technical Drawing and Design
+               2135 Technology Academy Honors English
+3137 Algebra II/Trig or 3162 Math Analysis or 3192 AP Statistics
+4410 Chemistry or 4510 Physics
+2340 World History part 2 or 2399 AP European History
+8437 Architectural Drawing and Design
+               2150 Technology Academy Honors English or
+1197 AP English 11 and
+DE 1111/1112 College Composition
+ 3162 Math Analysis or 3192 AP Statistics or 3177 AP A/B Calculus or 3178 AP B/C Calculus
+4510 Physics or
+4270 AP Environmental Science or
+4340 AP Biology or 4440 AP Chemistry or 4541 AP Physics
+ 2360 VA/US History or 2319 AP VA/US History
+8436 Engineering Drawing and Design
+                 2160 Technology Academy Honors English or
+1196 AP English or DE 1111/1112 College Composition or
+DE 1131/1125 Technical Writing & Intro to Literature
+3177 AP A/B Calculus or 3178 AP B/C Calculus
+4270 AP Environmental Science or
+4340 AP Biology or 4440 AP Chemistry or 4541 AP Physics
+2440 VA/US Government or
+2445 AP VA/US Government
+ 8460 Modeling and Simulation Technology
+            2016 Paper No. 56 Page 9 of 14
+
+High school courses in the pathway offered locally for college credit should be coded: DE (Dual Enrollment) and/or VC (Validated Credit
+MODSIM World 2016
+      certifications/credentials approved by VDOE and offered
+//www.cteresource.org/apg (Go to Certification – License Section) eadiness Skills for the Commonwealth Certification ((CTECS)
+lash
+ary: Placement Assessments such as COMPASS & SAT II
+Additional Learning Opportunities:
+CTSO Organization(s): DECA FEA HOSA
+Work-Based Learning:
+Career Research Cooperative Education Job Shadowing Service Learning Project
+FBLA SkillsUSA
+Internship
+FCCLA FFA TSA
+Mentorship
+Student Apprenticeship
+                     College Entrance Exams such as ACT & SAT
+    SAMPLE POSTSECONDARY PROGRAMS RELATED TO THIS CAREER PATHWAY
+Individual plans must include locally agreed upon courses at the postsecondary level (See page 2)
+          Pathway
+Associate Degree, College Certificate, or Apprenticeship
+Postgraduate Deg
+       Associate of Science Degree: Engineering
+Bachelor’s Degree
+  Engineering Technology
+   2016 Paper No. 56 Page 10 of 14
+
+ Attachment (B)
+ROBOTICS TECHNOLOGY PATHWAY- PLAN OF STUDY
+Cluster: Science, Technology, Engineering & Mathematics
+MODSIM World 2016
+ Commonwealth of Virginia
+Plan of Study
+Pathway: Engineering and Technology Focus: Robotics and Technolog
+Student School: Academ Date:
+   This Career Pathway Plan of Study can serve as a guide, along with other career planning materials, as learners continue on a career path. Courses listed within this plan are only recomm each learner’s educational and career goals. This Plan of Study, used for learners at an educational institution, should be customized with course titles and appropriate high school gradua
+R a
+Ad htt
+NO
+84 Inn 84 Sy
+      2016 Paper No. 56 Page 11 of 14
+                          English/ Language Arts
+Mathematics
+Science
+Social Studies/ Science
+Other Required Courses Recommended Electives Learner Activities
+             Graduation Requirements: http://www.doe.virginia.gov/instruction/graduation/index.shtml
+                   7
+1115 English 7 or
+1116 Advanced English 7
+3111 Math 7 or
+3220 Algebra I Honors
+4116 Life Science 7 or
+4118 Advanced Science 7
+2356 Social Studies 7
+                 8
+1123 English 8 or
+1124 Advanced English 8
+3220 Algebra 1 Honors or 3225 Geometry Honors
+4210 Earth Science or 4310 Biology
+          Career Assessment: Identify an appropriate career assessment instrument at the middle school level used to help students and their parents plan for VA Wizard or other assessment (please indicate): Virginia View ability inventory
+2106 Social Studies 8
+                         9
+2130 Technology Academy Honors English
+3225 Honors Geometry or 3135 Algebra II or
+3137 Algebra II/Trig
+84
+ 4310 Biology or 4410 Chemistry
+         3135 Algebra II or 3137 Algebra II/Trig or 3162 Math Analysis or 3192 AP Statistics
+2344 World History part 1 or 2211 AP Human Geography
+2801 Economics &
+6121 Finance Management
+7300 Health & PE Level I 7405 Health & PE Level II/Drivers Education
+Foreign Language: 5110/5120/5130/5140 French I–IV or 5210/5220/5230/5240 German I-IV or 5310/5320/5330/5340 Latin I-IV or
+5410 Russian I or 5510/5520/5530/5540 Spanish I–IV or 5850/5860/5870 Japanese I- III
+9811 Physics of Tech I 9812 Physics of Tech II 8436 Engineering Drawing and Design
+8416 Electronic Systems I 8412 Electronic Systems II
+           10
+2135 Technology Academy Honors English
+4410 Chemistry or 4510 Physics
+2340 World History part 2 or 2399 AP European History
+84
+            4510 Physics or
+4270 AP Environmental Science or
+4340 AP Biology or 4440 AP Chemistry or 4541 AP Physics
+         11
+2150 Technology Academy Honors English or
+1197 AP English 11 and DE 1111/1112 College Composition
+3162 Math Analysis or 3192 AP Statistics or 3177 AP A/B Calculus or 3178 AP B/C Calculus
+84 De
+ 2360 VA/US History or 2319 AP VA/US History
+                      12
+2160 Technology Academy Honors English or
+1196 AP English or
+DE 1111/1112 College Composition or
+DE 1131/1125 Technical Writing & Intro to Literature
+3177 AP A/B Calculus or 3178 AP B/C Calculus
+4270 AP Environmental Science or
+4340 AP Biology or 4440 AP Chemistry or 4541 AP Physics
+ 2440 VA/US Government or 2445 AP VA/US Government
+90 De
+                    High school courses in the pathway offered locally for college credit should be coded: DE (Dual Enrollment) an
+    SECONDARY MIDDLE
+EDUCATION LEVELS
+GRADE
+
+MODSIM World 2016
+    List related certifications/credentials approved by VDOE and offered locally:
+http://www.cteresource.org/apg (Go to Certification – License Section) Electronics Technology Certification (NOCTI)
+Workplace Readiness Skills for the Commonwealth Certification ((CTECS) Carnegie Mellon Robot C Programming Certification
+          Postsecondary: Placement Assessments such as COMPASS & SAT II
+          SAMPLE POSTSECONDARY PROGRAMS RELATED TO THIS CAREER PATHWAY
+Individual plans must include locally agreed upon courses at the postsecondary level (See page 2)
+          Pathway
+Associate Degree, College Certificate, or Apprenticeship
+Bachelor’s Degree
+          Associate of Science Degree: Engineering
+Engineering Technology
+       2016 Paper No. 56 Page 12 of 14
+Additional Learning Opportunities:
+CTSO Organization(s): DECA FBLA FEA HOSA
+Work-Based Learning:
+Career Research Cooperative Education Job Shadowing Service Learning Project
+FCCLA SkillsUSA
+Internshi Student A
+             College Entrance Exams such as ACT & SAT
+POSTSECONDARY
+
+ Attachment (C)
+ENGINEERING AND TECHNOLOGY- PLAN OF STUDY
+Cluster: Science, Technology, Engineering & Mathematics
+Commonwealth of Virginia
+Plan of Study Pathway: Engineering and Technology
+Student School: Academ Date:
+This Career Pathway Plan of Study can serve as a guide, along with other career planning materials, as learners continue on a career path. Courses listed within this plan are only recomm each learner’s educational and career goals. This Plan of Study, used for learners at an educational institution, should be customized with course titles and appropriate high school gradua
+R a
+Ad htt
+NO
+84 Inn 84 Sy
+o
+MODSIM World 2016
+         2016 Paper No. 56 Page 13 of 14
+                          English/ Language Arts
+Mathematics
+Science
+Social Studies/ Science
+Other Required Courses Recommended Electives Learner Activities
+             Graduation Requirements: http://www.doe.virginia.gov/instruction/graduation/index.shtml
+                   7
+1115 English 7 or
+1116 Advanced English 7
+3111 Math 7 or
+3220 Algebra I Honors
+4116 Life Science 7 or
+4118 Advanced Science 7
+2356 Social Studies 7
+                 8
+1123 English 8 or
+1124 Advanced English 8
+3220 Algebra 1 Honors or 3225 Geometry Honors
+4126 Physical Science 8 or
+4210 Earth Science
+2106 Social Studies 8
+            Career Assessment: Identify an appropriate career assessment instrument at the middle school level used to help students and their parents plan f VA Wizard or other assessment (please indicate): Virginia View ability inventory
+              3220 Algebra I or
+3221 Geometry part 1 3223 Geometry part 2 or 3225 Honors Geometry or 3135 Algebra II or
+3137 Algebra II/Trig
+         9
+2130 Technology Academy Honors English
+ 3221 Geometry part 1 3223 Geometry part 2 or 3225 Honors Geometry or 3134 Algebra Functions & Analysis or
+3135 Algebra II or
+3137 Algebra II/Trig
+4210 Earth Science or
+4310 Biology
+2344 World History part 1 or 2211 AP Human Geography
+2801 Economics &
+6121 Finance Management
+7300 Health & PE Level I 7405 Health & PE Level II/Drivers Education
+Foreign Language: 5110/5120/5130/5140 French I–IV or 5210/5220/5230/5240 German I-IV or 5310/5320/5330/5340 Latin I-IV or
+5410 Russian I or 5510/5520/5530/5540 Spanish I–IV or 5850/5860/5870 Japanese I- III
+9811 Physics of Tech I 9812 Physics of Tech II 8436 Engineering Drawing and Design
+8416 Electronic Systems I 8412 Electronic Systems II
+84 an
+                   10
+2135 Technology Academy Honors English
+4310 Biology or
+4410 Chemistry or 4250 Oceanography or 4260 Astronomy
+2340 World History part 2 or 2399 AP European History
+84
+             3135 Algebra II or
+3137 Algebra II/Trig or 3125/sem Discrete Math or 3150/sem Trigonometry or 3190/sem Probability & Statistics or
+3162 Math Analysis or 3185 AP Computer Science or
+3192 AP Statistics
+        11
+2150 Technology Academy Honors English or
+1197 AP English 11 and DE 1111/1112 College Composition
+4410 Chemistry or 4510 Physics or
+4250 Oceanography or 4260 Astronomy or 4270 AP Environmental Science or
+4340 AP Biology or 4440 AP Chemistry 4541 AP Physics
+ 2360 VA/US History or 2319 AP VA/US History
+84 En
+               3135 Algebra II or
+3137 Algebra II/Trig or 3125/sem Discrete Math or 3150/sem Trigonometry or 3190/sem Probability & Statistics or
+3162 Math Analysis or 3185 AP Computer Science or
+3192 AP Statistics or
+3177 AP A/B Calculus or 3178 AP B/C Calculus
+      12
+2160 Technology Academy Honors English or
+1196 AP English or
+DE 1111/1112 College Composition or
+DE 1131/1125 Technical Writing & Intro to Literature
+4410 Chemistry or
+4510 Physics or
+4250 Oceanography or 4260 Astronomy or
+4270 AP Environmental Science or
+4340 AP Biology or 4440 AP Chemistry or 4541 AP Physics
+2440 VA/US Government or 2445 AP VA/US Government
+84 an
+               SECONDARY MIDDLE
+EDUCATION LEVELS
+GRADE
+
+MODSIM World 2016
+                            2016 Paper No. 56 Page 14 of 14
+High school courses in the pathway offered locally for college credit should be coded: DE (Dual Enrollment) an
+  List related certifications/credentials approved by VDOE and offered locally:
+http://www.cteresource.org/apg (Go to Certification – License Section) Pre-Engineering/Engineering Technology Certification (NOCTI)
+AutoCAD 2010 certification (Certiport)
+Workplace Readiness Skills for the Commonwealth Certification ((CTECS)
+        Postsecondary: Placement Assessments such as COMPASS & SAT II
+    SAMPLE POSTSECONDARY PROGRAMS RELATED TO THIS CAREER PATHWAY
+Individual plans must include locally agreed upon courses at the postsecondary level (See page 2)
+      Pathway
+Associate Degree, College Certificate, or Apprenticeship
+Bachelor’s Degree
+      Associate of Science Degree: Engineering
+Engineering Technology
+ Additional Learning Opportunities:
+CTSO Organization(s): DECA FBLA FEA HOSA
+Work-Based Learning:
+Career Research Cooperative Education Job Shadowing Service Learning Project
+FCCLA SkillsUSA
+Internshi Student A
+             College Entrance Exams such as ACT & SAT
+POSTSECONDARY

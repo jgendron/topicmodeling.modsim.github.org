@@ -1,0 +1,152 @@
+Graphical Representations Provide Insight into Life Cycle Planning Through Data Analytics
+Stephanie Lackey, Ph.D., Julie Salcedo, Ph.D., Julie Kent, and Tanya Kamptapersaud Raytheon
+Orlando, Florida Stephanie.J.Lackey@raytheon.com, Julie.Salcedo@raytheon.com, Julie_A_Kent@raytheon.com, Tanya.Kamptapersaud@raytheon.com
+ABSTRACT
+In industries such as manufacturing, engineering, and telecommunications, product line management professionals rely on data to inform day-to-day operational decisions and forecast planning. Within the military training community, training device product line managers aim to increase device utilization, account for Quality of Service (QoS) and realize cost avoidance goals. Data sources related to the operation and maintenance of military training devices typically involve life cycle factors such as device utilization rates, preventative and corrective maintenance records, location, and other device specific information. These data hold the key to understanding the driving forces behind critical life cycle metrics (e.g., utilization, QoS, cost). However, clearly delineating relationships based upon traditional data reporting practices is not necessarily obvious.
+The purpose of this paper is to present lessons learned from a multi-year effort to improve data visualization and presentation in an effort to relieve product line managers from cumbersome data reduction efforts. Using life cycle data collected on the Warfighter FOCUS contract, the authors present four graphical display methods that have significantly improved the communication between product line managers and support contractors, informed trade- off analyses, and contributed to the advancement of life cycle reporting for the military training community. The authors present practical advice for visualizing data that empowers product line managers to make data driven decisions and report status to stakeholders.
+ABOUT THE AUTHORS
+Stephanie J. Lackey, Ph.D. earned her Master’s and Ph.D. degrees in Industrial Engineering and Management Systems with a specialization in Simulation, Modeling, and Analysis at the University of Central Florida (UCF). Her research focused on prediction, allocation, and optimization techniques for digital and analog communication systems. Dr. Lackey conducted high-risk research and development aimed at rapid transition of virtual communications capabilities to the Field and Fleet as a computer engineer with the United States Naval Air Warfare Center Training Systems Division (NAWC TSD). She joined UCF Institute for Simulation and Training’s (IST) Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab in 2008, and assumed the role of Lab Director in 2010. She later moved to Design Interactive, Inc. where she was the Director of the Federal Solutions business division. Presently, Dr. Lackey is the Engineering Director for Process, Execution and Configuration Management at Raytheon Company - Intelligence, Information and Services (IIS).
+Julie Salcedo, Ph.D. holds Master’s and Ph.D. degrees in Modeling and Simulation and a certificate in Instructional Design for Simulations from UCF. Dr. Salcedo is the Business Analytics Lead Engineer with Raytheon IIS in the GTS mission area where she oversees the analytics and data visualization efforts that support life cycle sustainment planning for high consequence training systems and devices. Previously, Dr. Salcedo was a Research Associate and Project Manager at Design Interactive, Inc. where she led several DoD and Federal funded simulation and training research and development projects. In 2014, Dr. Salcedo served as a Post-Doctoral Researcher in the ACTIVE Lab at UCF-IST where much of her research focused on training effectiveness evaluation of emerging simulation-based training technologies.
+Julie Kent is a Sr. Principal Systems Engineer with Raytheon IIS in the GTS mission area. She is a systems integrator with over 20 years of experience supporting large scale, high consequence training. After integrating
+2018 Paper No. 0063 Page 1 of 9
+MODSIM World 2018
+
+COTS products to create a management information system supporting cross platform work order management and life cycle support, she has used system architecture techniques to aggregate collected information. Using collected data, Ms. Kent has been investigating patterns of usage and repair in order to locate optimal investments for life cycle funding. Ms. Kent has a Bachelor’s Degree in Electrical Engineering from Virginia Tech. She received a Master’s Degree in Computer Science from UMBC and an MBA from the University of Baltimore. She is currently pursuing a Ph.D. in Modeling and Simulation from UCF.
+Tanya Kamptapersaud is a Senior Operations Engineer with Raytheon IIS in the GTS mission area. Ms. Kamptapersaud performs as the lead engineer and is responsible for the sustainment of the Close Combat Tactical Training (CCTT) Training Systems worldwide. During her tenure with Raytheon she performed an instrumental role in the development of complex system sustainment metrics that were used to gain insights reliability of TADSS. Tanya is the first member of her family to receive a bachelor’s degree in Industrial Engineering. She is currently pursuing her Masters of Science in Engineering Management from the UCF.
+2018 Paper No. 0063 Page 2 of 9
+MODSIM World 2018
+
+Graphical Representations Provide Insight into Life Cycle Planning Through Data Analytics
+Stephanie Lackey, Ph.D., Julie Salcedo, Ph.D., Julie Kent, and Tanya Kamptapersaud Raytheon
+Orlando, Florida Stephanie.J.Lackey@raytheon.com, Julie.Salcedo@raytheon.com, Julie_A_Kent@raytheon.com, Tanya.Kamptapersaud@raytheon.com
+INTRODUCTION
+The Warfighter Field Operations Customer Support (WFF) program operates and maintains over 500 types of Training Aids Devices Simulations and Simulators (TADSS) supporting the U.S. Army. Sustainment data serves a critical role in the planning of the Program Executive Office Simulation, Training and Instrumentation (PEO STRI) Field Operations group and supports ongoing operations and product life cycle analyses. The primary data delivery mechanism is the WFF Life Cycle Workbook; a consolidated report of maintenance, sustainment, and cost data. The workbooks are developed by life cycle engineers and delivered at regular intervals (i.e., monthly, quarterly, or semi- annually) to provide insight into historical performance and emerging trends.
+BACKGROUND
+The WFF Life Cycle Workbooks evolve as customer needs arise or analysis capabilities advance. The proliferation of data analytics tools across the industry spawned interest in reviewing the art-of-the-possible with respect to workbook reporting. Other industries apply data analytics to drive down maintenance costs. Chien, Chinho, and Sphicas (1997) describe an analytics based approach for automated manufacturing. Milković, Štefanić, & Perić (2009) and Lai, Fan, & Huang (2015) are using analytics for maintenance planning on railways. Failure data may be used to derive empirical reliability distributions. Alternatively, a theoretical distribution may be used and a goodness of fit test performed against the existing failure data. This approach has the advantage of allowing relatively small samples to be used to extrapolate over the expected life of the system (Ebeling, 2010).
+Collecting and analyzing data represent two of three essential elements to data driven decision-making. Data visualization represents the third critical area of advancement (Few, 2006; Yau, 2011) - regardless of the analysis technique(s) applied. The focus of the remainder of this paper is the next evolution of TADSS life cycle data visualization. The following sections describe a user experience method that resulted in improved visualizations for maintenance, sustainment and related cost data. “Before and after” samples (sanitized for security purposes) are presented, in addition to lessons learned and future trends. Although the data source for this endeavor involves military training materials and equipment, the findings offer insight to any industry requiring insights into device life cycle cost drivers.
+METHODS
+In order to deliver the highest quality data representations to our customers, a systematic study rooted in user- centered design (Dix, Finlay, Abowd, Beale, 2004; Eberts, 1994; Sy, 2000) resulted in a revision of three critical life cycle data report elements. The design approach involved early and frequent interaction with our stakeholders to gather requirements, develop and iterate design options, and implement a final solution (see Figure 1).
+2018 Paper No. 0063 Page 3 of 9
+MODSIM World 2018
+
+Table 1. Device maintenance cost summary for a single site.
+(Data presented are notional and do not reflect actual Army TADSS device data.)
+MODSIM World 2018
+ Figure 1. User-centered design approach.
+Focus group and survey activities with relevant stakeholders revealed that the data presented were valuable, addressed the vast majority of their needs, supported cost-based decision-making, and facilitated budgeting efforts. However, the volume of data was overwhelming at times, and did not facilitate “drill down” capabilities to support decisions regarding specific part trade-off analyses. Once the requirements for each type of data were developed, preliminary designs were presented to the stakeholders to obtain feedback to support redesign efforts. The final designs were they implemented in a software application and integrated into the reporting cycle and documentation.
+RESULTS
+Tabular formatting is an acceptable method for displaying cost breakdown summaries. For example, referencing the table displayed in Table 1, it is easy to discern the subtotal costs comprising the total program maintenance cost for a single device group. The subtotal costs are categorized along two levels, worktype and cost type (material, labor, and services), which are easily accommodated by the row and column structure of a table. However, this table does not indicate individual sites that may be critical cost drivers. Decomposition of the total program maintenance cost across all sites to show the cost per individual site introduces a third level, which warrants an alternative to the tabular format.
+   DEVICE 14 MAINTENANCE COST SUMMARY - ALL SITES
+  WORKTYPE
+ MATERIAL
+ LABOR
+ SERVICES
+TOTAL COST
+   Worktype 1 Worktype 2 Worktype 3 Worktype 4 Worktype 5
+$ 250.00 $ $ 85,000.00 $ $ 220.00 $ $ 3,000.00 $ $ 170.00 $
+$ 88,640.00 $
+3,000.00 $ 1,220,000.00 $ 600.00 $ 205,000.00 $ 42,000.00 $ $ 12,060.00 $
+1,470,600.00 $ 12,060.00 $
+3,250.00 1,305,000.00 820.00 208,000.00 42,170.00 12,060.00
+1,571,300.00
+ The interactive map in Figure 2 provides graphical representation of the magnitude to which each site impacts the total program maintenance cost. The size and gradient color of the site markers indicate which sites have the highest (larger size, dark tint) versus the lowest (smaller size, light tint) proportion of the total program maintenance cost.
+2018 Paper No. 0063 Page 4 of 9
+
+Figure 2. Interactive map displaying maintenance cost magnitude per site. (Data presented are notional and do not reflect actual Army TADSS device data.)
+Cost breakdown details by site are viewed by hovering over or selecting one of the site markers (See Figure 3). By utilizing size and color, it is readily apparent that Site J is a critical cost driver.
+Figure 3. Site maintenance cost details.
+(Data presented are notional and do not reflect actual Army TADSS device data.)
+Depicting data across three or more category levels can be a challenge particularly when the goal is to provide concise, stand-alone representations. Figure 4 provides an example of work order quantity and cost data per worktype utilizing two y-axes with work order quantity values along the left side and cost values along the right side. While consolidation of the quantity and cost data serves the goal toward conciseness, a dual axis format risks an assumption of correlation between the two scales. Furthermore, while the use of bar chart and line graph formats
+MODSIM World 2018
+  2018 Paper No. 0063 Page 5 of 9
+
+help the user distinguish between the quantity and cost data sets, line graphs are customarily used to depict change over time along a continuous scale.
+Figure 4. Dual axis graph of work order quantity and cost per worktype. (Data presented are notional and do not reflect actual Army TADSS device data.)
+In Figure 5, the dual axis format was divided into separate bar charts that share the same worktype categories along the x-axis. This format is an indicator to the user that the data is related, but not necessarily correlated.
+Figure 5. Alternative to dual axis chart for work order quantity and cost per worktype. (Data presented are notional and do not reflect actual Army TADSS device data.)
+Analyzing system maintenance data to identify critical maintenance cost drivers supports sustainment budget planning and forecasting repair part inventory requirements. One method to reveal the high cost parts is to rank the part failures and repair part consumption by cost and frequency. Ranked data naturally lend to presentation in a table. Table 2 depicts the top five failed parts and the top five repair parts consumed on work orders ranked by cost from highest to lowest. The high cost parts are readily apparent because they are ranked at the top of the table. However, the tabular format cannot effectively depict the complete failed part and repair part profile of the device group.
+MODSIM World 2018
+    DEVICE 14 WORKTYPE WITH WORK ORDER LABOR AND MATERIAL COSTS
+   800 700 600 500 400 300 200 100
+0
+Worktype 1
+$1,000,000.00 $900,000.00 $800,000.00 $700,000.00 $600,000.00 $500,000.00 $400,000.00 $300,000.00 $200,000.00 $100,000.00 $-
+ $895,000.00
+  $3,250.00 $820.00
+$42,170.0
+Worktype 2
+Worktype 3 WO COUNT
+Worktype 4 TOT COST
+Worktype 5
+$208,000.00
+ 0
+      2018 Paper No. 0063 Page 6 of 9
+
+Table 2. Top five failed parts and repair parts.
+(Data presented are notional and do not reflect actual Army TADSS device data.)
+MODSIM World 2018
+  DEVICE 14 TOP 5 FAILURES - COST DRIVERS
+  PART NUMBER
+ DESCRIPTION
+  QTY WOs
+TOTAL COST
+    FP18 Failed Part 18 Description FP13 Failed Part 13 Description FP22 Failed Part 22 Description FP8 Failed Part 8 Description FP5 Failed Part 5 Description
+RP17 Repair Part 17 Description RP2 Repair Part 2 Description RP9 Repair Part 9 Description RP12 Repair Part 12 Description RP20 Repair Part 20 Description
+147 $ 81 $ 39 $ 25 $ 6 $
+152 $ 85 $ 84 $ 34 $ 5 $
+29,400.00 16,200.00 7,800.00 5,000.00 1,200.00
+38,000.00 21,250.00 21,000.00
+8,500.00 1,250.00
+   DEVICE 14 TOP 5 REPAIR PARTS CONSUMED ON WORKTYPE 1 - COST DRIVERS
+  PART NUMBER
+ DESCRIPTION
+  QTY
+TOTAL COST
+     Data visualizations that depict failed part and repair part clusters based on cost and frequency versus ranking on cost alone help clarify the severity of the device group profile. The jackknife graphs in Figure 6 show each failed parts and repair part plotted along the cost and frequency of work orders with that part. The plotted points are parsed into four distinct quadrants which are determined based on cost and frequency thresholds. In this example, the thresholds are designated by the average of the cost and frequency values in the data set. Industry or organizational standards may also be used to designate these thresholds. The most critical cluster lies in the top right quadrant with costs and frequencies greater than the threshold values. The cluster in the bottom left quadrant, with costs and frequencies below the thresholds, is a lower risk. The top left (high cost, low frequency) and bottom right (low cost, high frequency) clusters are the next priority in budget and inventory forecast planning. If the data points in these mid- level clusters were ranked in a tabular format, there would be greater risk of skewing the user’s understanding of the problem space potentially resulting in an inappropriate prioritization of high cost parts used infrequently or low cost parts with high utilization.
+Figure 6. Jackknife graphs plotting failed and repair parts along cost and frequency scales. (Data presented are notional and do not reflect actual Army TADSS device data.)
+Trends and trend comparisons in data over a period of time are easily interpreted with line graphs. The line graph in Figure 7 displays the number of corrective and preventive maintenance work orders per month in a 12 month period. Although the line graph as displayed is not difficult to interpret, there are several chart features that do not aide the user in interpreting the data any more than the plotted lines themselves. Keeping these unnecessary features results in a cluttered graph.
+  2018 Paper No. 0063 Page 7 of 9
+
+Figure 7. Corrective and preventive maintenance trends per month.
+(Data presented are notional and do not reflect actual Army TADSS device data.)
+In order to declutter the graph, unnecessary chart features were removed. The intervals between values on the x and y axes were increased, thus reducing the number of values displayed. Horizontal grid lines were removed and the chart legend was swapped for labels at the line end points. Finally, the chart background, borders, and header were modified to a simplified style. By decluttering the graph, the lines are more prominent and easier to view (See Figure 8).
+Figure 8. Decluttered line graph of corrective and preventive maintenance trends. (Data presented are notional and do not reflect actual Army TADSS device data.)
+LESSONS LEARNED
+Three key lessons resulted from this effort. First, the importance of including stakeholders early and often in the design process is critical. A participatory, user-centered design approach allows users to become invested in the product and reduces risk to the downstream technical, cost, and schedule risks. Fortunately, this design effort leveraged a quality product that was originally developed with user input, and that significantly reduced the level of effort to achieve the compelling results demonstrated above.
+Next, using context to drive design decisions and remove unnecessary information from graphs enables users to more clearly understand the message conveyed by the data without being distracted by extraneous information. The Worktype Count and Cost and Corrective and Preventive Maintenance Trends graphs serve as examples (See
+MODSIM World 2018
+    WORKTYPE 1 AND 2 TRENDS
+    90
+80
+70
+60
+50
+40 Worktype 1 30 Worktype 2 20
+10 0
+                                         2018 Paper No. 0063 Page 8 of 9
+
+Figures Figure 5 andFigure 8). This allows the message of the data to be the focus rather than unnecessary lines and shading.
+Finally, choosing the right visualization is critical to success. This goes beyond choosing between a bar chart versus a line graph. Understanding that our users required part-specific information indicated a need for interactive visualizations that can be customized in real-time to facilitate collaborative decision-making among life cycle engineers, field operations, program management, and Government customers. Technical implementation decisions were driven by these requirements and resulted in the addition of a new software application.
+Future Directions
+Future efforts planned for data visualization of life cycle analyses include expanding the number and types of visualizations provided. By leveraging user feedback, priorities and user requirements, we can increase the number, type and tailoring of visualizations. Augmenting tabular data with graphics offers opportunities to deepen the insights provided. Creating a predictive graphic based on historical data will offer insight into the impact of changes in priorities on interim and final milestones.
+Exploring areas where additional decomposition of devices may lead to beneficial insights. Currently, life cycle reporting mechanisms focus a particular Army Program of Record. There are areas where it may be beneficial to group the data based on subsets of the program. For example, the Engagement Skills Trainers (EST) has numerous categories of weapons modified to work in the simulator in addition to the simulation system. It may be advantageous to create separate visualizations for the simulation system and the weapons in order to determine failure models for each. There are many simulated weapons for each system so separating the two could isolate problem components in the simulation system which are masked by the repeated failure of minor parts in the weapons.
+CONCLUSIONS
+The intended outcome of this effort was to continue to improve the customer’s ability to make data driven decisions. By applying a user-centered design approach to TADSS life cycle data visualizations, the WFF team improved the usability of data representations. The visualization recommendations and lessons learned benefit the current effort, and serve as illustrations for any industry partner requiring clear, concise, and interactive life cycle reporting.
+REFERENCES
+Chien, T. W., Chinho, L., & Sphicas, G. (1997). A systematic approach to determine the optimal maintenance policy for an automated manufacturing system. Quality & Reliability Engineering International, 13(4), 225-233.
+Dix, A., Finlay, J. Abowd, G., & Beale, R., (2004). Human-computer interaction. Prentice-Hall, Inc.
+Ebeling, C. E. (2010). An introduction to reliability and maintainability engineering (2nd ed.). Long Grove, IL:
+Waveland Press.
+Eberts, R. E. (1994). User interface design. Prentice-Hall, Inc.
+Few, S. (2004). Show me the numbers: Designing tables and graphs to enlighten. Oakland, CA: Analytics Press. Few, S. (2006). Information dashboard design: The effective visual communication of data (1st ed.). Cambridge,
+MA: O'Reilly.
+Lai, Y.-C., Fan, D.C., & Huang, K.L. (2015). Optimizing rolling stock assignment and maintenance plan for
+passenger railway operations. Computers & Industrial Engineering, 85, 284-295.
+Milković, V., Štefanić, N., & Perić, M. (2009). An analysis of device and equipment failures by means of business
+intelligence methods. Transactions of FAMENA, 33(4), 53-62.
+Sy, D. (2007). Adapting usability investigations for agile user-centered design. Journal of Usability Studies, 2(3),
+112-132.
+Yau, N. (2011). Visualize this: The Flowing Data guide to design, visualization, and statistics. Indianapolis, IN:
+Wiley Pub.
+2018 Paper No. 0063 Page 9 of 9
+MODSIM World 2018

@@ -1,0 +1,283 @@
+The Impact of Training Context on Performance in Simulator-Based Aviation Training
+Daniel R. Walker, PhD, CMSP The Joint Staff, J7
+Fort Eustis, VA daniel.r.walker4.civ@mail.mil
+ABSTRACT
+This study addresses the problem of pilots receiving ineffective training partly because there is no strategy for incorporating a proper mix of context elements into simulator design. The analysis includes a situated cognition theoretical framework to address the question of determining the influence of motion and visual fidelity on pilot performance in flight simulators. Secondary data on the performance of two groups of 12 qualified volunteer pilots in F-16 simulators using varied motion and visual fidelity were analyzed to research the questions. Research questions addressed the influence of motion fidelity in both high and medium visual fidelity simulators on a loop, offensive bomb delivery, and surface-to-air missile defense. Two different simulator visual systems were used to vary visual fidelity and a dynamic motion seat was used to vary motion fidelity. The study was conducted at the US Air Force Research Laboratory in Mesa, AZ. The study design includes two context-defining predictor variables, visual and motion fidelity, and five outcome variables: attitude control, load control, speed control, roll control, and missile avoidance in different contexts. In 13 of the 18 cases examined there was no observed significant effect of motion on pilot performance. In four cases pilots performed significantly (p < .024) worse with a motion seat. In only one case pilots perform significantly (p = .013) better when using the motion seat. Pilots in a high visual fidelity simulator performed significantly (p < .006) better in some aspects in all maneuvers. Reviewed in aggregate, the data suggest the sensory environment experienced during training does have an effect on pilot performance in simulators. The author suggests simulation-training designers should carefully consider the need for, and effectiveness of, motion systems. Recommendations for future research include a meta-analysis of simulation fidelity studies.
+ABOUT THE AUTHOR
+Daniel R. Walker, PhD, CMSP is Chief of Training for the Joint Deployment Training Center (JDTC) of the Joint Force Development Directorate (J7) in The Joint Staff of the United States. Prior to joining the JDTC as a civil servant, he was a USAF Colonel whose assignments included commanding the Mesa Research Site and Warfighter Readiness Research Division of the Air Force Research Laboratory and the B-1 Division of the USAF Weapons School. His staff assignments included The Joint Staff J5 and US Atlantic Command J3.
+The views and conclusions contained in this document are those of the author and should not be interpreted as representing the official policies, either expressed or implied, of the U.S. Joint Staff or the U.S. Government.
+2015 Paper No. 11 Page 1 of 11
+MODSIM World 2015
+
+The Impact of Training Context on Performance in Simulator-Based Aviation Training
+Daniel R. Walker, PhD, CMSP The Joint Staff, J7
+Fort Eustis, VA daniel.r.walker4.civ@mail.mil
+INTRODUCTION
+Operating aircraft is an essential and expensive part of the modern world. It is essential because aircraft and their capabilities play a critical role in commerce and national defense (Warden, 2011) and expensive because of the size and complexity of the endeavor (Lucia, 2011; McGrew, How, Williams, & Roy, 2010). The 2014 defense budget request of the United States alone was more than $526 billion (U.S. Department of Defense, 2013), which included a substantial portion dedicated to training and equipping airmen. On the civilian side, revenue for 2012 worldwide air travel was $638 billion (International Air Transport Association, 2013). Trained pilots are a significant part of both exploiting the capabilities and contributing to the cost of operation (Macchiarella, Brady, & Lyon, 2008). As operating aircraft is essential to modern life, it follows society benefits from properly trained pilots. Finding efficient means of training is also beneficial to society. Beyond the expense and importance of flying training, the task can also be difficult.
+Piloting high-performance aircraft, especially in combat, requires high-performance levels. Combat pilots are required to fly the airplane, defend it, and perform their mission, often at high speed, in bad weather, and in dangerous territories. In a foundational text for combat pilots, Shaw (1985) explained operating, defending, and employing an aircraft, especially in combat, requires high pilot skill levels. Expert application of physical and cognitive skills is necessary to succeed in combat aviation (Schreiber et al., 2009). Piloting a high-performance aircraft in peacetime, whether military or commercial, can be as challenging, and the consequences of failure can be just as fatal. Performing multiple tasks simultaneously while in a quickly changing environment requires well- designed training. Proper design of training requires solid analysis of the important training components.
+The theoretical framework for learning including situated cognition aids training design. Discussions of how physical and cognitive activity and contexts are interrelated in learning are the basis for the theory of situated cognition (Brown, Collins, & Dugid, 1989). Researchers have studied several aspects of context, but gaps remain, especially with respect to embodied activity (Larkin, Eatough, & Osborn, 2011). Examining these interrelationships in the field of aviation training informs the theory of situated cognition by filling research gaps and providing some information on how to improve training. Several factors are important to framing the training analysis.
+The goal of this quantitative, nonexperimental study using archival data was to extend the theory of situated cognition by examining the roles of motion and visual fidelity as context in simulator-based aviation training. Expert application of both physical and cognitive skills is necessary to succeed in aviation (Schreiber et al., 2009). One of the primary tools for achieving aviation success is training in a flight simulator, which provides a medium to experience the physical and cognitive skills required for flying but in a safer and more cost-effective manner (De Winter, Dodou, & Mulder, 2012). A goal of flight simulation has been to re-create in-flight conditions, especially abnormal conditions, as accurately and realistically as possible (Moore, 2011). Determining how much, and what kind, of simulation fidelity is needed for effective training is an incompletely solved problem facing simulation designers (Patrick, 2009). Addressing these problems is facilitated by using situated cognition as a theoretical lens with which to examine context-based learning on simulator training -Cohen, Sparko, & Bellman, 2011; Schroeder & Grant, 2010), as discussions of how physical and cognitive skills and contexts are interrelated in learning are the basis for situated cognition theory (Brown et al., 1989). The problem of interest in this study was how context, as defined by motion fidelity and visual fidelity, affects learning in simulator-based aviation training. The study design was statistical analysis using general linear models, including MANOVA, mixed model binary logistics model, and mixed model negative binomial regressions to examine two context-defining predictor variables, visual and motion fidelity, and five outcome variables: attitude control, load control, speed control, roll
+2015 Paper No. 11 Page 2 of 11
+MODSIM World 2015
+
+control, and missile hit. By examining the effect on performance of different motion and visual parameters across three different tasks, it was possible to understand better the influence of context on the performance of the pilots and therefore the effectiveness of the simulator training in different contexts. The results were interpreted through the theoretical lens of situated cognition to help determine how context influences learning.
+LITERATURE REVIEW
+Simulator research has been performed in several categories: visual and motion fidelity, role of human sensory perceptions, simulators systems as a whole, and training strategies. There has been a general tendency for an increase in technology to lead to an increase in the fidelity of one or more components of a total simulator system, followed by aviation community pressure to apply the new technologies to improve training. Although there are differing opinions with respect to the value of increased fidelity, there has been general agreement that the value of the fidelity is situation specific (Bowen, Oakley, & Barnett, 2006). Motion fidelity is especially sensitive to the situation. In many cases, the potential to increase training effectiveness seems high, but the potential is not often realized across a variety of circumstances that involve simulation (Pasma, Grant, Gamble, Kruk, & Heardman, 2011). Motion has seemed most useful in training disturbance-upset-related tasks, such as returning an aircraft to stable flight after an unusual change to a flight path (De Winter et al., 2012). Motion may also be useful for some maneuvering tasks, such as turning to deliver a weapon, but more investigation is indicated (Bowen et al., 2006). Much of the research concerning simulator fidelity has been restricted to specific situations, which can limit a
+t a ne ’s ab l ty to gene al ze the nfo mat on. The f del ty of mot on f del ty s not the most mpo tant facto n training effectiveness when using simulators.
+There are training components beyond the design of the simulator. Irrespective of the type of training or level of simulator fidelity, one of the most important factors discussed in the literature is the design of the training program (Andrews & Bell, 2009). Balancing the tasks being trained, the simulation capabilities available, and the mixture of motion and visual fidelity, is often discussed. The modal conclusion is that different contexts will result in different levels of effectiveness (Macchiarella & Doherty, 2007). A common remark is that more research is warranted to investigate possible cases fully (Bowen et al., 2006; Groen, Wentink, Pais, & van Paasen, 2006; Irish & Buckland, 1978; Kallus, Tropper, & Boucsein, 2011; Macchiarella & Doherty, 2007; Pasma et al., 2011). This study involved examining different contexts for aviation training to help determine when and how context influences learning. The information will be used to help expand the theory of situated cognition by defining the role of context in learning.
+The situated aspects of the learning environment encompass a wide range of elements in the literature. Aircraft simulation is consistent with this theory as the replication of sensory elements is fundamental to the training. Missing from the literature was an explanation of when, how, and how much context is important. Part of the reason for the gap was that there was not enough data to draw conclusions on the role of context. Without the conclusions, trainers cannot effectively design training with a proper context to achieve the desired results. This study involved examining different contexts for aviation training to help determine when and how context influences learning. The information was used to help expand the theory of situated cognition by defining the role of context in learning
+RESEARCH METHOD
+For this study, context referred to motion fidelity and visual fidelity. The research method for this study was analysis of archival data. The archived data were sampled from two 1-week quasi-experimental studies that involved collecting data on hundreds of performance parameters during 12 maneuvers performed by two sets of 12 F-16 pilots in simulators using a dynamic motion seat. The study examined the research question: What is the influence of motion and visual fidelity on pilot performance in flight simulators?
+Six research cases were discussed to examine the influence of visual and motion fidelity on the simulator performance of the participants. The variables selected for analysis were sampled based on predicted applicability for the planned analysis based on previous studies (Holt, Schreiber, Duran, & Schroeder, 2011; Martin, 1981). The questions allowed examination of the context factors, simulation fidelity, and different tasks, both singly and in combination. By examining the effect on performance of different motion and visual parameters across three different tasks, it was possible to understand better the influence of context on the performance of the pilots and therefore the effectiveness of the simulator training in different contexts.
+2015 Paper No. 11 Page 3 of 11
+MODSIM World 2015
+
+The research design was statistical analysis using General Linear Models, including MANOVA, mixed model binary logistics model, and mixed model negative binomial regressions to determine the influence of the varied fidelity interventions in a variety of aircraft maneuver contexts. For data that was not continuous, the mixed model binary logistics regression and the negative binomial regression were used.
+FINDINGS
+Two groups of 12 pilots performed three maneuvers in simulators with different visual and motion capabilities. One group of pilots used a simulator with high visual fidelity and the second group of pilots used a simulator with medium visual fidelity. The simulator configurations and maneuvers represented different contexts. According to situated cognition theory, different contexts may affect learning (Brown et al., 1989). Data were collected from each pilot while using a high-fidelity motion seat for three trials for each of three maneuvers and while using a nonmoving seat for three trials for each of three maneuvers. The researcher analyzed the effect of varied contexts for each of the three maneuvers in all context combinations.
+Results
+Demographic and background characteristics
+Data were collected on 24 different pilots. The participants were all male and were serving as operational F-16 pilots at U.S. Air Force bases in the southwest United States. The 12 pilots in the medium-visual-fidelity simulator were instructor pilots, and 10 of the 12 pilots in the high-visual-fidelity simulator were instructor pilots (Holt et al., 2011). The two pilot groups were similar in experience, except that pilots flying the high-visual-fidelity simulator were significantly older, t(12.65) = 2.44, p = .03, and had more live flight training in the past 6 months, t(21) = 2.21, p = .04 (Holt et al., 2011). Half of the pilots participated in the high-visual-fidelity simulator, and the other half experienced the medium-visual-fidelity simulator. Table 1 contains the participant demographics.
+Table 1. Participant
+High visual fidelity
+Demographic M SD
+Age 37.25 7.99 Service 14.29 8.21 Total F-16 time 1182.08 1613.34 Recent F-16 time 55.10 7.93
+Loop
+Demographics
+10.21 3.42 930.00 226.23 16.61 4.79
+MODSIM World 2015
+     Medium visual fidelity
+M SD
+               These research questions document the effects of fidelity in the context of a loop maneuver in the high- and medium-visual-fidelity contexts. The participants took approximately 2 minutes to complete each run in the loop maneuver. As with the two subsequent maneuvers, the research examined performance in the four context combinations: the two different simulators, each with, and without, a motion seat.
+To examine performance in the loop, a one-within one-between multivariate analysis of variance (MANOVA) was conducted to assess if there were differences in altitude control, speed control, and roll control during the loop maneuvers by visual fidelity (between-group), motion fidelity (within-group), and visual * motion (within-between interaction). Dependent variables included altitude control, speed control, and roll control. Altitude control was measured as the change in altitude from the beginning of the maneuver to the end. Speed control was measured as the deviation in speed from planned speed at the top of the loop. Roll control was measured as the absolute value of the deviation from wings-level flight.
+Prior to analysis, the assumption of normality was assessed. Results of the Kolmogorov Smirnov tests for normality indicated a nonnormal spread for all three variables (p < .001 for all). Although the assumption can be violated with little effect on Type I error when sample size is greater than 50, caution is still necessary in the interpretation of the results (Stevens, 2009). The remaining analysis assumes conclusions are valid despite the violation of the normality assumption because of the large sample size.
+Results of the MANOVA indicated a significant effect of visual fidelity, F(3, 62) = 5.27, p = .003, pa t al η2 = .20, which indicated a large difference between the visual fidelity groups. When subsequent analyses of variance
+2015 Paper No. 11 Page 4 of 11
+31.42 2.19
+ 
+(ANOVAs) were conducted, significant differences were only found in top speed, F(1, 64) = 10.34, p = .002, partial η2 = .14. The high-visual-fidelity group tended to have a speed deviation at loop top that was lower than the medium-visual-fidelity group.
+Results of the MANOVA also indicated a significant effect of motion fidelity, F(3, 62) = 4.40, p = .007, pa t al η2 = .18, which indicated a large difference between the motion fidelity groups. When subsequent ANOVAs were conducted, only roll was found to be significant, F(1, 64) = 13.21, p = .001, pa t al η2 = .17. The high-motion- fidelity runs tended to have significantly higher roll values compared to the low-motion-fidelity runs.
+The results of the MANOVA did not indicate a significant effect of the interaction of visual and motion fidelity, F(3, 62) = 1.40, p = .253, pa t al η2 = .06. This indicates no significant difference in any of the simulated loop
+maneuvers by the interaction of visual and motion fidelity. Results from the MANOVAs are in Table 2. Table 3 contains the average values for each group.
+Table 2. MANOVA Results for Loop Maneuvers by Visual and Motion Fidelity
+MODSIM World 2015
+       Source Visual
+Motion
+Visual * motion
+MANOVA F(3, 62)
+5.27** 4.40** 1.40
+Altitude control
+1.22 0.24 3.68
+ANOVA F(1, 64)
+Speed control
+10.34** 0.09
+0.20
+Roll control
+3.88 13.21**
+0.18
+       Note. *p≤.05. **p≤.01. Othe wsep>.05.
+Table 3 Means and Standard Deviations for Loop Maneuvers by Visual and Motion Fidelity
+   Motion
+No motion
+    Variable and visual fidelity M
+Altitude
+High 28.03 Medium -947.94
+Speed
+High -27.03 Medium -49.33
+Roll
+High 4.12 Medium 5.11
+Bomb Delivery
+SD
+1875.05 2499.15
+55.08 24.86
+2.55 3.63
+M
+-408.98 -215.56
+-26.03 -54.07
+2.85 3.50
+SD
+1285.59 1822.15
+42.69 30.24
+1.15 1.15
+      These cases documented the effects of fidelity in the context of a bomb run maneuver in the high- and medium- visual-fidelity contexts. The bomb run maneuver took the participants approximately 2 minutes to complete each run. The research examined the four context combinations.
+To examine these cases, a MANOVA and logistic mixed model were conducted to assess for differences in load control, roll control, and speed control by visual fidelity (between-group), motion fidelity (within-group), and visual * motion (within-between interaction). Dependent variables were load control, roll control, and speed control. Load control was measured by amount of deviations that placed a load on the aircraft different than the planned value of 1g. Roll control was measured by deviation from planned attitude of wings level, zero degrees roll. Speed control was measured by deviation from the planned maximum airspeed of .95 M or 550 knots true airspeed, and because it was a dichotomous variable, a logistic mixed model was conducted for it instead.
+Prior to analysis, the assumption of normality was assessed for load control and roll control. Results of the Kolmogorov Smirnov tests for normality indicated a nonnormal spread for both variables (p < .001 for all). Although the assumption can be violated with little effect on Type I error when sample size is greater than 50, caution should still be taken in the interpretation of the results (Stevens, 2009). The remaining analysis assumes the conclusions are valid despite the violation of the normality assumption because of the large sample size.
+ 2015 Paper No. 11 Page 5 of 11
+
+Results of the main effect of vision were significant, F(2, 69) = 5.60, p = .006, pa t al η2 = .14, which indicated there were moderate significant differences in load control and roll control by visual fidelity. Results showed significance for load control, F(1, 70) = 5.57, p = .021, pa t al η2 = .07, and for roll control, F(1, 70) = 10.14, p = .002, pa t al η2 = .13. The high-visual-fidelity group had significantly lower load control and roll control values compared to the medium-visual-fidelity group. These results indicated improved performance because there was less deviation from planned values.
+Results of the main effect of motion were not significant, F(2, 69) = 0.39, p = .682, pa t al η2 = .01, which indicated there were no differences in load control and roll control by motion fidelity. Results of the interaction of visual and motion fidelity were not significant, F(2, 69) = 0.87, p = .426, which indicated there were no differences in load control and roll control by the interaction of visual and motion fidelity. Results of the MANOVAs are in Table 4. Table 5 contains the average values for each group.
+Table 4 MANOVA Results for Bomb Maneuvers by Visual and Motion Fidelity
+Source Visual
+Motion
+Visual * motion
+Load control 5.57*
+0.22 0.89
+Roll control
+10.14** 0.76
+1.46
+MANOVA F(2, 69)
+5.60** 0.39 0.87
+ANOVA F(1, 70)
+MODSIM World 2015
+            Note. *p≤.05. **p≤.01. Othe wsep>.05.
+Table 5. Means and Standard Deviations for
+Variable and visual fidelity M
+Load
+High 1.10 Medium 1.26
+Roll
+High 11.52 Medium 17.48
+Bomb Maneuvers by Visual and Motion Fidelity
+    Motion
+No Motion
+    SD M
+0.32 1.06 0.69 1.39
+10.50 10.68 16.98 22.62
+SD
+0.42 0.80
+14.97 19.70
+       The mixed model binary logistic model indicated significance for the effect of visual fidelity, F(1, 129) = 7.96, p = .006, OR = 5.25, which indicated that those with high visual fidelity were 5.25 times more likely to exceed bomb speed parameters. Motion fidelity was not significant, F(1, 138) = 1.96, p = .163, OR = 1.00, which indicated there were no significant differences in the likelihood of exceeding bomb speed parameters by motion fidelity group. Lastly, there was no significant effect of the interaction between visual fidelity and motion fidelity, F(1, 138) = 1.96, p = .163, OR = 0.35, which indicated no significant differences existed in the likelihood of exceeding bomb speed parameters by the interaction of motion and visual fidelity groups. Results of the mixed model binary logistic regression are in Table 6.
+Table 6. Mixed Model Binary Logistic Regression for Bomb Speed by Motion and Visual Fidelity
+      Source Visual fidelity
+Motion fidelity
+Visual * motion fidelity
+Surface to Air Missile Defense
+F df1 df2
+7.96 1 129 1.96 1 138 1.96 1 138
+p OR
+.006 5.25 .163 1.00 .163 0.35
+       These research questions documented the effects of fidelity in the context of a surface-to-air missile defensive maneuver in the high- and medium-visual-fidelity contexts. The loop maneuver took the participants approximately 7 minutes to complete each run. The research examined the four context combinations.
+2015 Paper No. 11 Page 6 of 11
+
+Examining the missile defense maneuver involved conducting mixed model negative binomial regressions to assess if there were differences in missile hits, speed control, and load control by visual fidelity (between-group), motion fidelity (within-group), and visual * motion (within-between interaction). Dependent variables were missile hits, speed control, and load control. Missile hits were the number of surface to air missiles that hit the aircraft. Speed control was the number of times the aircraft deviated below the briefed minimum airspeed. Load control was measured by deviations that placed a load on the aircraft greater than the briefed limit of 5.5 g. Because all dependent variables were count-type variables, mixed-model negative binomial regressions were conducted.
+Results of the first model examining missile hits indicated the only significant effect was the interaction between visual fidelity and motion fidelity, F(1, 140) = 6.28, p = .013, IRR = 0.46. Among those runs with the motion fidelity seat, those who had high visual fidelity were 1.941 times more likely to avoid a missile hit compared to those who had the medium visual fidelity. Among those who had the high visual fidelity, those runs with the motion fidelity seat were 1.632 times more likely to avoid a missile hit compared to those runs with no motion fidelity. No other significance was found in the model. Results of the model are in Table 7.
+Table 7. Mixed Model Negative Binomial Regression for Missile Hit by Motion and Visual Fidelity
+MODSIM World 2015
+      Source
+Visual fidelity
+Motion fidelity
+Visual * motion fidelity
+F df1 df2
+1.38 1 82 0.36 1 140 6.28 1 140
+p IRR
+.243 1.13 .551 1.35 .013 0.46
+       Results of the second model examining missile speed indicated the only significant effect was the interaction between visual fidelity and motion fidelity, F(1, 99) = 5.22, p = .024, IRR = 4.33. Among those runs with the motion fidelity seat, those who had high visual fidelity were 1.433 times more likely to deviate from planned speed limitations compared to those who had the medium visual fidelity. Among those with high visual fidelity, those runs with the motion fidelity seat were also 1.434 times more likely to deviate from planned speed limitations compared to those runs with no motion fidelity. No other significance was found in the model. Results of the model are in Table 8.
+Table 8. Mixed Model Negative Binomial Regression for Missile Speed by Motion and Visual Fidelity
+      Source Visual fidelity
+Motion fidelity
+Visual * motion fidelity
+F df1 df2 p IRR
+1.85 1 140 .176 0.33 1.30 1 99 .258 0.33 5.22 1 99 .024 4.33
+       Results of the third model examining missile load indicated the only significant effect was the interaction between visual fidelity and motion fidelity, F(1, 93) = 6.17, p = .015, IRR = 6.01. Among those runs with the motion fidelity seat, those with high visual fidelity were 1.445 times more likely to deviate from planned load limitations compared to those who had the medium visual fidelity. Among those that had the high visual fidelity, those runs with the motion fidelity seat were 2.826 times more likely to deviate from planned load limitations compared to those runs with no motion fidelity. No other significance was found in the model. Results of the model are in Table 9.
+Evaluation of Findings
+In aggregate, the evaluation of the various context combinations supports a conclusion that the contextual factor of motion fidelity had little effect on pilot performance. In some situations, increased motion fidelity correlated to diminished pilot performance. The conclusion is illustrated in the analysis of the research cases shown in Table 10.
+1 1 / (0.46 * 1.13) from the IRR of the interaction and visual fidelity 2 1 / (0.46 * 1.35) from the IRR of the interaction and motion fidelity 3 (4.33 * 0.33) from the IRR of the interaction and visual fidelity
+4 (4.33 * 0.33) from the IRR of the interaction and motion fidelity
+5 (6.01 * 0.24) from the IRR of the interaction and visual fidelity
+6 (4.33 * 0.33) from the IRR of the interaction and motion fidelity
+ 2015 Paper No. 11 Page 7 of 11
+
+Table 9. Mixed Model Negative Binomial Regression for Missile Load by Motion and Visual Fidelity
+Source
+Visual fidelity
+Motion fidelity Visual*Motion fidelity
+F df1 df2 p IRR
+3.15 1 139 .078 0.24 0.16 1 93 .693 0.47 6.17 1 93 .015 6.01
+Table 10. Summary of Results
+Motion effect
+Pilots perform worse in roll control when performing a loop in a high visual
+fidelity simulator with higher motion fidelity
+Pilots perform worse roll control when performing a loop in a medium visual fidelity simulator with higher motion fidelity
+No difference in pilot performance on a bomb run with higher motion fidelity in simulator with high visual fidelity
+No difference in pilot performance on a bomb run with higher motion fidelity in simulator with medium visual fidelity
+Pilots perform worse with respect to load and speed control, but better with respect to missile avoidance when performing missile defense in a high visual fidelity simulator with higher motion fidelity
+No difference in pilot performance in missile defense with higher motion fidelity in simulator with medium visual fidelity
+MODSIM World 2015
+               Manuever
+Loop
+Loop
+Bomb Run Bomb Run SAM Defense
+SAM Defense
+Visual Fidelity High
+Medium High Medium High
+Medium
+      Additional Findings
+Pilots performed better in conditions of higher visual fidelity in both the loop maneuver and the bomb run maneuver. This conclusion is consistent with other research demonstrating the importance of the visual context. The human mind gives great credibility to visual cues (Plass et al., 2009). When interpreting this result in light of situated cognition theory, it appears the visual components of the targeted tasks are important contextual factors to consider when designing training situations. Other analysis results were expected based on the literature reviewed.
+The results supported a conclusion that context matters in specific situations. Motion and visual fidelity had a significant effect on pilot performance in some, but not the majority, of the situations examined. Many interactions in complex activities are unexplored so predictions on what context factors are important for training situations are not yet known (Artino et al., 2012). The lack of a significant effect of motion fidelity is consistent with earlier research indicating little performance difference between the motion and the nonmotion simulators in some conditions -Cohen et al., 2009; Martin, 1981). The research result that increased motion fidelity correlated with decreased pilot performance in some cases confirmed the complexity of interaction. Other results were also unexpected.
+Motion did not have a significant effect in most cases examined. Although this is consistent with some past work (Holt et al., 2011), the fact that motion fidelity correlated with increased performance in only one of 18 variable/context/maneuver cases is conspicuous. Holt et al. (2011) suggested the high experience level of the participants might have caused the pilots to adapt to the simulator contexts in other, as yet undocumented, ways to compensate fo the lac of f del ty. It s also poss ble the mot on contextual facto s not essent al to pa t c pants’ ability to form a cognitive training template. The results supported an answer to the research question that visual and motion fidelity have a significant effect on pilot performance but only in some specific areas. The chapter concludes with a summary of the research question analysis.
+Recommendations for Practice
+There are several recommendations with respect to training design suggested by the implications of this study. The chief recommendation is that training designers should exercise caution when deciding to add a motion seat to an
+2015 Paper No. 11 Page 8 of 11
+
+existing simulator. Improvements in the technology of motion-cueing devices led earlier researchers to conclude motion cues during simulator training can lead to improved performance for some skill-based behaviors (Bowen et al., 2006). Although other researchers have reported improvements in some areas (Sutton, Skelton, & Holt., 2010), that was not the case for the manuvers in this study. In nearly all cases examined, the motion seat did not increase pilot performance. Training designers should set expectaions accordingly. Although motion fidelity did not emerge as particurlay effective, the examination of visual fidelity revealed different results.
+Aviation trainers should consider using higher fidelity visual simulators for training. The results of this study showed higher visual fidelity improved performance in a wide variety of circumstances. However, designers should also consider that pilot performance does not universally improve with the addition of higher fidelity simulation (Estock, Alexander, Engel, Stelzer, & McCormack, 2008). The experience level of the intended training audience and the types of skills pilots will practice in the simulator are important considerations. Lintern (1995) noted that focusing on challenging skills, essential skills, and enabling pilots to calibrate the dynamic aspects of their skills are considerations consistent with situated cognition practice. The degree of immersion must be determined, but the degree of immersion, or fidelity, should be determined separately for each learned task (Meyer, Wong, Timson, Perfect, & White, 2012). Aviation trainers consider many constraints when designing training devises, so it is important to consider those features that have proven useful for their intended tasks and training audience. Beyond considering the value of visual and notion fidelity, training designers should consider combinations.
+The results of both this study and a study using similar contexts indicated a significant interaction existed between motion and visual fidelity. In this study, the combination of high visual fidelity and a motion seat improved performance in some tasks, while Holt et al. (2011) noted performance improvements in additional tasks with the same fidelity combination. Because a number of studies indicate this interaction, trainers should consider the interaction when designing training. If a performance improvement was indicated for particular maneuvers and tasks, then trainers should consider adapting the fidelity to that interaction. The trainers should consider disabling a motion seat if pilots are practicing maneuvers where the motion seat does not enhance performance. A review of the results of this study revealed several topics for future research.
+Recommendations for Further Research
+Three recommendations for future research were developed based on the results and analysis from this study. This study included analysis from three maneuvers using three outcome-dependent variables. Other studies include analysis of different maneuvers and different variables. Other researchers have noted there are still many interactions in complex activities that researchers should explore (Artino, Durning, Waechter, Leary, & Gilland, 2012). Future researchers should consider a meta-analysis of similar studies to resolve uncertainty where reports disagree, and attempt to determine a pattern for which context interventions are likely to be successful in which flight training situations. Trainers could use that knowledge to design simulations that will more effectively meet the needs of a training audience. The patterns could be useful for further determining the scope of situated cognition by developing guidelines for the role of sensory stimulation as context in flight and other training. Researchers should explore context interactions in other ways as well.
+The complex nature of aviation training includes a need to consider many performance variables. Aircraft simulation capabilities continue to increase (Lee, 2005), which indicates there are more simulation context elements to consider. The physical context components of learning are a consideration of situated cognition. Trainers need to examine more variables to determine what can be effectively trained in a simulator and what tasks might still require an actual in-flight experience. Studies similar to this one that examine specific maneuvers and context elements will add to a record of what contexts can be effectively simulated, which will advance both training effectiveness and situated cognition development. The remaining recommendation for further study may be the most difficult to achieve.
+Performance in a simulator is a useful method for measuring and maintaining pilot competence. However, measuring the transfer of simulator training to operation in-flight tasks is the most useful tool (Lintern, 1995). Future researchers should attempt to track pilot performance during in-flight activity in an effort to correlate performance in the simulator with performance in flight. The imprecise nature of the situational cognition literature makes training transfer analysis difficult (Anderson et al., 1997). Training transfer measurement may be difficult,
+2015 Paper No. 11 Page 9 of 11
+MODSIM World 2015
+
+but research to gather transfer data will be valuable for establishing effectiveness. Trainers can make better decisions with respect to training design if they have valid training transfer data.
+CONCLUSION
+Reviewed in aggregate, these data indicate the sensory environment experienced during training does have an effect on pilot performance in simulators. Higher sensory fidelity, primarily visual, improved performance with respect to one or more observed variables in each of the three maneuvers analyzed for this study. Motion simulation had limited positive impact on performance in this study, although it has been previously shown to improve training for inexperienced pilots or in specific cases such as upset recovery. However, there are no comprehensive guidelines for determining where and why motion simulation is cost effective in pilot training. The implication is situated cognition theory, with its emphasis on the learning context, may be useful as an aid for designing aviation training in a logical cognitive-based manner.
+The specific implication of the analysis of the effect of the motion seat were as follows. The dynamic motion seat does not appear to improve performance in the loop maneuver with either high, or medium-visual-fidelity simulators, and performance was significantly worse for one of the variables. The motion seat did not have any significant effect on pilot performance on the bomb run. The motion seat had no significant effect on performance on missile defense in the medium visual-fidelity simulator. In the high visual-fidelity simulator, the motion seat had a significant detrimental effect on performance for two of three observed variables and an improving effect on one.
+The chief practical recommendation is that training designers should exercise caution when deciding to add a motion seat to an existing simulator. Another practical recommendation is aviation trainers should consider the use of higher fidelity visual simulators for training. Finally, because a number of researchers suggested interaction between visual and motion fidelity, trainers should consider the interaction when designing training.
+Future researchers should consider a meta-analysis of similar studies to resolve uncertainty where reports disagree and attempt to determine a pattern for which context interventions are likely to be successful in which flight training situations. In addition, researchers should examine different performance variables to determine which can be effectively trained in a simulator and what tasks might still require an actual in-flight experience. Future researchers should attempt to track pilot performance during in-flight activity in an effort to correlate performance in the simulator with performance in flight.
+REFERENCES
+Anderson, J. R., Reder, L. M., & Simon, H. A. (1997). Situative versus cognitive perspectives: Form versus substance. Educational Researcher, 26, 18-21. doi:10.3102/0013189x026001018
+Andrews, D. H., & Bell, H. H. (2009). A virtual environment application: Distributed mission operations. In D. Schmorrow, J. Cohn, & D. Nicholson (Eds.), The PSI handbook of virtual environments for training and education: Developments for the military and beyond (Vol. 3, pp. 77-84). Westport, CT: Praeger Security International.
+Artino, A. R., Jr., Durning, S. J., Waechter, D. M., Leary, K. L., & Gilliland, W. R. (2012). Broadening our understanding of clinical quality: From attribution error to situated cognition. Clinical Pharmacology and Therapeutics, 91, 167-169. doi:10.1038/clpt.2011.229
+Bowen, S. A., Oakley, B. P., & Barnett, J. S. (2006). Effects of motion on skill acquisition in future simulators (Report No. 2006-07). Orlando, FL: U.S. Army Research Institute.
+Brown, J. S., Collins, A., & Dugid, P. (1989). Situated cognition and the culture of learning. Educational Researcher, 18, 32-42. doi:10.3102/0013189X018001032
+-Cohen, J., Sparko, A. L., & Bellman, M. (2011). Flight simulator motion literature pertinent to airline-pilot recurrent training and evaluation. Proceedings of the AIAA Modeling and Simulation Technologies Conference. Reston, VA: American Institute of Aeronautics and Astronautics. doi:10.2514/6.2011-6320
+De Winter, J. C. F., Dodou, D., & Mulder, M. (2012). Training effectiveness of whole body flight simulator motion: A comprehensive meta-analysis. International Journal of Aviation Psychology, 22, 164-183. doi:10.1080/10508414.2012 .663247
+Estock, J. L., Alexander, A. L., Engel, K., Stelzer, E. M., & McCormack, R. (2008). Performance effects and training environment fidelity: An automated approach to standardize simulator evaluations phase II (Report No. AFRL-RH-AZ-TR-2009-0002). Mesa, AZ: Air Force Research Laboratory.
+2015 Paper No. 11 Page 10 of 11
+MODSIM World 2015
+
+Groen, E. L., Wentink, M., Pais, A. R. V., Mulder, M., & van Paassen, M. M. (2006). Motion perception thresholds in flight simulation. Reston, VA: American Institute of Aeronautics and Astronautics. doi:10.2514/6.2006- 6254
+Holt, L., Schreiber, B. T., Duran, J., & Schroeder, M. (2011). Evaluating the impact of dynamic fidelity on performance. Proceedings of the Interservice/Industry Training, Simulation, and Education Conference. Arlington, VA: National Training and Simulation Association.
+International Air Transport Association. (2013). Annual report 2013. Retrieved from http://www.iata.org/about/Documents/iata-annual-review-2013-en.pdf
+Irish, P. A., & Buckland, G. H. (1978). Effects of platform motion, visual and G-seat factors upon experienced pilot performance in the flight simulator (Report No. AFHRL-TR-78-9). Williams AFB, AZ: Air Force Systems Command.
+Kallus, K. W., Tropper, K., & Boucsein, W. (2011). The importance of motion cues in spatial disorientation training for vfr-pilots. International Journal of Aviation Psychology, 21, 135-152. doi:10.1080/10508414.2011.556458
+Larkin, M., Eatough, V., & Osborn, M. (2011). Interpretative phenomenological analysis and embodied, active, situated cognition. Theory & Psychology, 21, 318-337. doi:10.1177/0959354310377544
+Lee, A. T. (2005). Flight simulation: Virtual environments in aviation Burlington, VT: Ashgate.
+Lintern, G. (1995). Flight instruction: The challenge from situated cognition. International Journal of Aviation
+Psychology, 5, 327-350. doi:10.1207/s15327108ijap0504_1
+Lucia, D. J. (2011). Cruising in afterburner: Air force fuel use and emerging energy policy. Energy Policy, 39, 5356-
+5365. doi:10.1016/j.enpol.2011.05.028
+Macchiarella, N. D., Brady, T., & Lyon, B. S. (2008). An application of high fidelity FTDs for ab initio pilot
+training: The way ahead. Collegiate Aviation Review, 26, 67-75.
+Macchiarella, N. D., & Doherty, S. M. (2007). High fidelity flight training devices for training ab initio pilots.
+Proceedings of the Interservice/Industry Training, Simulation, and Education Conference. Arlington, VA:
+National Training and Simulation Association.
+Martin, E. L. (1981). Training effectiveness of platform motion: Review of motion research involving the advanced
+simulator for pilot training and the simulator for air-to-air combat (Report No. AFHRL-TR-79-51).
+Williams AFB, AZ: Air Force Human Resources Laboratory.
+McGrew, J. S., How, J. P., Williams, B., & Roy, N. (2010). Air-combat strategy using approximate dynamic
+programming. Journal of Guidance, Control, and Dynamics, 33, 1641-1654. doi:10.2514/1.46815 Meyer, G. F., Wong, L. T., Timson, E., Perfect, P., & White, M. D. (2012). Objective fidelity evaluation in
+multisensory virtual environments: Auditory cue fidelity in flight simulation. Plos One, 7(9), e44381.
+doi:10.1371/journal.pone.0044381
+Moore, K. (2011). Early history of flight simulation. Retrieved from
+http://www.simulationinformation.com/education/early-history-flight-simulation
+Pasma, D. L., Grant, S. C., Gamble, M., Kruk, R. V., & Herdman, C. M. (2011). Utility of motion and motion-
+cueing to support simulated in-flight rotary-wing emergency training. Proceedings of the Human Factors
+and Ergonomics Society Annual Meeting, 55, 133-137. doi:10.1177/1071181311551028
+Patrick, J. (2009). Training. In M. A. Vidulich & P. S. Tsang (Eds.), Principles and practice of aviation psychology
+(Kindle ed.). Mahwah, NJ: Erlbaum. doi:10.1017/CBO9780511609817.014
+Schreiber, B. T., Bennett, W., Colegrove, C., Portrey, A. M., Greschke, D., & Bell, H. H. (2009). Evaluating pilot
+performance. In K. A. Ericsson (Ed.), Development of professional expertise (pp. 247-270). New York,
+NY: Cambridge University Press.
+Schroeder, J., & Grant, P. (2010). Pilot behavioral observations in motion flight simulation. Proceedings of the
+AIAA Modeling and Simulation Technologies Conference. Reston, VA: American Institute of Aeronautics
+and Astronautics.
+Shaw, R. L. (1985). Fighter combat: Tactics and maneuvering. Annapolis, MD: Naval Institute Press.
+Sutton, D., Skelton, M., & Holt, L. (2010). Application and implementation of dynamic motion seats. Proceedings
+of the Interservice/Industry Training, Simulation, and Education Conference. Arlington, VA: National
+Training and Simulation Association.
+U.S. Department of Defense. (2013). FY2014 budget request overview book. Retrieved from
+http://comptroller.defense.gov/defbudget/fy2013/FY2014_Budget_Request _Overview_Book.pdf Warden, J. A. (2011). Strategy and airpower. Air and Space Power Journal, 25, 64-77. Retrieved from
+http://www.airpower.maxwell.af.mil
+2015 Paper No. 11 Page 11 of 11
+MODSIM World 2015

@@ -1,0 +1,205 @@
+Developing Blended Technology Systems to Support Air Force Medical Modeling and Simulation Training
+Micheal Raines, Greg Gardner, Lauren E. Tindall, Faith Powers
+ICF International
+Fairfax, VA
+Micheal.Raines@icfi.com, Greg.Gardner@icfi.com, Lauren.Tindall@icfi.com, Faith.Powers@icfi.com
+OVERVIEW
+ABSTRACT
+The Air Force Medical Modeling and Simulation Training (AFMMAST) program within the Air Education and Training Command of the Air Force Medical Service (AFMS) delivers medical simulation training to thousands of medical personnel each year at over 80 sites around the globe. The program’s rapid expansion began in 2007, and it continues to grow, allowing more individuals and teams to be trained on critical medical skills. With this expansion and given the distributed nature of the program, AFMMAST simulation operators and personnel at each site have been able to develop simulation training scenarios and curriculum to meet the needs of the medical professionals at their sites and in their Medical Treatment Facilities (MTFs). Although AFMMAST personnel have been able to meet site-specific training needs and develop tailored, on-demand training, the program’s rapid expansion has led to a lack of standardization in how simulation equipment is used; training needs are analyzed; and curriculum/training scenarios designed, developed, and implemented to support identified, site-specific training needs. Research has shown that standardization of curriculum that uses simulation has been shown to improve skill acquisition and retention as well as reduce complications in the performance of the simulator-trained skill in practice. For that reason, the AFMMAST Central Program Office (CPO), which provides oversight and leadership over the AMMAST program, launched an initiative along with ICF International to help standardize the training delivered by the simulation operators and personnel at each site, allowing them to be flexible and responsive to their site’s needs while also ensuring the instructional integrity of the training produced and the functionality of the equipment used.
+ABOUT THE AUTHORS
+Situation Prior to Blended Learning Solution Implementation
+Simulation operators, i.e., those individuals who help create medical training scenarios, run the simulation equipment used within them, and operate medical simulation centers, at the over 80 AFMMAST sites around the globe, received some training prior to the implementation of our solution but it was intermittent and varied by site. The program was faced with the following specific challenges:
+• Cost-Prohibitive and Generic Vendor-Offered Training: Many simulation operators were trained primarily via face-to-face, vendor-offered training offered by the vendors from whom AFMMAST procured simulation equipment (e.g., Laerdal, METI, Gaumard). Although useful for understanding how to operate a specific piece of equipment, the AFMMAST program uses human patient simulators and other simulation equipment from many vendors, and within each vendor’s offerings, they use many different types of equipment (e.g., human patient simulators, task trainers, virtual reality trainers). In addition, it is cost-prohibitive to send simulation operators around the globe to attend various face-to-face trainings to learn about specific pieces of equipment that may only comprise a small percentage of the equipment available at their site, not to mention that the equipment may be updated periodically requiring retraining. The trainings are also not tailored to the AFMS context and the specific needs of the AFMS’ medical personnel.
+• Variation in Size and Staffing of AFMMAST Sites: This situation is further complicated by the fact that the AFMMAST sites vary in size, such that some are large enough to support full-time simulation operators trained to use the equipment and build simulation-based training, while others are smaller and often use active duty personnel on a part time basis who may only train using simulation intermittently and who may not have access to the training needed to do so effectively. Although many of the larger sites had developed training to help simulation operators perform effectively, many of the smaller sites did not have such training offerings available. Some operators at these smaller sites were able to attend instructor-led training
+MODSIM World 2014
+    2014 Paper No. MS1479 Page 1 of 10
+
+at other sites, but many others didn’t have the funds to travel and attend. The AFMMAST program has set up a mentoring program whereby larger sites mentor smaller sites in the execution of their simulation training programs; however, there were some training needs that were not being met through this program, and those that were not being effectively shared with the rest of the AFMMAST community.
+• Loss of Knowledge/Skills Resulting from Personnel Turnover: As simulation operator personnel turnover at each site and active duty personnel are rotated, some of the knowledge and skills they gained about simulation training also goes with them. For instance, personnel may attend a vendor-offered instructor-led training to learn how to operate a specific piece of equipment. Although some may make an effort to document what they learned or brief their replacements, some of what they learned (and what the AFMMAST program invested) is lost in the transition. Such frequent requires re-training locally for a fee through the vendor or by traveling to another location, both of which are prohibitively expensive in a large system.
+• Simulation Equipment Sitting Unused: The AFMMAST program has invested millions in building its simulation equipment inventory to meet the training needs of the medical professionals across the globe. However, the equipment is only as effective as the simulation operators who train others using it. In many cases, particularly at smaller sites, some of this equipment was sitting unused, literally collecting dust, partially because some simulation operators were not trained on how to operate the equipment and/or how to champion/integrate simulation training into the broader medical training curriculum at their site. The AFMMAST program needed a way to help train up operators to perform basic simulation scenarios and to refresh on how to perform key procedures on the equipment when needed on the job.
+• Lack of Knowledge Sharing Across AFMMAST Sites: While many sites have created simulation training scenarios to help teach specific skills to medical professionals at their sites, these scenarios are not consistently documented so that they can be repeated by others nor consistently shared with other sites.
+Thus, the available training for simulation operators was not sufficient to help meet the AFMMAST mission: “To develop and use advanced learning technology and methodologies to improve medical education and training for healthcare teams and patients, for the purpose of improving healthcare outcomes.” The use of advanced learning technology and methodologies was inconsistently implemented and lacked standardization to ensure best practices were being used and lessons learned shared across the entire program.
+The Solution
+As demonstrated above, training simulation operators to operate complex patient simulators and coordinate simulation center operations at distributed locations is time consuming, currently costly, challenging to execute in a standardized manner, and lacking in AFMMAST-specific, on-the-job application. In an effort to reduce cost and provide high quality, AFMMAST-specific, standardized instruction, the AFMMAST CPO joined with ICF International to develop a blended learning training program primarily designed to train individuals with limited medical simulation experience (e.g., part-time simulation operators at smaller MTFs). Our focus in the design was not to show operators how to run a specific simulator (i.e., mimic vendor training) but rather to show operators how to perform simulation using a standardized pre-programmed scenario in a high fidelity simulator (course #1) and how to then effectively build on these foundational knowledge and skills to conduct simulation training using other simulation equipment (course #2). This changed the training focus from an endless outline of “buttonology” that often characterizes vendor training (i.e., “Then, you press this button to make the simulator do X.”) to a practical application whereby operators learn not only how to perform these operations but why they are performed and how the equipment can be used to accomplish simulation’s larger goal—training medical professionals to be safer and more effective practitioners. This approach aligns with best practices in adult learning theory and is well-aligned with operator’s on-the-job responsibilities.
+The curriculum includes web-based training, mobile learning applications to provide “just-in-time” information, and print-based job aids that follow a logical flow and contain increasingly advanced content focused on the use and maintenance of simulation equipment and the management of simulation centers. The design provides a standardized, cost-effective, and flexible method for training both technical skill and process. The program will allow simulation operators to gain the knowledge and skills to successfully support the simulation programs at their sites. The curriculum currently includes two courses: Simulation 101 – Simulation Operator Basic Course (“Sim 101”) and Simulation 201 (“Sim 201”).
+2014 Paper No. MS1479 Page 2 of 10
+MODSIM World 2014
+
+SIMULATION 101 (“Sim 101”) COURSE
+The Sim 101 course is the first course in the series and is designed to help operators gain the knowledge and skills needed to run a specific training scenario on one of four human patient simulators that are used by the majority of AMMAST sites. Leading up to the development of this course, AFMMAST developed a series of Readiness Skills Verification Program (RSVP) scenarios to begin to address the lack of standardized curricula along with a standardized scenario template to encourage personnel to document scenario content such that it can be repeated by
+others. (RSVP represents the minimum skills required for an individual to perform the duties associated with their Air Force Specialty Code (AFSC) during expeditionary and installation response contingencies.) AFMMAST distributes these scenarios in a template format via the AFMMAST web portal. Each scenario is programmed into the major simulator types used at the small sites, and these programming files are provided along with the scenario document itself. Development of each scenario is based upon current practice literature, clinical guidelines, and lessons learned from deployed units. The scenarios end in one of 3-4 possible scores depending on how well the team addresses the critical objectives. This method of programming performance measures allows the facilitator to pinpoint where participants deviated from the “ideal state,” and the simulator records the observed performance for use in the debriefing. Scenarios programmed in this manner using a standardized
+Figure 1. The AFMMAST Scenario Template helps to standardize how simulation scenarios are run and ensure instructional integrity.
+curriculum minimize variation due to operator and facilitator experience or facility size. To facilitate use of these standard scenarios, a self-paced web-based training program was developed to help simulation operators learn to successfully upload and run a selected scenario that uses the standardized AFMMAST format. The chosen scenario dealt with the treatment of a victim who had come into contact with a landmine. This particular scenario was chosen because it requires learners to complete several key tasks that are widely applicable to other scenarios and
+MODSIM World 2014
+   Figure 2. The 3D graphically rendered medical simulation training room allowed learners to navigate through the course in a unique, learner-driven manner.
+representative of the simulators’ capabilities.
+Sim 101 WBT
+The Simulation Operator – Basic Course, or “Sim 101 course” for short, contains four modules (90 minutes per module) that focus on how to run the selected scenario using the four most common human patient simulator types in the AFMMAST inventory. Each WBT module is structured so that learners view an introductory video that combines animation with live video, followed by a short introductory section that introduces the scenario and generally orients the learner to the components of the AFMMAST scenario template that are most relevant for simulation operators. Next, learners are introduced to a graphically rendered version of a medical simulation training room within which there are different components of a typical
+ 2014 Paper No. MS1479 Page 3 of 10
+
+simulation training room (e.g., bed with a simulator on it, a computer stand with the simulation operator computer, and a table with the waveform monitor and other materials that the simulation operator would prep for use with the simulator). An experienced simulation operator serves as the learner’s “coach” throughout the various modules. Within each topic, learners gain the key knowledge and skills needed to meet the topic’s associated learning objective. Each module also contained a pre- and post-test that allowed learners to assess their knowledge and skills before and after the course. These tests were for self-development and allowed learners to self-assess and tailor how they proceeded through the instruction.
+The WBT modules also contain 3D rendered versions of the four human patient simulators. Because various sites may have slightly different versions of the same model that look different but function similarly, the 3D rendered simulators allowed learners to manipulate and interact with the simulators in the course, recognizing that they were not meant to be high-fidelity replications of their mannequins.
+MODSIM World 2014
+ Sim 101 Mobile Learning Applications
+Four mobile applications were designed to run on various mobile platforms to enhance and supplement the material provided within each module of the WBT. By providing this supplementary information in a mobile learning application format, simulator operators are able to obtain instruction on how to set up, perform, and troubleshoot common procedures quickly and when they need it on the job. The applications are set up in a question-based format, such that operators can locate the question they have (e.g., “How do I make the simulator bleed?”) and then proceed through the step-by-step process for answering their questions or solving their problem, augmented by both text and detailed visuals.
+Sim 101 Job Aids
+Electronic and paper-based job aids were also developed to assist learners in carrying out key duties. Each job aid is available electronically and referenced within the WBT in the appropriate module. The job aids are also accessible via onscreen buttons and a module-specific resources section (accessible via a button within the graphical user interface, or GUI). In addition, some job aids were printed in a durable, paper-based format, accompanied by a carabineer, so that they could be physically attached to the appropriate simulator at various sites (to help prevent the job aids from being filed away and forgotten).
+Sim 101 Implementation
+Figure 3. The mobile learning applications allow learners to access specific technical information while on the job.
+ The Sim 101 course, including the WBT course, mobile learning applications, and job aids, is posted on the AFMMAST web portal (http://www.afmmast.mil/), which is available to all simulation operators across the AFMMAST program.
+SIMULATION 201 (“Sim 101”) COURSE
+Although the Sim 101 course established baseline skills that simulation operators should have in order to run one scenario on a particular simulator, AFMMAST recognized the need for additional courses that build on those baseline skills and enable operators to not only run already-developed and programmed scenarios, but perform higher-level skills as well, including assessing the training needs at their site, developing scenarios/curricula to meet those needs using the AFMMAST scenario template, and helping manage simulation center operations. Again, like with the Sim 101 course, AFMMAST faced many of the same challenges and sought a virtual training solution that could be delivered in a low-cost format while still allowing for achievement of the learning objectives. In this instance, they also faced two additional challenges:
+1. Given the large number of different equipment types and vendor models in the AFMMAST inventory, how do you deliver training on all of them in a sustainable and cost-effective manner that will not require frequent updating as technologies change and equipment is upgraded?
+ 2014 Paper No. MS1479 Page 4 of 10
+
+2. How do we provide training that can be applied to all AFMMAST sites to allow for a standardized approach while also recognizing that each site is unique in terms of the equipment available, personnel/skills trained, degree to which simulation training is used/accepted, and size?
+Sim 201 “AFMMAST University”
+To tackle these challenges, AFMMAST
+collaborated with ICF International to create the
+“AFMMAST University” component of the Sim
+201 course. The AFMMAST University component
+is set up like a graduate-level course, in that it
+requires significant self-study on the part of the
+learner, bolstered by direct instruction, culminating
+in the execution of a final project. Five of the seven
+modules in the Sim 201 course comprise the
+AFMMAST University and consist of self-study
+modules that ask learners to select a piece of
+simulation equipment at their site (e.g., a task
+trainer, human patient simulator) and then use the
+simulation equipment’s user manual to document
+information about the equipment/practice using it in
+order to achieve the learning objectives for that
+module. The learning objectives are crafted to be
+equipment-neutral such that they refer to critical
+skills and knowledge that are required for the
+successful use of any piece of simulation
+equipment. For instance, if the learning objective is
+to “demonstrate how to perform power on procedures for your site-specific simulation equipment,” then the learner researches this topic and completes an accompanying self-study guide. Then, following completion of the self-study modules as well as the WBT modules, learners are asked to complete a capstone project that requires the learner to apply the knowledge and skills gained in the Sim 201 course in its execution.
+Specifically, learners are asked to use the selected piece of equipment to develop a simulation scenario that meets a training gap or need at their site. They are instructed to submit a project proposal to the AFMMAST CPO (Phase 1), and upon approval, they design and build their proposed simulation scenario and submit it to the CPO for feedback
+MODSIM World 2014
+  Figure 4. Phase 1 of the Capstone Scenario Development Project requires operators to collaborate with the AFMMAST CPO to develop a project proposal that helps address a training need at their site.
+  Figure 5. Learners are guided through the instruction by Coach Victor and explore key components in a learner-driven manner, selecting buttons to learn more and navigating through the instruction in the order they desire.
+(Phase 2). Then, the learners conduct the scenario with a group of medical professionals at their site and submit student critiques, run logs from the simulation equipment, video capture, or other information to AFMMAST for review and feedback (Phase 3). This approach has a four-fold benefit and is designed in such a way as to minimize the extra work that has to be taken on by the operator: 1) it helps the operator gain critical knowledge and skills, 2) helps fill a training gap at his/her site (something the operator would already need to do as part of his/her day- to-day job), 3) increases partnership among the CPO and the various AFMMAST sites, and 4) contributes to the AFMMAST scenario repository and allows other operators to reuse the scenario to meet training gaps at their sites.
+ 2014 Paper No. MS1479 Page 5 of 10
+
+Sim 201 WBT
+The WBT component of the Sim 201 course
+contains seven modules focused on the
+AFMMAST medical simulation program and
+how to develop medical scenarios in an
+instructionally sound manner, apply moulage,
+run and debrief a simulation, and manage a
+simulation center. As with the Sim 101 course,
+the learner navigates through these modules
+with the assistance of an experienced
+simulation operator who explains key concepts
+and provides real-life examples. In addition,
+learners engage in scenario-based exercises to
+help contextualize the information and
+consider how to apply it at their simulation
+centers. To help learners visualize how to
+conduct an effective debrief, we developed two
+avatar-based, animated videos depicting a
+effective debrief in which the participants
+exhibit the skills taught in the WBT and an ineffective debrief in which the participants exhibit the opposite of what is taught in the WBT, allowing learners to see the impacts of that approach on the participants’ willingness to share information and ability to learn from the experience.
+Sim 201 Mobile Learning Applications
+As with the Sim 101 course, mobile learning applications were also developed to augment the instruction provided and allow operators to quickly access needed information. Based on an analysis of the WBT modules, it was determined that three mobile learning applications would be developed focusing on the medical simulation development process, moulage applications, and conducting a debrief. These applications were designed so that learners could search for key words and access information to answer specific questions they may have (e.g., how do I create a gunshot wound using moulage?).
+Sim 201 Implementation
+Like the Sim 101 course, the Sim 201 course, including the WBT course and mobile learning applications, is posted on the AFMMAST web portal ((http://www.afmmast.mil/), which is available to all simulation operators across the AFMMAST program.
+DESIGN AND DEVELOPMENT APPROACH
+To develop both the Sim 101 and 201 courses, ICF employed the use of a streamlined Analysis, Design, Development, Implementation, and Evaluation (ADDIE) Systems Approach to Training (SAT) approach to ensure the course is instructionally sound, effective, and efficient. This accelerated course design and development process consisted of four phases:
+1. Rapid Cycle Prototyping (RCP) Workshop: The RCP workshop is technique used to streamline the analysis and design phases of the project. The RCP workshop brings together instructional designers, technical experts, the client, and select simulation coordinators and/or operators as subject matter experts (SMEs) in a highly structured, coordinated, and facilitated meeting to reach consensus on a path forward.
+2. Design: During this phase, we produced an Instructional Media Design Document that included an overview of the path forward, a proposed Graphical User Interface (GUI), and content outlines for all modules in the courses. We then developed a brief prototype based on the outcomes of the RCP and, once the prototype was approved, developed storyboards for all course modules/mobile learning applications.
+3. Development: In this stage, we developed the WBT courses and mobile learning applications per the final approved design documents and storyboards.
+4. Implementation/Delivery/Evaluation: During this stage, we tested the WBT and mobile learning applications with a segment of the target audience, made the necessary revisions, and then provided the final files to the AFMMAST CPO.
+Figure 6. Learners view an animated video depicting how to conduct an effective debrief, allowing them to see how apparent nuances of tone and environmental interference impact the success of the debrief.
+MODSIM World 2014
+   2014 Paper No. MS1479 Page 6 of 10
+
+Rapid Cycle Prototyping Workshops
+In preparation for each of the RCP workshops (separate workshops were held for the Sim 101 and Sim 201 courses), ICF reviewed government furnished information (GFI) including:
+• Current training, as available, including vendor-offered training and training offered by AMMAST sites
+• Other performance support tools, including job aids, mannequin operation manuals, etc.
+• Process flowcharts and standard operating procedures (SOPs)
+• Technical documentation/guidelines, including:
+o AFMS Modeling and Simulation Training Program’s Section 508 Guidelines
+o E-learning technical development and SCORM conformance requirements/guidelines and any
+required templates
+o Minimum system platform specifications (for end-users’ computers) o Branding guidelines (e.g., for logos, permitted web color palette)
+Based on the above, ICF prepared “straw man” content outlines for all course components (WBT and mobile learning) for the RCP workshops. At the beginning of the workshops, the attendees were presented with “straw man” outline as a starting point for the discussion, as we have found that giving attendees something to react to (even if it is not completely accurate) leads to more fruitful discussion than starting with a blank page. The attendees then discussed and revised the straw man outlines, including revising learning objectives, order of the instruction, content covered, as well as brainstormed design strategies to help achieve the learning objectives. The RCP workshops were held at the client site to minimize client travel costs and lasted 3.5 days (2 days for the Sim 101 course, 1.5 days for the Sim 201 course).
+Design
+The outputs of the RCP workshops allowed ICF to create a draft Instructional Media Design Document for each course containing:
+• Terminal and enabling objectives
+• A high-level content outline for each course component
+• Instructional and learning strategies
+• Media selection results (based on ICF’s blended learning analysis model that allowed us to determine
+which learning objectives/content is best taught via WBT, mobile learning, or another medium)
+• An estimate of the instructional seat time
+• Proposed mock-up of the interface design for both the WBT and mobile learning applications
+Based on the client’s feedback on the draft document, ICF discussed the proposed changes with the client team and made updates before delivering the final version of the Instructional Media Design Document. These documents then served as the blueprint moving forward into the Design phase.
+At this stage for the Sim 101 course, ICF developed a brief prototype that enabled the client to better visualize what the end solution would look like and to make certain that it was in line with the AFMMAST vision. This prototype addressed a unique human patient simulator model and was deployed in the client environment. This process provided ICF and the client with early opportunities to identify any technological difficulties or instructional design changes needed. It was key to ensuring maximum efficiency during the Development and Implementation phases for the Sim 101 course and then allowed for smooth and efficient development of the Sim 201 course as well.
+Based on the approved Instructional Media Design Documents and prototype, ICF then created the draft course storyboards for each module and mobile learning application. The storyboards specified the content to be included on each instructional screen, how the user interacts with it (i.e., what interactions are to be developed by the programmers to engage the learner), any associated narrative, and the assessment questions to be asked about each learning objective for the pre- and post-tests in the WBT. ICF collaborated closely with the AFMMAST team and
+2014 Paper No. MS1479 Page 7 of 10
+MODSIM World 2014
+
+SMEs during this period for both the Sim 101 and Sim 201 courses to ensure the content was technically accurate and engaging for the learner. ICF provided the storyboards to the client for review, and then integrated the client’s feedback. ICF then delivered final storyboards to the client team so that they could validate that ICF accurately and completely integrated their feedback on the draft product.
+Development
+Using the approved storyboards from the Design phase, ICF programmed each module of the WBT and mobile learning applications using a rapid development tool. The course components were programmed to comply with technical specifications outlined during the Design phase. ICF then engaged in a rigorous QA process to ensure the courses functioned as intended.
+WBT
+The WBT was developed to meet the following minimum system platform specifications, as dictated by the AFMS standards:
+MODSIM World 2014
+System Requirements
+     Operating System
+    Microsoft Windows XP SP2
+   Processor
+    550 MHz or faster (1.2 GHz or faster recommended)
+   RAM
+      256 MB or greater
+     Sound Card
+  16-bit sound card with speakers and/or headphones
+ Monitor
+    1024 x 768 minimum resolution (or higher recommended) with 16-bit color depth
+   Network Connection
+      High speed Internet access
+     Supported browsers:
+  Internet Explorer (supported version is between 6.0 and 8.0) , Mozilla Firefox (supported version is 3.6.x.x and above), Safari on Mac (supported version is 5.0 and above)
+ Scripting
+    JavaScript, Active X and cookies must be enabled; "pop-up blocker" software must be disabled or programmed to accept pop-ups
+   Plug-ins
+    Flash player 10.3.181.34 (supported version is 9.0 and above), Adobe Reader 10.1.0.0 (supported version is 8.2 and above)
+    Mobile Learning Applications
+Mobile output is designed to work across different mobile smartphones and tablets that support HTML5 through a WebKit browser. Currently tested platforms include: iOS devices 3.0 or higher (iPhone, iPad) and Android devices 2.2 or higher.
+For both Sim 201 and Sim 202 courses, native IPK applications were created for Android devices by ICF using PhoneGap Build.
+On the iOS platform, a standard HTML 5 framework was used, although this was augmented with Offline Cache. The Offline cache allows leaners to download all content from the mobile learning module for viewing when an internet connection is not readily available. To work within the limitation of Offline Cache, all mobile learning applications were kept under 10 MB in size.
+The Sim 201 courses modules were further enhanced to take advantage of the unique nature of mobile viewing. A floating left hand panel was introduced into the navigation structure allowing the learning to jump to any point within the course. This panel also was design to give the user quick visual feedback on the topics that had previously covered as well as the ability to “favorite” sections for easy reference. To allow for the many variations of screen sizes possible across various devices, responsive design practices were implemented. The practices allow for the content to adapt to the screen size or orientation of the user’s devices. In an effort to ensure the highest quality of the images displayed, the graphic content on any given page was programmatically adjusted to conform to the viewing environment.
+2014 Paper No. MS1479 Page 8 of 10
+
+Implementation/Delivery/Evaluation
+The course modules were then loaded to an ICF review site and beta tested, allowing stakeholders and members of the target audience to review them and provide feedback on their functionality. This beta test ensured that each module meets the learners’ needs and AFMMAST’s expectations. Beta testers completed a beta test evaluation form following completion of their assigned module/mobile learning application. ICF then analyzed the evaluation results and submitted them in a report, along with our recommendations, for consideration. Following discussion with the client, ICF implemented all agreed upon revisions to the final course materials. ICF then submitted the final materials to AFMMAST, including all source files.
+CONCLUSION AND DIRECTIONS FOR FUTURE RESEARCH
+Through the use of the blended learning training program described in this paper, the AFMMAST program and ICF International have created an instructionally-sound, flexible, tailored, and cost-effective training program to begin to meet the training needs of simulation operators at the over 80 AFMMAST sites around the globe. Although no formal evaluation has been conducted at this time, initial reports show that sites without full-time staff have shown an increase in the number of simulation encounters that occurred in 2012 (before the release of the Sim 101 course) vs. 2013 (after the release of the Sim 101 course). This aligns with one of the goals of the Sim 101 course, which was the increase the use of simulation particularly at smaller sites that do not have full-time simulation operators. As for the Sim 201 course, which was released in February 2014, the AFMMAST team is working with the Air Force (AF) Education and Training Command to embed the Sim 201 course as part of the formal coursework required for new Education and Training (E&T) officers, thereby embedding simulation operations training in a formal course at the AF level. Additionally, simulation training has now been added to Air Force enlisted medics’ training requirements, and the intent is to meet the requirement with the Sim 101 and 201 courses. The AFMMAST team is also in initial discussions to add the Sim 201 course to the Community College of the Air Force (CCAF) as an elective course for associates’ degree programs in simulation. Both courses are now a requirement for all new AFMMAST program contract hires. In addition, to build on the concepts presented in the Sim 101 and 201 courses, the AFMMAST team envisions developing a Sim 301 course to assist operators in acquiring the knowledge and skills needed to run simulation centers and perform organizational level responsibilities.
+ACKNOWLEDGEMENTS
+We could like to thank the following team members who contributed significantly to the creation of these products: Douglas Howard whose vision and oversight allowed us to execute these projects successfully, Maya Machacon for her input throughout the process, Ruben Garza for his contractual support to the project, John Mechtel for allowing us to use his training materials as the basis for the Sim 201 course and providing support throughout, Timothy Brush for his input to the Sim 201 course, and the tireless and dedicated Sim 101 SME team that included Teresa Millwater, Davey Scott, John Rodgers, and Roger Cowart. ICF would also like to thank the team of instructional designers and programmers whose commitment to quality was truly admirable.
+REFERENCES
+Achterbergh J, Vriens, D. Managing viable knowledge. Systems Research and Behavioral Science. 2002;19(3):223.
+Barsuk J, McGaghie W, Cohen E, O’Leary K, Wayne D. Simulation-based mastery learning reduces complications during central venous catheter insertion in a medical intensive care unit. Critical Care Medicine. 2009;37(10):2697-2701.
+Davenport T, Prusak L. Working Knowledge. 2nd Ed. Boston, MA: Harvard Business School Press; 1998.
+Freeth D, Hammick M, Reeves S, Koppel I, Barr, H. Effective Interprofessional Education: Development, Delivery
+& Evaluation. Oxford, UK: Blackwell Publishing; 2005.
+Jefferies, PR. Simulation in Nursing Education from Conceptualization to Evaluation. 1st Ed. New York, New
+York: National League for Nursing; 2007.
+2014 Paper No. MS1479 Page 9 of 10
+MODSIM World 2014
+
+MODSIM World 2014 Knowles MS, Holton EF, Swanson, RA. The Adult Learner: The Definitive Classic in Adult Education and Human
+Resource Development. 7th ed. Oxford, UK: Elsevier Inc.; 2011.
+Kyle RR, Murray WB. Clinical Simulation, Operations, Engineering, and Management. 1st Ed. Burlington, MA:
+Academic Press; 2008.
+Petrusa, ER. Current challenges and future opportunities for simulation in high-stakes assessment. Simulation in
+Healthcare: The Journal of the Society for Simulation in Healthcare. 2009; 4(1): 3-5.
+Riley RH. Manual of Simulation in Healthcare. 1st Ed. Oxford, New York: Oxford University Press; 2008.
+Salas E, Burke CS. Simulation for training is effective when... Quality & Safety in Health Care. 2002;11:119-120.
+Scerbo MW, Dawson S. High fidelity, high performance? Simulation in Healthcare: The Journal of the Society for Simulation in Healthcare. 2007;2(4):224-230.
+Steadman R, Coates W, Huang Y, Matevosian R, Larmon B, McCullough L, Ariel D. Simulation-based training is superior to problem-based learning for the acquisition of critical assessment and management skills. Critical Care Medicine. 2006;34(1):151-157.
+2014 Paper No. MS1479 Page 10 of 10

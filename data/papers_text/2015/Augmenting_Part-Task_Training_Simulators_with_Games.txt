@@ -1,0 +1,128 @@
+AUGMENTING PART-TASK TRAINING SIMULATORS WITH GAMES: BLENDED LEARNING FOR COMBAT MEDICS
+Thomas Santarelli & Dr. William Fitts
+CHI Systems, Inc.
+Plymouth Meeting, PA tsantarelli@chisystems.com, bfitts@chisystems.com
+ABSTRACT
+Because the number one preventable cause of death on the battlefield is due to extreme blood- loss from extremity wounds, a low-cost, scalable training solution to prepare every Solider in the use of tourniquets has the potential to save numerous lives on the battlefield. In response to this need, the HapMed system was developed to provide scalable, easy-to-use tourniquet application training to combat medics. HapMed address complex training challenges using a blended training solution encompassing information, demonstration, hands-on practice, and feedback. The purpose of the paper is to provide overall background on HapMed design requirements, illustrate recent advances to the system including a mobile controller application, and to describe the recent lessons learned through feedback garnered from HapMed end-users utilizing it in classroom combat lifesaver courses last year. HapMed provides a practical example of utilizing a blended design strategy to augment simulation-based training with games.
+ABOUT THE AUTHORS
+THOMAS SANTARELLI is the Director of Training at CHI Systems and has more than 20 years’ experience in training system design, development, and evaluation as well as research in
+cognitive modeling applications for training. He is currently leading research efforts to address the use of training games to augment live training as well as methods to integrate intelligent tutors into game environments. His research interests include modeling and simulation of human cognitive and organizational behavior and synthetic virtual actors applied to game-based training.
+WILLIAM FITTS is a Software Engineer at CHI Systems and expert in in field data collection for GIS, software development for socio-cultural research, and web technologies. His background includes the development of data collection technologies, spatial analysis, web 2.0 development and agent based modeling software development.
+2015 Paper No. 15 Page 1 of 9
+MODSIM World 2015
+
+AUGMENTING PART-TASK TRAINING SIMULATORS WITH GAMES: BLENDED LEARNING FOR COMBAT MEDICS
+Thomas Santarelli & Dr. William Fitts
+CHI Systems, Inc.
+Plymouth Meeting, PA tsantarelli@chisystems.com, bfitts@chisystems.com
+INTRODUCTION
+The Army combat medic supplies the first line of treatment for wounded soldiers. The majority of all combat casualties result from penetrating trauma (Parsons, 2004). Additionally, ninety percent of all combat deaths result from an injury that could not be treated in time but would otherwise be survivable (Fowler, Smith, & Litteral, 2005). While lack of response time is certainly partially to blame, inadequate training that adds to treatment time can also affect survival rate. To prevent unnecessary death, prompt and accurate treatment prior to evacuation is necessary. Hands-on, scalable training is essential for learning combat medic and combat lifesaver tasks on the battlefield, yet few low cost training devices support such training.
+Physical, manikin-based part-task simulators provide a supplement to traditional medical training and evaluation practices. In medic training, patient contact is often limited, and exposure to procedures is constrained by existing patient pools. Physical simulators provide a means to circumvent these obstacles for training and assessment by providing physical models with realistic visual and tactile feedback in effective decision making and execution of procedures and psychomotor skills required for manipulating tools (e.g., tourniquets) and direct manipulation of the patient (e.g., checking for a pulse). In a training context such as that addressed by HapMed, simulation alone benefits from augmentation through other means, such as didactic and game- based training. This paper describes the underlying the design of HapMed and recent lessons learned from feedback gained from current end-users, illustrates the training system and the use of a game-based blended design strategy for combat medic training .
+TRAINING DESIGN AND CHALLENGES
+During ongoing training analyses for HapMed, it became clear that there were a number of challenges to support the types of training objectives required to provide an effective tourniquet training application. These challenges, and their relationship to the resulting types of blended learning interventions, are described below.
+A well-practiced skill such as tourniquet application may require at least tens, and maybe hundreds, of training trials, but there are few existing opportunities to get extensive hands-on practice. A common approach is to have students apply a combat application tourniquet (CAT)
+to a 2x4 board or ‘buddy training’ where trainees apply tourniquets to other trainees. While 2015 Paper No. 15 Page 2 of 9
+MODSIM World 2015
+
+students may learn procedural knowledge this way, they do not receive tactile feedback on how tight a tourniquet must be to stop blood flow.
+There are other related drawbacks to current training, many of which benefit from a hands-on training simulation. With many current training methods, trainees do not gain the knowledge of
+• How long it takes to apply a tourniquet;
+• The most effective way to apply a tourniquet;
+• The number of tourniquet windlass twists required to stop bleeding;
+• The moderating role of body size on the tourniquet force required to stop bleeding;
+• Complications that can arise when applying a tourniquet;
+• Differences among the different types of tourniquets; and
+• The need to eliminate the distal pulse in addition to stopping blood flow
+Thus, physical training devices (i.e., part-task trainers that simulate procedural tasks) are needed to provide hands-on training and support the acquisition of this type of knowledge. More specifically, such devices need to provide instructors with control and manipulation of casualty parameters (e.g., body-size, number of tourniquets required, etc).
+Until recent advances in tourniquet technology, tourniquet use was shunned by civilian medicine and myths abounded in both military and civilian sectors many myths developed around these misconceptions. Previous analyses by the HapMed team pointed to a number of myths and misconceptions (Fowlkes, Dickinson, & Lazarus, 2009). A recently identified myth that
+“Tourniquets should always be placed ‘high and tight’” despite current guidance that “’high and tight’ placement is acceptable in care under fire situations, but can lead to complications” is
+currently being integrated within HapMed. Modern tourniquets, including the CAT and the Special Operations Forces Tourniquet, greatly minimize or eliminate these problems and recent research suggests they are highly effective (Richey 2007). In fact, recent studies have shown that these tourniquets have reduced the number of preventable deaths due to exsanguination from to limbs from 7.8% in 2001 to 2.6% in 2011 (Kotwal et a. 2013). Further, misconceptions exist regarding risks associated with use (Kragh et al 2008 and Kotwal et a. 2013). Thus, hands-on training in Hapmed is supplemented by didactic instruction and gaming interventions that addressed misconceptions surrounding the use of tourniquets.
+Skills needed by combat medics require not only the knowledge required to apply tourniquets, but other diagnostic and decision-making skills that go beyond the procedural elements of the tourniquet task. While a physical training device is ideally suited to train/evaluate procedural elements, it benefits from other training elements to provide decision-making skills to the trainee. Game-based applications can provide a rich form of interaction in order to train the user on condition indications (e.g., applying a tourniquet versus utilizing a hemostatic agent, evacuation and transport of patients etc.).
+2015 Paper No. 15 Page 3 of 9
+MODSIM World 2015
+
+HAPMED BLENDED TRAINING SUITE
+To address these challenges, we adopted a blended training approach in the design and development of HapMed. Our solution to the challenges we uncovered during our front end analyses was to design and develop a blended training solution. By blended solution we mean incorporating complementary training interventions linked to the types of learning objectives and the challenges or training needs discussed above. The HapMed training system includes an instrumented manikin leg (i.e., physical part-task trainer with built-in physiological simulation) to provide hands-on skills training for tourniquet application, an instructor controller as a mobile Android-based app that wirelessly controls the leg to provide scenario-based training and feedback to the trainee; and game based didactic instruction to further build knowledge and skills required of medics on the battlefield. These components are described below.
+HapMed Part-Task Trainer
+The HapMed part-task trainer (i.e., the manikin leg), pictured in Figure 1, was designed to provide stand-alone, hands-on skills training (as well as interact with the other system components) in which trainees can experience the actual torque required to staunch bleeding from an extremity wound and be timed on tourniquet application (Lazarus et al. 2008). The features designed into the leg were based on the essential cues for tourniquet application identified from the training analysis. The hardware components were based on our assessment of low cost technologies that could be sufficiently ruggedized. The part-task trainer needed to provide support for a range of requirements, including:
+• Bleeding depicted through LED arrays at the end of the manikin and depict an amputation.
+• Pressure sensors within the leg that can gauge the amount of pressure being applied via a
+tourniquet (or through other source of pressure such as squeezing with the hands at pressure points for improvised tourniquet application). The sensors were calibrated from data obtained from surgical applications of tourniquets (e.g., Klenerman and Hulands 1979).
+• As the tourniquet is tightened, LED lights on the leg indicate to the trainee that the
+bleeding is being slowed by the tourniquet. When the trainee has tightened the tourniquet enough, per amount of torque needed on an actual human, the red lights turn off indicating that the bleeding has been successfully stopped.
+• A timer on the leg shows the number of seconds that it took to stop the bleeding.
+• If a tourniquet is loosened once having been applied, the “bleeding” will begin again.
+• A pulse can be felt that weakens as the tourniquet is applied.
+• The leg will respond realistically to almost any tourniquet. This provides a tool to be used by medical personnel to try out or compare different tourniquets.
+• The leg can be attached to a stable surface so it will not roll around during use. 2015 Paper No. 15 Page 4 of 9
+MODSIM World 2015
+
+Figure 1: HapMed Tourniquet Part-Task Trainer
+Mobile Scenario-Based Controller
+HapMed scenarios delivered through the part-task (leg) trainer can be controlled from the mobile controller application. This application, an Android application, utilizes an intuitive user interface to enable an instructor to configure the trainer based on factors that a medic would need to know when applying a tourniquet. To streamline the distribution of the HapMed remote application we recently released the HapMed remote on the Goggle Play store.
+This mobile HapMed controller enables an instructor to:
+ control the state of a HapMed scenario remotely,
+ collect and review trainee performance data, and configure the HapMed trainer.
+ control the sensitivity of the pressure sensors on the HapMed arm thus enabling them to
+simulate differing body-types and thus amounts of pressure required to stop bleeding,
+ specify training scenario parameters such as wound location, casualty size, and whether the wound will require more than one tourniquet---these are all distinctions a medic or
+combat lifesaver needs to know when applying a tourniquet in combat.
+The controller also provides performance feedback to trainees. Specifically, the controller shows the location of the tourniquet(s) applied to the leg and indicates whether they have been placed correctly, the amount pressure being applied relative to the amount of bleeding, time to control bleeding, and status of the casualty. Finally, the controller can use the prompts provided by the application to discuss variables important in tourniquet application during classroom training exercises. The controller application can be used by an instructor to control the manikin arm in a classroom or in the field as part of lane training.
+Figure 2 shows three recent examples of the HapMed mobile controller remote application including (from left-to-right): scenario control to enable an instructor to select from a range of pre-defined scenarios (i.e., combinations of instructionally meaningful settings for body size, blood flow etc), real-time feedback on the progress of a trainee during a trial, and the end-results of the trial based on trainee performance.
+2015 Paper No. 15 Page 5 of 9
+MODSIM World 2015
+ 
+MODSIM World 2015
+   Figure 2: HapMed Controller Application Examples
+Game-Based Training
+A computer-based training framework was designed that would allow trainees to access game- based training modules, combat medic stories, and demonstrations that would interact wirelessly with the manikin leg. The game-based training modules were the components that we initially developed for the HapMed prototype. These included training modules focused on myths associated with tourniquet applications and identification of injuries suitable for tourniquets. In addition, a scenario-based decision making game was created. Mostly recently, the HapMed
+training games have been augmented through the use of ‘gamification’. Gamification has seen increasing use both in and outside the context of training applications (Hamari, Koivisto, &
+Pakkanen, 2014). Gamfication, in the most general sense, as defined by Deterding, Khaled, Nacke, & Dixon (2011, p.1) is “...is an informal umbrella term for the use of video game
+elements in non-gaming systems to improve user experience (UX) and user engagement.” To
+this end, we enhanced HapMed through aspects of gamification such as competition and scoring HapMed. Ongoing feedback from end-users of HapMed indicated that an important use-context for integrating HapMed within training classrooms is that the target training population is very
+competitive. To this end, we’ve included scoring within the game designs and mechanisms within the remote application to enable trainees and trainers to compare scores across training
+scenarios.
+The HapMed training games center around three types of learning, including: when to apply a tourniquet (or not), clarifying common misconceptions, and simulating key decision-making
+contexts. Figure 3 shows (top left), the Medic Decision Making game that tests a user’s decision making skills when faced with injuries in a combat setting. They are given combat scenarios 2015 Paper No. 15 Page 6 of 9
+
+where they are asked questions and have to provide an appropriate response for the situation. The Tourniquets Fact or Fiction trainer is a game that test users to see if they can tell fact from fiction concerning tourniquets. The user is asked to sort each statement about tourniquets into a fact or fiction pile, sorting two piles of six cards. Lastly, the Tourniquet or No Tourniquet asks the user to sort cards that display wounds into a pile that says a tourniquet should be applied to the wound or into a pile that says a tourniquet is not needed for the wound. For all three HapMed training games, the learner is scored, and feedback is delivered, based on the timeliness and correctness of their responses.
+Figure 3: HapMed Training Game Examples
+RECENT LESSONS LEARNED
+The HapMed Leg tourniquet trainer has been used as part Combat Life Saver training at several major training centers. We estimate that close to 2,000 service men and women used the system last year before deploying. Throughout this time we have been working closely with the CLS instructors to ensure that the devices were functioning at their full potential. We have walked
+MODSIM World 2015
+   2015 Paper No. 15 Page 7 of 9
+
+away with a number of lessons learned that illustrate the complexity of integrating a blended teaching solution into an existing curriculum.
+We have found that while instructors all have different methods to teaching CLS to their students, several import generalities exist. First and foremost, CLS are hands-on people and their teaching styles reflect this. Classroom didactic training is accessed as quickly as possible to move onto the skills training the instructors prefer. Therefore, the training games were implemented in a way that they could be used as an advance organizer or summary activities that students engage in as part of their independent preparation. CLS instructors also do not have the time to work with complex computer based solutions, class time is too limited and many instructors also severe as full time emergency medical professionals. If a high tech capability does not work on a consistent basis, the instructor will simply stop using it rather than spend large amounts of time trouble shooting the issue. To simplify deployment of the HapMed remote we recently released the HapMed remote on the Goggle Play store. This allows for trouble free software updates, and encourages us to release incremental updates as needed. Finally because CLS instructional design is implemented by the individual instructors, we have found that most instructors rely heavily on the part task trainer's custom scenario settings, preferring them over the built in scenarios provided by the system. This prompted us to significantly update the customizing capabilities of both the remote control application and the Leg Trainer.
+Equally important lessons can be found in how the students at CLS training are using the HapMed devices including methods with which we could enhance trainee engagement. Many see the part task trainers as a welcome break from the "death by powerpoint" that permeates their training. The sheer number of students in CLS training means that each student only gets a few turns on the part task trainer. This reinforces the need for the HapMed trainers to be medium fidelity trainers, focused on teaching tightening, speed, and placement. As such we are focused on a faithful physiology model and a realistic feel to mechanics. Issues like realism of wound site
+and the texture of the skin covering are less important to the end-user, and “real enough” is
+sufficient given the limited time students have with the system. This is especially true given the next lesson learned from the trainees, that they are very tough on the equipment. CHI systems has spent a significant amount of effort in the last two years revising the HapMed hardware so that each trainer can withstand teaching 500 to 1,000 service men and women a year. But perhaps one of the most encouraging lessons learned is how competitive the students can be, thus supporting the use of forms of gamification to expand HapMed in the future. Because the leg trainer reports the time to completion, students in CLS classes have begun to compete amongst themselves to see who can get the best time. To promote this ad hoc game based learning, we added high score functionality to the HapMed remote to help the instructors keep track of scores during classroom instruction.
+CONCLUSIONS
+The HapMed system was based on a needs analysis to design a training system that met some of the current requirements and that complemented a range of training approaches ranging from hands-on part task training, to didactic presentation to game-based presentations. Based on continuing feedback from operational users, including evaluation research efforts to determine training system effectiveness, we have continued to evolve HapMed. A blended training 2015 Paper No. 15 Page 8 of 9
+MODSIM World 2015
+
+solution, providing opportunities for information, demonstration, practice and feedback, in an inexpensive training suite, will be one key to the effectiveness of the HapMed system.
+REFERENCES
+Deterding, S., Khaled, R., Nacke, L.E., Dixon, D. (2011). Gamification: Towards a Definition. In Proceedings of the ACM CHI Conference on Human Factors in Computing Systems (CHI 2011) Gamification Workshop, Vancouver, BC, Canada.
+Fowlkes, J., Dickinson, S., & Lazarus, T. (2009) Blended Training for Combat Medics. In T. E.
+Pinelli (Ed.), Selected Papers Presented at MODSIM World 2009. Hampton, VA: NASA. World 2009 (pp. 211-216). Hampton, VA: NASA. (Best paper award)
+Fowler, S. Smith, B. & Litteral, D. (2005). A TC3 Gamebased Simulation for Combat Medic
+Training. Proceedings of the Interservice/Industry Training, Simulation & Education
+Conference. Orlando, FL.
+Klenerman L., & Hulands G.H. (1979). Tourniquet pressure for the lower limb. J Bone Joint
+Surg, 61B:I24.
+Kotwal, R., Butler, F., Edgar, E., Shackelford, S., Bennett, D., Bailey, J. (2013) Saving Lives on
+the Battlefield: A Joint Trauma System Review of Pre-Hospital Trauma Care in Combined
+Joint Operating Area - Afghanistan (CJOA-A). Report to US Central Command.
+Kragh, J.F., Walters, T., J., Baer, D.G., Fox, C.J., Wade, C.E., Salinas, J., & Holcomb, J.B. (2008). Practical use of emergency tourniquets to stop bleeding in major limb trauma. The
+Journal of Trauma, Injury, Infection, and Critical Care, 64, S38-S50.
+Kraiger, K., Ford, J. K. & Salas, E. (1993). Application of cognitive, skill-based and affective theories of learning outcomes to new methods of training evaluation. Journal of Applied
+Psychology, 78, 311–328.
+Hamari, J., Koivisto, J., & Pakkanen, T. (2014). Do Persuasive Technologies Persuade? – A
+Review of Empirical Studies. In: Spagnolli, A. et al. (Eds.), Persuasive Technology, LNCS 8462, pp. 118-136. Springer International Publishing, Switzerland. http://dx.doi.org/10.1007/978-3-319-07127-5_11
+Lazarus, T., Martin, G.,A., Nayeem, R., Fowlkes, J., & Riddle, D. (2008). E-MAT: The Extremities Multiple Application Trainer for Haptics-based Medical Training. Paper presented at the Virtual Reality Conference, 2008.
+Parsons, D. (2004). Tourniquets: Lifesavers on the battlefield. Journal of Special Operations Medicine, 4(4), 51-53.
+Richey, S.L. (2007). Tourniquets for the control of traumatic hemorrhage: a review of the literature. World Journal of Emergency Surgery 2007.
+Riddle, D. L., Fowlkes, J., Lazarus, T., Martin, G., Daly, J., & Fowler, S. (2006). Integrating instructional strategies and haptic technologies to enhance the training efficacy of an Army 91W (Combat Medic) medical skills training simulation. Proceedings of the Human Factors and Ergonomics Society 48th Annual Meeting [CDROM]. San Francisco, California: HFES.
+MODSIM World 2015
+ 2015 Paper No. 15 Page 9 of 9

@@ -1,0 +1,284 @@
+Simulation Based Leadership Decision Support Simulator for Countering Weapons of Mass Destruction
+Daniel Barber, Scott Harris, Robb Dunne, Martin Goodwin, Lauren Reinerman
+Institute for Simulation and Training
+Orlando, FL
+dbarber@ist.ucf.edu, sharris@ist.ucf.edu, rdunn@ist.ucf.edu, mgoodwin@ist.ucf.edu, lreiner@ist.ucf.edu
+Irwin L. Hudson
+US Army Research Laboratory Orlando, FL irwin.l.huds on.civ@mail.mil
+ABSTRACT
+A review of Decision Support Systems literature finds that such systems have historically been associated with managerialorindustrylong-termdecision-making(Alter,1980).DecisionSupportSystemsalsoreferstoanacademic fieldofresearchthatinvolvesdesigningandstudyingsystemsintheircontextofuse(Schuffetal.2011). Thispaper dis cusses the extension of the field to the s upport of decision-making for Combatting W eapons of Mass Destruction (CWMD). It describes the development of a scenario-based Decision Support Simulator (DSS) prototype using an iterativedesignapproachthatleveragesaworkinggroupofsubjectmatterexperts toidentifysimulatorandscenario requirements. The goal for the DSS is to enable decision makers to develop courses of action in response to crisis eventsbysimulatingresponsecells,logisticsinformation,doctrine,tactics,andproceduresinareal-worldcontext.At critical decision points during DSS scenarios, direct feedback and metacognitive prompting are presented as appropriate and key performance metrics are recorded for comprehensive after action review. Existing operational t o o l s a r e l e v e r a g e d t o f a c i l i t a t e r e a l i s t i c s c e n a r i o i n t e r a c t i o n s . T h e g o a l i s t o u n i f y d i s p a r a t e t e c h n o l o g i e s a n d r e s o u rc e s through a web interface that is extensible to multiple areas of expertise when dealing with crisis events. This paper details the approach to establishing the requirements of the design of a portable DSS prototype, including the CWMD scenario,instructionaland systemarchitecture,and assessment methodologies.
+ABOUT THE AUTHORS
+DanielBarber,Ph.D.is anAssistantResearchProfessorattheUniversityofCentralFlorida’sInstituteforSimulation andTraining.Dr.Barberhasextensiveexperienceinthefieldsofroboticsandsimulation,developingvirtualplatforms and tools for synchronization, processing, and streaming of data from multiple physiological sensors (e.g. Eye Tracking, Electrocardiogram, and Electroencephalography) within experimental and training environments supporting r e a l - t i m e a d a p t a t i o n s t o u s e r s t a t e . H i s c u r r e n t r e s e a r c h f o c u s i s o n h u m a n s y s t e m i n t e r a c t i o n a n d t r a i n i n g a s s e s s me n t including multimodalcommunication,userinteraction devices, teaming, decision-making, and adaptive systems.
+Scott Harris is a Faculty Research Associate at the Institute for Simulation and Training in the Prodigy Lab of the University of Central Florida in Orlando, FL. In February of 2017 Scott retired after serving on Active Duty for 28 years as a Pilot in the United States Marine Corps. In 2010 Scott was assigned by Headquarters Marine Corps to serve as theProgramManagerforallMarineCorps AviationTrainingSystemsatPMA-205.Priortohis assignmentas the PM forUSMCAviationTrainingSystems,ScottservedonthestaffoftheChairman oftheJointChiefsin J8 asthe Vertical Lift Strategic Funding and Requirements Analyst for General Glen Walters (currently the Assistant Commandant of the Marine Corps).
+2018 Paper No. 51 Page 1 of 11
+MODSIM World 2018
+
+Robb Dunne, Ph.D. received his degree in Instructional Technology from University of Central Florida and is a Research Associate at the Institute for Simulation and Training. He has conducted numerous training system evaluations including Front End Analyses, Verification and Validations, Training Effectiveness Evaluations, and Systematic Team Assessment of Readiness Training processes for Marine Corps Systems Command, United States Marine Corps Training and Education Command and Naval Air Warfare Center Training Systems Division.
+MartinS.Goodwin, Ph.D.isaResearchAssociateattheUniversityofCentralFloridaInstituteforSimulationand Training.His research focuses ondynamic instructionalsystems,simulation and gaming technologyintegration,and evaluation methodologies to improve learning, engagement, and retention in virtual environments.
+L a u r e n R e i n e r m a n , P h . D . i s t h e D i r e c t o r o f P r o d i g y , w h i c h i s o n e l a b a t t h e U n i v e r s i t y o f C e n t r a l F l o r i d a ’ s I n s t it u t e for Simulation and Training, focusing on assessment for explaining, predicting, and improving human performance and systems.
+Irwin L. Hudson, Ph.D.is theHumanSystemsIntegration(HSI)LeadfortheUSArmyResearchLaboratoryField Element in Orlando, FL, that is responsible for implementing acquisition HSI for the Program Executive Office for Simulation Training and Instrumentation. Previously, he led the Army Research Laboratory Human Research and Engineering Directorate Advanced Training and Simulation Division’s Unmanned Ground Systems Research focused onhuman–robotinteraction,physiologically-basedinteraction,unmannedgroundvehicles,remoteweaponsystems, virtual combat profiling, and STEM Outreach.
+2018 Paper No. 51 Page 2 of 11
+MODSIM World 2018
+
+Simulation Based Leadership Decision Support Simulator for Countering Weapons of Mass Destruction
+Daniel Barber, Scott Harris, Robb Dunne, Martin Goodwin, Lauren Reinerman
+Institute for Simulation and Training
+Orlando, FL
+dbarber@ist.ucf.edu, sharris@ist.ucf.edu, rdunn@ist.ucf.edu, mgoodwin@ist.ucf.edu, lreiner@ist.ucf.edu
+Irwin L. Hudson
+US Army Research Laboratory Orlando, FL irwin.l.huds on.civ@mail.mil
+DEMAND SIGNAL
+ThethreatofWeapons ofMassDestruction(WMD)coupledwithterrorismcontinuestoundermineglobalsecurity. Decision makers at all levels require ongoing training support to react effectively to chaotic events that require coordinatedresponsefromvariouscomponentswithintheUnitedStatesGovernment.Incrisis events,decisionmakers are required to assess information and make critical decisions under tremendous psychological stress and physical demand (Klann, 2003; Leonard, 2004). Training support for these conditions requires sustained rehearsal, practice, and learning in a variety of mission contexts, from the tactical to the strategic level. While improving crisis event d e c i s i o n - m a k i n g i s b e s t a c h i e v e d b y “ l i v i n g t h e c r i s i s c o n d i t i o n s a n d t h e p o s s i b l e c o n s e q u e n c e s o f t h e t a k e n d e c is io n ” (Cesta, Cortellessa, & DeBenedictis, 2013), this type of training is very expensive and logistically challenging. To minimize theriskoffailuresinlive-actioncircumstances,scenario-basedsimulationtechnologiesareidealfortraining decision makers in complexscenarios involving crisis events.
+A review of Decision Support Systems literature finds that systems that support decision-making have historically beenassociatedwithmanagerialorindustry-centriclong-termdecision-making(Alter,1980).Further,thesesystems typically do not leverage scenario-based simulation technologies to support complexand time sensitive decision- m a k i n g . D e c i s i o n S u p p o r t S y s t e m s i s a l s o a n a c a d e m i c fi e l d o f r e s e a r c h t h a t i n v o l v e s d e s i g n i n g a n d s t u d y i n g s y s t e ms i n t h e i r c o n t e x t o f u s e ( S c h u f f , 2 0 1 1 ) . U S M C M a j G e n M u l l e n ’ s V i s i o n S t a t e m e n t f o r t h e I d e a l T r a i n i n g E n v i r o n me n t atMarineAirGroundTaskForceTrainingCommand/MarineCorpsAirGroundCombatCenter(MAGTF/MCAGCC; Mullen, 2017), states “Enhanced modeling and simulation...includes a full complement of simulators for every element of the MAGTF” (p. 1). In this s tatement he also refers to a “thread” that “should run throughout every training evolution and tools that we need to acquire or better develop...” (p. 1). He goes on to highlight a specific thread, “Plan for it (Chemical, Biological, Radiological, and Nuclear [CBRN]) and learn to fight and win within it...CBRN remains a significant threat...” (p. 2). This paper describes an effort to meet this need and the strategic goals for the Defense ThreatReductionAgency(DTRA)throughthedevelopmentofaDecisionSupportSimulator(DSS)forupper-echelon decisionmakers thatextendsthetraditionalfocusofaDecisionSupportSystemtothetrainingofdecision-makingfor Combatting Weapons of Mass Destruction (CWMD), (Defense Threat Reduction Agency, 2017).
+CONCEPT
+The DSS prototype was conceived with the objective of achieving Technology Readiness Level (TRL) 3, the proof of concept validation as demonstrated through technical feasibility using implementations exercised with representative data;andTRL4,component/subsystemvalidationinlaboratoryenvironment–standaloneprototypingimplementation and test.
+T h e i n t e n t f o r t h e D S S p r o t o t y p e i s t o e n a b l e d e c i s i o n ma k e r s t o d e v e l o p b a s i c C o u r s e s o f A c t i o n ( C O A s ) i n re s p o n s e t o a c r i s i s e v e n t . I n t h i s s p e c i f i c c a s e , t h a t e v e n t i s b u i l t a r o u n d a C W M D s c e n a r i o . T h e D S S u s e s s i m u l a t e d p e r s o n n e l, and provides logistics information, doctrine, tactics, and procedures across collaborating units. During the WMD scenario,atdecisionpoints,directmetacognitivepromptscanhelpusers“thinkabouttheirthinking”andMeasuresof
+2018 Paper No. 51 Page 3 of 11
+MODSIM World 2018
+
+Effectiveness (MOE) provide traceability to decision points and comprehensive after action review. Existing operational tools are leveraged to facilitate realistic scenario interactions.
+A m b i g u i t y , u r g e n c y , a n d h i g h - l e v e l r i s k a r e a s s o c i a t e d w i t h c r i s i s m a n a g e m e n t , a n d i t i s n e c e s s a r y t o h a v e e f f e c t iv e leadershipinplace.Tofocusonthetacticaldecisionmakerwithina CWMDscenario,theinitialprototypescenario is designed around the training of a United States Marine Corps (USMC) Operations Officer (OPSO) within a Battalion Combat Operations Center (COC). The OPSO is responsible for execution of the Commanding Officer’s intent, and is able to take action to enact decisions. Simulated personnel within the DSS COC communicate, model, and function according to training objectives relevant to the USMC and include:
+ Commanding Officer (CO)  Operations Officer (OPSO)
+ Operations Chief (OPS Chief)
+ Logistics (S-4)
+ Civil Affairs (S-5)
+ Air Officer (AIRO)
+The DSS also provides scripted communications between these roles and the CO and delivers resources and
+intelligence reports similar to those used in live exercises for the training.
+Thegoalis tounifydisparatetechnologiesandresourcesthroughawebinterfacethatisextensibletomultipleareas ofexpertisewhendealingwithWMDthreats.DataandinformationcollectedduringtestingoftheprototypeDSSat USMCbattalion-levelfieldexerciseswillguidethenextstepsandprocessesneededforfutureiterationsandscenarios, and highlight a transition path and enhance downstream training objectives.
+DES IGN
+Following a spiral development process, researchers executed an iterative approach for the design of the DSS. In collaboration with an operational working group composed of subject matter experts, scope and requirements were refined to identify the desired end-state of the DSS prototype, including system and instructional architectures. Together with a Blue Ribbon Panel consisting of representatives of the Marine Corps Tactics and Operations Group (MCTOG), USMCBattleSimulation CenterSimulationandTraining,andUniversityofCentralFloridaresearchers andsoftwareengineers,aprototypesystemandinstructionalarchitectureweredesignedtosupportascenariofocused on a chemical release from a state actor.
+SystemArchitecture
+To support the complexity of roles and interactions within the COC, while still being portable, flexible, and controllableforassessment,ascriptablearchitectureusingeventswasidentifiedtodriveawebinterface.A web-based system enables training and rehearsal wherever a user is located, without the need to install any additional software beyond what they already have. The information and input requirements for the interface were captured through observation of COC training exercises at 29 Palms and includes: 1) interactive chat windows to request/receive informationandgivecommandsamongmembersoftheCOCandotherparties;2)aninteractivemapofthebattlefield; 3) reference materials; and 4) aggregated status information posted in the COC. Furthermore, the system supports presentation of dialogs to users tied to decision points within scenario scripts. These pop-up dialogs may be used to present meta-cognitive prompts and capture rationale for decisions for after-action review.
+The ability to create new branching scenarios that are instantiated upon the actions of an end-user was a key requirement under this effort, as it would be prohibitive to task programmers with adding new events or scenarios as requirementschange.Asaresult,theDSSsystemarchitectureusesJAVAObjectScriptNotation(JSON)todescribe scenario content in a script file capable of driving interface elements. Each JSON event is capable of modifying the interfacetoupdatemapcontent,simulatechat,modifyotherdisplayelements,andupdateinternalstateinformation (e.g. user scores). Events are triggered based on scenario time, internal state information set from previous events, actions a user takes, and combinations thereof. Although complex in nature, this architecture provides scenario developers with the ability to enable nested branching and multiple decision paths for users to take.
+ Personnel (S-1)
+ Intelligence (S-2)
+ Communications (S-6)
+2018 Paper No. 51 Page 4 of 11
+MODSIM World 2018
+
+Instructional Architecture
+In order to develop a crisis event scenario that is as accurate and as realistic as possible, a previously conducted live disasterresponseexercisewasusedasanexample,ortemplate,toestablishbaselinedecisionpoints.Thedesignphase included collaboration and extensive discussion with instructors on the Blue Ribbon Panel to ensure the scenario capturesinformationrequiredfortraininganinstantiationinsimulation.Designrequirementsalsoincludedascenario formatthatwas easyforinstructorstounderstandandcompareagainstpotentialtrainingobjectives.Aninitialscenario was scripted using baseline decision points and then expanded to a larger scenario.
+WeusedtheObserve,Orient,Decide,Action(OODA)Loopasaframeworkforidentificationofplacesforinputfrom who, what, where, why and when (5Ws) outputs. The 5Ws (who, what, where, why and when) are incorporated throughout the scenario. The 5Ws that exist pre-decision may or may not be valid post-decision, and may result in a newsetof5Ws as thescenarioprogresses.Thistypeofsituationalshiftandthedegree ofdifferencebetweenthetwo situationspointstotheimpactofthedecision.AnyoftheWscanmoveinthedesireddirectionwhiletheothersmove in anundesireddirection.Theidealresultisthatall5Wsmovetothedesiredstate,butduetothedynamicandfluid unknowns there may not be a guarantee that they will remain there.
+In a live exercise, the many branches described by the 5Ws will occur organically. However, as part of the DSS p r o t o t y p e s c r i p t i n g p r o c e s s , i t w a s d e c i d e d t o l i m i t t h e p o s s i b l e b r a n c h e s t h a t r e s u l t e d f r o m a d e c i s i o n t o a b i n a r y ( Ye s , N o ) r e s u l t t h a t , i n t u r n , r e d u c e d b a c k - e n d s c r i p t i n g w o r k l o a d f o r e a r l y i t e r a t i o n s a n d p r o o f - o f - c o n c e p t d e v e l o p me n t . An example of this binary decision-tree and results is shown in the table below. Note: arrows indicate direction of communication.
+Table 1. Binary Decision Example
+MODSIM World 2018
+         Event
+    Role
+      D e s c r i pt i o n
+   Note
+    1
+  Communication
+S6→ WO→ OPSO
+  “CompanyXreportsthattheywerehitwith something thatcameoutthesky,someindirectfire,andnow they’rereallyconfused,they’remissingfourorfive Marines,andthey’rehavingtroublebreathing.”
+A condition that requires a decision is presented.
+     2
+   Communication
+   OPSO
+   RecommendappropriateMOPPlevel
+  Simulated personnel recommends action.
+  3
+        Decision2 (Y/N)
+  OPSO
+        SetMOPPlevel
+  Decision root.
+      4
+  Derived Action: (Y)
+OPSO → WO
+  “SetMOPPlevel# forCompanyXandsupporting units.”
+Positive–actionis taken.
+  5
+     Result: Optimal
+ OPSO
+     Casualties are minimized.
+ Positive result.
+       6
+      Derived Action: (N)
+    OPSO
+      MOPP level is not established.
+   Negative –action is not taken.
+    7
+     Result: Un d e s ira ble
+ OPSO
+     Higher number of casualties are sustained.
+ Negative result.
+    8
+     Feedback
+ DSS
+     As appropriate
+ DSS delivers appropriate feedback.
+     To verify the capability of the scenario to achieve its purpose for laboratory testing, discussion of the content of the scenario was held during a face-to-face workshop with the Blue Ribbon Panel. From the Panel’s input, adjustments weremadetobetteraligntotheneedsoftheend-usersandrequirementsoftheCWMDtrainingscenario. Forexample, for the purpose of simulating communications, since the COC falls under the authority of the Commanding Officer (CO), theroleofCOwasincludedtoallowtheOPSOtoactandinteractasaccuratelyastheywouldinaliveexercise.
+During the next six months, researchers continued collaboration with members of the Blue Ribbon Panel to refine the D S S s c o p e a n d s o l i d i f y t h e r e q u i r e m e n t s . F o r t h e i n s t r u c t i o n a l a r c h i t e c t u r e , t h e p r i m a r y n e e d w a s t o d e t e r m i n e w h ic h
+2018 Paper No. 51 Page 5 of 11
+
+decisions the scenario was to enable, how those decisions would be made in the WMD exercise, and which realistic corrective actions could be presented.
+A n o p e n i n g p o r t i o n t o t h e s c e n a r i o s c r i p t t h a t c o u l d b e u s e d a s t h e b a s i s o f t h e s y s t e m d e s i g n , i n c l u d i n g a p r e c e d in g narrative referred to as “Road to War” was needed for the scenario to provide mission awareness and describe the Commander’s intent. The DSS Road to War was designed prior to lab testing and developed further for implementation at battalion-level field exercises. Due to classification restrictions, design could not include aspects of any available condition other than a chemical event. Thus, after the opening portion of the scenario designed for evaluation of the DSS, the scenario continues as a crisis chemical event for training the OPSO.
+User performance feedback within the DSS prototype scenario is context-relevant and modeled based on instructor- trainee interactions in a live training exercise. This feedback is developed from the objective measures captured at decision events and is provided to the user at key points throughout the scenario.
+Instructional Evolution
+AttheheartoftheDSSis ascenariothatdrivesuserinteractionsinresponsetoeventsthatrequirecomplexandtime- sensitive tactical decision-making. The scenario forms the basis of the user experience and is one of the main determinants of user performance outcomes. It contains the key stimuli required to facilitate complex interactions while maintaining plausibility and realism. It also accurately incorporates personnel, logistics, and doctrine information to integrate the proper tactical elements involved in CWMD response efforts.
+The scenario development effort is a systematic, iterative process focused on designing interactions that engage the userinmeaningfulandinstructivedecision-makingactivities.Thescenariodevelopmentprocessconsistsofthe following sevenkey steps:
+1. Developmentofascenariooutline
+2. Identification/engagementofsubjectmatterexperts to guidescenario development
+3. Definition of scenario elements to provide realism
+4. Identification/developmentofdecisionnodes(tasks/decisions/interactions)
+5. Analysis of alternatives at each decision node
+6. Identification/developmentofscenario assessmentmetrics
+7. Developmentofscenariooutcomes
+Theopeningportiontothescenarioscriptthatservedasthebasisofthesystemdesign,includingaprecedingnarrative referred to as a “Road to W ar”, was developed with the input from the Blue Ribbon Panel from 29 Palms Battle Simulation Center. After the opening narrative, the scenario continued as a crisis chemical event that required a coordinated response frombattalion and supporting units. To achieve a realistic scenario, a high level of SME input is required for authoring the narrative and understanding the process flow in which an eventual user will have to work through.TheDSStakesintoconsiderationallaspectsofthescenarioandinformationthatisrequiredtomakedecisions in a CWMD situation.
+The DSS s cenario is designed to s imulate an actual cris is in order to appropriately tailor the user experience to support the actual decisions and CoAs that would be employed in real-world crises. CoA development is based on the pre- decision and post-decision conditional states of the 5Ws and is focused on decision parameters for conducting a CWMD mission. Sample CoAs are listed below:
+ Conductthemissioninacleanareaifthemissioncanbeaccomplishedwhilestayingoutofcontamination.
+ Conduct the mission in a contaminated area using a higher Mission Oriented Protective Posture (MOPP)
+level, but this may take more time.
+ ConductthemissioninacontaminatedareausingahigherMOPPlevel,butusemoreMarinesorequipment
+to compensate for time and energy.
+ Delay the mission until the contamination has weathered.
+ Conduct the mission in the same amount of time with same amount of Marines, but take a greater risk by
+using a MOPP level that does not provide maximum protection.
+2018 Paper No. 51 Page 6 of 11
+MODSIM World 2018
+
+MOEs were developed based on the type of feedback trainees receive during a live exercis e. This feedback is triggered dependent on MOE outcomes and an appropriate script is delivered to the trainee. MOEs identified for the DSS includedtime-to-decideandright/wrongdecision.Scriptedfeedbackwithmetacognitivepromptswerealsodeveloped to be given as augmentation to performance feedback.
+EVALUATION
+TomeasureDSSeffectivenessinsupportingdecisionmakers,laboratoryandrepresentativeevaluationsofthesystem and instructionalarchitecture were conducted at the events on the approximated dates shown in the table below.
+Table 2. Evaluation Schedule
+S y s t e m Eva l u a t i o n
+To implement an evaluation of the DSS to determine the capability of the DSS to enable training of tasks aligned to learning objectives, as well as identify areas for continued development and refinement, a Systematic Team Assessment of Readiness Training (START) process will be used. Importantly, as criteria for achievement of TRL 8, a Verification and Validation must be completed; this is what the START is designed to support.
+START assesses training device capabilities to support performance of tasks associated to Training and Readiness (T&R) events and training objectives. START establishes a data-driven evaluation methodology that assesses a trainingdevice’sabilitytoenableandsupportthetrainingoftasks(physicaland/orcognitive,individualandcollective actions) performed by warfighters in their operational mission or job. As part of this assessment, the START process identifies areas for improvement to support training objectives, enhance trainee proficiency and optimize return on investment. START efforts also provide effective, efficient identification of specific environmental and operational stimulirequiredforsuccessfultransfertolivetrainingeventsreflectiveofthecontemporaryoperationalenvironment (COE).
+ST A RT e mp lo y s a lg o rit hms t ha t c o mb in e t wo s e ts o f t a s k a n d a t trib u te ra t in gs (c rit ic a lit y a n d c a pa bilit y ) t o illu s trate the level of training s upport a training device provides for tas ks associated to T&R events or, when appropriate, other training objectives. The START process is performed in multiple steps. It begins with determination of the tasks to be used as representative tasks for the START baseline. After community SMEs validate the tasks, each of the training device attributes are evaluated to determine how critical it is for that attribute to provide the level of fidelity found in live, operational training for the performance of the tasks.
+After this is determined for each of the identified tasks, evaluation of the training device’s capability to deliver the necessary attribute’s fidelity is assessed. Table 3 contains the START criticality rating scales and definitions.
+MODSIM World 2018
+  Date
+      Event
+   Nov 2017
+  USMCBlueRibbonPanelvalidationofChemicalReleaseAttack
+   Jan 2018
+    PrototypesimulationAlphaTestingatUCF
+   Mar2018
+      Prototype simulation Beta testingwith Blue Ribbon Panel
+   Apr2018
+     Assessments of prototype with TALONEX CPX-1 course instructors at 29 Palms
+   2018 Paper No. 51 Page 7 of 11
+
+Table 3. Criticality Ratings and Definitions
+Source: (Dunne, Harris, Arrieta, Tanner, Vonsik, Lalor & Muir, 2017) Table 4 contains the START capability rating scales and definitions.
+Table 4. Capability Ratings and Definitions
+MODSIM World 2018
+     Rating
+   Attribute Criticality
+   Attribute Criticalityto Task Performance
+   5
+    Absolutely Critical
+   Taskcannot be executedwithout this attribute.
+    4
+       Critical
+     Attribute is critical, contributing to important cues to task execution.
+     3
+ Important
+Attribute is important and contributes to task execution, but work-around is acceptable.
+      2
+   Nice but not important
+        Attributeis nice to havebutperipheralandnotessentialto taskexecution.
+    1
+    Irrelevant
+  Attribute is irrelevant or not applicable and contributes nothing to task execution.
+        Rating
+      Attribute Capability
+     Device Capability to Enable Task Performance
+    5
+ Fully Capable
+Device is fully capable of providing attribute to support task performance with little or no capability gaps and no departure fromrealism. No compensation neededto support taskexecution.
+      4
+      Effectively Capable
+  Deviceeffectivelyprovidesattributetosupporttaskexecutionwith minor/annoyingcapabilitygapsandsomedeparturefromrealism.Minimal compensation neededto support taskexecution.
+       3
+ Borderline Capable
+D e v i c e i s b o r d e r l i n e c a p a b l e o f p r o v i d i n g a t t r i b u t e t o s u p p o r t t a s k e xe c u t i o n withmoderatecapabilitygapsandsignificantdeparturefromrealism. Considerable compensation neededto support taskexecution.
+      2
+   Marginally Incapable
+  Device is marginally incapable ofproviding attributeto support task execution with significant capability gaps and very little realism. This severelydiminishesthedevice’scapabilityofsupportingtaskexecution.
+      1
+    Completely Incapable
+ Device is completely incapable of providing attribute to support task execution.
+    Source: (Dunne, Harris, Arrieta, Tanner, Vonsik, Lalor & Muir, 2017)
+Once criticality and capability data are collected for all T&R events and associated tasks, the data analysts use the STARTalgorithmtogenerateTrainingTaskSupport(TTS)andCodeTrainingSupport(CTS)scores foreach task.
+The START methodology allows the analysis team to:
+ Specify training device attributes (sensory input provided by the training device to the user to provide
+operationalcontextandinfluencetaskperformance)thatarerequiredtoeffectivelysupportperformanceof
+tasks.
+ Determinewhichtrainingdeviceattributesprovidesufficientsimulationfidelityforthetrainingenvironment.
+ Determine which training device attributes require improvement.
+Task Training Support
+TheTTSscoreisderivedfromtheassessmentsmadebytheSMEs ofthecapabilityofadevicetosupportperformance of a particular task. The TTS levels are divided into three categories and described in Table 5.
+2018 Paper No. 51 Page 8 of 11
+
+Table 5.TTS Levels andDescriptions
+Source: (Dunne, Harris, Arrieta, Tanner, Vonsik, Lalor & Muir, 2017)
+Code Training Support
+STARTanalystsworkwithSMEs tomapthetasks toT&Reventsanddeterminewhetherthosetasks arerelevantor criticaltosupporteventexecution.TheCTSscoreis derivedfromtheassessmentmadebytheSMEsofthelevelof training support a device provides for execution of specific tasks and is expressed on a scale of one to five.
+The START algorithm calculates the CTS scores by cross-referencing TTS scores to the task-to-code mapping and producestwotypesofCTSscores:CTS1 andCTS2. TheCTS1 scoreindicatestrainingcapabilitywithrespecttotasks critical to successful completion of that T&R event and therefore critical for the training device to enable. Tasks deemed critical are weighted heavier by the START algorithm than those simply deemed relevant. The CTS2 calculation specifies the training capability with respect to bothnon-criticaland criticaltraining tasks associatedto a T&R event. The levels of CTS are described in the table below.
+Table 6.CTS Levels andDescriptions
+MODSIM World 2018
+Level
+         D e s c r i pt i o n
+         Level 3
+   Training device is capable ofsupporting operatorperformance ofthe tasksufficientenoughto allow T&Rqualificationoftheoperatoruponsatisfactoryperformanceofthetask.
+      Level 2
+TrainingdeviceprovidesAttributesatafidelitysufficientforbeneficialtrainingbutnotforT&R qualification.
+ Level 1
+         Training device is incapable of supporting training for the task.
+        Level
+        D e s c r i pt i o n
+       5.00
+   Full Training Capability:T&Rcode can be thoroughly andaccurately trained in the simulatorwith no compensationrequiredfortheindividualtoexecuteandaccomplishtheT&Rcode.
+        4.00
+   HighTrainingCapability:T&Rcodecanbeeffectivelytrainedinthesimulatorwithminor compensationrequiredfortheindividualtoexecuteandaccomplishtheT&Rcode.
+        3.00
+   ModerateTrainingCapability:T&Rcodecanbetrainedinthesimulator,butwithconsiderable distractionsrequiringsignificantcompensationfortheindividualtoexecuteandaccomplishtheT&R code.
+        2.00
+LowTrainingCapability:T&Rcodecanbeaddressedinthesimulator,butwithseveredistractions requiringextraordinarycompensationtohaveausefulaffecttowardsexecutingandaccomplishingthe T&R code.
+         1.00
+   NoTrainingCapability:T&Rcodecannotbetrainedinthesimulator,andnoamountofcompensation allows the individualto effectivelyexecute and accomplishtheT&Rcode in the simulator.
+    Source: (Dunne, Harris, Arrieta, Tanner, Vonsik, Lalor & Muir, 2017)
+Simulator Attribute Analyses
+During DSS evaluations SMEs will provide DSS attributes ratings that are then used to determine TTS levels as described in Table 5. During analysis these levels are averaged across all tasks and rated using the attribute criticalityandcapabilityratingsanddescriptionstoprovideclarityastowhichDSSattributesaremostcriticaland which DSS attributes the systemis most/least capable of providing. This analyses will assist the developers in their next evolution to determine which attributes, if improved, will provide better return on investment.
+Instructional Evaluation
+To evaluate the accomplishmentofmission objectives and achievement ofdesired results quantitative data in the form of MOEs will be collected by embedded software to provide qualitative feedback and quantitative data.
+Due to schedule and personnel limitations, evaluation of the instructional effectiveness will not be conducted to sufficientlevelsofvalidityandreliability.However,evaluationoftheaffordancesoftheDSSwillbeaftercompletion o f b a t t a l i o n - l e v e l f i e l d e xe r c i s e s b y c o l l e c t i n g f e e d b a c k f r o m i n s t r u c t o r s a n d o t h e r S M E s w h o t o o k p a r t . L i k e r t s c a le
+2018 Paper No. 51 Page 9 of 11
+
+q u e s t i o n n a i r e s w i l l b e u s e d t o c o l l e c t r e a c t i o n s t o t h e t r a i n i n g t h e D S S e n a b l e d a s w e l l a s t h e i n s t r u c t o r s ’ m o t i v a t io n to use the DSS. Example questions are contained in the table below.
+Table 7. Evaluation Questionnaire Examples
+MODSIM World 2018
+  Reaction
+    Motivation to Use
+   After training, I feel more confident of success in WMDdecision-making.
+   A s a t r a i n e e , I w a n t t o u s e t h e D S S mo r e t o i n c r e a s e o r sustain my WMDeventdecision-making.
+   I found the training to be realistic.
+ IrecommendtheDSSbeusedforWMDevent decision-makingtrainingpurposes.
+  The exercise I trained with gave me new ways to think about how I make decisions.
+     I think the DSS could be used for other CBRN decision-makingtraining.
+    The training I was able to presentgave a thorough understanding of WMD event decision-making.
+   I want to find more ways to use the DSS to help me be a betterinstructor.
+   Aftertraining,IhavemoreconfidenceintheCO’s WMD event decision-making.
+   I feel the more trainees use the DSS the more prepared for CBRN event decision-makingtheywill be.
+   After training with the DSS, trainees have improved and/or sustained their WMD event decision-making s kills .
+   As an instructor, I want to usethe DSS to help other Marines in the COC learn their roles .
+    Quantitativedataintheformofperformancemetricswillbecollectedtoprovideobjectivefeedbackandenabledeeper analysisfordownstreamapplications.Thisdataincludes:decision/nodecisionmade,time-to-decide,correct/incorrect decision.
+WAYFORWARD
+After analysis of evaluation data, results will be available for further refinement of the DSS prototype. Building on thegroundworklaidbythesuccessfulcollaborationwithandcooperationoftheBlueRibbonPanelmembers,future discussions will aid in the advancement of the DSS to a higher TRL.
+Capabilities that will be put in place for the next evolution of the DSS include the capability for instructors to tailor the chat screens/input/outcomes and enable part-task/limited user training of Training and Readiness events and a s s o c i a t e d t a s k s . T h e d e g r e e o f f i d e l i t y t h e D S S w i l l b e r e q u i r e d t o a c h i e v e i s a r e q u i r e m e n t t o b e d e t e r m i n e d a n d w i ll likely be dependent upon learning strategy and objectives.
+ACKNOWLEDGMENTS
+This research was sponsored by the U.S. Army Research Laboratory (ARL) and was accomplished under Cooperative Agreement Number W911NF-16-2-0004. The views and conclusions contained in this document are those of the authorsandshouldnotbeinterpretedasrepresentingtheofficialpolicies,eitherexpressedorimplied,ofARLorthe U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation hereon.
+TheauthorswishtoacknowledgetheassistanceandcooperationprovidedbyMajGenMelSpiese(ret)andtheUSMC MCTOG community, Matt Denny, GySgt Beth Pye, Col Timothy Barrick and Maj Jesse Attig.
+REFERENCES
+Cesta,A.,Cortellessa,G.,&DeBenedictis,R.(2014). TrainingforCrisis DecisionMaking-AnApproachBasedon Plan Adaptation. Knowledge-Based Systems, 58, 98-112.
+DefenseThreatReductionAgency.(2017, 07 26). DefenseThreatReductionAgency.RetrievedfromStrategicPlan FY 2016-2020: http://www.dtra.mil/Portals /61/Documents/Missions/DTRA%20StratPlan%202016- 2020%20opt.pdf?ver=2016-03-23-135043-530
+2018 Paper No. 51 Page 10 of 11
+
+Dunne, R., Harris, S., Arrieta, A., Tanner, S., Vonsik, B., Lalor, J., & Muir, S. (2017). Live, Virtual, Constructive Distributed Missions: Results and Lessons Learned. Proceedings of the Interservice/Industry Training, Simulation and Education Conference 2017. Orlando, FL.
+Klann, G. (2003). Crisis leadership: using military lessons, organizational experiences, and the power of influence to lessen the impactofchaos on thepeople you lead. Center for Creative Leadership. doi:ISBN:1882197755
+Leonard,H.(2004). LeadershipinCrisisSituation.InJ.Bums,G.Goethals,&G. Sorenson(Eds.),TheEncyclopedia of Leadership (pp. 289-295). Berkshire Publishing Group, Great Barrington.
+Mullen, W. F. (2017). Vision Statement for the Ideal Training Environment at MAGTF TC/MCAGCC. USMC. Schuff, D. (2011). Decision Support, Annals of Information Systems 14. Springer Science + Business Media, LLC.
+doi:10.1007/978-1-4419-6181-5_2
+2018 Paper No. 51 Page 11 of 11
+MODSIM World 2018

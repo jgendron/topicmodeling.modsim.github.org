@@ -1,0 +1,189 @@
+Generating Large Deterministic Water Waves for Numerical Simulation
+Laura K. Alford
+Dept. of Naval Architecture & Marine Engineering University of Michigan
+Ann Arbor, MI 48109 laura.alford@umich.edu
+Kevin J. Maki
+Dept. of Naval Architecture & Marine Engineering University of Michigan
+Ann Arbor, MI 48109 kjmaki@umich.edu
+ABSTRACT
+Estimating extreme responses for ships and other marine structures is critical in the design process. Long-term sim- ulations can, theoretically, capture extreme responses, but long-term simulations using robust, nonlinear computer programs are not computationally feasible in the early design process. An alternative is to use short, tailored sim- ulations that create statistically equivalent extreme responses. This requires an accurate reconstruction of expected extreme sea conditions.
+Extreme responses can be estimated using a variety of processes, including the Design Loads Generator (DLG). Assuming a vessel response can be approximated as a sum of Fourier amplitudes with random phase angles, the DLG calculates sets of random phase angles for the seaway that result in a given extreme response or design event. The corresponding incident wave phase angles are calculated from the response phase angles and the incident wave train profile can be calculated. Depending on the response in question, the incident wave train profile from the DLG can range from a single, large wave to a group of 5-10 waves of similar frequency and amplitude.
+Accurately recreating these deterministic wave trains in a nonlinear seaway is a crucial step to integrating the DLG with a high fidelity CFD program. A common practice employs linear wave theory to shift the phase angles according to the location of the wavemaker. The shifted phase angles can then be used to drive a wavemaker with the intent of producing the desired wave train at the specified point downstream. However, nonlinearities in wave propagation result in inaccurately generated wave trains as measured at the specified point downstream. A recently developed method for the phase shift process allows for improved simulation of nonlinear water-wave evolution. This paper applies this method to increasingly large waves and assesses its performance in the limit of extremely large waves.
+ABOUT THE AUTHORS
+Laura K. Alford Dr. Alford is a Research Investigator in the Department of Naval Architecture and Marine Engineer- ing at the University of Michigan, Ann Arbor. Her research interests revolve around developing practical engineering solutions to the challenges faced early in the design process. Her dissertation formed the basis of the Design Loads Generator (DLG), a method that determines short wave trains leading to extreme vessel motions and forces, thus al- lowing for the use of high fidelity simulations in early design. Her current research involves integrating the DLG with high fidelity CFD programs, modeling flow over an artificial fish spawning reef to determine optimal reef shapes, and collaborating on the development of a real-time environmental and ship motion forecasting system.
+Kevin J. Maki Kevin Maki is an Assistant Professor in the Department of Naval Architecture and Marine Engineer- ing at the University of Michigan, Ann Arbor. His research areas are in numerical free-surface hydrodynamics and hydroelasticity. He was a Summer Faculty Fellow in 2007 and 2009 at the Naval Surface Warfare Center Carderock Division, supported by the Office of Naval Research. He has been a Visiting Professor at the Italian Ship Model Basin. Sponsored research has been from the ONR and private yacht builders and designers. He teaches courses in the areas of numerical hydrodynamics and the design of sailing yachts and high-speed craft.
+2015 Paper No. 63 Page 1 of 11
+MODSIM World 2015
+
+Generating Large Deterministic Water Waves for Numerical Simulation
+Laura K. Alford
+Dept. of Naval Architecture & Marine Engineering University of Michigan
+Ann Arbor, MI 48109 laura.alford@umich.edu
+INTRODUCTION
+Kevin J. Maki
+Dept. of Naval Architecture & Marine Engineering University of Michigan
+Ann Arbor, MI 48109 kjmaki@umich.edu
+A wave train consisting of regular waves will disintegrate due to nonlinearities (Benjamin & Feir, 1967), including a frequency downshift (Lake et al., 1977). Although the frequency downshift of the peak spectrum is permanent in short crested, three dimensional seas (Trulsen & Dysthe, 1997), nonlinearities must still be considered when trying to generate, experimentally or numerically, deterministic wave trains (specific wave groups, extreme waves, etc.) even with long crested, two dimensional seas.
+Previous efforts have focused largely on creating single, large wave heights in physical or numerical wave tanks; these approaches all involve some measure of iteration and empirically determined adjustments. A focusing approach is used in Chaplin (1996) to iteratively adjust the random phase angles at the wavemaker such that the phases at the target point down-tank are zero–thus resulting in a large wave. Another iterative process is used in Clauss & Schmittner (2007) to produce large wave heights in a physical wave tank; the process requires an optimization approach described in Clauss & Steinhagen (2000). The process starts with a desired large wave at a given point in a wave tank and then transfers the wave train back to the wavemaker using linear theory – what may be termed a first-order phase shift. Linear theory naturally leads to a measured wave train that is different from the theoretical wave elevation because of nonlinearities in wave propagation. The optimization approach adjusts the phase angles to minimize the difference between the measured large wave and the desired large wave. This process is repeated until the observed wave train is sufficiently close to the desired profile. This process was further refined by Schmittner et al. (2009) by adjusting the random phase angles and the individual wave amplitudes. A similar approach is used for a numerical wave tank (Fernandez et al., 2014). Furthermore, the nonlinear Schro ̈dinger and Dysthe equations have been used to model wave packets leading to extreme wave heights (Zhang et al., 2014). However, extreme vessel responses and forces may result not from just one extreme wave, but a series or group of waves. Therefore, it is crucial to have a method that accurately reproduces the entire wave train.
+Alford & Maki (2015) developed a method to partially account for the role of nonlinearity when one wishes to use a Fourier representation of the seaway to drive a wavemaker to generate a wave train with large steepness. Specifically, the computational fluid dynamics program OpenFOAM is employed to produce a given wave train that is on the order of 300 s long, much longer than a single episodic wave. Similar to Blondel-Couprie et al. (2013), irregular waves are represented using a linear wave theory, but to account for nonlinearity the third-order dispersion relation is used to calculate the set nonlinear wave numbers that are used to shift the design event to the wave maker. This method does not consider the third-order wave-wave interactions, thus it is referred to as a pseudo-third-order phase shift. Alford & Maki (2015) presented a single example of a moderately large wave. This paper will investigate the performance of the pseudo-third-order phase shift approach for larger, more nonlinear waves. The design wave events are created using linear theory from the Design Loads Generator (Alford et al., 2010) and are compared to the OpenFOAM generated design wave events using the first-order phase shift and pseudo-third-order phase shift.
+BACKGROUND
+The 2D first-order wave elevation, η(1)(x,t), is estimated as,
+(1) N 􏰀 (1) (1)􏰁
+2015 Paper No. 63 Page 2 of 11
+η (x,t)= ∑ajcos ωjt−kj x+φj (1) j=1
+MODSIM World 2015
+
+where aj = 􏰄2S(ωj)∆ω, ωj are the discrete frequencies, S(ωj) are the spectral ordinates at ωj, k(1) are the corre- j
+sponding first-order wavenumbers, and φ (1) are the random phase angles. The first-order dispersion relation for deep j
+water relates ωj to k(1), j
+ω2 =gk(1) (2) jj
+The random phase angles, φ(1), are usually distributed uniformly, resulting in a pseudo-random wave elevation. The j
+Design Loads Generator (DLG) (Alford, 2008) optimizes the phase angle distributions so that large, target wave amplitudes occur at (x = 0, t = 0). Each of these wave amplitudes is statistically similar to the others; an innumerable number of large, target wave amplitudes can be generated; and the large, target wave amplitudes can theoretically be shifted in space and time to the point (x0, t0) using linear theory. This shifting occurs via a shift in the random phase angle according to x0 and t0.
+Assuming η(1)(x,t) to be a Gaussian process, the DLG creates a new distribution of phase angles, φj′, such that the
+distribution of η(1)(0,0) follows the extreme value probability density function described by Ochi (Ochi, 1990). The
+wave elevations resulting from φ′ are defined as η(1) (x,t), j DLG
+(1) N 􏰀 (1) ′􏰁
+ηDLG(x,t)= ∑ajcos ωjt−kj x+φj (3)
+j=1
+(x,t) is merely a subset of all possible η(1)(x,t) when using discrete Fourier components to represent the wave elevation. The design event is then defined as η(1) (0,0),
+DLG
+(1) N 􏰀 (1) ′􏰁
+ηDLG(0,0) = ∑aj cos ωj(0)−kj (0)+φj (4)
+j=1 N
+= ∑ajcosφj′ (5) j=1
+To place the design event at (x0, t0), the general wave elevation at (x0, t0) with unknown phase angles, φj′, is equated to the wave elevation at (0,0) with DLG-generated phase angles, φj′:
+η(1)(x0,t0)=η(1) (0,0) (6) DLG
+N 􏰀 (1) (1)􏰁 N ′
+∑aj cos ωjt0 −kj x0 +φj = ∑aj cosφj (7)
+j=1 j=1
+The arguments of the cosine functions in Eqn. 7 can be equated, and φ(1) solved in terms of φ′: jj
+ωjt0 −k(1)x0 +φ(1) = φj′ (8) jj
+φ(1) = φ′ −ω t +k(1)x (9) jjj0j0
+Equation 9 is referred to here as a first-order phase shift. The wave elevation can now be calculated for any point (x,t):
+N
+2015 Paper No. 63 Page 3 of 11
+j=1
+a cos(ω t −k(1)x+φ(1)) (10)
+η(1) (x,t) =
+DLG ∑j j j j
+MODSIM World 2015
+ Note that η(1) DLG
+
+While this approach is simple and straightforward, it was shown in (Alford & Maki, 2015) that the first-order phase shift is insufficient when the DLG is to be used in conjunction with a high fidelity, nonlinear hydrodynamics simulator. Using the first-order phase shift to drive a linear superposition-based wavemaker in the CFD program resulted in large waves occurring earlier than expected by the DLG. In an attempt to remedy this shortcoming, a pseudo-third-order phase shift approach was used to calculate the phases needed to drive the wavemaker. The pseudo-third-order phases, φ(3), are defined as:
+φ(3) = φ′ −ω t +k(3)x (11) jjj0j0
+The third-order wavenumbers, k(3), are calculated as, j
+tion 11 is referred to here as a pseudo-third-order phase shift because while the third-order wavenumber, k(3), is used, j
+2 (3)􏰂 􏰀 (3) 􏰁2􏰃 ωj =gkj 1+ kj asig
+(12) where the significant amplitude, asig = 2σ , is used as a characteristic amplitude to calculate wave steepness. Equa-
+all wave-wave interactions are ignored. The wave elevation can now be calculated for any point (x,t):
+j=1
+N
+DLG ∑j j j j
+η(3) (x,t) =
+a cos(ω t −k(3)x+φ(3))
+(13)
+The pseudo-third-order phase shift showed significant improvement over the first-order phase shift in placing a large, but not extreme wave, at the desired location and time (x0, t0). This paper will explore the ability of the pseudo-third- order phase shift approach to generate larger deterministic waves in OpenFOAM.
+SIMULATION SETUP
+A 2D numerical wave tank was used for the OpenFOAM simulations (Fig. 1). The length of the domain is 765 m, water depth is 191 m, and air depth is 30 m. The grid resolution is ∆x = ∆y = 0.5 m. The waves2Foam program (Jacobsen et al., 2012) uses an inlet relaxation zone to drive a “wavemaker” with a desired wave theory solution and an outlet relaxation zone to absorb the waves. These simulations used linear superposition for irregular waves. Virtual wave gauges were placed along the length of the numerical wave tank, including at midtank (x = 382.5 m). The longest wavelength that can be accurately resolved is on the order of the length of the inlet relaxation zone. The water depth was selected to equal this longest wavelength to simulate deep water waves.
+The DLG was used to generate a design event consisting of a target wave amplitude at t = 0. The input wave spectrum is a JONSWAP spectrum with Hs = 3.2 m, Tp = 9.2, γ = 3.0 (Fig. 2a). The input wave spectrum was discretized with N = 100 components with a frequency range of 0.56 ≤ ω ≤ 1.76 rad/s (Fig. 2b). These frequency limits correspond to the resolvable frequency range for this grid size (∆x = ∆y = 0.5 m) and length of the inlet relaxation zone (191 m).
+The design events simulated were wave amplitudes of 3.5σ , 4.0σ , 4.5σ , and 5.0σ , where σ is the RMS of the spectrum
+(Hs = 4σ ); in other words, the design events are wave amplitudes of 2.8 m, 3.2 m, 3.6 m, and 4.0 m. Both first-order
+phase shift and pseudo-third-order phase shift were used to place the design events at x0 = 382.5 m (midtank) and
+t0 = 120 s. Figure 3a shows the differences between k(1) (blue) and k(3) (orange). Recall that there are two phase jj
+sets that will be used to drive the “wavemaker” in the CFD simulation: φ(1) (blue) and φ(3). Figure 3b shows the jj
+differences between φ(1) (blue) and φ(3) (orange) for the design event of 5.0σ; similar differences were observed for jj
+the other design events.
+2015 Paper No. 63 Page 4 of 11
+MODSIM World 2015
+
+MODSIM World 2015
+ Figure 1: 2D numerical wave tank used in OpenFOAM. Depth = 191 m, length = 765 m. The inlet relaxation zone is 191 m long. ∆x = ∆y = 0.5 m. Virtual wave gauges were placed every 38.25 m, including a wave gauge at 382.5 m, midtank.
+(a) Spectrum (b) Amplitudes
+Figure 2: The JONSWAP spectrum used for this example. Hs = 3.2 m, Tp = 9.2, γ = 3.0. Discretization of the spec- trum used N = 100 components with a frequency range of 0.56 ≤ ω ≤ 1.76 rad/s. These frequency limits correspond to the resolvable frequency range for this grid size (∆x = ∆y = 0.5 m) and length of the inlet relaxation zone (191 m).
+  2015 Paper No. 63 Page 5 of 11
+
+MODSIM World 2015
+  (a) First-order wavenumbers (blue) and third-order wavenum- (b) Phases used to drive the wavemaker in OpenFOAM. First- bers (orange). order phase shift (blue) uses first-order wavenumbers; pseudo- third-order phase shift (orange) uses third-order wavenumbers.
+Figure 3: Comparison of the first- and third-order wavenumbers and their effect on the phase angles used to drive the wavemaker. The phase angles shown are for the 3.5σ design event; similar effects are seen for all the design events simulated here.
+RESULTS: LARGE DETERMINISTIC WAVES
+The OpenFOAM-simulated wave trains at midtank are shown alongside their linear predictions in Figs. 4-7. Linear
+theory with first-order phase shift (blue) is calculated using Eqn. 10 with the corresponding CFD simulation shown
+as the dashed blue line. Linear theory with third-order phase shift (orange) is calculated using Eqn. 13 with the
+corresponding CFD simulation shown as the dashed orange line. The linear theory (blue and orange) is the same
+whether k(1) or k(3) is used because of the nature of the DLG. The DLG places the design event at x0, so when η(1) jj DLG
+is evaluated at x0, the kjx term is canceled out by the phase shift regardless of which phase shift method is used. The different phase shift methods show different wave profiles at the location of the design event, as shown in Figs. 4-7. Table 1 summarizes the main characteristics of the different wave trains.
+Table 1: Summary of target and simulated design events. The target design event (i.e. large wave) was to occur at t0 = 120 s. The ability of the pseudo-third-order phase shift approach to simulate the target design events degrades as the design events increase in size and wave-breaking becomes an issue.
+  target design event
+first-order phase shift
+pseudo-third-order phase shift
+   rareness
+(σ) (m)
+3.5 2.8 4.0 3.2 4.5 3.6 5.0 4.0
+largest simulated wave (m)
+time of
+largest simulated wave (s)
+correlation to DLG elevation
+largest simulated wave (m)
+time of
+largest simulated wave (s)
+correlation to DLG elevation
+elevation
+ 2.6 112.65 0.75 2.7 119.67 0.88 3.1 112.00 0.76 3.0 119.06 0.88 3.9 111.96 0.72 2.9 118.93 0.87 3.7 118.78 0.76 4.3 118.49 0.86
+  2015 Paper No. 63 Page 6 of 11
+
+ 3.5σ (2.8 m) design event
+Figure 4: Time series comparison of linear wave theory using first-order phase shift (blue) and pseudo-third-order phase shift (orange) to CFD simulations for a 3.5σ (2.8 m) design event. The correlation between OpenFOAM and linear theory using first-order phase shift is 0.75. The correlation between OpenFOAM and linear theory using pseudo- third-order phase shift is 0.88. The pseudo-third-order phase shift also improves the ability to simulate the design event at (x0,t0).
+Figure 5: Time series comparison of linear wave theory using first-order phase shift (blue) and pseudo-third-order phase shift (orange) to CFD simulations for a 4.0σ (3.2 m) design event. The correlation between OpenFOAM and linear theory using first-order phase shift is 0.76. The correlation between OpenFOAM and linear theory using pseudo- third-order phase shift is 0.88. The pseudo-third-order phase shift improves the ability to simulate the design event at (x0,t0), but also produced an additional large wave amplitude at t = 112 s.
+MODSIM World 2015
+   4.0σ (3.2 m) design event
+2015 Paper No. 63 Page 7 of 11
+
+ 4.5σ (3.6 m) design event
+Figure 6: Time series comparison of linear wave theory using first-order phase shift (blue) and pseudo-third-order phase shift (orange) to CFD simulations for a 4.5σ (3.6 m) design event. The correlation between OpenFOAM and linear theory using first-order phase shift is 0.72. The correlation between OpenFOAM and linear theory using pseudo- third-order phase shift is 0.87. While the pseudo-third-order phase shift still results in improved correlation, the time and elevation of the pseudo-third-order design event are not as satisfactory.
+Figure 7: Time series comparison of linear wave theory using first-order phase shift (blue) and pseudo-third-order phase shift (orange) to CFD simulations for a 5.0σ (4.0 m) design event. The correlation between OpenFOAM and linear theory using first-order phase shift is 0.76. The correlation between OpenFOAM and linear theory using pseudo- third-order phase shift is 0.86. Again, the correlation between theoretical and simulated wave elevations improves with the pseudo-third-order phase shift, but there is little difference between the first-order design events and the pseudo- third-order design events in terms of time and location.
+MODSIM World 2015
+   5.0σ (4.0 m) design event
+2015 Paper No. 63 Page 8 of 11
+
+For the design events of 3.5σ and 4.0σ, the pseudo-third-order phase shift performs better than the first-order phase shift at placing the large wave at t0 = 120 s, both in terms of an event-based analysis (the large wave has the correct amplitude and occurs at the proper time) and in terms of a statistical-based analysis (correlation between the target, DLG-generated time series and the OpenFOAM simulated time series). As the target design wave elevations increase, however, the improvement in design wave simulation using the pseudo-third-order phase shift is degraded. To further investigate the ability of the pseudo-third-order phase shift to generate large deterministic waves, an extreme wave elevation of 6.5σ (5.2 m) was simulated.
+RESULTS: AN EXTREME DETERMINISTIC WAVE
+The DLG was used to produce a theoretical 6.5σ (5.2 m) wave, and both first-order phase shift and pseudo-third-order phase shift were used to place the design events at x0 = 382.5 m (midtank) and t0 = 120 s, as done in the previous section. Figure 8 shows the wave elevation at midtank (x = x0). The simulation using first-order phase shift (dashed blue line) shows a large wave peak at about t = 111 s with no large wave at t = t0. The simulation using pseudo-third- order phase shift (dashed orange line) shows no large waves at either t = t0 or at the earlier location of t ≃ 111 s.
+The target design wave (the solid blue and orange lines in Fig. 8) has a steepness ratio of h/λ ≃ 0.12, which is close to the limit of 1/7 = 0.143 for breaking waves. Therefore, it is possible that the lower wave elevations around t = t0, especially for the pseudo-third-order phase shift driven simulation which had been performing better than the first-order phase shift driven simulation, are a result of waves that were too steep and broke prior to (x0,t0).
+Figure 8 shows the wave elevation at the next wave probe upstream from midtank (refer to Fig 1). Note that the theoretical wave elevation (solid blue and solid orange) no longer matches because this wave probe is not at x = x0. All four wave elevations show the same “large peak – large trough – large peak” behavior, but the profiles for this grouping in the simulations is not the same as in the theoretical wave elevation. The simulated wave profiles (dashed blue and dashed orange) both show a larger first peak, a shallower trough, and then a smaller peak as compared to the theoretical wave elevations. The very large first peak has a steepness ratio of h/λ ≃ 1/10. Therefore, it is possible that between this wave probe and the next one at midtank (x = x0), the waves broke and the loss in energy resulted in smaller design waves as measured at x = x0.
+CONCLUSIONS
+High fidelity CFD programs, such as OpenFOAM, could be very powerful when paired with something like the Design Loads Generator (DLG). Together, they have the potential to simulate large deterministic waves that lead to large responses of ships, offshore platforms, and other vessels. However, past simulations that used OpenFOAM to simulated a DLG-derived wave train using a first-order phase shift resulted in an inaccurate reproduction of the desired wave train, presumably due to the fact that large waves are not accurately represented by linear wave theory (at least for the purpose of driving a real or virtual wavemaker).
+Subsequent efforts involved applying a pseudo-third-order phase shift to a moderately large wave, and this did improve the ability of OpenFOAM to reproduce the DLG wave train. This paper pushed this approach farther by attempting to simulate larger (more rare) waves in OpenFOAM. In the simulations shown here, using large, highly nonlinear target design waves adversely affects both the first-order and the pseudo-third-order phase shift approaches’ ability to recreate the DLG wave trains in OpenFOAM. Future work on the coupling of DLG with OpenFOAM includes investigating the effects of the wave-wave interactions of higher order wave theory on the phase shift process.
+2015 Paper No. 63 Page 9 of 11
+MODSIM World 2015
+
+ 6.5σ (5.2 m) design event
+Figure 8: Time series comparison of linear wave theory using first-order phase shift (blue) and pseudo-third-order phase shift (orange) to CFD simulations for a 6.5σ (5.2 m) design event. The correlation between OpenFOAM and linear theory using first-order phase shift is 0.73. The correlation between OpenFOAM and linear theory using pseudo- third-order phase shift is 0.78. The first-order phase shift design event (dashed blue) appears to “jump” quickly from 3 m to 5 m; the pseudo-third-order phase shift design event (dashed orange) is significantly lower than the target design event.
+Figure 9: Upstream probe: Time series comparison of linear wave theory using first-order phase shift (blue) and pseudo-third-order phase shift (orange) to CFD simulations for a 6.5σ (5.2 m) design event. The correlation between OpenFOAM and linear theory using first-order phase shift is 0.75. The correlation between OpenFOAM and linear theory using pseudo-third-order phase shift is 0.79. The simulated wave profiles (dashed blue and dashed orange) both show a larger first peak, a shallower trough, and then a smaller peak as compared to the theoretical wave elevations.
+MODSIM World 2015
+  6.5σ (5.2 m) design event upstream probe
+ 2015 Paper No. 63 Page 10 of 11
+
+ACKNOWLEDGMENT
+This research was supported by the Naval Engineering Education Center and the high-performance computing center at the University of Michigan.
+REFERENCES
+Alford, L. K. (2008). Estimating extreme responses using a non-uniform phase distribution. (Doctoral dissertation). The University of Michigan.
+Alford, L. K., Kim, D., & Troesch, A. W. (2010). Estimation of extreme slamming pressures using the non-uniform fourier phase distributions of a design loads generator. Ocean Engineering, 38, 748-762.
+Alford, L. K., & Maki, K. J. (2015). Effects of third-order nonlinearities on the fourier representation of deterministic wave trains. In ASME 2015 34th International Conference on Ocean, Offshore and Arctic Engineering (OMAE 2015).
+Benjamin, T. B., & Feir, J. E. (1967). The disintegration of wave trains on deep water. Journal of Fluid Mechanics, 27(3), 417-430.
+Blondel-Couprie, E., Bonnefoy, F., & Ferrant, P. (2013). Experimental validation of non-linear deterministic prediction schemes for long-crested waves. Ocean Engineering, 58, 284-292.
+Chaplin, J. R. (1996). On frequency-focusing unidirectional waves. International Journal of Offshore and Polar Engineering, 6(2).
+Clauss, G. F., & Schmittner, C. E. (2007). Experimental optimization of extreme wave sequences for the deterministic analysis of wave/structure interaction. Journal of Offshore Mechanics and Arctic Engineering, 129, 61-67.
+Clauss, G. F., & Steinhagen, U. (2000). Optimization of transient design waves in random sea. In 10th International Offshore and Polar Engineering Conference (ISOPE) (Vol. III, p. 229-236).
+Fernandez, H., Sriram, V., Schimmels, S., & Oumeraci, H. (2014). Extreme wave generation using self correcting method - revisited. Coastal Engineering, 93, 15-31.
+Jacobsen, N. G., Fuhrman, D. R., & Fredsøe, J. (2012). A Wave Generation Toolbox for the Open-Source CFD Library: OpenFOAM⃝R .InternationalJournalforNumericalMethodsinFluids,70(9),1073-1088.doi:10.1002/fld.2726
+Lake, B. M., Yuen, H. C., Rungaldier, H., & Ferguson, W. E. (1977). Nonlinear deep-water waves: Theory and experiment. part 2. evolution of a continuous wave train. Journal of Fluid Mechanics, 83(1), 49-74.
+Ochi, M. K. (1990). Applied probability and stochastic processes. John Wiley & Sons.
+Schmittner, C., Kosleck, S., & Hennig, J. (2009). A phase-amplitude iteration scheme for the optimization of deter-
+ministic wave sequences. In ASME 2009 28th International Conference on Ocean, Offshore and Arctic Engineering
+(OMAE 2009).
+Trulsen, K., & Dysthe, K. B. (1997). Frequency downshift in three-dimensional wave trains in a deep basin. Journal
+of Fluid Mechanics, 352, 359-373.
+Zhang, H., Soares, C. G., & Onorato, M. (2014). Modelling of the spatial evolution of extreme laboratory wave
+heights with the nonlinear Schro ̈dinger and Dysthe equations. Ocean Engineering, 89, 1-9.
+2015 Paper No. 63 Page 11 of 11
+MODSIM World 2015

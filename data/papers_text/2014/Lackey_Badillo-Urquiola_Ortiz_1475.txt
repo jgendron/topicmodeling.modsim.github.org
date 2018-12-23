@@ -1,0 +1,288 @@
+Research-Driven Recommendations for Implementing Biometric Cues in Virtual Environments
+Stephanie Lackey, Karla Badillo-Urquiola, Eric Ortiz Institute for Simulation and Training
+University of Central Florida
+Orlando, FL.
+slackey@ist.ucf.edu, kbadillo@ist.ucf.edu, eortiz@ist.ucf.edu
+ABSTRACT
+In the mid-2000’s, Combat Profiling emerged as a critical skill required by Warfighters for proactively identifying human threats (Wang-Costello, Tarr, and Marriffino, 2013). As this training evolves from a live, classroom-based paradigm to distributed virtual training, accurately representing biometric cues becomes increasingly important. Simulating facial cues, such as sweating, challenges system developers due to available technological capabilities (e.g., texturing protocols in standard simulation platforms) and a lack of clear design criteria. The purpose of this research is to identify requirements and design recommendations for representing behavior cues in simulation-based training (SBT). This paper aims to provide developers with design guidelines for accurately depicting biometric cues in virtual environments. Specifically, the authors present three common biometric cues used in Combat Profiling (e.g., reddening of the face, pallor, and sweating), discuss the potential underlying causes of each cue, explain the importance of skin tone, and provide visual representations for each cue.
+ABOUT THE AUTHORS
+Dr. Stephanie Lackey earned her Master’s and Ph.D. degrees in Industrial Engineering and Management Systems with a specialization in Simulation, Modeling, and Analysis at the University of Central Florida (UCF). Her research focused on prediction, allocation, and optimization techniques for digital and analog communications systems. Dr. Lackey conducted high-risk research and development aimed at rapid transition of virtual communications capabilities to the Field and Fleet as a computer engineer with the United States Naval Air Warfare Center Training Systems Division (NAWC TSD). She joined UCF Institute for Simulation and Training’s (IST) Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab in 2008, and assumed the role of Lab Director in 2010. Dr. Lackey leverages her experience in advanced predictive modeling to the field of human performance in order to develop methods for improving human performance in simulation-based training environments and human- robot interfaces.
+Karla Badillo-Urquiola started at the University of Central Florida (UCF) in 2010 after graduating from the International Baccalaureate program. She joined the Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab in 2012 as an Undergraduate Research Assistant. Currently, she is pursuing her Bachelor's degree in Psychology, while earning a minor in Writing and Rhetoric and a certification in Interpretation and Translation. In January of 2012, she earned the UCF Undergraduate Researcher of the Month award. Karla's research interests include Combat Profiling detection and development, terrorism and counter-terrorism, Human Factors Psychology, simulation, and Human-Robot Interaction (HRI). Her ultimate goal is to earn a Ph.D. in Modeling and Simulation.
+Mr. Eric Ortiz is a Virtual Learning Environment Developer for the Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab at the University of Central Florida’s Institute for Simulation and Training (UCF-IST). He is currently a student in the Modeling and Simulation Ph.D. program at the University of Central Florida (UCF). Mr. Ortiz has over 20 years’ experience in the development of military simulations, serious games, and digital media production. Eric is a subject-matter expert (SME) in 3D modeling and production pipelines, VE- related software, video production, and interactive technologies.
+2014 Paper No. 1475 Page 1 of 11
+MODSIM World 2014
+
+Research-Driven Recommendations for Implementing Biometric Cues in Virtual Environments
+Stephanie Lackey, Karla Badillo-Urquiola, & Eric Ortiz Institute for Simulation and Training
+University of Central Florida
+Orlando, FL.
+slackey@ist.ucf.edu, kbadillo@ist.ucf.edu, eortiz@ist.ucf.edu
+INTRODUCTION
+Observing and identifying anomalous behaviors and events serve as the cornerstone of Combat Profiling; a method developed to assist Warfighters in proactively mitigating risks in combat environments. This skill set assesses behavioral cues in relation to the context of the environment and known baselines. By focusing on culturally agnostic indicators, Combat Profiling skills can be applied across a variety of operational environments. Previous research documenting the performance gains of Combat Profiling training coupled with its broad application area motivated the U.S. Armed Forces to novel methods for distributing such training. Research in the areas of formalized team training (Freeman, Walker, Geyer, Puglisi, Marceau, & Mark, 2011), dynamic tailoring, (Wray, Folsom-Kovarik, & Woods, 2013), and situated tutors (Schatz, Wray, Folsom-Kovarik, & Nicholson, 2012) have advanced perceptual training methods within the Combat Profiling domain. In addition, Combat Hunter computer- based training systems show positive results during effectiveness evaluations (Wang-Costello, Tarr, & Marraffino, 2013). These efforts to transition Combat Profiling training from classroom-based modalities (e.g., lectures, videos, photographs) to simulation-based training (SBT) modalities (e.g., virtual environments), forecast significant throughput and performance improvements. However, clear guidance regarding how to visually represent virtual humans exhibiting behavioral cues is not readily available to simulation developers. In the absence of requirements and design specifications, developers and 3D artists lack the guidance required to ensure a virtual character realistically represents the intended affective state. The purpose of the survey study presented was to develop a sample set of biometric cue design specifications.
+RESEARCH APPROACH
+A traditional literature review process enabled the identification and definition of salient cues, and the articulation of specific features describing each cue. For the purposes of this effort, the content of the Combat Profiling training and the Combat Observation and Decision-Making in Irregular and Ambiguous Conflicts (CODIAC) (Williams and Scott-Donelan, 2010) served as the foundation for identifying and defining culturally agnostic biometric cues. Literature from psychology, sociology, communications, criminal justice, political science, health, and medical professions expanded this knowledge base and provided justification for recommendations summarized below. Four key elements were included for each cue (1) definition, (2) possible underlying cause(s), (3) associated medical conditions, and (4) implications for creating virtual models. Following the knowledge acquisition phase, sample models were developed using commercially available products and are shown below.
+CUE SPECIFICATIONS
+Three of the most commonly observed biometric cues are fully specified in this paper: reddening of the face, pallor, and sweating. However, before we turn our attention to the specifications, it is important to address the role that skin tone plays in the development of virtual biometric cues.
+2014 Paper No. 1475 Page 2 of 11
+MODSIM World 2014
+
+Skin Tone
+The Fitzpatrick Skin Pigmentation Classification Scale, developed by Thomas B. Fitzpatrick in 1957, compares skin color to sun exposure. It specifies six types of skin tones ranging from very fair/ivory to dark brown or black. In addition, hair and eye color are included in skin type assessment. Based upon appearance alone, this scale excludes geographic region and ethnicity. Its original intent was to support analyses of sun exposure and sensitivity related to skin cancer, UV radiation exposure, tanning, and protective behaviors (Sachdeva, 2009), but offers insight into verbalizing visual requirements for simulating biometric cues.
+Table 1. Fitzpatrick Skin Pigmentation Classification Scale.
+Adapted from Goldsmith (2013)
+MODSIM World 2014
+Original Fitzpatrick Skin Pigmentation Classification Scale
+    Skin Type
+        Appearance
+     Type I
+       Skin Tone
+Very fair; very light, ivory skin tone; freckles common
+     Hair Color
+   Red or blonde
+    Eye Color
+   Blue
+     Type II
+      Skin Tone
+     Fair; light white to pale skin tone
+    Hair Color
+ Light
+    Eye Color
+   Blue, green, hazel
+     Type III
+        Skin Tone
+   Fair to medium skin tone
+    Hair Color
+     V aries
+    Eye Color
+   V aries
+   Type IV
+        Skin Tone
+Medium, beige-olive skin tone; moderate pigmentation
+     Hair Color
+   Usually dark
+    Eye Color
+     Usually dark
+   Type V
+        Skin Tone
+Medium brown skin tone; heavy pigmentation
+     Hair Color
+   Usually dark
+    Eye Color
+     Usually dark
+   Type VI
+       Skin Tone
+Dark brown to black skin tone; heavy pigmentation
+     Hair Color
+     Dark
+    Eye Color
+ Dark
+ By adapting the Fitzpatrick scale, delineations between levels of cue intensity were established. Table 2 augments the original skin type and appearance classifications documented by Fitzpatrick with detectability and intensity details related to the display of three biometric cues. Two cues, reddening of the face and pallor, share detectability (e.g., easy, difficult) and location characteristics. Low intensity cues are seen on the face and ears only, whereas high intensity cues include the entire face and chest. Compared to reddening and pallor, the ability to detect sweat is set on the reverse scale (from difficult to easy), and low intensity cues are found on the hands only, but high intensity on the face, axilla, hands, and feet for intense cases.
+2014 Paper No. 1475 Page 3 of 11
+
+                                     Table 2. Classification of Skin Complexion for Biometric Cue Detection
+MODSIM World 2014
+ Original Fitzpatrick Skin Pigmentation Classification Scale
+  Biometric Cue Characteristics
+  Skin Type
+Appearance
+Indicators
+  Reddening
+Pallor
+   Sweating
+  Type I
+Skin Tone
+Very fair; very light, ivory skin tone; freckles common
+Detectability
+Extremely eas y
+Extremely eas y
+Extremely difficult
+Hair Color
+Red or blonde
+Low Intensity
+Face and ears only
+Face and ears only
+ Hands
+Eye Color
+Blue
+High Intensity
+Entire face and chest
+Entire face and chest
+ Face, axilla, hands, feet
+  Type II
+Skin Tone
+Fair; light white to pale skin tone
+Detectability
+Easy
+Easy
+Difficult
+Hair Color
+Light
+Low Intensity
+Face and ears only
+Face and ears only
+ Hands
+Eye Color
+Blue, green, hazel
+High Intensity
+Entire face and chest
+Entire face and chest
+ Face, axilla, hands, feet
+  Type III
+Skin Tone
+Fair to medium skin tone
+Detectability
+Somewhat eas y
+Somewhat eas y
+Somewhat difficult
+Hair Color
+Varies
+Low Intensity
+Face and ears only
+Face and ears only
+ Hands
+Eye Color
+Varies
+High Intensity
+Entire face and chest
+Entire face and chest
+ Face, axilla, hands, feet
+  Type IV
+Skin Tone
+Medium, beige-olive skin tone ; moderate pigmentation
+Detectability
+Somewhat difficult
+Somewhat difficult
+Somewhat eas y
+Hair Color
+Usually dark
+Low Intensity
+Face and ears only
+Face and ears only
+ Hands
+Eye Color
+Usually dark
+High Intensity
+Entire face and chest
+Entire face and chest
+ Face, axilla, hands, feet
+  Type V
+Skin Tone
+Medium brown skin tone; heavy pigmentation
+Detectability
+Difficult
+Difficult
+Easy
+Hair Color
+Usually dark
+Low Intensity
+Face and ears only
+Face and ears only
+ Hands
+Eye Color
+Usually dark
+High Intensity
+Entire face and chest
+Entire face and chest
+ Face, axilla, hands, feet
+  Type VI
+  Skin Tone
+Dark brown to black skin tone; heavy pigmentation
+Detectability
+Extremely difficult
+Extremely difficult
+Extremely eas y
+Hair Color
+Dark
+Low Intensity
+Face and ears only
+Face and ears only
+ Hands
+ Eye Color
+  Dark
+High Intensity
+  Entire face and chest
+  Entire face and chest
+Face, axilla, hands, feet
+                                                                                Reddening of Face
+Reddening of the face occurs when the skin color becomes rosy or red. Blushing and flushing are other terms used to describe reddening of the skin. Blushing occurs when an individual feels self-conscious, uneasy, embarrassment, shame, or social anxiety (de Melo & Gratch, 2009; Crozier, 2001; Drummond, 1997; Williams & Scott-Donelan, 2010). Physiologically, when the sympathetic nervous system is aroused by adrenaline, the blood vessels dilate
+2014 Paper No. 1475 Page 4 of 11
+
+(vasodilation) and increase blood flow, and causes the face to turn red (Givens, 2002; Williams & Scott-Donelan, 2010). The term “flushing” is often used interchangeably with blushing; however, flushing is more prominent and relates to stronger physiological responses (e.g., exercise and alcohol intake). Flushing occurs under conditions in which anger is uncontrolled, or when controlled anger is on the verge of exploding, as well as alcohol consumption, sexual arousal, and abruptly ceasing physical activity (Ekman, 1992). Typically, flushing occurs when histamine hormones are released (Williams & Scott-Donelan, 2010). Flushing of the ears seems to be the first sign of uncontrolled anger (Givens, 2002), and can be considered to be a higher intensity level of blushing. Associated medical conditions include fever, hypothermia, rosacea, menopause, carcinoid tumor, and acne. From an operational perspective, once the baseline skin tone is established, classifying reddening of the face as a biometric cue depends upon the location of the body, where it appears. For low intensity situations redness gradually spreads to different areas of the face, but is limited to the face and ears, and rarely extends down to the neck and upper chest (Jung, Weber, Keil, & Franke, 2009). If the ears, face, neck, and upper portion of the chest, and arms deeply redden, then a high intensity case is present (Izikson, English, & Zirwas, 2006). Table 3 demonstrates reddening of the face for the six skin tone classifications for adult females and males.
+Table 1. Sample Virtual Images for All Skin Tones: Reddening of the Face
+MODSIM World 2014
+   Skin Type
+     Baseline
+   Low
+    High
+    Type I
+                               Type II
+                              Type III
+             2014 Paper No. 1475 Page 5 of 11
+
+Pallor
+The skin whitens, lightens, or color is removed. Facial blanching and paleness are terms that can be used interchangeably with pallor. Pallor is typically associated with extreme fear, anger, or rage. Blood vessels constrict (vasoconstriction) due to the absence of adrenaline, causing blood pressure to decrease and the face to lose color (Williams & Scott-Donelan, 2010). Reduction of blood flow is typically caused by a variety of factors, such as
+2014 Paper No. 1475 Page 6 of 11
+MODSIM World 2014
+                          Type IV
+                              Type V
+                             Type VI
+                                    
+controlled anger, fear, emotional shock, or stress (Ekman, 1992; Jung, Weber, Keil, & Franke, 2009; Williams & Scott-Donelan, 2010). Medical conditions that can be associated with this cue are Raynaud’s phenomenon and iron- deficiency anemia. Blush areas also get pale; therefore pallor levels can be defined the same as above (Jung, Weber, Keil, & Franke, 2009). At a low level, paleness can be associated with disgust and apprehension, causing the cheeks to become pale (Jung & Wagner, 2010). At this level paleness is limited to the face and ears; rarely does it extend down to the neck and upper chest (Jung, Weber, Keil, & Franke, 2009). At a high level, the entire face, ears, upper portion of chest, and arms become pale (Jung & Wagner, 2010). See Table 4.
+Table 4. Sample Virtual Images for All Skin Tones: Pallor
+MODSIM World 2014
+    Skin Type
+    Baseline
+      Low
+     High
+    Type I
+                              Type II
+                                  Type III
+                                   2014 Paper No. 1475 Page 7 of 11
+
+Sweating
+There are two types of sweating – thermoregulatory sweating and emotional sweating. Thermoregulatory sweating regulates body temperature, while emotional sweating is produced by an emotional response. Another term for sweating is perspiration. Autonomic nervous system changes indicate how strong an emotion is (Ekman, 1992). Sweat can be associated with anxiety, stress, or fear (Givens, 2002); however, changes in sweat are not the same for every emotion (Ekman, 1992). There are four medical conditions associated with sweating: hyperhidrosis, anhidrosis (also known as hypohidrosis), menopause, and fever. Sweating on the palms of hands can be considered low level (Schlereth, Dieterich, & Birklein, 2009). Sweating on the face, axillar, palms of hands, and soles of feet is a higher level (Schlereth, Dieterich, & Birklein, 2009). See Table 5 for examples.
+Table 5. Sample Virtual Images for All Skin Tones: Sweating
+2014 Paper No. 1475 Page 8 of 11
+MODSIM World 2014
+   Type IV
+                                       Type V
+                             Type VI
+                              
+MODSIM World 2014
+    Skin Type
+      Baseline
+     Low
+   High
+    Type I
+                             Type II
+                                Type III
+                                  Type IV
+                    2014 Paper No. 1475 Page 9 of 11
+
+DISCUSSION & CONCLUSION
+The emergence of SBT solutions for training Warfighters to recognize deceptive cues in operational environments requires the documentation of design requirements for model developers. The information presented in this paper offers clear guidelines for accurately depicting biometric cues derived from a broad spectrum of scientific literature. These science-driven recommendations support model and scenario development efforts and are aimed to inform training system acquisition efforts. Moving forward, an expansion of the number of cues is recommended. Specific biometric cues of interest include: flared nostrils, showing lower teeth, pupil dilation, nystagmus, increased blinking, tearing, crying, and bloodshot eyes. Furthermore, additional types of behavioral cues (e.g., kinesics and proxemics) also require further research to define design requirements. Finally, verification of each cue via human-in-the-loop testing is warranted. The research presented provides a basis upon which to build a behavior cue catalogue for SBT efforts across task domains and is essential to the success of accurately representing culturally agnostic behavior cues in virtual environments.
+ACKNOWLEDGEMENTS
+This research was sponsored by the U.S. Army Research Laboratory – Human Re-search Engineering Directorate Simulation and Training Center (ARL HRED STTC), in collaboration with the Institute for Simulation and Training
+2014 Paper No. 1475 Page 10 of 11
+MODSIM World 2014
+                         Type V
+                              Type VI
+                                     
+at the University of Central Florida. This work is supported in part by ARL HRED STTC contract W91CRB08D0015. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of ARL HRED STTC or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation hereon.
+REFERENCES
+Crozier, W. R. (2001). Blushing and the exposed self: Darwin revisited. Journal for the theory of social behavior, 31(1), 61-72.
+de Melo, C. M., & Gratch, J. (2009). Expression of emotions using wrinkles, blushing, sweating and tears. Intelligent Virtual Agents, 5773, 188-200.
+Ekman, P. (1992). Telling lies: Clues to deceit in the marketplace, politics, and marriage. New York, New York: W. W. Norton & Company.
+Freeman, J., Walker, A., Geyer, A., Puglisi, M., Marceau, R., & Mark, Y., (2011). Cognitive and Perceptual Skills Involved in Combat Hunter Expertise: Exploratory Evidence for a New Training Framework. Proceedings from the Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC) 2011, Orlando, FL.
+Givens, D. B. (2002). The nonverbal dictionary of gestures, signs, & body language cues. Spokane, Washington: Center for nonverbal studies press.
+Izikson, L., English, J. C., & Zirwas, M. J. (2006). The flushing patient: differential diagnosis, workup, and treatment. Journal of American Academy of Dermatology, 193-208.
+Jung, Y., & Wagner, S. (2010). Emotional factors in face rendering. Proceedings from IADIS Multi Conference on Computer Science and Information Systems 2010, 354-358.
+Jung, Y., Weber, C., Keil, J., & Franke, T. (2009). Real-time rendering of skin changes. Intelligent Virtual Agents, 5773, 504-505.
+Schatz, S., Wray, R., Folsom-Kovarik, J., & Nicholson, D. (2012). Adaptive perceptual training in a virtual environment. Proceedings from the Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC) 2012, Orlando, FL.
+Sachdeva, S. (2009). Fitzpatrick skin typing: Applications in dermatology. Indian J Dermatol Venereol Leprol, 75(1), 93-96.
+Schlereth, T., Dieterich, M., & Birklein, F. (2009). Hyperhidrosis—causes and treatment of enhanced sweating. Dtsch Arztebl Int., 106(3), 32-37.
+Wang-Costello, J., Tarr, R., & Marraffino, A.H., (2013). A validation study for the combat hunter computer-based pre-trainer. Proceedings from the Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC) 2013, Orlando, FL.
+Williams, G., & Scott-Donelan, D. (2010). Combat Observation and Decision-Making in Irregular and Ambiguous Conflicts (CODIAC). Norfolk, Virginia: U.S. Joint Forces Command.
+Wray, R. Folsom-Kovarik, J.T., & Woods, A., (2013). Instrumenting a perceptual training environment to support dynamic tailoring. Foundations of Augmented Cognition Lecture Notes in Computer Science, 8027, Springer Berlin Heidelberg, 100-109.
+2014 Paper No. 1475 Page 11 of 11
+MODSIM World 2014

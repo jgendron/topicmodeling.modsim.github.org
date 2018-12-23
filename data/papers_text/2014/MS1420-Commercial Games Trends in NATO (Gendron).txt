@@ -1,0 +1,172 @@
+What's Trending in NATO Commercial Technologies and Games: Ten Years of Work and What We See
+Lt Col (ret) Gerald “Jay” Gendron; Dr. Johnny J. Garcia SimIS Inc.
+Portsmouth, Virginia
+{gerald.gendron, johnny.garcia}@simisinc.com
+ABSTRACT
+Mr. Wayne Buck NATO ACT Norfolk, Virginia buck@act.nato.int
+Nearly ten years ago, the training and modeling and simulations (M&S) communities teamed up to tackle a burgeoning issue – the use of commercial technologies and games in NATO. The challenge came from the cultural change inherent in the domain. Small businesses were the leaders in the game space, yet they were perceived as risks among acquisition authorities. The proponents pushed forward by forming a Modeling and Simulation Group workshop series called “Exploiting Commercial Technologies and Games for Use in NATO” to bridge the cultural gaps. Over ten years, twelve workshops have convened. Successes have been achieved and predictions made five years ago have been attained. This report provides (a) findings such as trends and possible explanations for factors contributing to attainment of workshop predications; (b) trends within technology, industry, and government with respect to commercial technologies and games for education and training; and (c) recommendations for consideration in planning future MSG commercial technology and games workshops.
+ABOUT THE AUTHORS
+Lt Col (ret) Jay Gendron is the Director of Programs and Operations at SimIS, Inc. He has written the NATO ACT M&S Roadmap and several international Concept Papers. He has also led data analysis studies to identify trends in modeling and simulation as well as education in order to enhance international cooperation and innovation. Serving as the SimIS Chief Operations Research and Systems Analyst, Jay has conducted research and analysis on Joint Staff areas of interest during Joint and Army Title X war games. He is also an award winning writer and speaker who has presented at international conferences and symposia. He has worked in a variety of defense assignments from acquisition to analysis and from live training to Advanced Distributed Learning (ADL) within the special operations community. Additional information is available at http://www.linkedin.com/in/jaygendron/ and his email is gerald.gendron@gmail.com.
+Mr. Wayne Buck is Wayne Buck is a modeling and simulation specialist and his primary duties concern initiating, researching and writing policy and requirements concerning the use of modeling and simulation in Allied Command Transformation and in NATO. Responsible for outreach, he leads or is a planning member of several international conferences and workshops. Currently he is investigating the use of virtual worlds and serious games. Having served 29 years in the Canadian Army, Wayne is well aware of the needs of the warfighter. Throughout his career, he had the privilege and pleasure of working with and commanding troops at many levels within Canada, the United States and on UN missions. Wayne has a BSc in Computer Science from the University of New Brunswick and an MSc in Computer Science (Artificial Intelligence) from the Royal Military College of Canada.
+Johnny Garcia, Ph.D. is Founder and CEO of SimIS Inc. He has over 20 years of engineering experience that includes systems architecture design, software development, database development, C4I systems development, logistics systems development, and new technology insertion for the Department of Defense, Department of Energy, NASA, Department of Commerce and Department of Homeland Security. Dr. Garcia has received a BA and BS from St Leo College, MBA and MS from Florida Institute of Technology and a Ph.D. in Modeling and Simulation from Old Dominion University. Dr. Garcia is a veteran of the US Navy and a member of Ascension Catholic Church in Virginia Beach and is the proud father of wonderful twin daughters Hope and Faith and is married to his lovely wife Lorena. Johnny is a leader in the community and has been recognized as an expert in M&S.
+2014 Paper No. MS1420 Page 1 of 11
+MODSIM World 2014
+
+What's Trending in NATO Commercial Technologies and Games: Ten Years of Work and What We See
+Lt Col (ret) Gerald “Jay” Gendron; Dr. Johnny J. Garcia SimIS Inc.
+Portsmouth, Virginia
+{gerald.gendron, johnny.garcia}@simisinc.com
+INTRODUCTION
+Mr. Wayne Buck NATO ACT Norfolk, Virginia buck@act.nato.int
+About a decade ago, the training and modeling and simulation communities embarked on something new – the use of commercial technologies and games in NATO. This topic was difficult to appreciate in government settings. The challenge was how to use a very capable technology in military training? Acquisition authorities were not amused that customers wanted entrepreneurs as simulation providers. Large defense contractors had the reputation of presenting little risk to acquisition authorities because decades of precedent have established well-known procedures. Meanwhile, small businesses gave the impression as injecting risk. Nations and NATO faced a paradox common in innovation; the issues were cultural as well as technical.
+The proponents of using commercial technologies and games decided to move forward and establish a Modeling and Simulation Group (MSG) workshop series called “Exploiting Commercial Technologies and Games for Use in NATO” to bridge the cultural gaps through dialogue and demonstration. Twelve workshops have convened over nearly ten years. The most recent workshop included a review of predictions made five years earlier. All predictions have been realized. This report looks objectively at those predictions and uses factor analysis to determine possible underlying reasons for successes so this trend may continue. It presents four findings and recommendations to enhance understanding the trends of this MSG workshop series relative to market conditions and to help future planning for commercial technologies and games in NATO education and training.
+Scope
+NATO Allied Command Transformation (ACT) requested a Trend Report of the last seven MSG workshops in the Commercial Technologies and Games series spanning four and a half years. These workshop reports became the corpus (data) for analysis. Table 1 lists the MSG workshop series reports included in the corpus for analysis:
+Table 1: Analysis Corpus. MSG workshop series reports included in the analysis.
+MODSIM World 2014
+     Workshop Number
+MSG-074 MSG-078 MSG-093 MSG-108 MSG-113 MSG-114 MSG-130
+Date and Location
+May 18 – 20, 2009; Farnborough, UK September 22-24, 2009; Suffolk, US November 2-4, 2010; Rome, IT October 25-28, 2011; Farnborough, UK April 16-18, 2012; Genoa, IT November 13-15, 2013; Kjeller, NO October 9-11, 2013; La Spezia, IT
+Page Count
+12
+4
+12
+24
+31
+35
+39
+                                This report provides results showing patterns underlying the written text using a form of factor analysis called Latent Semantic Analysis. The purpose of this analysis included: (a) findings such as trends and possible explanations for factors contributing to attainment of the MSG workshop predications; and (b) trends within technology, industry, and government with respect to commercial technologies and games for education and training.
+2014 Paper No. MS1420 Page 2 of 11
+
+Industry and governments continue to support modeling and simulation (M&S) as both a domain and source of techniques and tools that have the potential for cost-effective utilization for NATO strategy formation, education and training, operations, and capabilities development. NATO is shifting its operational focus in 2014 as it withdraws from the International Security Assistance Force (ISAF) in Afghanistan. This will affect operational forces as well as the NATO training structure. In accordance with the tenets of the Connected Forces Initiative (CFI), NATO will redesign a training program to retain operational interoperability gained through years supporting ISAF. Rising training costs require NATO to develop a revised education and training program by using technology having the greatest potential to save resources (NATO RTA, 2013).
+This MSG workshops series has investigated trends in this area for nearly 10 years. NATO relies on nations and industry to develop the M&S capabilities to satisfy CFI requirements. This report validates four of the MSG workshop predications in these four findings
+• Scenario realism continues to improve and shows an association with the level of discussion of social media and the human dimension during workshops.
+• Discussions focused on solving new requirements tend to lag the introduction of the topic by three workshop events.
+• Discussions focused on user experience have emerged within the workshop reports and persist in current discourse.
+• Assessment of training effectiveness, return on investment, and time efficiencies recently emerged as a workshop topic and this will likely continue.
+Commercial technologies and games may help keep education and training costs affordable in to the future. This MSG workshop promotes knowledge sharing about how people are using the technologies. This analysis suggests that increased and continued assessment of underlying relationships among workshop presentations and market environments provides valuable information to leverage collaboration among government and industry.
+METHODOLOGY
+MSG-130 convened in October 2013. During the closing remarks and summary of the workshop, the co-chairs noted the workshop series was reaching its tenth year of meetings. Five years earlier, five predictions were made, when the series was five years’ old. Subject matter experts reviewed those predictions and the determination was all five objectives had determined those objectives had been attained. Our team designed and conducted a semantic analysis to provide a third party, independent review of the claims. The methodology summarized below supported the analysis well in creating a text model, enabling factor analysis to cluster information, and revealing trends in the workshop series that support the claims.
+Analytic Techniques and Tools
+The author relied on a number of commonly available and proven analytic techniques used in the humanities and the sciences. Each of these techniques is based on open source tools.
+Factor analysis
+A family of techniques to study phenomena of great complexity and size in order to discover patterns within the data. It can show complex interrelationships to either unite or separate data into clusters. It is among the most widely used methods (Rummel, 1988).
+Latent semantic analysis (LSA)
+Words in a corpus contain an association scheme typically not visible to a casual reader. LSA is “a powerful mathematical analysis that is capable of correctly inferring much deeper relations, and as a consequence are often much better predictors of human meaning-based judgments” (Landauer, Foltz, & Laham, 1988, p. 4). The term latent means “a quality or state existing but not yet developed or manifest; hidden; concealed” (Latent, 2014).
+2014 Paper No. MS1420 Page 3 of 11
+MODSIM World 2014
+
+Topic modelling
+Topic modelling simplifies the analysis of large volumes of text. It uses statistical methods to group sections and discovers patterns that may otherwise go unnoticed (Nelson, n.d.). The power of topic modelling lies in working above the document level. It was done using the tool MALLET (McCallum, 2002).
+Singular value decomposition (SVD)
+Closely related to factor analysis, this technique is the driving force behind LSA. It decomposes a large matrix into a lower order (smaller size) of the most important few – a great aid of deal with large bodies of text (Landauer, et al., 1988).
+Exploratory visual analysis
+This technique relies primarily on creating and inspecting scatterplots from various datasets. The team used the free, open-source “R” software package (R Core Team, 2013b) to do some graphing and statistical analysis.
+Analytic Process
+The analytic process consisted of three primary steps: data collection, including data examination and pre- processing; statistical modelling, using the analytic techniques and tools; and exploratory analysis, primarily visualisation of the data to discern trends in the data. These steps prepared the outputs necessary for trend analysis as described in the Results section.
+Data was collected from all technical evaluator reports over the last seven workshop events spanning the period May 2009 (MSG-074) through October 2013 (MSG-130). HQ SACT provided the data in the form of Microsoft Word documents. The data totalled 157 pages of text. Each report received pre-processing to prepare the corpus (text data) for the analysis tools.
+• Documents were converted to plain text by removing the graphics and bullets
+• Parentheses were removed to avoid the interpretation of a term like “games” and “(games” as two separate
+words
+Documents were separated by major heading (typically the summary of a speaker presentation) and saved in 177 separate text documents
+Using the matrix generated from the topic model and formed by the SVD analysis, 11 topics were chosen by number (prior to topic definition) and were plotted versus workshop reports in chronological order. Figure 1 shows the results of those top 11 topics. They show clear peaks over time and are large enough to be significant compared to the topics not used for analysis.
+Figure 1: Topic over Time. Interesting patterns that help validate the right topics were selected.
+MODSIM World 2014
+ 2014 Paper No. MS1420 Page 4 of 11
+
+RESULTS
+The essence of this study was to find trends in the written word to validate predications and assumptions held by NATO management. Topics were clustered based on their frequency in the text. Figure 2 shows the grouping of the eleven most prominent topics found in the documents.
+Figure 2. Topic Clusters. Combined output of clustering of topics.
+This section presents each of the four findings – supporting them with data and trends discovered in the analysis. In 2008, attendees of the MSG Workshop for Commercial Technologies and Games made five predictions as to the future of exploitation of commercial technologies and games:
+1. Highly realistic scenarios would become affordable those outside military training
+2. Training games would be become more realistic than those for entertainment
+3. New types of training scenarios would drive new types of training technologies
+4. Joint missions would drive interoperable solutions
+5. End-user experience would command greater emphasis in development processes
+According to the Co-Chairs of MSG-130, all five predictions have been attained by the membership and nations supporting the workshop series. Analysis of the workshop reports using trace graphs help validate the claim made at MSG-130 that the predications have been attained. Of note, predication four could not be directly analyzed by the trace graphs. The one topic key containing the term “interoperability” was among those eliminated from the factor analysis because it was a ubiquitous topic. Therefore, there is no evidence to reject the opinion that prediction four has been attained.
+MODSIM World 2014
+ 2014 Paper No. MS1420 Page 5 of 11
+
+Finding 1: Scenario realism continues to improve and shows an association with the level of discussion of social media and the human dimension during workshops
+This finding addresses predictions one and two. The trace graph in Figure 3 shows the relevant topics supporting this finding. A review of the topics keys for topic 6 is the idea of “realism”. The preponderance of these type discussions occurred soon after the predictions were made during MSG-074 in 2009. Meanwhile topics like virtual worlds and immersive learning have been strong topics with good supportive technologies in the last three workshops.
+Figure 3: Panel (a) shows an association between the social media dimensions of gamification and the spike in immersive learning environments for education and training in general – without an absolute focus on military training. Panel (b) shows the separation in time of discussions about military specific applications versus immersive learning in general.
+MODSIM World 2014
+     2014 Paper No. MS1420 Page 6 of 11
+
+Finding 2: Discussions focused on solving new requirements tend to lag the introduction of the topic by three workshop events.
+This finding addresses prediction three. The trace graph in Figure 4 shows two examples of how discussions on requirements and solutions evolve and develop over time.
+Figure 4: Panel (a) shows the logical progression of discussions about technology, leading to immersive learning environments (ILEs), to assessing results of ILEs. Panel (b) shows another evolution of logic from the need for open source systems to enable user-created, specialized content to the role of virtual worlds and finally the technical implications of supporting new types of training scenarios.
+In both panels of the figure, one can see a trend showing the evolution of technical matter to general treatment to emergence of a new discourse. Panel (a) shows the increased sophistication from technical dimensions in the fourth document to assessing pedagogical effectiveness in the seventh document. Panel (b) shows a similar evolution on a topic more directly related to the prediction itself regarding new scenarios requiring new technologies.
+MODSIM World 2014
+   2014 Paper No. MS1420 Page 7 of 11
+
+Finding 3: Discussions focused on user experience have emerged within the workshop reports and persist in current discourse.
+This finding addresses prediction five. The trace graph in Figure 5 shows a growing and persistent emphasis on the human dimension and social media.
+Figure 5: These panels show the trends in the association between the human dimension and technology. Panel (a) shows how discussions of social media emerged and continued for three MSGs. During this time, other aspects of the human dimension emerged. Meanwhile, panel (b) shows the separation of technology and human dimensions of serious games.
+MODSIM World 2014
+    2014 Paper No. MS1420 Page 8 of 11
+
+Finding 4: Assessment of training effectiveness, return on investment, and time efficiencies recently emerged as a workshop topic and this will likely continue.
+This finding stems not from a prediction but from an observation in the text and from the topic trace graphs. The last four traces in Figure 6 are indicative of topics relating to procurement (some day) of commercial technologies. As the discussion over the workshops continued and the technologies and games proved viability, the trend was to see discourse on assessment of training, time, and capital resources in the latter workshops.
+Figure 6: These trace graphs show an interesting contrast between Topic 2 (focused on assessment) and the remaining four topics as ordered by cluster analysis.
+The peaks of the latter four relate to discussions about acquiring immersive military training technologies. The topics include procurement, standards, proprietary rights, security, verification and validation, and delivery mechanisms. These were strong topics in 2009. They all persisted over four years, but at less level of intensity. Meanwhile, assessment of people, time, and resources has emerged in the latter workshops.
+MARKET TRENDS
+Technology Trends
+Findings from the analysis and topic modeling helped shape the search parameters. From a technology perspective, three technological trends emerged as prevalent among the literature and germane to NATO ACT and the MSG workshop series on commercial technology and games
+• Massive Open Online Course (MOOC)
+• Mobile Learning Technologies
+• Alternate Reality Games (ARG)
+• Networks and Architectures
+Industry Trends
+Although industries can radically differ from one another, one similarity is the importance of training and training technologies. Industry continues to innovate in this domain – surmounting technology constraints and pushing to find better ways to use technology or change technology to fit a better business model. Trends in discussion among industry include:
+• Open Source or Proprietary
+• Understanding the Needs of Government eLearning
+• MOOCs as a Disrupting Technology
+MODSIM World 2014
+    2014 Paper No. MS1420 Page 9 of 11
+
+• Standards for Gaming
+Government Trends
+A study by GovDelivery (2013) notes three key trends for governments: .collaboration with other agencies and citizens, customer service, and mobility (Bring Your Own Device). These in combination with the technology trends produce a list of government trends for NATO:
+• Collaboration
+• Architecture for MOOCs
+• Augmented Reality and Virtual Worlds
+CONCLUSIONS AND RECOMMENDATIONS
+Conclusions
+This MSG workshop series on commercial technologies and games have investigated trends in the area of enhanced military training and education for nearly 10 years. Seven reports dissected into 177 separate, chronological divisions served as the basis for analysing latent trends in the use of commercial technologies and games for use in NATO education and training. This report provides the analytic and investigative results for a large corpus associated with the MSG workshop series over the past four and a half years. It is a synthesis of many complementary analyses and investigations designed to characterize the corpus (data) for those involved in the development of strategies. The analysis fuses much of the isolated data from the various reports into trends and findings about the contributing factors of those trends.
+Recommendations
+Finding 1
+Scenario realism continues to improve and shows an association with the level of discussion of social media and the human dimension during workshops.
+Recommendation: Future events should strive to balance discussions on technological and human dimension topics by considering different use cases at each event.
+Finding 2
+Discussions focused on solving new requirements tend to lag the introduction of the topic by three workshop events. Recommendation: Workshop planners should use an outreach /market research plan to align topic introduction with desired solution timeframe and assume an 18-month lead-time for a trend to emerge.
+Finding 3
+Discussions focused on user experience have emerged within the workshop reports and persist in current discourse. Recommendation: Process topics seem a likely evolution from technology to people to process. Harness user experience discourse to highlight process-oriented games and training requirements.
+Finding 4
+Assessment of training effectiveness, return on investment, and time efficiencies recently emerged as a workshop topic and this will likely continue.
+Recommendation: Assessment includes topics ranging from pedagogy to return on investment to time savings. Extend calls for papers on these topics for future workshops.
+Post Analysis Questions
+During the course of the corpus exploration and analysis, team members identified a number of interesting questions, which may also be of interest to NATO:
+• How would a full Latent Semantic Analysis (LSA) with a user-specified ontology differ from the modified LSA techniques using topic modelling? The desired ontology would come from a survey of NATO ACT members guided by the results of the topic modelling.
+2014 Paper No. MS1420 Page 10 of 11
+MODSIM World 2014
+
+• Other factor analysis techniques like Predicting Trees can predict outcomes or associations based on data, which includes qualitative responses. How might information from this rapid study inform the generation of predicting trees to help NATO forecast trends in commercial technologies and games? (an example of a predicting tree found in the New York Times to predict the 2008 United States Presidential election is available at http://graphics8.nytimes.com/images/2008/04/16/us/0416-nat-subOBAMA.jpg).
+• Network analysis continues to increase in use as more access to data allows analysis of systems as the networks they truly are. Would network analysis offer a different perspective that highlights management questions not currently focused upon?
+• How might the results differ if analysis was focused on documents from across NATO ACT on eLearning, Modelling and Simulation, and the Connected Forces Initiative?
+• S-curve modelling is a widely used with trend analysis to forecast the growth of phenomenon. This applies to technology forecasting as well as life sciences. What would emerge from a study using S-curve (logistic regression) models along with the nGram corpus of literature available through Google to forecast trends in immersive military training and pedagogical effectiveness of immersive learning environments?
+ACKNOWLEDGEMENTS
+The work provided in this paper was due in large support to the North Atlantic Treaty Organization and their Modelling and Simulation activities. Special thanks to that team for access to the documentation. As a result, an additional analysis based on statistical techniques is scheduled to be produced later in 2014.
+REFERENCES
+GovDelivery. (2013). Top 2013 trends for state and local government. Retrieved from http://www.govdelivery.com/pdfs/WP_2013_trends_slt.pdf.
+Landauer, T. K., Foltz, P. W., & Laham, D. (1998). Introduction to latent semantic analysis. Discourse Processes, 25, 259-284. Retrieved from http://lsa.colorado.edu/papers/dp1.LSAintro.pdf.
+Latent. (2014). In The Free Dictonary. Retrieved from http://www.thefreedictionary.com/latent.
+McCallum, A. K. (2002). MALLET: A Machine Learning for Language Toolkit (Version 6.1.7601) [Software].
+Available from http://mallet.cs.umass.edu.
+NATO Research and Technology Agency (RTA). (2011, October). MSG-087: Trends in immersive environments. (RTO-MP-MSG-087 AC/323(MSG-087)TP/419). Neuillly-sur Seine, France: Collaboration Support Office.
+NATO Research and Technology Agency (RTA). (2013, October). MSG-130: Exploiting commercial technologies and games for use in NATO (in the maritime domain). (TER-MSG-130-13-185). Neuillly-sur Seine, France: Collaboration Support Office.
+Nelson, R. K. (n.d.). Mining the dispatch. Retrieved from http://dsl.richmond.edu/dispatch/pages/intro Rummel, R. J. (1988). Applied factor analysis. Evanston, IL:Northwestern University Press.
+R Core Team. (2013b). The R project for statistical computing. Retrieved from http://www.r-project.org/.
+MODSIM World 2014
+ 2014 Paper No. MS1420 Page 11 of 11

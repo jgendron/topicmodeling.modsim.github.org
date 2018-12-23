@@ -1,0 +1,141 @@
+Simulated Human Tissue Performance
+Jack Norfleet, Fluvio Lobo Fenoglietto
+Army Research Laboratory, University of Minnesota Orlando, FL, Minneapolis, MN jack.e.norfleet.civ@mail.mil, lobox015@umn.edu
+ABSTRACT
+Mark Mazzeo
+Army Research Laboratory Orlando, FL mark.v.mazzeo.civ@mail.mil
+Materials in medical simulations typically consist of polymers such as PVC, silicone, and some slightly more esoteric materials. While adequate for procedural training, they are typically lacking in the realism necessary to fully engage the learner. To improve the behaviors of simulated tissues, a better understanding of the mechanics of human tissue is required. To address this problem, the military is working closely with academia to broadly characterize fresh human cadaver tissues that are of interest to military medical learning. This paper compares the measured mechanical properties of simulated tissues from medical trainers against human tissues that would be subject to a chest tube insertion (skin, pleura). The research will also begin the development of models to translate human tissue data into performance requirements for future simulated tissues.
+ABOUT THE AUTHORS
+Jack Norfleet is the Chief Engineer for the Medical Simulation Research branch of the Army Research Laboratory Simulation and Training Technology Center (STTC). He manages a multidisciplinary team of researchers as well as planning, and executing medical simulation research efforts across the services. Mr. Norfleet has 30 years of experience in modeling, simulation and training as an electronics engineer, test engineer, project engineer and science & technology manager. Mr. Norfleet started his career as a GS-1 Engineering Aid directly out of high school. Mr. Norfleet received a Bachelor of Science in Electronics Engineering from the University of Central Florida (UCF), a Masters in Modeling and Simulation from UCF, and a Master of Business Administration Degree from Webster University. He is currently enrolled in the Modeling and Simulation Doctorate program at UCF. Mr. Norfleet is a member of the Acquisition Corps and is Level III certified Systems Planning Research Development and Engineering..
+Fluvio Lobo Fenoglietto is a Biomedical Engineering Graduate student at the Center for Research in Education and Simulation Technologies (CREST). CREST is a research and development division that spun off SimPORTAL, a simulation training program part of the University of Minnesota’s Medical School. As part of CREST, Fluvio leads the development of a materials research unit focused on the characterization of the mechanical, optical, electrical, and thermal properties of biological tissues. Fluvio currently pursues an MS degree in the field of Biomedical Engineering and will continue his research as a PhD candidate, focusing on the areas of Tissue Mechanics and Simulation.
+MODSIM World 2015
+ Mark V. Mazzeo is an Engineering Technician for Medical Simulation Technologies at the U.S. Army Research Laboratory (ARL) Simulation and Training Technology Center (STTC). He supports Science and Technology Managers with contractual documentation, maintenance and demonstration of laboratory equipment, experimental design, and data collection and analysis. He is actively involved in several research projects, from basic research to develop quantitative methods for characterizing simulated tissues, to usability studies to assess the effectiveness and utility of new technologies for Soldiers. Mark holds a B.S. in Industrial Engineering from the University of Central
+ Florida, and is currently finishing his M.S. in Industrial Engineering.
+2015 Paper No. 60, Page 1 of 10
+
+Jack Norfleet, Fluvio Lobo Fenoglietto
+Army Research Laboratory, University of Minnesota Orlando, FL, Minneapolis,MN jack.e.norfleet.civ@mail.mil, lobox015@umn.edu
+MILITARY TRAINING NEED
+Mark Mazzeo
+Army Research Laboratory Orlando, FL mark.v.mazzeo.civ@mail.mil
+Simulated Human Tissue Performance
+“Treating a piece of plastic” is a phrase that is often repeated in military medical classrooms. It was derived from the general lack of similarity between the materials used in medical simulators and the human tissues they are supposed to simulate. Because more invasive life-saving procedures are performed before the patient reaches a hospital, the need for higher fidelity medical simulations is growing. Some of these skills include establishing surgical airways, needle decompression of tension pneumothoraces, surgical treatment of compartment syndrome, and inserting chest tubes. The Soldiers performing these tasks outside of the hospital are combat medics and Special Forces medics. The military is training surgical skills to non-surgeons and expecting them to perform these skills in austere environments that are often lacking basic life support equipment. Military medics have been accomplishing this mission admirably, as evident by the dramatically improved died by wounds rates (Kotwal et al., 2011) observed in the latest conflicts. This outstanding performance is promising, but it is hypothesized that improving the quality of training will improve performance, and ultimately result in even more lives saved on the battlefield.
+The United States Department of Defense (DoD) is always looking to improve soldier performance, so in order to optimize medical training it uses cadavers and live animal tissue to augment simulator based training (Martinic, 2011). These training media are often the only experience medics have with non-synthetic tissues prior to treating casualties on the battlefield. While valuable, there are several negative consequences to using cadaver or animal tissue. Cadaver tissue is highly processed to a point of significantly altering the mechanical behaviors. The tissues are not perfused and are often in advanced stages of decomposition. Animal tissue, on the other hand, does not simulate human anatomy, is expensive, and is becoming socially unacceptable. In an attempt to address the need for higher fidelity military medical training devices, the Army Research Laboratory (ARL) has teamed with academia and industry to better define and describe human tissue and to apply those characteristics to emerging medical simulation systems. As these tissue technologies mature, they will be compared against current simulation technologies for educational efficacy.
+Tissue Properties
+Some human tissues are very complex substances that defy any easy description of their properties. These properties change based on age, gender, race, location on the body, hydration levels, etc. They also exhibit non- isotropic tendencies (i.e. the properties change based on the direction of the force within the tissue), and their Young’s moduli can be exponential in nature (Annaidh, Bruyere, Destrade, Gilchrist, & Ottenio, 2012; Carmichael, 2014; Edwards & Marks, 1995). This complex nature makes it nearly impossible for the military or other users to defineordescribethenecessaryperformancerequirementsoftissuesinmedicalsimulations. Requiring“realistic” tissues is useless as there is no standard for realism. Right now the standard for tissue realism is largely based on the opinions of medical professionals.
+There is an ARL research effort with the University of Minnesota (UMN) that begins to address this issue. This effort is broadly characterizing tissues harvested from fresh (within 72 hours of death) human cadavers. The tissues are being characterized for biaxial mechanical, optical, thermal, and electrical properties using accepted material testing procedures. Since this is a military sponsored project, samples will only be gathered from subjects who meet military service standards of age, health and body mass index. The military service standards were imposed because of a previous study performed by UMN where tissues were uniaxially characterized from any available fresh cadaver tissue. Because of the open sampling standards, the earlier UMN database is skewed toward the elderly and sick. Since military medics primarily treat young, healthy trauma patients, the UMN data did not meet the military training needs. The first step in improving tissues in medical simulations is to baseline how close or far current
+2015 Paper No. 60, Page 2 of 10
+MODSIM World 2015
+
+simulants are to human tissues. For this experiment, tissues involved in chest tube placement were selected because that procedure is performed in the field and is trained using commercial simulators. To place a chest tube, the medic cuts through the skin and then blunt dissects the tissues between the ribs to gain access to the intercostal space around the lungs. As can be seen in Figure 1 several layers of muscle, fascia, and the pleura must be penetrated without puncturing any organs. A tube is then inserted into the intercostal space and secured to drain fluids and air from the chest cavity. Proper placement will remove pressure on the lungs which improves the breathing of the patient.
+Figure 1. Chest Wall Tissues
+EXPERIMENTAL METHODS
+Mechanical Properties of Synthetics used in Training
+The materials used in the chest tube modules of two full body simulators were dissected and labeled on the basis of their biological counterparts.
+Uniaxial Tensile Testing
+As alluded to earlier, the homogeneity of the synthetic samples allowed for the derivation of mechanical properties of the materials through uniaxial testing. In order to comply with testing standards (ASTM Standard D412-06a, 2013), samples were prepared in the dog bone or dumbbell configuration, shown in Figure 2a and 2b. In accordance with the standard, samples were designed with narrow neck region to concentrate stresses and ensure failure. The
+2015 Paper No. 60, Page 3 of 10
+MODSIM World 2015
+ Existing Tissue Data
+The early UMN database did not contain the tissues in question and reviews of the literature revealed a noticeable lack of human data. For these reasons, animal data was selected from the literature for the base comparison. This decision highlights the general lack of human tissue data along with the lack of soft tissue measurement procedures and standards. The literature also revealed that most tissue studies are narrowly focused, typically on a single anatomical structure like a heart valve or piece of skin (Azadani et al., 2012; Li, Wang, Pham, & Sun, 2014)
+For synthetic tissues, materials that are breached during chest tube
+placement were
+commercially
+mannequins
+manufacturers and from one task trainer. Since the materials in simulators are isotropic and homogeneous, uniaxial testing was performed.
+selected from available full from major
+ 
+width 𝑤𝑛, the thickness 𝑡𝑛, and the length 𝑙𝑛 of the neck region were recorded for every sample. Three samples were prepared, in the same orientation, for each material.
+MODSIM World 2015
+  Figure 2: Dimensions of the dog bone or dumbbell specimen used for uniaxial testing. A top view of the sample (a) shows the planar dimensions of the specimen, while a cross-section view (b) reveals the thickness and width of the neck region of the specimen.
+Prepared samples were then loaded between two BOSE ElectroForce LM1 motors. Two linear motors, as shown in Figure 3, were implemented in order to double the stroke length of the experiment. With a combined full-scale of 24 mm, both motors synchronized to pull each sample at a rate of 0.01 mm/sec. for 20 mm. Low strain rates are typically chosen to replicate a quasi-static deformation and reduce the viscoelastic effects of certain rubbers and other elastomers (ASTM Standard D412-06a, 2013). Since biological tissues are also viscoelastic, the elastic behavior is highly dependent on the strain rate. To reduce this effect, uniaxial tests of biological tissues were also performed at low strain rates (Humphrey, Vawter, & Vito, 1986; Fung, 1993).
+Motor displacement was measured, and controlled, through Linear Variable Differential Transformers (LVDT) located on each LM1 motor. On the other hand, the loading response of the sample was measured by a single 25 N load cell attached to one of the motors. WinTest 7.1, the control software provided by BOSE ElectroForce, was used to acquire data from all sensors at a rate of 20 samples/sec.
+  Figure 3. Test Bed Configuration
+Data Processing
+Displacement and loading data, in combination with dimensional parameters associated with the dog bone sample, were used to calculate extensive mechanical parameters such as: stretch ratio (𝜆), engineering strain (𝜀𝑒𝑛𝑔), Green- Lagrange strain (𝐸), first Piola Kirchhoff stress (𝑇), and Cauchy stress (𝜎). Equations 1-7 show the calculations taken to derive each parameter.
+lf =lo +dl
+Equation 1: Final length
+2015 Paper No. 60, Page 4 of 10
+
+The final length or length of the neck region is the result of the motor displacement over a specific time interval. Therefore, 𝑑𝑙 can be described as the product of the motor displacement rate (strain rate) and such time interval.
+λ = lf/lo
+Equation 2: Stretch ratio
+In mechanics, the stretch ratio represents the numerical relation between the final length and the initial length. The stretch ratio is widely used to quantitatively describe deformation.
+εeng=(lf-lo)*100 = (λ-1)*100 = (dl)*100 lo lo
+Equation 3: Engineering strain
+Similarly to the stretch ratio (𝜆), the engineering strain has the purpose of quantifying material deformation. In its derivation, however, the identity is reduced from the ratio to present the result as a percentage. The resultant strain value is commonly presented in percentages, hence the latter product.
+E= (12) *(λ2-1)
+Equation 4: Green-Lagrange strain
+Most publications present deformation using the Green-Lagrange strain equation. This iteration of strain calculation reduces mathematical artifacts caused by rotations. Provided that these artifacts won’t have an effect in our experiments, Green-Lagrange strain will be used for comparison with literature results.
+Acs =w*t
+Equation 5: Cross section area - undeformed
+The cross section are of the samples “neck” is equivalent to the product of its width and thickness. The capital “A” refers to the undeformed configuration of the sample. In other words, the cross section area of the samples “neck” before the experiment begins.
+T= Af cs
+Equation 6: First Piola Kirchhoff stress
+The first Piola Kirchhoff stress is specific to a force applied over the cross section area of an undeformed sample.
+σ=T*λ
+Equation 7: Cauchy stress
+Material incompressibility, the conservation of material volume during deformation, allows the direct relation between the first Piola Kirchhoff stress (𝑇) and the Cauchy stress. Cauchy stress describes a force applied over the cross section of a deformed sample. Given that biological tissues are also incompressible, most publications will present Cauchy stresses.
+Using these parameters, Stress-Strain curves were built for each material. Constitutive equations or Strain Energy Density (SED) functions were also generated using these parameters. These functions were then used to compare the mechanical response of synthetics materials to that of biological tissues.
+MODSIM World 2015
+    2015 Paper No. 60, Page 5 of 10
+
+Model Comparison
+Synthetic materials were compared to their biological equivalents qualitatively and quantitatively. The qualitative assessment was based on the graphical differences between models, reflected in the Strain-Stress curves. The quantitative comparison, on the other hand, was based on the difference in the energy required to deform each sample. Strain Energy (SE), calculated by integrating the Stress-Strain curve generated by the material, can be used to differentiate synthetic models from their biologic models.
+RESULTS AND ANALYSIS
+Pleura
+Two out of the three medical trainers were equipped with a layer designed to mimic the visceral pleura. Mannequin 1 used a double-layered tape to replicate the tissue. The tape, a stiffer material by design, generated elevated stresses at small strains. Yielding around 5 MPa, the tape continued to deformed plastically until 80-90% strain. As can be seen in Figure 3, biological pleura did not stretch enough, at 80-90% strain, to generate comparable stresses. Mannequin 2 simulates pleura with a more ductile synthetic, allowing more deformation with lower stresses. However, this synthetic material is hyperelastic in nature and, thus, stretched beyond the testing limits (>300% strain). Figure 3 only shows data until 140-150% strain. Similarly to the pleura from the first mannequin, the material used for the second trainer generated greater stresses than the biological pleura, at smaller strains. Figure 3 also shows data from excised canine visceral pleural tissue (Humphrey, Vawter, & Vito, 1986) for comparison. The data from eleven (11) specimens was modeled using a pseudo-elastic model proposed by Humphrey and colleagues (Humphrey & Yin, 1987). Three of these excised samples comprise the data shown in Figure 4.
+MODSIM World 2015
+  2015 Paper No. 60, Page 6 of 10
+Figure 4: Stress-strain curves of synthetic replicas of the pleura and the actual tissue sample
+
+Stress-strain curves provide multiple points of comparison between the mechanical behavior of biological tissues and their synthetic counterparts. However, an attempt should be made on defining specific parameters of comparison. Throughout the literature, intensive mechanical properties such as the Young’s Modulus (Modulus of Elasticity) have been used to compare materials. Here we propose the use of the Strain Energy (SE) as an additional method of comparing across materials. Figure 5 depicts the energy stored within the sample throughout its
+MODSIM World 2015
+  Figure 5: Strain Energy (SE) plot for a representative sample of the synthetic replicas of the pleura and biological tissue data from the literature. The SE is calculated by integrating the Strain Energy Density (SED) function.
+deformation (Fung, 1993). This stored energy, the Strain Energy, is equivalent to the work needed to deform the sample. In the case of pleura, Figure 5 highlights the disparity in the energy required to deform each material. In general, we can say the materials chosen to recreate pleura require about one thousand times more work to deform than the actual pleura.
+Skin
+Each of the trainers was protected with a synthetic skin. In one instance, the skin was the only layer trainees had to go through to complete the procedure. Stretch ratios and Cauchy stresses were calculated following Equations 1-7. The skin data was taken from Fung’s constitutive equation for rabbit abdominal skin (Fung 1974). Figure 6 contains the results from the tensile experiments and the fitted data from Fung’s model. These results share significant similarities with those of the pleura. Most of the synthetics used to mimic skin are hyperelastic in nature, giving rise to greater stresses at small strains. The progressive increase in stress seems proportional, but should not be confused with pure linear elasticity. These samples, in most cases, show signs of plastic deformation between 30-40% strains. Once again the mechanical response of tissue seems irrelevant until high strains are reached. In this case, high stresses are only generated close to the 100% strain mark (Fung 1974, 1976).
+2015 Paper No. 60, Page 7 of 10
+
+MODSIM World 2015
+  Figure 6: Stress-strain curves of synthetic replicas of the pleura and the actual tissue sample
+Although considerable strain energy differences were found between synthetic and biological pleura samples, the energy difference between synthetic and real skin was only tenfold. Figure 7 shows that energy calculations were similar across materials. It is crucial to highlight how small a tenfold gap is in these calculations, as it is dependent on the slightest change in strain measurements. Without precise failure data, an upper strain limit cannot be given to SED functions, such as the Fung model plotted in Figure 6. The final strain plotted was taken from the literature but an increase of 5% strain on the model will double the reported stress. This also translates to synthetics, as most of these experiments ended with the slipping of the material rather failure.
+  Figure 7: Strain Energy (SE) plot for a representative sample of synthetic replicas of the pleura and biological tissue data from the literature.
+2015 Paper No. 60, Page 8 of 10
+
+CONCLUSIONS
+This paper introduces the implementation of standard testing procedures (ASTM Standard D412-06a, 2013) as a means of assessing mechanical response of the materials used to build state of the art medical trainers. The original goal was to compare the mechanical responses to those of human tissues. The first attempt a accomplishing this comparison failed due to lack of available data. A database of tissue properties developed by the University of Minnesota was the target source but data on the pleura did not exist and skin data was not available for the body area in question. Literature searches for properties of similar human tissues also failed to reveal any significant data. This led the researchers to use literature data on animal tissues as a biological baseline. These difficulties illustrate a significant gap in the body of knowledge of human tissue performance. Most studies of human tissue performance involve small sample sizes of a specific tissue, (i.e. 3 heart valves). Until human tissues are broadly characterized, tissue fidelity in simulations will remain subjective.
+The results also highlight the gap between the behaviors of materials currently used in commercial trainers, and the two biological structures that these materials seek to replicate. Admittedly, the number of samples was small, but the homogeneous nature and mass production of the materials in question, adds confidence that representative performance data can be derived from a small sample size. The data show that the biological tissues are deformable but with small reaction forces until they approach failure where the reaction forces grow almost exponentially. The synthetic tissues deform with almost linear reaction forces and thus provide little tactile feedback just prior to failure. Without similar tactile feedback, the effectiveness of training may be compromised as the tactile cues will not be present to indicate that the tool is about to breach the simulated tissue. This negative training can translate to patient harm if the trainee doesn’t learn when to stop pushing. Additionally, the energy required to deform the synthetic pleura approaches 3 orders of magnitude more than the biological tissues they simulate. This increased energy requirement teaches the trainees to push harder and faster than necessary; similar to a baseball player warming up with a weight on their bat prior to approaching the plate.
+This study was performed from the point of view of improving the fidelity of medical simulations for training. As the body of knowledge grows, tissue properties and behaviors have significant application to other areas of science and medicine. Models predicting wound characteristics should become more accurate when based on tissue properties measured from human tissues that have not decayed. Protective equipment design should also improve as the understanding of the mechanics of tissue behavior become clearer. Accurate medical modeling should also become more accurate should the data be expanded to include diseased tissues.
+Suggested Follow on Research
+1. Broadly characterize human tissue behaviors to failure using samples harvested as close to the time of death as possible
+2. Define the language and parameters that must be provided to industry to adequately describe the desired performance of simulated tissues
+3. Broadly characterize current simulated tissues for comparative gap analyses
+4. Validate emerging simulated tissues using the characteristics for educational efficacy
+5. Develop and validate in vivo methods of measuring the same properties
+6. Develop and validate decay curves that can be used to interpolate fresh cadaver properties to live
+properties.
+2015 Paper No. 60, Page 9 of 10
+MODSIM World 2015
+
+REFERENCES
+Annaidh, A. N., Bruyere, K., Destrade, M., Gilchrist, M. D., & Ottenio, M. (2012). Characterization of the anisotropic mechanical properties of excised human skin. Journal of the Mechanical Behavior of Biomedical Materials, 5(1), 139-148. doi: 10.1016/j.jmbbm.2011.08.016
+Azadani, A. N., Chitsaz, S., Matthews, P. B., Jaussaud, N., Leung, J., Wisneski, A., . . . Tseng, E. E. (2012). Biomechanical comparison of human pulmonary and aortic roots. European Journal of Cardio-Thoracic Surgery, 41(5), 1111-1116. doi: 10.1093/ejcts/ezr163
+Carmichael, S. W. (2014). The Tangled Web of Langer's Lines. Clinical Anatomy, 27(2), 162-168. doi: 10.1002/ca.22278
+Edwards, C., & Marks, R. (1995). Evaluation of biomechanical properties of human skin. Clinics In Dermatology, 13(4), 375-380.
+Fung, Y. C. (1993). Biomechanics, Mechanical Properties of Living Tissues. New York, New York, USA: Springer. Humphrey, J. D., Vawter, D. L., & Vito, R. P. (1986). Mechanical behavior of excised canine visceral pleura.
+Annals of Biomedical Engineering, 14, 451-466.
+Humphrey, J. D., & Yin, F. C. P. (1987). A new constitutive formulation for characterizing the machanical behavior
+of soft tissues. Biophysical Journal, 52, 563-570.
+Kotwal, R. S., Montgomery, H. R., Kotwal, B. M., Champion, H. R., Butler, F. K., Mabry, R. L., . . . Holcomb, J. B.
+(2011). Eliminating Preventable Death on the Battlefield. Archives of Surgery, 146(12), 1349-1357. doi:
+10.1001/archsurg.2011.213
+Li, K. W., Wang, Q., Pham, T., & Sun, W. (2014). Quantification of structural compliance of aged human and
+porcine aortic root tissues. Journal of Biomedical Materials Research Part A, 102(7), 2365-2374. doi:
+10.1002/jbm.a.34884
+Martinic, G. (2011). The use of animals in live-tissue trauma training and military medical research. Lab Animal, 40,
+319+.
+Standard Test Methods for Vulcanized Rubber and Thermoplastic Elastomers - Tension. (2013). West
+Conshohocken, PA: ASTM International.
+2015 Paper No. 60, Page 10 of 10
+MODSIM World 2015

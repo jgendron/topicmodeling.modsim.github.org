@@ -1,0 +1,148 @@
+Thoracostomy Simulations: A comparison of the mechanical properties of human pleura vs synthetic training pleura
+Jack Norfleet, Mark Mazzeo, Kurtis Palata
+Army Research Laboratory
+Orlando, FL jack.e.norfleet.civ@mail.mil, mark.v.mazzeo.ctr@mail.mil, kurtis.w.palata.ctr@mail.mil
+Luis Morales Tenorio, Victor Barocas, Robert Sweet University of Minnesota
+Minneapolis, MN lmorales@umn.edu, baroc001@umn.edu, rsweet@umn.edu
+ABSTRACT
+The current generation of synthetic simulated tissues in medical trainers is adequate for basic training, but they often fall short of delivering the fidelity necessary to build muscle memory. This problem has been overlooked by users because there is no standard method for describing how tissues should behave during medical procedures. The Department of Defense is working to develop tissue performance requirements that can be referenced during the development of future generations of medical simulations. The first step is to determine how closely synthetic tissues mimic the behaviors of the human tissues being simulated. This paper compares mechanical properties of human pleura against simulated pleura used in thoracostomy training.
+Thoracostomy, or chest tube insertion, is a surgical intervention where a tube is inserted between the ribs to drain fluid and air from the chest cavity. Without it, pressure builds in the chest and eventually the lungs will collapse. A collapsed lung, or tension pneumothorax, is the second most common preventable cause of death on the battlefield according to the Tactical Combat Casualty Care (TC3) curriculum. Many commercial medical simulators train this procedure and nearly all of them use synthetic materials to simulate the haptic “pop” felt when the pleura is breached. This paper measures the mechanical properties of those materials and compares them against the same mechanical properties measured from human pleura. Comparisons include tensile stress, stretch ratio, and strain energy density. This paper builds on the procedures and results presented by Norfleet, Lobo Fenoglietto, and Mazzeo at MODSIM 2015.
+ABOUT THE AUTHORS
+Jack Norfleet is the Chief Engineer for the Medical Simulation and Performance branch at the Army Research Laboratory Advanced Training and Simulation Division (ATSD). He manages a multidisciplinary team of researchers and plans and executes medical simulation research efforts across the services. Mr. Norfleet has 31 years of experience in military modeling and simulation. Mr. Norfleet received a Bachelor of Science in Electronics Engineering from the University of Central Florida (UCF), a Masters in Modeling and Simulation from UCF, and a Master of Business Administration Degree from Webster University. He is currently pursuing a Modeling and Simulation Doctorate at UCF.
+MODSIM World 2016
+ Mark V. Mazzeo is a Research Assistant for the Medical Simulation and Performance branch at the U.S. Army
+  Research Laboratory (ARL)
+Advanced Training and Simulation Division (ATSD)
+. He supports Science and
+ Technology Managers with contractual documentation, maintenance and demonstration of laboratory equipment, experimental design, and data collection and analysis. He is actively involved in several research projects, from basic research to developing quantitative methods for characterizing simulated tissues, to usability studies to assess the effectiveness and utility of new technologies for Soldiers. Mark holds a B.S. and M.S. in Industrial Engineering from
+ the UCF.
+ Luis Morales Tenorio is a Graduate Research Assistant at the Center for Research in Education and Simulation Technologies (CREST). As a member of CREST, his main roles include performing mechanical testing on biological tissue, data analysis, and test method validation for mechanical characterization tests. Mr. Morales’ main interest pertains to the use of continuum mechanics and finite element analysis theories in order to formulate computer models that help understand qualitatively how soft tissues behave under mechanical and thermal loads. Luis holds a B.Bm.E.
+ and currently pursues a M.S. in Biomedical Engineering at the University of Minnesota – Twin Cities.
+2016 Paper No. 19 Page 1 of 9
+
+Kurtis Palata is an Undergraduate Assistant for the Medical Simulation and Performance branch at the U.S. Army Research Laboratory (ARL) Advanced Training and Simulation Division (ATSD). As an intern, he takes an active role in the management of research projects by assisting Science and Technology Managers with documentation, data collection, and experimental design. He prepares and reviews contractual documents, performs technology demonstrations and maintains laboratory equipment, and explores new areas of research within Medical Simulation through literature reviews. Mr. Palata is currently pursuing a B.S. in Mechanical Engineering from the UCF, and plans to obtain a M.S. in Mechanical Engineering.
+Victor Barocas, PhD, received his B.S. and M.S. in Chemical Engineering from MIT and his Ph.D. degree in Chemical Engineering from the University of Minnesota in 1996. He is currently a Professor of Biomedical Engineering at Minnesota and serves as the Co-Editor-in-Chief of the American Society of Mechanical Engineers’ Journal of Biomechanical Engineering. His research focuses on the theoretical and experimental biomechanics of soft tissues under subfailure and failure loading conditions.
+Robert Sweet, MD, FACS received his medical degree (alpha omega alpha) from the University of Minnesota in 1997. After a urology residency at the University of Washington in Seattle in 2003, he became Attending Physician/Acting Assistant Professor of Urology and held a 2-year Health Policy Scholarship focused on Simulation Sciences from the American Foundation for Urological Diseases (AFUD). In 2004 Dr. Sweet co-founded the Institute for Surgical and Interventional Simulation (ISIS) at the University of Washington. He currently holds the positions of Associate Professor of Urology at the University of Minnesota, and is Director of the Medical School's Simulation Programs and the Kidney Stone Program. He is the Principal Investigator of numerous simulation research and development projects including the University of Minnesota MedSim Combat Casualty Training Consortium.
+At the University of Minnesota, Dr. Sweet practices Urology with a focus on robotics and endourology with a clinical emphasis on kidney stones and diseases of the prostate. He has built an Institute that is actively engaged in funded simulation projects including the development of a human tissue property database, advanced real time and predictive modeling of human tissue and tool interactions, creation of virtual reality, hybrid and anaplastology medical simulation models, multi-institutional validation studies of simulation-based curriculum, and delivery systems for the dissemination of simulation technologies. He has leadership positions in the area of simulation and education within the American College of Surgeons, the Endourological Society, and the American Urological Association. He is a former President of the Society of Laparoendoscopic Surgeons.
+2016 Paper No. 19 Page 2 of 9
+MODSIM World 2016
+ 
+Thoracostomy Simulations: A comparison of the mechanical properties of human pleura vs synthetic training pleura
+Jack Norfleet, Mark Mazzeo, Kurtis Palata
+Army Research Laboratory
+Orlando, Florida jack.e.norfleet.civ@mail.mil, mark.v.mazzeo.ctr@mail.mil, kurtis.w.palata.ctr@mail.mil
+TRAINING NEED
+Luis Morales Tenorio, Victor Barocas, Robert Sweet University of Minnesota
+Minneapolis, Minnesota lmorales@umn.edu, baroc001@umn.edu, rsweet@umn.edu
+Modern medical simulations are used to train medical skills to providers throughout the continuum of care. Many civilian medical centers, large and small, maintain some type of medical simulation capability. The complexity of these simulations spans a range from simple CPR/AED mannequins through physiologically accurate mannequins to virtual systems that train laparoscopic and robotic surgical skills. The cost of deploying and maintaining these capabilities are usually justified by improving patient safety and outcomes.
+It is not generally known, but the United States Department of Defense (DoD) is one of the largest users and developers of medical simulation technologies. The DoD has a persistent mission to enhance Soldier performance through the continuous improvement of training and technology. In an effort to improve medical performance, the Joint Program Committee – 1 Medical Simulation (JPC-1) and the Army Research Laboratory (ARL) have teamed with academia and industry on current and past research and development projects to advance the state of the art of medical simulation. Past work includes distributed patient simulation systems that mirror the continuum of care, advanced mannequins with self-compensating physiologies that accurately simulate the body’s response to trauma, trauma skills mannequins with lifelike movement, accurate trauma representations that better prepare the Soldiers for injuries that they will treat in the field, game based simulations, and virtual simulations. Current projects include tissue characterization (mechanical, electrical, thermal and optical), advanced 3D modeling visualization, live and virtual medical simulations, game based simulations, olfactory simulations, and other technologies that advance learning and performance.
+Despite these advances, the fidelity of the materials used to simulate tissues in the body has not advanced at the same rate. Subsequently, the DoD still trains on cadavers and live animal tissues because the simulations do not possess the fidelity necessary to fully prepare military care givers (Martinic, 2011). Even though cadaveric and animal tissues are biologic, they possess significant flaws that make them less than optimal for training. One such flaw with cadavers and animals is the significant cost associated with acquiring, storing, deploying and disposing of materials that require biohazard precautions. These costs are constantly evaluated against the value of the training. Ethical difficulties are another issue that adds to the complexity of the training. The laws and regulations governing the use of human cadavers are rigorous and the ethics of using live animals for training is a national discussion that is receiving significant attention (Martinic, 2011). From a training fidelity perspective, cadaver tissues are typically processed and are in various stages of decay, making the properties very different from those of a live human. Cadavers are also limited use assets that cannot accommodate the large number of trainees and short timeframes inherent to military medical training. Animals, on the other hand, exhibit live biological tissue characteristics, but their differing anatomies require an artificial mental translation of landmarks to apply to human patients.
+Previous Work
+The authors began this line of research by comparing measured properties from synthetic against biological properties taken from the literature. Skin and pleura were the tissues of interest because they are involved in chest tube placement which is a skill taught at various levels of military medical care. Since the mechanical characteristics of human skin and pleura were not found during the literature search, animal data was selected for the first study (Norfleet, Lobo Fenoglietto, & Mazzeo, 2015). The results of this study suggest that current synthetic tissues behave differently enough from biological tissues to introduce negative training. They also suggest that the negative training could rise to a level that can cause harm.
+2016 Paper No. 19 Page 3 of 9
+MODSIM World 2016
+
+This current study builds on the previous work by comparing characteristics from human and simulated pleura. Each of these tissues, both human and synthetic, were dissected and tested using the same protocols on identical test equipment to determine their mechanical properties.
+Sixty two (62) samples of human pleura were recovered from eleven (11) cadavers. Mechanical testing of these biological tissues was conducted at the Center for Research in Education and Simulation Technologies (CREST), based out of the University of Minnesota – Medical School in Minneapolis, MN. Samples of human pleura were extracted in two different orientations, parallel to the ribs and perpendicular to the ribs. Anisotropy was observed, but at a level that should not significantly affect training (Barocas, pending 2016 DMD). Each sample was tested to maximum test fixture stroke length (20mm), or until sample failure.
+Twenty nine (29) samples of synthetic simulated pleura were obtained from five (5) commercial simulators. The synthetic samples were tested at the Army Research Laboratory Human Research and Engineering Directorate Advanced Training and Simulation Division (ATSD) synthetic tissue characterization laboratory in Orlando, FL. As with the biological tissues, each sample was tested to maximum test fixture stroke length or to material failure. The synthetic samples were also extracted in two different orientations, parallel to the ribs and perpendicular to the ribs. Anisotropic behavior was not observed in the synthetics but could not be confirmed within the scope of this experiment. Biaxial testing will be used to confirm anisotropic behavior in future testing.
+1. Material Testing
+1.1. Sample Preparation
+The mechanical properties of synthetic materials were derived by performing uniaxial tensile tests. In order to comply with testing standards (Standard Test Methods for Vulcanized Rubber and Thermoplastic Elastomers - Tension, 2013), samples were prepared in the dog bone or dumbbell configuration, shown in Figure 1a and 1b. In accordance with the standard, samples were designed with narrow neck regions to concentrate stresses and ensure failure at the desired location. The width 𝑤# , the thickness 𝑡#, and the length 𝑙# of the neck region were recorded for every sample. To ensure that large deformations remain within the neck of the dog bone, samples were dissected so that 𝑙# ≤ 5 𝑚𝑚. Six (6) samples were tested per simulated tissue except for one simulator where only five (5) samples were available.
+MODSIM World 2016
+   1.2. Uniaxial Tensile Testing
+ 2016 Paper No. 19 Page 4 of 9
+Figure 1. Uniaxial Dog Bone Configuration. (a) Top View. (b) Neck Cross Section.
+Prepared samples were loaded between two BOSE ElectroForce LM1 motors, as shown in Figure 2. These motors generated tension within the sample by applying opposing displacements. The test procedures for both synthetics and biologics consisted of material preconditioning followed by a ramp function that steadily increased tension to induce failure.
+For both biologics and synthetics, sample preconditioning consisted of twenty (20) cycles of a triangle waveform generated through WinTest 7.1, the control program for the BOSE Planar System. Triangle waves were chosen to maintain low strain rates, thus reducing the viscoelastic effects of the materials. Similar to biologics, most of the synthetic materials used in tissue simulations exhibit viscoelastic behaviors (Fung, 1993; Humphrey, Vawter, & Vito, 1986). On each cycle, samples were deformed by 2 mm (d+ = 1 mm, d0+ = 1 mm, d121 = 2 mm). This cyclical displacement equated to an average of 40% strain on the prepared specimens. High strains were selected after previous observations on the extensibility of these materials (Norfleet, Fenoglietto, & Mazzeo, 2015). Regardless of the magnitude of the strains, the displacement rate was kept at 0.1 mm/sec, which equated to a strain
+ Figure 2. BOSE ElectroForce Planar Biaxial Test System
+
+rate of about 2%/sec. This strain was maintained throughout the ramp, which consisted of a 20 mm extension (d+ = 10 mm, d0+ = 10 mm, d121 = 20 mm). Motor displacement was measured, and controlled, through Linear Variable Differential Transformers (LVDT) located on each LM1 motor. The loading response of the sample was measured by a single 25 Newton (N) load cell attached to one of the motors. WinTest 7.1 acquired and recorded the data from all sensors at a rate of ten (10) samples per second.
+2. Data Processing
+Previously, kinematic definitions, variables, and equations were introduced to this area of study (Norfleet, Lobo Fenoglietto, et al., 2015). Each of these is a simplification of the continuum models found throughout the literature (Fung, 1993; Holzapfel, 2000). Using these equations, the data collected from the human and synthetic pleura samples was analyzed and compared. These definitions have been summarized in Table 1, shown below.
+Table 1. Mechanical Definitions and Equations
+MODSIM World 2016
+     Definition
+      Equation
+     Description
+    Stretch Ratio
+ λ= l8 l2
+    Numerical relation between the final length (lf) and the initial length (lo).
+     Green-Lagrange Strain
+   E= 1 λ2-1 2
+        Most publications present deformation using the Green-Lagrange strain equation. This iteration of strain calculation reduces mathematical artifacts caused by rotations.
+     First Piola Kirchhoff Stress
+   T=f A<=
+      The first Piola Kirchhoff stress (T) is specific to a force applied over the cross section area of an undeformed sample (Acs).
+     Cauchy Stress
+   σ= f =Tλ a<=
+      Cauchy stress describes a force applied over the cross section of a deformed sample (acs).
+     Strain Energy Density
+      𝑊 = ∫ 𝑇 𝑑𝜆
+     Calculated work needed to deform the sample per unit area.
+  3. Results and Analysis
+The mechanical response of all materials was compared on the basis of their ultimate tensile strength, stretch ratio at failure, and strain energy for failure. T-tests were performed to compare the differences between means of each parameter between the human and synthetic samples, using 95% confidence intervals. Stress-strain (constitutive- mechanical) response was also compared. Measures based on the orientation of the human samples were compared and were not found to be statistically significant. Anisotropic behavior of the synthetic samples was not observed but final confirmation is outside of the scope of this experiment. Assessment of anisotropic behavior in synthetics will be revisited in future research.
+The three parameters analyzed include the ultimate tensile strength, maximum stretch ratio, and the strain energy density. Ultimate tensile strength is the maximum stress at which the sample begins to fail. During experimentation, this parameter was interpreted as the point at which the stress curve stopped increasing and began decreasing. The stretch ratio is the ratio of the length of the sample at its maximum deformation to the initial length of the sample. The strain energy density is derived from the area under the curve using the equation in Table 1.
+Previously, Cauchy stress was used for direct comparison between organic and synthetic tissues (Norfleet, Lobo, and Mazzeo 2015). This prior analysis was based on the data available in the literature analyzing mechanical properties of animal tissues (Humphrey, Vawter, & Vito, 1986). To enable direct comparison with these results from the literature, the synthetic tissues analyzed were assumed to be incompressible, and Cauchy stress was utilized to stay consistent with previous work. This current experiment did not explore whether the human and synthetic tissues were incompressible or isotropic. Rather than assuming isotropy and incompressibility of the samples in this latest experiment, the First Piola-Kirchhoff Stress was used for a more reliable comparison between both tissue types.
+2016 Paper No. 19 Page 5 of 9
+
+3.1. Stress-Strain Analysis
+The figure below portrays the stress-strain relationships of two representative samples, one of human pleura and one synthetic sample obtained from Simulator 225. For the human sample, the maximum stretch ratio is 1.713, the ultimate tensile strength is 2.122 kilopascals (kPa), and the strain energy density is 0.4599 kilojoules per cubic meter (kJ/m3). Simulator 225 demonstrated a maximum stretch ratio of 3.062, ultimate tensile strength of 13.68 kPa, and a strain energy density of 16.58 kJ/m3. By observation, the human and simulated tissues are very different with respect to all parameters analyzed, as well as the shape of their stress-stretch curves.
+a. b.
+Figure 3. Stress-strain curves. (a) Summary of analysis performed on human pleura. (b) Representative curve of synthetic pleura (SIM 225)
+3.2 First Piola-Kirchhoff Stress vs Stretch Ratio
+As shown in Figure 4, none of the simulators closely simulated the mechanical properties of the human tissue with respect to all three parameters, and displayed intrinsically different curve shapes. Regarding ultimate tensile strength, the samples fall into two clusters. SIM 999, SIM 225, and SIM 227 display extremely high ultimate tensile strengths compared to the human sample. While SIM 627 and SIM 268 display very low ultimate tensile strengths, both are well below the ultimate tensile strength exhibited by the human data. SIM 225, SIM 227, and SIM 268 all exhibited very high stretch ratios, meanwhile SIM 999, SIM 627, and the human sample exhibited similar, and somewhat low stretch ratios. For SIM 225, the amount of energy required to induce failure was the highest. SIM 227 was a distant second, followed by SIM 999. Both SIM 268 and SIM 627 exhibited very low strain energy levels, and the human data fall between the two groups.
+It is clear that areas under the curves of SIM 999, SIM 227, and SIM 225 which represent the strain energy densities will be much greater than the human data by observation. Conversely, the areas under the curves for SIM 627 and SIM 268 are much lower than the area under the curve for the human data, indicating that the strain energy densities for these synthetics are much lower. The average values of each parameter for all samples is summarized below in Table 2. None of the samples mimic all three mechanical properties of the human tissue.
+MODSIM World 2016
+  2016 Paper No. 19 Page 6 of 9
+
+                        Figure 4. Results from human and synthetic pleura.
+Figures 3 and 4 illustrate that human pleura exhibits a very low stress to stretch ratio at first, followed by an impulsive increase in this ratio at the end. SIM 225, SIM 227, and SIM 999 exhibit this impulsivity at the beginning, followed by a decrease in the stress-stretch ratio, resulting in a magnified inverse relationship in mechanical behavior between the human and synthetic tissues. From Figure 4, the stress to stretch ratios of SIM 627 and SIM 268 are very low with no impulsive increase. This impulsive increase, referred to as a “haptic pop” (Raja, et al., 2007), is key in providing a physical cue that must be trained into muscle memory.
+3.3 Hypothesis Testing
+The mean values for each parameter are reported in Table 2, which provides a summary of the differences in ultimate tensile strength, maximum stretch ratio, and strain energy density between the human and synthetic pleura samples. Also included are the results of the two-sided student’s t-tests which assumed unequal population variance. The t-test compared the difference between means of these parameters for each type of synthetic sample against the human samples. The null hypothesis states that the two expected means are equal, and the alternative hypothesis states that the expected means are unequal. As shown in the table below, the mean values for each parameter are different when comparing the synthetics to the biologics, and the null hypothesis is rejected, but with two exceptions. The t-tests showed that the differences in mean stretch ratios for SIM 627 and the human pleura are not statistically significant (p = 0.786), and that differences in the mean energy at failure for SIM 268 and the human pleura are also not statistically significant (p = 0.460). Therefore the null hypotheses for these measures could not be rejected. The results from Table 2 are also summarized as a bar plot below in Figure 5, where the error bars denote the 95% confidence interval. Parameters that were statistically significant (i.e. p-value < 0.05) are denoted with one asterisk, and parameters that are statistically highly significant (i.e. p-value <0.001) are denoted with two asterisks.
+Table 2. Comparative Analysis of Synthetic vs Human Pleura
+MODSIM World 2016
+                                              Pleura Sample
+Human
+SIM 225 SIM 999 SIM 227 SIM 627
+SIM 268
+Stretch at 95% CI p-value Failure
+Energy
+Strain 95% CI
+[kJ/m3]
+0.447 0.137
+18.996 4.774 6.967 2.023 11.415 0.980 0.183 0.051 0.378 0.169
+UTS
+[kPa] (λmax) 2.066 0.600 - 1.703
+95% CI
+0.106
+0.353 0.164 0.051 0.125 0.402
+p-value
+-
+3.0E-05 3.4E-02 2.1E-38 0.786 5.3E-04
+p-value
+-
+1.7E-04 4.0E-04 5.1E-07 4.3E-04 0.460
+                                                                                            2016 Paper No. 19 Page 7 of 9
+14.448 1.738 5.4E-07 3.187 11.202 1.334 1.2E-07 1.898 8.024 0.788 5.2E-11 3.338 0.423 0.337 8.7E-07 1.722 0.366 0.812 4.4E-07 2.883
+
+4. Discussion
+Ideally, a thoracostomy simulator would be similar enough to a human that the feeling between training and real life is virtually indistinguishable. However, the results of Table 2 pose a question of training effectiveness when working with these simulators. Accurate rehearsal in medical training is imperative to gain the cognitive and muscle memory needed to perform difficult procedures without hesitation. On a human, the impulsive increase in resistance just prior to entry prepares the trainee for the “pop” which indicates successful entry into the pleural cavity. On the simulators, this impulsive increase in resistance happens out of sequence and is not associated with tissue failure, and thus fails to establish the necessary relationship between increased resistance and successful entry. A major concern drawn from these results is the possibility that performing a thoracostomy on a simulator is so fundamentally different from performing it on a human that current simulations may introduce enough negative training that it increases the chance of causing harm to the patient.
+5. Conclusion
+The results of this study illustrate significant differences between the behaviors of human pleura tissue and those materials that seek to simulate human pleura. The magnitude of these differences suggest that current thoracostomy simulators introduce negative training by requiring vastly different forces and energies to complete an intrusive, yet delicate medical procedure. Current simulations do not provide the subtle haptic cues that are necessary for novice providers to achieve proficiency in inserting a chest tube without causing additional harm. Since the synthetic pleura do not load like human pleura, trainees will have difficulty in developing the recognition that the pleura is about to break. Significant work is needed to bring the current synthetic pleura materials into a performance envelope that more closely matches human pleura.
+6. Future Work
+The Army Research Laboratory, in collaboration with its academic partners at the University of Minnesota and the University of Washington, is executing several research initiatives to characterize tissue behaviors, translate those behaviors to performance requirements, and then implement those requirements in live and virtual medical simulations. As these efforts progress, training effectiveness evaluations will be performed to measure the impact on current simulation based medical training.
+2016 Paper No. 19 Page 8 of 9
+MODSIM World 2016
+ Figure 5. Visual Representation of Results of Comparative Analysis
+
+REFERENCES
+ASTM Standard D412-06a. (2013). Standard Test Methods for Vulcanized Rubber and Thermoplastic Elastomers - Tension. West Conshohocken, PA: ASTM International. Retrieved from http://www.astm.com
+Barocas, V. (pending 2016). A Paradigm for Materials Design for Surgical Simulators, with Specific Application to the Pleura and Needle Decompression. Design of Medical Devices pending 2016. Minnesota
+Fung, Y. C. (1993). Biomechanics, Mechanical Properties of Living Tissues (2nd ed.). New York, New York, USA: Springer.
+Holzapfel, G. A. (2000). Nonlinear Solid Mechanics: A Continuum Approach for Engineering. West Sussex, England: John Wiley and Sons Ltd.
+Humphrey, J. D., Vawter, D. L., & Vito, R. P. (1986). Mechanical behavior of excised canine visceral pleura. Annals of Biomedical Engineering, 14, 451-466. doi:0090-6964/86
+Norfleet, J., Lobo Fenoglietto, F. L., & Mazzeo, M. V. (2015). Simulated Human Tissue Performance. MODSIM World Meeting 2015. Virginia.
+Raja, N. S., Schleser, J. A., Norman, W. P., Myzie, C. D., Gerling, G. J., & Martin, M. L. (2007). Simulation Framework for Training Chest Tube Insertion Using. Systems, Man and Cyernetics, 2261-2266.
+Simulation PeriOperative Resource for Training and Learning (SimPORTAL). (n.d.). About SimPORTAL. Retrieved April 5, 2015, from http://www.simportal.umn.edu/
+2016 Paper No. 19 Page 9 of 9
+MODSIM World 2016

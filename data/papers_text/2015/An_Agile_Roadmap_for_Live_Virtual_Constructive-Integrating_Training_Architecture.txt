@@ -1,0 +1,358 @@
+An Agile Roadmap for Live, Virtual and Constructive-Integrating Training Architecture (LVC-ITA): A Case Study Using a Component Based Integrated Simulation Engine (AddSIM)
+Tae Woong Park, Kiyoul Kim, Louis Rabelo, Gene Lee
+University of Central Florida,
+Orlando, Florida 32816, USA
+taewoong.park@knights.ucf.edu, kiyoulkim2010@knights.ucf.edu, Luis.Rabelo@ucf.edu, glee@ucf.edu
+ABSTRACT
+There is a lack of interoperability, limited reuse and loose integration between the Live, Virtual and/or Constructive assets across multiple Standard Simulation Architectures (SSAs). There has been much research to solve these problems but their solutions resulted in complex and inflexible integration, long time of user-usage and high cost for LVC simulation.
+The purpose of this research is to provide an agile roadmap for the Live Virtual Constructive-Integrating Training Architecture (LVC-ITA) that will address the above problems and introduce interoperable LVC simulation. In addition, this research illustrated a case study using an Adaptive distributed parallel Simulation environment for Interoperable and reusable Model (AddSIM) that is a component based integrated simulation engine. The agile roadmap of the LVC-ITA that reflected the lessons learned from the case study will contribute to guide Modeling and Simulation (M&S) developing communities to an efficient path to increase interoperability, composability and integration of LVC assets.
+ABOUT THE AUTHORS
+Tae Woong Park is a doctoral student in the department of Industrial Engineering and Management Systems (IEMS) at University of Central Florida (UCF) in Orlando Florida. He is an active Army Major in South Korea. He holds two M.S. degrees in the department of Industrial Engineering (IE) from Seoul National University (SNU) in 2005 and in the Institute for Simulation and Training (IST) from UCF in 2014. He acquired the Certified Modeling and Simulation Professional (CMSP) from the National Training and Simulation Association (NTSA) in 2012. His main research interests include: Distributed and parallel simulation interoperability, Measure of Effectiveness (MOE), Decision making.
+Kiyoul Kim is a doctoral student in the IST at UCF. He is an active Air Force Major in South Korea. He received his M.S. degree from IST in 2012. He acquired the CMSP from the NTSA in 2012. His main research interests include: Distributed and parallel simulation and simulation interoperability.
+Louis Rabelo is a professor in the department of IEMS at UCF. He holds a M.S. and Ph.D. in Engineering Management from the University of Missouri in Rolla USA. He has received several grants from National Aeronautics and Space Administration (NASA) Ames Research Center, NASA Kennedy Space Center, and NASA Johnson Space Center to study innovative schemes in Distributed Simulation, Usability of Simulation Environments, and the modifications/extensions to the HLA for Aerospace/Aeronautics problems.
+Gene Lee is a professor in the department of IEMS at UCF. He holds a M.S. and Ph.D. in IE, Texas Tech University in Lubbock USA. He has researched Ergonomics/Human Factors issues in the area of Modeling and Simulation (M&S). He has received several grants from several federal and private organizations. He has the expertise on the breadth and depth of the M&S. In recent, he taught the Developing M&S Instruction for ROK- Agency for Defense Development (ADD) funded by the Boeing Company.
+MODSIM World 2015
+     2015 Paper No. 41 Page 1 of 11
+
+A Agile Roadmap for Live, Virtual and Constructive-Integrating Training Architecture (LVC-ITA): A Case Study Using a Component Based Integrated Simulation Engine (AddSIM)
+Tae Woong Park, Kiyoul Kim, Luois Rabelo, Gene Lee
+University of Central Florida,
+Orlando, Florida 32816, USA
+taewoong.park@knights.ucf.edu, kiyoulkim2010@knights.ucf.edu, Luis.Rabelo@ucf.edu, glee@ucf.edu
+1.0 INTRODUCTION
+Live, Virtual and/or Constructive simulation systems (or federates) have emerged as a flexible and cost-effective solution for training, acquisition and analysis. Live, Virtual and/or Constructive simulations are of importance in the military domain as well as in industries. Today’s advanced M&S technologies have been developed towards the goal of seamless interaction between the Live, Virtual and/or Constructive simulation systems. Usually, “Live-Virtual- Constructive (LVC)” refers to the combination of three types of distributed simulation systems and applications into a single distributed system. Although today’s M&S technologies such as the high speed networking and Simulation Standard Architectures (SSAs) (or Simulation Interoperability Protocols) allow trainees to participate in LVC simulation environments restrictively, there are many things that still must be addressed. In the results, the many advantages of LVC training are currently limited by lack of full interoperability with other Live, Virtual and/or Constructive simulation systems and Battle Command Systems (BCS).
+Currently, a number of SSAs are commonly used. The typical SSAs in-place today are Aggregate Level Simulation Protocol (ALSP), Distributed Interactive Simulation (DIS), High Level Architecture (HLA), Test and Training Enabling Architecture (TENA), and Common Training Instrumentation Architecture (CTIA). Each of the SSAs was developed by particular M&S user communities to meet specific needs or requirements. Although each of the Live, Virtual and/or Constructive simulation systems (or federates) rely on a specific SSA to exchange data in distributed simulation environments; regrettably, Live, Virtual, and/or Constructive simulation systems that choose different SSAs cannot be natively interoperable with each other (Henninger et al., 2008).
+We consider a need for an agile roadmap which reflects user’s situational needs and expectations to decrease the complexity of the integration and increase the interoperability and reuse of the LVC simulation systems. This study is to suggest an agile roadmap for the Live Virtual Constructive – Integrated Training Architecture (LVC-ITA) pursuing the simpler integration, cost-effective, shorter user time and a flexible solution that will address these problems and introduce interoperable LVC simulations. The LVC-ITA is a set of common, standards Live, Virtual and Constructive simulation architecture framework that support a seamless and interoperable, integrated LVC environment where common hardware, software and network components and modules are interchangeable with other LVC components. The goal of the LVC-ITA is to seamlessly interconnect and ensure interoperability with other LVC simulation systems.
+2.0 RETERATURE REVIEW
+This section summarizes the state of art and current research on this topic. By necessity, the roadmap covers multiple related topics that must work together for LVC-ITA. Therefore, especially, this research investigated works on efforts for improving LVC interoperability. And then research gaps were identified.
+2.1 Efforts for Improving LVC Interoperability
+There has been much research for improving LVC interoperability. One possible approach includes adopting a single, agreed-upon SSA for the simulation environment. Other approaches are developing a point solution between the multiple SSAs. Currently, technical interoperability has been achieved through a number of methods including the use of gateways and bridges, etc.
+2015 Paper No. 41 Page 2 of 11
+MODSIM World 2015
+
+2.1.1 Department of Defense (DoD) Modeling and Simulation (M&S)
+Master Plan
+In 1995, Department of Defense (DoD) represented Modeling and Simulation (M&S) Master Plan to address the full range of issues confronting DoD M&S. This plan shows the six objectives and the breakout of the objectives into sub- objectives to facilitate interoperability and reuse as shown in the Figure 1 (DoD, 1995).
+2.1.2 Joint Live Virtual Constructive Data Translator (JLVCDT) Framework
+W. Bizub, Bryan, and Harvey (2006) presented the Joint Live Virtual Constructive Data Translator (JLVCDT) Framework to provide interoperability for a seamless joint training environment. The JLVCDT is intended to provide equal or better functional capabilities than prior translators, but in a more common, usable and open software architecture. This research suggested a harmonization of SSAs for the LVC community.
+2.1.3 Live Virtual Constructive Way Ahead (LVCWA)
+W. W. Bizub and Cutts (2007) described a plan for moving toward improved LVC interoperability based on the findings and recommendations assimilated from the activities in the DoD M&S Steering Committee (SC) Live Virtual Constructive Way Ahead (LVCWA) study. The study team was exploring and assessing a number of alternatives supporting simulation interoperability (at the technical level), business models, and the evolution process of standards management across the DoD. LVCWA study was to investigate thoroughly the issues related to LVC interoperability and to recommend a way ahead to increase interoperability across several areas: notional definition of the desired future SSA, the business models, and methods in which standards should be evolved and compliance evaluated.
+2.2 Interoperability, Integration and Composability
+M&S communities have recognized the importance of LVC interoperability, integration and composability for a seamless LVC simulation (Tolk, 2012). For successful LVC simulations, especially the importance of achieving interoperability of the simulation system, integration of infrastructure and composability of the underlying combat models is being emphasized in the M&S as well as many application areas. Interoperability, integration and composability also have been identified as the most technical challenging aspects of a U.S. Army LVC-IA since at least 1996.
+2.3 Comparison of Standard Simulation Architecture (SSA)
+In the United States Department of Defense (US DoD), the SSAs have contributed to LVC simulation environments. The SSAs are commonly used and developed to meet the interoperability needs of distributed simulation. Figure 2 shows the relative use of SSAs as surveyed by the Live Virtual Constructive Architecture Roadmap (LVCAR) study. Today, the most widely used LVC SSAs in the DoD are HLA, DIS, TENA and CTIA. HLA is the current leading SSA. In the LVCAR survey presented that the ALSP has a usage under 5%, DIS 35%, HLA 35%, TENA 15%, CTIA 3% and other is roughly 7% (Gustavsson,
+Björkman, & Wemmergård, 2009).
+2.4 Conceptual Model
+Conceptual Modeling is about abstracting a model from a real or proposed system. All simulation models are simplifications of reality (Zeigler, Praehofer, & Kim, 2000). According to Robinson, the Conceptual Model is “a non-software specific description of a simulation model (that will be, is, or has been developed), describing the objectives, inputs, outputs, content,
+MODSIM World 2015
+ Figure 1. DoD M&S Objective and Sub-Objective (DoD, 1995)
+ Figure 2. Usage Frequency of SSAs in the U.S.
+2015 Paper No. 41 Page 3 of 11
+
+assumptions, and simplifications of the model” (Robinson, 2008). The issue in conceptual modeling is to abstract an appropriate simplification of reality (Pidd, 2003).
+2.4.1 Modeling and Simulation (M&S) Process and Approach
+This section describes some of the existing methods related with conceptual modeling. Federation Development and Execution Process (FEDEP), Synthetic Environment Development and Exploitation Process (SEDEP), Distributed Simulation Engineering and Execution Process (DSEEP), Conceptual Models of the Mission Space (CMMS) and Defense Conceptual Modeling Framework (DCMF) are introduced in brief and then compared to each other. Table 1 and Table 2 show each step and comparison of FEDEP, SEDEP and DSEEP.
+Table 1. Steps of FEDEP, SEDEP and DSEEP
+Table 2. Comparison of FEDEP, SEDEP and DSEEP
+MODSIM World 2015
+    Steps
+ FEDEP
+     SEDEP
+   DSEEP
+    Step 1
+ Define federation objectives
+     Analyze user’s need
+   Define simulation environment objectives
+    Step 2
+ Perform conceptual analysis
+     Define federation user requirements
+   Perform conceptual analysis
+    Step 3
+   Design federation
+      Define federation system requirements
+      Design simulation environment
+    Step 4
+Develop federation
+  Design federation
+ Develop simulation environment
+    Step 5
+   Plan, integrate, and test federation
+      Implement federation
+      Integrate and test simulation environment
+    Step 6
+Execute federation and prepare outputs
+  Integrate and test federation
+ Execute simulation
+    Step 7
+ Analyze data and evaluate results
+     Operate federation
+   Analyze data and evaluate results
+    Step 8
+ •
+      Perform evaluation
+    •
+     Method
+     Features
+     Lacks
+    FEDEP
+ • It includes process definition intended for HLA.
+ • The management aspect of steering and controlling the process of federation development was not sufficiently addressed.
+• The driving objective was not emphasized from user’s requirements. • It focused on federation development in homogeneous HLA environments.
+• It did not support such diversity.
+    SEDEP
+   • It includes process definition for synthetic environments.
+• The driving objective was emphasized from user’s requirements.
+   • It focused on federation development in homogeneous HLA environments.
+• It did not support such diversity.
+    DSEEP
+   • It supports including HLA the diversity of SSA such as DIS and TENA.
+• It support heterogeneous simulation events.
+    • The driving objective was not emphasized from user’s requirements such as FEDEP.
+ The CMMS project originated by the U.S. DoD is one of the first initiatives providing detailed guidance on conceptual model development activities. Defense Modeling and Simulation Office (DMSO) extended conceptual model definition and then introduces the term CMMS which can be defined as “simulation-implementation- independent functional descriptions of the real-world processes, entities, and environment associated with a particular set of missions” (Sheehan et al., 1998). The U.S. DoD M&S Master Plan established CMMS as the second component of the M&S Common Technical Framework as shown in Figure 1. Because the CMMS is the common starting point and eventual real-world baseline for consistent and authoritative M&S representations, conceptual modeling is undoubtedly the most important aspect of military M&S development.
+The Swedish Defense Research Agency found the idea of CMMS concept very promising and initiated a project to further study the conceptual modeling concepts and improve the CMMS. They realized that they are moving further from the original CMMS concepts and renamed the project as DCMF. The objectives of DCMF were defined as “to capture authorized knowledge of military operations, to manage, model and structure the obtained knowledge in an unambiguous way; and to preserve and maintain the structured knowledge for future use and reuse.”
+2.5 Gateway, Middleware, Broker, Proxy and Protocol Solutions
+When two different SSAs are used and need to be connected, in most cases, the current level of interoperability is attained through the use of numerous 1) gateway applications, 2) middleware solutions, 3) broker, 4) proxy and 5) protocol solution. Myjak, Clark, and Lake (1999) presented four different approaches used to achieve interoperable solutions with HLA: the Gateway, Proxy, Broker, and protocol-based solutions.
+2015 Paper No. 41 Page 4 of 11
+
+2.6 U.S. DoD Live-Virtual-Constructive Architecture Roadmap (LVCAR)
+In April 2007, U.S. DoD LVCAR study developed a recommended roadmap (way forward) regarding LVC interoperability to examine the differences between the major SSAs from technical, business, and standards perspectives and to develop a time-phased set of actions (SOAs) to improve interoperability within multi-SSA environments in the future.
+2.7 U.S. Army Live Virtual Constructive-Integrating Architecture (LVC-IA)
+The U.S. Army LVC-IA project began in 2005. What is the U.S. Army LVC-IA? It is a set of protocols, specifications and standards that support a seamless and interoperable, integrated LVC environment where common hardware, software and network components and modules are interchangeable with other LVC components and BCS (Dumanoir, Keller, & Koenig, 2006; Dumanoir, Pemberton, & Samper, 2004). In other words, the U.S. Army LVC-IA is a network-centric linkage that collects, retrieves and exchanges data among Live instrumentation, Virtual simulators, and Constructive simulations as well as Joint and Army BCS (Rumpel & Vila, 2007; Shufelt Jr, 2006). According to Degnan (2009), U.S. Army LVC-IA is the aggregate representation of the foundational elements of the LVC Enterprise including hardware, software, networks, databases and interfaces, policies, agreements, certifications/accreditations and business rules. LVC-IA is intrinsically an Enterprise Architecture, given the system- of-systems environment that it must support.
+2.8 Common Standards, Products, Architectures and/or Repositories (CSPAR)
+U.S. Army Program Executive Office Simulation, Training and Instrumentation (PEO STRI) on the use of Common Standards, Products, Architectures and/or Repositories (CSPAR) defined policy for the designation and use of common products and the identification of communication and interface standards, data models and architectures which facilitate and ultimately reduce the cost of the integration and interoperability of LVC capabilities across PEO STRI (PEO-STRI, 2006).
+2.9 Summary
+This research has evaluated several approaches for improving LVC simulation. For a higher level of interoperability between LVC simulation systems, one possible solution is either to develop a new single future LVC SSA or to use gateway/middleware for LVC simulation. However, by this time, no new LVC SSA has been developed as planned and framework/gateway/middleware have been used for LVC simulation.
+To integrate a Virtual or Constructive simulation component into an LVC simulation, it may be necessary to upgrade several existing applications. The more applications are integrated, the more complex it becomes to integrate an additional application (Gustavsson et al., 2009). Further, when upgrading an application, existing functionality may be affected, requiring even more work. This complexity makes it hard to adapt to new protocols. Therefore, software technologies, tools, and frameworks are needed to reduce the complexity of developing software in the emerging parallel and distributed computing world.
+3.0 METHODOLOGY
+The purpose of this research is to suggest the agile roadmap for the LVC-ITA to guide the M&S communities to find a solution that will address the problems mentioned above, and that it results in the increase of the level of interoperability. The methodology for a roadmap of the
+LVC-ITA provides a complete step by step process for
+examining pertinent issues and provides solutions to resolve problems. The methodology follows as shown in Figure 3.
+MODSIM World 2015
+ Figure 3. Flow Chart of Methodology
+2015 Paper No. 41 Page 5 of 11
+
+3.1 Description of Methodology
+3.1.1 Step 1: Formal Problem Definition
+The primary purpose of Step 1 is to develop a clear understanding of the problem to be addressed in the current M&S environment.
+3.1.2 Step 2: Literature Review
+The methodology begins with a thorough literature review. The state-of-the-art technology and skill with respect to interoperability, composability and integration were investigated. The literature review provided a sufficient basis to identify the current state, the functional requirements, the priority and the capabilities for LVC interoperation.
+3.1.3 Step 3: Research Gap Analysis
+● Step 3-1: Comparative analysis for multiple SSAs – Analyzing prior works related to types, organizations, development and evolution processes for the four SSAs (DIS, HLA, TENA and CTIA).
+● Step 3-2: Analysis of capabilities and limitations for the four SSAs – Identifying capabilities and limitations for the current four SSAs.
+● Step 3-3: Analysis and evaluation of previous methodologies and procedures – Identifying limitations and shortfalls from related research.
+● Step 3-4: Defining needs and requirements for the LVC-ITA – Identifying research gaps and functional requirements for supporting the LVC interoperability. The identified research gaps are as follows: (a) Complex Integration, (b) Long time to LVC user-usage, (c) High cost, and (d) Inflexible integration.
+3.1.4 Step 4: Analysis Requirements for a Case Study
+In Step 4, a set of detailed requirements derived from M&S user communities. A successful roadmap must address and solve all the technical issues related to making the development and widespread use. In considering the design of a roadmap for the LVC-ITA, we keep four important design requirements for the case study in mind. We wanted an approach that:
+● meets the needs of highly interactive real-time applications.
+● is flexible enough to support interoperability regardless of the SSAs being used in the target federation (e.g., DIS, HLA 1.3, HLA 1516, HLA Evolved, TENA, CTIA, etc.), without requiring changes to the existing native federates.
+● has simple/flexible connection and integration.
+● takes short term for LVC users.
+We selected the final alternative as a component for the case study. The identified alternatives were a) AddSIM, b) SIMbox, c) VR-Forces d) VR-Exchange, and e) WebLVC for the case study. This case study reflects current LVC simulation’s technology.
+3.1.5 Step 5: LVC Simulation Case Study
+The details of the case study for LVC simulation are explained in Section 4.0.
+3.1.6 Step 6: Final Agile Roadmap for LVC-ITA
+The final road map is developed from discussions with experts assigned to an agile roadmap for the LVC-ITA.
+4.0 CASE STUDY
+4.1 Background
+The case study was conducted as part of a research project that was realized by the Simulation Interoperability Laboratory (SIL) of UCF IEMS. The SIL was responsible for research tasks to develop a sample test bed to demonstrate the interoperable LVC components in a unified simulation environment, and provide technical consulting and technology transfer on ensuring LVC capability in AddSIM.
+2015 Paper No. 41 Page 6 of 11
+MODSIM World 2015
+
+4.2 Plan of a Case Study
+This section presents the plan of the case study. The plan of the case study is as shown in Figure 4.
+In order to achieve this research’s objective, the research question is as shown in Table 3.
+Table 3: Research Questions
+MODSIM World 2015
+ 4.3 Research Questions
+Figure 4. Case Study Process
+   Area
+    Questions
+    Main Question
+  • What is the LVC-ITA? • Why do we need to develop a road map for LVC-ITA? • How can we develop a roadmap for LVC-ITA?
+   Sub- questions
+ • What are the technologies for a successful LVC simulation?
+• What are the architectural characteristics of LVC simulation?
+• What are the interoperability domains and levels for LVC simulation? • How do we develop a lack of field for LVC simulation?
+   Component based Simulation Environment
+ After Action Review
+   Flight Simulator (SIMbox)
+ SAM Simulator (SIMbox)
+Constructive Simulator (VR-Forces)
+ AddSIM
+Data Logger
+     4.4 Designing a LVC Simulation Case Study
+Virtual
+DIS Interface
+Virtual
+DIS Interface
+Constructive
+HLA/RTI Interface
+        This section describes the
+components for the case study. Figure
+5 depicts the design of the Air-
+Defense simulation federation. In the
+case study, an LVC simulation
+configuration was defined to create
+complex war fighting scenarios. The
+LVC distributed simulation
+configuration was based on the HLA
+and DIS standard with a federation consisting of five federates including two Virtual simulators, a Constructive simulation, a component based simulation environment (AddSIM), and Data Logger for After Action Review (AAR). Target federation can be shown and operated in the tablet PC that is a Live federate via LVC server.
+4.4.1 Component Based Integrating Simulation Environment (AddSIM)
+AddSIM is a component-based weapon system simulation environment using engineering models of weapon systems. The first version of AddSIM was developed through a core technology R&D project of the Agency of Defense Development (ADD) with SimNet, South Korea from 2009 to 2011 (Lee, Lee, Kim, & Baik, 2012). The main goal of AddSIM is to enhance interoperability, reusability, and composability of weapon simulation models (Kim, Oh, & Hwang, 2013).
+4.4.2 SIMbox, VR-Forces and Data Logger.
+This section presents the SIMbox virtual simulator, VR-Forces constructive simulation and Data Logger in the federation. The SimiGon has developed a simulation system of Aircraft and Surface-to-Air-Missile (SAM) in SIMbox simulation platform that is a Commercial off the Shelf (COTS) simulation system. The VT-MÄ K has developed the VR-Forces that is a Constructive simulation system and the Data Logger for data record and AAR.
+4.4.3 VR-Exchange
+VR-Exchange is VT-MÄK’s bridging software for distributed simulations. In the AddSIM based LVC simulation case study, bridging is necessary because it is not practical to get every asset to agree on a protocol, DIS, HLA Federation Object Model (FOM) or Run Time Infrastructure (RTI), or TENA Logical Range Object Model
+HLA/RTI Interface
+HLA/RTI Interface
+       DIS
+HLA/RTI
+   LVC server
+LVC DIS or HLA Broker Broker
+  2015 Paper No. 41 Page 7 of 11
+Figure 5. Design for the LVC simulation Case Study
+
+(LROM). In other cases, bridging is needed because a system architect wants to implement a hierarchical “federation of federations” design. Bridging is often needed to support large-scale LVC integration, or to support simulation-to-C4I interoperability.
+4.4.4 WebLVC
+WebLVC server is an interoperability protocol that enables web-based federates to interoperate in M&S federations. Web LVC client applications using a tablet PC communicate with the rest of the federation through an LVC server, which participates in the federation on behalf of one or more clients. The WebLVC protocol defines a standard way of passing simulation data between a web-based client application and an LVC server - independent of the protocol used in the federation. Thus, WebLVC clients can participate in a DIS exercise, an HLA federation, a TENA execution, or other distributed simulation environments.
+4.5 Conduct of the Case Study
+The case study was implemented by SIL of UCF IEMS. Since the case study project was confidential, the details are not provided in this paper. The scenario of the case study is that AddSIM’s radar player detects it while SIMbox’s enemy aircraft is flying, then AddSIM’s radar sends a message to SIMbox’s SAM. As soon as SAM receives the message, SAM shoots the missile to the enemy aircraft. The relationships between findings, lessons learned and recommend actions are as shown in
+Figure 6.
+4.6 Case Study Findings
+We evaluated the case study’s results
+and identified problems. The overall
+interoperability assessment on the
+LVC simulation case study is either
+incomplete or unsuccessful.
+Contributing problems are: (a) Lack
+of Interaction between Entities, (b) Lack of Scalability, and (c) Lack of Correlated Terrain Database (TDB).
+4.6.1 Lack of Interaction between Entities
+From the case study, despite all federates are HLA/RTI and DIS compliancy, we found the lack of interaction between entities of AddSIM, Simbox and VR-Forces.
+4.6.2 Lack of Scalability
+Currently, AddSIM has the external interfaces such as C/C++, Matlab, DIS and HLA/RTI interface. Since HLA federations are composed of over two kinds of the loosely coupled simulation system (called federates), it can be thought of as “enterprises”, each of which may be considered to provide the ability to operate the different functions in their time scales. Enterprises can be locally or geographically distributed across arbitrary networks. However, communication between such simulation systems is often sporadic and irregular.
+4.6.3 Lack of Correlated Terrain Data
+AddSIM, VR-Forces and SIMbox consume and manage their own native terrain database system in the distributed environment. Despite the usage of HLA OMT data model for communication between simulation systems in the case study, there is the exchange problem of synthetic environment data. Since each simulation system has been developed by a different organization, each simulation system defines its own terrain data model for the synthetic environment.
+4.7 Case Study Lesson Learned
+In this section, the lessons learned from the case study finding were drawn. The lessons learned are: (a) The Need of Common Standard Simulation Entities, (b) The Need of Multiple SSAs Compliancy, and (c) The Need of Correlated Terrain.
+MODSIM World 2015
+ Figure 6. Results of the LVC simulation case study
+2015 Paper No. 41 Page 8 of 11
+
+4.7.1 The Need of Common Standard Simulation Entities
+Entities must be able to interact with other entities at an arbitrary time scale without the mutual constraints during simulation execution. This means that any entity of the simulation systems can interact and share data with any other entity at any time, and potentially regardless of how entities are dispersed through the processors, machines, and/or networks.
+4.7.2 The Need of Multi-SSAs Compliancy
+Today, there are an increasing number of distributed simulation environments that require the selection of simulation systems whose external interfaces are aligned with more than one SSA.
+4.7.3 The Need of Correlated Terrain
+The use of correlated terrain in the two or more simulation systems is absolutely critical to the success of interoperation.
+4.8 Recommended Actions
+In this section, the recommended actions were described in order to realize the lessons learned. The recommended actions are: (a) Optimal Defense Modeling and Simulation Process, (b) Common Standard Entity Modeling, (C) Common Standard Live, Virtual and Constructive Simulation Architecture, (d) Interoperability Technology and (e) Synthetic Environment.
+5.0 THE ROADMAP OF LVC-ITA
+The roadmap for the LVC-ITA is developed based on the above recommend action as shown in Figure 7.
+5.1 Optimal Defense Modeling and Simulation Process
+Based on an analysis of Section 2.4.1, in this section, we developed the optimal defense modeling and simulation process using strength of DSEEP, SEDEP and DCMF respectively as shown in Table 4.
+Table 4. Optimal Defense Modeling and Simulation Process
+MODSIM World 2015
+    Common Standard Entity Modeling
+Common Standard LVC Simulation Architecture
+Interoperability Technology
+  Optimal Defense M&S Process
+Synthetic Environment
+   LVC-ITA Roadmap
+Figure 7. Five areas for the LVC-ITA
+     Steps
+      Activities
+   Contents
+     Viewpoint
+    Step 1
+    Analyze user’s needs and problem in the real world
+  The purpose of Step 1 is to understand user’s needs and problems.
+   High level view (Not technical)
+    Step 2
+    Define simulation environment user requirement
+  The purpose of Step 2 is to provide a comprehensive description of what the problem setter(s) wants from the simulation environment. Evaluating the objectives and defining the scenario to be performed.
+   Operational view (Not technical)
+    Step 3
+    Define simulation environment objective
+  The purpose of Step 3 is to define and document a set of needs that are to be addressed through the development and execution of a simulation environment and to transform these needs into a more detailed list of specific objectives for that environment.
+   Technical view
+    Step 4
+ Perform DCMF
+In order to reinforce the Step 2 conceptual analysis of the DSEEP, the DCMF is substituted. The purpose of Step 4 is to develop an appropriate representation of the real military domain that applies to the defined problem space and to develop the appropriate military operation scenario.
+  System/Technical view
+     Step 5
+   Design simulation environment
+ The purpose of this Step 5 is to produce the design of the simulation environment that will be implemented. The technical specifications are agreed upon.
+    System/Technical view
+     Step 6
+   Develop simulation environment.
+ The simulation data exchange model (SDEM) is developed, simulation environment agreements are established, and new member applications and/or modifications to existing member applications are implemented.
+    System/Technical view
+     Step 7
+      Integrate and test simulation environment.
+   Integration activities are performed, and testing is conducted to verify that interoperability requirements are being met.
+     •
+    Step 8
+ Execute simulation
+The simulation environment is executed and the output data from the execution is pre-processed.
+  •
+     Step 9
+    Analyze Data and Evaluate Results
+  The output data from the execution is analyzed and evaluated, and results are reported back to the user/sponsor
+     •
+2015 Paper No. 41 Page 9 of 11
+
+MODSIM World 2015
+ Figure 8: CS-LVC SAF
+5.2 Common Standard Entity Modeling
+There are some common standard simulation entities which are required by different simulation systems. The simulation system shall provide a model library which contains readily available simulation entities. Each of the simulation entities shall be easily utilized in different simulation systems depending on the nature of the system. The simulation system shall also enable the addition of new models in the library.
+5.3 Common Standard Live, Virtual and Constructive Simulation Architecture Framework (CS-LVC SAF)
+PEO-STRI has developed the simulation systems through the Live, Virtual and Constructive product line approach respectively. Three major components of the U.S. Army LVC-IA are (a) Synthetic Environment Core (SE Core), (b) Live Training Transformation – Family of Training Systems (LT2-FTS), and (c) Joint Land Component Constructive Training Capability (JLCCTC). Each component
+has a unique simulation architecture framework. Based on each component, in this section, we developed each Common Standard Live, Virtual and Constructive Simulation Architecture (CS-LVC SAF) as shown in Figure 8. The simulation systems which use the CS-SAF can easily be integrated with other simulation systems that use HLA, DIS, CTIA and TENA by developing interface and bridging tools that provide data exchange between them as shown in Figure 9.
+5.4 Interoperability Technology
+As mentioned in Section 2.3, the diversity of M&S SSA was not
+ended since the HLA developed. Alternative SSA, in particular,
+DIS and TENA, continue to be supported by a broad and even
+growing M&S user community. The study about the
+development of LVC SSA shall be evolved continuously, but
+SIL concluded that migrating to a single LVC SSA was impractical in the near future. The multi-architecture simulation environments would remain the state of the practice for the foreseeable future. Therefore, in the event requiring the use of certain LVC simulation systems, those simulation systems have to have the interfaces that cut across more than one SSA. The technology demanding for bridging between simulation systems is a broker and a universal translator as shown in Figure 10. The broker is a
+software application that is a translator for distributed simulations. A desirable broker should have a simple bridging function between two simulation environments, or can be used to support a more complex federation of federations architecture, where multiple, heterogeneous sites are connected to support large-scale LVC integration. In addition, universal translator allows simulation systems that use incompatible SSAs to interoperate. Universal translator permits simulations to interoperate through the use of a shared memory space and brokers.
+5.5 Synthetic Environment Data
+ Figure 9. LVC-ITA Operational View
+ Figure 10. Broker and Universal Translator
+2015 Paper No. 41 Page 10 of 11
+
+We recommend that the simulation systems shall support the Synthetic Environment Data Representation and Interchange Specification (SEDRIS) that standardizes sharing synthetic environment data between simulation systems. The SEDRIS guarantees loss-less synthetic environment data representation, interchange and interoperability.
+6.0 CONCLUSION
+The road map handled main issues for the LVC-ITA through the LVC simulation case study. The roadmap first developed the optimal defense M&S process complementing the existing process. Then the roadmap mentioned the common standard entity modeling briefly. The roadmap also provided the common standard Live, Virtual and Constructive simulation architecture to enhance interoperability, integration and reuse. The roadmap next discussed the interoperability technology for the multi-architecture simulation environments. Finally, the roadmap described the synthetic environment for sharing TDB. The efforts described here are believed to represent a sound path forward for achieving better LVC simulation environments in support of the developing M&S communities.
+REFERENCES
+Bizub, W., Bryan, D., & Harvey, E. (2006). The Joint Live Virtual Constructive Data Translator Framework- Interoperability for a Seamless Joint Training Environment: DTIC Document.
+Bizub, W. W., & Cutts, D. E. (2007). Live Virtual Constructive (LVC) Architecture Interoperability Assessment. Paper presented at the The Interservice/Industry Training, Simulation & Education Conference (I/ITSEC).
+Degnan, E. (2009). Update Live-Virtual-Constructive Integrating Architecture (LVC - IA). Retrieved from http://www.afams.af.mil/shared/media/document/afd-090416-081.pdf.
+DoD. (1995). Modeling and Simulation (M&S) Master Plan. (DoD 5000.59-P). Department of Defense.
+Dumanoir, P., Keller, R., & Koenig, W. (2006). Network Centric Warfare Requirements-A Live Collective Training Perspective. Paper presented at the The Interservice/Industry Training, Simulation & Education Conference
+(I/ITSEC).
+Dumanoir, P., Pemberton, B. J., & Samper, W. (2004). OneSAF Interoperability with CTIA-A LVC Connectivity
+Approach. Paper presented at the The Interservice/Industry Training, Simulation & Education Conference
+(I/ITSEC).
+Gustavsson, P. M., Björkman, U., & Wemmergård, J. (2009). LVC aspects and integration of live simulation. Paper
+presented at the 2009 Fall Simulation Interoperability Workshop, Orlando, Florida.
+Henninger, A. E., Cutts, D., Loper, M., Lutz, R., Richbourg, R., Saunders, R., & Swenson, S. (2008). Live virtual
+constructive architecture roadmap (LVCAR) final report. US DoD, September.
+Kim, D. H., Oh, H. S., & Hwang, S. W. (2013). Integrating legacy simulation models into component-based weapon system simulation environment. Paper presented at the Proceedings of the 2013 Summer Computer
+Simulation Conference.
+Lee, T., Lee, S., Kim, S., & Baik, J. (2012). a Distributed Parallel simulation environment for Interoperability and
+Reusability of models in military applications. Defence Science Journal, 62(6), 412-419.
+Myjak, M. D., Clark, D., & Lake, T. (1999). Rti interoperability study group final report. Paper presented at the
+Proceedings of the Simulation Interoperability Workshop.
+PEO-STRI. (2006). Common Standards, Products, Architectures and/or Repositories (CSPAR) Baseline Document
+Orlando: U.S. Army Program Executive Office (PEO) Simulation, Training and Instrumentation (STRI). Pidd, M. (2003). Tools for Thinking: Modelling in Management Science. 2003. John W iley & Sons, Chichester. Robinson, S. (2008). Conceptual modelling for simulation Part I: definition and requirements. Journal of the
+Operational Research Society, 59(3), 278-290.
+Rumpel, B., & Vila, R. (2007). Distributed Training in Europe. Paper presented at the The Interservice/Industry
+Training, Simulation & Education Conference (I/ITSEC).
+Sheehan, J., Prosser, T., Conley, H., Stone, G., Yentz, K., & Morrow, J. (1998). Conceptual models of the mission
+space (CMMS): Basic concepts, advanced techniques, and pragmatic examples. Paper presented at the 98
+Spring Simulation Interoperability Workshop Papers.
+Shufelt Jr, J. W. (2006). A vision for future virtual training: DTIC Document.
+Tolk, A. (2012). Engineering Principles of Combat Modeling and Distributed Simulation: John Wiley & Sons. Zeigler, B., Praehofer, H., & Kim, T. (2000). Theory of Modeling and Simulation, 2000: Academic Press.
+MODSIM World 2015
+ 2015 Paper No. 41 Page 11 of 11

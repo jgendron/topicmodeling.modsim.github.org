@@ -1,0 +1,525 @@
+Modeling and Simulation of an Integrated Gate Turnaround Management Concept
+William Chung, Carla Ingram, Girish Chachad, Spencer Monheim
+SAIC
+NASA Ames Research Center
+Moffett Field, California william.w.chung@nasa.gov, carla.d.ingram@nasa.gov, girish.h.chachad@nasa.gov, spencer.c.monheim@nasa.gov
+ABSTRACT
+Doug Ahlquist
+Metis Technology Solutions, Inc. NASA Ames Research Center Moffett Field, California douglas.k.ahlquist@nasa.gov
+MODSIM World 2016
+     An Integrated Gate Turnaround Management (IGTM) prototype was developed at NASA Ames Simulation Laboratories (SimLabs) using Dallas Fort Worth International Airport (DFW) to demonstrate the IGTM concept’s feasibility and benefits in improving the traffic performance during the turnaround at the gate over uncertainties from flight activities and available resources. The simulation architecture includes: the IGTM controller, an Airline Operations Control (AOC) application, Big Data/Analytics Input (BAI) application, a terminal traffic simulation or known as NASA-developed Surface Operation Simulator and Scheduler (SOSS), and a Database Server. ActiveMQ, a Java messaging service, was used to emulate the System Wide Information Management (SWIM) data network messaging. This paper describes the modeling and simulation of the IGTM concept, and illustrates selected use cases to demonstrate the feasibility and benefits of the IGTM concept for optimizing gate turnaround operations.
+ABOUT THE AUTHORS
+Mr. William Chung is the Chief Aerospace Engineer with SAIC at NASA Ames Research Center’s SimLabs. He has been working on a wide range of flight simulations, including fixed-wing and rotorcraft, and NextGen projects as well as unmanned aircraft systems. He has an MS in Aeronautics and Astronautics from Stanford University, an MS in Mechanical Engineering from Oregon State University, and a BS in Industrial Engineering from Chung Yuan University.
+Mr. Doug Ahlquist is a software designer and developer with Metis at NASA Ames Research Center’s SimLabs. He had started in software before working on his BS at San Jose State University and continued at the University California Santa Cruz. He joined NASA in 2010 for Lunar satellite LADEE mission to work on the design and implementation of the ground data systems, then worked in the Treasury Service division of JP Morgan Chase and returned to NASA’s Flight Simulations team in 2014.
+Ms. Carla Ingram is the technical lead for NASA’s FutureFlight Central facility and the software manager of the Airspace Traffic Generator system. Carla currently works in the Aerospace Simulation Research and Development Branch at Ames Research Center and has been supporting Air Traffic Management simulation research for over 18 years, covering the en route, TRACON, and airport domains. She has a BS degree in Mechanical Engineering from California State University at Chico.
+Mr. Girish Chachad is a Marketing Manager at SAIC and serves as SimLabs Outreach Manager for NASA Ames Research Center’s Outreach Team and Simulation Planning Office. Mr. Chachad has an MBA from San Jose State University, an MS in Civil Engineering from the University of Rhode Island, and a BS in Technology for Civil Engineering from the Indian Institute of Technology.
+Mr. Spencer Monheim is a software engineer with SAIC at NASA Ames Research Center’s SimLabs. Currently working in Air Traffic Management simulations as a developer on the Airspace Traffic Generator, he has also provided data analysis for other projects. Prior to joining SAIC at NASA in early 2015 he worked with the Fermi Large Area Telescope Collaboration at University of California, Santa Cruz, where he earned a BS in Astrophysics with a research focus in data analysis of dark matter source candidates.
+2016 Paper No. 41 Page 1 of 11
+
+Modeling and Simulation of an Integrated Gate Turnaround Management Concept
+William Chung, Carla Ingram, Girish Chachad, Spencer Monheim
+SAIC
+NASA Ames Research Center
+Moffett Field, California william.w.chung@nasa.gov, carla.d.ingram@nasa.gov, girish.h.chachad@nasa.gov, spencer.c.monheim@nasa.gov
+INTRODUCTION
+Doug Ahlquist
+Metis Technology Solutions, Inc. NASA Ames Research Center Moffett Field, California douglas.k.ahlquist@nasa.gov
+MODSIM World 2016
+     In 2015, NASA Ames Research Center conducted the “Big Data, Data Analytics, and Net-enabled ATM and Airspace Operations Project” to identify air traffic management (ATM) functions that can benefit from networked, net-enabled, and/or cloud-based architecture. The objective of this effort was to investigate methodologies that could reduce duplication in information; reduce cost of operations and upgrades related to air traffic management, airline operations, and flight operations; and provide data analytics to manage uncertainties, decision making, and ultimately improve the National Airspace System (NAS) performance. Additionally, potential “fee for service” mechanisms for funding the development and operation of a solution application were to be considered. A team of subject matter experts (SME) with experience in ATM, airline operations, airport operations, and big data architectures was assembled to tackle this challenge.
+Five topics were developed by the team related to the NAS performance, they are i) Weather Impacts to Aviation, ii) Big Data and Modeling Infrastructure, iii) Integrated Gate Turnaround Management, iv) Flight Operations Control Management System, and v) Departure and Arrival Management. After a team review, the Integrated Gate Turnaround Management (IGTM) was selected due to: the potential scope of benefits to the greatest number of stakeholders, the availability of necessary data, and the willingness of critical stakeholders to share proprietary data or to coordinate their business practices for system wide efficiencies. The team proceeded to develop the IGTM prototype demonstration with the following guidelines.
+• Use of simulation in a selected airport environment including arrival, gate, and departure traffic
+• Focus on airline side and ramp operations
+o Desire to leverage historical and live flight data to manage the uncertainties in nominal and non- nominal gate operations at an airport terminal, and
+o Provide performance monitoring and collaborative decision tools to promote integrated gate turnaround operations to meet the on-time and/or predictable performance upon arrival and departure at the terminal
+CONCEPT AND BENEFITS OF THE INTEGRATED GATE TURNAROUND MANAGEMENT
+The concept of Integrated Gate Turnaround Management (IGTM) is to leverage i) the data analytics technologies with multiple historical databases and live data to establish bounds of uncertainties of dependent parameters associated with NAS performance (Ren, Citriniti, & Castill0-Effen, 2014), (Ebbers and Abdel-Gayed, 2013), ii) a distributed data network shared by stakeholders (Robb 2015), and iii) collaborative decision tools (Kim, 2013), (Sandberg, 2013) to optimize the arrival and departure performance at an airport through en route, terminal, and the gate. A distributed network of the IGTM components developed from this concept, which includes an IGTM controller, data warehouse/fusion/analytics, NAS information data sources, the communication network, and stakeholders, is shown in Figure 1.
+By providing predictable traffic performance information under nominal and off-nominal conditions, collaborative decision tools can be developed for individual stakeholders to optimize the performance under an integrated
+2016 Paper No. 41 Page 2 of 11
+
+MODSIM World 2016
+  Data(( Warehouse(
+ Data(fusion,(( analysis,(and(( correla2on(
+ IGTM( Controller(
+ SWIM((System(W(Sidyest(Ienmfo(Wrmidae2(oInf(oMrmanaa2goenm(Menatn)(a–gLeikmee(Dnat)t(a( (Network(
+Figure 1. A distributed network of IGTM components
+environment. This coordinated optimization should prevent localized optimization that could lead to system-wide delay. Typical parameters affecting NAS performance at the gate are: adverse weather, high/low traffic density, runway condition due to rain and/or ice, available flight crew, available ground crew, ground stop orders, and number of transient passengers. At airport terminals these capabilities will enable airline operators, airport authorities, ramp controllers, and air traffic ground controllers better management of available resources(e.g., gate availability, ground crew, and flight crew) and priorities(e.g., push back time, taxi queue at in-bound and out-bound spots, and departure queue) to support on-time performance under off-nominal conditions, such as early or late arrival/departure of flights.
+THE IGTM PROTOTYPE
+The IGTM prototype was developed to demonstrate an integrated traffic management environment at the airport by applying analytics results from historical data on identified events with a user interface to indicate the probability of success. The prototype provides additional collaborative decision tools to stakeholders responsible for NAS performance in mitigating uncertainties, and connecting all stakeholders via a distributed network for coordinated decision making.
+The IGTM prototype was defined for the service space starting from the Final Approach Fix to Runway (Rwy) 17C to Terminal A gates at the Dallas/Fort Worth International Airport (DFW), and from Terminal A gates to takeoff or wheels-off via Rwy 17R. This will allow the prototype to be integrated with automation tools for terminal and en route airspace operations for future applications.
+The IGTM prototype covers the flight and ground operations from approach to runway, landing (wheels-on), to taxi- in from the active movement area to the in-bound transfer spot for handover by the air traffic controller (ATC) to ramp control, lastly, to taxi in the ramp area to arrive at the assigned gate. The aircraft, once parked at the gate, would then undergo gate turnaround operations after which the aircraft reverses the process with gate pushback, taxi-out to the out-bound transfer spot from ramp control to ATC, taxi-out to the departure queue, and ending at takeoff or wheels-off to meet the departure slot time. This complex process involves the controlling authorities and decision stakeholders, who include the ATC ground controllers, that have authority for the airport movement area,
+2016 Paper No. 41 Page 3 of 11
+
+and the airport/airline ramp controllers, that have authority for the airport non-movement area. The airline operators, airline dispatchers, pilots and ground handling personnel who determine the readiness of the airplane are also stakeholders in this process.
+The system architecture of the IGTM prototype is shown in Figure 2. The prototype has eight major components, listed below. Descriptions of these components are discussed in following paragraphs.
+1. IGTM Model/Controller, which controls the IGTM simulation and collaborative decision tools.
+2. Airline Operational Control Center (AOC) App, to simulate the Airline Operational Control Center
+3. Big Data/Analytics Interface (BAI) App, to simulate the Big Data/Analytics interface and provide the
+analytical data.
+4. Surface Operations Simulator and Scheduler (SOSS), to simulate live traffic data.
+5. SOSS JMS Service Adaptor, to translate data between the SOSS and the IGTM Controller.
+6. The IGTM Graphic User Interface (GUI) including the Dashboard, which provides the interface to the
+stakeholders.
+7. ActiveMQ, an open source broker with a Java Messaging Service (JMS), provides the communications
+network for servicing the data exchanges.
+8. Mongo server or MongoDB, an open source database server.
+Figure 2. IGTM prototype’s system architecture
+IGTM Host System/Launch Scripts
+The IGTM prototype is entirely written in JAVA and works with other third party products, which are OS agnostic and can run on Linux, Windows or an Apple Mac system. The prototype is a collection of eight processes (See Figure 2, excluding the scenario configuration) that can be configured through Extensible Markup Language (XML) to run on any number of systems. Scenario configuration is completed pre-simulation by loading the desired simulated case files into MongoDB. The prototype was designed to allow any number of GUI/Dashboards users from multiple stakeholders Model/Controllers exchange messages through the ActiveMQ Bus. By modifying the host, port, database and transport prefix in the various XML files one can reconfigure the process home system. MongoDB itself can be configured to run on a clustered system solely by making changes in its XML files and the configuration files of the Model/Controller/BAI and the AOC components. These modifications can be made to increase the overall application performance. Modifications to the ActiveMQ configuration can increase the number of throughput channels and the volume of traffic allowed to pass through each channel.
+MODSIM World 2016
+  Inputs'from'GUI'to'Controller' Outputs'from'Controller'to'GUI'
+  2016 Paper No. 41 Page 4 of 11
+
+The launch, configuration, and control of the IGTM processes were accomplished with several Linux Bash scripts, which were called from a master script. All major events are captured in log files and are visible in the standard output. Data collection for the flight events is captured on the MongoDB server.
+IGTM Model/Controller
+The IGTM Model/Controller, or Controller for short, is an event driven process. The Controller uses the data from (i) AOC App, which provided the airline scheduled data, (ii) BAI App, which provided the estimated event performance (in this demonstration the mean and standard deviation(σ) of a specified event performance from historical data was used), (iii) SOSS for actual flight event data, and (iv) commands from the GUI, which provides inputs from the stakeholders for collaborative decision making or gaming on a specific event. The events modeled in the prototype are listed below.
+i. ii. iii. iv. v. vi. vii. viii. ix.
+Final fix
+Wheels-On (or Touchdown)
+Inbound spot
+Gate Arrival/Parked
+Gate turnaround (based on completion of all the gate activities) Push back
+Outbound spot
+Departure queue
+Wheels-Off (Takeoff)
+For each
+required for each event as shown in Figure 3. Scheduled event time, TScheduled_i, for an Event i for individual flights was provided by the AOC App. Actual event time, TActual_i, came from the Surface Operations Simulator and Scheduler (SOSS). Estimated event completion time, TEstimated_i was calculated based on the mean and standard deviation (σ) from the BAI App on a specific event as shown in Equation 1.
+flight, three sets of time performance related data: Scheduled Time, Estimated Time, and Actual Time, are
+TEstimated_i = TEstimated_i-1 + tEstimated_i-1_to_i (1) where T is the simulation time, e.g., in GMT in seconds
+i denotes an event, e.g., arrival at the gate
+i-1 denotes a previous event, e.g., inbound spot
+tEstimated_i-1_to_i is the duration from Event i-1 to Event i, and is defined as
+tEstimated_i-1_to_i = Size of the Event/Rate of the Event (2)
+MODSIM World 2016
+          Actual#
+TFOAFD# #
+Time#
+Time#
+Touchdown# Time#
+Inbound# Spot#Time#
+Arrival# Time#
+Pushback# Time#
+Takeoff# Time#
+   Schedule# Op?miza?on#
+Op?mal# Clearance#
+Departure# Slot#Time#
+Op?mal# Clearance#
+         Es?mated#by# Analysis#
+Descent# Time#
+Taxi#In# Time#
+Ramp# Time#
+Turnaround# Time#
+Normal# Clearance#
+Taxi# Time#
+Taxi# Time#
+Normal# Delay#
+        Es?mated#by# Computa?on#
+ TFOAFD# #
+Time#
+Time#
+Touchdown# Time#
+Inbound# Spot#Time#
+Arrival# Time#
+Pushback# Time#
+Outbound## Spot#Time#
+Departure# Slot#Time#
+Takeoff# Time#
+ Scheduled#
+ TFOAFD# #
+Time#
+Time#
+       Touchdown# Time#
+Inbound## Spot#Time#
+Arrival# Time#
+Pushback# Time#
+Outbound## Spot#Time#
+Outbound## Spot#Time#
+Departure# Slot#Time#
+Takeoff# Time#
+                               OR# Σ# OR#
+FAF#–#Final#Approach#Fix#
+Σ# OR# Σ# OR# Σ# OR#
+Figure 3. Data flow of the IGTM events
+OR#
+Σ#
+OR#
+Σ# OR# Σ#
+                       OR#
+  2016 Paper No. 41 Page 5 of 11
+
+An example for the Inbound Spot Time, “Size of the Event” in Equation 2 could be the distance from the touchdown spot to the inbound spot, and the “Rate of the Event” would be the average (or mean) taxi speed. Distance from the touchdown spot to the inbound spot is given by SOSS, and the average taxi speed is provided by the BAI App.
+At the gate, the “Turnaround Time,” where applicable, determines the “Pushback Time” in Figure 3. It is dictated or triggered by the completion of following gate activities
+i. Deplaning of passengers
+ii. Baggage unloading
+iii. Fueling
+iv. Cabin services
+v. Catering services
+vi. Baggage loading
+vii. Flight crew availability
+viii. Cabin crew availability
+ix. Maintenance
+x. Boarding of passengers
+For the gate turnaround events, Equation 1 applies to all these events with the same three sets of time performance, i.e., Scheduled, Actual, and Estimated. In these instances, the Deplaning Time was determined by the number of passengers (Size of the Event), and by the deplane rate (Rate of the Event). Number of passengers is given by the AOC App, and the average deplane rate is provided by the BAI App.
+For the turnaround time at the gate, assumptions of critical paths are developed as shown in Table 1. The time for each path is calculated. The estimated turnaround time critical path is determined by the critical path that takes the longest time. Additional time delay due to the time between door-closure and brake-release, late arrival of the flight crew, and/or cabin crew, and time to receive the clearance for a pushback are included in the turnaround time to determine the Estimated Pushback Time.
+Table 1. Critical paths during the gate turnaround events
+Collaborative Decision Tools
+One of the key concepts of IGTM is the application of collaborative decision-making or CDM among stakeholders such that the performance of a local event will not have an adverse effect on other stakeholders or on the overall NAS performance. Thus, the effects of a single decision must be propagated through the NAS beyond the local decision-making domain, and promote coordinated, or collaborative, decision-making on scheduling the events or mitigating uncertainties. For the IGTM prototype, two simple use-cases were developed to demonstrate the tools’ effectiveness in mitigating impacts due to an unexpected early arrival and a late arrival.
+Airline Operational Control Center (AOC) App
+The AOC App was developed to simulate the data from Airline Operational Control Center (AOC), which consisted of scheduled flight time information at the Final Approach Fix (FAF), wheels-on (touchdown), crossing the inbound spot, parked at the arrival gate, pushback, outbound spot, and wheels-off (takeoff). The AOC data were developed based on the arrivals and departures at Terminal A of DFW to Rwy 17C and from 17R respectively. For the prototype, all the AOC data is stored on the MongoDB Server and accessed by the AOC App.
+Big Data/Analytics Input (BAI) App
+The BAI App simulates the applications of the Big Data and Analytics technologies. The BAI App provides mean and standard deviation of all identified parameters in gate turnaround events, based on historical data, to support the
+MODSIM World 2016
+     Critical Paths
+   Sequence of Events (from left to right)
+     1
+   Deplaning of passengers
+ Cabin services
+     Boarding of passengers
+     2
+   Baggage unloading
+ Baggage loading
+          3
+   Catering services
+           4
+   Deplaning of passengers
+ Fueling
+     Boarding of passengers
+     5
+      Maintenance
+            2016 Paper No. 41 Page 6 of 11
+
+estimated time performance calculations as shown in Equations 1 and 2, and to support selected collaborative decision trees through a User Interface (UI). The prototype was developed to demonstrate the potential benefits of the BAI data through the UI.
+For the IGTM prototype, arrival and departure time of flights in December 2013 at Terminal A of DFW were analyzed based on data from the NASA data warehouse (Eshow, Lui, and Ranjan, 2014). The mean and standard deviation of the turnaround time were identified by analyzing actual gate-in and gate-out time at each gate per type of aircraft. Mean and standard deviation of time between the Final Approach Fix and touchdown, and taxi-in and taxi-out were obtained from the Surface Operations Simulator and Scheduler (SOSS). Rate of Events in Equation 2 for gate turnaround, e.g., passenger deplaning, cabin services, and boarding, were obtained from references (Airbus, 2014), (Boeing, 2015). BAI data is also stored on the MongoDB Server and accessed by the BAI App.
+Surface Operations Simulator and Scheduler (SOSS)
+SOSS is a NASA developed Fast-Time simulator, which was used to simulate flights arriving to and departing from Terminal A of DFW, with arrivals on runway 17C and departures on 17R. SOSS was connected to the IGTM through the SOSS Adapter. Based on the predefined scenario file loaded, SOSS provided the Actual events and the simulated clock time to the IGTM components.
+SOSS Adapter
+The SOSS Adapter is a Java Messaging Service (JMS) application, which translates the outputs from SOSS to the IGTM components. The Adaptor connected to SOSS via a proprietary socket connection’s structured data stream and converts each packet into JavaScript Object Notation (JSON) or Serialized Data, which is then transported over the ActiveMQ message bus.
+The IGTM GUI
+The IGTM GUI is comprised of the Control Panel and the Dashboard. From these two main panels, subpanels can be invoked for more detailed Flight status and for Collaborative Decision making. The Control Panel of the IGTM GUI (shown in the top of Figure 4) allows the user to configure the environment to observe flight data associated with the Airport, Terminal, Spot, and Departure Runway. The Control Panel also provides the user with Collaborative Decision Making (CDM) tools. The Dashboard (shown in the bottom of Figure 4) displays flight status of scheduled and estimated completion time of events, of arrival, at the gate, and departure flight information at Terminal A of the DFW.
+The color code on the upper right corner of Figure 4 describes the estimated bounds based on the standard deviation derived by the BAI. A light green shading of an event represents the likelihood of an event would be completed within one standard deviation of the scheduled event time. A light Yellow shading indicates the event would be completed between one and two standard deviations of the scheduled event time. Red shading indicates the event would be completed greater than two standard deviations from the scheduled event time. The purpose of the color code is to give users a direct indication of the success rate of completing a given event under the uncertainties. Events in blue or brown in Figure 4 indicate the event has completed, within or greater than the two times of the standard deviation according to historical data respectively. Therefore, performance bounds of the completion time of a given event can be established based on the dependencies among performance parameters and specified uncertainties.
+For gate turnaround performance at the gate, a Gate Status display can be invoked by the users from the Dashboard for a given flight as shown in Figure 5. The display shows the same color code topology and the standard deviation (σ or Sigma) in minutes. Users can then associate the color code to the estimated or actual time respectively.
+ActiveMQ
+MODSIM World 2016
+ A message ‘event’ can be defined as "a change in state." In the IGTM application events are as simple as ‘an aircraft touches down’, ‘an aircraft has parked at the gate’, ‘another aircraft has all baggage removed,” or various other changes in an aircraft’s state of location or activity as shown in Figure 3. IGTM software components handle nu- merous events. An ATM’s system architecture may treat this state change as an event whose occurrence can be made known to other processes within the application architecture. From a formal perspective, what is produced, published, propagated, detected, or consumed is a (typically asynchronous) message called the event notification,
+2016 Paper No. 41 Page 7 of 11
+
+              MODSIM World 2016
+    Airport'
+ Terminal'
+ Spot'
+ Runway'
+ CDM1' Early' Arrival'
+'
+ CDM2' Late' Arrival'
+'
+ CDM3' Ramp' Control'
+ CDM4' Gnd' ATC'
+           Airport'
+DFW'
+Terminal'
+A'
+All'
+Arrival' Departure'
+Scheduled(
+Completed)within)±2σ) Completed)>)±2σ)
+SPOT'
+Runway'
+17C' 17R'
+ Inbound' Outbound'
+  IN' 10' 13'
+  OUT' 7'
+9' 11' 15'
+     Call Sign
+TID
+STA/ STD
+ Gate
+Metering#Fix
+Inbound Taxi#Spot
+Gate
+De5icing
+Outbound#Taxi#Spot
+Departure#Slot
+ Take5off
+AAL#719
+ N493AA
+00:10:43
+  A10
+ 
+   
+   
+   
+   
+      
+                          Ga
+        Pd
+  BU
+ Fu
+ BL
+ Fc
+Cc
+ Mt
+  Ca
+Pe
+                                                         AAL#767
+N481AA
+00:31:18
+  A12
+  
+    
+     
+     
+    
+    
+    
+                          Ga
+        Pd
+  Bu
+  Fu
+ Bl
+ Fc
+ Cc
+  Mt
+  Ca
+Pe
+                                                          AAL#675
+N494AA
+00:40:48
+  A13
+  
+    
+    
+    
+    
+    
+    
+                          Ga
+        Pd
+  Bu
+ Fu
+ Bl
+ Fc
+Cc
+ Mt
+  Ca
+Pe
+                                                          AAL#279
+N555AN
+00:45:23
+A15
+  
+    
+    
+    
+    
+    
+    
+             Ga
+Pd
+  Bu
+ Fu
+ Bl
+ Fc
+Cc
+ Mt
+  Ca
+Pe
+                      AAL#953
+ N9403W
+00:07:33
+A16
+  
+    
+        
+    
+    
+    
+                          Ga
+        Pd
+  Bu
+ Fu
+ Bl
+ Fc
+Cc
+ <t
+  Ca
+Pe
+                                                         AAL#592
+ N176AA
+00:37:38
+  A17
+   
+    
+        
+    
+    
+    
+                       Ga
+     Pd
+  Bu
+ Fu
+ Bl
+Fc
+  Cc
+Mt
+  Ca
+Pe
+                                                                                                                                                      Figure 4. The IGTM prototype’s Control Panel and the Dashboard
+ Event
+Scheduled
+Estimated or2Actual
+Delay (Minutes)
+Sigma (Minutes)
+Gate2Arrival
+:14:252AM
+:25:252AM
+11
+5
+          AAL"953"""MD83
+ ←"
+ Early
+ Nominal2 2Time
+ LATE
+ →
+Time2At2the2Metering2Fix
+
+ Inbound2Taxi2Spot
+
+Gate2Arrival
+ 
+   Gate""""A16"
+Passenger2Deplane
+
+Baggage2Unload
+ 
+ Cleaning
+Fuel
+ 
+Baggage2Load
+ 
+Flight2Crew
+
+Cabin2Crew
+
+Maintenance
+
+Catering
+
+Passenger2Enplane
+
+PushBack
+
+DeNicing
+ Outbound2Taxi2Spot
+
+Departure2Slot
+
+  TakeNoff
+
+                                  Figure 5. The Gate Status display
+ and not the event itself, which is the state change that triggered the message emission. Events do not ‘travel’, they just occur. However, the term event is often used to denote the notification message itself, which may lead to some confusion.
+2016 Paper No. 41 Page 8 of 11
+
+This architectural pattern was used in the design and implementation for transmitting events among loosely, coupled software components and services. The IGTM event-driven system consists of event emitters/agents, event consumers, and event channels. These channels, or collection of channels, are also referred to as the message bus. The emitters have the responsibility to detect, gather, and transfer events. Event emitters are unaware of a consumer of events, when a consumer does exist the event emitters do not know how the event is used or further processed. Consumers have the responsibility of applying a response as soon as an event is presented. These emitter/consumers components are the Dashboard, Controller, Big Data Analytics, AOC, and the SOSS Adapter.
+MongoDB Server or MongoDB
+NoSQL databases have emerged in recent years to provide the performance, scalability, and flexibility required by modern applications. This new wave of databases is much better suited for Big Data applications and agile software development practices than its relational counterparts. Mongo was selected because it is one of the leaders in the NoSQL arena and since it readily couples with other application frameworks. The framework selected for IGTM application development was SpringFramework.
+NoSQL databases offer many benefits, including:
+• Flexible Data Model. Unlike relational databases, NoSQL databases easily store and combine any type of
+data, both structured and unstructured as JSON.
+• Elastic Scalability. MongoNoSQL databases scale out on low cost, commodity hardware, allowing for
+almost unlimited growth.
+• High Performance. NoSQL databases are built for performance, measured in terms of both throughput and
+latency.
+These advantages account for the growing popularity of NoSQL databases, and specifically MongoDB. MongoDB stands apart from its peers with its Nexus Architecture that incorporates the strengths of relational databases along with the innovations of NoSQL. MongoDB is the only NoSQL option, which offers an expressive query language, strong consistency, and secondary indexes.
+MongoDB was selected as the IGTM data persistence container because of its aforementioned benefits. Additionally when used with application frameworks such as SpringFramework, all changes made to the data model require very few changes, if any, to the MongoDB application configuration. The only modifications to MongoDB are those required to create better resilience and to provide for failover recovery.
+DEMONSTRATION SCENARIOS
+Demonstration scenarios were developed using gates at Terminal A of the DFW airport using Rwy 17C for arrival flights and Rwy 17R for departure flights. During the one-hour demonstration window, arrival and departure flights with a fleet mixture of MD80s, B737s, B752s, and A319s were scripted using the SOSS, which was configured for two taxi-in spots and four taxi-out spots. For departure flights, only a single departure queue at Rwy 17R was configured. The flight status display (Dashboard, see Figure 4) and gate status display (see Figure 5) were available for stakeholders, such as airline operators, airline dispatchers, ramp controllers, air traffic ground controllers, as well as airport operators, to monitor the flight and gate-turn status and estimated successful completion time of events according to past historical data. Collaborative Decision Making (CDM) tools were also available via the IGTM Control Panel as shown in Figure 4.
+Users have the option to run the demonstration at 20 times or 50 times faster than real-time, pause, and resume at any moment during the demonstration to view the displayed information according to certain events, and to use the user interface to make changes to applicable events.
+MODSIM World 2016
+ The Apache ActiveMQ broker fulfills the event channel role. Event channels are conduits in which events are transmitted from event emitters to event consumers. The knowledge of the correct distribution of events is exclu- sively present within the event channel. The physical implementation of event channels can be based on traditional components such as message-oriented middleware or point-to-point communication. The selection of ActiveMQ as the messaging broker conduit was based on its ease of configuration, its support in other third party API, and its ability to handle various types of payload data. One such data payload type is JSON. In IGTM the ActiveMQ message bus was used to simulate the NAS Enterprise Messaging Service (NEMS)/System Wide Information Man- agement (SWIM) message bus (also using the ActiveMQ applicaitons).
+2016 Paper No. 41 Page 9 of 11
+
+Use Cases
+The IGTM prototype was demonstrated using two use cases: (i) early arrival with a gate conflict and (ii) gate recovery from a late arrival. Figure 6 shows a CDM display of the gate conflict due to an early arrival scheduled at Gate A16. The user would recognize the problem that a flight is still occupying the scheduled arrival gate, and could use the CDM display to identify available gate(s) that would meet the originally scheduled gate arrival time. If this early arrival flight is scheduled for a turnaround, the CDM will also check and display all the available gate(s) that could support the turnaround window. This will allow the user to identify and select a viable option, which may require coordination among stakeholders, to minimize time lost at the tarmac, cost, and ground crew resources.
+MODSIM World 2016
+   Propose%% Original(
+   Scheduled(gate
+Occupied Available(but(don't(meet(Gate7Turn(requirement Available(at(scheduled(arrival(time
+  AAL(953(
+Apply%
+ Gate
+Flight
+Origin
+Destination
+Arrival
+Departure
+Select
+A4
+ A8
+A12
+✔%
+A14
+ A16
+ AAL1286
+DFW
+LAX
+00:14:41
+       Propose%
+Cancel%
+    Figure 6. A Gate Availability display for gate conflict mitigation
+The second use case demonstrates how the IGTM Gate Management display can be used to test options that may speed-up gate turnaround in order to meet the scheduled pushback time of a late arrival. The IGTM Controller identifies the most critical path among all available paths and presents it to the user on the Gate Turnaround Management display, as shown in Figure 7. The user then adjusts the quantity of resources such as the passenger deplane rate, passenger boarding rate, and/or increase the number of cabin service (or cleaning) crew, which are typical methods to recovering lost time at the gate. The user iterates on these variables until an acceptable combination is reached that reduces the delay sufficiently. The user then applies the change and the necessary
+  AAL#953#
+On)the)critical)path If)the)entry)is)greater)than)the)maximum)assigned)valued)as)described)in)Appendix)D,)set)the)value)to)the)maximum)and) set)the)background)to)RED
+ Estimated) Gate+Turn) Time) (Minutes)
+  52 />%43%
+  )
+         Passenger)Deplane) Rate)(per)minute)
+Cleaning)Crew) Unit
+Passenger) Boarding)Rate) (per)minute)
+  )
+    Time)Takes (Minutes)
+10 />%13%
+Baggage)Unload) Crew)Unit
+1
+Baggage)Unload)Rate) (per)minute)
+20
+Baggage)Loading) Crew)Unit
+1
+Baggage)Loading) rate)(per)minute)
+20
+1 />%1.2%
+Cleaning)Rate) (per)minute)
+6 />%7.2%
+22 />%25%
+   19 />%15% )
+12
+15
+19 />%16%
+14 />%12%
+  Number)to)be)modified)by)users
+       Propose%
+Apply%
+Cancel%
+   Figure 7. A Gate Turnaround Management display showing times of individual gate activities
+2016 Paper No. 41 Page 10 of 11
+
+stakeholders are informed of the required changes needed to speed up the turnaround activities. In this case, the Estimated turnaround time is reduced from original 52 minutes to 43 minutes.
+CONCLUDING REMARKS
+1. The IGTM prototype demonstrates the concept and benefit of technologies that provide real-time analytics combined with historical archived data that bound the uncertainties in a gate turnaround NAS operational space.
+2. NAS stakeholders can share the flight information, resources, and time management tools through a common
+messaging network service to improve the NAS performance under the nominal and off-nominal conditions.
+3. The prototype also offers a modular design, which will allow the incorporation of additional Big Data and
+Analytics products to support future ATM research.
+ACKNOWLEDGEMENTS
+This work was funded by a NASA Big Data, Data Analytics, and Net-enabled ATM and Airspace Operations Project under Contract NNA15AB05C. Authors wish to thank Deepak Kulkarni and Yao Wang of NASA Ames Research Center for their technical guidance and advice. Authors wish to thank the industry SME team, which includes Joe Burns of XCELAR Inc., Steve Koczo and Arlen Breiholz of Rockwell-Collins, Henry Smith and Warren Qualley of Harris Corp., Randall Ho of the IBM Software Group Federal, Bruce Sawhill of the NextGen Aero Sciences, and Ben DeCosta of DeCosta Consulting LLC, for the concept development. Authors also wish to thank John Walker and Darrell Wooten of the SAIC software development group for their support in developing the IGTM prototype.
+REFERENCES
+Ren, L; Beckmann, B; Citriniti, T., and Castillo-Effen, M: "Cloud Computing for Air Traffic Management – Cost/Benefit Analysis" (16-20 June 2014, 14th AIAA Aviation Technology, Integration, and Operations Conference)
+Ebbers, M; Abdel-Gayed, A; and et al.: "Addressing Data Volume, Velocity, and Variety with IBM InfoSphere Streams V3.0," (March 2013)
+Robb, j.: "System Wide Information Management (SWIM) Program Overview and Status Update," Air Transportation Information Exchange Conference (August 2015)
+Kim, S.H., et al.: “Airport Gate Scheduling for Passengers, Aircraft, and Operations, “Tenth USA/Europe Air Traf- fic Management Research and Development Seminar, ATM2013 (April 17, 2013).
+Sandberg, M., et al.: “Airport Characterization for the Adaptation of Surface Congestion Management Approaches,” Air Traffic Management Research and Development Seminar, ATM2013 (April 17, 2013)
+Eshow, M.; Lui, M.; and Ranjan, S.: “Architecture and Capability of Data Warehouse for ATM Research,” 33rd Digital Avionics Systems Conference (DASC) (October 2014)
+Airbus A319 Aircraft Characteristics for Airport and Maintenance Planning. Retrieved May 2014 from
+http://www.airbus.com/fileadmin/media_gallery/files/tech_data/AC/Airbus-AC_A319_May2014.pdf
+Boeing B752-200/300 Airplane Characteristics for Airport Planning. Retrieved February 2015 from
+http://www.boeing.com/assets/pdf/commercial/airports/acaps/757_23.pdf
+2016 Paper No. 41 Page 11 of 11
+MODSIM World 2016

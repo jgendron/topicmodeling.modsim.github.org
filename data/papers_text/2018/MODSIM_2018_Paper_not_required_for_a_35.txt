@@ -1,0 +1,163 @@
+Paper Title: Modeling of the Ionosphere Reveals Wide Bandwidth Available for a Virtual SATCOM Communication System
+Dennis Watson
+Old Dominion University Norfolk, Virginia, USA Dwats017@odu.ede
+Linda Vahala
+Old Dominion University Norfolk, Virginia, USA Lvahala@odu.edu
+MODSIM World 2018
+  ABSTRACT
+Virtual SATCOM is wireless communication at SATCOM speed on a HF Skywave channel without a physical satellite. Why: DOD needs a SATCOM alternative to mitigate the space vehicle vulnerability. The ionosphere is an underutilized channel that can mitigate the risk. Our modeling has shown the ionosphere can be harnessed to communicate at long range (3000 km) and high speeds (>12 Mbps). Compared to SATCOM, current HF protocols are too slow. We are developing a Virtual SATCOM system. It is a high bandwidth HF communications channel that can match SATCOM throughput at a reduced cost and vulnerability. RF waves in the HF band (3-30 MHz) transmitted into the ionosphere are refracted (bent) back to earth thousands of kilometers down range. However, the ionosphere is an inhomogeneous, anisotropic, non-linear time-varying environment. Modern communications techniques can adjust to the dynamic environments. One area of our research is to provide evidence that this concept will work in the dynamic ionosphere environment. We needed a precision modeling tool of the ionosphere plasma with an iterative ray tracing simulation capability that shows channel paths from transmitter to receiver. We are using a tool called PHaRLAP to model the environment. PHaRLAP is an over the horizon radar (OTHR) program developed by the Australian Defense Science and Technology Group to analyze OTHR systems. We have modified the program to support wideband communications research. Our simulations show that an HF agile communication system can significantly improve throughput. The model ingests data from the International Reference Ionosphere to calculate the plasma grid. Our system will be able to service mobile users (e.g., maritime, expeditionary and aviation) using steerable beamforming apertures with ultra-wide bandwidth signals (3MHz). This is exciting research that can reduce cost and increase access to long range high data rate wireless communications.
+ABOUT THE AUTHORS
+Dennis Watson is a PhD Candidate at Old Dominion University, in the Computer and Electrical Engineering Department, doing research on long range high throughput digital communications. Dennis is a retired Naval Officer who performed as an Electromagnetic Countermeasures Officer, Command and Control Warfare Commander and Commanding Officer of an EA-6B Squadron and Navy Warship. He recently supported development of Electromagnetic Maneuver Warfare (EMW) tactics for the Navy Warfare Development Command and Navy Information Operations Command – Norfolk.
+Linda Vahala Ph. D. is an Associate Professor at Old Dominion University. She received her BS degree from the University of Illinois in 1969, an MS degree from the University of Iowa in 1971, and Ph.D. from Old Dominion University in 1983. Her publications include articles in both plasma physics and atomic physics with an emphasis on laser interactions with plasma and with neutral/rare gas collisions. Dr. Vahala joined Old Dominion University as an Assistant Professor of Electrical and Computer Engineering in the Fall of 1987.
+2018 Paper No. 35 Page 1 of 8
+
+Paper Title: Modeling of the Ionosphere Reveals Wide Bandwidth Available for a Virtual SATCOM Communication System
+Dennis Watson
+Old Dominion University Norfolk, Virginia, USA Dwats017@odu.edu
+INTRODUCTION
+Linda Vahala
+Old Dominion University Norfolk Virginia, USA lvahala@odu.edu
+In the 1960s and 1970s, SATCOM communication superseded HF skywave communication as the wireless over the horizon (OTH) communications architecture of choice. Geosynchronous communication satellites connect ground sites via line of sight links to high altitude receivers that retransmit signals back to earth thousands of kilometers down range. This is commonly referred to as a “bent pipe” architecture. However, with recent improvements in digital signal processing, software defined radio equipment and automatic link capabilities, HF systems can exploit the skywave path with high speed data to justify another look at HF communication as an alternative. An HF system that can be repaired and up-graded with commercially available equipment can improve performance at reduced costs.
+Operational need for change: The DoD needs a SATCOM alternative in the event current SATCOM systems are disrupted during conflicts; [see DoD report 2016]. The physical satellite vehicle is an expensive and vulnerable link in SATCOM communication systems. This proposed concept called Virtual SATCOM will deliver SATCOM speed communications capability that will mitigate the vulnerability. It is an affordable and low-risk solution. This paper is centered on the modeling of the ionosphere to determine the availability of bandwidth that the ionosphere can support on any given day. In information theory, the Shannon–Hartley theorem, (equation 1) shows that the digital capacity of the channel is linearly proportional to the bandwidth available.
+C=Blog2(1 γ) + (1.1) Where: C is channel speed in bits per sec [bps]. B is bandwidth in Hertz [Hz] and γ is signal to noise ratio (SNR) in
+watts/watts. For example, if B=3MHz and signal to noise is γ=15 time the noise power the capacity C= 12 Mbps.
+Therefore, a precise understanding of the ionosphere’s passband limits is needed to understand the limit of capacity. We are using a ray propagation model developed over many years by the Australian Defense Science and Technology Group to analyze OTHR systems. The Australian Defense Department are leaders in the development of over the horizon radar systems. The PHaRLAP model was used in the development of next generation radar systems. We have modified the program to measure bandwidth of passband in point to point communications between fixed land base and mobile transmit and receive systems on a ship or aircraft or even autonomous systems like UAVs, for example.
+CONOPS
+The concept of operations for Virtual SATCOM is a high gain ground-based antenna to generate an electronically steerable high-power beam. Using beam steering to electronically aim the beam at the correct azimuth, elevation and frequency will result in the beam bending back to the intended mobile recipient down range. Beam steering is common to radar systems, [Fabrizio G., 2013] but not widely used in communication systems. Beam steering is needed to avoid interference with other users of the same spectrum. With the segregation from other users, the bandwidth can be increased without interference and the signal to noise ratio (SNR) is increased. Orthogonal Frequency Division Multiplex (OFDM) modulations would fit well into this schema. OFDM is a form of multicarrier modulation. An OFDM signal consists of many closely spaced modulated carriers. OFDM has been used in many high data rate wireless systems because of the many advantages it provides; some examples include WIFI, LTE and WiMAX. The result is a system with increased throughput and high reliability. In this application of a directional HF system, the transmitter must hit the right place in the ionosphere that results in the right refraction. This is similar to bouncing a beam of light off a mirror, except the ionosphere’s mirror is constantly moving. Therefore, beam aiming must be continuously updated to keep the signal energy on the mobile unit while the ionosphere changes. This requires
+2018 Paper No. 35 Page 2 of 8
+MODSIM World 2018
+
+feedback from the mobile unit regarding signal quality. By steering the beam, the base station can time share and move the focused signal to service multiple users. Mobile units can communicate beyond line of sight (BLOS) via the base station to relay digital networks and communications between mobile users and other ISR networks. To over- simplify, the system operates much like a mobile cellular architecture, but at a much greater range, see figure 1. The range from the base station to the mobile user is up to 3000 km (1620 NM). The high-gain base station’s antenna increases the signal to noise ratio (SNR) at the receiver on both the forward link and backlink while preventing unintended interference to other users outside the narrow beam. Preventing unintentional interference is key to ITU/FCC approvals. With high SNR and ultra-wide bandwidth, high-speed links (>12 Mbps) are possible. This speed significantly exceeds the current HF data link capabilities. Current HF Radio is very slow with standard rates around 1200 bits per second. Conceptually, a ground station in Hawaii, Guam, and California could service most of the Pacific Ocean, see Figure 2.
+IONOSHPERE
+The ionosphere is an inhomogeneous, anisotropic, non-linear, time-varying environment. Providing evidence that this concept will work required precision modeling of the ionosphere plasma with iterative ray tracing simulation that shows channel paths from transmitter to receiver. We have modified an over the horizon radar program developed by the Australian Defense Science and Technology Group to analyze wideband communications in a complex environment. Our simulations show that the ionosphere can support the wide bandwidth necessary to communicate at speeds comparable with SATCOM systems.
+The ionosphere, roughly 85-1000 km above the earth, is sometimes referred to as “nature’s satellite” because of the physical phenomenon of bending certain high frequency radio waves back to the earth’s surface. Close to the earth’s surface, below the ionosphere (>85 km), the gases in the atmosphere are constantly mixed. In contrast, in the ionosphere (> 85km) there is little mixing and the atoms and molecules become stratified due to gravity. Lighter gases rise to the top and the heavier gases “stack up” below, based on density. Some elements (layers) are more susceptible to ionization (example O1), consequently the ions are more prevalent at these layers. Each ion generates in at least one free electrons. These free electrons are much lighter (less mass) than the ion and therefore exhibit greater osculation in the presidents to an oscillating EM signal.
+Ionization occurs when high energy ultraviolet and x-ray radiation from the sun dislodges electrons from atoms. Once the electrons are freed, they can react to the oscillating electromagnetic field of a communication signal. Think of the ion gas as sheets of copper around the earth that reflect signals back to earth. Unique to the HF spectrum, the communication signals passing through the ionosphere are bent back to the surface. The degree of bending is a function of the concentration of the ions and the frequency of the communication signal. The propagation path algorithm was originally developed by Dr. Jenifer Hartley and based on Hamiltonian principles in 1963. The electron concentration changes as a function of time of day, along with season and location. The degree of bending is a function of both the transmitted signal frequency and the critical frequency of the plasma referred to plasma frequency. In this paper, we look at one day and one location but have run simulations at other locations and dates with similar results. The plasma
+MODSIM World 2018
+   Figure 1. Spider Architecture. Focused beams from base station are bent by ionosphere to land on designated locations. Both friendly and adversary units can be serviced with network communications or electronic warfare (EW)
+ 2018 Paper No. 35 Page 3 of 8
+Figure 2. With ground stations in Guam Hawaii and California the Pacific is connected from the USA to China. Map is western Pacific from Hawaii to China with one base station in Hawaii and two in Guan.
+
+frequency is a function of the free electron density. The policy limitation of current HF systems is the policy of fixed frequency allocations. If the assigned frequency being used encounters loss of service due to signal fading it is not permitted to adjust to a new workable frequency without assignment of additional frequencies. In the Virtual SATCOM concept, the system will adjust channel frequency to achieve the long-range propagation without loss of service due to fading. Therefore, policy changes will be needed. OTHR systems are also frequency agile, so this is not uncharted territory within the frequency allocation process.
+Free Electron Life Cycle
+Free electrons are generated when atoms are ionized and then lost when recaptured by an ion. Generation only happens during the day. Recapture happens consistently and is a function of ion density in the layer. Recapture is the process of the ion and the free electron re-joining to become a neutral atom. At higher altitudes, where ion density is less, there is less probability that an electron is going to find an ion. So, it takes a longer period of for recapture to take place and therefore, the higher altitude layers to stay ionized longer.
+During the day, the ionosphere is divided into four layers: D, E, F1 and F2. Lowest is the D layer at 85km and highest is the F2 layer at approximately 350 km. At night, the D layer quickly dies within a few minutes because recombination rate is high. The F1 and F2 layer combine and stay ionized through the darkness due to the low atom density and resulting low probability of recombination. Therefore, the F2 layer during the day and F layer during the night remain ionized and are the best for refracting rays over the horizon, see Johnson E.et al. 1997.
+This fluctuation of ionization and recombination causes fluctuations in the number of ions present, per unit volume, over a given place on the earth. The number of ions increase during the day then decrease during the night. Different seasons and other factors like sun spot activity affect the level of ionization. Because the sun’s radiation arrives at different frequencies, the ionization levels form at different altitudes.
+In radio communication, skywave refers to the propagation of radio waves reflected or refracted back toward Earth from the ionosphere. They are called skywaves but are actually refracted in space. Only at the right frequencies will the ionosphere bend HF transmissions back to the surface. This frequency band is dynamic and changes throughout the day, day to day, and seasonally, depending on conditions in the ionosphere.
+Plasma frequency effect on Index of refraction
+Refractive index, also called index of refraction, is a measure of the bending of a ray when passing from one medium into another. In this case, from one layer of the ionosphere to the next. In the plasma, the index of refraction is a complex term.
+n= μ iχ+ (1.2) Where n is index of refraction and  is real and  is imaginary component. For a collision-less plasma this can be
+simplified too.
+Where fp is the plasma frequency defined as:
+2 fp2 n =1 −2
+(1.3)
+(1.4)
+Where; Ne is number of free electrons per cm-3; m is mass of electron; e is charge on electron, and 0 is permittivity of free space. On the earth surface Ne is negligible so plasma frequency, fp=0 and index of refraction (n) is 1.0.
+f
+f = 1 Nee2 9 10−3 ≅NΧ
+MODSIM World 2018
+    p2πmε e 0
+ 2018 Paper No. 35 Page 4 of 8
+
+Appling Snell’s law to the boundary of a layer in the
+ionosphere:
+n1 sinφ1 = n2 sinφ2 (1.5)
+If φ1 is the angle of incidence in a medium with index of refraction n1 (angle between the incoming ray and the perpendicular to the surface of a medium, called the normal) then 2 is the angle of refraction in medium n2 (angle between the outgoing ray in the medium and the normal). If n1>n2 then sinφ2>sinφ1. If the plasma frequency increases from n1 to n2 then n1 >n2, therefor sin2 must be greater that sin1. [Budden (1985)]
+METHOD
+PHaRLAP Model:
+φ
+2 n
+n2 1
+φ1
+MODSIM World 2018
+       The Australian Defence Science and Technology
+Organization (DSTO) has developed an HF ray tracing
+toolbox called PHaRLAP to study the propagation of radio waves through the ionosphere. The 2-D raytracing engine is an implementation of the 2-D equations developed by Coleman C. J., 1998, based on the Haselgrove equations [Haselgrove, J. (1963)]. The PHaRLAP model traces the signal’s ray as it refracts through the ionosphere [Cervera, M. A., and T. J. Harris, 2014]. The refraction relies on the free electron density. The landing point depends on the degree of refraction (bending) and altitude of the bending. The PHaRLAP model calculates the ion density using data downloaded from the International Reference Ionosphere (IRI) database. The IRI is an international project sponsored by the Committee on Space Research (COSPAR) and the International Union of Radio Science (URSI), see Bilitza, D., et al. 2011. The IRI produces an empirical standard model of the ionosphere, based on all available data sources. For a given location, time, and date, IRI provides monthly averages of the electron density, electron temperature, ion temperature, and ion composition in the altitude range from 50 km to 2000 km. The data sources are a worldwide network of ionosondes, and incoherent scatter radars and instruments on several satellites.
+The model follows an iterative process. First, cutting the volume into a grid and solving for the electron density and index of refraction for in each grid element. With the electron density, ray signal frequency, and incoming elevation angle it can calculate the refractive index and using an algorithm similar to Snell’s Law calculate the output angle.
+This output angle is the input angle going into the next cell. By piecing the segments together, the ray path for origin through the ionosphere and then back to the surface can be calculated.
+We modified the model for a single hop point to point analysis. We ran the algorithm at many different frequencies and elevation recording only rays landing at the locations of a mobile unit 3000 km north of the ground station in Guam. Guam was picked as a test location because of its strategic location in the western Pacific Ocean.
+The idea is if the ground station transmitted at the frequencies and elevations output by the model then those signals could be received at the mobile unit. The
+  f2 n2 =1 −fp2
+2018 Paper No. 35 Page 5 of 8
+Figure 3. Simple diagram showing ray traveling from lower to higher plasma frequency n1>n2. As can be seen φ2 is greater than φ1 causing the ray to bend back toward the surface.
+   Figure 3. Model flow chat. Locations, time, date and initial ray elevation and azimuth angle input into model is combined with IRI date to computer plasma grid. Ray is plotted incrementally as it reacts to plasma in each grid square.
+
+number of rays at different frequencies equates to greater bandwidth. The frequencies where spaced 100 kHz apart.
+RESULTS
+We ran the model every hour for 24 hours on September 2, 2016 to capture the total picture for the day and the results can be seen in Table 1. Figure 4 and 5 show ray propagation paths of rays transmitted north from Guam in the Pacific Ocean (13.4° N, 144.8° E) at midnight and local noon respectively. The color coding of the background shows the plasma frequency at that range and altitude and the white rays are moving from the origin on the left to a landing point on the right. Each graph shows all the rays that would land within 50 km of a point 3000 km north of Guam. In Figure 4, there are 36 rays, spaced 100 kHz apart which equates to 3.6 MHz of bandwidth that landed on the mobile unit at 3000 km. Since the typical HF frequency allocation is a 3 kHz, this bandwidth is over a 1000-time increase. In Figure 5, at local noon there a total of 176 paths equating to 17.6 MHz of effective bandwidth was available.
+In Figure 4 when compared to Figure 5 the plasma frequency bar is a bit lower, at 10.2 MHz vice 12.5 MHz in Figure 5. From Table 1, the bandwidth available at midnight is less. At midnight, the lower altitudes between 85 to 200 km have much less plasma, therefore, the rays experience little bending until reaching a higher altitude. The table shows that the ionosphere continues to deplete until 0200 when the available bandwidth is only 1.1 MHz. Consequently, data throughput at this time would be limited. However, even 1.1 MHz of bandwidth is significantly more than what is typically allocated of 3 kHz to mobile units. The average bandwidth over the 24-hour period is 11.4 MHz.
+MODSIM World 2018
+  Figure 4. Local Midnight PHaRLAP graph of ray propagation looking north. Each ray is a different frequency and elevation angle. All rays landing within 50 km of a point 3000km for Guam. The plot is 69 rays with an effective bandwidth of 3.6 MHz between 25.6 to 20.5
+  2018 Paper No. 35 Page 6 of 8
+Figure 5. Local Noon PHaRLAP graph of ray propagation looking north. Each ray is a different frequency and elevation angle. All rays landing within 50 km of a point 3000km for Guam. There are 175 rays between 30-12.5 MHz and elevation angles of 5-15 degrees with and equivalent 17.5 MHz of bandwidth.
+
+                                                                                                                                                                                                            MODSIM World 2018
+Table 1. Output of PHaRLAP data for Guam looking North on September 2 2016
+ Local Time Freq High GUAM [MHz]
+Freq Low [MHz]
+High to Low [MHz]
+Count of 100 kHz channels
+Bandwidth Equivalent [MHz]
+0:00
+ 1:00 2:00 3:00 4:00 5:00 6:00 7:00 8:00 9:00
+24.9 23.1 1.8 23.1 21.7 1.4 19.9 17.4 2.5 16.6 12.0 4.6 16.3 9.0 7.3 19.8 7.2 12.6 24.9 11.9 13.0 28.0 11.9 16.1 28.3 14.5 13.8 28.1 12.4 15.7 28.6 12.7 15.9 30.0 12.5 17.5 30.0 12.4 17.6 30.0 12.2 17.8 30.0 11.6 18.4 30.0 11.6 18.4 30.0 11.8 18.2 30.0 8.9 21.1
+15 1.5 11 1.1 19 1.9 37 3.7 72 7.2
+124 12.4 98 9.8 84 8.4
+138 13.8 156 15.6 159 15.9 176 17.6 177 17.7 164 16.4 183 18.3 180 18.0 181 18.1 104 10.4
+46 4.6
+75 7.5 243 24.3 168 16.8
+96 9.6
+25.6
+10:00
+11:00
+12:00
+13:00
+14:00
+15:00
+16:00
+17:00
+18:00
+19:00 27.5 23.0 4.5 20:00 26.8 19.4 7.4 21:00 27.2 3.0 24.2 22:00 26.7 3.0 23.7 23:00 26.1 3.0 23.1
+20.5
+5.1
+36
+3.6
+            35.0 30.0 25.0 20.0 15.0 10.0
+5.0 0.0
+0:00 4:48 9:36
+Local Time [hh:mm]
+Freq High [MHz] Freq Low [MHz]
+AVERAGE 26.2 12.
+  Frequency High and Low
+ 14:24
+19:12 0:00
+   13.4 114.3 11.4
+  30.0 25.0 20.0 15.0 10.0
+5.0 0.0
+0:00
+12:00 0:00 Local Time (hh:mm
+Effective Bandwidth
+ Banwidth Equvalent [MHz] Average
+   Figure 7. Effective bandwidth during 24-hour period for Guam on September 2 2016
+ Figure 6. Show the highest and lowest frequency that meet the test of traveling 3000 km and landing on a precise location.
+ 2018 Paper No. 35 Page 7 of 8
+8
+Frequency [MHz]
+Bandwidth [MHz]
+
+Figures 6 and 7 show graphicly the 24-hour period as tabulated in Table 1. One difference between SATCOM and Virtual SATCOM is that bandwidth is variable. Most of the time it is more than adequate but would have to managed to meet communication needs.
+CONCLUSION
+The first step in developing a new system is to show what the environment can accommodate. Can the ionosphere accommodate wideband communications? We have shown that it can using a complex modeling tool called PHaRLAP. Our results show that there is ample bandwidth available. The goal of our Virtual SATCOM design is to have a minimum of 3 MHz of bandwidth 85% of the time. A common-sense reason why this has not already been developed is the requirement not to disrupt (change policy for) the current user of that spectrum. This concept meets that requirement by confining the bandwidth consumed in a narrow beam resulting in no impact to users outside the beam. Frequency reuse if possible and many users can use the best frequencies available with any given ionospheric condition. For this paper we have confined the data analyze to one day picked at random. However, we have used this tool for other locations on different days with similar results. Follow on analyzes will include modeling at more locations and different times of the year. Additionally, this was a 2-D analysis and a 3-D model is available that will factor in the Faraday rotation due to earth’s magnetic field. Follow-on analysis will also include a signal strength analysis. However, the use of a directional beam for the purpose of avoiding interference has the added benefit of increasing the signal power at the receiver and will reduce the interference from signals outside the beam.
+ACKNOWLEDGEMENTS
+The results published in this paper were obtained using the HF propagation toolbox, PHaRLAP, created by Dr. Manuel Cervera, Defence Science and Technology Group, Australia (manuel.cervera@dsto.defence.gov.au). This toolbox is available by request.
+The International Reference Ionosphere (IRI) is an international project sponsored by the Committee on Space Research and the International Union of Radio Science. It is the international standard empirical model for the terrestrial ionosphere. Please see the IRI websites http://irimodel.org and http://IRI.gsfc.nasa.gov for further detail.
+REFERENCES
+Bilitza, D., et al. (2011). “The International Reference Ionosphere today and in the future”, in J. Geod., 85(12), 909– 920.,
+Budden K.G., (1985). The propagation of radio waves. The theory of radio waves of low power in the ionosphere and magnetosphere. Cambridge: Cambridge University Press
+Cervera, M. A., and Harris T. J., (2014). “Modeling ionospheric disturbance features in quasi-vertically incident ionograms using 3-D magnetoionic ray tracing and atmospheric gravity waves” in, J. Geophys. Res. Space Physics, 119, 431– 440, 8 January 2014.
+Coleman C. J., (1998). “A ray tracing formulation and its application to some problems in over-the-horizon radar” in Radio Science, Volume 33, Number 4, Pages 1187-1197, July-August 1998
+DOD report, (2016). “Annual Report to Congress, Military and Security Developments Involving the People’s Republic of China 2016”, Office of the Secretary of Defense, April 26, 2016, Ref ID: 117FA69 pp 36-37
+Fabrizio G., (2013). “High Frequency over-the-horizon radar. Fundamental principles, signal processing and practical applications”, New York: McGraw Hill Education, page 29
+Haselgrove, J., (1963). The Hamiltonian ray path equations, J. Atmos. Terr. Phys., 25, 397–399.
+Johnson E, et al 1997 “Advanced High-Frequency radio communication”, in Artech House, page 38.
+2018 Paper No. 35 Page 8 of 8
+MODSIM World 2018

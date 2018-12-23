@@ -1,0 +1,172 @@
+IoT Applied to the Control and Monitoring in Substations
+Maurício Aureliano, Reidner Cavalcante, Gabriel Cyrino, Alexandre Cardoso, Edgard Lamounier
+Federal University of Uberlândia
+Uberlândia, MG drmurisystem@gmail.com, reidnersc@outlook.com, gabrielcyrino@hotmail.com, alexandre@ufu.br, lamounier@ufu.br
+ABSTRACT
+This article presents an IoT (Internet of Things) prototype integrated to a virtual designed environment to allow monitoring and control of electrical substations. The prototype system was developed and tested using an ESP-8266 module, NodeMCU and sensor systems.
+The main components of the proposed system are: a network of Wi-Fi sensors, a MQTT broker service that acts as a broker connecting sensors as clouds, and a virtual environment developed for the control and monitoring of electrical substations. The use of a wireless network for data collection within a substation presents some advantages comparing with routed networks while the inclusion of a sensor network allows a provision of complementary resources such as monitoring and control of processes inherent in the substation.
+ABOUT THE AUTHORS
+Maurício Aureliano is post graduated in Information Security by the UNIMINAS (Uberlândia - Brazil) and undergraduate in
+Information Systems by the Centro Universitário do Planalto de Araxá (2006).
+Reidner Cavalcante currently is a master degree student at Federal University of Uberlândia (UFU) and is undergraduated in Information Systems at Universidade Luterana do Brasil (ULBRA), 2014.
+Gabriel Cyrino currently is a master degree student at Federal University of Uberlândia (UFU) and is undergraduated in Information Systems at Centro Universitário de Patos de Minas (UNIPAM), 2015. Grabriel has experience in the areas of information technology and computer graphics, acting mainly in the following themes: Software development, Game Design, 3d modeling, virtual environments, virtual reality and augmented.
+Alexandre Cardoso - Electrical engineer at the Federal University of Uberlândia (1987), Master of Electric Engineering from the Federal University of Uberlândia (1991) and Doctor in Electrical Engineering (digital systems Engineering) by Escola Politécnica da Universidade de São Paulo (2002). Alexandre is an associate professor at the Federal University of Uberlândia and coordinator of the Graduate Program in Electrical Engineering (Master and PhD) (having been coordinator in the period from 2008 to 2013).
+Edgard Lamounier has a degree in Mathematics (1986) and a master's degree in Electrical Engineering (1989) from the Federal University of Uberlândia (UFU). In 1996, he obtained a PhD from the school of Computing at the University of Leeds, England. He is currently a professor at the Faculty of Electrical Engineering of UFU and coordinator of his graduate program in biomedical engineering, having been coordinator of his graduate program in electrical engineering from 2013 to 2014.
+2018 Paper No. 26 Page 1 of 9
+MODSIM World 2018
+
+IoT Applied to the Control and Monitoring in Substations
+Maurício Aureliano, Reidner Cavalcante, Gabriel Cyrino, Alexandre Cardoso, Edgard Lamounier
+Federal University of Uberlândia
+Uberlândia, MG drmurisystem@gmail.com, reidnersc@outlook.com, gabrielcyrino@hotmail.com, alexandre@ufu.br, lamounier@ufu.br
+INTRODUCTION
+The Internet of Things (IoT) is an emerging technology that was first proposed by Ashton, professor of the MIT Auto- ID Center in 1999. IoT is an important unit to support the composition of the service with various applications that allows multiple objects to communicate over the Internet (Whitmore, Agarwal, & Da Xu, 2015).
+The IoT consists of three layers: perception layer, network layer, and application layer. Sensors, actuators, RFID tags and other smart terminals are connected to the IoT from the perception layer. The network layer is responsible for communicating between "things" and human beings. Abundant applications are provided by the application layer. One of the most diverse applications present in IoT is in its application in industrial environments integrating devices within an industrial park allowing the exchange of information between them, allowing the monitoring of these, without the need of human operators intermediating such communication (Li, Xu, & Zhao, 2015).
+The Virtual Reality also appears as a technology present in industrial monitoring and training environments. The Virtual Reality can be considered an advanced user interface to access applications performed on the computer, having as characteristics the visualization of, and movement in, three-dimensional environments in real time and the interaction with elements of that environment (Tori, Kirner, & Siscouto, 2006).
+This article presents an IoT prototype integrated into a virtual environment designed to allow monitoring and control of parameters of electrical power substations.
+THEORETICAL FUNDAMENTALS
+Internet of Things
+The Internet of Things (IoT) consists in applications developed for machines trigger other devices without necessarily involving an interface with people. The IoT are becoming an increasingly present reality in the Internet, being responsible for a more significant volume of data (Da Silva, et al., 2015).
+According to Zambarda (2016), the idea of connecting objects has been discussed since 1991, when the TCP/IP connection and the Internet start to become popular. In 1999, Kevin Ashton of MIT proposed the term "Internet of Things" and ten years later wrote the article "The Internet Thing of Things" for the RFID Journal. According to the author, "Internet of Things" refers to a technological revolution which aims to connect the equipment used daily to the worldwide network.
+Vasseur and Dunkels (2010), argue that for the Internet of Things to exist, it is necessary to use intelligent objects, which by definition is an object equipped with a sensor form, a small microprocessor, a communication device, and a power supply.
+2018 Paper No. 26 Page 2 of 9
+MODSIM World 2018
+
+Peña-López (2005) proposes a report describing devices, usual objects and sensors, transmitters and receivers, which enable new forms of communication between people and objects and between objects and objects, in any place and time. Figure 1 demonstrates this new paradigm of communication.
+The functionalities of an object belonging to IoT are nine, distributed in three sets:
+• Characteristics;
+• Relations;
+• Interface.
+Not necessarily all these features need to be
+present in the same object, because the
+environment in which they will be used will define
+their functionalities. The set of features is
+composed of the assignments, functions, the object
+itself, the set of relations refers to how the object interacts with other objects in the network and the interface set refers to the relations between the object and the user interface (Faccioni Filho, 2016).
+According to Faccioni Filho (2016), the following assignments exist in the set of object characteristics in IoT:
+• Processing, which refers to the computational processing capacity inserted in the object, or "intelligence",
+capable of making it act and respond to IoT requests and their applications;
+• Addressing, which refers to the ability of the object to be found in IoT, that is, to be located in the network
+through routing;
+• Identification, which refers to the identity of each object, making it unique across the IoT network;
+• Location, attribute related to the physical location in which the object is, to its position on the geographic
+map.
+Within the set of relations with other objects in IoT, there are the following functionalities:
+• Communication, which is the object's ability to receive or send messages to other objects in IoT;
+• Cooperation, which refers to the ability of the object to act in common with other objects of IoT, aiming at
+cooperative activities and applications, that is, joint and collaborative actions;
+• Sensing, which is the object's ability to capture data from the environment or other objects, data obtained by
+means of sensors present in the object itself and that allow monitoring of certain magnitudes of the
+environment;
+• Performance, which is the ability of the object to act on the environment, operating and modifying the
+condition of a given environment. The interface set refers to the interaction of the object with the user, allowing the user to view object information, make settings, and modify its condition.
+Considering the functionality and features described above, Minerva, and Biru Rotondi (2015), define IoT as a complex, adaptive and self-configuring network that interconnects "things" to the Internet through standardized communication protocols. The interconnected "things" have physical or virtual representation in the digital world, actuation/sensing capability, programming functionality and unique identification. Such representation contains identity, status, location information, and relevant private or social information of the "thing." The "thing" offers services, with or without human intervention, through unique identification, data collection, communication and capacity to act. The exploitation of its services takes place through the use of intelligent interfaces and can be done from anywhere, at any time and with safety.
+MODSIM World 2018
+  2018 Paper No. 26 Page 3 of 9
+Figure 1. The new paradigm of communication. (Peña-López, 2005)
+
+Communication Protocols
+The Internet consists of several communication protocols responsible for managing the transfer of data over a network that connects two or more devices, for example HTTP, FTP, and SFTP. In this context, Messaging Queue Telemetry Transport (MQTT) and Constrained Application Protocol (CoAP) appear as transfer protocols that can be used in restricted environments (limited computational capacity, lossy network).
+MQTT
+The MQTT protocol (Messaging Queue Telemetry Transport) was created in 1999 by Andy Stanford-Clark (IBM) and Arlen Nipper (Eurotech). It is a messaging protocol based on the publish/subscribe architecture, focused on restricted devices and insecure networks, with low bandwidth and high latency. The protocol presents a series of characteristics, such as:
+• Use TCP/IP to provide connectivity;
+• Small transport overhead and minimized protocol exchanges to reduce network traffic;
+• A mechanism that notifies interested parties when a client disconnects from the network abnormally.
+According to Jaffey (2014), the protocol follows the client/server model. Sensor devices are clients that connect to a server (called a broker) using TCP. The messages to be transmitted are published to an address (called a topic), which also resembles a directory structure in a file system. Customers in turn can subscribe to various topics, thus being able to receive the messages that other customers post in this topic.
+CoAP
+The CoAP was created by the Internet Engineering Task Force (IETF) working group called Constrained RESTful Environments (CoRE), currently composed of Carstem Bormann, Andrew McGregor and Barry Leiba. The group began operations in March 2010 to provide a framework for applications that manipulate simple features located on interconnected devices in limited networks, from applications that monitor temperature sensors and power meters to control actuators such as switches or electronic locks, as well as applications that manage the devices that make up the network, according to the IETF (Castellani et al., 2010).
+The first draft for the CoAP was published in the IETF in June 2010. Throughout the time the document had in all eighteen versions so that in 2014 it became a Request for Comments (RFC). CoAP is a node-oriented and restricted- network transfer protocol (considering nodes with small amounts of RAM and networks in which the packet loss rate is high) (Shelby, Hartke, & Bormann, 2014). The protocol was designed for M2M applications, machine to machine such as smart energy and home automation. It defines four types of messages: Confirmable, Non-confirmable, Acknowledgment, and Reset (RFC 7252, 2014, p.8).
+• Confirmable (CON) are messages that need to be confirmed on the destination. Thus, when there is no packet loss, each message of this type results in a message of type Acknowledgment or Reset;
+• Non-confirmable (NON) messages are messages that do not require acknowledgment of receipt. This feature is useful in the case of an application that receives constant readings from a temperature sensor, for example in a very short space of time, where the loss of one or other large message misses the message exchange;
+• Acknowledgment are messages that confirm receipt of a Confirmable message;
+• Reset indicates that another message (CON or NON) was received, but for lack of any context it could not
+be properly processed. It may occur in case some device has restarted and the sent message has not been properly interrupted (Shelby, Hartke, & Bormann, 2014).
+2018 Paper No. 26 Page 4 of 9
+MODSIM World 2018
+
+Virtual and Augmented Reality
+Several 3D visualization systems have been proposed in the Literature. This paper, however, focuses on the Augmented Reality, Mixed Reality and Computational Holography, as described in the following.
+Virtual Reality
+Virtual reality (VR) is described as an advanced user interface, based on the 3 Is pillars: interaction, immersion and imagination (Burdea Grigore & Coiffet, 1994). However, a VR based interface should allow the user to use their intuitive skills and knowledge to manipulate the virtual objects (Kirner & Siscoutto, 2007). VR applications are found almost everywhere, like games, simulations, specific training. A large area of knowledge that VR has shown to be promising in medicine, training prospective practitioners and viewing medical examination.
+Augmented Reality
+Augmented Reality (AR) is the insertion of virtual objects into the physical environment, shown to the user, in real time, with the support of some technological device, using the real environment interface, adapted to visualize and manipulate the real and virtual objects (Kirner & Siscoutto, 2007). However, AR allows the user to see the real world, with virtual objects superimposed or composed with the real world. Therefore, AR complements reality instead of completely replacing it (Azuma, 1997). Every AR solution generate virtual elements in the real world and make the user want them to be part of the medium to which they are inserted (Cardoso et al., 2007). AR can be used in several areas acting among them: education, training, fun, medical. Although there are many restrictions on applications, AR has shown promising results for medical training and viewing of medical exams as we move from static 2D imaging to a dynamic 3D visualization.
+Mixed Reality and Computational Holography
+Mixed Reality (MR) can be defined as the amplification of sensory perception through computational resources (Cardoso et al., 2007). It allows for a more natural interface when working with computer-generated data and images across computing data and real-world information. One of the most important characteristics of MR is that the interaction occurs within the real environment that surrounds the user, thus guaranteeing the conditions necessary to interact with this data naturally. Accordingly, MR uses the association of VR and real environment, offering the user a better perception of the environment and favoring their interaction with it. A holographic model can be brought to life by a holographic 3D display (a display that operates through the interference of coherent light). Consequently, in recent times the term Computer Generated Holography is increasingly being used to denote the whole process chain of synthetically preparing holographic light wavefronts suitable for observation. Due to wearable computer technology, it is possible to bring up, in real time, indoor mapping and interaction with holograms in a MR environment, enabling the user to work with digital content as part of the real world (Cardoso et al., 2007).
+RELATED WORK
+Terroso-Saenz et al. (2017) presented an IoT Energy Platform (IoTEP) which attempts to provide the first holistic solution for the management of IoT energy data. The platform has been based on FIWARE and is suitable to include several functionalities and features that are key when dealing with energy quality assurance and support for data analytics. As part of this work, the platform IoTEP was tested with a real use case that includes data and information from three buildings totalizing hundreds of sensors. The platform has exceeded expectations proving robust, plastic and versatile for the application at hand.
+Alam et al. (2017) presents an AR and VR based IoT prototype system. According to the authors, current technology is not acceptable because of significant delays in communication and data transmission, missing multi-input interfaces, and simultaneous supervision of multiple workers who are working in the extreme environment. The aim is to technically advance and combine several technologies and integrate them as integral part of a personnel safety system to improve safety, maintain availability, reduce errors and decrease the time needed for scheduled or ad hoc interventions. The research challenges lie in the development of real-time data-transmission, instantaneous analysis of data coming from different inputs, local intelligence in low power embedded systems, interaction with multiple on- site users, complex user interfaces, portability and wearability.
+2018 Paper No. 26 Page 5 of 9
+MODSIM World 2018
+
+Wang et al. (2016) propose a novel IoT access architecture based on field programmable gate array (FPGA) and system on chip (SoC), which can provide a unified access to the IoT for a wide variety of low-speed and high-speed devices with associated extendibility and configurability. The results indicate that the system can provide good performance in practical application.
+The work proposed by Pereira et al. (2016) presents an IoT solution called SmartPlace, which aims to automatically manage existing air conditioning and light bulbs in a closed environment, promoting energy savings and providing more comfort and practicality to its users. According to the authors, the integration of the system will enable the decision making on how to best manage the air conditioners and light bulbs of each room of an environment.
+SYSTEM DEVELOPMENT
+Hardware
+Basically, the project involves 4 different hardware components, namely:
+• ESP-8266 Wi-Fi module (NodeMCU);
+• Sensor de Corrente ACS712 -5A a +5A;
+• LEDS;
+• Motion Sensor HC-SR501.
+A virtual environment was created to represent an electrical substation for monitoring and control. The AWS
+CLOUDMQTT platform was used as a broker. The proposed architecture is presented below, Figure 2.
+Figure 2. Diagram of the proposed architecture.
+ESP-8266 Wi-Fi module (NodeMCU)
+The ESP-8266 module (Figure 3a) is a microcontroller with integrated Wi-Fi that can be programmed by the native SDK, using Arduino IDE. The version of the Arduino used was 1.8.2. Through integrated Wi-Fi, data can be sent and received through Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) protocols. The Wemos D1 mini version of the ESP-8266 module was used in this work.
+ACS712 Current Sensor
+The ACS712 current sensor performs accurately current measurements with the ACS712 current sensor (Figure 3b). This sensor uses the Hall effect to detect the magnetic field generated by the current pass, generated at the output of the module (pin out).
+MODSIM World 2018
+ 2018 Paper No. 26 Page 6 of 9
+
+Motion Sensor HC-SR501
+The presence and motion sensor HC-SR501 PIR (Figure 3c) is a module that uses a PIR sensor (pyroelectric), capable of detecting the variation of infrared light emitted by the radiation of the human body. In this way, it is able to detect movement in an environment when a radiation emitting body moves within the detection area of up to 7 meters.
+Software
+CloudMQTT - Broker
+CloudMQTT are managed Mosquitto servers in the cloud. Mosquitto implements the MQ Telemetry Transport protocol, MQTT, which provides lightweight methods of carrying out messaging using a publish/subscribe message queueing model. Message queues provide an asynchronous communications protocol, the sender and receiver of the message do not need to interact with the message queue at the same time.
+Messages placed onto the queue are stored until the recipient retrieves them or until the messages times out. MQTT and Mosquitto are for good use by bandwidth sensitive applications. CloudMQTT let you focus on the application instead of spending time on scaling the broker or patching the platform. The Figure 4 shows a diagram by CloudMQTT.
+MODSIM World 2018
+                   Figure 3. ESP-8266 Wi-Fi module (a). ACS712 current sensor (b). Presence and motion sensor HC-SR501 PIR (c).
+   Figure 4. Publish message model. (CloudMQTT Documentation, 2018)
+The Virtual Environment
+Initially a virtual environment (Figures 5 and 6), was developed to represent a small electrical substation. It was developed using the game engine Unity 3D, where information regarding the consumption of a transformer as well as the status of the disconnect switches were informed through a panel within the virtual environment when the user pointed to the object referred to in the scene.
+2018 Paper No. 26 Page 7 of 9
+
+A presence sensor was used to simulate the presence of foreign objects near the transformer. When it triggers, a point is displayed in the virtual environment indicating which motion was performed. To communicate between the virtual environment and the objects in the real environment, such as sensors and switches, three topics were created to communicate with the broker:
+• Key: topic that works with messages, open and close;
+• Motion: topic that works with messages, detect and notdetect;
+• Current: topic that works with messages, value.
+MODSIM World 2018
+  Figure 5. Virtual environment with closed status selected.
+  CONCLUSION
+Figure 6. Virtual environment with opened status selected.
+This article presents a prototype of a monitoring application of an electrical substation based on IoT technology. The system can perform real-time monitoring and display online operations, consumption information of certain items, early warning and location of the area where movements were detected. All this information is displayed to the user using a virtual environment.
+Thus, it was possible to identify that the use of the MQTT communication protocol has proved to be efficient for IoT's environments, demonstrating a great speed in the exchange of information between the connected objects as well as the low bandwidth consumption. It was also possible to prove that the use of virtual environments
+for this type of management allied to IoT, becomes a great tool for monitoring and managing real environments.
+For the next steps, it is intended to use other sensors to be able to provide a better acknowledge of the real status of the equipment and connect them to the virtual environment, making all the necessary information to be in the same environment.
+2018 Paper No. 26 Page 8 of 9
+
+REFERENCES
+Alam, M. F., Katsikas, S., Beltramello, O., & Hadjiefthymiades, S. (2017). Augmented and virtual reality based monitoring and safety system: A prototype IoT platform. Journal of Network and Computer Applications, 89, 109- 119.
+Azuma, R. T. (1997). A survey of augmented reality. Presence: Teleoperators & Virtual Environments, 6(4), 355- 385.
+Burdea Grigore, C., & Coiffet, P. (1994). Virtual reality technology. London: Wiley-Interscience.
+Cardoso, A., & Lamounier, E. (2006). A realidade virtual na educação e treinamento. TORI, Romero; KIRNER, Claudio; SISCOUTO, Robson. Fundamentos e Tecnologia de Realidade Virtual e Aumentada. Belém: SBC, 304- 312.
+Cardoso, A., Kirner, C., Júnior, E. L., & Kelner, J. (2007). Tecnologias e ferramentas para o desenvolvimento de sistemas de realidade virtual e aumentada. Editora Universitária UFPE, 1-19.
+Castellani, A. P., Gheda, M., Bui, N., Rossi, M., & Zorzi, M. (2011, June). Web Services for the Internet of Things through CoAP and EXI. In Communications Workshops (ICC), 2011 IEEE International Conference on (pp. 1-6). IEEE.
+CLOUDMQTT. CloudMQTT Documentation. Retrieved: feb. 06,2018 from <https://www.cloudmqtt.com/docs.html>.
+Constrained application protocol: request for comments 7252. Jun. 2014. Disponível em: <https://tools.ietf.org/html/rfc7252>. Acesso em 27 dez 2017.
+da Silva, T. B., Rosa, M., Pessoa, C. R. M., & Jamil, G. L. (2015). A Internet Das Coisas: Será A Internet Do Futuro Ou Está Prestes A Se Tornar A Realidade Do Presente?. Engenharias On-line, 1(1), 41-50.
+Faccioni Filho, Mauro. (2016). Internet das Coisas (Internet of Things).
+Jaffey, T. (2014). Mqtt and coap, iot protocols. Feb-2014.[Online]. Available: http://www. eclipse. org/community/eclipse_newsletter/2014/february/article2. php.[Accessed: 24-Mar-2016].
+Kirner, C., & Siscoutto, R. (2007, May). Realidade virtual e aumentada: conceitos, projeto e aplicações. In Livro do IX Symposium on Virtual and Augmented Reality, Petrópolis (RJ), Porto Alegre: SBC.
+Li, S., Da Xu, L., & Zhao, S. (2015). The internet of things: a survey. Information Systems Frontiers, 17(2), 243- 259.
+Minerva, R., Biru, A., & Rotondi, D. (2015). Towards a definition of the Internet of Things (IoT). IEEE Internet Initiative, 1.
+Peña-López, I. (2005). ITU Internet report 2005: the internet of things.
+Pereira, J., Batista, T., Cavalcante, E., Soares, B. G., & Alves, M. Uma Solução de IoT para Uso Eficiente de Energia Elétrica em Prédios Inteligentes.
+Shelby, Z., Hartke, K., & Bormann, C. (2014). The constrained application protocol (CoAP). Shelby, Z., Hartke, K., & Bormann, C. (2014). The constrained application protocol (CoAP).
+Terroso-Saenz, F., González-Vidal, A., Ramallo-González, A. P., & Skarmeta, A. F. (2017). An open IoT platform for the management and analysis of energy data. Future Generation Computer Systems.
+Tori, R., Kirner, C., & Siscoutto, R. A. (2006). Fundamentos e tecnologia de realidade virtual e aumentada. Editora SBC.
+Vasseur, J. P., & Dunkels, A. (2010). Interconnecting smart objects with ip: The next internet. Morgan Kaufmann.
+Wang, S., Hou, Y., Gao, F., & Ji, X. (2016, December). A novel IoT access architecture for vehicle monitoring system. In Internet of Things (WF-IoT), 2016 IEEE 3rd World Forum on (pp. 639-642). IEEE.
+Whitmore, A., Agarwal, A., & Da Xu, L. (2015). The Internet of Things—A survey of topics and trends. Information Systems Frontiers, 17(2), 261-274.
+ZAMBARDA, P. (2014). Internet das Coisas: entenda o conceito e o que muda com a tecnologia.
+2018 Paper No. 26 Page 9 of 9
+MODSIM World 2018

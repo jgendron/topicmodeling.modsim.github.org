@@ -1,0 +1,140 @@
+ABSTRACT
+Cellular Dynamics During Epicutaneous Immunotherapy Using Agent Based Modeling
+Andrew Hinton
+Old Dominion University Norfolk, Va Ahint008@odu.edu
+Food allergies are a growing public concern where strict avoidance of the offending allergen prevents life threatening allergic reactions. Recently, results from epicutaneous allergen specific immunotherapy (EPIT) clinical trials have been promising, where this method of treatment may become an attractive treatment option for food allergy sufferers in the future. While this evidenced based therapy is encouraging, many of the underlying mechanisms of allergen specific desensitization remain unknown. Langerhans Cells (LC), a specialized dendritic cell, are potent antigen presenting cells that reside mainly in the epidermis where they scan the microenvironment for pathogens and foreign material. Recent studies have shown LC are important mediators of immunotolerance, where they exert selective control over tolerance and immunity. In order to uncover some of the complex cellular interactions between immune cells during EPIT, a novel agent based model was developed and analyzed to describe how transdermal administration of peanut allergens stimulate the migration of Langerhans cells from the epidermis to the regional lymph nodes. The epidermal and dermal layers of the skin along with lymphatic vessels were modeled in Netlogo3D. Fine-tuned agent based models focused on EPIT may elucidate enigmatic mechanisms governing EPIT which could be useful in customizing treatment plans based on patient specific parameters and optimizing therapeutic outcomes.
+ABOUT THE AUTHOR
+Andrew Hinton is a graduate student at Old Dominion University where he is pursuing a MS in Modeling and Simulation. Mr. Hinton is also a Modeling and Simulation Engineer at Newport News shipbuilding where he is responsible for the analysis of complex manufacturing simulations. Currently, Mr. Hinton’s research is centered on modeling and simulating the dynamics between various immune system components during allergen specific immunotherapy (AIT) where the resulting simulations can be used to generate laboratory testable hypothesis that could advance knowledge, a treatment or a cure for food allergies. Mr. Hinton’s research also includes the exploration and application of agent-based and system dynamics modeling methodologies to immune system dynamics during and after AIT. Additionally, Mr. Hinton is involved in Cancer Immunotherapy Research at Old Dominion University where he is investigating the relationship between populations of T regulatory cells and immunotolerance of tumor cells. Mr. Hinton holds an Associates of Applied Science in Marine Engineering and Bachelors of Science in Mathematics with a focus on Applied Mathematics.
+2016 Paper No. 50 Page 1 of 8
+MODSIM World 2016
+
+Cellular Dynamics During Epicutanenous Immunotherapy Using Agent Based Modeling
+Andrew Hinton
+Old Dominion University Norfolk, Va Ahint008@odu.edu
+Introduction
+With an estimated 15 million people suffering from food allergies, this seemingly asymptomatic condition can easily lead to anaphylaxis which, in severe cases, can result in death (Facts and Statistics - Food Allergy Research & Education. 2015). Currently, there is no cure for food allergies and meticulous avoidance is the only treatment. Astonishingly, EPIT was shown to be successful in 1921 by Vallery-Radot where allergen was placed onto scarified skin resulting in decreased allergy symptoms in patients allergic to horses (Senti, von Moos, & Kündig, 2014). EPIT is administered with a patch placed over the skin and serves as a safe and painless alternative to subcutaneous immunotherapy (Senti et al.). The epidermis, the outermost layer of skin, is uniquely suited for allergen administration because of its vast population of potent antigen presenting LC and its lack of vascularization (Senti, von Moos, & Kündig, 2011). Since the epidermis is made up of nonvascularized tissue, the risk of allergen cross linking with IgE coated mast cells, basophils and eosinophils is minimal thus reducing the risk of severe allergic reactions. As shown in (Senti, von Moos, & Kündig, 2011) EPIT has an excellent safety record.
+Overview of Model Component Langerhans Cells
+Langerhans cells are a type of professional antigen presenting dendritic cell that are found in the epidermis (Romani, Clausen, & Stoitzner, 2010) LC alert the immune system of invading antigen by sampling, processing, and presenting substantial amounts of antigen to T-Cells. After antigen has been processed, LC mature and migrate from the epidermis to regional lymph nodes via the afferent lymphatics. In (Shklovskaya et al., 2011), direct evidence was found that suggest Langerhans are precommitted to inducing peripheral tolerance. Peripheral tolerance is characterized by T-cell anergy and activation-induced cell death. The aim of EPIT is to induce tolerance by targeting the LC in the epidermis which present antigen to T-cell in a way that does not allow or encourage an immune response.
+Peanut Allergen
+Peanuts, Arachis hypogaea, are groundnuts that belong to the Leguminosae family (Sharma & Bhatnagar, 2006). Peanut allergen belongs to a specific group of protein superfamilies’ that includes cupin, prolamin, and the plant defense proteins (Zhuang & Dreskin, 2013). To date, there are 17 allergens associated with peanuts that are documented in the Allergen Nomenclature database that is managed by the World Health Organization (WHO). Of the known peanut allergens, 35-95% of patients allergic to peanuts are sensitized to Ara h 1 and 95% are sensitized to Ara h 2 (Yang Zhou et al., 2013). Ara h 1, a glycoprotein, is used in this model to represent the peanut extract used in the simulation.
+Skin
+The major layers of the skin are the epidermis, dermis and hypodermis where the epidermis represents the outermost layer of skin and the hypodermis makes up the inner most. This model focuses on the epidermal and dermal layers of skin. The epidermis is further broken down into the Stratum Corneum, Stratum Lucidum, Stratum Granulosum, Stratum Spinosum, and the Stratum Basale. The stratum corneum, the apical layer, is commonly thought to acts as a
+MODSIM World 2016
+   2016 Paper No. 50 Page 2 of 8
+
+barrier that prevents the entry of environmental antigens through the skin, however the skin is a permeable and antigen and allergen can penetrate (Berard, Marty, Nicolas, 2003).
+Cytokines
+Cytokines or cell signaling molecules, are used in this model to create the dynamic cytokine environment found during EPIT that leads to LC activation and migration. IL-1β is a multifunctional cytokine that is expressed by keratinocytes (KC) and LC in the epidermis and functions to initiate the immune response (Uchi, Terao, Koga, & Furue, 2000). TNF-α is produced by KC and LC in the epidermis and functions to induce adhesion molecules that encourages neutrophils and lymphocytes to migrate to the skin (Uchi, Terao, Koga, & Furue, 2000). Based on (Villablanca & Mora, 2008), LC need the help of both IL-1β and TNF-α in order to cross the epidermal basement membrane during migration to regional lymph nodes.
+Model Design
+The 3-D environment in (Figure 1) was modeled with the dimensions [40 x 40 x 90] (XYZ) patches in NetLogo. The brown layer represents the stratum corneum, the pink layer represents remaining epidermis and the layer below (not colored) represents the dermis. In the model, lymph vessels are represented as blue cylinders and are located lower in the dermis. A single model patch represents 20 μm in length, width and height equating to a volume of 8000 μm3. The scaled dimensions of the virtual environment are [800 x 800 x 1800] μm. The Stratum Corneum was modeled 20 μm or 1 patch thick and the remainder of the epidermis was modeled 60 μm thick. The dermis was sized at 75 patches or 1500 μm / 1.5mm. The Langerhans Cells in this model are located in the stratum spinosum and was modeled using
+the reference density of 18,217 – 27,955 LC from (Bauer et al., 2001). When this density was scaled for the stratum
+spinosum model environment:
+Resulting Range = ((0.06∗0.8∗0.8)𝑚𝑚3 * Reference Density) = 700 – 1073 LC , (1)
+MODSIM World 2016
+    mm3
+  Figure 1. Simplified 3D Environment of Integument.
+2016 Paper No. 50 Page 3 of 8
+1000 𝑚𝑚3 μm3
+ DBV technologies currently manufactures the VIASKIN Peanut Patch U.S. which is commonly used during EPIT. A review of the VIASKIN peanut patch patent 7,635,488 B2 revealed the dimensions of the patch is similar to the FINN chamber patch test device. Evaluation of the specifications for the FINN chamber revealed the patch has a contact surface of 50 mm2. The surface area of the Stratum Corneum of this model is 0.64 mm2. The model dose is based on 0.0004 μm dose
+of Ara h 1 protein which is ≅ 1 of the equivalent dose 512
+expected on a FINN chamber patch. The model assumes the protein is distributed evenly across the skin. The number of protein molecules are estimated in (Table 1). Protein molecules diffuse from the patch above to the patch below where flux is based on the allergen concentration gradient. For simplicity, lateral diffusion was not considered in this work but will be considered in future work. Penetration through the epidermal basement membrane by peanut protein is also not permitted in this model. The cytokines expressed by the KC (not modeled) where however allowed to diffuse in all direction.
+ 
+Table 1. Distribution and Estimation of Number of Protein Molecules per Simulated Dose
+Protein MW (kDa) Dose (μg)
+Protein Per NetLogo Patch
+Estimated Total Proteins 3.03 x 106
+MODSIM World 2016
+        Ara h 1 64 0.0004 1897
+Model Parameters and Agent Behaviors
+ The model parameters used in this simulation controls diffusion coefficients, antigen uptake, dose intervals and activation thresholds of LC. The parameters, their value ranges and description are listed in (Table 2).
+Table 2. Model Parameters
+    Parameter
+EpidermisDiffusionCoefficient(EDC)
+LC_AntigenUptake
+IL1BDiffusionRate
+TNFaDiffusionRate
+LC_IL_ActivationThreshold
+LC_TNFa_ActivationThreshold
+LangerhansCellPopulationThreshold DoseInterval_Days (DI)
+Value Range
+0 - 1
+0 to 1
+0 to 1
+0 to 1
+0 to 10000
+0 to 1000
+0 to 1073 0 to 60
+Description
+Controls the percentage of Protein diffusing through the epidermis
+Controls the percentage of antigen taken up by each LC at each Time Step
+Controls the percentage of IL1B that can diffuse at each time step
+Controls the percentage of TNF-a that ca diffuse at each time step
+Sets the number of IL1B protein received by the Langerhans Cell
+Sets the number of TNF-a protein received by the Langerhans Cell
+Regeneration rate for LC ensure LC maintain a steady state amount after others have migrated
+Control the amount of days between doses.
+     Each tick of the NetLogo model represents an hour and so the movement and diffusion rate of LC were adjusted to ensure movement and distances traveled closely replicate actual cellular motility. The feedback system shown in (Figure 2) depicts the positive feedback loop required for activation of LC via cell specific cytokines. The reinforcing cytokine loop follows the progression listed below:
+1) Allergen comes in contact with Keratinocyte.
+2) Keratinocytes secrete IL-1β
+3) Langerhans secrete IL-1β that interacts with KC
+4) KC then secrete TNF-α to LC where this process repeats as long as there is allergen present in the epidermis.
+When the two signals are received the activation and migration of LC from epidermis may occur.
+2016 Paper No. 50 Page 4 of 8
+
+Figure 2. Reinforcing Cytokine Loop.
+LC in this model process antigen, receive signals from IL-1β, TNF-𝛼 and activate based on the aggregation of cytokine signals and migrate to the nearest lymph vessel upon activation. Patch Variables act as keratinocytes and secrete cytokines if allergen is detected on the patch. Allergen is uniformly distributed throughout the patch variables that make up the stratum corneum. Once the dose interval has been detected the stratum corneum has allergen applied to the patches and on subsequent ticks the allergen diffuses toward the dermis.
+Results
+The goal of this model was to explicate LC dynamics during epicutaneous immunotherapy. As such, the primary variable of interest is the number of LC that become activated and subsequently migrate to regional lymph nodes during EPIT. An interesting result of this model was the relationship between the rate of protein diffusion through the epidermis and the number of activated LC. Additionally, the number of activated LC is shown to be remarkably sensitive to changes in the dose intervals during EPIT. The first experiment examined the sensitivity of the Epidermis Diffusion Coefficient on the number of activated LC and the results are shown in (Figure 3).
+MODSIM World 2016
+     Figure 3. Activated LC, EDC = 0.53, DI = 7 Days
+2016 Paper No. 50 Page 5 of 8
+Figure 4. Activated LC, EDC = 0.13, DI = 7 Days
+
+MODSIM World 2016
+    Figure 5. Activated LC, EDC = 0.93, DI = 7 Days
+In (Figure’s 3 – 6) the epidermis permeability ratio was varied and the result indicated a maximum number of Langerhans cells were obtained when the ratio was near 0.5. This was most likely due to the fact that Langerhans cells are not mobile and in the unlikely case the allergen does not encounter LC as it traverses further down into the epidermis where it can potentially cross the epidermal basement membrane (EBM) and encounter dermal dendritic cells, skin memory T-cells, macrophages and possible mast cells. In terms of custom patient treatment protocols, this result could imply the need to investigate how well a patient’s skin prevents the infiltration of allergen and how modulating doses or even the interval between doses affects clinical outcomes. To this end, in (Figure 6) another set of experiments were conducted where the dosing intervals were modulated. When the time between doses was decreased to 3 days, the total number of LC increased for all levels of the epidermis permeability ratio. Most notably, the number of LC migrating to the Lymph was 193% higher than with 7 days between doses. In (Figure’s 7-8), the total free antigen was tracked and it was found the more permeable the skin the greater the buildup of allergen in the epidermis which results in an increased likelihood the protein is able to penetrate the EBM.
+One thing not considered in this model is the memory skin T-effector and T-regulatory populations. In the event the T-memory cells encounter the allergen protein the chance of successful immunotherapy most likely decreases primarily due to T-Cell mediated immune cell infiltration. Finally, in (Figure 9) the distribution of antigen taken up by the LC was measured and the resulting distributions were calculated. The free antigen was calculated with a DI = 7 and the results are presented below:
+a) Epidermis Permeability = 0.12, Average Free Antigen After Dose = 0
+b) Epidermis Permeability = 0.31, Average Free Antigen After Dose = 0
+c) Epidermis Permeability = 0.53, Average Free Antigen After Dose = 2042
+d) Epidermis Permeability = 0.93, Average Free Antigen After Dose = 169671 (not shown, similar to (c))
+Here a pattern emerges whereas the higher the permeability ratio the higher the antigen in the epidermis. Also, the amount of antigen taken up by the LC is also elevated, indicating the number of LC may be the most critical component if the skin is more permeable due to dermatitis or a similar skin impairment.
+Figure 6. Activated LC, EDC = 0.53, DI = 3 Days
+     Figure 7. Total Free Allergen, EDC = 0.53, DI = 7 Days
+2016 Paper No. 50 Page 6 of 8
+Figure 8. Total Free Allergen, EDC = 0.53, DI = 7 Days
+
+MODSIM World 2016
+      (a)
+(b)
+Figure 9. Distribution of Antigen on Activated LC after 2 Doses (48 Hours).
+ (Figure 10) depicts a sample run of the NetLogo model where the allergen gradient, LC, dermal dendritic cells, and early migration of LC from the epidermis to the lymph vessels can be seen.
+Figure 10. Sample NetLogo Model Run
+Conclusion
+This model demonstrates the versatility of agent based modeling in the immunology field. With customized treatment plans, patient treatment can be tailored to their current immune state and optimized to ensure the best result. The results of this model gives rise to patient specific factor of EPIT that could be further investigated in order to improve the efficacy of EPIT. Future work includes the refinement of model parameters in order to represent measurable quantities, the laboratory validation of theses parameters and the ultimate validation of the model using clinical data and the refined parameters. Additionally, future work will also include the addition of skin resident T regulatory cells, the potential activation of dermal dendritic cells and a heterogeneous peanut protein profile.
+ACKNOWLEDGEMENTS
+The author would like to thank Dr. Rick Mckenzie of the Old Dominion University for his mentorship and continued help with his thesis project. The author would also like to thank Dr. Willy Wriggers and Dr. Sunil Joshi of Old Dominion University for their mentorship and professional guidance.
+REFERENCES
+Facts and Statistics - Food Allergy Research & Education. (n.d.). Retrieved November 15, 2015, from https://www.foodallergy.org/facts-and-stats
+   Berard F, Marty JP, Nicolas JF. Allergen penetration through the skin. Eur J Dermatol.2003;13(4):324–330
+ Romani, N., Clausen, B. E., & Stoitzner, P. (2010). Langerhans cells and more: langerin-expressing dendritic cell
+ subsets in the skin. Immunological Reviews, 234(1), 120–141.
+2016 Paper No. 50 Page 7 of 8
+(c)
+
+Senti, Gabriela et al. Epicutaneous allergen-specific immunotherapy ameliorates grass pollen–induced rhinoconjunctivitis: A double-blind, placebo-controlled dose escalation study. Journal of Allergy and Clinical Immunology, Volume 129 , Issue 1 , 128 – 135
+Senti, G., von Moos, S., & Kündig, T. M. (2014). Epicutaneous Immunotherapy for Aeroallergen and Food Allergy. Current Treatment Options in Allergy, 1(1), 68–78.
+Sharma KK, Bhatnagar-Mathur P (2006) Peanut (Arachis hypogaea L.). In: Wang K (ed) Methods in molecular biology, Agrobacterium Protocols, vol 343. Springer, New Jersey, pp 347–358, ISBN 1-58829-536-2
+Uchi, H., Terao, H., Koga, T. & Furue, M. (2000). Cytokines and chemokines in the epidermis. J Dermatol Sci 24 (Suppl. 1), S29–S38
+Yang Zhou, Jin-shui Wang, Xiao-jia Yang, et al., “Peanut Allergy, Allergen Composition, and Methods of Reducing Allergenicity: A Review,” International Journal of Food Science, vol. 2013, Article ID 909140, 8 pages, 2013. Zhuang, Y., & Dreskin, S. C. (2013). Redefining the major peanut allergens. Immunologic Research, 55(0), 125–134. http://doi.org/10.1007/s12026-012-8355-x
+MODSIM World 2016
+ Senti G, von Moos S, Kundig TM. Epicutaneous allergen administration: is this the future of allergen-specific
+ immunotherapy? Allergy. 2011;66:798–809.
+ Shklovskaya, E., O’Sullivan, B. J., Ng, L. G., Roediger, B., Thomas, R., Weninger, W., & Fazekas de St Groth, B.
+  (2011). Langerhans cells are precommitted to immune tolerance induction.
+2016 Paper No. 50 Page 8 of 8
+Proceedings of the National Academy of
+  Sciences of the United States of America,
+108(44), 18049–18054.
+ Villablanca, E. J., & Mora, J. R. (2008). A two-step model for Langerhans cell migration to skin-draining
+ LN. European Journal of Immunology, 38(11), 2975–2980.

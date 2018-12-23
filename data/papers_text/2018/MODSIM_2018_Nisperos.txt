@@ -1,0 +1,194 @@
+Saturnina Fabian Nisperos Old Dominion University Norfolk, VA snisp001@odu.edu
+Frederic McKenzie Old Dominion University Norfolk, VA rdmckenz@odu.edu
+A Sustainability Assessment Model for Crop Rotation Alternatives
+ABSTRACT
+Food security and sustainable agriculture are two of the challenges faced by nations globally. As a population grows, the demand for food rises. To keep up with the demand without compromising the environment, sustainable agriculture techniques are significantly being studied and advocated by concerned organizations like the United Nations (UN). The UN furthers sustainable agriculture through its Sustainable Development Goal 2 (SDG 2) which aspires to double the agricultural productivity and incomes of small-scale food producers and ensure sustainable food production systems and implement resilient agricultural practices.
+Smallholder farming households, which has an estimated global population of 500 million (around 2 billion people), rely on small-scale agriculture for their livelihoods. They are considered as the backbone of agricultural production in developing countries and they play a key role in upholding sustainability. Having a crop rotation sustainability assessment tool for smallholder farmers can aid them accordingly in their crop production planning and abet the advocacy of agriculture sustainability.
+Our research aims to develop a model-driven decision support tool for smallholder farmers to promote sustainability in their crop production practices. In this paper, we investigate the integration of crop simulation model and multi- criteria decision analysis as an approach for a dynamic and multi-criteria sustainability assessment of crop rotation alternatives.
+ABOUT THE AUTHORS
+Saturnina Nisperos is a Ph.D. student in Modeling and Simulation at the MSVE department of Old Dominion University. She received her BS in Computer Science and MS in Information Technology from Saint Louis University in Baguio City. She is a Fulbright grantee from the Philippines and affiliated with Mariano Marcos State University as assistant professor of computer science. Her current research interest is on developing decision support systems employing optimization, discrete event and agent-based modeling techniques.
+Frederic McKenzie is a professor and department chair of the MSVE Department at ODU where he currently serves as Principal Investigator (PI) and Co-PI on projects involving software architectures for simulation, behavior representation in simulations, and medical modeling and simulation. To date, his projects in these areas have led to several publications relating research in modeling human-like intelligent agents including crowds, formal descriptions of distributed simulation architectures, objective measures of successful prostate surgery, and augmenting standardized patients. Dr. McKenzie received his Ph.D. in computer engineering from the University of Central Florida in 1994. Both his M.S. and Ph.D. work have been in artificial intelligence - focusing on knowledge representation and model-based diagnostic reasoning.
+2018 Paper No. 13 Page 1 of 7
+MODSIM World 2018
+
+Saturnina Fabian Nisperos Old Dominion University Norfolk, VA snisp001@odu.edu
+INTRODUCTION
+Frederic McKenzie Old Dominion University Norfolk, VA rdmckenz@odu.edu
+A Sustainability Assessment Model for Crop Rotation Alternatives
+Sustainable agriculture promotes crop production practices that enhances productivity and profitability (economic) without harming the health of natural resources (environment) and the quality of life of the society (social). To keep up with the food demand without compromising the environment, sustainable agriculture techniques are significantly being studied and advocated by concerned local, national and international organizations. The United Nations (UN) furthers sustainable agriculture through its Sustainable Development Goal 2 (SDG 2) which endeavors to “end hunger, achieve food security and improved nutrition, and promote sustainable agriculture (IAEG-SDGs, 2017)”. Among the targets of SDG 2 are to double the agricultural productivity and incomes of small-scale food producers, ensure sustainable food production systems and implement resilient agricultural practices.
+Smallholder farmers are agricultural producers who cultivate land plots smaller than 2 hectares (Rapsomanikis, 2015; Nagayets, 2005) and they rely on small-scale agriculture for their livelihoods. With an estimated global population of 500 million, smallholder farm households (which amount to around 2 billion people), are considered as the backbone of agricultural production in developing countries as 80% of these countries’ food is a product of small-scale farm (International Food Policy Research Institute, 2013). Hence, they play a key role in the attainment of the SDG 2 targets. A decision support system (DSS) that promotes sustainable crop production practices can aid small-scale producers accordingly in their crop production planning and abet the advocacy of agriculture sustainability.
+Sustainable crop production practices involve selection of crops appropriate to the location and conditions of the farm, crops diversity, proper soil management and efficient use of farm resources. Among the practices endorsed by sustainable agriculture organizations is crop rotation – the planned successions of crops on the same field to improve soil nutrient levels, break pest cycles and reduce production risk (USDA Economic Research Service, 2017). By rotating crops with different nutrient needs and alternating deep and shallow rooting plants, good soil health and structure are achieved (NCR-SARE, 2013). DSS tools developed to promote crop rotation have diverse and genuine objectives, but the majority are mainly for experimental simulations, for experts use and not aimed for smallholder farmers. Limitations on crop rotation assessment methods include: non-dynamic assessment, lack of regard to the individual crop production preferences and goals of smallholder farmers, and restricted to single years and single crops rotation.
+Our research aims to develop a model-driven decision support tool for smallholder farmers to promote sustainability in their crop production practices. In this paper, we investigate the integration of crop simulation model and multi- criteria decision analysis as an approach for a dynamic and multi-criteria sustainability assessment of crop rotation alternatives.
+BACKGROUND
+Sustainability Assessment and Indicators
+With the challenges on agriculture sustainability, numerous research methods and tools have been built to promote sustainable crops production. Model-driven DSS is among the approaches explored to provide support to stakeholders in agriculture in their decision making. An increasing number of sustainability assessment tools have been developed to support stakeholders, like farmers and policymakers (Olde, Bokkers, & Boer, 2017). Sustainability assessment
+2018 Paper No. 13 Page 2 of 7
+MODSIM World 2018
+
+advocates agriculture sustainability by aiding stakeholders in evaluating the sustainability impact of their crop production choices. One method used to address the complex criteria of sustainability is by alternatives evaluation based on indicators with the aid of multi-criteria decision methods (Dury, Schaller, Garcia, Reynaud, & Bergez, 2012), rather than just selecting one solution. Indicator-based sustainability assessment approaches vary on how and what (economic, environmental, and social sustainability) indicators are measured and evaluated.
+In their sustainability assessment study, Castoldi and Bechini aggregated 15 economic and environmental indicator values to come up with a global sustainability index, which they used to assess the cropping systems at field level. The indicators were calculated using a large data set of cropping systems management for 131 fields in Northern Italy. The data set was obtained through a 2-year periodic interview with farmers and continuous monitoring of cropping systems at field level (Castoldi & Bechini, 2010). Figure 1 shows the indicators identified by (Castoldi & Bechini, 2010). The cropping systems they evaluated are continuous maize (Mc), maize and other crops (Mo), continuous rice
+  C1: Economy C2: Nutrient C3: Energy C4: Pesticide C5: Soil
+S1: Variable costs S2: Gross income S3: Gross margin
+S4: Nitrogen surface balance S5: Phosphorus soil surface balance
+S6: Energy input S7: Energy output S8: Energy gain
+S9-S12: Load Index (algae, crustaceans, fish, and rats)
+S13: Crop sequence indicator S14: Soil cover index
+S15: Soil organic carbon indicator
+(Rc), rice and other crops (Ro), winter cereals (Ce) and permanent meadows (Pm).
+Crop Simulation Model
+Crop simulation models evaluate the impact of climate, water, soil, agricultural inputs and management practices on crops. Crop models, like WOFOST (WOrld FOod STudies), simulate crop growth based on eco-physiological processes and how these processes are influenced by environmental conditions. WOFOST is a mechanistic simulation model that supports quantitative analysis of the growth and production of annual crops growing at any location based on the underlying processes (e.g. photosynthesis, respiration and environmental conditions). It has been tested by various researchers worldwide and has been applied for many crops of different climatic and management conditions (Wageningen Environmental
+Research, 2017).
+MODSIM World 2018
+                   Figure 1. Sustainability Indicators identified by (Castoldi and Bechini 2010)
+ The model requires crop, soil and weather input data sets and allows selection of the production level (potential, water- limited and nutrient-limited crop growth), crop calendar (start and number of years of simulation, options for start and end of crop), soil fertility parameters and the output options. It provides daily time step and summary of results including simulated data on total dry weight of storage organs, total above ground production, water balances of the whole system and the root zone, and, the amount of fertilizer that are needed to acquire potential or water-limited production. These output data are very significant and can be utilized to assess the sustainability impact of a specific crop or crop rotation.
+Multi-Criteria Decision Analysis (MCDA)
+Agricultural sustainability assessment is complex, and it involves numerous criteria that can be conflicting, and smallholder farmers may also have different needs and priorities. In the critical review of MCDA techniques of (Diaz- Balteiro, González-Pachón, & Romero, 2017), their results indicate that there is a proliferation on the utilization of MCDA techniques in aggregating sustainability criteria which signifies the importance of the method in this context. Furthermore, MCDA techniques have been regarded as an apt framework for assessing agricultural sustainability because of its capacity to evaluate diverse criteria and priorities (Talukder, Blay-Palmer, Hipeland, & vanLoon, 2017).
+The Analytical Hierarchy Process (AHP), developed by Dr. Thomas Saaty, is an MCDA method which decomposes a complex MCDA problem into a system of hierarchies. AHP is a theory of measurement by pairwise comparisons which derives priority scales through the experts’ judgements and it has been used in different settings for decision making in various projects (Saaty, 2008). It allows combination of both qualitative input with quantitative data and supports dimensionless analysis. Also, the consistency ratio estimates the consistency of the pairwise comparisons and allows checking of reliability. An acceptable consistency ratio value should be less than 10%.
+2018 Paper No. 13 Page 3 of 7
+Global Sustainability Index
+
+METHODS
+To provide a dynamic and multi-criteria sustainability assessment of crop rotation alternatives, we examined the integration of WOFOST and the AHP method. First, we assessed the applicability of the AHP method addressing the multiple criteria of sustainability and the diverse preferences of smallholder farmers. Next, we used WOFOST to simulate the crop growth and nutrient needs of alternatives. Finally, we fed the crop simulation results to the AHP model to supply dynamic values for the economic indicator (i.e. accounts for different location, climatic and management factors). In this paper we focused on one of the economic indicators, the gross income, which is the product of the alternative’s yield and its price.
+Multi-criteria Assessment using AHP
+With the set analysis goal of evaluating the agricultural sustainability of crop rotation, the AHP method was employed and its standard procedure (Figure 2) was followed. To facilitate comparison of the assessment results of the model with the sustainability assessment of Castoldi et al. (Castoldi & Bechini, 2010), the same sustainability indicators, sustainability function, parameters and thresholds were used in structuring the AHP model.
+Construct pairwise Compute priority Define problem Build hierarchy comparison matrices values and
+consistency ratio
+Figure 2. Standard procedure for AHP (Saaty 2008)
+MODSIM World 2018
+    Using the sustainability indicators and the alternatives from the benchmark study, the decision hierarchy was built with C1 - C5 as criteria, S1 – S15 as sub-criteria and Mc, Mo, Rc, Ro and Ce as alternatives. The sub-criteria values of the alternatives were derived using the sustainability function:
+s𝑖𝑖 = ((𝑥𝑥𝑖𝑖 − S𝑚𝑚𝑖𝑖𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 )/(S𝑜𝑜𝑜𝑜𝑜𝑜 − S𝑚𝑚𝑖𝑖𝑚𝑚𝑚𝑚𝑚𝑚𝑚𝑚 ))𝑘𝑘
+where xi, is the mean indicator value of alternative i; Sminmax, and Sopt are the threshold values of the sub-criteria; k sets thelinearornon-linearrelationship;and,s ∈R|0≥s ≤1.Thepairwisecomparisonmatricesarethenconstructed
+𝑖𝑖𝑖𝑖
+by comparing the derived sub-criteria values (or the sustainability index) of the alternatives using the pairwise
+⎧8 ∗ �v𝑖𝑖 − v𝑖𝑖�+ 1 v𝑖𝑖 ≥v𝑖𝑖
+function:
+where vi and vj are the corresponding sub-criteria values of alternatives, i and j; and, P𝑖𝑖𝑖𝑖 ∈ R | 19 ≥ P𝑖𝑖𝑖𝑖 ≤ 9. Lastly, the priority values of the alternatives and the consistency ratio are computed. The alternative with the highest priority
+value can be regarded as the best crop rotation alternative.
+Crop Simulation using WOFOST
+𝑓𝑓(P )⎪ 1
+𝑖𝑖𝑖𝑖 ⎨ , 𝑜𝑜𝑜𝑜h𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒
+⎪8∗�v −v�+1 ⎩𝑖𝑖𝑖𝑖
+  To supply dynamic values to the gross income indicator, we used WOFOST to simulate the yield of the Mc, Rc and Ce alternatives (Mo and Ro were not included in the experiment). The weather data input for the model was acquired from the NASA Prediction of Worldwide Energy Resource (POWER) using the coordinates of the South Milan Agricultural Park in Italy (45◦N, 9◦E). Unit and format conversions were implemented to the weather data to conform to the required format of the simulation model and the actual vapor pressure (e) was derived using the dew point temperature (𝑇𝑇𝑑𝑑). 𝑑𝑑
+𝑒𝑒 = 0.611(10𝑆𝑆𝑑𝑑 ), 𝑎𝑎𝑎𝑎𝑎𝑎 𝑆𝑆 = 7.5𝑇𝑇𝑑𝑑 (Brice & Hall, 2017) 237.3+𝑇𝑇𝑑𝑑
+ Table 1 lists the set of input data supplied into the crop model. The start year was set to 2002 and a consecutive 5- year simulation was performed. The crop files were primarily selected based on the regions and the simulated season of the crop model. The variable sowing dates (earliest and ultimate) used were based from the crop sowing dates
+2018 Paper No. 13 Page 4 of 7
+
+window indicated in the benchmark study. The soil type was set to EC2-medium being that the primary type of soil of the study area are loam, sandy-loam, and silt-loam. Moreover, the end day was set to end at the respective maturity stage of the alternatives.
+Table 1. Input Data for the Model
+The gross income was calculated using the simulated average total dry weight of storage organs (TWSO) multiplied by the average 5-year farmgate price of the crop. The historical data of price was acquired from the FAOSTAT database (FAO, 2018) of UN’s Food and Agriculture Organization (FAO).
+RESULTS AND DISCUSSION
+Multi-criteria Sustainability Assessment of Alternatives
+Table 2 shows the computed priority values of the alternatives when using equal weights (w) on the multiple criteria of sustainability. The results denote that the best crop alternative, with respect to the set goal criteria, is maize with other crops (Mo, 24%) and the least is continuous rice (Rc, 13.6%). Mo outperforms the other alternatives in the energy and soil management criteria (C3 and C5). The priority values suggest, however, that rice and other crops (Ro) is more favored when it comes to the economic nutrient management criteria (C1 and C2). These results are consistent with the findings of Castoldi et al. As to the reliability of the pairwise comparisons, the average consistency rating is 2.4% and all are less than 10%. The derived priority values enable analysis of the sustainability impact of the crop rotation alternatives which, when presented aptly, can support smallholder farmers in their decision making.
+Table 2. Priority Values Result (Equal Criteria Weights)
+To evaluate the applicability of AHP in addressing the diverse preferences of stakeholders, the crop rotation alternatives were assessed using the different criteria and sub-criteria preferences (weights) of the stakeholders (farmer, researcher, agronomist, decision maker and environmentalist) as identified in the benchmark study (results not shown in this paper). The AHP ranked the same top (1) crop rotation alternative as Castoldi et al.’s result for all stakeholder cases which demonstrates the capability of AHP to find the best alternative. There were few switches in the lower adjacent ranks in 3 of the stakeholder results but the negligible average difference in the priority values of these swapped alternatives (0.005) rationalizes the switch. These observations further support the applicability of the AHP method in addressing the multiple criteria of sustainability and the diverse preferences of smallholder farmers.
+MODSIM World 2018
+        Settings
+     Start year
+  2002
+ Consecutive years
+        5
+     Weather
+     South Milan (45◦N, 9◦E)
+   Crop
+     Maize: Grain maize 203
+Rice: Rice IR72
+Winter Cereals: Winter wheat 105
+   Start day
+  Variable sowing date
+Maize: End of March to April
+Rice: Mid April to end of May
+Winter Cereals: October or November
+Earliest Ultimate 85 120 100 150 275 335
+ End day
+        Maturity (<= max duration)
+     Soil
+     EC2-medium
+        W (%)
+   Mc
+     Mo
+      Rc
+  Ro
+      Ce
+   C1
+   20
+  4.2
+   3
+    4.3
+ 6.1
+     2.4
+  C2
+   20
+  1.2
+   4.7
+    4.4
+ 6.6
+     3.1
+   C3
+ 20
+ 5.5
+  6.8
+2.5
+  3.1
+ 2
+C4
+   20
+  4.6
+    3.6
+    0.8
+ 1.2
+    9.8
+  C5
+   20
+  4.6
+   5.8
+    1.6
+ 4.3
+     3.7
+    Priority
+      100
+       20.2
+          24
+           13.6
+     21.4
+           20.9
+    2018 Paper No. 13 Page 5 of 7
+
+Dynamic Assessment of Economic Indicator
+Figure 3 shows the comparison of the simulated and the benchmark study’s average gross income. The simulated value is consistently higher than the benchmark data. It can be noted, however, that there is an overlap between the two sets of data and the same sorted order can be
+observed (i.e. Rc with the highest calculated income
+MODSIM World 2018
+ and Ce with the least). This exhibits the capability of the crop model to simulate and estimate the yield of the alternatives provided the appropriate input data are set. Certainly, a more accurate yield can be obtained by calibrating the crop model, however, our study does not aim to predict the yield but to provide a lucid assessment of the sustainability impact of each crop rotation choice (i.e. the economic impact in this case).
+The simulated and computed gross income of the alternatives were fed into the AHP model and the sustainability impact and ranking of alternatives showed similar results when the data from the benchmark study were used. We also simulated the yield for the succeeding five years (2007-2011) and the results in Figure 4 demonstrates a significant decrease in yield in 2011 for Mc (12%) and Rc (22%) compared to their corresponding yield estimate in 2006. Ce, on the other hand, retains its average yield in general except for a slight dip (3%) in 2008. These changes in yield impose an impact to the crop prices and the overall sustainability assessment of alternatives which are valuable to the decision making of smallholder farmers. However, with a non- dynamic assessment method, these changes are not apparent which could lead to wrong decisions. This demonstrates the significance of integrating a crop simulation model into the sustainability assessment tool for a dynamic assessment of the indicators. Apart from the yield (TWSO), the crop model can also simulate the nutrient needs (nitrogen, phosphorous and potassium) and total above ground production (TAGP) of alternatives which can be utilized in the assessment of the nutrient management and energy management indicators, respectively. Moreover, the crop simulation model offers a more efficient way of evaluating the impact of alternatives compared to monitoring cropping systems in the field.
+CONCLUSION
+Figure 3. Average Gross Income Comparison
+  Figure 4. Simulated Average Yield of Alternatives
+ In this paper, we examined the use of crop simulation model and multi-criteria decision analysis as an approach for a dynamic and multi-criteria sustainability assessment of crop rotation alternatives. The comparable results of the AHP model to the benchmark study validates AHP as an apt method in handling the complex criteria of sustainable agriculture and the diverse preferences of stakeholders. Furthermore, the crop simulation results exhibit that simulating the yield of crop alternatives using a crop model provides a dynamic and more cost-effective method of assessing the economic impact of alternatives.
+2018 Paper No. 13 Page 6 of 7
+
+FUTURE WORK
+To assess the sustainability impact of a multi-year and multi-crop rotation, we plan to use the crop simulation model to evaluate the yield and nutrient needs of multi-crop successions. Further study is also needed to investigate the utilization of other simulation output parameters to evaluate the nutrient and energy management impact of crop alternatives.
+REFERENCES
+Brice, T., & Hall, T. (2017). Vapor Pressure Conversion. Retrieved from National Weather Service: https://www.weather.gov
+Castoldi, N., & Bechini, L. (2010). Integrated sustainability assessment of cropping systems with agro-ecological and economic indicators in northern Italy. European Journal of Agronomy (Elsevier), 59-72.
+Diaz-Balteiro, L., González-Pachón, J., & Romero, C. (2017). Measuring systems sustainability with multi-criteria methods: A critical review. European Journal of Operational Research (Elsevier), 258, 607-616.
+Dury, J., Schaller, N., Garcia, F., Reynaud, A., & Bergez, J. E. (2012). Models to support cropping plan and crop rotation decisions. A review. Agronomy for Sustainable Development, 32(2), 567-580.
+FAO. (2018). FAOSTAT. Retrieved from http://www.fao.org/faostat/en/#data
+IAEG-SDGs. (2017). Revised list of global Sustainable Development Goal indicators. UN Department of Economic
+and Social Affairs. Retrieved from https://unstats.un.org/sdgs/indicators/indicators-list/
+International Food Policy Research Institute. (2013). Smallholder Farming. Retrieved August 2017, from
+http://www.ifpri.org/topic/smallholder-farming
+Nagayets, O. (2005). Small Farms: Current Status and Key Trends Information Brief Definition of Small Farms. NCR-SARE. (2013). Crop Rotation. Retrieved August 2017, from http://www.northcentralsare.org/Educational-
+Resources/Regional-Program-Materials/NCR-SARE-Brief-Sheets-by-Topic/Crop-Rotation
+Olde, E. M., Bokkers, E. A., & Boer, I. J. (2017). The Choice of the Sustainability Assessment Tool Matters:
+Differences in Thematic Scope and Assessment Results. Ecological Economics (Elsevier), 77-85. Rapsomanikis, G. (2015). The economic lives of smallholder farmers: An analysis based on household data from nine
+countries. Rome: Food and Agriculture Organization of the United Nations.
+Saaty, T. L. (2008). Decision making with the analytic hierarchy process. Int. J. Services Sciences, 1(1), 83-98. Talukder, B., Blay-Palmer, A., Hipeland, K. W., & vanLoon, G. W. (2017). Elimination Method of Multi-Criteria
+Decision Analysis (MCDA): A Simple Methodological Approach for Assessing Agricultural Sustainability.
+Sustainability, 9(287).
+USDA Economic Research Service. (2017, April). Soil Tillage and Crop Rotation. Retrieved July 2017, from
+https://www.ers.usda.gov/topics/farm-practices-management/crop-livestock-practices/soil-tillage-and-crop-
+rotation/
+Wageningen Environmental Research. (2017). WOFOST - WOrld FOod STudies. Retrieved July 2017, from
+http://www.wur.nl/en/Expertise-Services/Research-Institutes/Environmental-Research/Facilities- Products/Software-and-models/WOFOST.htm
+2018 Paper No. 13 Page 7 of 7
+MODSIM World 2018

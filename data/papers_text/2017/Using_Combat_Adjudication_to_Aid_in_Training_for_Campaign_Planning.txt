@@ -1,0 +1,255 @@
+Using Combat Adjudication to Aid in Training for Campaign Planning
+Amy Grom NAVSEA, Joint Staff J7 Suffolk, VA amy.m.grom.civ@mail.mil
+Dr. Elaine Blount Michael K. Robel Suffolk, VA Suffolk, VA
+elaine.m.blount.ctr@mail.mil ABSTRACT
+The Joint Staff (JS) J-7 is developing Joint Training Tools (JTT) as modular simulation services to reside within the Joint Training Synthetic Environment (JTSE). The JTSE will be a cloud-based, web-enabled, enterprise environment providing scalable, on-demand, and operationally relevant training for military forces. The user orientated JTT design will emphasize ease of use by making the underlying tools processes more transparent, and output displays more understandable. While battlefield outcomes cannot be predicted with accuracy, components influencing the outcome can be analyzed to determine possible outcomes. Campaign planning incorporates force analysis including deployment, missions, equipment, capabilities, and environmental factors to determine if a desired outcome is achievable in a given situation. JTSE JTT utilize force structure data organized by Global Force Management Implementation Guidance (GFMIG) codes and include combat powers based upon equipment, training, and other military factors influencing battlefield results. The Combat Adjudication Service (CAS) uses this information to forecast reasonable outcomes of combat engagements represented in training environments. CAS performs combat adjudications as actions during runtime during event execution or as a data collection service to aid the training audience when employing forces in a synthetic training event. This paper provides a generalized review of how data from force structure is blended with equipment and environmental factors to forecast potential battlefield outcomes.
+ABOUT THE AUTHORS
+Amy Grom is a Modeling and Simulation (M&S) Development Program Manager (PM) with JS J7 EAD. She is a US Army veteran with 15 years of service in the Signal Corps and Civil Affairs. She is the US project lead in NATO Modelling & Simulation Group for Modelling & Simulation as a Service (MSG-136). She has a Bachelor degree in Computer Science from Western Connecticut State University. Amy has been involved with M&S and training with the Army and JS for 15 years.
+Dr. Elaine Blount works for Joint Staff J7 as the Joint Training Data Services (JTDS) Technical Contractor Lead. Elaine has worked on the data team for JTT, designed and coded portions of the CAS, has worked as task lead for Enterprise Data Services, and has written flight simulation software as part of the development team for the NASA Langley Standard Real-Time Simulation. Elaine received her PhD in Modeling and Simulation from Old Dominion University, her Masters in Computer Science from the College of William and Mary, and her Bachelors of Science from Virginia Tech.
+Michael Robel works at JS J7 as a contractor where he prototyped the CAS. He graduated from the University of Florida with a Bachelor of Arts in History and earned certificates from Georgia Technical Research Institute in System Engineering and Modeling and Simulation. He was a commissioned an Officer in the United States Army for 16 years. He served in the 11th Armored Cavalry Regiment guarding the German Interzonal Border and the 1st Infantry Division (Mechanized), and served in Desert Storm. He has worked in the Defense Simulation and Entertainment Game industries as the Harpoon II Program Manager, Database Manager for the 87th Exercise Division Simulation Center, and managed the 2nd Armored Cavalry Regiments Simulation Center.
+2017 Paper No. 26 Page 1 of 10
+MODSIM World 2017
+
+Using Combat Adjudication to Aid in Training for Campaign Planning
+Amy Grom NAVSEA, Joint Staff J7 Suffolk, VA amy.m.grom.civ@mail.mil
+INTRODUCTION
+Dr. Elaine Blount Michael K. Robel Suffolk, VA Suffolk, VA
+elaine.m.blount.ctr@mail.mil
+Joint Staff (JS) J7, Deputy Directorate Joint Training (DDJT) is developing the Joint Training Tools (JTT) architecture to facilitate Joint training that includes all the phases of operations including the planning for training events and training for campaign planning in accordance with the Joint Intelligence (JP 2-0, 2013) and the Joint Operation Planning (JP 5-0, 2011) processes. Within the JTT campaign planning process, a scenario is written, a plan is created, and forces are requested and allocated to perform combat and combat support tasks. Simulations can represent these scenarios and associated combat adjudications at an operational or above levels of warfare. The training audiences can gain insights from simulations to improve their campaign plans. This improvement is possible because campaign planning is an iterative process where planners need to obtain feedback of the potential consequences of adjustments (i.e., decisions made) to force allocations with respect to number and types of employed forces (JP 5-0, 2011; Santacroce, 2013). JTT requests and allocates forces based upon capabilities. Specific capabilities are manifested in combat powers based upon the domain of unit equipment. As a planner places units in specific situations where red forces are expected, the planner obtains potential combat results based upon the combat power scores calculated.
+While several algorithms exist to compute aggregate combat, JS J7 selected a Predictive Force Ratio rule set because it is relatively easy to understand, explain, program, and is broadly able to "replicate" the results of historical battles. Additionally, this rule set is computationally fast to run, and is easily adapted to the existing inputs and outputs of other components of the JTT. It is based on and expanded from Dupuy's Quantified Judgement Method of Analysis (QJMA) and Tactical Deterministic Model. DDJT simulation designers rejected Lanchester based models (e.g., Epstein) because they model homogeneous forces, do not provide advance rates, use a constant attrition factor, do not fully consider logistics, or replacements (Epstein, 1985). Although Biddle's work does encompass many of these the same Lanchesterian shortfalls, it does provide a better treatment of theater battlefield geometry.
+The CAS design uses Dupuy's data tables in whole or in part (e.g., terrain, weather, water obstacles, and advance rates). However, CAS implementation of combat adjudication algorithms differs from Dupuy's implementation by concentrating on how platform-level combat power is computed. The CAS approach takes separate inputs for ground, logistical, air, and naval combat interactions, and normalizes the interactions of all platforms into the representation of the US Army M1A2 Main Battle Tank. These normalizations (i..e., adaptations of the M1A2 Tank combat power algorithm) are described in the equations descriptions contained in subsequent paragraphs. Our reduced data set enables others to easily implement this approach in their work, allows incorporation of other combat power computation methods to complement CAS representation, and allows the services to run faster than real time. Additionally, the CAS design was notably influenced by the Joint Force Deployment Estimator (JFDE) (Roemmich, 2015) used by the Joint Forces Staff College (JFSC) for classroom analysis of battlefield plans and Courses of Action (COAs). Based on the JFSC work, the CAS design expands ground movement from a single Line of Operations/ Axis of advance, to multiple lines/ axes, and in improving the modeling of air and naval combat.
+COMPUTING UNIT POWER VALUES
+Determining data and values used for the Combat Adjudication algorithms starts with modeling the Order of Battle (OOB). Figure 1 graphically depicts relationships among the various elements of the OOB model. First, units are assigned to templates based on their organization to quantify their capabilities. These capabilities are then rolled up by their commanding units for determining each unit’s aggregated score. Platforms provide the base unit capability. Unit capability is composed of weapon characteristics (e.g., weapons and ammunition), protection characteristics (e.g., armor), and mobility (e.g., speed across open terrain). The values are sorted based upon the platform domain: ground, air defense, interdiction, etc. within the respective template that the units are assigned.
+2017 Paper No. 26 Page 2 of 10
+MODSIM World 2017
+
+Of note, the discussion of how to assign scalar values to all the various CAS variables, and the identification of combat power scores is outside the scope of this paper. However, discussion below does address how the CAS variables and combat power scores are related. This discussion starts with an understanding that CAS combat power determinations are governed by the following high level rules:
+• Weapon values are computed for each weapon with respect to its attrition domain (i.e., targets domain)
+• Weapon values are added to the platforms on which they reside
+• Combat power values are calculated for units based upon the platforms and subordinate units
+• As units are organized, the combat values are rolled-up through the OOB Hierarchy
+Figure 1. Combat Adjudication System Relationships ADJUDICATION ALGORITHM
+The algorithm uses the combat power and other variables to adjudicate a combat situation. Non-combat power variables describing the combat environment or other situational information are listed in Table 1, and are a subset of variables (Dupuy, 1985). Variable values are assigned based upon the combat situation and often determined using lookup tables as part of the adjudication software. Some variables have factors for computing combat power, and a separate factor for computing losses. Loss factors variable names end with an “L”. Of note, the Allocated (e.g., ALL) variable is not a loss factor. Combat results are calculated for air, naval, ground logistical (i.e, sustainment), and ground combat battles (i.e., engagements). Unit Combat Power scores are calculated prior to adjudication and are not based upon, but are modified by, the situation/ environment.
+Table 1. Combat Variables
+MODSIM World 2017
+                Variable
+    Description
+       Battle Domain
+     Terrain (TER), (TERL)
+  Terrain where battle is fought.
+   Sustainment, Ground
+     Weather (WEA), (WEAL)
+Weather where battle is fought.
+  Air, Sea, Sustainment, Ground
+    Water Obstacle (WO)
+ Water obstacles encountered/present in area.
+     Sustainment, Ground
+    Role (ROLE)
+   Attacker/Defender.
+      Air, Sea, Sustainment, Ground
+     Posture (POST), (POSTL)
+  Type of attack or defense.
+   Air, Sea, Sustainment, Ground
+   2017 Paper No. 26 Page 3 of 10
+
+Units have several combat power scores:
+• Ground Combat Power (GRND) –The sum of unit Direct Fires (DF) and Indirect Fires (IF). This includes fires from ground units, naval vessels, and aircraft directly applied to ground combat.
+• Air Defense (AD) – Ground to Air (G2A), Surface to Air (S2A), or Air to Air (A2A) fires.
+• Anti-Tactical Ballistic Missile (ATBM) – AD fires only used to intercept Tactical Ballistic Missiles (TBMs).
+• Surface Warfare (SUW) – Fires directed against naval surface vessels from surface and sub-surface vessels,
+aircraft, and coastal defense units.
+• Anti-Submarine Warfare (ASW) – Fires directed at submarines from surface vessels and other submarines.
+• Cruise Missiles (CMs) – Fires directed against interdiction targets from ground, surface, or aircraft.
+• Electronic, Information, and Cyber (EIC) – Currently, the operator of another JTT manually inputs this factor
+degrading Mission Command; it will eventually be computed allowing it to more realistically affect combat
+operations.
+• Tactical Ballistic Missiles (TBMs) – Ground or sea-based TBMs (i.e., a specialized form of IF) that can be
+intercepted.
+• Cargo Capacity (CARGO) – Ability to ship/ maintain supplies.
+The CAS accommodates multiple LOOs, but events on one LOO do not affect other LOOs. The user/ training audience modifies plans and execution based on results from all LOOs as needed to accomplish the mission as portrayed by other elements of the JTT. Domain events affect other domains within a LOO. Each LOO has four components to combat adjudication: the air, naval, ground campaigns, and sustainment operations.
+The user allocates forces to LOOs, using unit name, starting strength percentage, and arrival day. The strength percentage fulfills two functions: allows a unit to be assigned to more than one LOO, and allows the calibration of historic or current operational readiness rates or intelligence estimates of enemy combat power within the model.
+The CAS can represent combat forces as a single unit (e.g., an Army Corps or Marine Expeditionary Force) and its supporting air and naval unit on a single LOO. Also, CAS allows for the spreading of unit elements across several LOOs representing major subordinate units (e.g., divisions or other units directly subordinated to a corps). Generally, the smallest portrayed unit is the brigade, although smaller units directly subordinate to a large unit (such as a corps headquarters and subordinate divisions and regiments) may be portrayed. Figures 2 and 3 provide examples of these deployment options.
+2017 Paper No. 26 Page 4 of 10
+MODSIM World 2017
+     Variable
+    Description
+       Battle Domain
+     Main Effort (ME)
+Is this Line of Operation (LOO) the main effort of the operation? Yes/No
+  Air, Sea, Sustainment, Ground
+    Mission Command (MC)
+ Describes ability of mission command.
+     Air, Sea, Sustainment, Ground
+    Sustainment (SUST)
+ Percent describing ability of sustainment support.
+     Air, Sea, Sustainment, Ground
+    Training (TRA), (TRAL)
+   Describes training of unit.
+      Air, Sea, Sustainment, Ground
+     Electronic, Information, Cyber Effects (EIC)
+Describes effect of EIC. Different from EIC Power.
+  Air, Sea, Sustainment, Ground
+    Air Superiority (ASP)
+ Based upon air superiority ratios between friend/foe.
+     Air, Sea, Sustainment, Ground
+    Opposition (OPP)
+   Opposition Factor based upon friendly/foe ratios.
+      Air, Sea, Sustainment, Ground
+     Strength (STR)
+  Indicates unit health or available of combat power.
+   Air, Sea, Sustainment, Ground
+     Allocated (ALL)
+Indicates only a portion of a unit is utilized.
+  Air, Sea, Sustainment, Ground
+    Domain (DOM)
+   Indicates the domain of the power.
+      Air, Sea, Sustainment, Ground
+     Repaired Returned to Combat (RR)
+  Combat Power (equipment and people) returned to units through repair and treatment.
+   Ground
+   
+ Figure 2. Corps on a Single LOO
+Figure 3 portrays VII Corps as initially deployed in Desert Storm, the 2nd ACR is deployed across LOOs 1 and 2, covering the 1st AD’s (LOO 1) and 3rd AD’s (LOO 2) forward movement, with 50% of its combat strength on LOO 1 and 2. The 1st ID (LOO 3) makes the corps main attack, followed by the 1st (UK) AD, scheduled to arrive on Day 2.
+Figure 2 shows the two methods of assigning a single large unit to a LOO. On the left, one icon notionally portrays all forces assigned to VII Corps as a single icon or entry (unit combat values are rolled up by commanding units, so just entering VII Corps uses all forces assigned to the corps from Day 1). On the right side of the figure, a listing of the corps’ maneuver units portray how they were deployed1. The 2nd Armored Cavalry Regiment (2nd ACR) is committed on Day 1 and covers the movement of the 1st Armor Division (1st AD) and 1st Infantry Division (Mechanized) (1st ID), which are committed to the fight on Day 2. Note 3rd AD is initially marked with Day 0, indicating it is in reserve and its value is not applied to the engagement. When the tactical situation merits, the user commits it to action by having it enter combat on Day 2 or later. All forces are at 100% strength.
+ Currently, JTT has no air or naval services so CAS provides procedures to adjudicate combat results between these forces and their interaction with ground forces. The rules sets for these domain adjudications in CAS are described below. In order to initiate the CAS combat adjudications, air and naval units are allocated to LOOs in the same manner, as ground units with some slight variation as described below. Units on the same LOO, which contains a number index value, (e.g., Ground Combat LOO 1, Sustainment LOO 1, Air Combat LOO 1, and Naval Combat LOO 1) support each other. Units are assigned to specific domains and checked against each of the other domains, to see if their combat power is allocated directly to other LOOs, such as ground, air, ATBM, or TBM fires. The LOO’s total engaged combat power is used to compute daily results. When the battle lasts more than one day, surviving combat power is added to arriving and repaired combat power for succeeding days of combat.
+Results from one domain affect other domains on the same LOO. For example, results from the air campaign apply an ASP factor to all other domains and implicitly fights the SEAD battle, CASP is directly added to ground combat power, and interdiction results (e.g., aircraft, cruise missiles, and tactical ballistic missiles2) affect the ability of the force to repair and return combat power to the fight and affects the strength of arriving forces. Ground and naval AD fires affect the ASP battle, and ground close combat and short range AD forces degrade CASP support for succeeding days. For example, On the air and naval LOOs, units are also allocated to specific missions by percentage: Air Superiority (ASP) (which implicitly fights the Suppression of Enemy Air Defense (SEAD) battle), Close Air Support (CASP)3, Interdiction (I), TBM-ATBM engagements, SUW, and ASW). A single air squadron could, depending on
+1 CAS does not physically portray unit deployments; display and user interface functions are handled by another component of the JTT.
+2 Currently interdiction fires are incorrectly applied directly to ground combat and to attacking sustainment and following forces and is being corrected in a future release.
+3 CASP is used within the paper to reduce confusion with the CAS. CAS is the accepted definition acronym for Close Air Support.
+Figure 3. Multiple LOO Battle
+MODSIM World 2017
+ 2017 Paper No. 26 Page 5 of 10
+
+its weapons load, contribute its combat power to AS, CASP, or AI. This allows a given unit, such as an F-16 squadron conducting a CASP mission to defend itself against enemy fighters.
+The Air Campaign Battle
+The Air Campaign combat powers are calculated first, and some results are input into other components. Only combat between air, TBM, ATBM, and ground AD units are calculated here. Engagements against naval forces are calculated in the naval battle. There are four “air battles” within the air campaign using five combat power values:
+• Air Superiority (ASP) (based upon AD)
+• Close Air Support (CASP)
+• Interdiction (I)
+• TBM-ATBM Duel
+The five combat power values are each calculated as an air battle. Here STR% means strength percentage, DOM means domain, and ALL is the allocated factor. Below the figure are the other factors used in this equation
+I =Units
+AirBattle={ ∑i=1 [STR%*DOM *%ALL] }*(WEA*POST*ME*MC*SUST*ASP)
+(1)
+Weather (WEA) factors used are the same for both friend and foe. Posture (POST), main effort (ME), mission command (MC), sustainment (SUST), and ASP factors may differ between friend and foe. EIC is used in the computation for MC. The order of computations for Air Campaign is important; results of ASP computations are used in the computations for CASP and interdiction to simulate escort and interception efforts. Surviving air combat power is directly applied to the daily ground battle and interdiction fires affects the return rate of damaged combat power and the arriving unit strength.
+Air Superiority (ASP)
+The combat power ratio for the friendly and foe are computed first for ASP.
+FriendlyASPRatio = FriendlyASP , FoeASPRatio = FoeASP FoeASP FriendlyASP
+Losses for each side are calculated based upon the ratio, friendly and foe, using:
+F r i e n d l y A S P L o s s e s = O P P ( F r i e n d l y A S P R a t i o )*W E A L * P O S T L * T R A L
+Posture and Friendly values used when performing the lookup in the Posture and Training tables may differ. The same equation and lookup tables are used to compute Foe Losses. Surviving ASP is calculated for each side:
+FriendlySurvivingASP = FriendlyASP * (1 − FriendlyASPLosses) Close Air Support (CASP) and Interdiction
+(2) ( 3 )
+(4)
+MODSIM World 2017
+  These battles are adjudicated in the same manner as ASP, but within each, there is a fight between escorts and a fight between the escorts and the CASP/Interdiction Aircraft. Air Defense Artillery (ADA) fires are included. ASP forces are decremented in each step.
+Surviving CASP and ASP after CASP are both calculated using the losses equation above, but with CASP Total power. Note Surviving CASP/Interdiction Combat Power is computed separately from surviving ASP.
+Surviving CASP and Interdiction Combat Power is exported to the ground combat module for the following day or time interval.
+2017 Paper No. 26 Page 6 of 10
+
+ATBM and TBM
+ATBM and TBM combat is calculated differently. The combat power ratio for the friendly and foe are computed
+for TBM/ATBM.
+FriendlyTBMRatio = FriendlyTBM , FoeTBMRatio = FoeTBM FoeATBM FriendlyATBM
+MODSIM World 2017
+(5)
+  Losses for each side are calculated based upon the ratio, friendly and foe:
+FriendlyTBMLosses = OPP(FriendlyTBMRatio)*WEAL * POSTL *TRAL (6)
+Posture and Friendly values used when performing the lookup in the Posture and Training tables may differ. The same equation and lookup tables are used to compute Foe Losses.
+Surviving TBM is calculated for each side:
+FriendlySurvivingTBM = FriendlyTBM*(1− FriendlyTBMLosses)
+The Naval Campaign
+(7)
+The naval campaign module adjudicates combat associated with surface and sub-surface forces and can be affected by air and naval forces. Where appropriate, surviving naval combat power is applied to the ground battle. A naval LOO does not have to be affected with a ground or air LOO, in which case no forces are deployed on the appropriate LOOs.
+There are several battles within the naval campaign and they are adjudicated in the same manner as the air campaign:
+• Naval Air Superiority: This allows naval (and supporting land based air) units to gain air superiority within the maritime environment.
+• Surface Warfare: This applies air combat power and appropriate missile power to other surface ships.4
+• Anti-Submarine Warfare: adjudicated combat between submarines and between surface ships and
+submarines.
+• The TBM-ATBM Duel – Combat between TBMs attempting to target surface ships and their defending
+fires. 5
+If the unit has a naval domain, or unit SUW or ASW values greater than 0, values from the unit may be incorporated into the naval campaign calculations and are calculated in the same manner as for the air campaign.
+Naval Air Superiority
+Naval air superiority is calculated in the same manner as in the air campaign.
+Surface Warfare and Anti-Submarine Warfare Powers
+Surviving naval air superiority power is carried forward to these domains to escort attacking SUW and ASW aircraft to their targets. Missiles and torpedoes are also included in these categories for each side.
+Sustainment Operations
+Sustainment data is calculated prior to ground combat calculations, and influences arriving supplies and units in the ground battle.
+4 Cruise Missiles are separated into two domains: land attack (e.g. Tomahawk, which are allocated to interdiction) and SUW (e.g. Harpoon which are allocated to ships). The model does not currently support dual purpose weapons. 5 TBM-ATBM fires from ships in support of ground combat are adjudicated in the air campaign.
+ 2017 Paper No. 26 Page 7 of 10
+
+The Cargo Capacity used is summed for each unit and multiplied by the strength of the unit.
+I =Units FriendlyCARGOPower ={ ∑[STR%*CARGO] }
+(8)
+i=1
+For day 1, the cargo capacity is summed. Losses prior to day 1 are 0. The available sustainment is equal to the daily
+total.
+For following days, the total Cargo Capacity Power is calculated for troops in combat as in day1, but incorporates
+Day1AvailableFriendlyCargo ={FriendlyCARGOPower}*(1− Losses)WhereLosses = 0 (9)
+losses.
+A ratio is calculated for Capacity Power and Foe Interdiction from prior day:
+DaynCapacityPower ={Dayn−1AvailableCargo} (10)
+FriendlyCargoLossesRation = DaynCapacityPower
+(11)
+Dayn AvailableFriendlyCargo ={CargoCapacityPowern}*(1− FriendlyLossesSUSTn ) (13) Interdiction fires6 from the air campaign affects:
+• Available tonnage for each succeeding day of combat determining the amount of repaired/returned equipment to combat.
+• Amount of combat power of arriving units.
+• The daily sustainment modifier.
+Available tonnage can increase after losses due to arrival of new units.
+The Ground Campaign
+Ground power for all units with a domain of Ground is summed.
+MODSIM World 2017
+ SurvivingFoeInterdictionDayn−1
+FriendlyLossesSUSTn =OPP(FriendlyCargoLossesRation)*TER*WO*WEA*StandDivCasRate (12)
+Losses for supplies are computed:
+For following days, Available Cargo is calculated:
+I =Units
+FactoredGRND={ ∑[STR%*GRND] }*TER*WO*WEA*POST*ME*(MC−EIC)*SUST*AS
+(14) TotalFriendlyGRNDPower = FactoredGRND + SurvivingCASP + Re paired Re turnedCombatPower (15)
+i=1
+Surviving Air Power is added to the Ground power5:
+Where:
+RRCombatPower =GRNDCombatPowern−1 *GRNDLossesn−1 *StandRprRcvrRate*SUST (17)
+5 Planned changes will also include naval support to ground combat.
+6 The current interdiction method, while working as designed and providing measureable effects on combat in some combat situations, is somewhat less effective than we believe it should be and will be modified.
+SustainmentGround = Dayn AvailableFriendlyC arg o Dayn−1 AvailableFriendlyC arg o
+(16)
+  2017 Paper No. 26 Page 8 of 10
+
+Now compute the Ground Power Ratio:
+GRNDPowerRatio = TotalFriendlyGRNDPower TotalFoeGRNDPower
+(18) FriendlyGRNDLosses =OPP(GRNDPowerRatio)*TERL*WOL*WEAL*POSTL* (19)
+S tan dardDivisionCasualtyRate * S tan dardModernPsersonnelCasualtyRate
+Ground combat computes a daily advance rate to indicate attacker/defender battlefield movement.
+AdvanceRate = AdvanceRateLookup(GRNDPowerRatio)*TER*WEA*WO*POST (20) VERIFICATION AND VALIDATION
+The original model was implemented using Microsoft Excel as a prototype to test numbers, analyze outputs, and provide a stand-alone, simple to use, easy to understand, and fast wargaming tool. The model was then implemented as a RESTful7 service within JTT. OOB information is implemented in the Force Management Service (FMS) software; the Combat Adjudicator is implemented as a standalone RESTful service application.
+The RESTful service implementation was verified to match the Microsoft Excel model by entering the same inputs and obtaining the same outputs.
+CAS results have been “Face validated” against the following use cases:
+• The 3:1 rule. The rule of thumb postulating an attacking force must have at least three times the combat power of the defending force to be successful.
+• 1st (US) Infantry Division versus 26th (IQ) Infantry Division during Desert Storm.
+• The Battle of 73 Easting: 2nd ACR versus elements of the Iraqi Republican Guard.
+• 3rd (US) Infantry Division’s first five days of combat during Operation Iraqi Freedom (OIF).
+Each engagement is conducted with several different terrain and weather conditions, varying strength percentages, and progresses from a ground only engagement to multi-service engagements to test the effect of CASP and interdiction on the ground campaign. Several shortcomings have been detected, but thus far ground combat and CASP match historical results. However, modeling of air interdiction could not be validated.
+ACKNOWLEDGEMENTS
+The authors would like to acknowledge COL Trevor N. Dupuy for getting Michael Robel interested in combat modeling in 1979.
+DISCLAIMER
+This work was supported in part by the US Joint Staff (Contract # N00189-14-D-Z018-5004). The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the US Joint Staff or the US Government. The US Government is authorized to reproduce and distribute reprints for Government purposes.
+REFERENCES
+Biddle, Stephen, (2004). Military Power, Explaining Victory and Defeat in Modern Battle, Princeton University Press, Princeton, NJ
+7 Representational State Transfer
+MODSIM World 2017
+ Using the computed Ground Power, compute the ground Losses:
+ 2017 Paper No. 26 Page 9 of 10
+
+Desmond, Matthew Scott, (2007). Implementation of the Quantified Judgement Model to Examine the Impact of Human Factors on Marine Corps Distributed Operations, September 2007
+Dupuy, Trevor N, (1995). Attrition: Forecasting Battle Casualties and Equipment Losses in Modern War, Nova Publications, Fall Church, VA
+Dupuy, Trevor N, (1985). Numbers, Prediction, and War: Using History to Evaluate Combat Factors and Predict the Outcome of Armed Conflict, 2nd Edition, HERO Books, Fairfax, VA
+Epstein, Joshua M. (1985), The Calculus of Modern War: Dynamic Analysis Without Lanchester Theory, The Brookings Institution, Washington, D.C.
+Joint Publication 2-01.3 (JP 2-0), (16 June 2009). Joint Intelligence Preparation of the Operational Environment (JIPO)
+Joint Publication 5-0 (JP 5-0), (11 August 2011). Joint Operation Planning
+Roemmich, Gary, (2015). Joint Force Deployment Estimator Guide/ Model, National Defense University, Ft McNair, Washington D.C.
+Sabin, Philip, (2012). Simulating War: Studying Conflict through Simulation Games, Continuum International, London
+Santacroce, Mike, (2013). Planning for Planners, Joint Operation Planning Process (JOPP), Universe, 2013
+Tolk, Andreas, (2012). Engineering Principles of Combat Modeling and Distributed Simulation, Wiley, New Jersey.
+2017 Paper No. 26 Page 10 of 10
+MODSIM World 2017

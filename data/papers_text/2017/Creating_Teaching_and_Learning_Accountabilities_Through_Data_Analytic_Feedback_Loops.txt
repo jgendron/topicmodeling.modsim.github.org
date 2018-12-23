@@ -1,0 +1,262 @@
+Creating Teaching and Learning Accountabilities Through Data Analytic Feedback Loops
+Fusun Sahin University at Albany, SUNY Albany, NY fsahin@albany.edu
+Dominic Mentor Columbia University New York City, NY djm2123@columbia.edu
+ABSTRACT
+This study reports on an evaluation tool for instructors of a non-traditional vocational program and the effectiveness of providing frequent formative feedback to instructors based on data collected from students. A comprehensive survey on instructional effectiveness was administered across eight urban sites across the USA. Fidelity measures were taken in administrating the survey, which enabled uniform procedures in collecting data and for reporting the data. The vocational training consisted of three 7-week modules that spanned 6 months. Around 3000 students participate in the vocational training program.
+Students completed the survey after each module. The instructors received the unpacked feedback from the survey administrators in digestible format, as well as through discussions with their academic supervisors. The goal of the feedback framework was to enhance accountability between students and instructors, providing instructional transparency, and narrowing the lag time variance in acting on student feedback. Unlike broad summative assessments carried out at the end of trainings, the content and frequency of the feedback in formative evaluations offered instructors quick insights into their practices and the opportunity to adjust their teaching to students’ learning styles.
+The survey was designed based on established educational theories and practices, and instructors were given feedback based on the practices included in the survey. This study showcases the usefulness of formative assessments of instructors based on quantitative and qualitative evaluations over a six-month cycle. Results indicated that the instructors employed suggested teaching practices more frequently in later modules compared to their performance after the first module.
+ABOUT THE AUTHORS
+Füsun Şahin is a researcher and doctoral candidate in University at Albany, SUNY Educational Psychology and Methodology department. Şahin dedicated to developing valid and fair assessments that help learners reach their goals with specialization on psychometrics, large-scale tests, and technology-based assessments. Her studies focus on computer-based tests, examining log data files to inform test processes and validity of tests, large-scale high-stakes tests, and using mobile technology for improving design and delivery of assessments and assessment results. Şahin is a contributing author to
+International Journal of Cyber Behavior, Psychology and Learning.
+Dr. Dominic Mentor is the
+Encyclopedia of Information Science and Technology will feature Micro to Macro Social Connectedness through Mobile Phone Engagement.
+MODSIM World 2017
+  the Handbook of Research on Mobile Learning in Contemporary Classrooms (2016), Encyclopedia of Mobile Phone
+ Behavior (2014), and
+ editor and contributing author of the Handbook of Research on Mobile Learning in Contemporary
+ Classrooms is an Adjunct Professor at Columbia University. He serves as a senior leader of a talent development organization and won the 2014 Optimas Gold from Workforce Magazine and the 2015 Blended ELearning Award from the International E- Learning Association. He initiated and co-designed the USA’s first mLearning course, and a social media fellowship for the
+ NY Mayor's Office of Adult Education. An upcoming publication in 2017, the
+ publications include a chapter inTablets in K-12 Education2015), a chapter in theEncyclopedia of Mobile Phone Behavior (2014), a book review published in TC Record (2010) of New Tech, New Ties, an article in Educause Quarterly (2011), and a book review of Students' experiences of E-learning in higher education; the ecology of sustainable innovation published in TC Record (2010), as well as an Educause journal (2010) article titled, Stating the case for mobile
+Dominic’s previous
+  phone learning.
+2017 Paper No. 43 Page 1 of 8
+
+Creating Teaching and Learning Accountabilities Through Data Analytic Feedback Loops
+A national internship program operated in eight USA cities hosted an intensive six-month preparatory training before sending young adults into their internships. Field of work for the internships varied from IT helpdesk, computer networking, as well as business and financial operations in major corporations, non-profits, universities, city governments, or agencies. The learning and development (L&D) program intended to fill in the gaps between needed skills during the internship and interns’ educational background. The education level of the interns included college dropouts (40% of admitted students was the national average at the time of writing), recent high school graduates, and GED holders. Previous evaluation surveys of the instructors (i.e., The Student Evaluation of Instructor Survey) were delivered to students in varied fashion at each training site. In many cases, sites could add different questions to their surveys and the surveys could be run with instructors in the room. A more crucial difference relied on the lag time between survey completion and sharing the student feedback with the teaching staff. Some shared the feedback several weeks after the survey, some shared at the end of the program, and some sited never shared the feedback with the instructor. The inconsistencies needed to be fixed across sites and measures needed to be set to cater for better data fidelity.
+Background
+Using quantitative and qualitative survey results as feedback coming from students to instructors was part of a new academic vision and strategy that placed student empowerment and agency (Mentor, 2010) as an important facet of the intensive college and career pathway program (Mentor, 2016). The organization also had an active feedback culture and practice, as well as a “Be Accountable” core value that guided program operations. Additionally, formalizing and gathering this data was important to bring to life the accountability contract between students and their teachers. Focusing on the students for their very important feedback on the academic pieces of the program was a start to triangulating and crystalizing data into learning analytics. Other envisioned data sources for academics were the Learning Management System for student and teacher interaction with material and one another, as well as, additional surveys during the internship phase and after students graduated from the year-long program.
+The Student Evaluation of Instructor Survey asked students to assess their instructors on a range of different areas pertaining to instructional quality. It also gave students an opportunity to comment on instructors’ strengths and growth areas in a balanced, productive, and helpful way (Devi, Abraham, & Kamath, 2017). Each survey was administered soon after the end of each module with the goal of offering consistent and continuous insight (Marzouk, Rakovic, & Winne, 2016).
+Some recommended best practices were suggested to urge that all students complete the survey, as well as push for the best fidelity of data collection. These were:
+ Survey administration was to be scheduled on the training site. An ideal time to offer the survey was considered as the first few minutes of a class. This way a high response rate could be achieved and the site granted access to computers.
+ When a student was absent from a survey administration time, it was recommended that the Academic Manager or Director followed up with that individual to encourage taking the survey at another time.
+ The Student Evaluation of Instructor Survey should be administered within a standard duration. The survey took 5-20 minutes to complete depending on the answers on the open-ended questions, which included a 5-minute allowance for student, due to the time spent on reminding the purpose and instructions of the surveys, log into computers and access the survey link.
+ No instructor should to be allowed in the room while the survey was being conducted.
+MODSIM World 2017
+ Fusun Sahin
+University at Albany, SUNY Albany, NY fsahin@albany.edu
+INTRODUCTION
+Dominic Mentor
+Columbia University New York City, NY djm2123@columbia.edu
+  2017 Paper No. 43 Page 2 of 8
+
+MODSIM World 2017
+ A student representative/class leader should be selected to run the introductory purpose of the survey and instruction review session. The student representative should coach about the overview of the survey, survey goals, instructions, and questions. The coaching took 5-10 minutes and delivered the Academic Manager or Director.
+ The student representative should be the person to clarify any questions from students while the review session is being conducted.
+ A date was set for collecting all responses so that analysis of the data both at the site level and national level can be done in a timely fashion. Two reminder emails were sent to all sites with updates that included survey response rates to date and the final deadline.
+About 3000 students completed the survey at the end of each seven-week module during the six-month training. Instead of waiting until the end of the training period to evaluate the teaching staff, seven-week evaluations of instructors by students narrowed lag time between the feedback and allowed teachers to adapt their teaching based on the feedback. The evaluation data offered instructors quicker insights into their practices and room for adjusting to differentiated learning styles (Vasudevan, Schultz, & Bateman, 2010; Vasudevan, 2011). Many of the instructors did not have any formal educational training. The surveys informed instructors about these well-established educational theories and practices, as well as formal evaluations of the design and the delivery of content.
+Survey Design
+Various educational theories and suggested practices formed the framework to develop this survey. These practices were frequently used for enabling students to review educators. Educational tenets such as differentiated instruction, proximal zone development, use of formative assessments ( ) for preparing students for the summative assessments
+( . Other practices measured by the survey included activating prior knowledge, improving the scaffolding of the learning process, and fairer student evaluations by increasing formative assessments (Chen & Law, 2016). Students’ feedback collected by questions regarding these practices cultivated teachers’ understanding of desired teaching practices (Şahin & Mentor, 2016; Wolbring & Treischl, 2016). From theory to practice, the educational tenets used to inform the students’ reviews of instructors, also informed organizationally funded professional development to further cultivate reflective teaching practice and advance interns’ employability. Moreover, improvements in the teaching practices could have a direct impact on student retention within the academic and internship phase of the program as well as their preparedness and confidence within their assigned internships.
+Surveys were written in plain text rather than using register that would have been unfamiliar to them. For example, instead of asking students whether they received formative assessments, the survey asked whether they received practice quizzes, mock exams, peer-to-peer or teacher feedback opportunities before tests, exams or formally assessed presentations.
+The Student Evaluation of Instructor Survey consisted of four parts:
+a. Suggested teaching practices (multiple-choice questions, anchors consisted of never, rarely, sometimes, often,
+always).
+b. Learning resources (multiple choice, anchors consisted of not at all, slightly, moderately, significantly, very
+significantly)
+c. Overall evaluation of the instructor and comments (open-ended questions)
+d. Questions regarding quality assurance
+a. Suggested teaching practices
+ Instructor was always prepared.
+ At the start of a chapter or section, the instructor checked if we knew anything about that topic, section or chapter.
+ The instructor started a new section with easy examples and increased to advanced examples after we showed
+understanding.
+ Instructor defined student responsibilities and held them accountable to their actions
+ Instructor taught lessons clearly.
+ The instructor managed class time well, always started and ended on time.
+ The instructor evaluated coursework in a fair way.
+ The instructor provided rubrics, criteria or examples of how an assignment would be graded or examples of
+excellent assignments.
+    2017 Paper No. 43 Page 3 of 8
+Richards & Meier, 2016
+ Minson, Hammer, & Veresov, 2016) formed the framework for the surveys
+
+MODSIM World 2017
+ The Instructor provided practice tests, quizzes, or practice assignments that prepared you before actual tests and exams were given.
+ The instructor responded to student communication in a timely manner.
+ Students were regularly engaged during class.
+ The instructor used technology effectively.
+b. Instructional materials
+ The assigned homework extended my learning.
+ Class handouts and online material provided additional subject details.
+ Class textbooks (both eBooks and print textbooks) were regularly used and provided useful subject background.
+(Note: please do not answer if you did not use eBooks or textbooks in class)
+ Rubrics and example grading.
+ Example assignments.
+ Practice tests and assignments.
+c. Overall evaluation of the instructor and comments
+ Please add any comments regarding how your instructor could improve his or her teaching style.
+ If you had to grade your instructor on how they taught your class, what letter grade would you give them? (A-E)
+ Please provide any additional comments you feel are important for EPICC to know and act on for you and for future
+student learning experiences. Your response is very important to us.
+ Did your instructor play a positive role in your personal skill development and job readiness? (Yes, No)
+ Please comment on strengths in terms of your instructor's teaching style or the classroom experience. (Open-Ended
+Response)
+ Please comment on growth areas in terms of your instructor's teaching style or the classroom experience. (Open-
+Ended Response) d. Quality assurance
+ Did your instructor or other EPICC staff member clearly explain the purpose of this survey before you started it? (Open-ended)
+ Was there an instructor or other EPICC staff member in the room with you while you were completing this survey? (Yes, No)
+DATA
+About 3000 students participated in the survey after module 1. Based on the responses collected after module 1, the reliability coefficient of the survey (alpha) was found as .91 for the section on suggested teaching practices and .88 for the section on effectiveness of instructional materials.
+After the reliability of the survey scores was assured, measures were taken to purify data and achieve quality data regarding students’ ratings of and feedback for instructors. Responses to the questions designed for assuring quality of the survey administration were used for this purpose. If the students indicated that an instructor or other staff member did not explain the purpose of the survey clearly their responses were eliminated from the data. Moreover, if student responses indicated that there was an instructor or staff member in the room while they were completing the survey, their responses were eliminated, too. Responses from 2000 students remained in the data after filtering out responses based on questions related to quality assurance.
+The initial considerations from the researchers were that module 1 and 2 would have been a better comparison or gauge of improvement for several reasons:
+a. It would have been better to measure the instructors in quick succession so that the unpacked results could be shared with the instructors for faster reflection and incorporation into their practice which would have benefitted their Module 3 delivery.
+b. Module 1 and 2 are more pressured and intense than Module 3.
+2017 Paper No. 43 Page 4 of 8
+
+MODSIM World 2017
+However, there is a combination of a drop-off in academic engagement and an increase in program activities like internship meetings or internship placement announcements that impact teaching time. Moreover, not all sites conducted the surveys during module two which came from a historical practice that was slow to change. Lastly, there are track changes at most sites which means that not all instructors teach the same students or subjects in module one, two or three. For this study, we focused on those instructors who taught in module one and three. Overseeing the growth of the same instructors was needed for a solid understanding of teacher growth. Therefore, instructors who taught at both module 1 and module 3 were identified. Fifty-six instructors taught in both modules, and students evaluated the same instructors in these modules. Therefore, data for 56 instructors could be matched for both module 1 and 3.
+Results
+Descriptive Statistics
+Table 1. Descriptive Statistics for the Teaching Methods Section
+   Question
+   Module 1
+    Module 3
+   The instructor...
+   Mean
+    sd
+ Mean
+    sd
+   was prepared.
+   1.59
+    1.08
+ 1.75
+    1.17
+   checked prior knowledge.
+   1.87
+    1.3
+ 1.86
+    1.25
+   increased the level of examples.
+   1.92
+    1.32
+ 1.93
+    1.3
+   hold students accountable.
+   1.57
+    1.1
+ 1.69
+    1.15
+   taught clearly.
+   1.81
+    1.29
+ 1.86
+    1.25
+   managed time well.
+   1.82
+    1.26
+ 1.87
+    1.27
+   evaluated fairly.
+   1.68
+    1.16
+ 1.71
+    1.12
+   communicated timely.
+   1.7
+    1.14
+ 1.78
+    1.18
+   ensured student engagement.
+   1.67
+    1.2
+ 1.73
+    1.16
+   used technology effectively.
+    1.57
+     1.08
+ 1.68
+     1.13
+Table 2. Descriptive Statistics for the Resources Questions
+  Question
+    Module 1
+    Module 3
+ The following helped my understanding:
+    Mean
+      sd
+   Mean
+      sd
+    assigned homework
+ 3.96
+  1.37
+3.96
+  1.37
+  handouts and online materials
+    3.9
+      1.37
+   3.99
+      1.33
+    textbooks
+ 3.86
+  1.45
+3.9
+  1.42
+  rubrics and example grading
+   4.27
+    1.22
+ 4.14
+     1.28
+  example assignments
+    3.9
+      1.42
+   3.89
+      1.42
+    practice tests and practice assignments
+  3.97
+    1.43
+  4.07
+   1.29
+   Instructors’ Positive Role & Grade
+More than half of the students indicated that the instructor played a positive role in their learning and would give an A or B rating to the instructors. Moreover, the students’ ratings on whether the instructor played a positive role was parallel with the letter grade students would give to the instructors. As can be seen in the following graphs, the percentage of students who thought that the instructor did not play a positive role in module 3 declined by module 3.
+2017 Paper No. 43 Page 5 of 8
+
+Instructor Growth
+Figure 1. Instructors’ positive role and grade to instructor in Module 1
+Figure 2. Instructors’ positive role and grade to instructor in Module 3
+The difference in instructors’ performance between module 3 and module 1 is remarkable. The instructors performed better in all questions related to suggested teaching in module 3 than module 1. The only question where instructors did not improve was checking prior knowledge. The largest growth was observed in ensuring student engagement during the class.
+2017 Paper No. 43 Page 6 of 8
+MODSIM World 2017
+  
+Conclusion
+Figure 3. Instructor growth between module 1 and module 3 (part 1)
+Figure 4. Instructor growth between module 1 and module 3 (part 2)
+The feedback model proved successful and set plans in motion for scaling to other non-teaching program staff without teacher training. The model was also shared with and at the time of writing was being piloted at a few community college partners.
+2017 Paper No. 43 Page 7 of 8
+MODSIM World 2017
+  
+MODSIM World 2017
+The evaluation results were also used for identifying best practices in teaching and high performing teachers. High performing teachers were invited to present at the peer-to-peer virtual professional development sessions. These professional development sessions were designed to simulate best practices and social collaboration among instructors.
+In this paper, we focused only on the seven weeks of one cycle with surveys from eight city sites, with initial findings, areas of success, and lessons learned. We demonstrated that through a process of theoretically informed surveying, mapping and quick reporting on findings to academic directors and instructors, the internship training phase of the non-profit organization has developed a framework to pursue consistent teaching practices for blended and online learning and development.
+REFERENCES
+ Chen, C. H., & Law, V. (2016). Scaffolding individual and collaborative game-based learning in learning performance and
+ intrinsic motivation. Computers in Human Behavior, 55, 1201-1212.
+ Devi, V., Abraham, R. R., & Kamath, U. (2017). Teaching and Assessing Reflecting Skills among Undergraduate Medical
+  Students Experiencing Research.
+Journal of Clinical and Diagnostic Research. 2017 Jan, Vol-11(1): doi:
+ 10.7860/JCDR/2017/20186.9142
+ Marzouk, Z., Rakovic, M., & Winne, P. H. (2016). Generating Learning Analytics to Improve Learners' Metacognitive Skills
+ Using nStudy Trace Data and the ICAP Framework. In LAL@ LAK (pp. 11-16).
+ Mentor D. (2010). Book Review of Students' experiences of E-learning in higher education; the ecology of sustainable
+ innovation by Robert Ellis and Peter Goodyear. New York: TC Record.
+ Mentor, D. (2016). EMxC3 = e&mLearning Cultivating Connected Communities: Sustainable Workforce Talent
+ Development. In D. Mentor (Ed.), Handbook of Research on Mobile Learning in Contemporary Classrooms (pp.
+ 240-259). Hershey, PA: IGI Global. doi:10.4018/978-1-5225-0251-7.ch012
+ Minson, V., Hammer, M., & Veresov, N. N. (2016). Rethinking assessments: creating a new tool using the zone of proximal
+ development within a cultural-historical framework. Cultural-Historical Psychology, 12(3), 331-345.
+ Richards, R., & Meier, E. B. (2016). Leveraging Mobile Devices for Qualitative Formative Assessment. In D. Mentor
+ (Ed.), Handbook of Research on Mobile Learning in Contemporary Classrooms (pp. 94-115). Hershey, PA: IGI
+ Global. doi:10.4018/978-1-5225-0251-7.ch005
+ Şahin, F., & Mentor, D. (2016). Using Mobile Phones for Assessment in Contemporary Classrooms. In D. Mentor
+ (Ed.), Handbook of Research on Mobile Learning in Contemporary Classrooms (pp. 116-138). Hershey, PA: IGI
+ Global. doi:10.4018/978-1-5225-0251-7.ch006
+ Tudge, J. (1992). Vygotsky, the zone of proximal development, and peer collaboration: Implications for classroom practice.
+ In L. Moll (Ed.), Vygotsky and education: Instructional implications and applications of sociohistorical
+ psychology (pp. 155-172). New York, NY: Cambridge University Press.
+ Vasudevan, L. (2011). Re-imagining pedagogies for multimodal selves. National Society for the Study of Education, 110(1),
+ 88-108.
+ Vasudevan, L., Schultz, K., & Bateman, J. (2010). Rethinking composing in a digital age: Authoring literate identities
+ through multimodal storytelling. Written communication, 27(4), 442-468.
+ Vygotsky, L. (1987). Zone of proximal development. Mind in Society: The Development of Higher Psychological
+ Processes, 5291, 157.
+ Wolbring, T., & Treischl, E. (2016). Selection bias in students’ evaluation of teaching. Research in Higher Education, 57(1),
+ 51-71.
+2017 Paper No. 43 Page 8 of 8

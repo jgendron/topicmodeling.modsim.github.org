@@ -1,0 +1,137 @@
+Research and Development of Low-Cost, Point of Injury Medical Simulations
+Matthew Hackett, Jack Norfleet Army Research Laboratory Orlando, FL Matthew.G.Hackett.Civ@Mail.mil; Jack.E.Norfleet.Civ@mail.mil
+Nadine Baez IVIR Inc. Sarasota, FL NBaez@IvirInc.com
+ABSTRACT
+Medical mannequins are used for a wide range of training purposes, including anesthesia, nursing care, and emergency care. Military medical training includes a significant component focusing on tactical combat casualty care (TC3). The TC3 curriculum targets combat medics and combat life savers, with a goal of training personnel in point of injury (POI) care. Many technologies augment TC3 training, including virtual simulations, part-task trainers, and medical mannequins. Unfortunately, most commercially available mannequins were developed to train nurses and doctors and have capabilities unused by the TC3 training community. As a result, the cost is higher than necessary. A recent research effort sought to develop a low-cost POI trainer with capabilities targeted specifically for the TC3 community. Within this paper, the research and design process of three prototype POI simulator is reported. Additionally, results of early usability testing conducted at the Fort Bragg Medical Simulation Training Center are detailed.
+ABOUT THE AUTHORS
+Matthew Hackett is a science and technology manager for the Medical Simulation Research Branch of the Army Research Laboratory, Human Research and Engineering Directorate, Simulation and Training Technology Center. He manages a variety of projects including the medical holography research and virtual patient research efforts. As a science and technology manager, he oversees these research efforts and conducts test and evaluation to determine their efficacy in the simulation and training domain. Mr. Hackett received his Bachelor of Science in Computer Engineering from the University of Central Florida and his Masters of Science in Biomedical Engineering from the University of Florida. During his time at the University of Florida, he was a research assistant in the computational neuroscience laboratory, studying the functionality of neurons and how the brain creates neuronal networks. Mr. Hackett subsequently received his Masters of Science in Modeling and Simulation and is currently pursuing his Ph.D. in Modeling and Simulation at the University of Central Florida.
+Jack Norfleet is the Chief Engineer for the Medical Simulation Research branch of the Army Research Laboratory Simulation and Training Technology Center (STTC). He manages a multidisciplinary team of researchers as well as planning, and executing medical simulation research efforts across the services. Mr. Norfleet has 30 years of experience in modeling, simulation and training as an electronics engineer, test engineer, project engineer and science & technology manager. Mr. Norfleet started his career as a GS-1 Engineering Aid directly out of high school. Mr. Norfleet received a Bachelor of Science in Electronics Engineering from the University of Central Florida (UCF), a Masters in Modeling and Simulation from UCF, and a Master of Business Administration Degree from Webster University. He is currently enrolled in the Modeling and Simulation Doctorate program at UCF. Mr. Norfleet is a member of the Acquisition Corps and is Level III certified Systems Planning Research Development and Engineering.).
+Ms. Nadine Baez, IVIR Inc. Nadine Baez serves as the Director of Programs for IVIR Inc. She has served as the Project Manager for the U.S. Army RDECOM Medical Simulation Training Center (MSTC) Medical Training Evaluation and Review System (MeTER) program. Ms. Baez was previously an experienced Forensic Investigator for the District 5 Medical Examiner’s Office, and Registry Certified by the American Board of Medicolegal Death Investigation. Additionally, she has worked for both the Central Florida Tissue Bank and Translife Organ and Tissue Donation services procuring donated bone and tissue for transplant. She holds dual Bachelor of Science degrees in Micro/Molecular Biology as well as Forensic Science-Serology from the University of Central Florida.
+2015 Paper no. 59 Page 1 of 9
+MODSIM World 2015
+
+Research and Development of Low-Cost, Point of Injury Medical Simulations
+Matthew Hackett, Jack Norfleet Army Research Laboratory Orlando, FL Matthew.G.Hackett.Civ@Mail.mil; Jack.E.Norfleet.Civ@mail.mil
+INTRODUCTION
+Nadine Baez IVIR Inc. Sarasota, FL NBaez@IvirInc.com
+Military medical care presents a significant challenge, requiring practitioners to maintain focus in a hectic battlefield environment. On the battlefield, a medic or combat life saver (CLS) uses the protocols of tactical combat casualty care (TC3) to deliver medical care. TC3 encompasses three phases: care under fire, tactical field care, and tactical evacuation care (Butler, Haymann, & Butler, 1996). Care under fire is the immediate care given to a casualty when the area is not secure, such as during an active firefight. Care under fire includes two tasks: placing a tourniquet and moving the casualty to a secure location. After care under fire, tactical field care begins, where point of injury medical procedures intended to stabilize the patient for transit are delivered. These include rapid trauma assessment, advanced hemorrhage control, airway management, and fluid administration. At the conclusion of tactical field care, tactical evacuation occurs, where a casualty is prepared for transit and moved into the vehicle / aircraft for evacuation. Tactical evacuation care focuses on longer term stabilization of the patient, including patient monitoring, pain management, and continued fluid and drug administration.
+Point of injury medical care is challenging to teach, as it requires significant mental effort to maintain situational awareness while performing medical care. In order to train these skills in the military, instructors utilize a wide array of tools. Didactic content is taught through standard lecture and PowerPoint, with a focus on interactivity with the class. At this point, hands-on training is conducted on individual tasks using part-task training devices, such as upper airway simulators and hemorrhage simulators. As a capstone activity, team-based training requires squads of medics or CLS practitioners to move through a lane of obstacles, treating casualties along the way while maintaining tactical proficiency. During these capstone exercises, mannequin training devices serve as the casualties.
+Medical mannequins are training devices which are representative of the human body. The earliest mannequins were developed to train anesthesiology, using advanced gas exchange systems and included highly robust physiology and drug interaction models(Good & Gravenstein, 1989). These mannequins evolved through the years to train other skills sets, including trauma care, OB/GYN, nursing care, and many other medical specialties (Holcomb et al., 2002; Small et al., 1999). In the 1990s, the military began to use commercially-available mannequins for indoor training, but being tethered to support equipment made them problematic for field training. The mannequins were connected to large racks of computing equipment, compressed gasses and fluid reservoirs which made them incapable of being moved any appreciable distance. Because the first portion of TC3 care requires the movement of a casualty, the tethered limitation of the mannequin represented a source of significant negative training. To overcome this, the US Army Research Development and Engineering Command (RDECOM) created the first wireless, ruggedized, full- fidelity human patient simulator capable of full use in the field (Anton, Burns, Norfleet, & Thompson, 2009). Industry soon followed and most medical simulation companies have now created wireless mannequins which can be utilized in point of injury military training. Some of these companies include CAE Healthcare, Simulaids, Gaumards and Laerdal. However, the price point on these simulators is still quite high, and they include significant capability not generally used in medical field training. These unneeded capabilities include drug interactions, hospital procedures, and advanced procedural skills training. In short, many Army training sites are paying for mannequin functionality that they do not use.
+In an effort to solve this problem, the Army Research Laboratory, funded by the Joint Program Committee -1 (JPC- 1) MedSim, conducted a research effort to create a low-cost (~$10,000) medical mannequin to specifically train point of injury procedural skills. The researchers followed three distinct paths: a retrofit system which fits over an existing Rescue Randy®, a modified Rescue Randy®, and a newly developed mannequin. The development process for each of these, data gathered from user tests, and conclusions will be presented herein.
+2015 Paper no. 59 Page 2 of 9
+MODSIM World 2015
+
+DEVELOPMENT PROCESS
+Prior to development, a training task analysis was conducted to ensure that training objectives were met within the training research platforms. The first research platform used a Rescue Randy® (Figure 1) as the starting point. The Rescue Randy® is a low-cost mannequin with no trauma functionality, primarily used for simple patient movement training. These mannequins are very common across military training sites, making them an ideal choice to augment. Using a retrofit, training sites can reuse existing mannequins to keep costs to a minimum.
+MODSIM World 2015
+ Figure 1: Rescue Randy® Mannequin
+The retrofit effort began by identifying supporting technologies which could be used to augment the Rescue Randy®. The Cut Suit® was an immediate candidate technology, allowing the integration of traumatic wounding without modifying the underlying mannequin. The Cut Suit® is a realistic way to simulate the look, feel and smell effects of severe traumatic events on a live human, using a wearable training device on a human or mannequin, from the point of injury, to treatment en route, and transition of care to surgical intervention (Laporta et al., 2014). The Cut Suit® was modified and attached to a body suit which would wrap around the mannequin. The body suit was created using a stain-resistant fabric that would be rugged enough to withstand dragging and movement of the mannequin. The suit was combined with the Cut Suit® and additional moulage trauma wounds to allow a simple retrofit of trauma capabilities. A bleeding system with reconfigurable wounding locations was also integrated into the suit (Figure 2).
+  Figure 2: Trauma Body Suit with Integrated Cut Suit® Retrofit
+For the second option, the Rescue Randy® was once again the starting point. In this case, the Rescue Randy® was modified to allow for treatment by adding airway management and hemorrhage control capability. The shoulder joint was redesigned to allow an arm attachment for an amputated arm injury requiring tourniquet. Additionally, the
+2015 Paper no. 59 Page 3 of 9
+
+joint would allow more natural movement, allowing repositioning during treatment and transit. An internal bleeding system was included, including controller, pump, and reservoir. The airway was modified extensively, removing the existing head and neck, and replacing with an existing surgical airway trainer. The completed mannequin used simple modifications and pre-existing airway and trauma arm technologies to improve the Rescue Randy® (Figure 3).
+Figure 3: Rescue Randy® Modifications: New Upper Airway (Top Left), Internal Bleeding System (Top Right) and Attached Tourniquet Training Arm (Bottom)
+The final research path developed a completely new design of a human patient simulator, named the Point of Injury Simulation (POISim). POISim used the HumMod® physiology engine to simulate the physiology state of the mannequin and report metrics, including heart rate, respiratory rate, and blood pressure. HumMod® is open source which kept the cost of software development as low as possible. The mannequin form was based on human proportions, with the simulated tissues chosen to replicate the durometer of human muscle and skin. These tissues were overlaid on a metal skeletal platform to ensure the mannequin is sufficiently rugged for military field use. POISim used low-cost servos to create chest rise and fall. Additionally, a suite of sensors was selected to collect metrics. The sensors were thoroughly analyzed to ensure that only necessary metrics were collected, since additional sensors quickly scale the overall cost. The final POISim prototype has the capability of training airway management, needle chest decompression, and hemorrhage control, with sensor output detailing performance during these procedures (Figure 4).
+MODSIM World 2015
+   2015 Paper no. 59 Page 4 of 9
+
+TEST METHODOLOGY
+The mannequins were taken to the Fort Bragg Medical Simulation Training Center (MSTC) for evaluation by instructors, medics, and CLS. A survey was created to collect data on usability and functionality. The three primary goals of these tests were: 1) Test functionality of all prototypes; 2) Determine if prototypes meet training objectives; and 3) Determine usability of systems. The data gathered within the tests would be used to iterate the design of these mannequins and feed into design of future simulators. The mannequins were tested in two separate events with a total of 10 participants. The results of the tests are detailed in the following section.
+RESULTS
+The functionality tests were done on each of the mannequins in a standard fashion across all platforms. These tests focused on measures of performance of the system, without the need for feedback from trainees. The evaluation factors included ruggedness, ease of use, tetherless operation, suspension of disbelief, reusability, modularity, reliability, availability, maintainability, and transport. Within these categories, there were subfactors of evaluation. For example, within the tetherless operation factor included wireless communication, control, battery power, and self-contained system. Table 1 highlights the results of these tests for the 3 research paths.
+2015 Paper no. 59 Page 5 of 9
+MODSIM World 2015
+ Figure 4: Prototype Point of Injury Simulator (POISim)
+
+Table 1: Summary of Functional Testing
+Measures of effectiveness and usability measures were gathered based upon trainee feedback. Trainees responded to a series of survey questions through a tablet-based assessment system. The results of trainee feedback are shown below.
+MODSIM World 2015
+ 2015 Paper no. 59 Page 6 of 9
+
+MODSIM World 2015
+      60
+  40
+50
+50
+  CHEST ENTRANCE / BLEEDING PULSE WOUND EXIT
+80
+20
+0
+No Yes
+         10 10 10
+CHEST ENTRANCE BLEEDING PULSE WOUND / EXIT
+    90
+90
+90
+30
+70
+ Figure 5: Ability to Visualize and Assess Wounds on Rescue Randy® Retrofit (Left) and Modification (Right)
+The ability of a simulator to properly simulate the signs and symptoms of injury is very important. The Rescue Randy® Retrofit and the Modification were assessed on their ability to simulate chest wound, entrance / exit wound, bleeding, and pulse. Respondents reported on their ability to perceive these simulated injuries (Figure 5). The Rescue Randy® Retrofit did very well, with the majority of signs and symptoms apparent to trainees. The modification did much worse, with 50% or less of trainees believing that the signs and symptoms of injuries were sufficient. Additionally, the Modification simulator does not have a pulse capability, so it is reported as a blank.
+      40
+60
+80
+ 0
+NPA OPA COMBITUBE CRIC
+Yes No
+90
+ 20
+ 10
+      70
+ 60
+ 60
+ 40
+ 40
+ 30
+0
+NPA OPA COMBITUBE CRIC
+Yes No
+  Figure 6: Simulator Performance in Airway Training on Retrofit (Left) and Modification (Right)
+Looking more closely at performance of medical procedures, trainees reported on the airway capabilities of the Rescue Randy® Retrofit and the Modification. Both did poorly in the airway evaluation, with most tasks having less than 50% of respondents indicating the simulators were sufficient to train those skills (Figure 6).
+  0
+100
+CONTROL BLEEDING
+APPLY TOURNIQUET
+Yes No
+0
+INITIATE IV
+ 20
+ 80
+    00
+   100
+CONTROL BLEEDING
+100
+APPLY INITIATE IV TOURNIQUET
+70
+ 30
+  Yes No
+  Figure 7: Simulator Performance in Hemorrhage Control Training for Retrofit (Left) and Modification (Right)
+2015 Paper no. 59 Page 7 of 9
+Percentage of Participants
+Percentage of Participants
+Percentage of Participants
+Percentage of Participants
+Percentage of Participants
+Percentage of Participants
+
+Both the Rescue Randy® Retrofit and the Modification were able to achieve hemorrhage control training objectives at a high rate of success. The only negative was a low rate of success for initiating IVs on the Rescue Randy® Retrofit, with only 30% of respondents able to complete the procedure on the simulator (Figure 7).
+The POISim mannequin was tested at a separate time, and had fewer respondents to assess training objectives and usability. Anecdotally, respondents were generally positive about their ability to perform a needle chest decompression, a cricothyrotomy, and to control hemorrhage. However, respondents felt the mannequin was too heavy, weighing over 230 lbs.
+CONCLUSIONS
+The need for a low-cost point of injury simulator has been evident for many years. This project was successful in creating three prototype simulators at a price point of ~$10,000 or less. This alone proves that the capability is currently feasible. During the process, a number of research avenues were taken, including a retrofit body suit for existing mannequins, modification of existing mannequins, and creation of a new mannequin. Each had strengths and weaknesses. Based on the results, the most convenient for training sites is the Retrofit body suit, since it only requires attachment to existing assets. Modification would require replacement parts to upgrade existing mannequins. A new mannequin would require sites to become trained on the operation and maintenance of a new model.
+In terms of functionality, or measures of performance, the simulators were generally quite good. The POISim mannequin had issues regarding reliability, maintainability, and availability, as it had a number of hardware issues during testing. These are not unexpected, and with a few more iterations would largely become a non-issue. Most of the measures of movement, ruggedness, and ease of use were acceptable. It should also be noted that only the POISim mannequin was able to achieve a high level of suspension of disbelief, as the other models had no blinking, chest rise / fall, pain response, or voice.
+The measures of effectiveness were acceptable for the hemorrhage control training objectives, with all models doing well. Unfortunately, the airway training objectives were less successful, and require additional development to overcome deficiencies. The simulation of injuries were positive for the Rescue Randy® Retrofit and the POISim mannequin, but were less successful for the Rescue Randy® modification.
+Overall, the project had many successes. The creation of a prototype point of injury training aid at the ~$10,000 price point was a significant achievement. Additionally, many of these simulators were able to successfully simulate and train the majority of point of injury procedures. The airway procedures were still significant deficiencies, which will need to be rectified. Future research will focus on the improvement of airway models and the overall usability of the system. The POISim mannequin will need improvement, especially in terms of reliability. A low-cost mannequin tailored to Army training needs is a valuable tool for instructors and trainees, and the first steps towards creating one have been taken here. Further efforts are already ongoing, including efforts at a modular mannequin which will allow a more customizable training capability.
+ACKNOWLEDGEMENTS
+Researchers would like to acknowledge IVIR, Inc. for their engineering expertise during this effort. Additionally, the team would like to thank the Fort Bragg MSTC for their willingness to participate in user tests.
+REFERENCES
+Anton, J. J., Burns, E., Norfleet, J., & Thompson, D. (2009). US Army Research, Development, And Engineering Command (RDECOM), Independent Test And Evaluation Of The Stand Alone Patient Simulator (SAPS), Under The DoD Challenge Program: DTIC Document.
+Butler, F. K., Haymann, J., & Butler, E. G. (1996). Tactical combat casualty care in special operations: Association of Military Surgeons of the US.
+Good, M. L., & Gravenstein, J. (1989). Anesthesia simulators and training devices. International anesthesiology clinics, 27(3), 161-166.
+2015 Paper no. 59 Page 8 of 9
+MODSIM World 2015
+
+Holcomb, J. B., Dumire, R. D., Crommett, J. W., Stamateris, C. E., Fagert, M. A., Cleveland, J. A., . . . Hira, K. (2002). Evaluation of trauma team performance using an advanced human patient simulator for resuscitation training. Journal of Trauma and Acute Care Surgery, 52(6), 1078-1086.
+Laporta, A. J., Hoang, T., Moloff, A., Tieman, M., Schwartz, B. D., Slack, S., . . . Unangst, A. (2014). From Trauma in Austere Environments to Combat or Medical School: How Blended Hyper-Realism in the Real and Virtual Worlds Can Better Prepare Surgeons. Medicine Meets Virtual Reality 21: NextMed/MMVR21, 196, 233.
+Small, S. D., Wuerz, R. C., Simon, R., Shapiro, N., Conn, A., & Setnik, G. (1999). Demonstration of high‐fidelity simulation team training for emergency medicine. Academic Emergency Medicine, 6(4), 312-323.
+2015 Paper no. 59 Page 9 of 9
+MODSIM World 2015

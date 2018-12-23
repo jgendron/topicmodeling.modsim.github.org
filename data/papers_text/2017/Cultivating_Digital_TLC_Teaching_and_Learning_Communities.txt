@@ -1,0 +1,322 @@
+Cultivating Digital TLC - Teaching and Learning Communities
+Dominic Mentor
+Teachers College Columbia University New York, NY dm2123@tc.columbia.edu
+ABSTRACT
+This study reports on an effort to create a sustainable, blended, mobile and online educational system for a U.S. based national vocational program. The research looked at the current ecosystems within each of the eight city sites before determining an ecological diffusion of technology approach. Organic methods were used to manipulate the adoption of blended, mobile, as well as online teaching and learning. A field observation approach where the researcher identified current states of paper-based models and small pockets of online learning like wikis and blogs, with an inability to model or scale those digital tools. Leveraging a modeling approach, a mobile first eLearning portal was piloted in a staggered fashion, leading to a 100% adoption amongst staff and students. The intentionality behind the modeling approach was to expand adoption to 400% to address semi- and non-academic components of the program. Key results allowed the organization to align its curriculum across cities, and build master courses to offer its corporate partners with quality standards. The flexibility of the organic adoption approach also increased multi-screen access, extending the content delivery and engagement beyond the confines of time and physical space constraints. Be it mobile or computer, the organization transformed learning from a solely instructor-led approach, to accommodate ‘flipped’ learning engagements, as well as supportive digital and portable learning communities. Through simulations, the organization was also able to incorporate social collaboration, mLearning and interoperable learning tools that cultivated and accommodated differentiated learning and development styles.
+ABOUT THE AUTHORS
+Dr. Dominic Mentor is an Adjunct Professor at Teachers College, Columbia University and serves as a senior leader of a corporate facing, talent development organization. He won the Workforce Magazine 2014 Optimas Gold and the 2015 Blended E-Learning Award from the International E-Learning Association for his vision and innovation. He initiated and co-designed the USA’s first mLearning course, and was fortunate to be a part of a social media fellowship for the NY Mayor's Office of Adult Education. Dominic’s previous publications include the editing of and contributing author to the Handbook of Research on Mobile Learning in Contemporary Classrooms (2016), the first chapter in Tablets in K-12 Education: Integrated Experiences and Implications (2015), a chapter in the Encyclopedia of Mobile Phone Behavior (2014), book reviews published in Teachers College Record (2010) of New Tech, New Ties: How Mobile Communication Is Reshaping Social Cohesion, and a review of Students' experiences of E-learning in higher education; the ecology of sustainable innovation (2010), as well as an Educause journal (2010) article titled, Stating the case for mobile phone learning.
+2017 Paper No. 11 Page 1 of 10
+MODSIM World 2017
+
+Cultivating Digital TLC - Teaching and Learning Communities
+Dominic Mentor
+Teachers College Columbia University New York, NY djm2123@tc.columbia.edu
+BACKGROUND
+In 2012, a decade old national talent training organization was still predominantly running its learning and development phase with paper based models. Young adults were trained for six months in mostly computer technology areas in preparation for a six-month paid internship with a major corporation. An internship converted into full-time employment or contract work was used as one measure of success by the training organization (TO). The TO aimed to close the need for skilled, professional and employable entry level talent by fostering the development of young adults. The individuals being trained by the TO were either recent high school graduates, low level employees in retail or service industries with no real viable career trajectories to support their families or goals, and recently dropped out college students. On average, the latter group made up 40% of the national student population at each of the eight city sites across the USA. The students who dropped out of college did so for reasons ranging from lack of funds and financial literacy, no clear career path or minimal envisioned job matching opportunities as well as a lack of stimulating educational engagement.
+Learning and Development (L&D) for both students and teaching staff were not optimized via the predominantly paper based models that were in practice at eight of the training sites. It is well established from early e-learning research (Boyle, 1997; Clarke 2012; Mayer and Moreno, 2000), that students retain more when multimodality stimulated. Contemporary research on e-learning substantiate those earlier findings and goes further to prove that information processed in multimodal fashion is processed faster into deeper memory (Kelley and Whatson, 2013; Mayer & Moreno, 2007; Sato, 2016). The benefits we wanted to introduce to the staff goes beyond the learning benefits for students, and included administrative ease for preparation, delivery and assessment (Mentor, 2016). Additionally, we wanted to offer teaching staff opportunities to be more creative by being able to post various multimedia, up-to-date subject information for interactive engagement and make all of that easily shareable.
+FIELD OBSERVATIONS – CURRENT STATES AND CHALLENGES
+The field observation looked at both the current ecosystems within each of the eight city sites, as well as researched organic methods to cultivate and manipulate the adoption of blended, mobile, as well as online teaching and learning (Ellis & Goodyear, 2009; Mentor 2010). The field observations also included semi-structured interviews with instructors, Academic Directors (ADs) and other program staff that were tasked with teaching.
+Using a field observation approach the researcher identified:
+ current states of paper based models
+ similar subject labels in place at most sites, but different curricula and objectives in use
+ a need expressed by instructors to be able to duplicate or replicate one another’s work
+ small pockets of online learning in the form of disparate uses of blogs, wikis and Learning Management
+Systems and
+ found an inability to model or scale the existing digital tools.
+Curriculum Mapping and Alignment
+From the field observations and interviews there was a need to conduct a curriculum mapping process, with the eventual goal to use the curriculum map to showcase differences amongst sites teaching courses and career tracks with the same labels. The other goals were to provide high level comparisons to see which sites provided which career tracks, what the curriculum consisted of, and for which corporate partners. At the time of the field observations, the training organization was serving national clients, but with each site offering different learning objectives, curricula content and delivery.
+MODSIM World 2017
+  2017 Paper No. 11 Page 2 of 10
+
+                 Table 1. 2012 Curriculum Mapping Overview for EPICC
+MODSIM World 2017
+   Courses 
+Training Sites
+         MA
+   NY
+        RI
+      VA
+   CA
+        IL
+      GA
+     WA
+     IT
+         X
+     X
+       X
+       X
+     X
+       X
+       X
+       X
+     FO
+         X
+     X
+                                             QA
+                X
+                            X
+                                    Project Management
+       X
+                        X
+              Business Communication (BC)
+   X
+ X
+ X4
+    X
+ X
+ X4
+   X5
+   X
+   BC Lab3
+                           X
+                           X
+                         Professional Skills1
+  X1
+     X
+    X1
+    X
+     X
+    X
+   X1
+       X
+      Financial Literacy
+    X
+ X2
+         X2
+        Business Math
+              X
+                                            Customer Service
+                   X
+      X
+              X
+      X
+          Notes:
+1 Massachusetts calls this “Customer Service:” Rhode Island: “Workplace Relationship Skills”. Georgia: “Corporate Culture and Persona”
+2 In Rhode Island, Financial Literacy exists as a module within “Workplace Relationship Skills”; Georgia includes it in its “Personal Development” module
+3 In Rhode Island and Illinois, BC has an extra curriculum of 3 modules focused on literature and social justice readings and writing
+4 called “Business Writing”
+5 In 2013 Business Communication in Georgia is called Business Mechanics and Writing
+Table 1 above does not show the various college partners that each site was required to have as part of the requirement for students to earn college credits as part of their training for the paid internships. The academic department and organization gained a deep understanding of the variations in key elements of the college partnership agreements across sites. In many cases, the college partner required curricula to be changed. Some of the requested changes ranged from outcomes, objectives, assessments and in one case, who could assess the students produced work. Furthermore, the curricula mapping exercises helped to identify which college partners required what aspects to be changed, as well as the frequency and consistency of those requests and requirements.
+The curriculum mapping (CM) exercise helped provide insights into the high level and granular differences amongst curricula content and delivery. The CM process also supported the need for curricula alignment, by making the differences visible to site and national staff. The mapping process supported the understanding of learning and development variation across sites as well as identified ‘strong’ career tracks (e.g. Financial Operations in Boston), which could be leveraged across sites. A strong career track in this instance was one that showed high internship contract sales with corporate partners as well as a high internship to employment ratio. CM also identified partially developed curricula tracks that could be solidified and grown nationally. For example, Quality Assurance (QA) was offered at one site with relative internship contract sales as well as conversions from internship to employment for the young entry level talent. However, while QA was strongly reflected in the labor market data, two sites only capitalized on offering QA training and selling internship seats in that regard. Additionally, only local sites owned the internship sales and curricula offerings, without a full overview or national picture of the curricula landscape across the country. Thus, the curriculum mapping based on the field observations, interviews and documentations,
+2017 Paper No. 11 Page 3 of 10
+
+                       the curriculum chart could be used by national staff as a general reference on site variability, and to identify curricula, internship and job opportunity analysis areas to delve into for more detail. On a local level, ADs could have a visual, data informed map, of who offers what at which site, which could be used as a valuable resource to see where expertise might lie at another site. That local site talent could then be positioned to offer curriculum insights, share material or offer lessons learned in the demands of the corporate partner as well as delivery threats, pros and pitfalls.
+Table 2. 2012 Business Communication Curriculum Mapping Overview
+MODSIM World 2017
+     MA
+      NY
+       RI VA CA
+      IL
+      GA
+      WA
+     Grammar
+     X
+    XX
+     X
+    X
+       Emails     X
+   X
+   XXX
+  X
+     X
+     Blogging
+             XX
+                       Reading X Comprehension
+     X
+    XXX
+     X
+        X
+     Summarize X communications
+   X
+   X
+  X
+     X
+   Letters     X
+              X
+                    X
+     Resume and Cover X Letter
+   X
+   XXX
+  X
+     X
+      Essay Writing
+      X
+         XX
+      X
+      X
+      X
+     Critical Thinking
+          XX
+       X
+             Structured X Arguments
+      X
+    XX
+                    PowerPoint X presentations
+      XX
+       X
+     Public Speaking X
+    X
+      XXX
+   X
+     X
+    X
+   Plagarism     X
+       X
+        X
+        X
+                 The curriculum mapping exercise was essentially a site overview on a national scale. It also acted as a learning and development (L&D) curriculum comparison template on a semi-granular level. Additional objectives were to also provide a general outline of courses taught in L&D, as defined by each site. In this part of the curriculum mapping, each standard course had its own table template and could reveal the semi-granular differences between sites’ curricula offerings. A standard course was defined as one that was offered at all sites. Course and career track labels were used to establish what standard course offerings existed. The side by side curricula mapping comparison offered diagrammatic representations of each sites’ training offerings. The insights gained from the tabular comparison supported the revelation of differences and variation in types of courses across sites, as well as understanding the consistency amongst course offerings. Drilling deeper, the organization could develop an understanding of the consistency and variation in topics within courses across sites. Through field observations, interviews as well as document collection and collation, we could start identifying where documentation existed. Furthermore, from site and classroom visits, or interviews with instructors and ADs, the principal investigator identified where the additional undocumented course elements existed, and could start the process of categorizing and documenting course elements and courses.
+2017 Paper No. 11 Page 4 of 10
+
+                                                                     Table 3. 2012 Information Technology Curriculum Mapping Overview
+MODSIM World 2017
+                            MA NY RI VA CA IL GA WA
+XXXXXXXX
+                  PCUsage
+MS Office (Word, PPT, Excel, Outlook)
+Internet Explorer MS Access Windows 7 Windows XP
+Laptops
+Lab tools, processes
+Portable devices, phones
+Definition of / Role of IT
+Hardware Components / Assembly
+Operating Systems
+IT Ticketing Systems Troubleshooting
+Customer Service
+Networks
+X X       X X 1NYC also teaches Win Vista and Win 2000 (in accordance with College Partner Syllabus)
+The curriculum mapping process benefited and aided both national and local teams. National staff could now identify a possible list of “core concepts” in courses and could start to understand consistency in teaching those across sites for the benefit of consistency across the organization, but also for potential quality control measures for its national corporate partners. While local ADs could use the maps to show their local staff a site by site comparison. In addition, a picture of who teaches what and which objectives will inform the curricula. This was extremely valuable as internship sales many times did not match what was being offered by the site instructors. The insight into what was occurring helped them to make informed decisions and supported an increase in transparency for national and local staff about what is being taught with a further identification of “strongest” or most complete course curriculums that could be leveraged for newer sites or sites adding courses and career tracks. Furthermore, academic staff could use the mapped information to start analyzing current curriculum and recommending changes. The local ADs and instructional staff started the process of enhancing their site’s courses and teaching methods in line with what they could see in the multifold curriculum map. In the absence of a site launch playbook, the side-by- side cartographic organizing of the curricula information could also aid with the launching of a new sites or a new course and career track at an existing site. Plotting the curricula was followed by how the curricula was delivered in a 21st century computer technology context. With so many variations already documented per site for the national training organization, there was a need to document which digital teaching and learning tools were being used by sites in 2012.
+                  X X X
+X X
+X
+X X1
+X X
+X X X X
+X X X X
+X X X
+XX
+X
+XX
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X X
+X
+X
+X X
+X
+X X
+X X
+X
+                                                      X
+                                    XX
+X X
+X
+                                                         X
+                                    X
+                                    XXXXXXXX
+XXX X
+XXXX XXX
+                                                   Security
+             2017 Paper No. 11 Page 5 of 10
+
+Discovery of Digital Learning Tools
+The goals of discovery for learning tools that were being utilized by sites, was to document a high-level overview of the number and variety of instruction and learning tools currently in use across the network. The collected and collated information would offer valuable insights and support future digital teaching and learning decisions. There was a need to understand the range, and the frequency or consistency of digital learning tools that were being tried, tested and adopted at high ratios. Documenting if there were any or a variety of LMS-type systems that existed across sites, would aid the comprehension of the degree to which sites, and their instructional staff were already comfortable using instructional and learning management tools. Before the new, holistic national academic vision and strategy was to be implemented in phases, there was a need to test assumptions about how widespread usage of current digital engagement tools really were. The findings offered early indicators of the type of strategy, culture and change-management that will be required to support a new Learning Management System (LMS) roll-out.
+There were two instructors out of eighty that employed the use of wikis and one instructor who spoke of using a blog. The blog was tried for a week, but the learning curve was too high for both staff and students. The time required to maintain the blog was in short supply in the six-month intensive training program. One instructor at a site had access to their college partners’ learning management platform, by way of his dual adjunct status. A digital repository that was employed by 50% of Information Technology instructors across the country, was the Cisco CCNA digital material. There was one digital tool that was found to be in use at all the sites, albeit because it was a compulsory demand. Grade book Wizard was the nationally instituted grade repository tool. The user interface was horrendous and the user experiences reported were frustration, time-consuming and high dissatisfaction. There was a strong misunderstanding by some of the programmatic and operations staff, that even though this tool only captured grades, that this repository was an LMS.
+The next phase of capturing the curricula delivery methods, identified a need to develop a repository of L&D curricula documentation. The goal of which was to offer a central location containing course syllabi by site, and supporting course materials like quizzes, tests, discussions, teaching material and exams. The repository would address concerns and potential benefits revealed by the mapping process and could further aid curricula alignment. The central repository would make the training material available and where appropriate, be accessible to national and local staff. In fact, two central repositories were envisioned. One would serve as a text based version offering documentation. While the other would be a dynamic course repository with interactive material, lessons, tests, discussions and exams, that could be copied and introduced seamlessly to another site with the right instructional staff expertise. The text based repository was envisioned to be static with information, but dynamic with hyperlinks to course descriptions, objectives and abbreviated samples of assessments. A more dynamic repository was envisioned to be a Learning Management System (LMS) that could offer the ability to share interactive learning material and resources, and in that way also cultivate collaborative teaching and learning communities.
+Creating a criteria taxonomy to select an LMS
+Information from the field observation ‘listening tour’ was used to construct a criteria taxonomy for selecting an LMS that would address instructional staff and academic priorities as well as organizational needs. Apart from taking a mobile first e-learning approach (Curinga, & Saravanos, 2016), the criteria taxonomy also took into consideration the need for seamless cultivation of social connectedness to help the fostering of learning communities via digital means (Mentor, 2011). The vision entailed migrating the advantages gained from the curricula mapping process to establishing and charting new digital geographies (Vasudevan, 2009; 2010) connected around Teaching and Learning Communities (TLC). Using the LMS to knit together previously disconnected instructors from one site or across city sites in the USA, helped to navigate the cultivation of the TLC. The LMS as a central dynamic tool thus hosted the following criteria to aid the conversion to, and nurturing of nationally connected digital TLC’s.
+MODSIM World 2017
+  2017 Paper No. 11 Page 6 of 10
+
+Table 2. Criteria taxonomy for selecting an LMS for EPICC
+MODSIM World 2017
+     Ease of Use
+       ✓ Intuitive, with low learning curve
+✓ Very little to no training required
+      Simple sharing of learning resources
+    ✓ Effortless shareable content between instructors
+✓ Shareable with other LMS’es (SCORM)
+      Interoperability of learning tools
+    ✓ Create and/or Host content from other sources like Google Drive, OneDrive, etc.
+✓ Embed and connect to other online resources
+        Social Connectedness
+  ✓ Collaborative Learning capabilities
+✓ Host Social Media elements and tools
+• A\Synchronous online networking
+• Call to action buttons to build community for example: Messaging,
+Thumbs up, Sharing, Network with others
+• Groups within groups
+       Mobile accessible
+       ✓ Web responsive
+✓ Native application
+✓ Seamless Multi-screen access
+       Long term evolution and sustainability
+       ✓ Customer responsiveness to requested features
+✓ Pricing models
+    Holistic E&M-Learning Vision
+The field observation also facilitated a process to identify, articulate and define an e-&-m-learning vision. Various working sessions were conducted with ADs, Senior leaders and the CEO to concretely describe how e-&m-learning tools and approaches will be used during the L&D phase. Lessons learned from the L&D implementation, could be stimulated for the internship training component as well across all the program phases, starting with outreach, admissions, student services and working all the way through to employment placement. The articulated vision also laid out how e-&m-learning tools could, through modeling and be integrated for better trainee learning and development. The vision described how the training organization could evolve from its then current state of paper based models, to multimodal digital engagement. The academic vision and strategy included concrete goals and milestones to measure progress and success growing an organic digital ecology for its L&D and for executing that vision.
+ Phase 1 of this project was focused on presenting a tangible, multi-year vision for e-&m-learning
+ Phase 2 of the project involved planning the change management and operational steps required to ensure that the vision is broadly understood, accepted and supported across the 8 Core Program sites and national office.
+ Phase 3 entailed the monitoring and evaluation of the roll-out and implementation
+National long term intentionality behind academic vision and strategy
+Given the variance and lack of alignment found between sites, an academic vision and strategy was implemented. The idea was to offer a uniform vision, with consistent quality standards for all curricula material and delivery. An LMS was but one tool on the utility belt to address the teaching and learning challenges. One of which was a lack of a cohesive and connected teaching and learning community amongst the instructional staff on a national scale. Growing the digital teaching and learning community needed an organic approach which entailed piloting the LMS with early adopter individual instructors, and ADs who offered their entire site as an early adopter. Both latter
+2017 Paper No. 11 Page 7 of 10
+
+methods advanced the modeling approach to grow examples of successful use, and highlight the benefits of teachers’ time saved and their work made easier. Taking an organic approach for the diffusion of new computer technology tools, systems and practices for education was to grow the influence through modeling. LMS early adopters and champions’ work was presented during webinars called virtual mini conferences (VMCs). While these VMCs were a stress on instructional staff’s time, the VMCs grew in popularity within the broader organization.
+To leverage a modeling approach, a mobile first eLearning portal was piloted in a staggered fashion. Through the modeling, the pilot size grew to seven out of eight sites. This led to a soft roll-out, as many of the sites had already been exposed to the LMS. The initial adoption out of the gate with all eight sites ran at 90% for the first six months. Through the modeling and simulations offered via webinars that were called virtual mini-conferences, led to a 100% adoption of the enterprise system amongst staff and students within the first year of the roll-out. Through the webinars, early and intermediate adopters were selected to showcase how their work came alive through the LMS. Requests from laggards for copies of the teaching and learning material could easily be met through a simple click and save to the learning resource folder. Growing the adoption at a faster rate, but more importantly, in a very organic manner amongst the instructional staff, but also program staff. Not only were the learning material now remixable content, but also enhancing teacher proficiency of untrained instructors in a non-threatening manner, and through simulated sessions, planting seeds for quality standards across subject areas. The term simulated here refers to webinars where instructional staff showcased their work with examples of what and how they would design and deliver content to students.
+The intentionality behind the modeling and simulation approach was also to expand adoption to 400% to address non-academic components of the program. While the L&D phase of the program hosted the biggest staff and trainees, the larger, long term vision considered these gains a small start. There were other long term visions for academics (L&D), as well as for the other phases and departments of the program. Giant leaps made, but the LMS work was a tiny jumping off point for a more integrated adoption of e-&-m-learning.
+RESULTS
+MODSIM World 2017
+ Apart from the expected faster teaching and learning with hypermedia, we saw a more consistent course delivery. Students could also be grouped from a zone of proximal development approach, but students were also afforded more individualized instruction. The talent development organizations now had a better ability to translate learnings into improved job performance which translated into better intern performances, and greater customer satisfaction. The latter which in turn could mean greater employer partner satisfaction and renewal. Instructional staff spoke of higher collaboration between colleagues as well as with their students. Students and staff also reported higher instructional stimulation and work satisfaction.
+Students as trainees were now more exposed to, and understood the importance of using digital professional development tools. They still need assistance to direct their efforts, but the LMS not only expanded their peer network, but also their electronic contact and accessibility to their trainers. Lastly, students’ experience with e-&m- learning have increased because of the cultivation of the digital teaching and learning communities. Which would serve them well in their internships as it helped to somewhat simulate L&D in a work environment. The electronic engagement also prepared the trainees for what they might encounter in their career trajectory either through on- boarding or other professional development opportunities at work.
+The flexibility of the organic adoption approach also increased students’ multi-screen access, and extended the content delivery and engagement beyond the confines of time and physical space constraints. Be it mobile or computer, the organization transformed learning from a solely instructor-led approach, to accommodate ‘flipped’ learning engagements, as well as supportive digital and portable learning communities. Through simulations, the organization was also able to incorporate social collaboration, mLearning and interoperable learning tools that cultivated and accommodated differentiated learning styles.
+While the internal webinars (VMCs) were arranged for academic staff to learn from one another, organizational staff consisting of senior leaders, Operations as well as the Development department (fund raisers) all started attending and participating in those events. The VMCs resulted in making the instructional work more visible to the organization. An added benefit to the expanded organizational audience was that these webinars raised awareness of
+2017 Paper No. 11 Page 8 of 10
+
+the academic alignment and innovation that were taking place. It also offered and successfully garnered new grant and funding opportunities.
+Other key results from the organic approach, as well as the opportunities provided for modeling and simulation, allowed the organization to align its curriculum across cities. The cultivated organic shift also created a foundation on which we could envision, build and implement master courses on a national scale with quality standards in place. The advantages of organic adoption allowed for these quality standards to initially grow naturally. The national talent development organization could now offer its corporate partners uniform quality standards from the curricula that were initially mapped as highly disparate. Through the LMS, standard syllabi, assessments and other teaching and learning materials were now easily available. Other milestones were establishing overarching principles and priorities for e-&m-learning which could be migrated to other departments in the organization as well as other channels of the organization. Ultimately, growing an ecology of collaboration, shared material and planning seeds for further growth and L&D innovation needed by the training organization.
+ACKNOWLEDGEMENTS
+My utmost appreciation to a Strategy Consultant for her work on helping refine an e-&-m-Learning vision. Appreciation for Academic Directors and their willingness to enact an academic vision and strategy. Thank you to the instructors for broaching the modeling of their work to one another, as well as to the rest of the organization. A thank you to the instructors for their willingness to share their LMS work in various simulated engagements. Utmost appreciation to the CEO for countering resistance from some staff regarding the initial sharing of the e-&m-learning vision.
+REFERENCES
+MODSIM World 2017
+ Boyle, T. (1997). Design for multimedia learning. Prentice-Hall, Inc..
+ Clark, R. (2002). Six principles of effective e-learning: What works and why. The e-Learning Developer's Journal,
+ 1-10.
+ Curinga, M.X., & Saravanos, A. (2016). Mobile First E-Learning. In D. Mentor (Ed.), Handbook of Research on
+ Mobile Learning in Contemporary Classrooms (pp. 23-36). Hershey, PA: IGI Global. doi:10.4018/978-1-
+ 5225-0251-7.ch002
+ Ellis, R., & Goodyear, P. (2009). Students' experiences of e-learning in higher education: the ecology of sustainable
+ innovation. 1st edition, Routledge.
+ Kelley, P., & Whatson, T. (2013). Making long-term memories in minutes: a spaced learning pattern from memory
+ research in education. Frontiers in human neuroscience, 7, 589.
+ Mayer, R. E., & Moreno, R. (2002). Aids to computer-based multimedia learning. Learning and instruction, 12(1),
+ 107-119.
+ Moreno, R., & Mayer, R. (2007). Interactive multimodal learning environments. Educational Psychology
+ Review, 19(3), 309-326.
+ Mentor D. (2010). Book Review of Students' experiences of E-learning in higher education; the ecology of
+ sustainable innovation by Robert Ellis and Peter Goodyear. New York: TC Record.
+ Mentor, D. J. (2011). Exploring social connectedness via mobile phone texting (Order No. 3484290). Available from
+ Dissertations & Theses @ Columbia University; ProQuest Dissertations & Theses Global. (902954602).
+ Retrieved from
+ http://ezproxy.cul.columbia.edu/login?url=http://search.proquest.com/docview/902954602?accountid=1022
+ 6
+ Mentor, D. (2016). EMxC3 = e&mLearning Cultivating Connected Communities: Sustainable Workforce Talent
+ Development. In D. Mentor (Ed.), Handbook of Research on Mobile Learning in Contemporary
+ Classrooms (pp. 240-259). Hershey, PA: IGI Global. doi:10.4018/978-1-5225-0251-7.ch012
+ Sato, T. (2016). Could a multimodal dictionary serve as a learning tool? An examination of the impact of
+ technologically enhanced visual glosses on L2 text comprehension. The EuroCALL Review, 24(2), 3-12.
+ Vasudevan, L. (2009). Performing new geographies of literacy teaching and learning. English Education, 41(4), 356-
+ 374.
+ Vasudevan, L. (2010). Education remix: New media, literacies, and the emerging digital geographies.
+ Vasudevan, L. (2011). Re-imagining pedagogies for multimodal selves. National Society for the Study of
+ Education, 110(1), 88-108.
+2017 Paper No. 11 Page 9 of 10
+
+2017 Paper No. 11 Page 10 of 10
+MODSIM World 2017

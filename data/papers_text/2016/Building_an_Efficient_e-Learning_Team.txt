@@ -1,0 +1,581 @@
+Dena Trammell
+Science Applications International Corporation Huntsville, AL dena.k.trammell@saic.com
+Alysson Hursey
+Science Applications International Corporation Huntsville, AL alysson.s.hursey@saic.com
+Building an Efficient e-Learning Team
+ABSTRACT
+Faced with an ever-changing technical environment, the need to create effective and inspiring content, and in many cases, a shrinking budget, it is critical for eLearning managers to know how to build and maintain a technically savvy, creative, and cost-effective team. Producing and pricing engaging eLearning is a challenge that, in many instances, cannot be achieved using a one person/one authoring tool solution—it requires a team. Determining the correct mix of people is key to successfully delivering profitable and effective training.
+In this paper, we will examine the actions required to meet these challenges, leveraging research data from leading industry sources. We will describe the characteristics and cost data associated with eLearning professionals— specifically, instructional systems designers, web programmers, and digital artists. We will examine the driving factors/differentiators for pricing training products. Finally, we will present an algorithmic solution for determining the correct mix of professionals required to design and develop eLearning content, given specifications such as interactivity level, complexity of subject, need for original visual media, amount of content, etc.
+ABOUT THE AUTHORS
+Dena Trammell is a senior learning professional and manager of training development for Science Applications International Corporation (SAIC). She has over 25 years of experience in multimedia design and over 10 years of experience in instructional systems design supporting multiple Department of Defense customers, including the U.S. Army, U.S. Air Force, and joint program offices. Ms. Trammell manages a large team of eLearning professionals, including instructional systems designers, programmers, graphic artists, and animators. She holds a bachelor’s degree in art from the University of Alabama in Huntsville with minors in education and art history.
+Alysson Hursey, a training developer for Science Applications International Corporation (SAIC), has nine years of experience supporting graphics and media projects for the U.S. Air Force, U.S. Army, other governmental organizations, international corporations, and private-sector clients. For the last three years, Ms. Hursey has worked within SAIC’s Training and Simulation Directorate, focusing on the development of eLearning courseware and reference material. She holds a bachelor’s degree in studio art and graphic design from the University of Alabama in Huntsville and recently earned a certificate in instructional design
+2016 Paper No. 21 Page 1 of 11
+MODSIM World 2016
+
+Dena Trammell
+Science Applications International Corporation Huntsville, AL dena.k.trammell@saic.com
+INTRODUCTION
+Alysson Hursey
+Science Applications International Corporation Huntsville, AL alysson.s.hursey@saic.com
+Building an Efficient e-Learning Team
+The correct mix of training professionals and experience levels is critical to achieving success in today's eLearning environment. In this paper, we will examine the actions required to meet these challenges.
+The content of this paper is structured into three primary sections. The first section presents background information and definitions common to eLearning. The second section introduces the problem statement, defines the objectives, and describes the methodology and tools used to meet the stated objectives. The final section provides general findings and a conclusion.
+BACKGROUND
+eLearning Overview
+In the broadest sense, eLearning refers to interactive courseware delivered to learners by way of electronic media. As with traditional, instructor or facilitator-led training, the priority is for the learner to gain a measurable level of mastery over the material being presented. Unique to eLearning, however, is that this mastery is achieved through interaction with a progressive series of self or group-paced multimedia-based assignments. “It includes the creation of story treatments, scripts, and storyboards. Interactive courseware may include, but is not limited to, text, programmed instruction, audiotapes, videotapes, slides, films, television, and computers” (TRADOC, 2013).
+Levels of Interactivity
+eLearning courseware is categorized into four levels of interactivity, defined by the degree to which the learner is required to interact with the material and the level of control given to the learner over the learning environment. The characteristics of each interactivity level are described below.
+Table 1. Levels of Interactivity.
+MODSIM World 2016
+     Description Learner Environment Content Type Practice Level Material Best Suited For
+   Level 1 - Basic Passive and linear Primarily knowledge or No or very limited practice Basic subject awareness based or feedback activities matter, short
+duration; Compliance training
+   Level 2 - Active, non-linear, and Intermediate allows for basic control
+of the course environment
+Primarily centered on rules and problem solving
+Simple practice and feedback activities that are knowledge and/or identification based
+Basic to mid- level subject matter; software training, soft- skills
+   Level 3 - Active, non-linear, and Primarily centered on Advanced utilizes simple branching application and transfer,
+utilizing scenarios and case studies
+Complex practice activities that test multiple, interrelated concepts and provide detailed feedback and remediation
+Mid-level to advanced subject matter; software, hardware, soft- skills, leadership
+2016 Paper No. 21 Page 2 of 11
+
+MODSIM World 2016
+     Description Learner Environment Content Type Practice Level Material Best Suited For
+   Level 4 - Extremely active, non- Highly-advanced linear, and utilizes
+complex branching
+Primarily centered on application, reflection, and transfer, utilizing realistic, scenario-based interactivity
+Simulation-based practice activities that employ branching. Content is experienced, rather than presented (Carter, 2007)
+Advanced subject matter; software, hardware, soft- skills, leadership
+eLearning Professionals
+The types of professionals and related skills typical to an eLearning production team are listed in the table below. For a large team, each role may represent stand-alone, full-time personnel. However, for many teams, cross- capability may be required, especially for secondary roles. Additionally, for most teams, administrative assistance may be required. For this study, only eLearning personnel and management roles are considered.
+Table 2. Types of eLearning Professionals.
+    Role
+ Education/ Experience
+Primary Tasks
+   Potential Secondary Role (in order of probability)
+    Primary Roles
+   Instructional Systems Designer (ISD)
+ BS, MS, PhD – Instructional System, Adult Education, or similar
+ Performrequirementsanalysis
+ Designlearningapproach
+ Designanddevelopcontenttomeet
+required performance
+objectives/proficiencies
+ Developcourseinstructionalcontentinthe
+form of storyboards, scripts, lesson plans,
+learning aids, assessments, etc.
+ Performandevaluatepilottesting
+  QA Reviewer Manager Digital Artist Videographer/ Photographer Narrator Programmer 3D Modeler
+  Digital Artist
+ BFA, BA, AS – Graphic Design, Art, Fine Art, Animation, or similar; portfolio
+ Createoriginalillustrations
+ Performlayoutdesign
+ Createanimations
+ Performbasicauthoringtasks
+ Usegraphicdesignandauthoringsoftware.
+ Developand/orcontributetocoursedesign
+documents
+  Videographer/ Photographer
+3D Modeler
+QA Reviewer Manager
+Programmer Instructional Designer
+    Secondary Roles
+   3D Modeler
+ BFA, BA, AS – Art, 3D Modeling and Animation, or similar; portfolio
+ Createoriginal3Dmodels
+ Manipulateexisting3Dmodels  Createanimations
+   Videographer/ Photographer
+ BFA, BA, AS – Art, photography/videography, or similar; portfolio
+ Operatecameraequipment  Editvideoandphotographs
+   Programmer
+ BA, BS, AS – Computer programming or similar; portfolio
+ Performadvancedprogramming/markupusingHTML/HTML5, JavaScript, XML, CSS, and other programming languages/techniques
+ Developand/orcontributetocoursedesigndocuments
+   Narrator/Audio Editor
+ Experience in voice talent and access/familiarity with sound equipment and production
+ Recordnarrationand/orcharacteraudio  Editaudiotoappropriateformat
+   Quality Assurance (QA) Reviewer
+ BA – English, Instructional Design, Technical Writing, or similar
+ Reviewcontentforerrors—grammatical,spelling,formatting,etc.  Ensurecontentclarity
+ Ensurefunctionality
+   Manager
+ BA, BS, MA, MS – Instructional Design, Art, Management, etc.
+ Maintain oversight of task including schedule and budget
+ Communicatestatusandrequirementswithcustomerandteam  Assign tasking
+   Subject Matter Expert
+ BA, BS, MA, MS – Subject specialty
+  Providetechnical/subjectsupport  Verify accuracy of content
+         2016 Paper No. 21 Page 3 of 11
+
+BUILDING AN EFFICIENT TEAM
+Scenario
+Today's training managers are faced with an ever-changing technical environment and a marketplace requiring cost- effective, competitive solutions. Questions eLearning managers face include: “How do I ensure that I hire an appropriate mix of training professionals to meet my customer's educational and technical needs while keeping prices competitive?” And, “Is there a “one size fits all” solution?”
+Objectives
+The objectives of this paper are listed below:
+ The primary objective is to describe a requirements-based, algorithmic approach to building an eLearning
+team.
+ The secondary objective is to examine the technical and human factors driving the cost of training products.
+Methodology
+The structure of an eLearning team is conditional to the characteristics of the proposed courseware, which can widely vary from one effort to the next. For eLearning efforts that require use of existing media (such as clip art, media provided by the customer, and software screen shots) an ISD as a one-stop-shop may be an acceptable solution. However, when training requires significant amounts of new media creation, having a core team of cross- trained professionals is crucial to success. Hiring personnel who are equally proficient in digital art, programming, and instructional design may seem ideal, but these individuals are difficult to find and are often expensive. It is improbable that a training manager can staff an entire team with “triple threats” such as these, and, in reality, it is rarely the most cost-effective option. However, hiring ISDs who can also perform quality assurance tasks and narration, or finding digital artists who are able to create original artwork, 3D models, and animations, as well as perform basic programming/authoring tasks, is possible.
+In addition to staffing the team with cross-trained personnel, building a team consisting of a mix of junior, mid-, and senior-level personnel in one or more primary role can produce a cost-effective team solution and ensure a trained team for the long-term.
+Algorithmic Solution for Determining eLearning Team Requirements
+Several steps are required to determine the correct mix of personnel to staff an eLearning team. The repeatable solution provided in this study includes the following:
+ Perform initial requirements analysis
+ Calculate the staffing requirements for each course
+o Assign baseline hours and baseline hours distribution by role
+o Adjust baseline for unique course needs, distributing adjustments by role o Total the course hours/distribution by role
+ Total the staffing requirements for all courses
+ Determine the staffing makeup
+Perform Initial Requirements Analysis.
+Given that each project is unique, a strong understanding of the requirements and customer expectations is necessary when determining the capabilities/personnel needed to complete the task. Considerations include, but are not limited to:
+ Availability and maturity of existing content
+ Availability of Subject Matter Expert (SME)
+ Amount of original media required
+ Anticipated hours of finished instruction  Target platform/browser/Learning
+Management System (LMS) requirement
+Collecting and analyzing the development requirements, using this or similar criteria, form the basis for determining the proper mix of eLearning professionals for each course, and, once all courses are considered, for the eLearning
+2016 Paper No. 21 Page 4 of 11
+MODSIM World 2016
+
+team as a whole. The mix of personnel for interactivity level 2 training will differ greatly from the personnel to support an interactivity level 4 simulation (see Table 1).
+Calculate the Staffing Requirements for Each Course.
+Assign Baseline Hours and Baseline Hours Distribution by Role. Sources such as U.S. Army Pamphlet 350-70 and data from Chapman Alliance are good starting points for estimating the total labor hours required to produce training; however, it is important to remember that these references are averages. Consider the unique requirements for each project and make adjustments to the baseline in order to achieve a more accurate estimate. To begin estimating per course requirements, determine the base course hours using interactivity level as a guide.
+U.S. Army Training and Doctrine Command (TRADOC) recommends the following base labor hour estimates per hour of finished instruction (TRADOC, 2013):
+ Interactivity Level 1: 50 – 150  Interactivity Level 3: 300 – 600
+ Interactivity Level 2: 150 – 300  Interactivity Level 4: 400 – 700
+Considerations for selecting the appropriate baseline hours from the range of hours provided by TRADOC include the complexity of the subject matter and the experience level of the eLearning professionals who will execute the work. For example, it can be assumed that more experienced eLearning professionals will require fewer hours to complete an hour of training than less experienced staff, meaning an Interactivity Level 1 task executed by a senior ISD should be estimated using the lower value of 50.
+Once the base labor hours are determined, role percentages may be derived from several sources or be based on past experience. For this study, percentages from Chapman Alliance are used. This source recommends unique distributions based on interactivity level. When using reference sources, such as Chapman Alliance, adjustments may need to be made for activities specified in the reference model that will not be performed. For example, Front End Analysis (FEA), Subject Matter Expert (SME), and Pilot Testing are included in Chapman Alliance reference model; however, in some instances, FEA is conducted by the customer and/or management prior to funding award or are considered marketing endeavors. Similarly, SME and Pilot Test functions may also be provided or performed by the customer. For the purposes of this study, the percentages for FEA, SME, and Pilot Testing from Chapman Alliance reference model are distributed to the ISD, Digital Artist, and Programmer categories (Chapman, B, 2010). The base-hours distribution for each role is calculated as:
+􏰀􏰁􏰂􏰃 􏰄􏰅􏰆􏰇􏰂 􏰈􏰉􏰂􏰊􏰇􏰉􏰋􏰆􏰊􏰉􏰅􏰌 􏰍􏰃􏰇 􏰎􏰅􏰏􏰃 􏰐 􏰎􏰃􏰑􏰅􏰒􏰒􏰃􏰌􏰓􏰃􏰓 􏰎􏰅􏰏􏰃 􏰔􏰃􏰇􏰑􏰃􏰌􏰊􏰁􏰕􏰃 􏰖 􏰀􏰁􏰂􏰃 􏰗􏰅􏰆􏰇􏰂􏰃 􏰄􏰅􏰆􏰇􏰂 (1)
+Adjust Baseline for Unique Course Needs, Distributing Adjustments by Role. The table below provides examples of adjustments to hours that may be required. These figures are a guideline; actual hours are dependent upon the topic complexity and the results of a completed requirements analysis. Apply adjustments for specialized tasking based on an initial requirements analysis and using estimates such as those found in Table 3. Note that several adjustments activities take place when developing the first hour of finished instruction, allowing the labor-hours requirement for subsequent hours to be reduced. The adjusted total is calculated as:
+􏰘􏰓􏰙􏰆􏰂􏰊􏰃􏰓 􏰚􏰅􏰊􏰁􏰏 􏰐 􏰛􏰀􏰁􏰂􏰃 􏰄􏰅􏰆􏰇􏰂 􏰜 􏰄􏰅􏰆􏰇 1 􏰘􏰓􏰙􏰆􏰂􏰊􏰒􏰃􏰌􏰊􏰂􏰝 􏰜 􏰛􏰛􏰚􏰅􏰊􏰁􏰏 􏰞􏰆􏰒􏰋􏰃􏰇 􏰅􏰟 􏰗􏰅􏰆􏰇􏰂􏰃 􏰄􏰅􏰆􏰇􏰂 (2) 􏰠 1􏰝􏰛􏰀􏰁􏰂􏰃 􏰄􏰅􏰆􏰇􏰂 􏰜 􏰄􏰅􏰆􏰇 2 􏰘􏰓􏰙􏰆􏰂􏰊􏰒􏰃􏰌􏰊􏰂􏰝􏰝
+Table 3. Sample Hours Adjustment Options for Specialized Tasks.
+MODSIM World 2016
+    Role
+ Task
+  Estimated Additional Labor Hours per Hour of Finished Content
+ ISD
+      Extensive Requirements Analysis
+ 40-120*
+  Immature existing content
+ 10-60
+  Changing content
+ 10-60
+ Digital Artist
+              Design Graphical User Interface (GUI)
+ 40-80*
+  Original artwork
+ 20-80
+  Original animations
+ 40-120
+  Changing content
+ 20-60
+  Immature existing content
+ 20-60
+  Video shoot
+ 8-40 per shoot
+  Video editing
+  20-80
+           2016 Paper No. 21 Page 5 of 11
+
+MODSIM World 2016
+    Role
+ Task
+  Estimated Additional Labor Hours per Hour of Finished Content
+  3D Modeler
+    New 3D models
+ 4-80 per model**
+ Manipulate existing models
+ 2-20 per model**
+ Programmer
+              Design course framework
+ 20-80*
+  Multiple target browsers
+ 5 – 30 per browser/hour
+  Multiple target platforms
+ 40 - 80 per additional platform*
+  Multiple target platforms
+ 20-60 per additional platform ***
+  Custom programming (simulations, activities, etc.)
+ 80 – 160* 20 – 80 ***
+  New technology requirements
+ 40-120* 10-30***
+  Learning Management System (LMS) posting
+ 10-100 per course
+ Narrator/Audio Editing
+      Unique character animation
+ 10-30
+  Unique sound effects
+ 5-20
+  Correcting audio files
+ 5-10
+  QA Reviewer
+ Multiple target platforms/devices/browsers
+ 1⁄2 base QA amount times number of additional devices/platforms
+ Manager
+ Customer reporting cycles greater than 1 to 2/per month
+  5-20
+               * Apply to only the first hour of finished content. ** 3D modeling varies greatly depending upon the number and complexity of models (hardware, character, terrain, etc.). Measured per model, not by hour of instruction. *** Apply to hours 2 to x.
+Total the Course Hours/Distribution by Role. By using a baseline hours-distribution and adjusting based on specific course needs, an estimate of the total course labor hours and the hours distribution per role can be obtained. Tables 4, 5, and 6 show example course hours distribution for a hypothetical eLearning team. Course A represents a 4-hour Interactivity Level 1 course, Course B represents a 12-hour Interactivity Level 3 course, and Course C represents an 8-hour Interactivity Level 2 course. Each course demonstrates how adjustments are made to calculate the hours required for each role, based on the findings of the initial requirements analysis. Details for these adjustments are contained in the notes column.
+Table 4. Course A – Sample Interactivity Level 1, 4 Hour Course.
+   Description
+    Hrs
+   Role
+   Notes
+    ISD
+Digital Artist
+ Programmer
+  QA
+ Manager
+ Base %*
+   35
+31
+ 17
+  8
+ 9
+ Base percentage hours distribution
+ Base Rate per Hr Finished eLearning**
+  100
+ 35
+31
+ 17
+  8
+ 9
+ Base Distribution Interactivity Level 1
+ Hr 1 Addtl Labor Hrs
+   100
+ 30
+  12
+  Special Requirements: Adjustment to labor hours for 1st hour of finished eLearning; Design Unique GUI - 60 hours (Digital Artist); Original Artwork - 40 hours (Digital Artist); 3 Target Browsers - 30 hours (Programmer) and 12 hours (QA)
+ Hr 1 Subtotal
+  242
+ 35
+131
+ 47
+  20
+ 9
+ Adjusted labor hours for 1st hour of finished eLearning - First hour subtotal
+ Hrs 2-4 Addtl Labor Hours
+   40
+ 20
+  12
+  Special Requirements: Adjustment to labor hours for 2nd and subsequent hours of finished eLearning; Original Artwork - 40 hours (Digital Artist); 3 Target Browsers - 20 hours (Programmer) and 12 hours (QA)
+ Hrs 2-4 Subtotal
+  172
+ 35
+71
+ 37
+  20
+ 9
+ Adjusted labor hours for 2nd and subsequent hours of finished eLearning; Adjustment times number of hours
+ Subtotal
+  516
+ 105
+213
+ 111
+  60
+ 27
+ 2nd and subsequent hours subtotal
+ Total
+  758
+ 140
+344
+ 158
+  80
+ 36
+ Final Distribution Interactivity Level 1 adjusted for special requirements
+ Revised %
+    18%
+45%
+ 21%
+  11%
+ 5%
+ Final Percentage Hours Distribution
+          * Percentages based on Chapman Alliance (Chapman, B. (2010).* *Base total hours -United States, Department of the Army, Training and Doctrine Command. (2013).
+2016 Paper No. 21 Page 6 of 11
+
+Table 5. Course B – Sample Interactivity Level 3, 12 Hour Course.
+MODSIM World 2016
+   Description
+    Hrs
+   Role
+   Notes
+    ISD
+ Digital Artist
+Programmer
+  QA
+ Manager
+ Base %*
+   33
+ 30
+20
+  8
+ 9
+ Base percentage hours distribution
+ Base Rate per Hr Finished eLearning**
+  425
+ 140.25
+ 127.5
+85
+  34
+ 38.25
+ Base Distribution Interactivity Level 3
+ Hr 1 Addtl Labor Hrs
+   90
+ 20
+60
+  48
+  Special Requirements: Adjustment to labor hours for 1st hour of finished eLearning
+Extensive Requirements Analysis - 60 Hours (ISD); Changing Content - 30 Hours (ISD), 20 Hours (Digital Artist); 3 Target Browsers - 60 (Programmer), 48 (QA)
+ Hr 1 Subtotal
+  643
+ 230.25
+ 147.5
+145
+  82
+ 38.25
+ Adjusted labor hours for 1st hour of finished eLearning - First hour subtotal
+ Hrs 2-12 Addtl Labor Hours
+   30
+ 20
+60
+  48
+  Special Requirements: Adjustment to labor hours for 2nd and subsequent hours of finished eLearning; Changing Content - 30 Hours (ISD), 20 Hours (Digital Artist); 3 Target Browsers - 60 (Programmer), 48 (QA)
+ Hrs 2-12 Subtotal
+  583
+ 170.25
+ 147.5
+145
+  82
+ 38.25
+ Adjusted labor hours for 2nd and subsequent hours of finished eLearning; Adjustment times number of hours
+ Subtotal
+  6996
+ 2043
+ 1770
+1740
+  984
+ 459
+ 2nd and subsequent hours subtotal (11 hrs)
+ Total
+  7639
+ 2273.25
+ 1917.5
+1885
+  1066
+ 497.25
+ Final Distribution Interactivity Level 1 adjusted for special requirements
+ Revised %
+    30%
+ 25%
+25%
+  14%
+ 7%
+ Final Percentage Hours Distribution
+          * Percentages based on Chapman Alliance * *Base total hours from Army IMI Pricing TRADOC 350-70
+Table 6. Course C – Sample Interactivity Level 2, 8 Hour Course.
+   Description
+    Hrs
+   Role
+   Notes
+    ISD
+Digital Artist
+ Programmer
+  QA
+ Manager
+ Base %*
+  100
+ 37
+28
+ 18
+  6
+ 11
+ Base percentage hours distribution
+ Base Rate per Hr Finished eLearning**
+  225
+ 83.25
+63
+ 40.5
+  13.5
+ 24.75
+ Base Distribution Interactivity Level 2
+ Hr 1 Addtl Labor Hrs
+   20
+112
+ 130
+  36
+  Special Requirements: Adjustment to labor hours for 1st hour of finished eLearning; Immature Existing Content - 20 Hours (ISD); Original Artwork - 40 hours (Digital Artist); Video Capture - 32 hours (Digital Artist); Video Editing - 40 hours (Digital Artist); Mobile Device Application and Web Delivery - 100 hours (Programmer), 18 (QA); 2 Target Browsers - 30 (Programmer), 18 (QA)
+ Hr 1 Subtotal
+  523
+ 103.25
+175
+ 170.5
+  49.5
+ 24.75
+ Adjusted labor hours for 1st hour of finished eLearning - First hour subtotal
+ Hrs 2-8 Addtl Labor Hours
+   20
+40
+ 70
+  36
+  Special Requirements: Adjustment to labor hours for 2nd and subsequent hours of finished eLearning; Immature Existing Content - 20 Hours (ISD); Original Artwork - 40 hours (Digital Artist); Mobile Device Application and Web Delivery - 50 hours (Programmer), 18 (QA); 2 Target Browsers - 20 (Programmer), 18 (QA)
+ Hrs 2-8 Subtotal
+  391
+ 103.25
+103
+ 110.5
+  49.5
+ 24.75
+ Adjusted labor hours for 2nd and subsequent hours of finished eLearning; Adjustment times number of hours
+ Subtotal
+  2737
+ 722.75
+721
+ 773.5
+  346.5
+ 173.25
+ 2nd and subsequent hours subtotal
+ Total
+  3260
+ 826
+896
+ 944
+  396
+ 198
+ Final Distribution Interactivity Level 1 adjusted for special requirements
+ Revised %
+    25%
+27%
+ 29%
+  12%
+ 6%
+ Final Percentage Hours Distribution
+          * Percentages based on Chapman Alliance * *Base total hours from Army IMI Pricing TRADOC 350-70
+2016 Paper No. 21 Page 7 of 11
+
+The totals for each role, along with the information displayed in the notes column, are critical to selecting the appropriate skills for the eLearning team and identifying areas where cross-training may be required. Of particular interest in these examples are the requirements for video capture and editing, mobile device programming, and Learning Management System (LMS) knowledge. These specialized, secondary roles (refer to Table 2) will need to be addressed when staffing and assigning tasks for this eLearning team.
+Total the Staffing Requirements for All Courses.
+By estimating the composite of all courses, a yearly distribution of hours by role may be estimated, and this estimation may be used to determine the appropriate makeup of the eLearning team. The total hours per role is derived by totaling the role-hours for all courses and dividing by the total amount of hours for the duration of training development. Table 7 depicts the Full-Time Effort (FTE) per role for the sample eLearning team for one year. Six FTE will be required to produce the three sample courses if course development occurs over a one-year time frame.
+Table 7. Courses A, B, and C Totals and Resulting Labor.
+*Based on 1920 labor hours per year
+Determine the Staffing Makeup.
+With staffing requirements calculated, analysis of the data is required to determine the team makeup. When using this process for calculating the required staff, it is rare for the FTE by role to result in whole numbers, meaning flexibility and cross-training across roles is critical to meeting the requirements of all the courses. Additionally, the unique requirements identified in the initial requirements analysis (notes column of Tables 4-6) must be addressed. When standing up a new team, writing appropriate job descriptions that include the secondary roles as well as primary roles (Table 2) allow selection of a team that possesses all the skills required to complete the tasking. When assigning tasks to an existing eLearning team, select personnel possessing the correct mix of skills or provide mentorship and/or training opportunities to allow the individual(s) to learn the needed skills. The six individuals required to complete the tasking in this example could be one of several potential combinations, including the following possible staffing solution:
+MODSIM World 2016
+   Description
+  Hrs
+Role
+   Total Team
+    ISD
+Digital Artist
+ Programmer
+   QA
+  Manager
+  Course A - Totals
+  758
+ 140
+344
+ 158
+  80
+ 36
+  Course B - Totals
+  7639
+ 2273.25
+1917.5
+ 1885
+   1066
+ 497.25
+  Course C - Totals
+  3260
+ 826
+896
+ 944
+   396
+  198
+  Total Labor Hours
+  11657
+ 3239.25
+3157.5
+ 2987
+  1542
+ 731.25
+  Distribution
+   28%
+27%
+ 26%
+   13%
+ 6%
+  Total FTE by Role*
+    1.69
+1.64
+ 1.56
+   0.80
+  0.38
+ 6.07
+                 ISD with management capability
+ Instructional Systems Designer (ISD) with
+some authoring and graphic design
+capability
+ Digital Artist with video production/editing
+capability
+ Digital Artist with authoring and programming capabilities
+ Digital Artist with ISD and quality assurance capabilities
+ Programmer with LMS and mobile device programming capabilities
+In addition to cross-training, a mix of experience levels may also be implemented. Staffing an eLearning team with a mix of experience levels may afford opportunities for cost savings. For purposes of this study, a Mixed Team is comprised of a combination of junior, mid-level, and senior-level eLearning professionals. The Smaller, Highly- Experienced Team is comprised of fewer personnel, all at mid- or senior- experience levels.
+2016 Paper No. 21 Page 8 of 11
+
+Figure 1 shows the cost benefit of mixing experience levels with a comparison of two hypothetical eLearning teams, each using reference role percentage distribution (Chapman, B, 2010) and 600 labor hours per hour of finished content (TRADOC, 2013). Labor costs are calculated using generic hourly rates for illustrative purposes.
+Figure 1. Comparison of Team Composition and the Effect of Team Composition on Pricing and Required Volume of eLearning Production per Year.
+Using a mixed team results in a 17.87% cost savings per hour of finished eLearning. By using a combination of senior and junior personnel for the digital artist and ISD roles, it is expected that the senior professional will guide the junior personnel and ensure quality production. When the smaller, highly experienced team is used, the cost per hour is higher but the risk associated with using junior personnel is eliminated. Of note is that the number of course hours per year to support the Mixed Team is 56% greater due to the larger team size. In order to achieve the cost benefit of a Mixed Team, adequate workload is required to support the additional personnel.
+Analysis of Actual Course Data
+The process described in this studyprovides a repeatable approach for determining eLearning team staffing requirements. Collecting and analyzing actual project data can provide insight into successful (and unsuccessful) staffing approaches for a particular team. Reviewing actual data can also reveal trends and requirements unique to a particular student population and may bring to light opportunities for improvement and greater efficiency.
+Table 8 and Figure 2 provide examples of collected course data. Table 8 provides detailed information for each of the studied courses. Figure 2 performs a comparison of the actual data to the suggested guidelines found in reference sources (TRADOC, 2013 and Chapman, B. (2010).
+Table 8. Sample Course Details – Source SAIC AMCOM Express Contract.
+MODSIM World 2016
+    Course No.
+ Interactivity Level
+    Existing Content Availability
+ Media Requirements
+    SME Availability
+   Target Delivery
+    1
+   Level 4
+     Available technical manuals
+   Technical content (hardware); All new graphics including 3D modeling
+     Good
+     Local .exe and mobile application delivery; Run-time 2 hours
+    2
+  Level 1 introduction (15% of run-time) and Level 4 (85% of run-time)
+   Customer provided design document
+  All original graphics; Heavy programming (game)
+   Good
+   Run-time 1 hour
+   3
+Blended solution –Level 2/3, ILT materials, Virtual Interactive Exercises (Level 4), and networking functions for student/ instructor workstations
+   Insufficient technical documentation
+Heavy 3D modeling/hardware and software simulations
+   Good
+ Run-time – eLearning 3 hours, VIE 3 hours
+ 2016 Paper No. 21 Page 9 of 11
+
+A comparison of sample course data to reference models for interactivity levels 3 and 4 (Figure 2) reveals that the actual percentages closely align in most categories. Categories that differ include Programming versus ISD percentages. To explain the differences, referencing the course data (Table 8) indicates that, in the case of Course 2, the customer provided a detailed design document, negating much of the need for ISD services. Conversely, course Course 3, a blended-learning course, required ISD hours greatly exceeding the reference model, largely due to insufficient technical documentation and the need for ILT materials in addition to eLearning.
+Figure 2. Interactivity Levels 3 and 4 – Comparison of Sample Course Data to Recommendations from Chapman Alliance and Army TRADOC Pamphlet 350-70.
+Comparing course data to resource model data can identify potential deficiencies. For example, Quality Assurance for all courses falls below the percentage recommended by Chapman Alliance. It should be noted that quality assurance may have been performed as part of the duties of other personnel, making it difficult to quantify; however, the analysis flags quality assurance as an area requiring attention.
+CONCLUSION
+In this paper, we demonstrated a repeatable process for estimating the staffing requirements for an eLearning team. The implementation of this process, in most instances, reveals the necessity of building a cross-trained, multidisciplinary team of eLearning professionals.
+Additionally, by comparing different team compositions, this paper shows that a team composed of personnel at incremental experience levels can be an effective staffing technique given adequate workload.
+MODSIM World 2016
+ 2016 Paper No. 21 Page 10 of 11
+
+REFERENCES
+Carter, M. (2007, May 17). Levels of Interactivity and Determining What's Appropriate. The ELearning Guild's Online Forums, Vol 201. Retrieved February 15, 2016, from http://www.elearningguild.com/olf/olfarchives/index.cfm?id=313&action=viewonly
+Chapman, B. (2010). How Long Does it Take to Create Learning? [Research Study]. Published by Chapman Alliance LLC. http://www.chapmanalliance.com
+United States, Department of Defense. (2001). Department of Defense Handbook: Development of Interactive Multimedia Instruction (IMI)(MIL-HDBK-29612-3A) (Part 3 of 5). Retrieved February 15, 2016, from http://www.navair.navy.mil/nawctsd/Resources/Library/Acqguide/296123a.pdf
+United States, Department of the Army, Training and Doctrine Command. (2003). TRADOC Pamphlet 350-70-2: Training Multimedia Courseware Development Guide (pp. 1-238). Fort Monroe, VA. Retrieved February 15, 2016, from http://www.tradoc.army.mil/
+United States, Department of the Army, Training and Doctrine Command. (2013). TRADOC Pamphlet 350-70-12: The Army Distributed Learning Guide (pp. 1-162). Fort Eustis, VA. Retrieved February 15, 2016, from http://www.tradoc.army.mil/
+SAMPLE DATA INFORMATION
+Science Applications International Corporation (SAIC), AMCOM Express Contract, Blanket Purchase Agreement (BPA), W31P4Q-05-A-0031, AMRDEC SED, AGS, Task Order 00025 and follow-on Task Orders (00032, 00037, 00038),
+Course 1, U.S. Army PEO STRI, 2013.
+Course 2, U.S. Army Corps of Engineers, 2013 Course 3, U.S. Army PM AME, 2016.
+2016 Paper No. 21 Page 11 of 11
+MODSIM World 2016

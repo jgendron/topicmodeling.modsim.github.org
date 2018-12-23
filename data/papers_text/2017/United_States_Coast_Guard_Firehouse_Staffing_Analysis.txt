@@ -1,0 +1,216 @@
+United States Coast Guard Firehouse Staffing Analysis
+CDR Chad A. Long United States Coast Guard Atlantic City, NJ Chad.a.long@uscg.mil
+ABSTRACT
+The United States Coast Guard is researching a firehouse type staffing structure for pilots standing watch at the National Capital Region Air Defense Facility (NCRADF). This facility supports the North American Aerospace Defense Command (NORAD) providing immediate air protection from low and slow flying threats in the Washington, DC area. This watch currently requires heavy staffing levels to guard the airspace twenty-four hours a day/ year- round. More efficient options are being explored, including the firehouse model which consists of a repetitive cycle of duty days and days off. For this minimal staffing level to be successful, it will need to provide the pilots with adequate flight time and fill all the required watch positions. To test the new firehouse model, a simulation was coded in Visual Basic for Applications (VBA) within Microsoft Excel. The results of the simulation showed a 0% probability that the new model provides adequate staffing to support the national defense mission. Additionally, the staffing structure did not provide the pilots enough flight hours thus negatively impacting the pilot’s proficiency.
+ABOUT THE AUTHOR
+CDR Chad A. Long is a career helicopter pilot and aeronautical engineer who has spent the last decade specializing in industrial engineering and its applications in supply chain management and information technology. Prior to his current position as the Aeronautical Engineering Officer in Atlantic City, NJ he was an operational search and rescue pilot protecting the Great Lakes and Gulf of Mexico. Chad serves as a faculty member for Embry Riddle Aeronautical University where he is an Adjunct Assistant Professor of Logistics and Management. He holds a M.S. in Industrial Engineering from Purdue University, M.S. in Governmental Information Leadership from the National Defense University, M.B.A. from Embry Riddle Aeronautical University, and Ph.D. in Leadership from Andrews University.
+2017 Paper No. 64 Page 1 of 11
+MODSIM World 2017
+
+United States Coast Guard Firehouse Staffing Analysis
+CDR Chad A. Long United States Coast Guard Atlantic City, NJ Chad.a.long@uscg.mil
+BACKGROUND
+On September 25, 2006, the United States Coast Guard assumed the responsibility of protecting the airspace around the National Capitol Region in Washington D.C. (Carlson, 2011). As an integral piece of the North American Aerospace Defense Command (NORAD) defense network, the Coast Guard uses helicopters to conduct air intercepts when unauthorized aircraft penetrate the 30 nautical mile area around Washington D.C. To conduct this mission, many pilots stand watch to cover the 24 hour a day, 365 days a year alert requirement. In August 2016, the Vice Commandant of the Coast Guard directed the rotary wing air intercept (RWAI) unit to explore alternative staffing models in an effort to eliminate safety concerns and reduce staffing levels (Assistant Commandant of Capabilities, 2016). The suggested solution would permanently station 23 pilots at the National Capitol Region Air Defense Facility (NCRADF) using a firehouse staffing structure. This new structure would provide the NCRADF pilots the opportunity to complete a minimum of 17-19 flight hours a month. This staffing change was stated to reduce safety concerns by affording the pilots enough flight time to meet their flight proficiency requirements and reduce frequent deployment requirements. The NCRADF is currently staffed by pilots from Atlantic City, NJ who stand temporary duty at the defense facility for multiple weeks at a time.
+PROPOSED FIREHOUSE SOLUTION
+The firehouse model is described by the Coast Guard as a maximum of three consecutive days of duty followed by a minimum of two consecutive days off. The schedule is very structured so that a pilot would be able to forecast their schedule a year or more into the future by following the repetitive duty pattern. The 23 permanent party pilot model includes 2 command and control pilots, 20 duty standing pilots, and one extra pilot.
+The firehouse model has 10 duty standing positions that need to be filled every day: four pilots on day shift, four pilots on night shift and two pilots on midnight “mid” shift. These duty days follow a progression from days to nights to mids in an effort to minimize the negative circadian rhythm impact of the time shifts on the pilots. The schedule also allows every duty standing pilot a three day weekend, every other weekend. While the permanent party pilots stand a maximum of three consecutive duties, the TAD pilots are just scheduled for 6 day and 6 night shift of duty in the Coast Guard model. This is slightly less than the current TAD model that has pilots stand 6 day and 6 night shifts but also includes 3 additional mid shifts.
+The firehouse schedule also includes work days. Work days are only scheduled on the weekday when a TAD pilot has covered the shift for a permanent party pilot. The goal of the work day is to allow the scheduled pilots to take an aircraft for a longer training flight outside the National Capital Region airspace. Proficiency courses are also added to the schedule. The pilots depart for Aviation Training Center in Mobile, AL on a Sunday, spend 5 days at the training course and return back on Friday. The schedule also includes leave and deployable rotary wing air intercept (dRWAI) deployments. The dRWAI events pull 4 permanent party duty standing pilots out of the duty section. It is important to notice that sniveling (requesting certain days off) is not included on the schedule. The pilots will be required to take leave or swap with another pilot if there is a problem standing a particular duty.
+PROBLEM STATEMENT
+The Coast Guard firehouse model, as notionally described, successfully fills the duty schedule and under perfect conditions many of the pilots meet the minimum 17 flight hours a month. The goal of this study was to determine if
+2017 Paper No. 64 Page 2 of 11
+MODSIM World 2017
+
+this staffing structure is robust enough to handle the real world problems faced by an operational unit. The design of the simulation was focused on answering two questions:
+1. Doesthefirehousemodelprovidethedutystandingpilotsenoughflighttimetomeettheaverage17flight hour monthly minimum?
+2. Does the firehouse model provide reliable coverage for all the duty shifts with 23 permanent party pilots and TAD support?
+SIMULATION ELEMENTS
+The simulation is comprised of 10 elements: day duty, night duty, mids duty, work days, VIP briefs, leave, medical groundings, dRWAI events, proficiency courses and days off. The requirements for duty, work days and days off were defined by the Coast Guard either through a spreadsheet example or through discussions with the Office of Aviation Forces representative. The requirements for VIP briefs, medical groundings, proficiency courses, leave and dRWAI events were each individually determined based on Air Station Atlantic City historical records. These five historically-based elements will be examined to see how they will be defined in the simulation.
+VIP Briefs
+The VIP brief element was not part of the Coast Guard firehouse model, but constitutes a real scheduling issue for the NCRADF. A review of the FY16 NCRADF records showed 50 VIP briefs were given during the year. There was seasonality to the briefs with spikes during the summer; on average there were 4.2 VIP briefs a month. The seasonality was not reproduced in the simulation.
+In this simulation, briefs are only available for the command and control pilots, meaning that duty standing pilots will not give briefs. In practice, briefs are commonly scheduled for a future date based on the VIP’s schedule. This simulation scheduled briefs prior to any other event for the command and control pilots making them unavailable to stand duty on days briefs are required. Based on experimentation, the daily probability that a command and control pilot will be required to give a VIP brief is 0.08. The simulation was validated to determine that this probability created the required 4.2 briefs a month. The validation was performed by completing 100 monthly simulations 30 times. This resulted in an x̿ of 4.09 and a σx̅ of 0.23 which adequately represents the 4.2 historical average.
+Medical Grounding
+A pilot can become medically grounded at any time without warning. The grounding period can be very short or last for multiple months. The Atlantic City medical records were examined for 50 pilots stationed at unit in FY16. The records were scrutinized to determine the period of time between when the pilots were declared medically grounded and when they were fit for full duty again. If a pilot was grounded prior to FY16 this time period was not captured in this study. If the pilot’s grounded period exceeded the last day of FY16 the final date was truncated to the end of study period. These limitations make the medical grounded period shorter in this study than in reality. The Atlantic City pilots average 18.9 days of medical grounding a year per pilot. It must be noted that 60% of pilots were not medically grounded at all during the period examined. The average was elevated by a few pilots with long grounding periods. The 18.9 medical grounding days a year for 23 pilots can be converted into an average of 36.2 medical grounding days per month.
+The simulation needed to adequately approximate the number of days that each pilot would be grounded based on historical data. The 20 periods of grounding were fitted to a curve (y = x + 0.00832662e(0.52906x)) using MiniTab 17. This equation had the following sum of square for errors (SSE) 2203.55, degrees of freedom for error (DFE) 18, mean square of errors (MSE) 122.419 and standard error of the regression (S) 11.0643. When generating the number of days a pilot will be medically grounded a value of X is randomly selected from a uniform distribution from 1 to 20. This value of X is used in the above formula and rounded to the nearest integer as the length of medical grounding.
+The residual plots for (y = x + 0.00832662e(0.52906x)) were examined. The plots include normal probability, residual versus fit, histogram, and residual versus order plots. The residuals show that the curve does an excellent job of representing the lower medical grounding levels but is challenged by higher medical grounding values. This limitation does not negatively impact the results of the simulation because the model does not exceed 47 days.
+2017 Paper No. 64 Page 3 of 11
+MODSIM World 2017
+
+The firehouse simulation was limited to 47 days and this simulation constraint created some issues with properly representing medical grounding. Medical groundings are not limited to short periods and ultimately end up compounding month after month.
+On day zero of the test data (based on the calculation methods) no pilots were grounded. As time passes, there are more individuals grounded, each month compounding on the next. If the simulation was just started in the first month, the number of individuals medically grounded would be lower than found in practice. To overcome this limitation, two distinct probabilities were used for a pilot becoming medically grounded. The first probability was for the first day of the simulation for each pilot. Based on experimentation, there is a 0.06 probability that each pilot will be grounded on the first day of the simulation (which is 10 days prior to data collection period). This represents a grounding that is carried over from a previous month into the current month. The other days of the simulation have a 0.0026 probability of the pilot becoming grounded based on experimentation.
+The simulation was validated to determine that these probabilities created the required 36.2 medical groundings a month. The validation was performed by completing 100 monthly simulations 30 times. This resulted in an x̿ of 37.38 and a σx̅ of 2.79 which adequately represents the 36.2 historical average.
+Proficiency Course
+The Coast Guard Air Operations Manual requires that NCRADF pilots complete a proficiency course (PCourse). The PCourse is an annual requirement and must be completed within a 15 month period. The FY16 Atlantic City PCourse records were examined for 23 randomly selected pilots. Assuming that every NCRADF pilot will depart for ATC Mobile on Sunday and not be available to stand duty again until the following Sunday, 7 days is required for the PCourse. While it is likely that the pilot will return to Washington DC on Friday, each pilot will be allowed Saturday to start acclimation to the next duty time period. With 7 day PCourse periods, the 23 permanent party pilots will average 11.5 days at PCourses a month based on Atlantic City historical average.
+PCourses are scheduled in the future and can be arranged to minimize the number of permanent pilots away from home station at any time. This simulation only allows one pilot at a PCourse at any time. Based on experimentation, the daily probability that a pilot will be required to attend a PCourse is 0.027. The simulation was validated to determine that this probability created the required 11.5 PCourse days a month. The validation was performed by completing 100 monthly simulations 30 times. This resulted in an x̿ of 10.90 and a σx̅ of 0.70 which adequately represents the 11.5 historical average.
+Leave
+Every pilot stationed at NCRADF will be awarded the opportunity to take leave. Each year every pilot will accumulate 30 days of leave and they will not be authorized to accrue more than 60 days past the end of the fiscal year. An evaluation of leave usage was completed on Atlantic City’s FY16 duty schedules. This study did not include emergency leave, only planned leave scheduled for each month. This study independently evaluated the monthly duty schedules and did not try to evaluate leave periods split between months as one period but treated them as separate leave periods. For example, if a pilot took leave from January 29th to February 3nd, this would be counted as two three day periods of leave rather than one six day period of leave. During the months analyzed, 64.25 pilots were stationed in Atlantic City. Each month was examined to determine the average number of leave days used that month per pilot. This average was then multiplied by 23 to determine the number of days of leave used per month. Historically, 64.2 days of leave will be used per month by 23 duty standing pilots.
+The simulation needed to adequately approximate the number of days that each pilot would be on leave based on historical data. The 357 periods of leave were fitted to a curve (y = 1.00784x) using MiniTab. This equation had the following sum of square for errors (SSE) 399.760, degrees of freedom for error (DFE) 356, mean square of errors (MSE) 1.12292 and standard error of the regression (S) 1.05968. When generating the number of days a pilot will be on leave a value of X is randomaly selected from a uniform distribution from 1 to 357. This value of X is used in the above formula and rounded to the nearest integer as the length of leave.
+2017 Paper No. 64 Page 4 of 11
+MODSIM World 2017
+
+The residual plots for (y = 1.00784x) were evaluated. The plots include normal probability, residual versus fit, histogram, and residual versus order plots. The residuals show that the curve under represents the lower leave levels and over represents the higher leave levels. This under representation was not deemed a problem based on the process used to truncate leave which will be discussed next.
+The firehouse model is not the traditional aviation duty schedule. It is a highly repetitive schedule that allows the duty stander the ability to predict what days they will work years into the future. The schedule allows for weeks where a pilot will work 2 days during a 7 day period. If a pilot wanted to take this week off, for local leave, they would just need to expend two days of leave for 7 days off work. Figure 1 showed a representation of the truncated leave that would happen under the firehouse model. Pilots would likely take leave based on green circles rather than the red circles, which uses leave on days the pilot already has off.
+Figure 1. Truncated leave
+Of course, not all leave will be local or bound between two off periods. Historically, 32% of the leave used exceeds seven days. For the simulation to accommodate this fact, some of the pilots were not restricted to seven day leave periods. The simulation allowed 30% (seven of the 23 pilots) of the pilots the ability to take more than seven days of leave. These seven pilots took leave based on the fitted curve. The other 16 pilots were restricted to a maximum of 7 days of leave based on their duty rotation. These pilots did not take seven days of leave, their leave was truncated to just the days worked during that requested leave period.
+The minimum staffing structure of the firehouse model will limit the number of pilots that will be allowed to take leave at any period of time. A basic analysis of available leave periods is presented in Table 1. In this reduced staffing model, the goal is to minimize the number of pilots authorized to take leave during a given time period.
+Table 1. Pilots Allowed to Take Overlapping Leave
+MODSIM World 2017
+  D – Day shift
+N – Night shift
+M – Mid shift
+L – Leave
+P – Proficiency Course W – Work day
+B – VIP Briefing
+     # pilots on Leave
+1 2 3
+Annual Available Leave
+30 x 12= 360 60 x 12 = 720 90 x 12 = 1080
+Required Days Percentage leave for 23 Unfilled
+pilots
+690 -92% 690 4% 690 36%
+Impact
+Half of 23 pilots don’t get 30 days of leave Pilots are unable to select their leave days Pilots select some of their leave days
+       2017 Paper No. 64 Page 5 of 11
+
+4 120 X 12 = 1440 690 52% Pilots select most of their leave days
+If only two pilots are authorized leave at once, Table 1 shows there will only be 4% of the available leave days left open (720 available leave days and 690 filled) based on 30 days of leave expended a year. This would mean that the pilots will not be authorized to take the days of leave they want and will be forced to take leave just during days available via lottery system. With three pilots on leave the pilots will be able to select some of the days that they want to have leave. Summer months and holiday periods will require a lottery system, but the rest of the calendar year will be available for leave.
+This simulation only allows three pilots on leave at any time. Based on experimentation, the daily probability that a pilot will be on leave is 0.094. The simulation was validated to determine that this probability created the required 64.2 leave days a month. The validation was performed by completing 100 monthly simulations 30 times. This resulted in an x̿ of 63.33 and a σx̅ of 0.66 which just below one standard deviation. This model slightly under represents the amount of leave used by the pilots based on the 64.2 historical average.
+Deployable RWAI
+The firehouse model is designed to allow four permanent party pilots to attend deployable rotary wing air intercept events without impacting the duty rotation. All FY16 deployable events were examined to determine an appropriate deployment time frame for the simulation. FY16 included seven deployments which ranged from 7 to 22 days in length. These deployments required 98 days from home station for each of the four pilots (for a total of 392 deployed days a year). Historically, this represents 32.6 days a month when the pilots will need to staff dRWAI events.
+A regression was completed on the 7 dRWAI events. The regression line had the following equation: y = 2.71 + 2.821x. When generating the number of days the dRWAI event will last a value of X is randomally selected from a uniform distribution from 1 to 7. This value of X is used in the above formula and rounded to the nearest integer as the length of dRWAI event.
+The residual plots for y = 2.71 + 2.821x were examined. The plots include normal probability, residual versus fit, histogram, and residual versus order plots. The residuals were very low and well represented by the line. The following values also show a good fit: R2 = 92.87%, R2 adj = 91.45%, R2 pred = 86.48%.
+Deployable rotary wing air intercept events are often unplanned and will require 4 pilots from NCRADF. This simulation only allows one dRWAI event at any time. Based on experimentation, the daily probability that a pilot will be required to attend a dRWAI event is 0.003. The simulation is designed so that when one pilot deploys, three additional pilots will also attend the event from the NCRADF. The simulation was validated to determine that this probability created the required 32.6 briefs a month. The validation was performed by completing 100 monthly simulations 30 times. This resulted in an x̿ of 33.58 and a σx̅ of 2.14 which adequately represents the 32.6 historical average.
+SIMULATION DESIGN
+The simulation was created in Excel Visual Basic and consists of over 1500 lines of code. The simulation is based on 47 days. The first 10 days are used to warm up the simulation followed by a period of 30 days used to capture data. The last seven days were required to code the simulation but do not have an impact on the results. The results of this simulation are based on 100 independent runs of the 47 day simulation which was selected based on the ease of analysis. An Excel generated random key was used for each of the 100 simulation runs and different keys were used for each of the different TAD pilot options. There are five types of pilots used in the simulation. The first is TAD pilots who are stationed at RWAI qualified outlying units such as Air Station Detroit. The next type is the 20 duty standing pilots. There is also a 21st duty standing pilot who is not following a preset duty schedule; their only role is to pick up duty days when other pilots are medically grounded, at a PCourse or on leave. The fourth type of pilot is the command and control pilots. Similar to the 21st pilot, they are required to pick up duty when duty pilots are medically grounded, at a PCourse or on leave but they also have an additional responsibility of completing VIP briefs. The last type of pilot is an overflow pilot. This pilot does not exist in the firehouse duty schedule; they are just an element of the simulation design. This next section will describe a number of simulation design elements such as
+MODSIM World 2017
+  2017 Paper No. 64 Page 6 of 11
+
+TAD pilots, duty standing process, rest requirements, work days, flight hour calculator, simulation calculations and validation.
+TAD Pilots
+While the permanent party footprint will be expanded with the firehouse model, TAD pilots will still be required to supplement duty standing. The firehouse model does not explicitly define the TAD rotation, but the assumption is that it will mirror the current model where pilots stand 6 day, 6 night and 3 mid shifts. The simulation will test 5 different TAD models in an effort to determine to minimum TAD requirement. The NCRADF currently has 24 shifts filled by TAD crews. This level of deployments has 1.2 TAD members on duty every day at the NCRADF. The first TAD model has 1.2 TAD support and represents the current level of deployment from outlying units. The second model has 1.5 TAD support. This TAD model was pulled from the Coast Guard model and it is the only model where the TAD pilots do not stand mid shifts. The next model represents a doubling of the current TAD support with 2.4 TAD pilots on duty at any given time. The following staffing model increases the TAD support to 3.3 pilots. The final model leaves the current duty standing paradigm and places 4.0 TAD pilots on duty every day.
+Duty Standing
+The duty schedule is filled after VIP briefs, medical groundings, PCourses, Leave and dRWAI events fill the schedule. The duty schedule is comprised of two 10 pilot shifts designated Alpha and Bravo. When the Alpha pilots are on duty the Bravo pilots have their days off and vis-a-versa. Figure 2 presents a visual representation of the duty schedule and the different types of pilots. The priority for standing duty goes: TAD pilot, Alpha or Bravo pilot, Pilot 21, two command and control pilots and then Pilots 22-26 (overflow pilots not part of the firehouse model). The ten pilots on duty will take the appropriate 4 day, 4 night and 2 mid shifts based on the duty schedule rotation as long as they are not grounded, on leave, etc. For example on Figure 2, based on this TAD pilot model, pilot 2 (P2) will always have the mid shift on days 9-11 unless they are unavailable for duty. If a TAD pilot is working and all 10 Alpha pilots are available, then an Alpha pilot will not be scheduled for duty that day. This can be seen on Figure 12 for pilot 19 (P19) on day 3. If two Alpha pilots are on leave and there are not enough TAD pilots to cover duty then the 21st pilot will pick up the extra shift, if they are available. This can be seen on Figure 12 for pilot 21 (P21) on day 5. If the 21st pilot is not available then the shift will be covered by one of the two command and control pilots (CC1 day 1 is an example of this). The simulation is designed to have 5 extra pilots labeled pilot 22 – pilot 26 (P22-P26). If the command and control pilots are not available pilot 22 – pilot 26 will attempt to pick up the duty. Pilot 22 always tries to pick it up first followed by the sequentially higher pilots. Pilots will not be able to pick up duties if they have not met the required rest requirements.
+MODSIM World 2017
+  D – Day shift
+N – Night shift
+M – Mid shift
+L – Leave
+P – Proficiency Course W – Work day
+B – VIP Briefing
+S – Medically Grounded
+2017 Paper No. 64 Page 7 of 11
+
+Rest Requirements
+Figure 2. Simulation Firehouse Duty Schedule.
+The Alpha and Bravo duty standing pilots have a set duty schedule that takes into account their rest requirements. Their schedule goes day shift, off, day shift, off, night shift, off, night shift, off, mid shift, off and repeat. The Alpha and Bravo shift have a three day weekend, every other weekend. Pilot 21 and the command and control pilots (as well as pilots 22 – pilots 26, if required) need to follow rest requirements prior to assuming duty.
+To pick up a day shift the following four rules need to be met:
+ Rule 1: The pilot cannot be scheduled for anything (including briefs, PCourses, leave, medical grounding)
+and the required four day shifts have not been filled for that day.
+ Rule 2: The pilot did not complete a mid shift on the previous two days.
+ Rule 3: The pilot did not complete a night shift on the previous three days.
+ Rule 4: The pilot did not complete three day shifts in a row prior to this day shift (taking this duty will have
+the pilot completing four day shifts in a row).
+To pick up a night shift the following four rules need to be met:
+ Rule 1: The pilot cannot be scheduled for anything (including briefs, PCourses, leave, medical grounding)
+and the required four night shifts have not been filled for that day.
+ Rule 2: The pilot did not complete a day shift on the previous two days.
+ Rule 3: The pilot did not complete a mid shift on the previous three days.
+ Rule 4: The pilot did not complete three night shifts in a row prior to this night shift (taking this duty will
+have the pilot completing four night shifts in a row).
+To pick up a mid shift the following four rules need to be met:
+ Rule 1: The pilot cannot be scheduled for anything (including briefs, PCourses, leave, medical grounding)
+and the required two mid shifts have not been filled for that day.
+ Rule 2: The pilot did not complete a night shift on the previous two days.
+ Rule 3: The pilot did not complete a day shift on the previous three days.
+ Rule 4: The pilot did not complete three mid shifts in a row prior to this mid shift (taking this duty will
+have the pilot completing four mid shifts in a row).
+Work Days
+The firehouse model was designed to allow the duty standing pilots the opportunity to complete longer training flights on work days. Work days occur when all the duty shifts have been covered and there are extra duty standing pilots available to fly. This simulation redistributes work days so that a pilot will get a maximum of one work day a week. This simulation only creates work days for the Alpha and Bravo duty standing pilots, as the other pilots were not used to calculate average flight time. The simulation has an option that removes work days on the weekends, if so desired. The maximum number of work days authorized each day is four allowing for two non-duty sorties a day.
+Flight Hour Calculator
+The flight hour calculator tabulates the flight hours for the Alpha and Bravo pilots. The 21st pilot and command and control pilots are not included in the flight hour calculation. The flight hour calculation aggregates flight time for the duty flights and work flights. The default setting is 1.2 hours for a duty flight and 2.0 for a work flight. These flight hours are reduced by a user selected sortie success rate. The default sortie success rate is 85%, based on Atlantic City Operations Department historical data. The simulation also has two additional options that impact the flight hour calculator. There is an option to fly work flights on weekends and to fly on mid shift. Currently NCRADF does not fly mid shift or schedule work flights on weekends.
+Simulation Validation Summary
+2017 Paper No. 64 Page 8 of 11
+MODSIM World 2017
+
+The model was validated by running the 100 month simulation 30 times to determine if the historical characteristics of the pilots and operational commitments mirrored the results of the simulation. The 95% Confidence Interval (95% CI) is calculated to determine in the historical values are within the simulation range. All historical values are within the 95% Confidence Interval. The simulation was validated by adequately representing the historical data as presented in Table 2.
+Category
+Leave
+PCourse
+Medical Grounding VIP Briefs
+dRWAI
+Note: Unit of measure is days.
+RESULTS
+x̿ σx̅ 63.33 0.66 10.90 0.70 37.38 2.79 4.09 0.23 33.58 2.14
+95% CI
+Historical
+Table 2. Simulation Validation Summary
+MODSIM World 2017
+        62.0; 64.6 64.2 9.5; 12.3 11.5 31.9; 42.8 36.2 3.6; 4.5 4.2 29.4; 37.8 32.6
+ The results presented in this section are gathered from the simulation metrics aggregated from 100 independent schedule runs repeated for each TAD option. The results answer the problem statement questions:
+1. Does the firehouse model provide the duty standing pilots enough flight time to meet the average 17 flight hour monthly minimum?
+2. Does the firehouse model provide reliable coverage for all the duty shifts with 23 permanent party pilots and TAD support?
+Flight Hours
+The firehouse model does not provide enough flight time to meet the average 17 flight hour minimum. Table 3 contains the average flight hour results. The results provide the average monthly flight time for the 20 duty standing pilots based on a simulation run for 100 months. The results do not include the flight time for the command and control pilots or the extra 21st pilot. The average flight time does not include pilots who did not fly at all during the month. For example, if one pilot was medically grounded for the entire month, they would not be included in the average. The flight time average is based on an 85% sortie success rate (the historical average), meaning that the total flight time for each pilot was reduced by 0.85. Table 3 provides results for each of the 5 TAD options and four extra flight categories. The flight categories include a combination of flying or not flying on mid shift and on work weekends. Currently, the NCRADF does not fly on mid shift or require the permanent party pilots to fly non-duty flights on the weekend which historically gives the pilots 10.9 hours a month. The 1.5 TAD model does not include mid shifts for the TAD pilots, meaning that the permanent party pilots need to pick up mid shift under this model. This creates a lower average flight hours a month under the 1.5 TAD model when the permanent party pilots do not fly mid shift. The results generally show that as TAD pilots pick up more shifts, the flight hours increase for the permanent party pilots. This is possible because the permanent pilots are now available to fly more work flights which offer more flight time than the duty flights.
+Table 3. Average Flight Hours for Each TAD Model with an 85% Sortie Success Rate
+      Extra Flight Category
+No Mids/ No Weekend Work Yes Mids/ No Weekend Work No Mids/ Yes Weekend Work Yes Mids/ Yes Weekend Work
+1.2 TAD
+10.2/ 0.6 12.3/ 0.5 10.5/ 0.5 12.5/ 0.5
+1.5 TAD
+9.9/ 0.5 12.3/ 0.6 10.2/ 0.5 12.6/ 0.6
+2.4 TAD
+10.3/ 0.5 12.4/ 0.5 10.8/ 0.6 12.8/ 0.6
+3.3 TAD
+10.8/ 0.6 12.5/ 0.6 11.6/ 0.6 13.4/ 0.8
+4.0 TAD
+11.1/ 0.7 12.6/ 0.6 12.4/ 0.6 13.8/ 0.7
+       Note: The table displays mean flight time/standard work” represents flying work flights on weekends.
+Duty Readiness
+deviation. “Mids” represents mid
+shift flights and “weekend
+2017 Paper No. 64 Page 9 of 11
+
+The firehouse model does not adequately staff NCRADF with enough pilots to cover all the required duty shifts. For the firehouse model to be successful, it needed to perpetually provide 10 watch acclimated pilots for 30 days a month. Table 4 provides the duty readiness results for the simulation without deployable rotary wing air intercept events. These deployable events were excluded from this table so the basic 23 pilot duty standing levels could be evaluated. Table 4 evaluates 5 TAD levels with respect to firehouse success rate, extra pilots required, shifts missed each month and command and control duty. The “firehouse success rate” is the percentage of time that the firehouse model successfully staffed the NCRADF without the need for more pilots. The staffing levels include the 23 permanent party pilots and the staffing from the TAD column. Examining the 1.5 TAD column which was suggested in the Coast Guard firehouse model spreadsheet, 0% of the time will this staffing level be sufficient to meet duty readiness requirement for the NCRADF. The “extra pilots required” describes the number of additional pilots which will be needed to meet the NCRADF full duty readiness level. Again using the 1.5 TAD level example, the firehouse model will need an average of 2.9 additional pilots a month to be successful. The “shifts missed each month” calculates the number of shifts unfilled by the firehouse watch. A shift could be a day, night or mid watch. The 1.5 TAD staffing level along with the 23 permanent party pilots can expect to miss an average of 11.9 shifts a month. The “command and control duty” row gives a value to the average number of duties that the commanders can expect to stand each month. This value will need to be divided by two to estimate the duty each commander will stand. The 1.5 TAD staffing level will require the commanders to stand a combined 18.3 duties a month meaning each officer will stand an average of 9.1 duties a month. In comparison, a duty standing pilot is expected to stand 15 duties a month.
+Table 4. Pilot NCRADF Duty Standing Simulation Results Without dRWAI Events
+MODSIM World 2017
+      Results
+Firehouse success rate Extra pilots required
+Shifts missed each month Command and control duty
+1.2 TAD
+0% 3.1/ 1.0 15.6/ 8.2 20.7/ 4.7
+1.5 TAD
+0% 2.9/ 1.1 11.9/ 7.5 18.3/ 5.3
+2.4 TAD
+9% 1.8/ 1.0 4.4/ 3.8 11.9/ 4.7
+3.3 TAD
+28% 1.1/ 0.9 2.1/ 2.5 8.4/ 4.4
+4.0 TAD
+47% 0.8/ 0.9 1.4/ 2.0 6.4/ 4.1
+       Note: The table displays mean flight time/standard deviation.
+Table 5 is very similar to Table 4 except it includes dRWAI events. This table’s results uses historical deployment schedule to remove 4 permanent party pilots from the duty schedule at the NCRADF and deploys them to a dRWAI event. This table has an additional row (extra missed shifts) compared to table 4. This row is added when the simulation exceeds the design limit for pilots and shifts missed. The maximum number of extra allowed pilots used was capped at five in the simulation design. If five pilot are not sufficient to cover all required duty then extra missed shifts will occur. As a general assumption, the extra missed shift mean should be added to the extra pilots required mean and shifts missed each month mean to give a better approximation on the actual bridging strategy requirements at the NCRADF. For example, 1.5 TAD extra pilots required should be adjusted from 4.0 to 4.4 and shifts missed each month should be increased from 20.6 to 21.0.
+Table 5. Pilot NCRADF Duty Standing Simulation Results With Historical dRWAI Events
+      Results
+Firehouse success rate Extra pilots required
+Shifts missed each month Command and control duty Extra missed shifts
+1.2 TAD
+0% 4.2/ 1.0 23.9/ 9.6 21.2/ 5.1 0.6/ 1.0
+1.5 TAD
+0% 4.0/ 1.0 20.6/ 10.0 20.9/ 4.9 0.4/ 1.1
+2.4 TAD
+3% 2.9/ 1.4 10.4/ 6.5 14.7/ 5.3 0.05/ 0.26
+3.3 TAD
+7% 2.3/ 1.3 6.6/ 5.6 12.3/ 5.9 0.04/ 0.24
+4.0 TAD
+13% 1.8/ 1.1 3.9/ 3.4 8.9/ 4.1 0/ 0
+       Note: The table displays mean flight time/standard deviation.
+CONCLUSION
+The Coast Guard firehouse model is an innovative duty staffing concept that could prove to be successful at the NCRADF or at a traditional SAR unit. Our organization needs to continually evaluate industry best practices and incorporate them into our operations. However, preliminary modeling shows that the firehouse model in its current form will not provide adequate duty coverage the NCRADF or provide enough flight hours for permanent party pilots.
+2017 Paper No. 64 Page 10 of 11
+
+FUTURE RESEARCH
+The Coast Guard firehouse model required 23 permanent party pilots in its initial design. Research should be completed relaxing the constraint on the number of permanent party pilots while allowing different TAD staffing levels. The goal would be to find the optimal solution which minimizes staffing while still meeting the flight hour and duty standing requirement.
+REFERENCES
+Carlson, T. (2011). Capitol Guardians. Vertical Magazine. Retrieved January 25, 2017 from
+https://www.verticalmag.com/features/capitol-guardians-html/
+Assistant Commandant for Capabilities (2016). Decision memo 3700 of 16 Aug 2016. [Memorandum]. Washington, DC: United States Coast Guard.
+MODSIM World 2017
+ 2017 Paper No. 64 Page 11 of 11

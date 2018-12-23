@@ -1,0 +1,316 @@
+An LVC Simulation Interoperability Measurement Framework
+Kiyoul Kim, Tae Woong Park, Luis Rabelo, Gene Lee
+University of Central Florida,
+Orlando, Florida 32816, USA
+kiyoulkim2010@knights.ucf.edu, taewoong.park@knights.ucf.edu, Luis.Rabelo@ucf.edu, glee@ucf.edu
+ABSTRACT
+Interoperating Live, Virtual and Constructive (LVC) simulations has been major goal and challenge in Modeling and Simulation (M&S) community. Achieving interoperability of LVC simulations is a technically and managerially complex task, and this makes simulation interoperability experts consider multiple factors originated from multiple domains. Successful interoperation of LVC Simulation is determined by the well-organized Systems Engineering (SE) process because SE process defines a generalized and overall process for building and executing distributed simulation environments. Thus interoperability readiness level of simulation systems and relevant organization can be measured as a part of the simulation interoperability design phase. This research aims to design a framework to measure the potential interoperability level of a simulation system and a relevant organization in technical, conceptual and organizational prospects. Specifically, an LVC simulation interoperability measurement framework that contains an LVC simulation interoperability maturity model and an interoperability measurement process is proposed. To accomplish the goal, a set of factors that determine the potential interoperability level of LVC simulations are identified through a literature review and a survey involving a number of relevant domain experts. The factors are used to build the key elements of the framework. A case study is demonstrated to prove the validity and effectiveness of the developed framework.
+ABOUT THE AUTHORS
+Kiyoul Kim is a doctoral student in the Institute for Simulation and Training (IST) at University of Central Florida in Orlando Florida USA. He received his M.S. degree from IST in 2012. He is an active military Major in Republic of Korea Air Force. He acquired the Certified Modeling and Simulation Professional (CMSP) from the National Training and Simulation Association (NTSA) in 2012. His main research interests include: Distributed and parallel simulation and simulation interoperability.
+Tae Woong Park is a doctoral student in the Department of Industrial Engineering and Management Systems (IEMS) at University of Central Florida (UCF) in Orlando Florida. He is an active Army Major in Republic of Korea (ROK). He received his M.S. degree from the Department of Industrial Engineering at Seoul National University (SNU) in 2005. He acquired the CMSP from the NTSA in 2012. His main research interests include: Distributed and parallel simulation interoperability, Measure of Effectiveness (MOE), Decision making.
+Louis Rabelo is a Professor in the Department of IEMS at UCF. He holds a M.S. and Ph.D. in Engineering Management from the University of Missouri in Rolla USA. He has received several grants from NASA Ames Research Center, NASA Kennedy Space Center, and NASA Johnson Space Center to study innovative schemes in Distributed Simulation, Usability of Simulation Environments, and the modifications/extensions to the HLA for Aerospace/Aeronautics problems.
+Gene Lee is a Professor in the Department of IEMS at UCF. He holds a M.S. and Ph.D. in Industrial Engineering, Texas Tech University in Lubbock USA. He has researched Ergonomics/Human Factors issues in the area of Modeling and Simulation (M&S). He has received several grants from several federal and private organizations. He has the expertise on the breadth and depth of the M&S. In recent, he taught the Developing M&S Instruction for ROK- Agency for Defense Development (ADD) funded by the Boeing Company.
+2015 Paper No. 42 Page 1 of 10
+MODSIM World 2015
+
+An LVC Simulation Interoperability Measurement Framework
+Kiyoul Kim, Tae Woong Park, Luis Rabelo, Gene Lee
+University of Central Florida,
+Orlando, Florida 32816, USA
+kiyoulkim2010@knights.ucf.edu, taewoong.park@knights.ucf.edu, Luis.Rabelo@ucf.edu, glee@ucf.edu
+1. INTRODUCTION
+1.1 LVC Simulation
+The strategy behind distributed simulation is to use networks and support simulation services to link existing M&S assets into a single unified simulation environment (Lutz & Drake, 2011). Legacy individual simulation systems are connected through medium such as middleware, gateway to guarantee logically correct interactions. Each simulation exchanges data through disparate middleware transport protocols, data exchange formats and applications. The distributed fashion of Live, Virtual and Constructive Simulation approach provides many powerful benefits compared to development and maintenance of large monolithic stand-alone simulation systems (Lutz, 2012).
+Thus it is no wonder that the benefits increased substantial attention on LVC Simulation by the Department of Defense (DoD). As the interests continue to grow, there has been a consensus on the need for interoperability of LVC simulation models (DoD Directive, 1995). Also corresponding technology advances in supporting LVC environments are also necessary, and the efforts to develop new interoperability technology should continue to advance and mature.
+However, LVC Simulation is necessarily decentralized, composed of a set of operationally and managerially independent systems. The component systems are heterogeneous, changing and inconsistent, and are created by different people using different programming languages, in different conditions and are tuned for various platforms, are used and developed by many stakeholders with conflicting needs. Despite of the consistent efforts by the M&S community, all the attempts to develop a comprehensive interoperability assessment and measurement method acting on a systematic basis have been in vain (National Research Council, 1999).
+The LVC Simulation interoperability is not solely dependent on technical factors. Other factors such as organizational factors must be considered. For example, successful simulation interoperability requires cooperation of simulation experts from diverse domains. The organization which implements simulation interoperability must have enough capabilities in terms of System Engineering (SE) perspective because simulation interoperability is determined by many factors from different domains.
+1.2 System Engineering Process for LVC Simulation Interoperability
+Any successful development LVC Simulation is heavily dependent on well-defined SE processes (Gallant & Gaughan, 2010). There have been system processes for distributed simulation development. They are the Federation Development and Execution Process (FEDEP) and the Distributed Simulation Engineering and Execution Process (DSEEP). They are aligned with specific simulation architecture such as Distributed Interactive Simulation (DIS), High Level Architecture (HLA), and Test and Training Enabling Architecture (TENA). FEDEP, IEEE 1516.3-2003, is a standardized and recommended process for developing interoperable HLA based federations. FEDEP is an overall framework overlay that can be used together with many other, commonly used development methodologies. FEDEP is already designed as a framework into which lower level practices/procedures native to targeted user communities can be easily integrated.
+In spring 2007, SISO started revising the FEDEP. It has been renamed to DSEEP and is now an active standard IEEE 1730–2010. DSEEP represents a tailoring of best practices in the systems and software engineering communities to the M&S domain. DSEEP is simulation architecture-neutral, but it does contain annexes that map
+2015 Paper No. 42 Page 2 of 10
+MODSIM World 2015
+
+this architecture-neutral view to DIS, HLA, and TENA terminology. A top-level view of the DSEEP is provided in Figure 1.
+Figure 1. Distributed Simulation Engineering & Execution Process (DSEEP), Top-Level View
+DSEEP is for single, unifying SE process description for distributed simulation. It is ideal choice for SE process task because a) It is based on existing distributed simulation processes, b) It is architecture/user community neutral, and c) It is already designed as a framework into which lower level practices/procedures native to targeted user communities can be easily integrated.
+Systems engineering efforts for distributed simulation environments are typically based on the middleware transport used, the applications available and the constraints placed on the technical team including network, computer and personnel limitations (Gallant & Gaughan, 2010). Therefore, the LVC Simulation interoperability can be determined and measured by the elements in the LVC Simulation SE processes. For example, sufficient specialized experts and IT infrastructure will improve the potential interoperability of the simulation systems.
+1.3 LVC Simulation Interoperability
+Interoperability has been an important and widely discussed topic over the past decade, and the concept continues to draw attention within the DoD (Ford, Colombi, Jacques, & Graham, 2009). The popular perception is that interoperability is synonymous with connectivity. However, true interoperability is much more than just connectivity (Kasunic & Anderson, 2004). Although there is no universal definition for interoperability, there exist widely accepted definitions by diverse organizations. The popularly adopted definitions were proposed by the Institute of Electrical and Electronics Engineers (IEEE) and the DoD. Interoperability is the ability of systems, units, or forces to provide services to and accept services from other systems, units, or forces, and to use the services so exchanged to enable them to operate effectively together (Radatz, Geraci, & Katki, 1990).
+1.4 Interoperability Maturity Model
+Maturity model defines a basic set of interoperability maturity levels. The model was originally designed as a management tool to assess contractor software engineering ability. The concept of maturity model describes the interoperability maturity stages through which systems, processes or organizations progress or evolve as they are defined, implemented and improved (Clark & Jones, 1999). Higher interoperability maturity level means higher possible interoperability with other simulation systems without major design modifications. Maturity model became the basis of the first maturity model-based interoperability measurement model called Levels of Information System Interoperability (LISI) (Ford, 2008). LISI was the template for numerous maturity model and maturity model-like interoperability measurement models designed to measure both information and non-information system interoperability. LISI has been used to measure the technical interoperability domain (Tolk, 2003). Although the model was originally intended to measure Information Technology interoperability, it was adopted as a basic template for numerous maturity models (Ford, 2008). Table 1 shows the interoperability levels and associated description of LISI model.
+MODSIM World 2015
+  2015 Paper No. 42 Page 3 of 10
+
+Table 1. LISI Maturity Levels
+2. THE LVC SIMULATION INTEROPERABILITY MEASUREMENT FRAMEWORK
+2.1 The Framework
+This section defines the proposed LVC Simulation interoperability measurement framework. The proposed framework consists of two main parts. The first part is an LVC simulation interoperability maturity model. The maturity model defined the basic set of LVC simulation interoperability level in technical, conceptual and organizational prospects. The second part is an interoperability measurement methodology which uses the proposed maturity model. The interoperability maturity level of a simulation system and a relevant organization can be measured through the proposed framework. Based on the measurement result, a roadmap to improve the interoperability level can be provided. Figure 2 shows the proposed framework.
+Figure 2. The LVC Simulation Interoperability Measurement Framework 2.2 The LVC Simulation Interoperability Maturity Model (LSIMM) Formalization
+The LVC Simulation Interoperability Maturity Model (LSIMM) consists of two main parts: 1) Interoperability Domains and 2) Interoperability Levels. The process of defining the LSIMM is depicted in Figure 3.
+MODSIM World 2015
+    Maturity Level
+     Description
+    Enterprise
+ Data and applications are fully shared and distributed. Data has a common interpretation regardless of format.
+    Domain
+   Information is exchanged between independent applications using shared domain-based data models.
+    Functional
+   Logical data models are shared across systems
+    Connected
+   Simple electronic exchange of data.
+    Isolated
+     Manual data integration from multiple systems.
+   2015 Paper No. 42 Page 4 of 10
+
+Figure 3. The process of defining the LSIMM
+2.2.1 LVC Simulation Interoperability Domains
+The first step to design LSIMM is to determine the interoperability domains. From the literature review, three significant domains were finally determined. They are technical, conceptual and organizational domains.
+1. Technical domain: technical domain is an important domain to consider because LVC Simulation interoperability is realized through multi-dimensional technical point of view. This domain primarily focuses on the physical technology to connect multiple heterogeneous simulations with different technologies.
+2. Conceptual domain: this domain is important because it describes information and data layers between different simulations. The domain has common area with technical domain, but was determined to be independent because it has significant area.
+3. Organizational (managerial) domain: In this research an organization means a simulation interoperability team that practically executes simulation interoperability with a target simulation system. For the success of simulation interoperability, the organization needs enough managerial skills and agile organizational structure.
+2.2.2 LVC Simulation Interoperability Domain Factors
+The second stage is to define the important factors that determine LVC Simulation interoperability levels for each interoperability domains. Multiple factors were collected from literature reviews. The sources are academic journals, white papers, technical report, etc. Then a survey involving a number of relevant domain experts is conducted to finalize the factors. Total 45 experts in academia, government and industry domains answered the survey. The survey result was analyzed, used to formalize the LSIMM. Table 2 shows the finalized factors that determine LVC Simulation interoperability from the survey result.
+Table 2. Finalized Domain Factors from Survey
+MODSIM World 2015
+    Domain
+    Factors
+   Technical
+          ∙ Computer and Network Infrastructure
+     ∙ Standard Simulation Architecture (SSA) Compliance
+     ∙ Simulation application and configuration
+    ∙ Technical Simulation Management
+   Conceptual
+          ∙ Unambiguous Semantics
+     ∙ Conceptual Model Definition and Structure
+     ∙ Object Modeling Standard
+    ∙ Data Format Compatibility
+    Organizational
+            ∙ Supporting Documentation
+     ∙ Capable Experts
+     ∙ Development and Execution Capabilities
+    ∙ Organization Flexibility
+  2015 Paper No. 42 Page 5 of 10
+
+2.2.3 LVC Simulation Interoperability Maturity Levels
+The next stage is to define the interoperability maturity levels. The maturity levels will represent the intensity of interoperability in terms of three interoperability domains. There is an issue to determine the number of levels. There is no literature specifically requires the number of interoperability levels in a maturity model. However, practically, the number can be determined based on the previous defined maturity models. In the literature review, most of the identified models maintained a number of five levels. The average number of the models is around five. In addition, five-level can be statistically practical when the levels are applied to a five point Likert scale to determine certain capabilities (Huijsman, Plomp, & Batenburg, 2012). Therefore, LCIMM uses five-level interoperability.
+2.2.4 The LVC Simulation Interoperability Maturity Model (LSIMM)
+From the LSIMM formalization process, the LSIMM was initially formalized. Table 3 demonstrates the initial LSIMM.
+Table 3. The LVC Simulation Interoperability Maturity Model (LSIMM)
+MODSIM World 2015
+   I. Technical
+   Computer and Network Infrastructure
+   Standard Simulation Architecture (SSA) Compliance
+   Simulation application Capabilities
+   Technical Simulation Management
+   Level 0
+    No or unreliable infrastructure
+     No compliance to SSA
+     No capabilities
+     No technical simulation management
+    Level 1
+ Basic IT infrastructure
+ Connectable and Ad hoc information exchange
+ Limited capabilities
+ Limited technical management
+   Level 2
+    Standard IT infrastructure
+     Standard compliancy to SSA
+     Standard capabilities
+     Standard technical management
+    Level 3
+ Open IT infrastructure
+ Dynamic compliance to SSA
+ Collaborative capabilities
+ Collaborative technical management
+   Level 4
+    Adaptive IT infrastructure
+     Adaptive compliance to SSA
+     Dynamic and adaptive capabilities
+     Real-time management
+    II. Conceptual
+ Unambiguous semantics
+ Conceptual Model Definition and Structure
+ Object Modeling Standard
+ Data Format Compatibility
+   Level 0
+   No documented semantics
+     Undefined conceptual model
+     No object modeling standard
+     No data format compatibility
+     Level 1
+ Modeled or documented
+   Level 2
+   Use of standard format/structure and configuration
+   Level 3
+    Meta-modeled format/structure and configuration
+    Level 4
+  Adaptive format/structure and configuration
+  III. Organizational
+   Supporting Documentation
+   Capable Experts
+   Development and Execution Capabilities
+   Flexible Organization
+   Level 0
+    No supporting documentation
+     No capable experts
+     No development and execution capabilities
+     No flexible organization
+    Level 1
+  Limited documentation
+   Organized experts
+   Limited development and execution capabilities
+   Defined organization structure
+    Level 2
+  Processes / Procedures defined
+   Trained experts
+   Defined development and execution processes/procedures
+   Trained organization for processes/procedures
+    Level 3
+ Processes / Procedures listed
+ Specialized experts
+ Collaborative and specialized development and execution processes/procedures
+ Flexible organization structure
+  Level 4
+   Adaptive processes / procedures
+    Agile/dynamic/adaptive experts
+    Agile/dynamic/adaptive development and execution processes/procedures
+    Agile/dynamic/adaptive organization
+ 2015 Paper No. 42 Page 6 of 10
+
+2.3 The Interoperability Maturity Measurement Process
+The measurement process is a part of the interoperability measurement framework. This process defines multiple stages and associated methodology to determine the interoperability maturity level of a simulation system. Table 4 depicts the process.
+Table 4. The Interoperability Maturity Measurement Process
+MODSIM World 2015
+    Stage
+     Description
+     1
+ Assessment preparation
+ Stage 1 is to prepare the measurement process. This stage defines the interoperability measurement goal and detailed process. This stage also used to gather general information about the overall measurement process. The assessor needs to collect information such as relevant documentation, interview subjects, etc.
+   2
+   Analysis of simulation system
+   Stage 2 is to define and analyze target simulation system, and identify the system elements that determine interoperability level. The assessors review all accessible information related to the target simulation system.
+   3
+    Interview
+     This stage is to interview with relevant domain expert to collect enough information about the target simulation system and the organization. The interview is conducted according to a developed interview process framework.
+    4
+  Interview result analysis
+   Stage 4 is to analyze the interview result. The result is used and process to determine the final interoperability maturity level of target simulation system and the organization.
+   5
+ Maturity level determination
+  This stage is to finalize the interoperability maturity level. The team of assessors reaches an agreement and determines the maturity level. This stage extends with providing a roadmap to improve the interoperability maturity level of the target system and the organization.
+ 3. CASE STUDY
+This section is to demonstrate the validity of developed LVC simulation interoperability measurement framework. A case study with a component-based simulation environment is implemented, and provides maturity levels of the simulation for each domain and a roadmap to improve the target system and the organization.
+3.1 Target Simulation System and Organization
+3.1.1 The Adaptive distributed parallel Simulation environment for Interoperable and reusable Model (AddSIM)
+A component based simulation environment participates in the simulation framework which acts as an independent simulation federate. AddSIM is a component-based weapon system simulation environment using engineering models of weapon systems. The first version of AddSIM was developed through a core technology R&D project of the Agency of Defense Development (ADD), South Korea from 2009 to 2011 (Lee et al. 2012).
+The main goal of AddSIM is to enhance interoperability, reusability, and composability of weapon simulation models. AddSIM has capability to integrate easily various kinds of simulation in distributed environment. The detailed design goals of AddSIM are as follows:
+ Architecture of the simulation engine to support plug-in and play of componentized models which have implemented the behavior and functional logic of weapon systems into software models
+ Establishing a modeling framework in order to componentized models
+2015 Paper No. 42 Page 7 of 10
+
+ Open architecture for enhancing flexibility and composability of models by separation of model from simulation engine
+ Web service based on the service oriented architecture (SOA) concept to utilize and reuse componentized models stored in the local and remote resource repositories
+ Providing external Interfaces such as legacy C/C++ code, Matlab, HLA/runtime infrastructure (RTI) to increase the usability of AddSIM
+ Providing environmental services such as atmosphere, ocean and terrain
+Players in the AddSIM such as aircraft and missile consist of components and subcomponent. The players in the AddSIM participate in the simulation federation through HLA and RTI. Figure 4 shows the modeling structure of AddSIM, and Figure 5 shows the architecture and Graphic User Interface (GUI) of AddSIM.
+Figure 4. Modeling Structure of AddSIM
+Figure 5. Architecture and Graphic User Interface (GUI) of AddSIM
+3.1.2 The Simulation Interoperability Laboratory (SIL)
+The Simulation Interoperability Laboratory (SIL) is an academic research organization in the Industrial Engineering and Management Systems (IEMS) at the University of Central Florida. One of the main research areas of SIL is design and implementation of simulation interoperability. There are total six team members in the organization: two professors, two researchers with Ph.D. degrees, and two doctoral students. The team is currently working on a research to accomplish Virtual and Constructive (VC) simulation interoperability using multiple legacy simulation systems based on the High Level Architecture (HLA) and Run-Time Infrastructure (RTI) as a part of a project with ADD.
+MODSIM World 2015
+   2015 Paper No. 42 Page 8 of 10
+
+3.2 Interoperability Measurement Process
+The interoperability measurement process was conducted to measure the potential interoperability level of AddSIM and the SIL in the technical, conceptual and organizational domains. All the information relevant to AddSIM and SIL was reviewed and a interview was implemented to the interoperability team. The interview result was analyzed and the maturity levels were determined by the agreement among the assessor. The assessor may be originated from an organization which implements the simulation interoperability, or other external organization, or combination of the two.
+3.3 Interoperability Measurement Result
+The interoperability maturity level of AddSIM was determined and demonstrated in Table 5.
+Table 5. Determined Maturity Level
+3.4 A Roadmap for AddSIM and the Organization
+A high level roadmap for AddSIM to improve the interoperability levels are demonstrated in Table 6.
+Table 6. A Roadmap for AddSIM and Organization (High level)
+MODSIM World 2015
+   I. Technical
+    Computer and Network Infrastructure
+ Standard Simulation Architecture (SSA)
+   Simulation application and configuration
+ Simulation management
+     Total
+    AddSIM
+      Open IT infrastructure
+ Dynamic compliance to SSA
+   Collaborative capabilities
+ Collaborative technical management
+  Level 3
+      Level 3
+   Level 3
+    Level 3
+    Level 3
+     II. Conceptual
+ Unambiguous semantics
+  Conceptual model definition and structure
+   Object modeling standard
+ Data format compatibility
+     Total
+   AddSIM
+   Use of standard format/structure and configuration
+     Level 2
+        Level 2
+   Level 2
+    Level 2
+    Level 2
+    III. Organizational
+  Supporting Documentation
+  Capable Experts
+   Development and Execution Capabilities
+ Flexible Organization
+   Total
+    SIL
+    Processes / Procedures defined
+Trained experts
+  Defined development and execution processes/ procedures
+Trained organization for processes/ procedures
+  Level 2
+       Level 2
+ Level 2
+   Level 2
+   Level 2
+     Domain
+     Description
+    I. Technical
+ The IT infrastructure should be upgraded to be adaptive level. AddSIM should be upgraded to be compliant to SSA adaptively. AddSIM application should have dynamic and adaptive capabilities. The simulation management should be real-time.
+    II. Conceptual
+      AddSIM should have adaptive format/structure and configuration.
+  2015 Paper No. 42 Page 9 of 10
+
+4. CONCLUSION AND FUTURE STUDY
+This research contributed to develop a systematic method to measure the LVC Simulation interoperability level. An interoperability maturity model for measuring LVC simulation interoperability was proposed. LSIMM was formalized using an analysis of other existing interoperability maturity models related to technical, conceptual and organizational interoperability domains and a survey result from domain experts.
+The proposed framework successfully provided an answer to the interoperability measurement team to analyze current interoperability capabilities of AddSIM and SIL. Although the framework did not provide qualitative and specific interoperability improvement methods, the framework provides analysis results of strength and weakness of a simulation system and an organization in technical, conceptual and organizational interoperability domains.
+The framework measures the interoperability of single simulation system instead of pair of interoperated systems or multiple systems. Therefore this is very useful even when the future simulation systems that will be interoperated are not known. Because the interoperability level is determined from consideration of overall capabilities for each interoperability domain, it is hard to say that same interoperability level means exact same interoperability capability meaning easy interoperability. There could be other domain-specific problems that hinder interoperability.
+Future research includes the design of an interoperability measurement framework which can measure potential interoperability of paired simulation systems. If a pair of simulation systems is known and an interoperability measurement team wants to integrate them, they can predict the interoperability level and know the strength and weakness of the interoperability capabilities of paired systems.
+REFERENCES
+Clark, T., & Jones, R. (1999). Organisational interoperability maturity model for C2. Paper presented at the Proceedings of the 1999 Command and Control Research and Technology Symposium.
+DoD Directive. (1995). The DoD Modeling and Simulation Master Plan.
+Ford, T. C. (2008). Interoperability measurement: ProQuest.
+Ford, T. C., Colombi, J. M., Jacques, D. R., & Graham, S. R. (2009). A general method of measuring
+interoperability and describing its impact on operational effectiveness. The Journal of Defense Modeling
+and Simulation: Applications, Methodology, Technology, 6(1), 17-32.
+Gallant, S., & Gaughan, C. (2010). Systems Engineering for distributed live, virtual, and constructive (LVC)
+simulation. Paper presented at the Proceedings of the Winter Simulation Conference.
+Huijsman, K. L., Plomp, M. G., & Batenburg, R. S. (2012). Measuring interoperability maturity in government
+networks.
+Kasunic, M., & Anderson, W. (2004). Measuring Systems Interoperability: Challenges and Opportunities. Technical
+Note. Software Engineering Institute, Carnegie Mellon University, Pittsburgh.
+Lutz, R. (2012). A Systems Engineering Perspective on the Development and Execution of Multi-Architecture LVC
+Environments.
+Lutz, R., & Drake, D. (2011). Gateway Concepts for Enhanced LVC Interoperability. Paper presented at the Proc.,
+2011 Spring Simulation Interoperability Workshop.
+National Research Council. (1999). Realizing the Potential of C4I: Fundamental Challenges.
+Radatz, J., Geraci, A., & Katki, F. (1990). IEEE standard glossary of software engineering terminology. IEEE Std,
+610121990, 121990.
+2015 Paper No. 42 Page 10 of 10
+MODSIM World 2015
+    III. Organizational
+   SIL should have adaptive documentations which have process and procedures. SIL should have agile/dynamic/adaptive experts.
+SIL should have agile/dynamic/adaptive development and execution processes/procedures.
+The organization structure should be agile/dynamic/adaptive.
+ 

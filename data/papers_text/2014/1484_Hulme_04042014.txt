@@ -1,0 +1,310 @@
+Game-oriented Technology and Simulation to re-design Driver Training and Education using Backward Design
+Kevin F. Hulme NYSCEDII Buffalo, NY hulme@buffalo.edu
+Elizabeth Rees DERIC
+Albany, NY ear09@health.state.ny.us
+Leah Hines, Kitty Gelberg
+N.Y.S. Department of Health
+Albany, NY
+lmh09@health.state.ny.us
+lmh09@health.state.ny.us
+Greg Fabiano University at Buffalo Buffalo, NY fabiano@buffalo.edu
+MODSIM World 2014
+     ABSTRACT
+As motor vehicle crashes remain the leading cause of death for teens, effective driver training continues to be a major public health concern. Teen driver and peer passenger deaths account for almost 25% of total teen deaths from any cause, more than cancer, homicide and suicide. In fact, motor vehicle crashes are the LEADING CAUSE OF DEATH for U.S. teens, accounting for more than one in three deaths in this age group. Accordingly, educators are searching for novel ways to incorporate game-oriented technology to re-design motor vehicle education.
+As the M&S community is aware, simulation can provide a training framework that is safe, authentic, controllable, and repeatable. Particularly over the last decade, video gaming systems have increasingly been found in applications more diverse than just entertainment, including training, education, research, and simulation. Computerized simulations designed explicitly for educational purposes can serve as a powerful training resource. By implementing game-based simulation training tools that are geared towards young drivers, there is a potential to greatly improve standardized practices in young driver training by improving cognitive, mechanical, visual, and auditory driver skills at an early age.
+The focus of this paper is to present a case study that serves as a first step towards motor vehicle training curriculum re-design, incorporating game-based M&S as a core component. This case study emphasizes “Backward Design”, which first looks at desired outcomes to properly design effective instructional methods and performance assessments. This case study will: emphasize “distractions and inattention” (one of the Top 5 causes for teen driving accidents), offer recommendations for standardizing M&S technology in education and training, and emphasize examples of applying M&S technology in the stated context.
+ABOUT THE AUTHORS
+Kevin Hulme serves as the technical lead of the Motion Simulation Laboratory at the New York State Center for Engineering Design and Industrial Innovation (NYSCEDII) at the University at Buffalo. His research concentration is on the custom design and development of ground vehicle simulations for applications in: clinical research, education and training, and next-generation transportation research.
+Greg Fabiano is an Associate Professor with the Department of Counseling, School, and Educational Psychology at the University at Buffalo. His specific interests in the area of assessment include the development of innovative approaches to measuring functional impairment for children with ADHD, and in the area of treatment outcome include the identification of behavioral and pharmacological treatments in home, school, and recreational settings. Elizabeth Rees is a Public Health Specialist with the New York State Department of Health. Presently, she is the Project Manager of the Driver Education Research and Innovation Center (DERIC), and facilitates the development of a standardized driver education curriculum to reduce adverse motor vehicle incidents involving teens in the state of New York.
+Leah Hines is an Epidemiologist at the New York State Department of Health. In that capacity, she responds to data requests (e.g., statistical summaries, data interpretation) from various stakeholders, including the Bureau of Occupational Health, bureaus within the New York State Department of Health, and other state and federal agencies. Kitty Gelberg is the Director of the Bureau of Bureau of Occupational Health & Injury Prevention at the New York State Department of Health. In that capacity, she monitors and addresses occupational illness and both occupational and non-occupational injury, provides work-site consultation service, and oversees a statewide network of clinics specializing in diagnosis and prevention of occupational diseases.
+2014 Paper No. 1484 Page 1 of 11
+
+Game-oriented Technology and Simulation to re-design driver training and education using Backward Design
+Kevin F. Hulme NYSCEDII Buffalo, NY hulme@buffalo.edu
+Elizabeth Rees DERIC
+Albany, NY ear09@health.state.ny.us
+Leah Hines, Kitty Gelberg
+N.Y.S. Department of Health
+Albany, NY
+lmh09@health.state.ny.us lmh09@health.state.ny.us
+Greg Fabiano University at Buffalo Buffalo, NY fabiano@buffalo.edu
+MODSIM World 2014
+     OVERVIEW AND INTRODUCTION
+Roadway safety continues to be a major public health concern. Teen driver and peer passenger deaths account for almost 25% of total teen deaths from any cause, more than cancer, homicide and suicide (NSF, 2011). In fact, motor vehicle crashes are the LEADING CAUSE OF DEATH for U.S. teens, accounting for more than one in three deaths in this age group (CDC, 2012b). Clearly, improved teen driver training continues to be an unresolved priority. Ultimately, most young drivers are in a position where they “learn as they go” once licensed, which places themselves and all other drivers on the road unnecessarily at risk.
+Particularly over the last decade, video gaming systems have increasingly been found in applications more diverse than just entertainment, including training, education, research, and simulation. Computerized simulations for educational purposes can serve as powerful training resources. By implementing game-based simulation training tools that are geared towards young drivers, there exists a potential to greatly improve standardized practices in young driver training by improving cognitive, mechanical, visual, and auditory driver skills at an early age.
+In this paper, we demonstrate the implementation of “Backwards Design” (also known as “Understanding by Design”) to re-design a driver training module that leverages simulation, technology, and serious gaming as core components. In this paper, driver distraction and driver inattention serves as the focus of our preliminary efforts. While clearly relevant in young driver training, the concept of “distractions” in general is relevant to other forms of training; pilot flight training, and industrial equipment training, for example. In the next section, we present a motivation for the present research: young driver safety has been, and continues to be a major public health concern, and one that can effectively be addressed with improved protocols for training and education.
+MOTIVATION
+Tragically, motor vehicle crashes are the leading cause of death among adolescents (TDS, 2012). The fatal crash rate for drivers aged 16 to 19 is four times higher than for drivers ages 25 to 69. (Allstate, 2013). Young people aged 15-24 represent only 14% of the U.S. population. However, they account for 30% ($19 billion) of the total costs of motor vehicle injuries among males, and 28% ($7 billion) among females (CDC, 2012b). The greatest lifetime chance of being involved in a motor vehicle crash occurs in the first six months after licensure (Mayhew et al., 2003). According to Dr. Thomas Frieden, Director of the CDC, motor vehicle safety is one of the agency's most “winnable battles” if “evidence-based strategies” and best practices are implemented across the U.S. (CDC, 2012a).
+Despite published trends that demonstrate the inherent dangers of young drivers (e.g., due to inexperience, distractions, and other factors), standard practices in driver education remain largely unchanged to those used 50 years ago. Moreover, recent evidence suggests that traditional driver training has not appreciably reduced crash risk (Beanland et al., 2013), and is characterized by the following deficiencies:
+ Antiquated training materials (e.g., outdated DVD videos, “chalk and talk” instruction).
+ Limited engagement in present-day training. Instructional techniques promote passive (e.g., sit back and
+watch) rather than active (e.g., hands-on, “seat time” style) learning.
+ In almost all cases, simulation/gaming/technology has historically been employed only as a “novelty”
+rather than as an effective (and sustained) means for quality driver training.
+ No standardization of training at the State level. Instructors often cull from a wide body of available
+training materials – many outdated - without any structure or uniformity.
+2014 Paper No. 1484 Page 2 of 11
+
+Most teens are not engaged by driver training programs that promote sitting in a classroom and listening to lectures. Distractions, boredom, exhaustion, and information overload make it nearly impossible for teens to absorb critical information in a relatively short period of time. Unfortunately, numerous driving schools that operate these types of learning environments are only interested in their “bottom line” (JDT, 2011). These facts heighten the need for re- imagined training tools and techniques. In the next section, we present an overview of how gaming and other present-day computer technologies can be leveraged for re-imagined training contexts.
+GAMING AND SIMULATION
+Particularly over the last decade, video gaming systems have increasingly been found in applications more diverse than just entertainment, including training, education, research, and simulation. This emerging field, sometimes referred to as “Serious Games” (e.g., Zyda, 2005) is intended to provide an environment for an authentic and engaging context for education and training. Computerized simulations for educational purposes, sometimes also referred to as “Edutainment” (e.g., Dostál, 2009), can be powerful tools for learning. By implementing game-based simulation that is geared towards young drivers, there is a potential to enhance standardized practices in driver training by improving cognitive, mechanical, visual, and auditory driver skills.
+Although simulation continues to be used extensively in driver safety research (e.g., Reimer et al., 2006; Classen et al., 2005; McGeHee et al., 2004), here in the United States, dedicated driver training programs that emphasize technology, gaming, and simulation are sparse, with a few notable exceptions. The AAA Foundation has developed Driver-ZED (AAA, 2011), a computer-based software that helps novice drivers recognize and avoid driving hazards. (DrivingMBA, 2014) is a program that uses two levels of interactive simulation: a) basic vehicle control, and b) advanced training (Wilson, 2009). The Young Driver Research Initiative (YDRI) employs methodological approaches to help reduce the frequency and severity of crashes involving teens, including evidence-based evaluation with driving simulation (McDonald et al., 2012).
+In this paper, we present a case study that serves as a first step towards driver training curriculum re-design, with game-based M&S infused as a core component. This case study emphasizes “Backward Design”, which first looks at desired outcomes to properly design effective instructional methods and performance assessments. In the next section, we present an overview of the Backwards Design paradigm, also known as “Understanding by Design”.
+UNDERSTANDING BY DESIGN
+Understanding by Design (UbD) is a tool for educational planning that focuses on the “six facets of understanding”; students being able to explain, interpret, apply, have perspective, empathize, and have self-knowledge about a given topic. UbD emphasizes “backwards design”: the instructor begins with classroom outcomes and then plans the curriculum and performance assessments, choosing activities and materials that best promote student learning (Wiggins and McTighe, 2005). UbD is NOT a program for instruction; it is a methodology for approaching the design of a course curriculum, and is traditionally developed in three stages (Wiggins, 2005):
+Stage 1: Desired Results.
+Stage 1 has a number of relevant subcomponents, the most vital of which are the Established Goals. In other words, what relevant goals (e.g., objectives, outcomes) will be addressed by the curriculum? Another major subcomponent are the Desired Understandings: upon completion, what are the “big ideas” that will be understood by the students? The third major subcomponent are the Essential Questions: what provocative questions will foster transfer of learning? Lastly, it is helpful to determine what students will know (e.g., what key knowledge and skills will be acquired), and what will students be able to do as a result of their knowledge acquired by the curriculum unit.
+Stage 2: Assessment Evidence.
+There are a number of key subcomponents to Stage 2, the first of which is the design of the Performance Tasks. In other words, through what authentic task(s) will students demonstrate their desired understandings (i.e., from Stage 1), and by what criteria will performance of understanding be judged? The second major subcomponent is referred to as Other Evidence: through what other mechanisms (e.g., quizzes, tests, observations, homework, journals) will students demonstrate achievement of the desired results? The third major subcomponent to Stage 2 involves Self- assessment: how will students reflect upon their own learning? As a guideline for constructing performance assessment tasks for Stage 2, the G.R.A.S.P.S. acronym is often employed, as shown in Table 1.
+2014 Paper No. 1484 Page 3 of 11
+MODSIM World 2014
+
+Stage 3: Learning Activities
+Lastly, Stage 3 lists the learning activities (i.e., the “lesson plan”) that will lead students to their desired results. As a guideline for constructing Stage 3, the W.H.E.R.E.T.O. acronym is often employed, as shown in Table 2.
+MODSIM World 2014
+    Table 1 – Assessment Tasks via G.R.A.S.P.S.
+  Table 2 – Learning Activities via W.H.E.R.E.T.O.
+  Goal
+Provide a statement of the task.
+  Where
+ Where is the unit going; what is expected?
+  Role
+Define the role of the students.
+  Hook
+ Hook all students and hold their interest.
+  Audience
+Identify the target audience.
+  Equip
+ Equip students to experience the key ideas
+  Situation
+Set the context of the scenario.
+  Revise
+ Rethink/revise their understandings and work.
+  Product
+Clarify what the students will create.
+  Evaluate
+ Evaluate their work and its implications.
+  Standards
+Issue rubrics to measure success.
+  Tailor
+ Tailor instruction to learners needs.
+   Organize
+  Organize to maximize effective learning.
+        Figure 1 illustrates a summary of the entire process. In the next section, we discuss the specific implementation of the UbD paradigm for the re-design of a critical driver training module geared towards driver distractions.
+Figure 1 – The 3 Stages of Understanding by Design CASE STUDY – DISTRACTED DRIVING & DRIVER INATTENTION (DDDI)
+According to the Institute for Traffic Safety Management and Research (ITSMR, 2012) and other published articles (e.g., Moye, 2013; Reardon, 2010), distracted driving is an increasingly deadly behavior. Federal estimates suggest that distractions contribute to 16% of all fatal crashes, leading to approximately 5,000 deaths every year (AAA Foundation, 2013). Not surprisingly, teens are among the drivers most impaired by distraction. In fact, distractions are one of the top five contributors to fatal accidents among young drivers. A recent in-vehicle study showed that teen drivers were distracted almost 25% of the time they are behind the wheel. Electronic devices, such as texting, emails, and downloading music, were among the largest sources of distractions (AAA Foundation, 2012). Alarmingly, a recent study found that even hands-free texting and calling are far from risk free (Copeland, 2013). The mere fact that automakers are increasing the number of Internet-enabled in-vehicle devices in order to attract new buyers (e.g., Kaiser, 2012), despite government protest, makes it clear that distractions are an ongoing and ever- increasing public health concern.
+In New York State, the current driver training curriculum has not been updated since 1989. As a result, a Special Advisory Panel was recently convened to examine the quality and availability of driver education programs. The
+ 2014 Paper No. 1484 Page 4 of 11
+
+New York State Legislature instructed the Panel to recommend strategies to make more readily available high quality driver education through the use of new educational technologies. The principal findings of the final report (Mills and Swarts et al., 2008), as delivered to the New York State Governor and Legislature, were:
+ Develop/Test/Validate a reproducible methodology that can evaluate the efficacy of Driver Education;
+ Develop/Test/Validate a cutting edge driver education curriculum based on the best available highway
+safety and educational research.
+To implement the critical recommendations included in that report, a collaboration of stakeholders was formed, and is referred to as the Driver Education Research and Innovation Center (DERIC). DERIC is managed by Health Research Inc. (HRI), the New York State Education Department, the New York State Department of Health, and the New York State Department of Motor Vehicles. The first module that has been created for the DERIC initiative, designed, developed, and deployed in 2013, is the Distracted Driving and Driver Inattention (DDDI) module. For its creation, the UbD framework was employed.
+In this paper, we emphasize components of the curriculum design that are of particular interest to the M&S (research and education) community. A major constraint to this endeavor has been trying to forecast the availability of technological resources at most training schools. Much as we would like to design learning exercises that are targeted for high fidelity simulators, many present-day schools do not yet have the available resources to provide the facilities required for such exercises. Accordingly, we tried to incorporate an influence of M&S in the suggested curriculum while assuming that most schools will have an Ethernet connection. As well, we leveraged freely available utilities that can be implemented on a basic PC with keyboard/mouse.
+Stage 1 – Desired Results
+For our DDDI training module, we arrived upon a total of four Established Goals, and these serve as a recurring theme throughout the entire training framework. The essence of our four goals are: how are distractions limiting on general life performance, how are distractions limiting on driving performance specifically, what are the consequences of distracted driving, and what strategies can be used to avoid (or reduce) distractions while driving? Please refer to Table 3.
+Once the Established Goals have been converged upon, their satisfaction is solidified by way of the Essential Questions. Table 4 summarizes one Essential Question for each of our Established Goals (numbered in parentheses): what constitutes a distraction, how might distractions impact driving performance, how do statistics demonstrate that distractions lead to negative driving outcomes, and what can a driver do to prevent distractions?
+MODSIM World 2014
+     Table 3 – Established Goals
+    Goal 1
+ Experience the limitations on attention and performance related to divided attention/distraction.
+   Goal 2
+ Define distracted driving and identify potential sources of distractions while driving.
+   Goal 3
+ Demonstrate knowledge of the consequences of distracted driving.
+  Goal 4
+ Learn strategies to reduce and avoid distractions when driving.
+         Table 4 – Essential Questions (EQ)
+    EQ (1)
+ What is a Distraction?
+   EQ (2)
+ How do distractions affect driving specifically?
+   EQ (3)
+ What do recent crash statistics indicate about the outcomes of distracted driving?
+   EQ (4)
+ How can the driver prevent distractions from impairing driving?
+   Table 5 – Desired Understandings (DU)
+    DU (1)
+ Distraction and inattention can degrade performance.
+   DU (2)
+ Specific driving abilities that are affected by distraction (e.g. focus, judgment, reaction time).
+   DU (3)
+ Pertinent statistics (e.g., inattention is a leading contributing factor for teen crashes).
+  DU (4)
+ There are a variety of strategies by which one can minimize or avoid distractions when driving.
+       Along with the design of the Essential Questions, the Desired Understandings are specified. Table 5 summarizes one Desired Understanding for each of our Established Goals: distractions can impair life performance and driving performance, statistics show how dangerous inattention can be while driving, and awareness of simple techniques to avoid distractions when behind the wheel.
+2014 Paper No. 1484 Page 5 of 11
+
+To conclude Stage 1 of UbD, it is helpful to note the key knowledge and skills that will be gained as a result of the training module – specifically: what will students know, and what will they be able to do? Table 6 summarizes this information (one pertinent item) for each of the four Established Goals.
+MODSIM World 2014
+     Table 6 - What will students Know? (WK)
+    WK (1)
+ How distraction and inattention can negatively affect performance.
+   WK (2)
+ How to recognize potential driving distractions.
+   WK (3)
+ Potential consequences (e.g., personal, legal, financial) of distracted driving.
+   WK (4)
+ The variety of strategies by which one can minimize or avoid distractions when driving.
+   What will students be able to Do? (WD)
+    WD (1)
+ Define “distraction” as it pertains to everyday life matters.
+   WD (2)
+ Differentiate the different types of driving distractions.
+   WD (3)
+ Understand how distractions can impact driving performance and lead to negative outcomes.
+  WD (4)
+ Appropriately use technology to prevent distractions from affecting the driving task.
+       In the next subsection, we investigate the details of the second stage of UbD, which involves identifying appropriate mechanisms for acquiring satisfactory evidence of understanding and knowledge transfer.
+Stage 2 – Assessment Evidence
+In the second stage of UbD, we specify mechanisms by which the transfer of knowledge can be measured towards achievement of the Desired Results (i.e., Stage 1). Stage 2 is often advised by the G.R.A.S.P.S. technique, whereby educators can provide more detailed information about the task through which student understanding can be assessed. To guide the discussion in this paper, we present a demonstration of G.R.A.S.P.S. with one of our “Performance Tasks” - primary mechanism for assessment evidence in the UbD Stage 2 protocol. Table 6 lists one Performance Task for each of our original Established Goals. The Goal 1 task is a simple physical classroom activity that demonstrates how it is difficult to do multiple things at once; the Goal 2 task takes place inside the vehicle, where learners observe, document, and classify the distractions encountered while driving (as a passenger); the Goal 3 task will be expanded upon in the next paragraph (and in Table 7); and the Goal 4 activity promotes students to culminate what they have learned into a tractable plan-of-action.
+     Table 6 – Performance Tasks (PT)
+    PT (1)
+ Walk-Talk-Distract: Have the students experience divided attention first hand using an in-class distraction game.
+    PT (2)
+ In-Car Lesson: While driving with a family member, students maintain a journal of driving distractions they notice and identify if the distraction is visual, manual or cognitive.
+    PT (3)
+ YouTube Video: Students work in small groups to develop a script for a video episode about distracted driving. (Refer to Table 7 for more details).
+   PT (4)
+ Action Plan: Students develop a personal action plan that list common distractions and a description of how each will be minimized or avoided while driving.
+     Refer to Table 7, which demonstrates the application of G.R.A.S.P.S. to Established Goal 3 Performance Task, which is technology-focused – in the form of a YouTube Video. As outlined by Table 7, the overall goal is for class members (working in small groups) to create a YouTube video that will demonstrate the consequences of driving while distracted. Students in each group will play various roles (e.g., parent, teen, victims, lawyer, court judge) to tell the story. The end product will be a short video that will be displayed to the other groups in the class, and the (class-voted) “winning” video will be archived on the school’s public web site for all to view.
+      Table 7 – G.R.A.S.P.S. applied to design a Performance Task (Goal 3)
+    Goal
+ Create a video that demonstrates the negative consequences of driving distracted.
+   Role
+ Students are grouped to mimic participants in the storyline (e.g., driver, parent, judge).
+   Audience
+ Students need to demonstrate their understandings to their peers and their family members.
+   Situation
+ The context is a driving scenario where the main player is driving dangerously, distracted.
+   Product
+ A YouTube video (private URL), that will be viewed by class members and your family.
+ Standards
+ The highest rated video will be published on the class website (public URL), for all to see.
+      2014 Paper No. 1484 Page 6 of 11
+
+Besides the Performance Tasks, there are other Stage 2 mechanisms by which student assessment evidence is culled. One such category is referred to as “Other Evidence”. Refer to Table 8, whereby we have suggested one such item for each of the four established goals. Historically, these instructional items (while intentionally designed to be diverse in nature) tend to be more conventional methods of instruction (e.g., home works, discussions, quizzes).
+MODSIM World 2014
+     Table 8 – Other Evidence (OE)
+    OE (1)
+ Worksheet: Students list activities that members of their family do on a daily basis. For each, students suggest a distraction that might affect one’s ability to perform this task.
+    OE (2)
+ Discussion Prompts: Students discuss how the three primary classes of distraction impact a driver’s ability to function.
+    OE (3)
+ Homework: Students independently research a recent news article on a pre-assigned driving distraction where that distraction specifically resulted in a negative outcome.
+    OE (4)
+ Dialogue Activity: Students discuss past occurrences, while driving or as a passenger, where distractions almost led to a negative outcome.
+    Table 9 – student Self-Assessment (SA)
+    SA (1)
+ Using the list of distractions, students chose their top three distractions and reflect upon how each might affect their everyday life.
+   SA (2)
+ Of five primary distractions listed in class, students reflect upon how each might specifically affect their driving task (e.g., sound, vision, cognitive, mechanical).
+   SA (3)
+ Students imagine they are driving with a friend who is distracted while driving. What might happen if they continue to allow the driver to drive while distracted?
+  SA (4)
+ Each student writes down three instances of how the appropriate use of technology has helped to eliminate their own driving distraction.
+       To conclude Stage 2, each student is asked self-assess their own learning with regards to distractions and inattention. Table 9 summarizes this information for each of the four Established Goals. Note how for each of the four goals, the chosen activity promotes the learner to assess their progress relative to the other Stage 2 activities; students can self-reflect to see how their learning can be advanced as a result of each task. In the next subsection, we investigate the details of the third stage of UbD, which involves planning the learning experience. In conventional instruction, this step might come first, whereas in the UbD protocol, this vital component is necessarily the final step.
+Stage 3 – Learning Activities
+The final stage of the UbD framework is the design of the Lesson Plan, and the specification of the Learning Activities that will guide learners towards establishing their goals (i.e., Stage 1) and providing evidence of doing so (i.e., Stage 2). As a template for creating the Learning Activities, the W.H.E.R.E.T.O. protocol is often employed; it is an acronym for planning steps to satisfy the requirements of the instructional unit. Note that this acronym is simply a guideline, and does not necessarily represent the sequence to be followed (i.e., within an instructional unit).
+For the purposes of this paper, W.H.E.R.E.T.O. is demonstrated in the context of creating appropriate Learning Activities geared specifically towards Established Goal 4 – “Learn strategies to reduce and avoid distractions when driving.” Refer to Table 10, and note that “E1” refers to “Equip”, and “E2” refers to “Evaluate”. The program begins with a Where (W) activity, by having students simply brainstorm for ideas, as a group, on how to minimize distractions. This leads to a Hook (H) activity, where students make use of engaging game/simulation technology to view the negative effects of distracted driving, firsthand. Refer to Figures 2-4; these are freely available resources gaming and simulation resources suggested for the proposed program. Next, students are challenged to Evaluate (E2) what they have learned, by reflecting on how technology has helped them to eliminate their own distractions when driving. Next is an Equip (E1) activity, where the class has a dialogue to discuss how distractions have led to negative driving outcomes in their own experiences. (Refer to Figure 5 – a useful multi-media resource (offered by the AAA), color-coded to classify types of distraction by their documented impact on reaction time). This is followed by a Revise (R) activity, where students are challenged, quiz-style, to recite methods to minimize distracted driving. This is then followed by a sequence of three Equip (E1) activities that complement each other: the creation of a) driving guidelines, b) an associated action plan, and c) a student-guardian Contract to minimize distractions while driving. The lesson plan concludes with an Evaluate (E2) activity, where students are tasked to maintain a journal that documents specific instances of how distractions were minimized, and safety improved, while driving with family members. Note that for this particular Established Goal, the Stage 3 Lesson Plan did not
+ 2014 Paper No. 1484 Page 7 of 11
+
+make explicit use of “T” (i.e., tailor the lesson plan to specific student needs) nor “O” (i.e., organize to maximize effective learning), however it can be argued that the diversity of chosen activities will (implicitly) tailor to the needs of a wide variety of students, and the flow of activities has been carefully organized to guide the learners towards their goals. In the next section, we discuss the current status of the DDDI UbD module, and present recent evidence of success of the UbD framework in similar implementations.
+MODSIM World 2014
+     Table 10 – Learning Activities (Goal 4) as directed by W.H.E.R.E.T.O.
+   Activity Title
+Activity Description
+     Brainstorm
+Have students brainstorm mechanisms by which drivers can avoid distraction.
+  W
+  Distracted Driving Game
+Use an interactive computer game to reinforce the concept of distracted driving.
+  H
+  Self Reflection
+Students write down three instances of how technology has helped to eliminate their own driving distraction.
+  E2
+  Dialogue Activity
+Students discuss past occurrences, either while driving (or as a passenger) where distractions led (or could have led to) a negative outcome.
+  E1
+  Class Oral Quiz
+In a quiz-style format, students are now asked to recite methods to mitigate distractions after being presented a list of common distractors.
+  R
+  Guidelines
+Instruct the students to work together and create an in-car list of guidelines to avoid distraction while driving.
+  E1
+  Action Plan
+Students develop a one page action plan comprised of a list of common distractions, and a description of how each will be minimized while driving.
+  E1
+  Contract
+Students develop a contract (with their guardian) to drive distraction-free, and includes both incentives and consequences.
+  E1
+  Journal Activity
+While driving with parents, students maintain a brief journal that describes instances where distractions were minimized and how safety was improved.
+   E2
+            Figure 2 - “Head’s Up!” (courtesy of Toyota) http://headsup.discoveryeducation.com/
+Figure 3 - “Gauging your Distraction”
+http://www.nytimes.com/interactive/2009/07/19/ technology/20090719-driving-game.html?_r=0
+Figure 5 – 3 Tiers of Distractions (AAA)
+http://images.blog.autoshopper.com/3890_distraction- chart.jpg
+     Figure 4 – “Distraction Dodger”
+http://www.mochigames.com/games/distracted- driving/
+    2014 Paper No. 1484 Page 8 of 11
+
+EFFECTIVENESS EVIDENCE
+As of Fall, 2013, the DDDI module described in this paper has been undergoing Pilot Testing within New York State, which will continue through the majority of 2014. It is too early to report any results from this implementation, but initial feedback has been positive. It is noteworthy that the New York State Driver and Traffic Safety Association (NYSDTSEA) has been receptive of the DERIC mission, and has a Representative as a part of its association leadership, and is assisting with the pilot testing and deployment of the DDDI (and future) training modules.
+While it is too early to measure the success of the DDDI UbD program, we comment briefly on past implementations of Backwards Design in the hopes that our program will enjoy similar success. From a teaching perspective, (Shumway and Barrett, 2004) employed UbD to strengthen student teacher attitudes towards instruction. These pre-service teachers became more excited about their teaching profession and better prepared through the backward design implementation. From the learners perspective, recent efforts (Childre et al., 2009; Jorgenson, 1995) presented examples of UbD improving learning at both the elementary and high school levels, and targeted the “depth of understanding” for all learners. The next section investigates some of the Broader Impacts of the research summarized in this paper.
+EXTENSIONS IN EDUCATION AND TRAINING
+The application of the UbD Framework presented here has a number of broader impacts relating to M&S training and education. As mentioned previously, there exists no standardization of novice driver training either at the State or at the National level. Despite this lack of standards, most existing driver training curricula contain a common set of primary training modules. It is likely that most present-day driver training modules could be improved through incorporating M&S exercises within a revised UbD paradigm. As a follow up to the work presented here (which was developed throughout 2013), the State of New York DERIC subcommittee is currently at work on two follow- up modules to be completed in 2014: “Occupant Protection” and “Unsafe Speed” (collectively referred to as OPUS). Both modules will incorporate M&S exercises within a novel UbD framework.
+The advantage of UbD is that it is not a prescriptive program, and does not require a belief in any single pedagogical approach. Therefore, aside from young driver training, the UbD framework could be extended for other civilian applications; for example large equipment training (e.g., cranes, forklifts, tractor trailers). In a majority of training settings, safety regulations are ever-evolving, as is the equipment (e.g., hardware and software) upon which the training is performed – particularly when there is a prominent M&S component present. Although the nuances and smaller details of training programs can progress over time, the core training components will largely remain the same (Ahlers, 2011). For these reasons, similar extensions could be made for military training programs. Accordingly, as UbD is focused on the design of entire curricular units (as opposed to individual lesson plans) its paradigm could be extended for flight training, or tactical training for large ground vehicles (e.g., tanks).
+SUMMARY AND CONCLUSIONS
+Recent evidence (and governmental consensus) suggests that many current driver education programs do very little to keep teens safe on the road. According to (Williams et al., 2009), “despite widespread appeal of driver education, scientific evaluations indicate that it does not produce safer drivers”. For the most part, private driving schools are only loosely regulated, and in some states, there are multiple regulatory bodies that are responsible for driving schools. Unfortunately for the trainees, this bureaucracy often results in less regulation, and subsequently, no one properly informs driving schools what to teach, nor provides any oversight to make sure they are actually teaching safe driving behavior. (Carty, 2011)
+Over the last few decades, M&S technologies have become essential components for effective (civilian and military) training. Video gaming, simulation, and augmented or virtual reality systems have increasingly been found in applications more diverse than just entertainment, including research, training, and education. Indeed, Serious Games are intended to provide an engaging environment within which to motivate training participants beyond conventional approaches. By implementing game-based simulation training tools that are geared towards young drivers, there is a potential to greatly improve standardized practices in young driver training by improving cognitive, mechanical, visual, and auditory driver skills at an early age.
+2014 Paper No. 1484 Page 9 of 11
+MODSIM World 2014
+
+This paper has demonstrated the application of “Understanding by Design” (UbD) as an extensible, model framework for driver training and education. UbD is a way of thinking through the process and methodology of approaching a course curriculum – it is NOT a program for instruction. As such, extensions to other civilian and military applications are feasible. In this paper, the authors have described the design and development of our first young driver training module, Distracted Driving and Driver Inattention (DDDI), through the implementation of the UbD paradigm. For the benefit of the MODSIM audience, the authors have featured aspects of the program that are geared towards serious gaming, simulation, and technology in general. By no means does the material presented here represent a guarantee for improved driver training over current approaches. However, the proposed methodology offers an attempt at an updated and modernized training standard. This implementation has been presented in a way to direct the specific content be instructed within a flexible and modular framework.
+ACKNOWLEDGEMENTS
+The authors would like to acknowledge the contributions of the 2013 DERIC DDDI subcommittee, most notably Jane Townshend, Past President of the New York State Driver & Traffic Safety Education Association (NYSDTSEA), and Dr. Julius Cheng, Associate Professor of Surgery at the University of Rochester Medical Center.
+REFERENCES
+AAA, (2011). "Driver-Zed: Manage the Risks, Master the Road", (web link), http://www.driverzed.org, AAA Foundation for Traffic Safety, Copyright, 2011.
+AAA Foundation, (2012). “Distracted Driving Among Newly Licensed Teen Drivers”, (web link),
+https://www.aaafoundation.org/sites/default/files/research_reports/DistractedDrivingAmongNewlyLicensedTeenDri vers.pdf, AAA Foundation for Traffic Safety, Washington, D.C., March, 2012.
+AAA Foundation, (2013). “Distracted Driving”, (web link), https://www.aaafoundation.org/distracted-driving, Copyright 2013.
+Ahlers, M.M. (2011). “FAA proposes major revamp of airline pilot training”, (web link), http://www.cnn.com/2011/TRAVEL/05/11/faa.pilot.training/, CNN.com, Washington, DC, May 11, 2011.
+Allstate, (2013). “Teen Drivers Facts & Drivers Statistics - The Facts About Teen Driving”, (online web link), http://www.allstate.com/tools-and-resources/safe-driving-resources.aspx, Copyright 2013.
+Beanland, V., Goode, N, Salmon, P.M., and Lenné, M.G., (2013). “Is there a case for driver training? A review of the efficacy of pre- and post-license driver training”, Safety Science 51 (2013) 127–137.
+Carty, S.S., (2011). “Teen Driving: Think Driving Schools Make Safe Drivers? Think Again”, (web link), http://autos.aol.com/article/teen-driving-schools-safety/, AOL Autos, September 14, 2011.
+Centers for Disease Control and Prevention (CDC), (2012a). “Winnable Battles – Motor Vehicle Injuries”, (online web link), http://www.cdc.gov/WinnableBattles/MotorVehicleInjury/, Last Updated 2012.
+Centers for Disease Control and Prevention (CDC), (2012b). “Injury Prevention & Control: Motor Vehicle Safety, Teen Drivers: Fact Sheet”, (online web link), http://www.cdc.gov/motorvehiclesafety/teen_drivers/teendrivers_factsheet.html, Last Updated, 2012.
+Childre, A., Sands, J.R., and Pope, S.T., (2009). “Backward design”, Teaching Exceptional Children, 41(5), 6-14.
+Classen, S., Shechtman, O., Stephens, B., Davis, E., Bendixen, R., Belchior, P., Sandhu, M., Justiss, M.D., Posse, C., McCarthy, D., and Mann, W.C. (2005). “The Impact of Roadway Intersection Design on Driving Performance of Young and Senior Adults: Preliminary Results,” Topics in Geriatric Rehabilitation, 22(1), pp. 18-26.
+Copeland, L., (2013). “AAA: Hands-free texting and calling are not risk-free”, (web link), http://www.usatoday.com/story/news/nation/2013/06/12/aaa-hands-free-texting-calling-driving-safety/2411309/, USA Today, June 12, 2013.
+Dostál, J., (2009). “Educational software and computer games - tools of modern education”. Journal of Technology and Information Education. Palacký University, Olomouc, Volume 1, Issue 1, p. 24 - 28. ISSN 1803-537X
+MODSIM World 2014
+          2014 Paper No. 1484 Page 10 of 11
+
+DrivingMBA, (2014). "The DrivingMBA Technology Advantage", (web link), http://drivingmba.com/drivingmba- technology-advantage/, Copyright 2014.
+Institute for Traffic Safety Management and Research (ITSMR), (2012). “New York State Fact Sheet Crashes Involving Young Drivers Ages 16-20”, (online web link), http://www.itsmr.org/pdf/Young%20Drivers%2016- 20.pdf, January 2012.
+Jorgensen, C.M., (1995). “Essential questions - Inclusive answers”, Educational Leadership, 52(4), 52-55.
+Just Driver Training (JDT), (2011). “Teen & Adult Driving”, (web link), http://justdrivertraining.com/teen-adult-
+driving.shtml, Copyright 2011.
+Kaiser, T., (2012). “Automakers Keep Adding ‘ Distracting’ Technology to Vehicles”, (web link),
+http://www.dailytech.com/Automakers+Keep+Adding+Distracting+Technology+to+Vehicles+US+Gov+Not+Happ y/article24728.htm, DailyTech, May 21, 2012.
+Mayhew, D.R., Simpson, H.M., and Pak, A., (2003). “Changes in Collision Rates among Novice Drivers During the First Months of Driving”, Accident Analysis and Prevention, September 2003.
+McDonald, C.C., Lee, Y-C, Fisher, D.L., Mayhew, D.R., and Winston, F.K., (2013). “Using Crash Data to Develop Simulator Scenarios for Assessing Young Novice Driver Performance”, Research Record: Journal of the Transportation Research Board. 2012:73-78.
+McGehee, D.V., Lee, J.D., Rizzo, M., Dawson, J., and Bateman, K., (2004). “Quantitative Analysis of Steering Adaptation on a High Performance Fixed-base Driving Simulator”, Transportation Research Part F: Traffic Psychology and Behavior, 7(3), pp. 181-196.
+Mills, R.P., Swarts, D.J., Cashmere, D., Genovese, M., Gentile, P.S., Godshall, C., and Lerner, S., (2008). “Temporary Special Advisory Panel on Driver Education Availability and Curriculum Enhancement”, The New York State Education Department / The New York State Department of Motoro Vehicles, December 31, 2008.
+Moye, D., (2013). “Savannah Nash, 16, Dies During Her First Solo Drive; Believed To Be Texting”, The Huffington Post News, (web link), http://www.huffingtonpost.com/2013/05/17/savannah-nash-dies- texting_n_3294935.html?1368834530&ncid=webmail2, May 17, 2013.
+National Science Foundation (NSF), (2011). “Report Highlights the Extended Impact of Teen Driver Accidents”, National Science Foundation Current, (online web link), http://www.nsf.gov/news/newsletter/mar_11/index.jsp#work1, March, 2011.
+Reardon, M., (2010). “Study: Distractions, not phones, cause car crashes”, CNET News Article, (web link),
+http://news.cnet.com/8301-30686_3-10444717-266.html
+Reimer, B., Mehler, B.L., Pohlmeyer, A.E., Coughlin, J.F. and Dusek, J.A. (2006). “The Use of Heart Rate in a Driving Simulator as an Indicator of Age-Related Differences in Driver Workload,” Advances in Transportation Studies - an International Journal, pp. 9-20.
+Shumway, S., and Berrett, J., (2004). “Standards-based curriculum for pre-service and in-service: A partnering approach using modified backward design”, Technology Teacher, 26-29.
+Wiggins, G., (2005). “Understanding by Design: Overview of UbD & the Design Template”, (web link), http://www.grantwiggins.org/documents/UbDQuikvue1005.pdf, September, 2005.
+Wiggins, G., and McTighe, J., (2005). “Understanding by Design (Expanded Second Edition)”, Alexandria, VA: Association for Supervision and Curriculum Development.
+Williams, A.F. Preusser, D.F., and Ledingham, K.A., (2009). “Feasibility Study on Evaluating Driver Education Curriculum”, National Highway Traffic Safety Administration, DOT HS 811 108, Washington, D.C.
+Wilson, K.A., (2009). “Teen driving: can computers teach us to drive?”, Autoweek USA, (web link), http://www.autoweek.com/article/20090903/carnews/909039995, Car News, September 3, 2009.
+Zyda, M., (2005). “From Visual Simulation to Virtual Reality to Games”. IEEE Computer, Vol. 38, No. 9, pp. 25- 32, September, 2005.
+MODSIM World 2014
+              2014 Paper No. 1484 Page 11 of 11

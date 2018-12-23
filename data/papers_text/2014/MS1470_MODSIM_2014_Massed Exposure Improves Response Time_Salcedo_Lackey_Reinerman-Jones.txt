@@ -1,0 +1,232 @@
+Massed Exposure Improves Response Time for Detection of Nervous Human Behaviors in Robot-Aided ISR Missions
+Julie N. Salcedo, Stephanie J. Lackey, and Lauren Reinerman-Jones University of Central Florida, Institute for Simulation & Training Orlando, FL
+jsalcedo@ist.ucf.edu, slackey@ist.ucf.edu, lreinerm@ist.ucf.edu
+ABSTRACT
+Simulation-Based Training (SBT) provides safe settings for training tasks that otherwise are too challenging or risky in live training counterparts. SBT also affords the development of controlled environments for user acclimation with emerging technologies, such as Unmanned Ground Systems (UGS). The military emerging technologies literature demands an increase in robot-aided Intelligence, Surveillance, Reconnaissance (ISR) for the detection of High Value Individuals (HVI) and identifies SBT as a required medium for UGS operator training. Robot-aided ISR is a predominantly perceptual task. Prior experimentation suggests that Highlighting and Massed Exposure instructional strategies enhance perceptual skills training by reducing trainees’ response time for overall behavior cue analysis—a critical skill for HVI identification. The objective of this experiment was to assess the impact of these strategies on detection accuracy and speed for each cue type which indicate nervous or aggressive behavior. Results suggest that Massed Exposure improves response time for detecting nervous human behavior cues.
+ABOUT THE AUTHORS
+Ms. Julie Salcedo joined the Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab as a Graduate Research Assistant in 2009. She holds a Bachelor’s in Education, a Master’s in Modeling and Simulation, and a Certificate in Instructional Design for Simulations all from the University of Central Florida (UCF). She is currently pursuing a Ph.D. in Modeling and Simulation from UCF. A former public school teacher, Ms. Salcedo leverages her education and instruction background to investigate learning and instructional design in simulation-based training systems.
+Dr. Stephanie Lackey earned her Master’s and Ph.D. degrees in Industrial Engineering and Management Systems with a specialization in Simulation, Modeling, and Analysis at the University of Central Florida (UCF). Her research focused on prediction, allocation, and optimization techniques for digital and analog communications systems. Dr. Lackey conducted high-risk research and development aimed at rapid transition of virtual communications capabilities to the Field and Fleet as a computer engineer with the United States Naval Air Warfare Center Training Systems Division (NAWC TSD). She joined UCF Institute for Simulation and Training’s (IST) Applied Cognition and Training in Immersive Virtual Environments (ACTIVE) Lab in 2008, and assumed the role of Lab Director in 2010. Dr. Lackey leverages her experience in advanced predictive modeling to the field of human performance in order to develop methods for improving human performance in simulation-based training environments and human- robot interfaces. Dr. Lackey has a proven track record of delivering research and development products to the Warfighter training community through the skilled application of systems engineering principles, and her efforts have been recognized by the National Training and Simulation Association, the United States Navy, and internationally by the Joint Forces Simulation and Training community.
+Dr. Lauren Reinerman-Jones is an Assistant Research Professor at the University of Central Florida where she has extensive experience working with ARL, NRC, ONR, NAWCTSD, AFOSR, DoT, Florida Hospital, and the John Templeton Foundation. Her research centers on using physiological measures (EEG, ECG, TCD, fNIR, and eye tracking) for understanding, improving, and predicting human performance. She is Founder and CEO of DUJO, which applies cutting-edge science for skill assessment and improvement. Dr. Reinerman-Jones has published and presented internationally in the fields of Psychology, Engineering, Philosophy, and Business. She serves on the editorial board of Theoretical Issues in Ergonomics Science (TIES) and previously as the HFES Augmented Cognition Technical Group Chair and on the HFES Board of Executive Officers.
+2014 Paper No. MS1470 Page 1 of 10
+MODSIM World 2014
+
+Massed Exposure Improves Response Time for Detection of Subtle Human Behaviors in Robot-aided ISR Missions
+Julie N. Salcedo, Stephanie J. Lackey, and Lauren Reinerman-Jones University of Central Florida – Institute for Simulation & Training Orlando, FL
+jsalcedo@ist.ucf.edu, slackey@ist.ucf.edu, lreinerm@ist.ucf.edu
+INTRODUCTION
+Unmanned Ground Systems (UGS) are emerging as viable solutions to increase safety and security during Intelligence, Surveillance, Reconnaissance (ISR) operations (U.S. Army, 2008). ISR includes the gathering, analysis, and dissemination of critical intelligence data that contribute to a situational understanding of the present and anticipated state of the combat environment. Unmanned systems, primarily Unmanned Aircraft Systems (UAS), are operated remotely or semi-autonomously to establish persistent surveillance of a designated area of interest. Surveillance data are distributed to analysts in the form of video footage and images captured by mounted cameras and sensors. Analysts review and interpret the surveillance sources for critical intelligence data.
+One purpose of ISR missions is to identify High Value Individuals (HVI). HVIs are enemy targets whose presence influences the ability of adversaries to execute attacks or other malicious operations (U.S. Army, 2012). The U.S. Army has identified specific ISR capabilities that are critical to the identification of suspicious individuals. While most of the capabilities are related to the organization and dissemination of intelligence data, a few refer to the improvement of intelligence collection processes including: the capability to detect suspicious persons from a safe distance, to remotely discern behavioral indicators of intent, and to leverage cultural and behavioral cues to identify neutral and threatening individuals (U.S. Army, 2008). This research effort addresses training of analysts to conduct behavior cue analysis during robot-aided ISR tasks.
+Behavior Cue Analysis
+Behavior cue analysis is one strategy to help analysts identify HVIs and other potential threats. Behavior cue analysis is a perceptual task that involves detecting behavioral indicators and classifying them to distinguish an individual’s intent, affective state, or pretense. The training task for this experiment borrows behavior cue analysis concepts from Combat Profiling. Combat Profiling involves analyzing what is referred to as the human terrain, which includes human behavior, patterns of everyday life, and cultural influences (Ross, Bencaz, & Militello, 2010). There are six Combat Profiling domains used to observe and interpret events in the human terrain─atmospherics, biometrics, geographics, heuristics, kinesics, and proxemics (Gideons, Padilla, & Lethin, 2008). The experiment presented leverages the kinesics domain for the training task. Kinesics involves detecting and classifying movement and gestures of the body, hands, and arms (Ross, Bencaz, & Militello, 2010).
+Simulation-Based Training
+The U.S. Army identifies Simulation-Based Training (SBT) as a necessary feature for the military training cycle of robot-aided ISR tasks (U.S. Army, 2008). SBT offers a safe and cost-effective platform to transition from classroom-based training to live field exercises. Video surveillance sensors included with current and emerging UGSs may translate easily to SBT platforms with digital displays. Simulated surveillance data displayed on a desktop PC, laptop, or embedded trainer utilizing the system display can support training analysts to remotely execute ISR missions and identify HVIs.
+Simulation alone does not result in high performance. The lack of appropriate instructional support that aligns with the objectives and skills trained has shown to contribute to negative training (Oser, Gualtieri, Cannon-Bowers, & Salas, 1999). Therefore, this experiment applies instructional strategies for perceptual skills training to the SBT framework for behavior cue analysis training. Perceptual skills required for behavior cue analysis include attentional focus, visual acuity, and pattern recognition. The two instructional strategies applied in this experiment, Highlighting and Massed Exposure, were selected based on findings from military training literature. Highlighting is
+2014 Paper No. MS1470 Page 2 of 10
+MODSIM World 2014
+
+the use of a visual feature or verbal cue to orient the learner’s attention to focus on critical content (Carroll, Milham, & Champney, 2009). Massed Exposure is the presentation of a large number of training events in order to increase the learner’s awareness of critical content (Hirumi & Stapleton, 2009).
+Objective
+The objective of this experiment was to investigate the effect of the Highlighting and Massed Exposure instructional strategies on SBT behavior cue analysis performance. Specifically, this experiment assessed the effect of each instructional strategy on individual kinesic cues.
+METHOD
+Participants
+A total of 90 volunteers (46 female, 44 male), aged 18 to 38 years (M = 21.57, SD = 3.25), participated in this experiment. Participants were recruited from the University of Central Florida (UCF) and UCF affiliated organizations. Monetary compensation for participation was provided at a rate of ten dollars per hour of the experimental session. Eligibility for participation included: U.S. citizenship, aged 18 to 40 years, normal or corrected to normal vision, and full color vision as determined by the Ishihara’s Tests for Colour Deficiency (2013).
+Conditions
+Participants were randomly assigned to one of three instructional strategy conditions including Control, Highlighting, or Massed Exposure. The ratio of targets to non-targets was varied between conditions. In the Control and Highlighting conditions, the target to non-target ratio was 1:3. Prior research involving threat detection tasks have applied a 1:3 target to non-target ratio (Mogg & Bradley, 1999). In the Massed Exposure condition, the number of targets was doubled for a target to non-target ratio of 2:3. Increasing the target to non-target ratio increases threat saliency, which may also increase visual acuity during threat detection (Mogg & Bradley, 2002).
+The Highlighting condition included an additional element intended to orient participants’ attention to the presence of targets. Targets were highlighted by a translucent blue box (Figure 1). Layering a non-content related feature, such as a circle, arrow, or spotlight, into a SBT environment has shown to improve search and scan skills (Chapman, Underwood, & Roberts, 2002; de Koning, Tabbers, Rikers, & Paas, 2007; de Koning, Tabbers, Rikers, & Paas, 2010; Underwood, 2007).
+Figure 1: Example of the translucent blue box in the Highlighting condition.
+The event rate remained constant across all three conditions at a rate of 30 events per minute. In prior threat detection research, 30 events per minute was shown to evoke a moderate level of user workload (Abich, Taylor, & Reinerman-Jones, 2013).
+MODSIM World 2014
+ 2014 Paper No. MS1470 Page 3 of 10
+
+Experimental Testbed
+A desktop PC with a 22 inch, 16:10 aspect ratio widescreen computer monitor displayed the training scenarios. Scenarios were created using the Virtual Battlespace 2 (VBS2) version 2.0 software, which is presently the leading virtual environment development platform for the U.S. Army (Ortiz, Maraj, Salcedo, Lackey, & Hudson, 2013). Scenarios were customized utilizing the existing VBS2 2.0 catalog of 3D virtual character, object, and terrain assets.
+Scenarios were designed to simulate a surveillance video-feed from an autonomous UGS. The height of the virtual UGS was set at one meter and the traveling speed was set at 1.5 meters per second. These criteria are consistent with current and emerging capabilities for surveillance robots (Mykoniatis, Angelopoulou, Soyler, Kincaid, & Hancock, 2012). The scenario environments were populated with a selection of 16 distinct virtual characters, male and female, with skin tones ranging from light to dark. Target characters were custom animated with the Autodesk® MotionBuilder® software to portray one of four target cue types representing either Aggressiveness or Nervousness (Figure 2). Non-target characters were assigned non-target cues selected from the existing VBS2 2.0 animations catalog (Lackey & Salcedo, 2014). Virtual characters and cue animations were randomized and counterbalanced.
+Figure 2: Target cue types.
+MODSIM World 2014
+  2014 Paper No. MS1470 Page 4 of 10
+
+A total of four training scenarios representing four different terrains were developed. Terrains included: Middle Eastern Urban, Middle Eastern Marketplace, Culturally Agnostic Urban, and Culturally Agnostic Suburban (Figure 3). Herein, culturally agnostic refers to terrain and scenario features that may be generalized across most cultural groups and settings (Lackey & Salcedo, 2014).
+Figure 3: Training scenario terrain settings.
+Experimental Task
+The task during training scenarios required participants to detect target cue types and classify each target according to the associated affective state. The detection and classification process was completed by first selecting one of the classification buttons labeled “Aggressiveness” or “Nervousness” and then clicking on the desired target.
+Metrics
+Demographics information collected included: age, sex, education, military experience, and computer and video game proficiency. Performance metrics collected during each scenario for overall performance and performance per cue type are described in the following table (Table 1).
+Table 1: Performance metrics descriptions and units for reporting data.
+MODSIM World 2014
+      Performance Metric
+    Description
+      Unit
+     Detection Accuracy
+Number of targets detected divided by total number of targets.
+  Percent
+     Classification Accuracy
+ Number of correctly classified targets divided by total number of targets.
+     Percent
+     Adjusted Classification Accuracy
+    Number of correctly classified targets divided by number of targets detected.
+      Percent
+     Median Response Time
+   Difference between the time the target animation appeared and the time target was detected.
+   Milliseconds
+     Average Distance to Target
+   Average virtual distance between the camera viewpoint and targets when correctly detected.
+   Meters
+   2014 Paper No. MS1470 Page 5 of 10
+
+Procedure
+The sequence of the experimental session consisted of pre-experiment, task familiarization, pre-test, training, and post-test phases.
+Pre-Experiment
+Initially, participants were asked if they had used any alcohol, sedatives, anti-psychotics, or anti-depressants within 24 hours or caffeine within two hours prior to the experimental session. Participant responses to these initial questions did not determine exclusion from the study, but were recorded to compare individual differences during data analysis. Participants’ color vision was assessed using the Ishihara’s Tests for Colour Deficiency (2013). Participants who did not meet color vision criteria were dismissed. Participants reviewed informed consent documentation and completed the demographics questionnaire.
+Task Familiarization
+Participants viewed an instructional slideshow to familiarize them with the experimental task procedure. Following the slideshow, participants completed a familiarization scenario which provided the opportunity to practice the detection and classification procedure. The familiarization scenario required participants to detect red and yellow barrels and classify each by color (Figure 4). Non-human targets were used in order to avoid priming participants for the experimental stimuli.
+Figure 4: Barrels in the task familiarization scenario.
+Pre-Test
+Participants were informed to detect and classify virtual characters in the pre-test scenario who appeared to exhibit aggressive or nervous behavior. Participants were advised to detect and classify targets based on their personal experiences. The pre-test scenario consisted of a culturally agnostic terrain combining urban and suburban settings and included 60 virtual characters exhibiting target cue types (30 aggressive, 30 nervous) and 120 exhibiting non- target cue types.
+Training
+Training began with a narrated slideshow about behavior cue analysis. The slideshow provided descriptions, photo examples, and appropriate classifications of the four target cue types. Participants in the Highlighting and Massed Exposure conditions were also informed about the instructional strategy that would be implemented during the training scenarios to guide their practice. Participants completed four randomly ordered training scenarios, one from each selected terrain: Middle Eastern Urban, Middle Eastern Marketplace, Culturally Agnostic Urban, and Culturally Agnostic Suburban. Each training scenario presented 60 animated virtual characters with a target to non- target ratio associated with the assigned condition.
+MODSIM World 2014
+ 2014 Paper No. MS1470 Page 6 of 10
+
+Post-Test
+Participants were informed to detect and classify virtual characters in the post-test scenario who appeared to exhibit aggressive or nervous behavior. Participants were advised to detect and classify targets based on the training they previously received. The post-test scenario was similar to the pre-test scenario consisting of a culturally agnostic terrain with both urban and suburban settings and 180 virtual characters (30 aggressive targets, 30 nervous targets, and 120 non-targets).
+RESULTS
+Overall Training Scenario Performance
+One-way between subjects ANOVAs were conducted to compare overall performance scores in the Control, Highlighting, and Massed Exposure conditions across all four training scenarios. There was a significant difference in Median Response Time for the three conditions [F (2, 87) = 7.77, p = .001]. Post hoc comparisons using the Tukey HSD test indicate that the mean score for Median Response time in the Control condition (M = 3625.88, SD = 374.16) was significantly greater than the Highlighting condition (M = 3300.33, SD = 382.23); p = .002, 95% CI [106.08, 545.01] and the Massed Exposure condition (M = 3324.60, SD = 308.41); p = .004, 95% CI [81.81, 520.74].
+There was also a significant difference in the Average Distance to Target for the three conditions [F (2, 87) = 12.93, p < .001] with post hoc comparisons revealing that the mean score in the Control condition (M = 6.39, SD = .674) was significantly less than the Highlighting condition (M = 7.03, SD = .496); p < .001, 95% CI [-.983, -.308] and the Massed Exposure condition (M = 6.99, SD = .446); p < .001, 95% CI [-.935, -.261]. However, the means for Median Response Time and Average Distance to Target in the Highlighting condition did not significantly differ from the mean in the Massed Exposure condition. These trends were consistent in three of the four training scenarios (Lackey & Salcedo, 2014). The exception was the Middle Eastern Urban scenario which had greater Median Response Time and lower Average Distance to Target means in the Highlighting condition compared to the Massed Exposure condition (Lackey & Salcedo, 2014).
+Training Scenario Performance per Target Cue Type
+One-way between subjects ANOVAs were conducted to compare Median Response Time and Average Distance to Target per target cue type in the Control, Highlighting, and Massed Exposure conditions across all training scenarios. There was a significant difference in Median Response Time between the three conditions for the Slapping the Hands [F (2, 87) = 9.10, p < .001], Clenched Fists [F (2, 87) = 4.25, p = .017], Wringing the Hands [F (2, 87) = 12.20, p < .001], and Check Six [F (2, 87) = 5.52, p = .006] cue types. Tukey HSD post hoc comparisons indicate that the mean Median Response Time scores for each target cue type in the Control condition were significantly greater than the means in the Highlighting and Massed Exposure conditions (Table 2).
+Table 2: Median Response Times across training scenarios per target cue type reported in milliseconds.
+MODSIM World 2014
+          Instructional Strategy Condition
+  Target Cue Type
+    Control
+      Highlighting
+   Massed Exposure
+     Mean
+  SD
+    Mean
+  SD
+      Mean
+    SD
+    Slapping the Hands
+    3255.36
+311.73
+    2932.98
+258.59
+    3035.31
+  322.89
+   Clenched Fists
+     3612.07
+  487.26
+    3334.71
+  457.26
+     3322.26
+    348.99
+   Wringing the Hands
+    4081.90
+432.52
+    3715.70
+423.39
+    3598.46
+  320.84
+   Check Six
+     3649.68
+ 458.25
+   3308.14
+ 481.61
+     3356.95
+   337.82
+ Likewise, there was a significant difference in Average Distance to Target between the three conditions for the Slapping the Hands [F (2, 87) = 13.25, p < .001], Clenched Fists [F (2, 87) = 7.99, p = .001], Wringing the Hands [F (2, 87) = 13.03, p < .001], and Check Six [F (2, 87) = 6.75, p = .002] cues. Post hoc comparisons also indicate that the Average Distance to Target scores for each target cue in the Control condition were significantly less than the means in the Highlighting and Massed Exposure conditions (Table 3). The Median Response Time and the Average
+2014 Paper No. MS1470 Page 7 of 10
+
+Distance to Target per target cue type did not differ significantly between the Highlighting and Massed Exposure conditions in the training scenarios.
+Table 3: Average Distance to Target across training scenarios per target cue type reported in meters.
+MODSIM World 2014
+        Instructional Strategy Condition
+  Target Cue Type
+    Control
+      Highlighting
+   Massed Exposure
+     Mean
+  SD
+    Mean
+  SD
+      Mean
+    SD
+    Slapping the Hands
+    7.02
+.691
+    7.69
+.400
+    7.57
+  .483
+   Clenched Fists
+    6.32
+ .848
+   6.87
+ .688
+    7.01
+   .566
+   Wringing the Hands
+     6.11
+  .771
+    6.77
+  .584
+     6.87
+    .487
+   Check Six
+      6.66
+  .780
+     7.25
+  .669
+     7.11
+    .486
+  Post-Test Performance per Target Cue Type
+Initial analyses of the post-test results revealed that the overall Average Distance to Target mean for the Massed Exposure condition was significantly greater than both the Control and Highlighting conditions (Lackey & Salcedo, 2014). Additional one-way between subjects ANOVAs were conducted to compare the effect of instructional strategy on post-test performance per target cue type in the Control, Highlighting, and Massed Exposure conditions. There was a significant effect of instructional strategy on Median Response Time for the Wringing the Hands cue for the three conditions [F (2, 87) = 3.73, p = .028]. Post hoc comparisons using the Tukey HSD test indicated that the mean score for the Massed Exposure condition (M = 3546.25, SD = 378.17) was significantly less than the Control condition (M = 3779.87, SD =529.57); p = .021, 95% CI [-606.76, -40.47].
+There was also a significant effect of instructional strategy for the three conditions on the Average Distance to Target of the Check Six [F (2, 87) = 3.15, p = .048] and Wringing the Hands [F (2, 87) = 3.62, p = .031] cues, both from the nervousness classification. Post hoc comparisons revealed that the Average Distance to Target for the Check Six cue in the Massed Exposure condition (M = 7.02, SD = .530) was significantly greater than the mean in the Control condition (M = 6.55, SD = .806); p = .037, 95% CI [.022, .902]. Additionally, the Average Distance to Target for the Wringing the Hands cue in the Massed Exposure condition (M = 6.90, SD = .588) was significantly greater than the mean in the Control condition (M = 6.42, SD = .799); p = .023, 95% CI [.055, .903]. The Highlighting condition did not significantly differ from the Control and Massed Exposure conditions for either the Median Response Time or the Average Distance to Target per target cue in the post-test scenario.
+LIMITATIONS
+Due to unavailability of an existing fielded UGS for reference, the current literature regarding UGS research and development was utilized to determine appropriate virtual UGS interface parameters for the experimental testbed, including speed, camera height, and field of view. However, there is no evidence that this limitation had a significant bearing on the results. Therefore, it is assumed that these results may be generalized to future UGSs and UGS training technologies for similar tasks.
+The virtual UGS routes were developed by plotting waypoints along the existing roadways in each of the four VBS2 2.0 terrain settings. This method significantly reduced development time, however, it presented some difficultly in properly balancing and distributing the virtual characters, animation triggers, and left and right turns along the routes. Follow on experimentation has addressed this limitation by creating customized software scripts to generate routes tailored to the specific needs of the experimental testbed design. This will allow for greater experimental control during data collection.
+The training content of this experiment incorporated only four target cue types, representing two affective state classifications. This represents a small sample of the many variations in human behavior. Expanding the scope of cues in follow on experimentation may reveal some significant differences between other cue types and affective states that will inform the design of better human behavior analysis training.
+2014 Paper No. MS1470 Page 8 of 10
+
+DISCUSSION
+During the training scenarios, it appears the Highlighting strategy aided earlier detection of targets exhibiting the Slapping the Hands or Check Six cue types, while the Massed Exposure strategy did the same for targets exhibiting the Clenched Fists or Wringing the Hands cue types. It would seem that the results present a toss-up between which instructional strategy is more suitable for behavior cue analysis training. However, this split may be influenced by the saliency of each cue type. In other words, how obvious or subtle the animated cues appeared within the virtual environment may have impacted the effect of each instructional strategy on response time and distance to target during training scenarios. Through anecdotal observation of the virtual environment, Slapping the Hands and Check Six appear to be the more obvious cues to identify, while the Wringing the Hands cue is slightly less conspicuous and Clenched Fists is the most subtle cue of them all. Likewise, each instructional strategy may be classified as providing more subtle or more obvious support during training. The non-content highlighting feature of the Highlighting strategy made the instructional support more salient. Therefore, the coupling of the highlighting feature with the more obvious cues (i.e., Slapping the Hands and Check Six) may have contributed to faster and earlier detection of cues that were already obvious to the participants. Additionally, although the Massed Exposure strategy is intended to increase visual acuity for stimuli (Mogg & Bradley, 2002), it was the more subtle form of instructional support in this experiment. It is possible that in the Massed Exposure condition performance for the more obvious cues was not significantly impacted. However, the increased number of targets, and, thus, the increased number of targets exhibiting more subtle cues (i.e., Clenched Fists and Wringing of the Hands), may have contributed to the improved detection speeds. Perhaps a combination of strategies is appropriate for training tasks involving both subtle and obvious target stimuli. A particularly interesting application of these findings may be an adaptive training system that automatically adjusts the selected strategy type depending on target saliency, trainee skill level, and desired performance outcomes.
+Participants’ prior knowledge of human behavior may have affected the post-test scenario results. The lack of significant differences between conditions in the performance for cues in the Aggressiveness classification (i.e., Slapping the Hands and Clenched Fists) may indicate that participants were already familiar with these cues from personal experience. A similar level of familiarity with these cues across the sample population may have reduced the impact of the instructional strategies on performance differences in the Aggressiveness classification.
+The post-test scenario results also revealed that participants in the Massed Exposure condition detected cues in the Nervousness classification (i.e., Wringing of the Hands and Check Six) faster and earlier than both the Control and Highlighting conditions. Ultimately, the post-yest serves as a form of performance evaluation of the skills acquired during the training scenarios. Instructional support was not provided during the post-test scenario requiring participants to execute the task without assistance. Therefore, the post-test findings suggest that the application of a Massed Exposure instructional strategy in SBT for human behavior analysis may improve the detection speed of nervous individuals in a robot-aided ISR mission.
+CONCLUSION
+This research initiative sought to determine if Highlighting and Massed Exposure are viable instructional strategies for SBT of human behavior analysis in robot-aided ISR. This experiment compared the effects of the Highlighting and Massed Exposure instructional strategies on the performance of individual kinesic cue types. Clearly, it appears that either strategy may be suitable for simulation-based human behavior analysis training. Although statistically it seems Massed Exposure emerged as the more effective strategy, particularly for nervous cues, from a practical perspective each strategy may have qualities or strengths that align well with specific SBT factors. Ultimately, additional research is needed to further delineate the points of impact of each strategy and their interaction with other factors contributing to SBT effectiveness. The effects of different levels and combinations of each instructional strategy in various SBT tasks should be compared. Future research should investigate whether target saliency is a significant factor in selecting an appropriate instructional strategy for SBT or even adaptive training systems. Measuring prior knowledge and assessing its impact on the effectiveness of an instructional strategy may contribute to a better understanding of performance results. Additionally, future experiments should expand the scope of the human behavior cues included for analysis. Fulfilling these research recommendations with empirical assessments will contribute to a more complete insight and understanding into the effective design of SBT for human behavior cue analysis in robot-aided ISR missions.
+2014 Paper No. MS1470 Page 9 of 10
+MODSIM World 2014
+
+ACKNOWLEDGEMENT
+This research was sponsored by the U.S. Army Research Laboratory – Human Research Engineering Directorate Simulation and Training Technology Center (ARL HRED STTC), in collaboration with the Institute for Simulation and Training at the University of Central Florida. This work is supported in part by ARL HRED STTC contract W91CRB08D0015. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of ARL HRED STTC or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation hereon.
+REFERENCES
+Abich, J., Taylor, G., & Reinerman-Jones, L. (2013). Establishing workload manipulations utilizing a simulated environment. In R. Shumaker, VAMR/HCII 2013, Part II, LNCS 8022 (pp. 211-220). Heidelberg: Springer.
+Carroll, M., Milham, L., & Champney, R. (2009). Military observations: Perceptual skills training strategies. Proceedings of the Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC) (p. No. 9287). Arlington, VA: NTSA.
+Chapman, P., Underwood, G., & Roberts, K. (2002). Visual search patterns in trained and untrained novice drivers. Transportation Research Part F: Psychology and Behaviour, 5, 157-167.
+de Koning, B. B., Tabbers, H. K., Rikers, R. M., & Paas, F. (2007). Attention cueing as a means to enhance learning from an animation. Applied Cognitive Psychology, 21, 731-746.
+de Koning, B. B., Tabbers, H. K., Rikers, R. M., & Paas, F. (2010). Attention guidance in learning from a complex animation: Seeing is understanding? Learning and Instruction, 20(2), 111-122.
+Gideons, C., Padilla, F., & Lethin, C. (2008, September). Combat Hunter: The training continues. Marine, pp. 79- 84.
+Hirumi, A., & Stapleton, C. (2009). Applying pedagogy during game development to enhance game-based learning. In C. Miller, Games: Purpose and Potential in Education (pp. 127-162). New York, NY: Springer.
+Ishihara, S. (2013). Ishihara's Tests for Colour Deficiency. Tokyo, Japan: Kanehara Trading.
+Lackey, S. J., & Salcedo, J. N. (2014). Assessing instructional strategies for training robot-aided ISR tasks in
+simulated environments. To appear in the Proceedings of the Spring Simulation Multiconference. Tampa, FL. Mogg, K., & Bradley, B. (1999). Orienting of attention to threatening facial expressions presented under conditions
+of restricted awareness. Cognition & Emotion, 13(6), 713-740.
+Mogg, K., & Bradley, B. (2002). Selective orienting of attention to masked threat faces in social anxiety. Behavior
+Research and Therapy, 40(12), 1403-1414.
+Mykoniatis, K., Angelopoulou, A., Soyler, A., Kincaid, P., & Hancock, P. (2012). Modeling and simulation of
+Human robot interaction: Face recognition implementations. IEEE Intelligent Systems.
+Ortiz, E., Maraj, C., Salcedo, J., Lackey, S., & Hudson, I. (2013). Assessing engagement in simulation-based training systems for virtual kinseic cue detection training. In R. Shumaker, VAMR/HCII 2013, Part 1, LNCS 8021
+(pp. 211-220). Heidelberg: Springer.
+Oser, R. L., Gualtieri, J. W., Cannon-Bowers, J. A., & Salas, E. (1999). Training team problem solving skills: An
+event-based approach. Computers in Human Behavior, 15, 441-462.
+Ross, W., Bencaz, N., & Militello, L. (2010). Technical report: Specification and development of an expert model
+for "Combat Hunters". Joint Research Laboratory Irregular Warfare Training U.S. Joint Forces Command.
+U.S. Army. (2008). TRADOC Pamphlet 525-7-9: The United States Army's Concept Capability Plan (CCP)
+Intelligence, Surveillance, Reconnaissance 2015-2024. Washington, DC: Department of the Army.
+U.S. Army. (2012). ADRP 2-0: Intelligence. Washington, DC: Department of the Army.
+Underwood, G. (2007). Visual attention and the transition from novice to advanced driver. Ergonomics, 50(8), 1235-
+1249.
+2014 Paper No. MS1470 Page 10 of 10
+MODSIM World 2014

@@ -1,0 +1,120 @@
+Next Generation Venipuncture and Phlebotomy High Fidelity Training System
+Teresita M. Sotomayor, Ph.D. ARL-HRED ATSD Orlando, Florida teresita.m.sotomayor.civ@mail.mil
+Angela M. Alban SIMETRI Winter Park, Florida angela@simetri.us
+
+Juan R. Vela SIMETRI Winter Park, Florida juanvela@simetri.us
+ABSTRACT
+The Programs of Instruction (POIs) at the U.S. Army Medical Simulation Training Centers (MSTCs) rely on rugged and reliable training aides to include Part Task Trainers (PTTs) to provide effective emergency medicine training of lifesaving procedures and critical skills. In order to create an immersive training experience, training models must be anatomically correct and provide accurate physiological responses. However, in regards to venipuncture and phlebotomy training models, available technologies are often inadequate due to a lack of anatomical and physiological accuracy. A recent evaluation of currently available technology concluded that there has been little innovation or improvement in vascular access training models; many follow the same design and utilize similar materials. Most PTTs simulate vasculature utilizing a single latex tube, the majority of the simulated skins are opaque in color, and they have limited elasticity. These shortcomings prevent the learner from developing the skill of using his or her visual senses to observe the vessels below a translucent skin surface, as can be done on human patients. The limited elasticity of the materials is a challenge when trying to replace or remove the skin from the inner IV arm cores. This paper will discuss the work completed to develop a high fidelity prototype venipuncture and phlebotomy PTT while focusing on advancing the material science to provide more realistic tissue. An update will be provided to the usability study that includes additional participants across the continuum of care.
+ABOUT THE AUTHOR
+Dr. Teresita Sotomayor is a chief engineer and subject matter expert in the area of severe trauma simulation at the U.S. Army Research Laboratory (ARL), Human Research and Engineering Directorate (HRED), Advanced Training and Simulation Division (ATSD). Her expertise in user-centric design and technology effectiveness evaluations has been instrumental in the development and transition of modeling and simulation solutions in support of medical training. She is a graduate of the University of Puerto Rico (Mayaguez Campus) with a degree in Industrial Engineering. She holds a Master of Science degree in Operations Research Stochastic Simulation from The George Washington University and a Doctorate in Modeling and Simulation from the University of Central Florida. She is a member of the Army Acquisition Corps since 2003 and has over 26 years of experience in the modeling, simulation, and training domain.
+Ms. Angela M. Alban is President and CEO of SIMETRI, Inc., based in Winter Park, Florida. She has extensive experience in a wide range of disciplines (research, development, production, business development, and management), enabling her to oversee all SIMETRI initiatives, including medical training and treatment by merging medical science with modeling and simulation technology. Ms. Alban has a degree in Mathematics and Computer Science from Emory University and a Master of Science in Computer Engineering from the University of Central Florida. She completed the Defense Systems Management College Advanced Program Manager's Course to parallel 19 years of experience in the Simulation and Training Industry.
+Mr. Juan R. Vela is a Systems Engineer with 27 years of experience in the simulation and training industry. He has served as Technical Lead and Chief Engineer for complex simulation and training programs over the past 20 years and has extensive experience in the full life cycle development and production of simulation systems and products. Mr. Vela earned a Bachelor of Science degree in Computer Science from the Troy University. He is currently Chief Engineer with SIMETRI, Inc. based in Winter Park, Florida, and oversees the research and development of medical training technologies.
+2016 Paper No. 18 Page 1 of 9
+MODSIM World 2016
+
+Next Generation Venipuncture and Phlebotomy High Fidelity Training System
+Teresita M. Sotomayor, Ph.D. ARL-HRED ATSD Orlando, Florida teresita.m.sotomayor.civ@mail.mil
+INTRODUCTION
+Angela M. Alban SIMETRI Winter Park, Florida angela@simetri.us
+Juan R. Vela SIMETRI Winter Park, Florida juanvela@simetri.us
+The U.S. Army continues to invest in manikin and Part Task Trainer (PTT) technology for effective emergency medicine training in diverse environments. The training equipment needs to be rugged and reliable to endure brutal conditions but refined enough to provide training solutions of the highest fidelity. A durable manikin or PTT can provide accurate training in venipuncture and injection procedures but has not been available to date. The goal of the U.S. Army Medical Simulation Training Centers (MSTCs) is to develop technology, tools, and techniques for providing medical personnel with more effective training. As a result, the U.S. Army Research Laboratory - Human Research and Engineering Directorate (ARL-HRED) Advanced Training and Simulation Division (ATSD) was sponsored by the U.S. Army Program Executive Office (PEO) Simulation Training and Instrumentation (STRI) to develop a next-generation venipuncture and phlebotomy PTT arm that is more realistic, durable, and cost effective at teaching these lifesaving skills, through a Broad Agency Announcement (BAA). It also features complete intravenous (IV) access and phlebotomy, as well as sites for intramuscular and intradermal injections. The project’s primary objective is to develop and produce a simple proof-of-concept device that demonstrates the viability of the materials, the electrical/mechanical design and the technical approach. The research will advance the state of the art for simulated skin and veins being used to train these skills and incorporate sensors to facilitate a responsive PTT, thereby enhancing realism while minimizing cost. This paper will focus on the work completed to develop the PTT, to include the material science research, and the future plans for the effort.
+BACKGROUND
+During the BAA Phase I, the team developed a static, single arm model to assess the feasibility of developing a low- cost PTT to support IV and phlebotomy training, depicted in Figure 1. The resulting PTT allowed trainees to perform the entire procedure as dictated by doctrine. The Phase I PTT that was delivered allowed trainees to palpate the arm to identify and locate a vein, insert the needle catheter, observe a flash of blood, infuse fluids and medications, and draw blood. Phase I focused on developing a PTT that was durable, realistic, and reusable.
+Figure 1. IV and Phlebotomy PTT Prototype
+MODSIM World 2016
+   2016 Paper No. 18 Page 2 of 9
+
+The BAA Phase II PTT will consist of an arm attached to a shoulder with some pectoral anatomy. The PTT will have partial articulation to simulate human arm range of motion such that it can be positioned to practice all the necessary tasks involved in performing the IV and phlebotomy procedures. The following overarching findings are being addressed as a part of the BAA Phase II effort:
+• Update system requirements to reflect improvements of the Phase I prototype PTT for practical use in the field.
+• Incorporate recommendations, findings, and new requirements elicited from military and civilian end users and Subject Matter Experts (SMEs) during Phase I.
+• Design and develop prototype arm by integrating skin, veins, and fluids
+• Integrate and utilize sensors and actuators to support automated capabilities
+• Conduct usability studies
+• Simplify end-user operation, maintenance, and logistic support
+TECHNICAL APPROACH
+During Phase II of the BAA, the team will continue to collaborate with SMEs and users to refine system requirements and address the findings and lessons learned from the Phase I effort. The IV and phlebotomy procedures consist of a series of tasks that begin with positioning the arm to facilitate finding the injection sites as depicted in Figure 2 which was adapted from the illustration in Elaine N. Marieb and Katja Hoehn Human Anatomy & Physiology, (Marieb 2010, fig. 19.28).
+Figure 2. IV and Phlebotomy Vein Sites
+It is not expected that a full torso and two rotating and articulating arms will be required to provide an immersive training experience, but this is still under evaluation. The PTT should allow for incorrect positioning of the arm such that the veins are not visible or accessible as it would be when the arm is properly positioned.
+A user-centric, systems engineering approach to technology development, depicted in Figure 3, relies on continuous collaboration with stakeholders to facilitate transitioning technology to the hands of the Soldiers. The team works closely with military and civilian SMEs to identify training gaps in healthcare and refine requirements for non- existing capabilities.
+MODSIM World 2016
+ 2016 Paper No. 18 Page 3 of 9
+
+MODSIM World 2016
+  Figure 3. Systems Engineering Process (Salva, et al., 2014)
+Research and development of the PTT system was conducted in three distinct phases: Requirements Analysis, Technology Development, and Prototype Development. An important component of the research and development effort involved conducting site surveys and holding discussions with SMEs as well as instructors at various U.S. Army medical training facilities and municipal first responder groups. The discussions and observations of current training helped to outline the desired capabilities and maintenance/logistics concerns to be incorporated in the design.
+Prior to finalizing requirements, it was important to conduct a task analysis and develop a thorough understanding of the relevant anatomical structures and physiology to design a prototype consisting of simulated tissue with appropriate structures and characteristics. Observations of current training at the MSTCs helped to outline the desired capabilities and maintenance/logistics concerns for the personnel at the sites. After combining the findings of both the anatomy and physiology with the training aims and constraints, a comprehensive list of system requirements was developed which focused on a rugged and cost effective solution.
+A Combat Lifesaver’s (CLS) most critical and basic first-aid tasks are to control hypovolemic (low blood volume) shock by controlling hemorrhage and initiating an IV infusion. When the casualty has been assessed and needs IV access, the steps required to accomplish this task are as follows:
+• Put on gloves
+• Gather and check IV supplies
+• Select and prepare IV site
+• Initiate IV
+• Secure the IV
+• Remove the catheter
+The prototype developed was based on the system requirements and the design evolved as research and analysis indicated which materials best suited the application. The prototype incorporated the need for immersive training and low life cycle costs, resulting in a simulated arm from the shoulder to the fingertips with a single rectangular plug where the simulated veins and skin were contained. Although the plug is a consumable component, the materials selected were chosen for their durability and ability to sustain multiple punctures while containing the simulated fluids as much as possible.
+2016 Paper No. 18 Page 4 of 9
+
+The realistic skin patch facilitates the insertion of the needle catheters without requiring immediate replacement. During the course of the usability testing, the number of needle punctures was recorded to collect life cycle cost data for the PTT. The same simulated skin overlay and tubing simulating veins were used a total of 144 times with different gauge needle catheters ranging from 16 gauge to 24 gauge. This sampling of needle punctures far exceeded the requirement and limit the life cycle costs of the PTT. The skin patch and tubing used for the testing not only sustained 144 punctures, but also still retained the original shape and appearance as depicted in Figure 4.
+Figure 4. Resistance to Deterioration after Repeated Usage
+After gathering this data during usability testing, more laboratory testing was conducted that focused on the durability of the simulated skin and veins to observe the resistance of the silicone against the repetition of needle punctures, as depicted in Figure 5.
+Figure 5. Simulated Skin and Vein Needle Puncture Resistance Test
+MODSIM World 2016
+    2016 Paper No. 18 Page 5 of 9
+
+Several observations were made during this experiment. Although the puncture holes may have not been easily apparent to the eye when lying flat, there was a considerable difference from an unused skin overlay compared to one that had been punctured with needle catheters. With the vein module inserted in the simulated arm, the team targeted three general zones based on the location of the simulated veins beneath the simulated skin overlays. These areas represent the areas where most needle injections would occur on the trainer.
+The most notable observation was that the puncture markings were not easily visible without looking very closely or knowing where to look on the target areas. When the skin was lifted and stretched, it is fairly easy to tell where the punctures were made. Another notable observation was the variation due to using different needle gauges. The larger the needle’s physical size (smaller gauge), the less the skin and vein lasted. However, with the smaller needle physical size (larger gauge), the easier the puncture and the more the skin and vein could be used. In summary, the simulated skin overlays and vein tubing are very durable products that can withstand repeat punctures, liquids, and tearing for at least 250 needle injections, with greater durability observed with the use of physically smaller needle sizes.
+USER EVALUATIONS
+A usability study was conducted with first responders to gather feedback and assess whether the initial prototype met training requirements identified by SMEs. Initial evaluations were conducted at the Orange County Fire Department and at the City of Orlando Fire Department on a noninterference basis coupled with pre-hospital and emergency care training. Participants included EMTs, Paramedics, Instructors, Student Nurses, and Nurses. The purpose of the evaluation was to assess the usability of the system in supporting training objectives established by the program of instruction. The study consisted of three major activities:
+• Demonstrate system capabilities to potential users (trainees and trainers).
+• Observe trainees and trainers interacting with the system while executing different tasks.
+• Capture feedback on participants’ reactions through surveys and structured focus group interviews after
+interacting with the system.
+The surveys collected detailed user feedback. The focus group discussions provided additional feedback. The current design of the PTT will be updated taking into consideration the feedback received during the evaluations and a final study will be conducted during Phase II of the BAA at one of the MSTCs.
+Initial usability studies were performed in May 2015 at the Orange County Fire Department, the City of Orlando Fire Department, Orlando Medical Institute, University of Central Florida (UCF) College of Nursing, and Florida Hospital on a noninterference basis. The focus of the evaluation was to evaluate the usability of the system to support training objectives and to assess if the system is intuitive, effective, and subjectively acceptable to users (Nielsen, 1993). The usability study consisted of two major activities:
+1. Observe trainees and trainers interacting with the system - SMEs were briefed on the capabilities of the Next Generation Venipuncture and Phlebotomy initial prototype. Following the demonstration, the SMEs were asked to insert an IV catheter and in some cases, draw blood using the PTT. The SMEs were observed during their execution of the different tasks.
+2. Capture feedback on their reactions through surveys and participation in a structured focus group interview - Once they had completed the procedures, the SMEs were asked to complete a questionnaire to assess system usability and reaction to the training system. A focus group was conducted to assess if the training system supports the training objectives of the program of instruction. The data collected provided user feedback in terms of: Benefit to Training, System Usability (ease of use), Anatomical Accuracy, Physiological Accuracy, Realism, and Motivation to use.
+The primary purpose of the usability evaluation was to observe users performing the procedure on the PTT and gather data regarding system functionality. Participants had the opportunity to interact with the system and provided concrete feedback regarding their experience using a survey questionnaire with 21 usability questions. Participants were asked to evaluate their experience with the Next Generation Venipuncture and Phlebotomy PTT by selecting options on a scale from 0 (strongly disagree) to 8 (strongly agree), with higher scores signifying a better experience.
+2016 Paper No. 18 Page 6 of 9
+MODSIM World 2016
+
+A summary of the calculated mean responses obtained from the students and instructors on the initial prototype is provided in Table 1. The questionnaires developed as part of this effort included questions regarding five different constructs: Meets Training Objectives, Usability, Realism, Physiological/Anatomical Accuracy, and Motivation to Use. These constructs were selected because the system must be able to meet the training objectives identified by SMEs. Anatomical and physiological accuracy are crucial in enhancing realism and immersion during scenario- based training.
+To complement the questionnaires, users were also asked to provide their opinions about the prototype during focus group discussions. They provided feedback regarding features and functionalities as well as specific details with respect to the program of instruction within their organization. Users were given as much time as possible to perform each procedure and to evaluate the capabilities of the system. A total of 73 subjects participated in the study.
+Table 1. Summary of Results (Mean Responses)
+MODSIM World 2016
+ A visual summary of the average responses per group obtained from the students and instructors on the initial prototype is provided in Figure 6.
+  8.0#
+7.0#     6.4$ 6.0#
+5.0#
+4.0#
+3.0#
+2.0#
+1.0#
+0.0#
+6.8$
+        6.2$ 5.9$ 6.2$
+                               Avg.#Response# Orange#County#Fire#Department# City#of#Orlando#Fire#Department# Orlando#Medical#Ins8tute# UCF#College#of#Nursing# Florida#Hospital#Orlando#East#
+                    Figure 6 Average Scores per Group
+A list of significant findings were obtained through both the questionnaires and focus groups:
+• The participants commented that the Venipuncture and Phlebotomy training system could be beneficial to the current training curriculum.
+2016 Paper No. 18 Page 7 of 9
+Benefit#to#training/Mee8ng#training#
+Usability#
+Realism# Physiological/Anatomical#Accuracy#
+Mo8va8on#to#Use#
+
+• Overall, the participants concluded that the system was user friendly, easy to maintain, and minimized the reset between uses.
+• The majority of the participants responded positively to questions regarding the system’s ability to meet training objectives.
+• The highest scores were observed in the category of “Motivation to Use” for all groups.
+• Most trainees stated that the PTT has more realistic skin texture and appearance and that they could not see
+visible marks from previous punctures.
+It is interesting to note that the highest scores obtained were from the Orlando Medical Institute and from the UCF College of Nursing, which consisted of students finishing the course of study. It is possible that the higher scores they provided were because they have not performed the procedure on live patients as much as the more experienced EMTs and paramedics from the other groups. In contrast, the Florida Hospital Orlando East participants provided the lowest scores because they have more experience with live patients, perhaps, the training benefit is lower to them.
+CONCLUSIONS
+During Phase II of the BAA, a new prototype was designed that will facilitate proper training of the IV and phlebotomy procedures including improper positioning of the arms and injection site identification. As a part of the BAA Phase II effort, the PTT design was revised after a task analysis was conducted to identify requirements for a more robust training capability while also addressing the Phase I findings and lessons learned. Phase II of the BAA focused on researching and developing new materials that simulate veins and skin, allowing for improved anatomical fidelity and haptic feedback and cues while preserving the durability of the Phase I PTT. The team focused on developing a PTT that was durable, realistic, and reusable. As a result, the effort continues to advance the materials science and system design, while replicating the look and feel of the human body. This research is important because it will provide the user community with a capability that will allow for repeated training sessions without leaving visible puncture marks and thus, reducing life cycle and maintenance costs.
+2016 Paper No. 18 Page 8 of 9
+MODSIM World 2016
+
+REFERENCES
+Marieb, Elaine N., Hoehn Katja, (2010) Human Anatomy & Physiology, Pearson Benjamin Cummings.
+Salva, A. M., Coiro, C., & Sotomayor, T. D. (2014). Development Evaluation of a Humeral Head Intraosseous Training System . Interservice/Industry Training, Simulation, and Education Conference (I/ITSEC). Orlando, Fl.
+Nielsen, J. (1993). Usability Engineering. Boston: Academic Press.
+2016 Paper No. 18 Page 9 of 9
+MODSIM World 2016

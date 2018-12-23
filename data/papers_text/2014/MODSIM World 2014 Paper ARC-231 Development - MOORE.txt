@@ -1,0 +1,151 @@
+Implementation of the ARC-231 Simulation to Support Multiple Training Types
+Jimmy Moore Pinnacle Solutions, Inc.
+Huntsville, Alabama 35806 JMoore@PinnacleSolutionsInc.com
+Thomas (Andy) Ferrell
+Pinnacle Solutions, Inc.
+Huntsville, Alabama 35806 AFerrell@PinnacleSolutionsInc.com
+ABSTRACT
+The AN/ARC-231 Multi-mode Airborne Radio Set (MARS) is an Airborne VHF/UHF/LOS and DAMA SATCOM communications system that supports Department of Defense (DoD) requirements for airborne, multi-band, multi- mission, secure anti-jam voice, data and imagery transmission. This system has become the de-facto communications system for aviation units throughout the DoD and among many of our international allies. The vast capability of this radio, while meeting the communications requirements of military aviators, also makes the radio very complicated to use - the user’s manual is over 794 pages. These issues drove the requirement to provide interactive and engaging training across a wide variety of training types and aircraft platforms.
+The purpose of this paper is to describe the strategy implemented in the development of the ARC-231 Multi-band Radio Simulation to support multiple types of simulation utilizing a core simulation wrapped with application interfaces to accommodate different training types, user requirements, and aircraft platforms. This paper will address the market need observed in 2009 for the implementation of a high fidelity simulation of the ARC-231 radio, the approach taken to design the core simulation, and the various types of the simulation that have been implemented as a result of the open architecture approach that was implemented from the beginning of the program. This paper is being presented to share the innovative idea behind the implementation of the ARC-231 Radio Model, the subsequent savings in terms of cost and time afforded to our customers through this approach, and lessons learned throughout the implementation and fielding process.
+The use of this approach has allowed the development of multiple types of trainers for a variety of customers utilizing the same core simulation. As customers find and report issues with the core model, all customers have the opportunity to benefit from the collective testing by receiving updates to their core simulation model.
+ABOUT THE AUTHORS
+Jimmy Moore, a Certified Modeling and Simulation Professional, is co-founder and Vice President of Pinnacle Solutions, Inc. and has more than 20 years of experience in simulation and modeling of aircraft and missile systems for distributed, man-in-the-loop, and training applications. He has worked on various programs in support of Department of Defense (DoD) and commercial customers. Specific experience includes the development of high fidelity flight training devices, development of engineering and analysis cockpits for Pilot Vehicle Interface (PVI) analyses, Synthetic Environment development, simulations to support Science, Technology, Engineering and Math (STEM) programs and design and execution of distributed simulation exercises.
+Andy Ferrell is the Director of Engineering for Pinnacle Solutions, Inc. He is a senior systems engineer with over 25 years of systems hardware and software design, development, integration, verification, validation and test experience. His expertise includes simulator architecture development, requirements definition, software design and development, and sensor and weapons simulation.
+2014 Paper No. nnnn Page 1 of 10
+MODSIM World 2014
+
+Implementation of the ARC-231 Simulation to Support Multiple Training Types
+Jimmy Moore
+Pinnacle Solutions, Inc. Huntsville, Alabama JMoore@PinnacleSolutionsInc.com
+INTRODUCTION
+Thomas (Andy) Ferrell Pinnacle Solutions, Inc. Huntsville, Alabama AFerrell@PinnacleSolutionsInc.com
+The AN/ARC-231 Multi-mode Airborne Radio Set (MARS) is an Airborne VHF/UHF/LOS and DAMA SATCOM communications system that supports Department of Defense (DoD) requirements for airborne, multi-band, multi- mission, secure anti-jam voice, data and imagery transmission. This system has become the de-facto communications system for aviation units throughout the DoD and among many of our international allies, supporting multiple aircraft types and missions. The vast capabilities of this radio, while meeting the communications requirements of military aviators, also make the radio complex and difficult to use. The user’s manual just for the radio is 794 pages! Raytheon, the radio Original Equipment Manufacturer (OEM), was put on contract to provide training; however, the training delivered was not adequate to provide the interactive and engaging training required to train such a complicated system. Pinnacle saw the future proliferation of the ARC-231 MARS system and the deficiency in current training as an opportunity to provide a training system that could support a wide variety of customers and training types.
+The purpose of this paper is to describe the strategy implemented in the development of the ARC-231 Multi-band Radio Simulation to support aviator and maintainer training utilizing a core simulation wrapped with application interfaces to accommodate different training types, user requirements, and aircraft platforms. This paper will address the market need observed in 2009 for the implementation of a high fidelity simulation of the ARC-231 radio, the approach taken to design the core simulation, and the various types of the simulation that have been implemented as a result of the open architecture approach that was implemented from the beginning of the program. This paper is being presented to share the innovative idea behind the implementation of the ARC-231 Radio Model, the subsequent savings in terms of cost and time afforded to our customers through this approach, and lessons learned throughout the implementation and fielding process.
+The use of this approach has allowed the development of multiple types of trainers for a variety of customers utilizing the same core simulation. As customers find and report issues with the core model, all customers have the opportunity to benefit from the collective testing by receiving updates to their core simulation model.
+INTRODUCTION TO THE AN/ARC-231 MARS & HISTORICAL CONTEXT
+In 2006, Raytheon received a contract to provide AN/ARC-231 Skyfire radio systems for the U.S. Army’s fleet of helicopters to replace the aging ARC-186 VHF and ARC-164 UHF radios (staff, 2006). This was part of the DoD’s initiative to develop a Joint Tactical Radio System (JTRS) that was planned to be the next generation voice and data communications system for the U.S. Military. The JTRS program was cancelled in October 2011 by the United States Undersecretary of Defense for Acquisition, Technology and Logistics in a letter to the Committee on Armed Services, stating that an “NDI (Non-Developmental Item) acquisition approach was the most viable means to meet [the] requirement” (Kendall, 2011). This directive opened up the opportunity for Raytheon to further develop the ARC-231 into the Multi-mode Airborne Radio Set (MARS) and include additional capabilities such as LOS and DAMA SATCOM.
+2014 Paper No. nnnn Page 2 of 10
+MODSIM World 2014
+
+Figure 1 - AN/ARC-231 Radio System
+The AN/ARC-231 MARS is not only an airborne VHF/UHF LOS and DAMA SATCOM radio system, but also a multi-band/multi-mission communications suite providing a secure anti-jam voice, data and imagery radio set. The AN/ARC-231 has the following characteristics and capabilities (Chapter 7 Airborne Radios, 2009):
+ HAVEQUICKI/IIandSINCGARScommunicationsmodes
+ DAMAandnon-DAMASATCOMcommunicationsmodes
+ Frequency ranges of:
+ 30–87.975 MHz VHF FM SINCGARS
+ 108–173.995 MHz VHF AM and VHF FM
+ 225–399.995 MHz UHF AM HAVEQUICK II/ground air band, UHF SATCOM band
+ 403–511.995 MHz UHF FM public service band
+ Embedded COMSEC and TRANSEC keys with transmit and receive OTARs
+ 148 preset channels
+ Independent red and black MIL-STD-1553 bus interfaces
+ Embedded MIL-STD-188-184 analog to digital converter and tactical IPs
+ SINCGARSSIPandoptionalESIPandendofmessage
+ MIL-STD-188-181BhighdatarateinbothLOSandSATCOM
+ 8.33kHzATCchannelizationcoverageto512Hz
+In 2008, Pinnacle was approached by Raytheon to provide a training solution for the ARC-231. Raytheon would provide all of the technical information required, but Pinnacle would have to develop the training on our own and market it to the DoD. This was a win-win situation. Raytheon was able to have training developed for its radio system and Pinnacle was able to develop a high quality training system that could be used throughout DoD.
+Status of Radio Procurement
+As of October 2013, over 5,600 ARC-231 radios have been fielded to support every platform in the U.S. Army helicopter fleet to include: UH-60L/M and MH-60L/M Black Hawk, CH-47F/G and MH-47E/G Chinook, UH-1N Huey, A2C2S Black Hawk, AH-64 Apache, UH-72A Lakota, and OH-58D Kiowa Warrior. In addition, the radio has been deployed on the AC/MC-130 platforms for the U.S. Air Force and is also being utilized by North Atlantic Treaty Organization (NATO) countries.
+Issues with User Adoption
+With the proliferation of the ARC-231 throughout the Army’s helicopter fleet, and the operational tempo (OPTEMPO) created by the high demand of helicopter assets to support Operation Iraqi Freedom (OIF) and Operation Enduring Freedom (OIF), the ARC-231 was rapidly fielded into operational units for use in combat, training, and logistics missions in theater. This rapid assimilation of new equipment lead to a deficiency in training and ultimately in the lack of use of this sophisticated communications equipment. The user interface was not intuitive and was very slow to be adopted by the end user. Better training was required to ensure full utilization of the radio and all of its capabilities throughout the DoD user community.
+2014 Paper No. nnnn Page 3 of 10
+MODSIM World 2014
+ 
+Existing Training Available
+Training for the ARC-231 was made available by Raytheon in the form of a series of videos that demonstrated the use of the system by highly skilled subject matter experts. While this training did meet the intent, it was lacking in the ease of use and interactivity required by the user to fully understand the capabilities of the radio. The videos provided point solutions to specific tasks, but did not provide any capability to step through procedures, conduct free-play with the radio, or score student progress or activities.
+Figure 2 - Screen capture of a maintenance task for the ARC-231 LRU
+DESIGN APPROACH
+Pinnacle is a training systems provider with experience developing training solutions that range from Desktop Training to Operational Flight Training. Our design approach for ARC-231 training was to ensure that the end user was not only informed, but also engaged in the training system and was also provided with a wide range of options for tasks and difficulty levels and given both generic overview and Military Occupational Specialty (MOS) specific training options.
+Traditional Approaches
+Traditional Interactive Multimedia Instruction methodologies incorporated at this time provided little more than glorified PowerPoint presentations. Options were available to embed videos and voice-over capabilities, but this approach was not far from what they had been provided by Raytheon and did not seem to meet the student at their skill level or provide the interaction required to master the complexities of the ARC-231 Radio System. In addition, neither Raytheon nor the government had the bandwidth or the resources to support testing and accreditation of the multiple applications needed to train all of the tasks required in this manner. A new approach was needed.
+A Core Simulation Model
+Pinnacle’s solution was to develop a core simulation model of the ARC-231 that could be accredited one time, and then used to provide a wide variety of training applications based on user need. This model relied on the implementation of the complete radio model including all of the menu trees, malfunctions, timing, and idiosyncrasies of the actual radio.
+Benefits for the Core Simulation Approach
+The core simulation is the backbone for the addition of wrapper code to convert the simulation into a desktop trainer, a part-task trainer, and a simulator modification kit simply by altering the user interface. The benefits of this approach include:
+ Single model for accreditation vs. multiple instantiations
+ Higher fidelity training for the Desktop Training environment, including the ability to provide a
+“free play” mode
+MODSIM World 2014
+ 2014 Paper No. nnnn Page 4 of 10
+
+ Simplified Configuration Management
+ Modifications to the core model can be easily migrated to all training types
+RESULTING IMPLEMENTATIONS
+From the core model, Pinnacle was able to develop several variants of the ARC-231 MARS training system to meet user training requirements. The following sections describe each implementation.
+Desktop Trainer (DTT)
+Pinnacle’s ARC-231 Desktop Maintenance Trainer software has been delivered to the U.S. Army Program Manager for Aviation Mission Equipment with government purpose rights. This training system is unique in that it provides a fully integrated simulation of the radio that may be used in free play mode and utilized to support part-task and full flight training systems using both simulated and real avionics panels. The DTT provides training for both Aviation Unit Maintenance (AVUM) and Aviation Intermediate Maintenance (AVIM) tasks at various levels of interaction. The DTT provides three levels of instruction (demo, practice and advanced) with an additional free play mode to provide both introductory as well as refresher training.
+Figure 3 - The ARC-231 Radio Desktop Trainer Provides AVIM and AVUM Training, Links to Technical Manuals and Free Play Modes
+The ARC-231 Desktop Maintenance Trainer provides a front-end graphical user interface that allows students to choose their course of instruction (AVIM or AVUM). Both courses provide a selection of modules that allow students to choose the desired training tasks and level of difficulty. The ARC-231course provides 69 interactive tutorial modules based on AVIM and AVUM tasks and includes eight 3D animation overview/introduction and remove and replace videos.
+The demo mode of each module provides an overview of the tasks required, highlighting the steps for the student while requiring only that they select the “next” button to continue. This provides a simplified introduction to the switchology and menu structure of the radio. The basic practice mode provides an additional level of interaction requiring students to interact with the radio controls (knobs, switches, card reader, etc.) to traverse the tutorial. Task steps are provided and components highlighted to provides a visual “help” to the student. The final mode provided with each module is the advanced mode. This mode provides tasks for the students to complete without providing help indicators. This module also provides a grading mechanism to allow students to check their work and receive feedback on their performance. The free play mode of operation allows students to interact with the radio as they would in the real world. All modes and functionality of the actual radio to include all radio modes, frequencies and input devices (PCMCIA and crypto gear) are provided. This allows students the opportunity to understand the breadth and depth of the radio capability without tying up an aircraft and without undue wear and tear on tactical equipment. The simulation also supports the use of the simulation as both as a part task trainer and simulator modification kit that can be used in a classroom, or integrated into a higher-level simulation with simulated or tactical hardware.
+MODSIM World 2014
+  2014 Paper No. nnnn Page 5 of 10
+
+The ARC-231 DTT was developed in Visual Studio 2010 without the need for third party development tools. The software has been cleared through Army Information Assurance for use on all U.S. Army assets and is provided on CDROM to any soldier needing training on the radio system for use at home or in the workplace. The ARC-231 simulator kits have been integrated into multiple Cockpit Procedures and Full Flight Simulators to support training on the UH-60M, MH-60M, CH-47F, MH-47G, AC-130, S-70i, OH-58D, and AW-159 platforms. The success of the ARC-231 DTT has not only led to the addition of special operations version but also the development of simulator products for the APX-123 common transponder and the ARC-220 radio.
+Part Task Trainer (PTT)
+Pinnacle developed the AN/ARC-231 PTT in response to the need to provide a tactile representation of the radio control indicator and fill panel for classroom use. Prior to the development of this system, U.S. Army units were utilizing actual radios and receive/transmit (R/T) units. This was problematic for several reasons:
+ The cost of the actual untis
+ The actual units are COMMSEC equipment and require special handling and storage when not in
+use
+ Utilizing actual units in the classroom meant that they were unavailable for use in the field
+Providing a simulated AN/ARC-231 for unit-level use in the classroom filled a need for high fidelity training at a low cost without the issues associated with dealing with COMMSEC equipment.
+Figure 4 – Pinnacle’s AN/ARC-231 PPT – Front (Left) and Back (Right) Views
+Classroom Instruction
+Pinnacle is currently developing a classroom virtual interactive environment (VIE) based product for use by the 128th Aviation Training Brigade at Ft. Eustis, VA. The stations communicate with one another and the IOS through a Local Area Network (LAN) created by connecting each station to a network switch. A COTS VoIP system is used to setup voice Transmit (Tx) and Receive (Rx) channels. Synthetic communications channels are created using a VoIP conference server on the IOS. Applicable simulation data is synchronized using a UDP/IP protocol suite. In addition, each station is plug-and-play. When a unit is connected to the network switch and powered, it is automatically registered and configured for use by the other devices. The registration of each unit modifies the synthetic network at runtime.
+MODSIM World 2014
+  2014 Paper No. nnnn Page 6 of 10
+
+Figure 5 - The USfalcon team’s ARC-231 MARS VIE Trainer is Designed for a Standard Classroom Environment
+The system supports many aspects of the continuous adaptive learning model and, as a result, adheres to the Army Learning Management (ALM) 2015 plan. The system can be adapted to meet the training needs of the ever- changing operational environment in two ways. First, tutorials can be modified, added, or removed at runtime utilizing tutorial scripting tools built into the VIE. Should an instructor determine that a new tutorial is required, the system design allows them to record the steps of the new tutorial on the IOS, save the new training content, and push it out to the individual stations without interrupting training. The instructor also has the capability to modify, add, and remove any supporting materials, such as documentation and videos. The ability to dynamically add tutorials allows for adaptation of the training content to match the ever-changing operational use cases for these devices.
+In addition to a collective, networked training environment, the system supports self-structured learning by using the Student Station in standalone mode allowing the student to progress through embedded tutorials designed to interact with the synthetic hardware. In addition to learning each of the required tasks, the Student Station tutorials provide an advanced mode for each tutorial to measure student proficiency and progress. The system also provides the ability to pre-test/assess a student’s competency with regard to operating the ARC-231 in the classroom environment before training begins, as well as post-test/assess proficiency to determine the effectiveness of the training.
+Simulator Upgrade Kits
+The third type of training device developed for the AN/ARC-231 is the simulator upgrade kit (sim kit). These sim kits are designed to integrate into full flight operational training devices and maintenance trainers that require exact physical and functional representations of the ARC-231 systems. They have been purchased by a variety of customers to support a wide range of training systems and have been installed on UH-60M, MH-60M, CH-47F, MH-47G, AW-139, AC/MC-130 and OH-58D training devices. Sim kits include all the hardware and software necessary to provide a complete off-the-shelf solution for ARC-231 flight training requirements. The kits are designed to integrate into new or existing simulators to provide a validated and fully functional training simulation
+2014 Paper No. nnnn Page 7 of 10
+MODSIM World 2014
+ 
+of the user interface and tactical radio functionality to include all menu-driven operations, internal diagnostics, Built-in-Test (BIT) modes, advanced data mode, interoperability features, preset modes and all required operating modes of the actual ARC-231 radio. Radio state conditions, simulated faults and system failures can be controlled from the simulator Instructor/Operator Station (not included) via the ARC-231 radio kit interface. The basic kit includes:
+ ARC-231 Radio Core Simulation Model Software
+ 1 PCMCIA Card (Per Control Indicator Panel)
+ ARC-231 Server
+ 1U Power Supply
+ Simulated ARC-231 Fill Panel
+ Simulated ARC-231 Control Indicator Panel
+ Custom Cabling
+Figure 6 - AN/ARC-231 Simulator Kit Control Indicator and Fill Panel Hardware
+LESSONS LEARNED
+Common Interface Control Document
+One of the first lessons learned with the simulator kits is that a common Interface Control Document (ICD) is required prior to commencing conversations about how the hardware and software will integrate into the host simulation. Pinnacle engineers developed common pin-outs and recommended input/output (I/O) formats to support the integration of the simulated components in to the simulator architecture. We ended up providing two types of connectors for the systems: one for those requiring military standard cable connectors and one for simulation only D-SUB connections. In addition, the components were designed to use 28VDC for primary power and 5VDC for lighting. This is the standard aircraft power configuration and allows the high fidelity simulators to emulate the power requirements of the aircraft.
+The communications with the CI are through an RS-422 interface and are handled in the software via UDP packets. This allows a great deal of flexibility to customize the communications protocol and keeps the ARC-231 software baseline stable.
+Integration, Integration, Integration
+Due to the highly complex nature of the radio and the various aircraft platforms supported, Pinnacle quickly realized that providing the systems as COTS units was not entirely feasible. Each instantiation required some amount of customization based on the customer’s implementation, the end user’s requirements, and the simulator infrastructure. As part of the overall implementation, Pinnacle now recommends a one-week on-site integration activity and at least two weeks of integration support with every new implementation of the system.
+Subject Matter Expertise / OEM Support
+This product could not have been developed without the support of Subject Matter Experts (SMEs) and OEM support. One lesson quickly learned however, was that because the radio is so complicated and there were various versions of the radio available, often SMEs provided conflicting information. We also found, as with most systems,
+MODSIM World 2014
+ 2014 Paper No. nnnn Page 8 of 10
+
+that the technical manuals may also contain errors. Therefore, it was vitally important to establish a mechanism to determine the final authority with each customer for adjudication of Technical Discrepancies. In most cases, issues could be resolved by asking an SME from the OEM, however, in some cases, we had to resort to hands-on manipulation and inspection of actual equipment to verify functionality. In some of these cases, we actually found an issue with the radio itself and passed that back to the OEM.
+Access to Actual Equipment
+As stated above, access to the actual equipment is vital because documentation may be incorrect or incomplete and SMEs may not know or remember every detail required to simulate a particular function. In this case, having access to actual equipment was vital. We were fortunate that the OEM was able and willing to loan us units when required and were also supported by the U.S. Army Software Engineering Directorate, which maintains several baseline versions of the radios for Airworthiness testing.
+Configuration Management
+Configuration management plays a vital role in the management of the software and hardware baselines. As shown above the ARC-231 product line has grown into many different training types supporting two different versions of the radio. In addition, Pinnacle has developed a version of the code that supports the actual tactical radio head.
+CONCLUSION
+Successes
+The implementation of the ARC-231 MARS training systems has been a huge success, saving the government time and money by providing a single accredited training system for a highly complex piece of communications equipment. The Desktop Trainer has been fielded with the UH-60M New Equipment Training Teams and is available from PM AME free of charge to all military and civilian personnel requiring training on the use and maintenance of the ARC-231. The Part-Task and Classroom training systems have provided a means to conduct hands-on training with simulated hardware components that provide the functionality and feel of the actual radio, freeing up tactical radios for use in the field and removing the need for trainers to secure COMSEC equipment while not in use. The ARC-231 Sim Kits have prevented simulator OEMs and Program Offices from having to reinvent the wheel when developing and upgrading current flight and maintenance training devices by providing a single point for an accredited simulation model.
+Another success is the capability of the radio simulation to drive tactical hardware. Because Pinnacle engineering utilized the actual radio ICDs in the development of the simulation, it is possible to use not only the actual PCMCIA card set, but also the Raytheon Preset Planner software and stimulation of the actual ARC-231 Control Indicator (CI) panel.
+Pinnacle’s partnership with PM AME and Raytheon has been a huge success for all parties. Raytheon’s product is becoming more widely accepted and users are more proficient in its operation. PM AME has a reduced workload for its SMEs, having to only accredit a single model; they have an outstanding training system for a product that they can provide to whomever they wish. Finally, Pinnacle has become the industry leader in the simulation and training of the ARC-231, which has kept us busy for over four years!
+Failures
+Much of the issues associated with the radio simulation have stemmed from the sheer complexity and the multiple versions of the radios that are in use both in the lab and in the field. A lack of understanding, even on the part of SMEs of the complexities and behavior of the actual radio vs. what the documentation states, has led to many of the technical discrepancies written on the simulation. Another issue is the capture of actual radio anomalies in the simulation based upon observed behavior of the radio. A good example is an issue documented on the Simulation with the CI selector knob encoder, which can lose position if rotated too quickly. This erroneous behavior was captured in the simulation and written up and could only be cleared by having the end user observe the behavior of the actual radio.
+2014 Paper No. nnnn Page 9 of 10
+MODSIM World 2014
+
+Hindsight
+Although the implementation of the ARC-231 MARS training systems and the approach to the development has been a great success story, in hindsight an additional approach would have been to not just replicate the functionality of the Control Indicator and Fill panel back up radio heads, but also to replicate the RT-1808 which controls the tactical components of the radio. This functionality is typically handled by a separate simulation in Full Flight Simulators and provides for things such as radio propagation due to terrain and atmospheric effects, simulation of the aircraft radio bus traffic and other higher order simulations.
+ACKNOWLEDGEMENTS
+The Authors wish to acknowledge the technical support provided by Raytheon’s Network Centric Systems Business Unit, Integrated Communications Systems, ARC-231 Program Office whose technical support and guidance were invaluable in the design, development, testing and fielding of the ARC-231 suite of training systems.
+The Authors also wish to recognize our customers, Program Manager Aviation Mission Equipment (PM AME) and end user Subject Matter Experts who provided the requirements, guidance and support for several of the variants of the training system that are currently in use in the field today.
+REFERENCES
+Defense Industry Daily Staff (2006, January 27). $312M to Install ARC-231 Skyfire Radios In US Army Helicopters (updated). Defense Industry Daily. Retrieved from http://www.defenseindustrydaily.com/312m-to- install-arc231-skyfire-radios-in-us-army-helicopters-updated-01783/
+Kendall, F. (2011), Letter to the Committee on Armed Services, United States Senate. Retrieved from
+http://assets.fiercemarkets.com/public/sites/govit/jtrs_kendall_letter.pdf
+Commander, United States Army Signal Center (2009, August 5), Chapter 7 Airborne Radios. FM 6-02.53 TACTICAL RADIO OPERATION. Retrieved from https://rdl.train.army.mil/catalog/view/100.ATSC/E0CF205D- 7349-4193-BFD2-8408E331FD89-1300782865613/6-02.53/chap7.htm
+MODSIM World 2014
+     2014 Paper No. nnnn Page 10 of 10

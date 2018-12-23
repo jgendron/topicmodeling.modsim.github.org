@@ -1,0 +1,211 @@
+The Battle of Isandlwana.
+An Historical 'What If' Scenario using Quantitative, Computer Based
+Simulation.
+Clinton Reilly Managing Director Computer Strategies Pty Ltd, Sydney, Australia Clinton_reilly@hotmail.com
+ABSTRACT
+The purpose of this paper is to provide an example of how a scientific, quantitative approach to historical analysis, supported by computer simulation may be used to further military analysis and historical research.
+It is argued that the key benefit is that as historians we are provided with a methodology that allows us to develop more precise questions (hypotheses), organise our data more effectively to answer them and to assess each hypothesis more thoroughly.
+The approach described is well within the reach of history enthusiasts as well as professional analysts and historians and so may appeal to a large audience.
+ABOUT THE AUTHOR
+The author is the principal consultant and owner of the consulting firm Computer Strategies Pty Ltd and has over 35 years’ experience in the IT industry. Computer Strategies has been responsible for developing a number of quantitative models and the supporting simulation applications for government and private industry in the areas of Operations Research, Logistics, Education and Finance.
+MODSIM World 2016
+ 2016 Paper No. 6 Page 1 of 11
+
+The Battle of Isandlwana.
+An Historical 'What If' Scenario using Quantitative, Computer Based
+Simulation.
+Clinton Reilly
+Managing Director, Computer Strategies Pty Ltd, Sydney, Australia Clinton_reilly@hotmail.com
+1. INTRODUCTION
+1.1 What is Quantitative History?
+Quantitative history is essentially the application of the scientific method to the study of history, so as to increase rigour and move history towards becoming a predictive science (Turchin, Peter 2008). The primary methodology is the same as that applied to science: -
+• Observation
+• Formulate Hypothesis
+• Controlled Experimentation/Testing of hypothesis
+• Refinement and integration of hypotheses to develop a more comprehensive theory.
+A key characteristic is that the primary database is quantitative.
+Also, the scientific standard of proof is used; which is to say that nothing can be conclusively proven and that all hypotheses are always open to question. It is an axiom of science that it is not possible to prove anything.
+1.2 History as a Predictive Discipline?
+The assertion that history can a predictive science is not as far-fetched as it may seem to some. For example, in every day predictive disciplines such as:
+• Operations Research
+• Market research, Big Data
+• Economic policy formulation
+• Business strategy formulation
+it is normal for analysts to study the history of a product, historical performance of a national economy etc. and predict future behaviour based on that history. This is very close to applying a quantitative, predictive approach to history.
+Quantitative models have been developed for a diverse range of predictive disciplines such as the rise and fall of empires (Turchin, 2003.) and other areas of social evolution (Turchin,2008). Many of these are related to the social analysis of the impact of warfare. Others directly related to the analysis of battlefield behaviour are reported to have been successful in predicting the real life outcomes of future battles. For example, the late military operations researcher and historian Trevor Dupuy developed a Quantitative Judgment Model (QJM) which was used by the Pentagon to predict the casualty levels expected by the Coalition forces in the first Gulf War. The QJM provided a relatively accurate (within 10%) prediction of Coalition casualty levels and equipment losses. (2005. And now for the war forecast.).
+The future of mankind is often dictated by the tipping point of battles, much as the outcomes of battles are dictated by the actions of a few units and commanders at a critical point. These are the ‘hinges’ upon which a large part of human history turns. For those of us who have an interest in history it is often fascinating to debate ‘what if’ scenarios for these key events. For example, what if Hannibal had used his elephants differently at the Battle of Zama? What if Marshal Grouchy had blocked the Prussians and prevented them supporting the British
+MODSIM World 2016
+ 2016 Paper No. 6 Page 2 of 11
+
+at Waterloo? Would Napoleon have won? How would world history have changed? Battles are major tipping points in history where civilisation can evolve in different directions depending on the behaviour of a few key individuals and a few military units at a crucial point on the battlefield. However, while we can discuss the options it is difficult to obtain the results of a reasonably precise rerun of what may have happened through purely verbal analysis.
+The alternative is to create a quantitative model, usually computer based, to test the hypothesis. This is an increasingly attractive approach in quantitative history. The process followed is to define an historical area, develop a mathematical model of the area, develop a simulation to reflect the model and then test it by using it to predict the subsequent known historical events. For example, quantitative models of the spread of agrarian based civilisation during the Bronze Age have been demonstrated to have a reasonably high level of accuracy when used to predict the spread of agrarian civilisation in subsequent eras.
+In this paper I would like to take a simple example of an historical ‘What If’ and subject it to testing using a quantitative historical model as a testing tool, to illustrate how a range of interested parties from history enthusiasts to professional analysts may employ quantitative historical analysis.
+2. ISANDLWANA – THE HISTORICAL BACKGROUND
+Taking the battlefield behaviour of troops and their weapons in various periods of history I have developed a number of theoretical, quantitative models and then created computer based simulations for each period. One of these includes the colonial period of warfare in South Africa. Those familiar with this era are probably aware of the Anglo-Zulu war in which the Zulu, through the use of superior tactics and battlefield information were at first able to repel a much better armed British force that invaded Zululand in 1879.
+The British suffered a major reversal at the Battle of Isandlwana (22nd January 1879); a small and well documented action. The survivors included a number of British and South African troops who escaped the battlefield just prior to the final bloody disaster as well as thousands of Zulu who had their version recorded by historians shortly after the end of the war and still pass down their account in tribal dances and songs. This means Isandlwana is well documented and so suited for a straightforward quantitative simulation. We know the approximate numbers involved, the weapons, the tactics, the commanders, the terrain over which it was fought, the sequence of manoeuvres during the battle and the final outcome. In summary:
+• British expansion and local ambitions led to an ultimatum being issued to King kaCetshwayo. Britain’s refusal to negotiate ensured that the 1879 Anglo-Zulu War would ensue.
+• The British force led by Lord Chelmsford invaded Zululand in five widely separated columns which were not mutually supporting. The British command was dogged by poor decision-making and co- operation.
+• The simulation is focused with what happened to the Central Column:
+• A small hospital was established at a river crossing called ‘Rorke’s Drift’, and a main camp
+was laid out at Isandlwana (about two hours ride from Rorke’s Drift), but not fortified.
+• Chelmsford seriously underestimated Zulu military ability and marched his main force away from the main camp following a false trail and leaving only a small force to hold the unfortified camp, thus inviting a classic ‘defeat in detail’.
+• The Zulu carefully observed British movements, noting their widely dispersed, vulnerable deployment, and concealed approximately 25,000 Warriors close to the British camp. These were armed with traditional weapons, but about 25% were also armed with early rifle muskets.
+• Zulu made expert use of cover and terrain in a fast attack that surprised and wiped out the British defenders at Isandlwana.
+MODSIM World 2016
+ 2016 Paper No. 6 Page 3 of 11
+
+• Although the Zulu were not skilled in the use of firearms, their use of muskets accounted for most British Losses. About 5,000 musket armed Warriors V’s about 750 British.
+2. THE HYPOTHESIS
+Some historians assert that, had the British built an improvised redoubt for the defenders, with ammunition, food, water and medical supplies contained in it, and had this been positioned in the ‘saddle’ or storage area of the camp, the defenders would have beaten off the Zulu attack. (Durschmeid 2002, p. 175). However, this has not been substantiated by any rigorous analysis.
+4. THE QUANTITATIVE MODEL
+One of the benefits of creating a quantitative model is that it forces the researcher to ask a lot of detailed questions that would not otherwise be raised. Fortunately, there are a number of good historical sources that can provide this information. The key ones are listed in the selected bibliography in Section 9.
+As there was no suitable simulation available I developed my own. The aim is to produce a low cost, easy to use system, that is well within the reach of users with modest computer skills and has the full battlefield features required of a simulation. The model has been evolving for over more than 20 years with input from professional military war-gamers as well as amateur and professional historians. It continues to evolve using an Agile methodology and the methodology described has worked successfully for 12 other historical periods as well.
+5. MAJOR ELEMENTS OF THE CONCEPTUAL MODEL
+To test the hypothesis, the conceptual model needs to be able to recreate the major elements of a typical battle of this era. The model was constructed using the following methodology:
+ Historical Context Researched (Reflects Expert Opinion)
+ Boundaries of Model Established by Deciding what historical and geographical areas are covered.
+ Data Sources are located and Validated
+ Data and Functions Are Categorised and Defined (Modelled)
+ The Simulation System is developed based on the above inputs.
+ Final System Tested and Validated (against documented historical battles)
+While it is not possible to discuss all these steps in detail in the space available, they can be illustrated by explaining how the central element (the Data Model) is developed and constructed. The main data entities are: -
+ Time and Distance Scale
+ Troop Numbers, Types and Tactical Behaviour
+ Weapon Effects
+ Movement Rates
+ Formations
+ Breaking points for morale and fatigue, command and control overload
+ Officers, their orders, leadership styles, preferred tactical mode and efficiency.
+ Chain of Command linking officers and units: Officer Orders and Characteristics influence troop
+behaviour.
+ Environment (e.g. weather, terrain, cover)
+2016 Paper No. 6 Page 4 of 11
+MODSIM World 2016
+
+How is the Data Structure Built Up? This can be illustrated by showing how some key entities are researched and quantified. These examples are discussed below under the Scale, the Weapons and Typical Tactics.
+5.1 THE SCALE
+5.1.1 Ground and Time Scale
+The model should represent the major events to scale so that time and distance related factors (e.g. number of volleys fired in a period) can be controlled and matched to the historical conditions. For example, the effectiveness of shooting at various ranges can be used to reflect the changing impact on the combatants. It should also be able to reflect the distances covered over a given period of time so that the period of time the combatants were exposed to a certain level of fire is correctly represented. It should also be possible to vary the scale to reflect different conditions so as to test various scenarios.
+The simulation allows the user to specify the distance involved in firing and moving using a variety of scales. In this case a scale of 1mm = 1 meter was used. This could be varied as needed. The system is quite flexible.
+The period of time taken for events such as movement and firing could also be adjusted to reflect the activity typically possible for the type of troops involved. In this case a time period of 10 minutes was chosen so that events such as maximum movement rates and the number of volleys fired could be controlled according to historical information and not distorted by the enthusiasm of those conducting the trial. (It is quite common for people to have 'favourite' troop types and to imagine them capable of extraordinary feats.) For example, some assume that because the Martini-Henry rifle could fire 12 rounds a minute on the rifle range that it normally did so on the battlefield. In fact, the pattern was more like a couple of volleys in quick succession after which the target would conceal itself and the rate of fire would necessarily drop to a maximum of about 1 round per minute or less. (Knight, I. (2002)). The simulation controlled these factors according to known historical levels activity.
+5.1.2 Representing the Units to Scale
+While it would be possible to put the image of the units on a screen this is a small area less conducive to group collaboration and visualisation. Instead a large table with counters representing the units and terrain features placed on it is preferred. All participants are then able to move units to illustrate the points they are making.
+It is very cheap and easy to get some balsa wood from the local hobby shop to cut into the correctly scaled sizes for all the units. I assumed a scale of 1mm = 1 square meter for the Zulu allowing them space to jog as an ‘open’ unit but still be in close proximity to each other. For the British the same scale can be used to simulate ‘Open Order’ with a gap between each other, but in defined ranks.
+(I would avoid the toy tabletop miniature figures and armies sold by some hobby shops as they are typically not to scale and lose the all-important field of fire angles and the distances moved. They are also expensive and slow to make as they involve intricate painting and basing which makes war-gaming over several periods almost prohibitive.)
+5.2 The Weapons
+A considerable body of information exists about the weapons and their effects, including the Martini-Henry Rifle. The researcher should however be highly selective as, while all historians have a bias, some have it to a much greater degree than others and can seriously mislead the historian.
+2016 Paper No. 6 Page 5 of 11
+MODSIM World 2016
+
+The actual hit rates on the battlefield can easily be a lot lower than those experienced on the firing range due to the effect of adrenaline, dust, target movement and a variety of other factors (Knight, I. (2002)). The late Trevor Dupuy, who made a major contribution to military operations research by applying it to history, has come to a similar conclusion in his books, Understanding Victory and Understanding Defeat as well as The Evolution of Weapons and Warfare. Dupuy groups these factors under the categories Target Behaviour, Firer Behaviour and Environment. His extensive list includes terrain, fatigue, morale, command and control, protection, dispersion and proximity.
+Based on British Army battlefield body counts after battles in the Sudan, (Whitehouse, H. 1987) provides the % Hit Rates in column 2.
+Table 1. - Martini-Henry Rifle Hit Rates at Increasing Ranges
+This may seem too low until it is realised that it excludes hits that inflict disabling wounds, which are often the majority of hits. In addition, a number of troops will be overcome by fear and either become ineffective or ‘go to ground’. This last category can be much larger with less well trained, less committed troops as well as troops suffering from reduced morale and fatigue and have poorer officers. The model need to take these ‘losses’ into account rather than simply work on ‘hits’, so that it reflects the numbers still ready, willing and able to fight on.
+Dupuy has made the point that, based on his extensive research, the ratio between Fatals and total ‘Losses’ for trained, committed troops is between about 1:3 and 1:4 (Dupuy, 1990, P. 74). The above figures in the second column could therefore be extrapolated to give “Losses” that combine Fatals, Wounded, Missing in Action etc. as listed in the third column.
+The fighting in the Sudan, quoted by Whitehouse above, was frequently against Ghazis or suicidally brave tribesmen with no fear of exposing themselves to gunfire in open terrain against well trained veteran riflemen, who were as composed and solid as would be expected in the circumstances. Consequently, these figures represent the maximum loss rate that could reasonably be achieved in the circumstances. They would be significantly reduced by factors such as dispersion and the use of cover by the target troops.
+At Isandlwana the target consisted of highly committed Zulu who, as members of a Hunter-Gatherer culture, were adept at approaching wary game animals while keeping completely silent and concealed. Also, they adopted what has been described as "fluid open order tactics" (Snook, 2005, p. 197); by which is meant that they often went prone as soon as fired upon and worked their way forward as individual, expert skirmishers moving through tall, dense grass and concealing themselves to snipe from rocky gullies. This is a much harder target to hit and discourage. Another factor is that about 25% of the Zulu had older rifles and at a range of about 200 yards could begin firing on and hitting or disconcerting the British riflemen, who were standing exposed.
+As Snook puts it, “Confronted by such a fluid exhibition of open-order tactics the younger men in the ranks of the 21st must have felt some anxiety. Even the old sweats looked worried." (Snook, 2005, p. 197).
+To transform this information into a form usable by a computer the well known statistical technique of regression correlation or curve fitting can be used.
+MODSIM World 2016
+          Range
+    % Hit Rates (Fatals Only)
+    % Losses (Fatals + Wounded)
+     1,400 - 1,700 yards
+   2%
+   10%
+     300 - 700 yards
+   5%
+   25%
+     100 - 300 yards
+      15%
+     75%
+    0 - 100 yards
+  20%
+  100%
+ 2016 Paper No. 6 Page 6 of 11
+
+As the value of R-Squared = 0.9174 in this case, there is very close fit between the curve and the data points. In other words, the equation for the curve will give us hit rates at various ranges that are very close to those that were observed.
+Figure 1 – Martini-Henry Rifle Hit Rates at Increasing Ranges
+5.3 Typical Tactics
+The model needs to be able to reflect the battlefield behaviour of the combatants. This is done using the concept of a Tactical Style which defines the key tactical characteristics of a group of Troops.
+5.3.1 ‘Warrior’ Tactical Style - Zulu Tactics.
+Zulu infantry have been categorized in the simulation as Expert Light Infantry. This, when coupled with their Tactical Style of ‘Warrior’, defines them as being able to move much more rapidly than Regular troops (e.g. British) and take advantage of cover to a higher degree than most other troop types. It also allows them to automatically adopt fluid open order tactical behaviour. For example, they will automatically go Prone when hit by accurate rifle fire and subsequently adopt a Skirmish formation that takes advantage of cover during movement towards the enemy.
+The Zulu officers also reinforce this behaviour as they are given an Attack Orders as their preferred Tactical Posture and are classed as Aggressive personalities. The units reporting to such officers inherit these characteristics and so are strongly inclined to aggressive behaviour such as charging the enemy, and may do so even without being ordered. The ‘Warrior’ Tactical Style in this period also means that their capacity to use higher technology such as firearms and artillery is limited but still present.
+The Zulu commanders perfected an aggressive tactical approach of double envelopment, similar to that used by Hannibal in his masterpiece at the Battle of Cannae (216 B.C.) and modelled on the fighting buffalo. It consisted of four Corps, the Left Horn (Left Wing), Right Horn (Right Wing), Chest (Centre) and Loins (Reserve).
+5.3.2 ‘Regular’ Tactical Style – British Tactics.
+The British infantry are categorized as Regular and Experienced. This makes them formidable with firearms and in melee provided they are not seriously disordered. They are able to rapidly adopt their regular formations such as Attack Column, Line of Battle and Square as well as a number of other regular formations.
+MODSIM World 2016
+ 2016 Paper No. 6 Page 7 of 11
+
+The British officers are classed as Disciplined but not as aggressive as the Zulu. This allows troops under their command to change formation and receive new orders efficiently. They also have considerable ability to pass orders to subordinates, although this can be hampered if they are classified as Inefficient.
+5.4 Summary.
+In summary then in our example, there are two very different armies involved. One is a small conventional European force that has a major technological advantage but is relatively cumbersome and unaware of both its opponent and its environment due to assumptions of total superiority made by poor commanders. The other is a much larger, faster moving and more alert and aggressive force that is well fitted to its environment but gravely hampered by a distinct lack of technological firepower.
+6. SIMULATING THE BATTLE – PHASE BY PHASE
+Using the fortification data and functions built into the computer simulation, the British were deployed inside a sandbagged redoubt on the wagon road between the two high points at Isandlwana. The artillery (3 X 7Pdrs) is integrated into the Redoubt.
+It was assumed that the entire area was covered by tall grass and crisscrossed by gullies. (Snook, 2005, p. 65),
+The Zulu were represented by blue rectangles and were deployed to enter from the North-Eastern side of the battlefield. It became obvious when reviewing the deployment of the troops that the Zulu approach would be largely masked from British fire by hills and they could easily occupy the heights so as to pour fire down into the redoubt, as happened later that day at Rorke’s Drift. This illustrates the value of table-top deployment as historians have not usually taken this into account when recommending fortification in the Saddle area.
+Consequently, the British troops were placed on Rest and took 10 minutes to fully realise that an attack was underway and make ready to meet the threat. This allowed the Zulu to cover part of the 1 mile between their starting points and reach a point 1,000 yards from the British position before the British opened fire.
+To provide a suitable time scale the simulation adopted 10-minute time periods starting at 12:00 Noon. The weather was set to clear and the system then assessed that gun smoke would disperse slowly in a light breeze, tending to obscure the Zulu from the British.
+Phase 1 - Scouting Assessment.
+The system scanned the two Orders of Battle and after reviewing the types of troops and commanders assessed
+that the Zulu had a marked scouting (surprise) advantage. The system’s assessment was:
+“Side 1 – 1st 24th Is AMBUSHED on Route to the Battle!
+It must EITHER move across the board and Cannot Deploy until it is first attacked OR Stay in Position with all units on Rest until Attacked.”
+Side 2 – Zulu WINS THE SCOUTING TEST
+It may deploy ANYWHERE behind cover at any time up to the start of turn 3. “
+Phase 2 - 12:00 – Zulu Appearance and British opening fire (at 1,000 yards).
+The four elements of the Zulu tactical system were clearly depicted by groups of the counters for the Regiments in the Left Horn, Chest, Right Horn and Loins. It was assumed that these four groups would have the same regiments as described by Snook (Appendix 2). Each of the Zulu Regiments started the battle in a more compact
+2016 Paper No. 6 Page 8 of 11
+MODSIM World 2016
+
+formation referred to as “War Band”. This compact formation would allow the British to inflict a higher level of casualties on them until they adopt a more open Skirmish formation and took cover.
+The British opened fire on the Chest units. Based on the Warrior Tactical Style, the system decided that these units, realising they were being hit by accurate rifle fire as well as artillery, temporarily went prone to limit casualties. They would then continue to move in a dispersed skirmishing formation taking maximum advantage of the cover.
+Phase 3 - 12:20 - 12:40 – Zulu Encirclement Commences
+The Chest held the attention of the British while the Right Horn began to circle around the redoubt to take advantage of the masking potential of the high ground. The Left Horn similarly moves towards the nearer eminence to take advantage of the cover and seize the high ground.
+At this point the system assessed that two of the smaller Chest regiments had taken significant losses and consequent morale and fatigue reduction. They were assessed by the system as having “Poor Morale” and to be “Tiring”. The system also assessed that this was so pronounced they were close to breakpoint and assigned a “No Advance” status. They have gone to ground in a skirmishing formation to reduce the effects of fire but are refusing to advance. It would not take much more British fire to break them, but they had distracted attention from the advance of the Left and Right Horns and the Loins.
+Phase 4 - 12:40 - 12:50 – Zulu Encirclement Continues
+The Zulu Right Horn and the Loins are now largely masked by the high ground and the Zulu Left Horn has reached the lower slope of the high ground to its front.
+The two Chest units that went to ground are still taking some British fire and so are refusing to move. Their Morale may fall to a level where they are categorised as Suppressed and become unlikely to fight at all today.
+The larger Chest unit (6,000 warriors) has been able to cope due to the casualties constituting a lower proportion of the total unit. Its Morale and Fatigue are still both rated as “Good”, which is less than the starting point of “Excellent” and “Well Rested” but not yet at a break point. However, the other smaller Chest unit (2,000 warriors) is feeling the effects of British fire with Morale falling and now rated as “Fair”, down significantly from the starting point of “Excellent”. Its fatigue is rated as “Good” which is less than the original “Well Rested” but still allowing the unit to continue the attack.
+Phase 5 - 12:50 -1:50 – Zulu Encirclement Complete
+The Zulu have now occupied the high ground on both sides of the British positions and are firing down into the British redoubt. The advantage of firing from higher ground was programmed into the system based on the events at Rorke’s Drift and earlier battle accounts analysed by Colonel Hughes (Hughes, B.P., 1997). The smaller Chest unit has succumbed to the British fire and gone to ground. The larger unit has shaken out into Skirmish formation and is moving onto the high ground with the Left Horn.
+Over each 10-minute period the British casualties are low but grow continuously. Each Zulu regiment can only manage to inflict 2 or 3 losses on each British unit in the period (a very low hit rate), but the losses are starting to mount and British Morale and Fatigue are starting to drop. Although it is assumed that there is now something like 4,000 Zulu with rifles able to fire on the redoubt from cover and about 2,000 of these from above. Their lack of rifle skills and poor ammunition have limited the British casualties; however, it is now only a matter of time.
+By the end of this period the British troops have been whittled down to less than 10 men per unit and the Zulu make a simultaneous attack on three sides of the fort. While one Zulu unit is forced back by close quarter’s
+2016 Paper No. 6 Page 9 of 11
+MODSIM World 2016
+
+canister fire from the artillery the others manage to overrun the position and the remaining British force is annihilated.
+7. SIMULATION OUTCOME.
+If the assumptions built into the model are correct then the hypothesis that fortification on the Saddle alone would be enough has been cast into serious doubt. However, it should still be asked why this outcome occurred at Isandlwana with odds of about 20:1 while garrisons with defences survived with odds of about 40:1 at Rorke’s Drift and Blood River?
+The hypothesis testing process makes it apparent that when the British allowed the Zulu to completely surround their fortification, occupy the high ground and bring their full firepower to bear, they made a fatal tactical error. It is much more difficult to defend simultaneously in all directions against a much larger force, even when the defender has a marked technological advantage.
+At Agincourt the English succeeded in provoking the French into making a direct frontal attack on a prepared defensive position by choosing ground hemmed in by forest. The French attacked impetuously and made no flanking move. At Rorke’s Drift there were fewer approaches for the attackers and these could be more easily defended when attacked. The Zulu commanders also lost control and did not organise a general attack at several points simultaneously. The Boer defenders at the Battle of Blood River had chosen their position carefully with this in mind. They chose a position with a river on one flank and a deep gully on the other. They also cleared the vegetation from the open front of their position so that the attackers had no cover at all. In this way they channelled the attack into a killing ground and managed to inflict a heavy defeat on a much larger force, using only smoothbore muskets.
+This fundamental principle of defensive warfare - channelling the enemy attack so as to better anticipate and respond – was ignored by the British as Isandlwana even though it has been the basis for the development of the fortress since gunpowder negated the advantage of the curtain wall. The military architect Vauban developed several fortresses where the surrounds were subtly landscaped so as to force the attacker to unconsciously choose to approach along a certain path into a ‘killing field’ where fort’s artillery and troops were concentrated ready to destroy them. There was no attempt to defend in all directions. It now becomes apparent that the hypothesis tested ignored this and so failed. Given the degree of cover afforded an attacker at Isandlwana it is difficult to see how it was possible for a much smaller force to survive at all. This is only one of many lessons that can be learned.
+The key benefit is that historians and analysts (both professional and amateur) are provided with a methodology that allows them to formulate more precise questions (hypotheses), organise their data more effectively and to assess each hypothesis more thoroughly. This quantitative approach is well supported by current technology (e.g. Excel, Visual Studio.NET) and within the reach of a wide audience including war-gamers, school and university students, history enthusiasts and professional historians.
+8. POTENTIAL APPLICATIONS
+There are potential applications in the areas of:
+• Education: Historical Analysis (Military, Commercial, Political) (Reynaud, David and Northcote, Maria. 2001).
+• Defence: War-games: Evaluation of Alternative Battle Scenarios (Jalali, Ali A. and Grave, Lester W. 2001) (Horne, Jonathan. M. 2012).
+2016 Paper No. 6 Page 10 of 11
+MODSIM World 2016
+
+REFERENCES
+Dupuy, Trevor 1980. The Evolution of Weapons and Warfare, London: Janes.
+Dupuy, Trevor 1985. Numbers, Prediction and War: The Use of History to Evaluate and Predict the Outcome of Armed Conflict, Revised Edition, Fairfax, Virginia: HERO Books.
+Dupuy, Trevor 1990. Attrition: Forecasting Battle Casualties and Equipment Losses in Modern War, Falls Church, Virginia: Nova Publications.
+Dupuy, Trevor 1990. Understanding Defeat: How to recover from Loss in Battle to Gain Victory in War, London: Paragon House.
+Durschmeid, Erik 2002. The Hinges of Battle: How Chance and Incompetence have changed the Face of History, London: Hodder and Stoughton.
+2005. And now for the war forecast. The Economist. Sept 2014, Technology Quarterly: Q3
+http://www.economist.com/node/4368226
+Horne, Jonathan. M. 2012. The Myth of the Silver Bullet. Does technical superiority equate to battlefield success?, Quantico, Va.: Marine Corps. Command and Staff College - DTIC Document.
+Hughes, B. P. 1997. Firepower: Weapons Effectiveness on the Battlefield, 1630-1850, Kent: Spellmont, Staplehurst.
+Jalali, Ali A. and Grave, Lester W. 2001. Expeditionary Forces: Superior Technology Defeated at the Battle of Maiwand. History Review Vol. 81, No. 3 May/June 2001.
+Knight, I. 2002. "Old Steady Shots": The Martini-Henry Rifle, Rates of Fire and Effectiveness in the Anglo- Zulu War. The Journal of the Anglo-Zulu War Historical Society, XI: 1-8.
+Manning, Stephen 2013. The Martini-Henry Rifle. Oxford, UK: Osprey Publishing.
+Morris, Donald R. 1998. The Washing of the Spears: The Rise and Fall of the Zulu Nation, New York City, New York: The Perseus Book Group.
+Reynaud, David and Northcote, Maria. 2014. The World Wars through tabletop war-gaming: An innovative approach to university history teaching, Australia: Avondale CAE.
+Snook, Mike 2005. How Can Man Die Better: The Secrets of Isandlwana revealed, London: Greenhill Books.
+Snook, Mike 2010. Like Wolves on the Fold: The Defence of Rorke’s Drift, Revised Edition. Barnsley, S. Yorkshire: Frontline Books.
+Turchin, Peter 2003. Historical Dynamics: Why States Rise and Fall. Princeton University Press, Princeton, New Jersey.
+Turchin, Peter 2008. Arise ‘cliodynamics’. NATURE Vol 454 3 July 2008. Whitehouse, H. 1987. Battles in Africa 1879-1914, Camberley, UK: Field Books.
+MODSIM World 2016
+ 2016 Paper No. 6 Page 11 of 11

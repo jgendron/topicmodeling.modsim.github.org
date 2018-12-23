@@ -1,0 +1,175 @@
+Integration and application of the natural environment within the OpenEaagles simulation framework
+Karl D. Pfeiffer, John J. Holdzkom, Steven J. Lowe Atmospheric and Environmental Research
+Hampton, VA 23666
+karl.pfeiffer@aer.com, john.holdzkom@aer.com, steven.lowe@aer.com
+ABSTRACT
+Representation of the natural environment and correlated environmental effects remains a challenge in combat and wargaming simulations. Achieving this physically realistic characterization of weather, ocean and dynamic terrain is important both for immersive or out- the-window views and for realistic impacts on system performance. For training, mission rehearsal, studies and analysis and acquisition communities served by modeling and simulation, this realism is critical to meaningful outcomes. In this study, we examine the OpenEaagles simulation framework, based on the Air Force Extensible Architecture for the Analysis and Generation of Linked Simulations (EAAGLES) system. OpenEaagles offers many aviation system components including a physically realistic flight dynamics model and sensor models. We document the natural environmental integration and environment effects offered in this framework, and present examples of simple simulations executed with and without realistic weather. We conclude with recommendations for improvements to OpenEaagles and avenues for future investigations.
+ABOUT THE AUTHORS
+MODSIM World 2014
+   2014 Paper No. 00000 Page 1 of 9
+
+Integration and application of the natural environment within the OpenEaagles Simulation Framework
+Karl D. Pfeiffer, John J. Holdzkom, Steven J. Lowe Atmospheric and Environmental Research
+Hampton, VA 23666
+karl.pfeiffer@aer.com, john.holdzkom@aer.com, steven.lowe@aer.com
+MODSIM World 2014
+   1. INTRODUCTION
+On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?" I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.
+-- Charles Babbage
+The natural environment is a critical input to operations and planning across tactical, operational and strategic levels of engagement within the Department of Defense (DoD). For the DoD simulation-enabled communities, this characterization of the natural environment and environmental effects is equally important to meaningful outcomes in training, mission rehearsal, acquisition, and studies and analysis (Lowe et al. 2007).
+In previous work we have examined the representation of the natural environment in a variety of current DoD simulations (Pfeiffer et al., 2013). In this study, we examine the OpenEaagles simulation framework, an open-source adaptation of the Air Force Extensible Architecture for the Analysis and Generation of Linked Simulations (EAAGLES). This Air Force framework and the open-source variant present generalized flight dynamics and sensor models for assembling linked constructive and virtual simulations (Hodson et al., 2006). We will focus on OpenEaagles, documenting the current capabilities for characterizing the natural environment and demonstrating some of the achievable weather effects.
+The remainder of this paper is organized as follows. In Section 2 we briefly present background on OpenEaagles and the underlying flight dynamics model, JSBSim. In Section 3, we then document the natural environment interfaces in the sensor performance and flight dynamics within OpenEaagles. We present some brief simulation results with and without weather in Section 4. We conclude in Section 5 with recommendations for future work.
+2. BACKGROUND 2.1 OpenEaagles
+EAAGLES was developed at the Air Force Simulation and Analysis Facility (SIMAF) as framework focused on reusable components for live and constructive simulations (Hodson et al., 2006). This framework has been used to develop simulations for the ground control station of the MQ-9 (Predator); the cockpit of the F-16; and an Integrated Air Defense System (IADS).
+OpenEaagles is an open source subset of EAAGLES released to the public in 2006. Though not maintained by the Air Force it does retain much of the functionality of the parent (Hodson and Gehl, 2008). The open source community, lead by contributors from the SIMAF community, maintains the current OpenEaagles baseline.
+OpenEaagles is not itself a simulation application but a collection of well-documented and interoperable C++ components that can be tailored and assembled to construct simulation entities. These entities can then interact along the common OpenEaagles framework for simple demonstrations. These entities can also be scaled up to communicate with other Live, Virtual or Constructive (LVC) simulations through a Distributed Interactive Simulation (DIS) exchange or over a High Level Architecture (HLA) back plane (Figure 1).
+This framework offers generalized models of sensors, communications and navigation systems, weapons, and other components geared to construction of aerospace and aerospace support systems. In Section 3 we will examine the use of the natural environment in each of these components. A cornerstone of OpenEaagles is the flight dynamics model, JSBSim, a mature, open source project already in development about 10 years when OpenEaagles was first released. We next present background on this flight dynamics model.
+2014 Paper No. 00000 Page 2 of 9
+
+Figure 1. OpenEaagles software overview, following Hodson and Gehl, 2008.
+2.2 JSBSim
+JSBSim is a general-purpose flight dynamics engine modeling six degrees of freedom (translation and rotation about three axes) for arbitrary vehicles (Berndt and DeMarco, 2009). Developed and maintained independently of OpenEaagles, JSBSim was designed as a batch simulator for flight dynamics and control systems (Berndt, 2004).
+Although out-the-window (OTW) views are not provided directly in JSBSim, several flight simulator projects, most notably FlightGear (Perry, 2004), use this physics engine for flight dynamics support. OpenEaagles, too, provides OTW support for JSBSim execution. This batch execution aspect of JSBSim means that the code can be run as a stand-alone application, modeling entities ranging in complexity from weather balloons to F-16 aircraft with detailed performance data available as text files or distributable over network sockets.
+Aircraft, engines and subsystems are modeled as data in JSBSim, presented as XML documents specifying
+necessary physical and dynamic attributes. The scripts used to “fly” these models are also XML documents (Berndt, 2004). This approach enables new airframe and system configuration testing with minimal coding. This approach also permits and encourages the open exchange of flight dynamics models in a standard format (see, for example, Jackson et al., 2004).
+In practice, the fidelity and utility of JSBSim have made it a core application in air traffic studies by MITRE. Both duPont Aerospace and Aerocross Systems have used JSBSim for human-in-the-loop testing of experimental aircraft and prototyping flight control systems (Berndt and Demarco, 2009). The US Department of Transportation has employed JSBSim as a flight dynamics application for investigating human pilot models, human factors and their impact on aircraft performance and safety (Zhang and McGovern, 2009).
+We conclude that both OpenEaagles and JSBSim represent reasonably mature simulation technologies. The open source roots of both projects make code and infrastructure largely transparent at the source code level. We next examine the integration and application of the natural environment, particularly the atmosphere, in these physics-based models.
+2014 Paper No. 00000 Page 3 of 9
+MODSIM World 2014
+ 
+3. INTEGRATION OF WEATHER IN OPENEAAGLES
+We have described the background for OpenEaagles and the supporting flight dynamics model, JSBSim. Reviewing the source code1, we now discuss the weather and weather effects on sensors and behaviors in this simulation framework.
+3.1 Communications Performance
+OpenEaagles components include conventional communications systems. The generalized model of a radio frequency (RF) entity within OpenEaagles does offer a parameter called systemTemperature. This parameter is intended to model the equipment temperature with no reference to the ambient temperature. While not used directly in the baseline systems, this parameter could be used in a tailored model to capture frequency drift or reduced signal to noise as a response to ambient temperature. This parameter is purely a settable and gettable attribute of the RF system, however, and the source and application of temperature data are left to the using application.
+3.2 Sensor Performance
+OpenEaagles also presents a generalized infrared (IR) subsystem configurable as a seeker (IrSeeker) processing the individual detections from some number of sensors (IrSensor). Detectable signatures are table- driven and configurable at run time, focused largely on aircraft plume characteristics.
+Supporting the IR subsystem is a one-dimensional atmosphere specified in terms of wave band and transmissivity. The bands and transmissivity are configurable at run time, but do not vary in space or time. This specification of the atmosphere in terms of radiative properties means that the calling application would need to estimate the transmissivity as an input to the IR sensor model.
+The caller would estimate transmissivity by using atmospheric temperature, humidity and aerosol data in a radiative transfer model (see, for example, Berk et al., 2005; or Clough et al., 2005). The source of these data could be a fixed standard atmosphere, climatological estimates, or meteorological forecasts, but the source is ultimately the responsibility of the caller. Updating these parameters based on time and location would also be the responsibility of the calling application.
+1 Availableathttp://www.openeaagles.org
+3.3 Flight Dynamics
+While the impacts of weather on sensor performance are well studied, the natural environment is also an important component in characterizing aircraft flight performance. Fuel burn rate, lift, specific excess power and other key performance parameters are dependent on the operating environment (see, for example, Pohlman and Kam, 2007).
+Within JSBSim, an atmospheric thermodynamic model is maintained for temperature, density, and pressure from sea level to the top of the simulation space (roughly 280K feet). These parameters are derived under the assumption of a US Standard Atmosphere (NOAA, 1976), with no temporal or spatial variability. While humidity is not explicitly modeled, this is present in the density term.
+The wind field is assumed to be zero unless specified as part of the execution script. A sample of this wind specification is given in Figure 2. Of note is that the wind direction is specified in radians, converted directly from conventional compass heading in degrees.
+Figure 2. Example of wind specification in JSBSim
+MODSIM World 2014
+                                                                                                  2014 Paper No. 00000 Page 4 of 9
+
+Figure 3. From the OpenEaagles infrared demonstration code mainIr, the example at top was run with an atmosphere transmissivity set to zero (opaque in the infrared bands), while the bottom example uses a physically
+realistic atmosphere with sufficient transmissivity that
+Also of note in Fig. 2 is that the wind speed is specified in feet per second (fps). An approximate conversion from fps to nautical miles per hour (kt) is a factor of 0.60, so that 10 fps is about 6 kt.
+Winds can be specified at any available vertical resolution, with linear interpolation used to satisfy arbitrary intermediate altitude requests. JSBSim will assume winds outside the specified altitudes are zero.
+Perhaps most important in this wind specification example is that the winds are a simulation event, which means changes can be driven by time of simulation or location of the simulated entity. In Fig. 2, the wind field is active for all simulation times greater than or equal to 0.05 seconds. In a more complex example the
+the IR missile can lock on the Red aircraft.
+wind field could be made to vary in time and space within the simulation run.
+Unfortunately, there is not at present a means in JSBSim to configure the thermodynamic parameters at run time through the XML script, similar to the wind field configuration. Source code inspection and trial runs with modified code show that the simulation atmosphere is initialized from the US Standard model early in simulation execution, even before the geographic location of the entity is established.
+Although both OpenEaagles and JSBSim have a sense of the natural environment, that natural environment is not integrated nor correlated. That is, the atmosphere presented to physics models inside JSBSim need not be consistent with the transmissivity values presented to
+2014 Paper No. 00000 Page 5 of 9
+MODSIM World 2014
+  
+the sensor modules in OpenEaagles. The calling application can enforce some consistency between the two, though the sense of standard atmosphere internal to JSBSim is not easily modified, and the standard atmosphere is often not representative (see, for example, Mughal and Hamayun, 2005).
+We next present some examples with and without weather in the simulation run, and examine the impacts on sensors and behaviors in OpenEaagles and JSBSim.
+4. APPLICATION OF WEATHER IN OPENEAAGLES
+The Environmental Data Cube Support System (EDCSS) delivers an integrated natural environment to the simulation-enabled communities across the DoD (Pfeiffer et al., 2013). EDCSS supports native simulation-ready formats for OneSAF, JCATS, JSAF, AWSIM, WARSIM and other systems, as well as text and graphics products for training audiences and execution control or white cell management.
+The experimental runs documented in this section were conducted with EDCSS-supplied natural environment representations, with a simple interface to OpenEaagles developed to support this research.
+4.1 Sensor performance
+The OpenEaagles baseline includes an example application using the infrared sensor module. This simple scenario requires the targeting of two opposing force (red) aircraft with an IR weapon. The atmosphere, specified as a set of transmissivities significantly alters the targeting performance, marking the difference between success and failure (Fig. 3).
+Figure 4. An example of the OpenEaagles atmosphere specification for the IR sensor.
+An example specification for the atmosphere is given in Fig. 4. Waveband centers are specified in microns, and transmissivity is in km-1. This sample produced the successful case in Fig. 3, while the failing case was run
+MODSIM World 2014
+with all transmissivities set to zero. While the all-zero case is not necessarily physically realistic, it does help establish that the physics models are responding to different natural environments.
+We note, again, that the atmosphere as specified in Fig. 4 has no spatial or temporal characteristic. For the purpose of the simulation it is valid everywhere and for all time. Given the tactical nature of the scenario in mainIr this is likely sufficient to achieve some realism in training or rehearsal. Meaningfully sharing the natural environment across multiple entities and larger geographic domains would require more care and precision in specifying the atmosphere.
+4.2 Flight performance with realistic temperature
+Although JSBSim does not offer an easy means to alter the standard atmosphere, code modifications were made to permit the injection of a realistic temperature profile at run time. These code modifications made it possible to briefly examine the impact of temperature changes on flight performance factors like fuel burn rate.
+Table 1. Soundings used in flight performance runs.
+Using the baseline JSBSim aircraft model for a Cessna 310, a simulated flight from Norfolk (ORF) to Boston (BOS) was executed using both the standard atmosphere model intrinsic to JSBSim and a sounding from August over Baghdad, Iraq (ORBB). Although this is not a realistic profile for the northeastern US, the extreme temperatures highlight flight performance impacts from the natural environment. The sounding from Baghdad and the matching level data for the US Standard Atmosphere appear in Table 1.
+JSBSim scripting facilities include an autopilot flight control system. The simulated aircraft was directed to take off from ORF, level off at 5000 feet, and then proceed to BOS, starting descent when within 20 miles of the airport. The simulated flight path for both runs is shown in Fig. 5.
+Although the differences between the two temperature profiles are distinct, and sharpest below 5000 feet in the operating region of the flight, the differences in fuel
+  Altitude (ft)
+     Baghdad Temperature
+ Standard Atmos Temperature
+    R
+   F
+   R
+  F
+   62.3
+   565.5
+   106.5
+   518.4
+  59.4
+   2398.3
+   551.5
+   92.5
+   510.1
+  51.1
+   4868.8
+    538.9
+     79.9
+     501.3
+   42.3
+    10357.6
+ 519.4
+ 60.4
+  481.7
+22.7
+   19357.0
+    484.7
+     25.7
+     449.6
+   -9.4
+    25000.0
+ 460.9
+ 1.9
+  429.5
+-29.5
+   31922.6
+   438.3
+    -20.7
+   404.8
+   -54.2
+                                2014 Paper No. 00000 Page 6 of 9
+
+consumption were minor for this scenario. The simulation using a standard atmosphere arrived at BOS consuming 47% of the initial fuel load, while the simulation using the Baghdad profile consumed 44% of the initial load. The slight differences in arrival time (Fig. 5) amount to about 3 minutes of simulation time, with the “warm” atmosphere lagging the standard atmosphere run by 188 seconds.
+MODSIM World 2014
+While the use of a realistic atmosphere and atmospheric effects is important to sensor performance, our results suggest that the impacts of a realistic atmosphere on flight dynamics are subtler and will require a more complex scenario to be discerned. We next examine the use of realistic wind fields in JSBSim and the impact on flight performance.
+4.3 Flight performance with realistic winds
+The same C-310 scenario (ORF to BOS at 5000 feet) was used for investigating the impact of a realistic wind profile on flight dynamics.
+Figure 7. Flight path of Cessna C-310 operating in a no wind environment (solid blue) and in a realistic but strong head-wind environment (dashed green).
+Because this flight is headed (by great circle) due northeast, a wind profile was crafted to maximize the head wind on the route. A physically reasonable though extreme 80 kt head wind was applied in the with-wind case to highlight impacts to flight performance.
+  Figure 5. Flight path of Cessna C-310 in standard atmosphere (solid green) and in the extreme Baghdad sounding (dashed blue).
+This time lag is clearer between the two simulations with a trace of the aircraft altitude with time (Fig. 6). Inspection of the simulation logs shows only minor differences in the lift profiles, and these are confined to the take off and climb to altitude.
+   Figure 6. Altitude trace with time for the simulated aircraft in a standard atmosphere (solid blue) and extreme Baghdad sounding (dashed green).
+2014 Paper No. 00000 Page 7 of 9
+
+ Figure 8. Altitude trace with time for the simulated aircraft operating in a no wind environment (solid blue) and in a strong head-wind environment (dashed green).
+The flight paths of the two simulations are similar but show some corrections by the autopilot along the route (Fig. 7). Differences in fuel consumption, however, are distinct, with only about 14% of fuel remaining in the with-wind case. This simulation also required an additional 69 minutes to arrive at BOS (Fig 8). The control (no wind) case was identical to the standard atmosphere case in Sec. 4.2.
+5. SUMMARY AND CONCLUSIONS
+Using the current opportunities for natural environment integration within OpenEaagles and JSBSim, we have demonstrated a small set of achievable environmental effects on sensors and flight performance. While the current atmospheric models supporting sensors in OpenEaagles and flight dynamics in JSBSim are uncorrelated, a calling application could enforce this consistency. Modifications were undertaken to introduce a realistic temperature profile in the flight dynamics model, though this appeared to have only minor impact on parameters like lift and fuel consumption.
+Future investigations could further explore the impact of realistic thermodynamics from the natural environment on simulated flight dynamics. Although our results showed little effect, the scenarios were simple and only a single airframe was investigated.
+Sensor performance remains a challenge in the natural environment. While OpenEaagles provides some entities for initial investigation, further studies could explore more complex entities responding to a three or four-dimensional atmosphere, though still constructed within the OpenEaagles framework and supported by
+MODSIM World 2014
+an authoritative representation readily available through EDCSS.
+Finally, the introduction of realistic wind profiles in to the OpenEaagles flight dynamics appears to be a tremendous gain in realistic flight performance, though further studies could better quantify this impact. The breadth and depth of data available from a more robust interface to EDCSS would significantly improve the external validity of these studies.
+ACKNOWLEDGEMENTS
+This research and paper were produced under contract N61339-10-C-0001 with management oversight from the Air Force Director of Weather. The Modeling and Simulation Executive Agents for Air, Space, Ocean and Terrain, NAVAIR, and MSCO have all provided invaluable technical guidance and operational insight in to the development of this work. The support of these organizations is gratefully acknowledged.
+REFERENCES
+Babbage, C. (2011). Passages from the Life of a Philosopher. Cambridge University Press.
+Berk, A., Anderson, G. P., Acharya, P. K., Bernstein, L. S., Muratov, L., Lee, J., & Lewis, P. E. (2005). MODTRAN 5: A reformulated atmospheric band model with auxiliary species and practical multiple scattering options: update. In Defense and Security (pp. 662-667). International Society for Optics and Photonics.
+Berndt, J. S. (2004). JSBSim: An Open Source Flight Dynamics Model. In 2004 AIAA Modeling and Simulation Technologies Conference and Exhbit.
+Berndt, J. S., & De Marco, A. (2009). Progress on and usage of the open source flight dynamics model software library, JSBSim. In Proceedings of the 2009 AIAA Modeling and Simulation Technologies Conference, Chicago, AIAA Paper (Vol. 5699).
+Clough, S. A., Shephard, M. W., Mlawer, E. J., Delamere, J. S., Iacono, M. J., Cady-Pereira, K., ... & Brown, P. D. (2005). Atmospheric radiative transfer modeling: A summary of the AER codes. Journal of Quantitative Spectroscopy and Radiative Transfer, 91(2), 233-244.
+Hodson, D. D., Gehl, D. P., & Baldwin, R. O. (2006, January). Building distributed simulations utilizing the EAAGLES framework. In The
+2014 Paper No. 00000 Page 8 of 9
+
+Interservice/Industry Training, Simulation & Education Conference (I/ITSEC) (Vol. 2006, No. 1). National Training Systems Association.
+Hodson, D. D., & Gehl, D.P. (2008). Design and Implementation of Virtual Simulations. Tutorial session at The Interservice/Industry Training, Simulation & Education Conference (I/ITSEC) (Vol. 2008, No. 1). National Training Systems Association.
+Jackson, E., Hildreth, B., York, B., & Cleveland, W. (2004). Evaluation of a candidate flight dynamics model simulation standard exchange format. In AIAA Modeling and Simulation Technologies Conference and Exhibit.
+Lowe, Steven J., R. A. Siquig, and E. A. Kihn (2001). The Infrastructure Applications Supporting the Integrated Natural Environment Authoritative Representation Program Process (INE ARP), 17th International Conference on Interactive Information and Processing Systems.
+Mughal, M. A. and Hamayun (2005). Statistical Modeling and Simulation of Non-standard Atmosphere. In 2005 AIAA Modeling and Simulation Technologies Conference and Exhibit (pp. 1-6).
+National Oceanic and Atmospheric Administration (NOAA) (1976). US Standard Atmosphere. NOAA- S/T76-1562. Washington, DC: US Government Printing Office.
+Perry, A. R. (2004). The FlightGear flight simulator. In
+2004 USENIX Annual Technical Conference, Boston, MA.
+Pfeiffer, K., J. Holdzkom, and S. Lowe (2013). Representing the Natural Environment in Defense Modeling and Simulation Activities: A Current Perspective, SISO Spring Interoperability Workshop 2013, San Diego, CA.
+Pohlman, M., & Kam, C. (2007). Energy based aerodynamic modeling: increasing fidelity of fixed- wing constructive entities. In Proceedings of the 2007 Spring Simulation Multiconference-Volume 3 (pp. 327-336). Society for Computer Simulation International.
+Zhang, Y., & McGovern, S. (2009). Mathematical Models for Human Pilot Maneuvers in Aircraft Flight Simulation. In 2009 International Mechanical Engineering Congress and Exposition.
+2014 Paper No. 00000 Page 9 of 9
+MODSIM World 2014

@@ -1,0 +1,263 @@
+Design of a Game-based Modeling and Simulation Environment with Implementation to Examine Task-Unrelated Thought While Driving
+Kevin F. Hulme, Ph.D., CMSP
+School of Engineering and Applied Sciences (SEAS)
+Buffalo, New York hulme@buffalo.edu
+Panagiotis Ch. Anastasopoulos, Ph.D., Thomas Androutselis, Uger Eker
+University at Buffalo, Engineering Statistics and Econometrics Application (E-SEA) Research Laboratory
+Buffalo, NY
+panastas@buffalo.edu, tandrout@buffalo.edu, ugureker@buffalo.edu
+ABSTRACT
+MODSIM World 2016
+    In 2013, more than 3,000 people were killed (and more than 420,000 injured) in motor vehicle crashes involving distracted drivers. There are three primary types of driving distraction: visual (e.g., eyes off the road), mechanical (e.g., hands off the wheel), and cognitive (e.g., mind off the task). Regarding the latter, distractions internal to the driver are defined as “the decoupling of attention from the task at hand, coincident with a shift in focus to internal thought processes”. Recent studies estimate that internally-distracted driving is the least understood and most deadly form of distracted driving, contributing to more than 60% of fatal distracted driving accidents.
+In this paper, we describe the design, development, and implementation of a game-based simulation environment within which to induce and measure a state of internal distraction while driving. This paper will focus on technical development details for the driving simulation environment, including a) scene graph and visualization model design, b) simulation models for vehicle dynamics, motion and sound cues, c) an artificially intelligent traffic model, and d) an accompanying scoring model to provide drivers with concrete performance feedback.
+The environment has been deployed on a small cohort of graduate students enrolled in a Traffic Safety engineering course. Participants performed the experiment, which included self-report to assess elements of driving history and style, and trait levels of task-unrelated thought. Participants endeavored three drives aboard the high-fidelity simulator (acclimation, baseline, and distracted); a selection of the observed results (and accompanying analysis) will likewise be reported here.
+ABOUT THE AUTHORS
+Kevin F. Hulme, Ph.D., is the technical lead of the Motion Simulation Laboratory within the School of Engineering and Applied Sciences at the University at Buffalo. His primary areas of interest include the custom development of ground vehicle simulations for applications in: clinical research, education and training, human factors and human behavior studies, and next-generation transportation and safety research. Dr. Hulme received his Certified Modeling and Simulation Professional (CMSP) designation in 2015.
+Panagiotis Ch. Anastasopoulos, Ph.D., is an Assistant Professor with the Department of Civil, Structural, and Environmental Engineering at the University at Buffalo. He also serves as the Director of Engineering Statistics and Econometrics Application (E-SEA) Research Laboratory, and the Associate Director of the Institute for Sustainable Transportation and Logistics (ISTL). His primary research interests include statistical/econometric modeling, methods and applications in engineering problems, traffic safety, reliability and sustainability of infrastructure systems, crisis management, transportation planning, and engineering economics.
+Thomas Androutselis and Ugur Eker are Graduate research assistants with the Department of Civil, Structural and Environmental Engineering at the University at Buffalo, and participating members of the E-SEA Research Laboratory under the direction of Dr. Anastasopoulos.
+2016 Paper No. 38 Page 1 of 11
+
+Design of a Game-based Modeling and Simulation Environment with Implementation to Examine Task-Unrelated Thought While Driving
+Kevin F. Hulme, Ph.D., CMSP
+School of Engineering and Applied Sciences (SEAS)
+Buffalo, New York hulme@buffalo.edu
+INTRODUCTION
+Panagiotis Ch. Anastasopoulos, Ph.D., Thomas Androutselis, Uger Eker
+University at Buffalo, Engineering Statistics and Econometrics Application (E-SEA) Research Laboratory
+Buffalo, NY
+panastas@buffalo.edu, tandrout@buffalo.edu, ugureker@buffalo.edu
+MODSIM World 2016
+    Each day in the United States, more than one thousand persons are injured in distracted driver crashes (NHTSA, 2015). All vehicle distractions have the potential to endanger driver, passenger, and bystander safety, and can be either internal or external both to the vehicle AND its operator. There are three primary types of distraction: visual (i.e., taking eyes off the road), mechanical (i.e., taking hands off the wheel), and cognitive (i.e., taking mind off the task of driving). Regarding the latter category, recent studies estimate that internally-distracted driving is the most deadly and least understood form of distracted driving. Distractions internal to the person (i.e., mindlessness, being lost-in-thought, mind wandering, task-unrelated thought) can be defined as “the decoupling of attention from the task at hand coincident with a shift in focus to internal thought processes” (Smallwood et al., 2003).
+Epidemiological studies have shown that mind wandering while driving, by decoupling attention from visual and auditory perceptions, can substantially compromise the ability of the driver to incorporate information from the surrounding environment (Galéra et al., 2012; Glynn, S., 2012). Advances in new technologies inside the vehicle may enable improved engagement in concurrent activities (i.e., multi-tasking) while driving, however recent studies have shown that cognitive distractions are prevalent even when drivers keep their hands on the wheel and eyes on the road. As cognitive “workload” increases, brain function (and along with it, reaction time) tends to decline. In turn, this results in reduced scanning of the road, missed visual cues, and a heightened tendency for drivers to “look but not see” (White, 2013). Recent studies (Killingsworth and Gilbert, 2010; Kane and McVay, 2012) have examined the intricacies of internal distractions and task-unrelated thought. Particularly while driving, adults who mind wander are more likely to be responsible for a crash and are unknowingly threatening roadway safety. External distractions (e.g., cell phones) are known to be linked with crashes, but inattention arising from internal distractions remains poorly understood within the context of road safety. Drivers may feel completely aware of the surrounding environment, but actually be out of conscious contact with it (Hampton, 2013). Based on data published from a recent analysis (based upon 2010-2011 Fatality Analysis Reporting System (FARS) data; Erie Insurance, 2013), a resounding 62% of all driving fatality cases involving distractions have been attributed to “internal” sources (e.g., inattention). By contrast, the second deadliest source of distraction, cell phone usage, accounts for 12% of fatalities. Complacency is what causes so many drivers to feel they can take their eyes (and mind) off the road. After a driver has been driving for a while, they get comfortable and their actions demonstrate a tendency to forget how dangerous the act of driving can be.
+In this paper, and specifically for the Visualization and Gamification track, we present details of the design, development and pilot implementation of a game-based simulation environment whose intention is to analyze this complex problem. Specifically, the environment (and the accompanying experiment) have been designed to induce and subsequently measure a state of internal distraction during driving activities within a 6-DOF motion simulator. This paper describes technical development details for the driving simulation environment, including a) scene graph and visualization model design, b) simulation models for vehicle dynamics, motion and sound cues, c) an artificially intelligent traffic model that accompany the human subject, and d) a scoring model to provide drivers with concrete performance feedback and a means for comparison between “baseline” and “distracted” driving exercises. The environment is then subsequently employed on a small cohort of students enrolled in a graduate civil engineering course. The content of this paper primarily emphasizes two of the MODSIM 2016 Conference Themes: “Better Living Through Simulation” (i.e., the described tool will enable a greater understanding of the mechanisms behind internal distractions while driving, and could have far-reaching benefits on public health and transportation safety), and “Lifelong Learning” (i.e., gamification of instruction materials tends to enhance motivation of the trainee, which subsequently provides the educator with a greater likelihood of achieving the training objectives).
+2016 Paper No. 38 Page 2 of 11
+
+MOTIVATION AND METHODOLOGY
+Cognitive distraction, particularly, internal distraction / task-unrelated thought while driving continues to be a major public health concern. Internal Distraction is a prevalent cognitive state; recent studies have demonstrated that adult’s mind-wander by as much as 30 to 50% of their waking lives (Schooler et al., 2011). A common method of quantifying a state of internal distraction is known as Experience Sampling, and involves periodically interrupting individuals during a task and querying the extent to which their attention was on-task (Smallwood and Schooler, 2015). However, the mere act of querying an individual to make note of their current state inherently disrupts the participant to lose their sense of distraction or wandering mind (if present). As well, self-report questionnaires have been used to measure the occurrence of task-unrelated thought following the completion of a task (Matthews, et al., 1999); one example is the recently established Mind Wandering Questionnaire (MWQ) (Mrazek et al., 2013). Obviously there are inherent limitations with self-report (e.g., reliability, bias) which therefore must be supplemented by other forms of data. These and similar methods of measuring internal distraction have been used in many disciplines, including recent attempts (He et al., 2011; Yanko and Spalek, 2012; Martens and Brouwer, 2013) to study the effects on driving performance. In the current paper, we will expand on the state-of-the-art by exploring this significant concern with high-fidelity game-based modeling and simulation. These technologies allow us to empirically examine cause-and-effect analyses that could ultimately result in countermeasures that will have critical implications for traffic/transportation safety, vehicle design and manufacturing, and future legislation and public policy.
+In this paper, and for the benefit of the Visualization and Gamification track, we focus on technical details (e.g., programming, modeling, simulation, computation) pertaining to the design and development of the game-based environment which is then implemented for induction/measurement of task-unrelated thought while driving. In the next section, we discuss our Experimental Design, including the primary hardware, software, and measurement details of our framework. After this detailed presentation, we describe the graduate class cohort that participated in a class experiment that made use of our game-based environment (during the Fall, 2015 academic semester). Selected results from this cohort will be presented, focusing on quantitative performance data generated by the game-based simulator itself. The paper will then summarize, conclude, and suggest future research avenues.
+ENVIRONMENT DESIGN
+In this section, for the benefit of the Visualization and Gamification track, we provide a detailed overview of the design of the simulator. Specifics will be offered on a) construction of and intercommunication between the hardware that comprises the simulator, b) modeling details of the software environment that has been constructed for distraction (and other human factors and human behavior ) analyses pertinent to simulated driving, and c) measures that have been designed specific for the experiments described in this work (i.e., task-unrelated thought).
+Simulation Hardware
+In this subsection, we describe the operability of our simulation hardware by referring to the I/O pipeline. Refer to Figure 1 for a high-level overview. In the case of our simulator, input is provided solely by the on-board controls, which consist of a Fanatec GT2 steering wheel (which features 900 degrees of rotation, and force-feedback capability), and ECCI TrackStar 6000 pedals (which feature spring resistance and brake pedal force modulation). The input signals are delivered over a long physical length (i.e., from the input equipment to the simulation workstation) by way of a USB over Ethernet cat5e Extender, by StarTech. The input is then received by the simulation workstation, a Dell Precision T7500 Tower Workstation (including dual-core 2.16 GHz Intel Xeon processors, 12 GB Memory, and an EVGA nVidia GeForce 590GTX graphics processor). This workstation has 6 monitors (one for each visualization channel), and controls all aspects of our simulations. Refer to Figure 2 for a close-up view of our simulation control station (foreground), with the simulator itself seen in the background.
+The control input, once received by the simulation workstation, is subsequently used for a numerical analysis, select details of which are described in the next subsection. The outcome of that analysis is three primary forms of rendering, which further involves our hardware. These are outputs visual (V), aural (A), and motion-based (haptic, H) in nature. Visual outputs are delivered by way of the two DVI outputs on the Nvidia graphics card (one for the FORWARD view, and one for the REARWARD view) into two Matrox TripleHead2Go (Digital Edition) external display adapters. These display adapters serve to expand each graphics card output channel into three distinct sub- channels (i.e., Left, Center, Right). From there, each of the six video signals is delivered to an Extron 109xi
+2016 Paper No. 38 Page 3 of 11
+MODSIM World 2016
+
+Computer-Video interface that allows computer-video resolutions to be effectively “duplicated”, and converted for output (both) to projectors and flat panel displays. As indicated, these duplicated signals are then delivered to our two final mechanisms: a) for the participant, screen visuals are projected onto a Ring Screen (by M1 Interactive), a circular 16’ diameter, 6’ high projection surface that provides the driver with a fully immersive 360 degree field-of- view while driving. Screen imagery is generated by way of six Sony VPL-FH36B LCD Projectors (featuring WUXGA native resolution). And finally, b) for the simulator operator/monitor, imagery is projected onto a 3x2 array of LCD monitors with the same native resolution.
+Figure 1 – Simulator Hardware Information Flow
+Figure 2 – Simulator Control Figure 3 – Simulation field-of-view characterized
+Motion-based (Haptic) outputs are delivered to/from a dedicated Ethernet card installed on the simulation computer from/to the Ethernet port physically installed on our motion-platform (the 2000E electrically-actuated platform, manufactured by Moog). Data is transmitted between both endpoints by way of a dedicated Cisco RVS4000 GBit router. The 2000E is a six degree-of-freedom (roll/pitch/heave/surge/yaw/sway) motion platform powered by six DC servomotor actuators. Our passenger cabin (a 1999 Ford Contour) has been augmented to minimize excess weight, and includes: 2 front seats w/ seat belts, a steering wheel and pedals (described previously), a full front vehicle console (for on-board instrumentation), rear and side-view mirrors (for rearward view and blind-spot verification), and an emergency stop switch. Send/receive commands to/from the motion platform are issued (via
+MODSIM World 2016
+   2016 Paper No. 38 Page 4 of 11
+
+keyboard) and monitored (via computer monitor) using a KVM switch (transmitter/receiver pair), the signals of which are delivered across cat5e Ethernet cable. Finally, the audio signal is delivered from the S/PDIF port on our simulation computer into Gefen DtoA converter box, and from there, to a 16 input channel/4 output channel mixing board. From there, simulation sound cues are amplified out to the driving participant by way of a multi-channel ATI Power Amplifier, and subsequently delivered to a 2.1 channel (Left/Right/subwoofer) sound system installed about the physical cabin of the simulator.
+Simulation Software
+With an understanding of the general operability of the simulator hardware, in this subsection, we describe the operability of our accompanying simulation software. Note that all aspects of our simulation software have been developed using C/C++ as a programming basis. Referring back to the I/O pipeline (Figure 1), our software must first be programmed to manage input signals. For this purpose, DirectX/DirectInput has been implemented, which is a feely available Microsoft API for collecting input from a computer user, which in our case, amounts to two USB gaming devices (i.e., the steering wheel and pedals).
+The simulation computer then uses this information to perform a large-scale numerical analysis, the outputs of which are used to render the visual, aural, and haptic elements of the simulation. Numerical integration is required to solve the state equation outputs (e.g., longitudinal and lateral velocity, yaw angle, yaw rate, longitudinal/lateral position) that govern the physics of the driven vehicle (as dictated by real-time user inputs). In our case, a simple numerical algorithm (Euler’s Method: Equation 1) is used for this purpose. Updates to the state equations have to take place rapidly, so the step size (h) between the updated and previous state is assigned to be 1/60 second, which is conducive to a “smooth” simulation for all output rendering types.
+(1)
+The vehicles that accompany the human-driven vehicle in the simulator are represented by a physics-based traffic model that accurately reflects errors in driver perception, decision-making, and actions. For this simulation, we have developed an Artificially Intelligent Traffic Model (AITM) as an alternative for commercially available “microscopic” traffic simulators, whose operability is often more concerned with gross vehicle behavior (i.e., with individual vehicle movements that are not fluid) and therefore not suitable for direct integration with live human subjects. The preliminary development of the core components (i.e., linear motion, collision detection, street lights, stop signs, and lane changing) of the AITM were previously described in detail in (Raghuwanshi, 2014).
+Once the inputs are captured and processed, and the subsequent numerical analysis performed (each frame of the simulation), our simulation then proceeds to output rendering, of which there are three primary types: visual, haptic, and aural. The visuals in our simulations have been custom-designed in OpenGL, an industry-standard C++ based programming API. As mentioned previously, we strive for a 60 Hz. update frame rate to ensure no screen flicker. Windowing is accomplished using GLUT, is the OpenGL Utility Toolkit. At present, our screen configuration is generated by a series of six viewport “wedges”, each with a 60 degree field-of-view, and each displayed onto the circular surface of the projection screen. Each viewport wedge has a display resolution of 1360x768 pixels, which culminates into a total resolution of 8160 (circumference) x 768 (height) total pixels. Refer to Figure 3. To create the illusion that one seamless scene image appears before the simulation participant, edge blending (e.g., Bourke, 2004) is employed to stitch together adjacent viewports. Furthermore, to project each viewport image onto a curved surface, screen “warping” is likewise employed. In our case, warping is accomplished by way of our projector capabilities and through the use of a software called PixelWarp Pro, which also features an effective edge blending capability. Figure 4 displays our motion platform and passenger cabin located in the center for our Ring Screen simulator. Likewise, Figure 5 depicts a representative driver-view image captured within the game-based simulation environment, including a number of traffic vehicle whose physics-based motion is generated by the previously described AITM.
+OpenAL (Audio Language) is employed to provide aural cues; it is an easy-to-use API for adding sound events into a graphical simulation. The general procedure is relatively simple: load a sound file (.wav file), create a “buffer” to
+MODSIM World 2016
+  y’(t) = f(t, y(t)), where: y(to) = yo yn+1 = yn + h*f(tn , yn)
+(for all vehicle states)
+2016 Paper No. 38 Page 5 of 11
+
+store the sound file, then create a sound “source” with audio properties (gain, pitch, location), then attach a sound source to an event, and finally, play the sound when the event takes place. Examples in our simulation include: vehicle ignition, engine idle (which is proportional to the calculated speed of the vehicle), squealing tires (which is proportional to the calculated tire slip angles), cone strikes (or other “collision” events inside the driving environment), spinout/crash events, and simulation termination (e.g., vehicle shutdown, high score verbal cues).
+On the haptic side, motion cues are delivered from the simulation computer to the 2000E motion platform by way of TCP/IP Socket “datagrams”, which are data packets that contain the information necessary to make the motion platform cue as desired. A Win32-ported Posix Thread (or Pthread) (Johnson, 2012) is created, which is a parallel execution model that allows our simulation program to control multiple different flows of work that overlap in time. Effectively, this allows our motion platform communication protocol to execute as its own parallel instance. In our case, the computer vehicle state outputs (calculated based upon real-time driver input) are converted into the six DOF’s (roll/pitch/heave/surge/yaw/sway) that define the motion of the platform. Due to the finite stroke length of each of the motion platform actuators, this conversion involves scaling, limiting, and tilt coordination (Romano, 2003); sub-processes of a methodology known as washout filtering (e.g., Bowles et al., 1975). The updated DOF’s are delivered by the simulation computer to the computer on-board the motion platform. Once received, the state of the platform is updated, and the platform continues to send datagram packets to the simulation computer (and vice- versa) for the duration of the simulation.
+Figure 4 – Simulator Hardware
+Figure 5 – Driver-view (w/ AITM) Figure 6 – Course Map for Internal Distraction drive
+Simulation Measures
+In this subsection, we describe the specific implementation of our driving simulation (hardware/software) for this paper. Here, we implement our Gamified driving simulation utilities to investigate a critical public health issue: internal distractions (i.e., task-unrelated thought) while driving. As such, during the implementation of the above- described simulation tools, we have programmed our simulator to capture and report a number of critical driver performance measures, captured at a high frequency. The selected data output rate is user defined, up to the typical graphics display frame rate (60 Hz.) Key performance ratings include the following:
+ Travel Speed: is the driver traveling at or under the posted speed limit on each road segment? What are the maximum and average travel speeds for the entire excursion? These details provide insight if a participant is driving too recklessly, or too conservatively.
+ Stop Signs: is the driver coming to a full and complete stop, or does the driver tend to “roll” through an intersection governed by a stop sign? Clearly, in a simulation environment, the experimenter wants to promote “positive training” and discourage inappropriate behaviors in this regard. As well, certain stop sign
+MODSIM World 2016
+     2016 Paper No. 38 Page 6 of 11
+
+intersections may be explicitly designated as “no right on red” (NROR), and these compliance behaviors (or
+lack thereof) are also demarcated on the report.
+ Street Lights: did the driver come to a full and complete stop at a red light, or legally execute a right-on-red
+turn? Did the driver make the correct decision to proceed through a caution (yellow) light, based on their travel speed, and their distance from the intersection when the light began to change state? The simulation software monitors this human behavior as each signalized intersection is approached and ultimately traversed.
+To demonstrate our methodology, a sample simulator data report is seen in Figure 7. As shown, the score sheet is formatted in an easy-to-interpret manner, and displays roadway speeds, speeds at stop sign zones (and associated penalties), and behavior at street light intersections for each segment encountered. To provide further concrete feedback, and illustrate patterns of driving behavior with visual detail, we have written a supplementary Matlab script to plot nuanced behaviors pertaining to travel speed and lane maintenance (e.g., fluctuations in speed and/or lane swerving when a driver is cognitively distracted). Refer to Figures 8 and 9, which display representative sample plots for these data, respectively. Note that the large red circles represent major intersections along the excursion path.
+MODSIM World 2016
+   Figure 8 – Lane Position
+Figure 7 – Sample Simulator Score Sheet (excerpt) Figure 9 - Velocity
+With a detailed description of our game-based driving simulation environment in hand, including critical output tools (developed in-house) that can be leveraged to quantify driver performance, in the next section, we provide basic details on our experimental cohort, and likewise describe the current experiment in further detail\
+PILOT COHORT AND EXPERIMENT DESCRIPTION
+Using the above described game-based driving simulation environment, the authors performed a series of experiments for a graduate civil engineering course during the Fall, 2015 semester. The course is entitled CIE 500PA: Traffic Safety, and elective graduate course in the Department of Civil, Structural, and Environmental Engineering at the University at Buffalo. In a previous experimental design (Golshani et al., 2015a, 2015b) for this graduate course, we investigated observed vs. perceived aggressive driving behaviors (e.g., frequency of tailgating, speeding, braking abruptly, signal violations). A number of socio-demographic characteristics (age, race), driving experience and exposure (accident history, driver experience), and behavioral characteristics (speeding habits, caffeine usage, fatigue) were examined. To supplement this body of knowledge, we sought a new challenge to tackle using the simulator. The purpose of the current experiment was to expose students to a practical, hands-on, experiential environment to analyze another relevant modern-day traffic safety problem: distracted driving. Specifically, in this experiment, we analyze cognitive distraction in the form of task-unrelated thought, which, as
+ 2016 Paper No. 38 Page 7 of 11
+
+outlined earlier, has recently been surmised to be the leading contributor to distracted driving fatalities, and by a wide-margin.
+In a similar, earlier study (Hulme et al., 2015), we experimented with the Unusual Uses Task (UUT; Guilford, 1967). In our design, just before the drive, participants were told that after they complete the driving task, they will be asked to generate a list of as many atypical or “unusual uses” for a common item (e.g., a tissue, a ping pong ball) as they can within a limited timeframe. Participants were further told that they will be rewarded based on the originality and fluency of their collective responses. The UUT is thought to be a measure of creativity intellect, and has been shown to facilitate a state of mind-wandering (Baird, et al., 2012). In this experiment, we complementary, but fundamentally different approach. The course map for the excursion is shown in Figure 6. The drive is approximately 3 miles long, along streets with speed limits ranging from 30 to 45 mph, with 4 stop signs and 5 street lights (including one “no right on red”) along the way. Our instructions to the students were to drive safely along with mild, semi-intelligent traffic vehicles; remain in your lane, fully obey all stop signs and street lights, and abide by the posted speed limits. Students were given 12 minutes to complete the course, and all students drove the course twice: “Baseline” and “Distracted”. At the beginning of the course (see “Start”), during the “Distracted” excursion, we issued a visual brain teaser intended to induce task-unrelated thought during the drive. Refer to Figure 10. After allowing each student driver to see this Figure, we simple asked them: “how many total squares are there in an 8x8 chessboard”? After showing the figure, and asking the question, they were tasked to begin their excursion.
+At the approximate half-way point on the course (i.e., the Left Turn at the Intersection of route 324), we asked students for their final answer for the first challenge (the correct answer is 204), and presented the driver with a second distractor challenge at the streetlight. The question we asked was: “How many times can you count the digit 3 among all numbers from 300 to 400?” At the completion of the drive (see “Finish”), we asked students for their final answer for the second challenge (the correct answer: 120). With this approach, we wanted to attempt to make a number of observations: did either challenge have a greater tendency to cognitively distract the driver? In other words, by observing the simulator-captured data traces (i.e., as shown in Figures 7-9), could we discern a greater level of distraction between the first and second-halves of the excursion, both when compared to each other, and (especially) when compared to the “Baseline” drive? As the emphasis of this paper is on the design of the environment, many of these implementation details are left for future analysis. In the next section however, we present a high-level overview of our results from this implementation.
+PRELIMINARY RESULTS AND DISCUSSION
+Figure 10 – Distractor Challenge #1
+In this paper, our focus has been on the “Gamification” – the design and development of a game-based driving simulator environment - with which to analyze critical traffic safety issues pertinent to public health. For the current deployment, we offer a high-level sampling of our observations relating to task-unrelated thought while driving. For the present analysis, we focus largely on the simulator-generated Score Sheets (e.g., Figure 7) that were captured during each participant excursion, including “Baseline” (Pre) and “Distracted” (Post) drives. Refer to Table 1, which presents an overview of our findings. The yellow columns are labeled “Pre/Post” for each set of metrics, which include the following: Speed Score, rated from 0 to 100 (i.e., did the driver obey posted speed limits), Stop Sign score, rated from 0 to 100 (i.e., did the driver come to a full and complete stop at each stop sign), Street Light score (i.e., did the driver handle the green/yellow/red “state” of the traffic signal appropriately). In the final two columns, we likewise included metrics for the maximum and average travel speeds (miles per hour) for the entire excursion. Further note that down the rows, we have listed results for our two “practice” participants (P1 and P2), as well as the primary seven students in our Traffic Safety course cohort. The summarized results at the bottom of the Table (i.e., the calculated mean and standard deviation for each performance category) have been aggregated only to include the seven graduate students from the course.
+MODSIM World 2016
+  2016 Paper No. 38 Page 8 of 11
+
+When we observe these results as a collective whole, they don’t appear to provide much meaningful (or perhaps expected) insight. In the first three columns, one might expect the scores to decrease, from Pre to Post, for our primary three score sheet ratings. This would be indicative of degraded performance when comparing “Baseline” to the “Distracted” drive. In the case of “Speed”, the average results are almost equal, and in the case of “Stop Signs” and “Street Lights”, the average scores actually increase slightly. As well, when considering the entire student cohort, maximum and average speeds (shown on the right of the Table) remained relatively constant between the Pre (“Baseline”) and Post (“Distracted”) drives. On the surface, these preliminary results seem largely counterintuitive.
+MODSIM World 2016
+    PRE POST
+  PRE POST
+  PRE POST
+  PRE POST
+   PRE POST
+Speed
+  Stop
+  Lights
+ MaxSp
+ AvgSp
+   P1
+ 94 56
+ 81 88
+ 75 100
+ 75 97
+ 80 90
+ 80 100
+ 41.9 48.3
+ 40.2 44.8
+ 22.8 25
+ 22.9 21.2
+  P2
+ 1
+ 94
+93
+50
+93
+50
+90
+81
+ 100
+ 93
+ 56
+ 87
+ 50
+ 74
+ 93
+ 100
+ 93
+  0
+ 93
+ 25
+ 68
+ 93
+ 72
+ 43
+100
+ 93
+ 47
+ 90
+ 68
+ 80
+ 93
+100
+ 93
+ 80
+ 77
+ 57
+ 100
+ 97
+ 80
+ 57
+100
+ 87
+ 97
+ 40.8 38.4 51.3 39.5 51.7 38.2 41.5
+ 39.9 36.9 47.7 34.5
+52 52.1 41.2
+ 22.5 16 25.1 18.7 25.6 21.4 18.5
+ 20.9 18.4 26.1 18.5
+22 24.5 18.5
+      2
+3
+4
+5
+6
+7
+                 AVG
+78.71
+79
+67.43
+73.29
+82.86
+88.29
+43.06
+43.47
+21.114
+ 21.27
+  STDEV
+ 20.1
+ 19.54
+  39.52
+22.43
+  14.25
+15.68
+  5.889
+7.149
+  3.5784
+3.11
+                                                          Table 1 – Game-based Simulator Implementation Results from Traffic Safety course cohort
+At this junction, we should mention the notion of simulator acclimation – or in our case, the absence of, which likely had a strong adverse impact on our results. In general practice, it is wise to offer a simulator operator a period of practice or “acclimation” within a simulator to become familiar with the input controls, the cabin, the motion/visual/audio cues, and the overall “feel” of the simulator. Due to course time constraints, we decided to omit what we had originally intended to be a 5 minute acclimation drive (for each participant), and instead reasoned that the “Baseline” drive could also serve double-duty as a sort of acclimation period. Unfortunately, this likely means that any performance improvement that would have been viewed “Pre” and “Post” drives has likely been completely attenuated in our implementation. Drivers, on the whole, are just learning the simulator during the “Pre” drive (in addition to performing their safe driving duties, as requested), and therefore, on the whole, perform decidedly better on the “Post” drive, despite the distractions intentionally present during that excursion.
+If we decompose our observations of the results into individual driver performance, we perhaps gain a bit more insight as to what is taking place. Looking at the “Speed” scores among our 7 student cohort, we notice that scores increased (from Pre to Post) for three of the participants (#1, 3, and 7), and remained the same for two (#2 and 5), which could indicate a partial trend of improved compliance with abiding by posted speed limits (i.e., when driving distracted). This theory is partially supported by the fact that maximum excursion speeds were reduced for five (#1, 2, 3, 4, and 7) out of the seven members of our cohort, and average speeds were reduced for three of the participants (#1, 4, and 5) and remained the same for one (#7). Generally speaking, it seems that many participants attempted to drive slower and more conservatively during the “Post” drive, when they knew in advance that they would be “Distracted”. Performance variations, however, may have been largely offset by the “acclimation” effect (outlined above), otherwise the discrepancy in performance scores (between Pre/Post) would have likely been much larger.
+Furthermore, our feeling is that the approach utilized was perhaps too ambitious given the physical driving course (Figure 6) that we selected. To attempt to examine a state of cognitive distraction (amidst not one, but TWO complex cognitive distractions) would have been much better suited for a course of much longer physical length
+2016 Paper No. 38 Page 9 of 11
+
+(e.g., 10 miles) and overall experiment duration (e.g., 20-30 minutes) than was deployed here. Upon reflection, it might also be beneficial to consider an environment with fewer external stimuli. In other words, a virtual driving excursion that is completely absent of traffic lights, stop signs, traffic vehicles, and other driving “landmarks” (and other mitigating factors) might have been more conducive to inducing the pure state of cognitive distraction that we sought. Likewise, in attempting to discern some of the prevalent patterns in our data, we are simultaneously observing the detrimental impact of having a cohort size that is too small to draw any conclusions with any statistical significance.
+CONCLUSION AND FUTURE WORK
+In this paper, we presented a detailed description of a game-based driving simulation environment intended for education and experiential learning. We focused on technical development details for the driving simulation environment, including: input device capture from human participants, scene graph and visualization model design, motion and sound cues, and an accompanying scoring model to provide drivers with performance feedback. As described in this paper, the environment development involved numerous aspects of physics-based modeling, including the design of appropriate simulation models for vehicle dynamics (i.e., generating realistic virtual vehicle motions based on user input), as well as an artificially intelligent traffic model (i.e., to provide realistic traffic flow in the vicinity of the human participant). The implementation focus of this work was a simulation to induce and measure a state of internal distraction while driving for a graduate Traffic Safety course curriculum. A high-level overview of the observed results were presented here. Preliminary analysis of the results indicates that many drivers in the cohort were attempting to drive slowly and more conservatively during the “Distracted” drive. However, any major deviations in performance between the Pre/Post drives were, in our estimation, largely attenuated by numerous factors, including the adverse impact of NOT having an acclimation drive, and an experimental design (e.g., two complex distraction presented during a course with relatively short duration, and a number of potentially mitigating stimuli) that was too ambitious for a graduate course exercise.
+The primary relevance of this work to MODSIM is summarized as follows:
+ For the benefit of the Visualization and Gamification track, we presented the design, development and pilot
+implementation of a game-based and motion-based simulation environment as an educational framework within
+which to analyze issues pertinent to Traffic Safety. The focus here is cognitive distraction during a driving task.
+ Furthermore, the content of this paper emphasizes two of the prevailing Conference Themes: Better Living Through Simulation (i.e., the described tool will enable a greater understanding of the mechanisms behind internal distractions while driving, and could have far-reaching benefits on public health and transportation safety), and Lifelong Learning (i.e., gamification of instruction materials tends to enhance motivation of the trainee, which subsequently provides the educator with a greater likelihood of achieving the training objectives).
+We conclude with numerous suggestions for future work. As suggested in the “Experiment Description” section, many experimental results were beyond the scope of this paper. In planned future dissemination of this work, we will report details from a comprehensive statistical analysis of the different distractor types presented in this paper, and a thorough comparison of “Baseline” vs. “Distracted” excursions. Likewise, as a component of similar initiatives, we will correlate quantitative data (as produced in real-time by the simulator) with alternative observations, including potentially valuable self-report data. In one related implementation currently in preparation (Hulme et al., 2016), we are applying a series of simulation exercises to correlate simulator performance to self- reported tendencies pertaining to: driving style and tendencies (e.g., errors, lapses, and violations) (Parker et al., 1995), learning style preferences (Bixler, 1985), and/or video gaming tendencies for entertainment purposes (Magnussen et al., 2014). Using this data, our end goal is to determine if M&S-based experiential instruction is better suited towards certain types of drivers or learners. This knowledge could result in an improved understanding for how to maximize the effectiveness of the delivery of M&S in future training and education curricula.
+ACKNOWLEDGEMENTS
+The authors would like to acknowledge support from the School of Engineering and Applied Sciences (SEAS) at the University at Buffalo, past and ongoing technical support from Moog, Inc, as well as past and ongoing technical support from Dr. Edward Kasprzak of Millken Research Associates.
+2016 Paper No. 38 Page 10 of 11
+MODSIM World 2016
+
+REFERENCES
+Baird, B., Smallwood, J., Mrazek, M.D., Kam, J.W., Franklin, M.S., and Schooler, J.W., (2012). “Inspired by Distraction: Mind Wandering Facilitates Creative Incubation,” Psychol Sci. 2012 Oct 1;23(10):1117-22.
+Bixler, B., (1985). “Learning Styles Inventory”, (web link), http://www.personal.psu.edu/bxb11/LSI/LSI.htm Bourke, P., (2004). “Edge blending using commodity projectors”, (online tutorial),
+http://paulbourke.net/texture_colour/edgeblend/, published March, 2004.
+Bowles, R.L., Parrish, R.V., and Dieudonne, J.E., (1975). “Coordinated Adaptive Washout for Motion Simulators,”
+Journal of Aircraft, 12(1), pp. 44–50.
+Erie Insurance, (2013). “Deadly Driving Distractions”, Report Summary Infographic,
+https://www.erieinsurance.com/-/media/files/distracteddrivinginfographic
+Galéra, C., Orriols, L., M’Bailara, K., Laborey, M., Contrand, B., Ribéreau-Gayon, R., Masson, F., Bakiri, S., Gabaude, C., Fort, A., Maury, B., Lemercier, C., Cours, M., Bouvard, M-P., and Lagarde, E., (2012). “Mind Wandering and Driving: Responsibility Case-control Study”, BMJ 2012; 345 doi: http://dx.doi.org/10.1136/bmj.e8105.
+Glynn, S., (2012). “Mind Wandering Increases Crash Rate”, Medical News Today, (web link), http://www.medicalnewstoday.com/articles/254036.php, published December 12, 2012.
+Golshani, N., Sarwar, T., Jordan, G., Anastasopoulos, P., and Hulme, K.F., (2015a). “Statistical Analysis of the Effect of Music on Aggressive Driving Behavior: Driving Simulation Study”, Road Safety & Simulation International Conference, October, 2015, Orlando, FL.
+Golshani, N., Anastasopoulos, P., and Hulme, K.F., (2015b). “A Random Parameters Bivariate Probit Analysis of Perceived and Observed Aggressive Driving Behavior: A Driving Simulation Study”, 94th Annual Meeting of the Transportation Research Board, Washington, D.C., January, 2015.
+Guilford, J.P. (1967). The Nature of Human Intelligence. New York: McGraw-Hill.
+Hampton, W., (2013). “Just How Dangerous Is Daydreaming While Driving?,” Popular Mechanics, (web link),
+http://www.popularmechanics.com/cars/how-to/a9378/just-how-dangerous-is-daydreaming-while-driving-
+15935216/, September 17, 2013.
+Hulme, K.F. Morris, K.L., Anastasopoulos, P., Fabiano, G.A., Frank, M., and Houston, R., (2015). “Multi-measure
+Assessment of Internal Distractions on Driver/Pilot Performance”, The Interservice/Industry Training,
+Simulation and Education Conference (I/ITSEC), Orlando, FL, December, 2015.
+Hulme, K.F., Kasprzak, E.M., and Morris, K.L., (2016, abstract submitted). “Correlation of Game-based
+Experiential Education to Self-reported Driving and Learning Styles”, The Interservice/Industry Training,
+Simulation and Education Conference (I/ITSEC), Orlando, FL, December, 2016.
+National Highway Traffic Safety Administration (NHTSA), (2015). “Facts and Statistics”, available from:
+http://www.distraction.gov/get-the-facts/facts-and-statistics.html.
+Johnson, R., (2012). “Open Source POSIX Threads for Win32”, https://www.sourceware.org/pthreads-win32/,
+Current Release, May 27, 2012.
+Kane, M.J., and McVay, J.C., (2012). “What Mind Wandering Reveals about Executive-Control Abilities and
+Failures”, Current Directions in Psychological Science 2012 21: 348, doi: 10.1177/0963721412454875. Killingsworth, M.A., and Gilbert, D.T., (2010). “A Wandering Mind Is an Unhappy Mind”, Science 12 November
+2010: vol. 330, no. 6006, p. 932, doi: 10.1126/science.1192439.
+Magnussen, R., Hansen, S.D., Planke, T., and Sherson, J.F., (2014). “Games as a Platform for Student Participation
+in Authentic Scientific Research”, Electronic Journal of e-Learning, Volume 12, Issue 3.
+Parker, D., Reason, J.T., Manstead, A., and Stradling, S.G., (1995). “Driving Errors, Driving Violations and
+Accident Involvement,” Ergonomics, 38, 1036 – 1048.
+Raghuwanshi, V., Hulme, K.F., Salunke, S., and Hou, Y., (2014). “Development of a Microscopic Artificially
+Intelligent Traffic Model for Simulation”, The Interservice/Industry Training, Simulation and Education
+Conference (I/ITSEC), Orlando, FL, December, 2014.
+Romano, R., (2003). “Non-linear Optimal Tilt Coordination for Washout Algorithms,” AIAA Modeling and
+Simulation Technologies Conference and Exhibit, Austin, TX., AIAA 2003-5681.
+Smallwood, J., Obonsawin, M.C., and Heim, D., (2003). “Task Unrelated Thought: the Role of Distributed
+Processing”, Consciousness and Cognition 12 (2): 169–189.
+White, N., (2013). “Think You Know All About Distracted Driving? Think Again, Says AAA”, AAA Newsroom
+(web link), http://newsroom.aaa.com/2013/06/think-you-know-all-about-distracted-driving-think-again-says- aaa/, press release on June 12, 2013.
+MODSIM World 2016
+           2016 Paper No. 38 Page 11 of 11

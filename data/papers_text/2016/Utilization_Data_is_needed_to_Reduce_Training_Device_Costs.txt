@@ -1,0 +1,182 @@
+Utilization Data is needed to Reduce Training Device Costs
+Julie A. Kent Raytheon Company Orlando, FL Julie_A_Kent@Raytheon.com
+ABSTRACT
+Army trainer maintenance tends to be based on a preventative maintenance schedule supplied by the trainer manufacturer and planned based on achieving standards of operational availability. These schedules do not take into account actual delivered usage. The Army can reduce costs by tying the maintenance of training systems to the use of the systems. Although there are many ways in which usage can be tracked, some combinations of metrics are more closely correlated to the need for corrective action maintenance. Selection of the most appropriate measure or set of measures often depends on the design of the training device. Generally this selection can best be determined based onhistoricaldata. Recordsofactualdeliveredusagearenecessarybecausethesevaluesoftendifferfromtheexpected usage. In order to reduce maintenance costs while improving training delivery, actual use of the training device needs to be collected.
+ABOUT THE AUTHOR
+Julie Kent has been working in systems integration for over 20 years. She moved to Orlando ten years ago taking a position with Raytheon. Julie worked database upgrades and integration in support of training exercises at the National Training Center NTC, Joint Readiness Training Center (JRTC) and Joint Multinational Readiness Center (JMRC). She moved on to integrate Commercial-off-the-Shelf (COTS) products to create a management information system that supports cross platform work order management and life-cycle support. She currently serves as a Sr. Principal Systems Engineer in the Global Training Solutions Mission Area of Raytheon Intelligence, Information and Services. She recently completed a certificate in cognitive science from the University of Central Florida, exploring how availability of data may influence decision making. Previously she was granted an MBA from the University of Baltimore, Master’s degree in Computer Science from UMBC and Bachelor’s degree in Electrical Engineering from Virginia Tech.
+2016 Paper No. 23 Page 1 of 9
+© COPYRIGHT (2016) RAYTHEON COMPANY
+This document does not contain technology or technical data controlled under either the U.S. International Traffic in Arms Regulations or the U.S. Export Administration Regulations.
+MODSIM World 2016
+
+Utilization Data is needed to Reduce Training Device Costs
+Julie A. Kent Raytheon Company Orlando, FL Julie_A_Kent@Raytheon.com
+BACKGROUND
+The goal of maintenance is to maximize the service life that can be gained based on the intersection between rising maintenance costs and the capital investment to replace that equipment (Bethuyne, 1998; Hartman & Tan, 2014). There are numerous models which may be used to calculate the most effective juncture to perform maintenance. Table 1, Types of Maintenance Models, shown below, provides a summary of various maintenance models.
+Table 1. Types of Maintenance Models
+MODSIM World 2016
+     Types of Maintenance Models
+      Corrective Maintenance
+    Occurs after failure and restores the equipment to working condition
+     Time Based Maintenance
+   Occurs based on clock or calendar intervals to prevent failures
+      Use Based Maintenance
+       Occurs after a measured quantity of use to prevent failures
+    Inspection Based Maintenance
+ Inspections are performed at regular intervals and maintenance is performed when an inspected value is not within specifications
+      Condition Based Maintenance
+       Sensors on equipment report on indicators and maintenance is performed when a value is not within specifications
+    Reliability Centered Maintenance
+ Detailed analysis of previous failures indicates maintenance which should be performed to prevent maintenance indicators from leaving normal parameters. Maintenance is performed to keep all indicators in a safe zone where failure is unlikely to occur.
+      Predictive Maintenance
+       Detailed analysis of previous failures, machine state, environmental data and common usage patterns is conducted to indicate when preventive maintenance should be performed. Robust statistical models are developed to determine optimal maintenance intervals
+  The earliest maintenance model was based strictly on corrective actions which occur after something stopped working correctly. In order to prevent breakdowns and the associated loss of use, preventive maintenance programs were initiated. Preventive maintenance programs are generally time based, with maintenance occurring after a specific time interval. However, it is not uncommon for other usage parameters to determine the preventive maintenance interval.
+ The preventive maintenance interval for an automobile is determined by distance, typically the number of miles on the odometer.
+ In production lines, the preventive maintenance interval for a machine is determined based on the number of products created by a machine.
+ The preventive maintenance interval for machines in intermittent operation, such as air compressors, is measured by the number of hours the machine is in operation.
+ In other situations the preventive maintenance interval is based on the number of hours a device operated under a load, for example the number of hours a computer runs an algorithm rather than just the number of hours it has been powered on.
+Newer models of maintenance are based on machine condition. Condition could be based on periodic inspection or on output from sensors. Changes in the values being monitored alert personnel to changes in machine operating state
+2016 Paper No. 23 Page 2 of 9
+
+that precede a failure. Determining the criteria that change prior to a failure is essential to this type of modeling. The advent of computers and mathematical models to track sensor data and equipment changes make it easier to locate appropriate criteria (Bouvard, Artus, Bérenguer, & Cocquempot, 2011).
+Reliability-centered maintenance is a structured process for determining preventive maintenance intervals. Safety related domains, such as aircraft maintenance, often use this model. Key to the implementation of reliability-centered maintenance is the collection of information on “operating experience from the actual system” (Rausand & Vatn, 2008, p. 82). Optimal reliability centered preventive maintenance intervals require detailed analysis of the modes of failure and the causes of failure particular operating conditions. This type of data driven maintenance policy involves significant data collection starting with normal operation and use patterns. Additionally, a consistent hierarchy and set of failure modes must be established for each system being analyzed (Rausand & Vatn, p. 90).
+Various industries apply these maintenance models differently. In manufacturing there is an emphasis on keeping the entire facility in production. In this environment preventing failure and minimizing down time has direct cost benefits. The utilization of a particular portion of the manufacturing line directly impacts the output of the entire line. In other cases, such as fleets of vehicles, utilization of a particular vehicle may be less consistent with the overall utilization of the fleet. The newer vehicles may get more use, but the older vehicles are still needed to maximize revenue. Studies on agricultural tools show increased use does not increase maintenance costs and the overall life cycle costs are improved by increasing the utilization of the tools (Lips, 2013). The aircraft industry, motivated by safety concerns, moved to a reliability centered maintenance model with large setup costs, but overall improvement in operations.
+Army Training Device Maintenance
+Expectations regarding Army Training device availability are often described in terms of contract performance factors. Maintenance expectations for the different kinds of devices may depend on the contractor performance factor (CPF) associated with each device. Some example CPF categories are summarized in Table 2 below.
+Table 2. Contractor Performance Factor
+MODSIM World 2016
+    CPF
+   Life Cycle Contractor Support or Turn Around Time Requirement
+     0
+    90 percent Operational Availability (AO)
+    1
+     80 percent AO
+     2
+  Return to Full Operational Capability within 12 hours (non-working days excluded)
+    3
+   Return to Full Operational Capability (FOC) within 24 hrs (non-working days excluded)
+     4
+      Return to FOC within 2 Days (non-working days excluded)
+    5
+ Return to FOC within 15 Calendar Days
+     6
+      Return to FOC within 30 Calendar Days
+    7
+   Deployed on Ships
+     8
+  Temporary Storage
+    9
+     On Demand Availability
+     10
+     Long Term Storage
+  In addition to meeting CPF, the maintenance contractor is often required by contract to perform preventive maintenance on many devices. Preventive maintenance requirements are generally based on manufacturer recommendations, primarily time based intervals. Contract specifications may dictate the type of maintenance conducted, but this is irrespective of any relationship between preventive maintenance and operational availability. With a few exceptions, the maintenance contractor does not have direct access to parameters to track the use of the devices. Therefore,adevicereceivespreventivemaintenanceeveniflackofuseprecludestheneedformaintenance. Alternatively, devices which are used extensively may become less reliable than they would be if they had a shorter interval between preventive maintenance actions. With access to usage information, the maintenance contractor could perform more analysis on these conditions. In addition, life cycle analysis for replacement of devices or upgrading of devices would benefit from utilization information.
+2016 Paper No. 23 Page 3 of 9
+
+Another valuable trend in maintenance is design for maintainability. This, too, requires information on historical failures in combination with actual use to recognize patterns. Poorly designed and seldom used devices will demonstrate few failures; but the lack of failures without data on use is misleading. Continuing to produce devices with the poor design would clearly be detrimental.
+Army Training Device Utilization
+Army training is organized into in the Live, Virtual, and Constructive training domains (350-1: Army Training and Leader Development, 2009). Constructive training is computer based training dealing with strategy and tactics of large troop movements. Virtual training involves immersive simulators training individuals and small groups to handle specific operational scenarios. These simulators mimic the actual equipment the soldiers will use, but operation of a simulator is less costly and less hazardous than operation of the actual equipment. These simulators teach vehicle use, weapon handling, and human interaction. Live training uses a range to put soldiers in combat conditions. Live training often uses the Multiple Integrated Laser Engagement System (MILES) rather than fully operational weapons to allow soldiers to conduct mock battles and train in an environment similar to what they will experience in combat. Alternatively, live training may be completed with operational weapons and live ammunition in carefully constructed training ranges. Live training typically includes larger formations and more realistic settings than Virtual training.
+The Army has many different kinds of training devices within each domain. Often, these devices have been engineered using commercial off the shelf (COTS) products to reduce overall costs. These devices are essential to providing a well-trained military force, but the amount of use of any particular device varies based on changing military needs. The curriculum and pace of training changes based on troop deployment, specific missions, government funding, weather, and changing world events. The devices are often used in various harsh environments including extreme heat, extreme cold, wind, sand, and high humidity. For additional information on how the Army uses training devices see `(Landry & Fausnaugh, 2012) and (Hoffman, 2011). While tactical devices are packaged to support use in harsh environments, the COTS products will fail more frequently than they would in more standard operating conditions as they are not designed for harsh environments. Materials may expand due to extreme heat or electrical components may fail due to humidity. Extreme changes in the environment cause increases in failures. Even in expected conditions, failures can be analyzed to improve designs and increase device effectiveness.
+Training Device Operations
+The utilization and failure data collected for this paper represent a Live Training device which supports collective maneuver training for platoon through battalion sized units. The system is installed where the unit is resident minimizing travel and logistics costs for the unit, but adding to the maintenance costs. This training device provides position location and weapons effects data for real-time exercise monitoring and After Action Review (AAR). The device supports force-on-force and force-on-target training across the full spectrum of operations so there are multiple scenarios which may be used.
+The device is interoperable with other external systems through Distributed Interactive Simulation (DIS), High Level Architecture (HLA) or Test and Training Enabling Architecture (TENA) protocols. The device includes a multiple component instrumentation system with many points of failure. The components include computers, radios transmitters, base station trailers and large batteries which may be a point of failure.
+As shown in Figure 1 below, there is a high degree of interaction between the units using the training devices and the support team. Battle plans and scenario of the operation are needed to ensure proper set up of the system. Antennae’s need to be set in place 24 hours prior to an exercise. Generators and exercise controllers need to be installed at proper locations. Battle rosters have to be linked up with radios for tracking and other support requirements need to be refined with the support team.
+2016 Paper No. 23 Page 4 of 9
+MODSIM World 2016
+
+Figure 1. Device Operations and Support
+The most common use of this device is in support of a Situational Training Exercise (STX) at either a company or battalion level. A different support package is required depending on the level of the exercise. In general a battalion exercise is almost 3 times as long as a company exercise and requires more operators to support the additional number of personnel involved. Maintenance needs may be different based on the length of time the equipment is used in the battalion exercise.
+Although CPF may vary by location, the device is generally maintained at CPF 9. Monthly maintenance on the radios, batteries and the instrumentation system is the key to the success of the program. The only way to ensure that a radio is operating is to power the system up and see if the radio is visible on the tracking system. This requires weekly set- up and operation of the system and a tracking system for verification of all radios assigned to the system. A routine battery charging procedure is also required to maintain the batteries at a working level. Currently, a rotating maintenance program is in place and the maintenance team is co-located with the radios and batteries.
+In addition to this preventive maintenance, the team also performs corrective maintenance when there is a failure. In addition, as the design requires the system to be up and tracking to check the radios for proper operations, the warehouse sometimes receives broken equipment back which is issued again before the failure is reported. The design often means there is a delay between the time equipment failed and the time when it is sent for repair.
+METHODS
+To assist in estimating maintenance costs over the useful operating life of devices, Raytheon creates life cycle workbooks showing various maintenance expenses. To determine if maintenance needs correlated with utilization of the devices, Raytheon elected for some types of devices to compare utilization metrics with maintenance activities. Devices selected were ones where utilization data collection could be completed within the scope of regular operational responsibilities. This usually meant they were collected only for devices where Raytheon also staffed device operators in addition to maintainers. The specific parameters recorded were determined based on the operation and maintenance activities being performed on the devices. Different types of devices have different staffing requirements and automation may be required to capture utilization of devices that do not require a human operator.
+Raytheon elected to collect data on utilization presented in this paper because existing operational procedures provided a means to capture this data. Using Excel, operators at each location collect data on how many people use the system,
+2016 Paper No. 23 Page 5 of 9
+MODSIM World 2016
+ 
+how many days the system is used each month, use of the instrumentation system, and different types of unavailability. This produced a variety of parameters which could be used for comparison with maintenance activity.
+Raytheon is responsible for documenting maintenance on many different training devices. This documentation is accomplished via work orders on the repairs made on the system. Work orders are created for both preventive and corrective maintenance. The work order process is shown in Figure 2 below. For this study, the work orders related to the devices included in the study were pulled from the data warehouse for comparison with utilization. No differentiation was made for the cost or effort for a particular work order.
+Figure 2. Maintenance and Work Order Process
+In many instances, Raytheon performs life cycle analysis of maintained training devices. This includes tracking parts marked obsolete by the manufacturer, upgrading components as required, and analyzing maintenance activities. As part of the analysis process, the number of preventive and corrective work orders is tracked over time.
+In this study historical work order data for a particular type of training device is compared with the different utilization metrics that are captured. This data is the summation of metrics from several different individual installations at different locations. The results are given graphically. Visual examinations of the graphs is used to determine the best correlation between the captured metrics and the device failures.
+ANALYSIS AND RESULTS
+Figure 3 shows the total number of work orders on the equipment for the period from May 2014 through April 2015. These are separated into corrective action and preventive maintenance. Current analysis concerns the effect of utilization on the need for corrective maintenance. Further analysis could be done to see if variations in preventive maintenance based on utilization affect the need for corrective maintenance.
+MODSIM World 2016
+ 2016 Paper No. 23 Page 6 of 9
+
+MODSIM World 2016
+  200 150 100
+50 0
+COR PM
+CORRECTIVE REPAIR & PREVENTIVE MAINTENANCE
+                                    Figure 3. Recorded Work Orders
+For this type of device, utilization data is available from the data collection being performed at the sites. The primary means of tracking utilization at the current time is based on the availability of the device. Graphically comparing the work order data with the percentage of device availability results in the chart shown in Figure 4 below. The availability is the percentage of scheduled training time during which the device is available for use. Availability dips below 100% when maintenance is required during scheduled training time. Availability may also drop if there are insufficient personnel to operate the device, but that is rare. Figure 4 shows some similarity between work orders and availability, but the lack of variation in availability makes it hard to determine the strength of the correlation.
+  40 30 20 10
+CORRECTIVE REPAIR VS AVAILABILITY CHART
+100.00% 95.00% 90.00% 85.00%
+COR Availability
+           0                             80.00%
+Figure 4 Recorded Corrective Work Orders versus Availability
+Next the work orders are compared to the percentage of the available training time the training device was in use for training. The results of this comparison are shown in Figure 5 below. While there is an apparent delay between increasing utilization and increased corrective action work orders, there does appear to be a correlation over time. The lag in the work order change can be attributed to the delay in reporting failures after a training exercise. A change in the equipment design to facilitate recognition of component failure without full system operation could reduce this lag. Changes to operational procedures are often employed to help keep the lag at a minimum ensuring the most equipment is available for training purposes.
+2016 Paper No. 23 Page 7 of 9
+May-14 Jun-14 Jul-14 Aug-14 Sep-14 Oct-14 Nov-14 Dec-14 Jan-15 Feb-15 Mar-15 Apr-15
+Count of Work Orders
+Count of Work Orders
+Percent Availability
+
+MODSIM World 2016
+  CORRECTIVE REPAIR VS UTILIZATION CHART
+40 30.00%
+     35
+30
+25
+20 15.00%
+15 10.00%
+10 5
+        5.00% 0                             0.00%
+COR
+% UTILIZED
+25.00% 20.00%
+ Figure 5. Recorded Corrective Work Orders versus Utilization Percentage
+The final comparison is between the number of corrective work orders and the number of individuals who are trained using the device. This graph is shown in Figure 6. This does not state how long the people used the device, just the number of people who used it. Currently the length of time the device is used is not being collected, but future comparisons might include the number of hours in addition to the number of individuals. This could be used to determine how each variable influences the need for repairs.
+  40 30 20 10
+CORRECTIVE REPAIR VS NUMBER TRAINED CHART
+1000
+800
+600
+400 COR 200
+          00
+# TRAINED
+              Figure 6. Work Orders versus Number of Individuals Trained
+Several different methods of tracking utilization are currently recorded. There are additional metrics such as total hours of use which might be useful to collect. Future studies could consider the type of work orders. There may be specific failures which occur just from being powered on while others occur as a result of individuals using the system. Some failures may be tied to particular scenarios while others which occur just due to physical occupancy.
+CONCLUSION
+In the case of this type of training device, the metric most closely correlated with the need for corrective maintenance is the number of individuals trained. This means that any forecasting of the number of individuals expected or the rate of training can be used to estimate trends in the need for maintenance technicians and parts. Over a longer term, the trends in the size of the force and the training requirements can assist in planning appropriate funding for training device maintenance. This means the cost of maintenance can be tied more closely to the increases and decreases in training needs.
+2016 Paper No. 23 Page 8 of 9
+May-14 Jun-14 Jul-14 Aug-14 Sep-14 Oct-14 Nov-14 Dec-14 Jan-15 Feb-15 Mar-15 Apr-15
+May-14 Jun-14 Jul-14 Aug-14 Sep-14 Oct-14 Nov-14 Dec-14 Jan-15 Feb-15 Mar-15 Apr-15
+Count of Work Orders
+Count of Work Orders
+Count of Number Trained
+Percentage of time Utilized
+
+While the number of individuals trained is the most closely correlated metric for this particular type of device, other devices may have different metrics. It is important to perform an analysis for each family of devices to determine the most appropriate metric. Using an appropriate measure for utilization, corresponding trends in maintenance time and replacement parts can then be established.
+ACKNOWLEDGEMENTS
+Many thanks to Mr. Bob Moffett, Raytheon, for his time in explaining operation and data collection for these devices. I would also like to thank Dr. Patricia Bockelman of University of Central Florida for encouraging me in this work.
+REFERENCES
+350-1: Army Training and Leader Development. (2009). Washington, DC:: Army Regulation.
+Bethuyne, G. (1998). Optimal replacement under variable intensity of utilization and technological progress.
+Engineering Economist, 43(2), 85.
+Bouvard, K., Artus, S., Bérenguer, C., & Cocquempot, V. (2011). Condition-based dynamic maintenance operations
+planning & grouping. Application to commercial heavy vehicles. Reliability Engineering & System Safety,
+96(6), 601-610. doi:http://dx.doi.org/10.1016/j.ress.2010.11.009
+Hartman, J. C., & Tan, C. H. (2014). Equipment Replacement Analysis: A Literature Review and Directions for Future
+Research. Engineering Economist, 59(2), 136-153. doi:10.1080/0013791X.2013.862891
+Hoffman, D. W. (2011). Vehicle recovery training at JMRC: the Joint Multinational Readiness Center has established
+a program to teach unit personnel to conduct recovery operations in a combat environment, 26.
+Landry, C., & Fausnaugh, J. B. (2012). Combat training center and training unit partnership: supporting and designing
+pre-deployment training events for a mixed field artillery battalion, 58.
+Lips, M. (2013). Repair and maintenance costs for nine agricultural machine types TRANSACTIONS OF THE ASABE,
+56(4), 1299-1307.
+Rausand, M., & Vatn, J. (2008). Reliability Centred Maintenance. In K. A. H. Kobbacy & D. N. P. Murthy (Eds.),
+Complex system maintenance handbook. London: Springer.
+MODSIM World 2016
+ 2016 Paper No. 23 Page 9 of 9

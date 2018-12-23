@@ -1,0 +1,151 @@
+Development and Evaluation of a High Fidelity Anatomical Model for the Humeral Head Intraosseous (IO) Procedure
+Teresita M. Sotomayor, Ph.D. ARL-HRED ATSD Orlando, Florida teresita.m.sotomayor.civ@mail.mil
+Angela M. Alban SIMETRI Winter Park, Florida angela@simetri.us
+ABSTRACT
+Edward J. Stadler SIMETRI Winter Park, Florida ed@simetri.us
+At point of injury, military medical personnel are faced with traumatic life-threatening injuries that often need immediate vascular access for the delivery of fluids and medications. In a pre-hospital setting, lack of immediate vascular access during patient resuscitation and stabilization can be fatal. When traditional methods of vascular access (e.g., intravenous (IV)) are difficult or infeasible, alternative methods are vital to access the circulatory system to deliver fluids and medications. Humeral Head Intraosseous infusion (HHIO) is the process of delivering fluids directly into the bone marrow space of the humerus to provide a non-collapsible entry point into the circulatory system. This technique has proven to be extremely effective when used in emergency situations where intravenous access is not feasible. Intraosseous infusion for emergency purposes has a long history of use dating back to the 1920s. The use of the IO space reached a peak during World War II, when it was used by combat medics to assist soldiers exhibiting signs of hemorrhagic shock. IO re-emerged as a viable alternative during recent conflicts due to advances in technology and is part of the Tactical Combat Casualty Care (TCCC) guidelines when IV access is not feasible. This paper will discuss the user-centric methodology and challenges encountered when developing a high fidelity model to support the training of medical personnel during the small business innovative research (SBIR) Phase II. The feedback received as a part of the usability study was utilized to guide the Phase II design.
+ABOUT THE AUTHORS
+Dr. Teresita Sotomayor is a chief engineer and subject matter expert in the area of severe trauma simulation at the U.S. Army Research Laboratory (ARL) Human Research and Engineering Directorate (HRED) Advanced Training and Simulation Division (ATSD). Her expertise in user-centric design and technology effectiveness evaluations has been instrumental in the development and transition of modeling and simulation solutions in support of medical training. She is a graduate of the University of Puerto Rico (Mayaguez Campus) with a degree in Industrial Engineering. She holds a Master of Science degree in Operations Research Stochastic Simulation from The George Washington University and a Doctorate in Modeling and Simulation from the University of Central Florida. She is a member of the Army Acquisition Corps since 2003 and has over 26 years of experience in the modeling, simulation, and training domain.
+Ms. Angela M. Alban is President and CEO of SIMETRI, Inc., based in Winter Park, Florida. She has extensive experience in a wide range of disciplines (research, development, production, business development, and management), enabling her to oversee all SIMETRI initiatives, including medical training and treatment by merging medical science with modeling and simulation technology. Ms. Alban has a degree in Mathematics and Computer Science from Emory University and a Master of Science in Computer Engineering from the University of Central Florida. She completed the Defense Systems Management College Advanced Program Manager's Course to parallel 19 years of experience in the Simulation and Training Industry.
+Mr. Edward J. Stadler is a Systems Engineer with 27 years of experience in the simulation and training industry. He has served as Technical Lead and Chief Engineer for complex simulation and training programs over the past 17 years and has extensive experience in the full life cycle development and production of simulation systems and products. Mr. Stadler earned a Bachelor of Science degree in Electrical Engineering from the University of Central Florida. He is currently Chief Scientist with SIMETRI, Inc. based in Winter Park, Florida, and oversees the research and development of medical training technologies.
+2016 Paper No. 16 Page 1 of 9
+MODSIM World 2016
+
+Development and Evaluation of a High Fidelity Anatomical Model for the Humeral Head Intraosseous (IO) Procedure
+Teresita M. Sotomayor, Ph.D. ARL-HRED ATSD Orlando, Florida teresita.m.sotomayor.civ@mail.mil
+INTRODUCTION
+Angela M. Alban SIMETRI Winter Park, Florida angela@simetri.us
+Edward J. Stadler SIMETRI Winter Park, Florida ed@simetri.us
+The hazards of combat environments introduce new and heightened difficulties in performing medical procedures, especially the treatment of critical injuries. Treating severe trauma at the point of injury can be challenging for first responders given the tactical environment and constraints. For example, traumatic life-threatening injuries often need immediate intravenous (IV) access for the delivery of fluids and medications. When IV access is not possible, intraosseous (IO) infusion is an alternative technique to access the circulatory system (Drinker et al., 1922). Blood vessels within the bone marrow are typically concealed in a rigid bone structure. Therefore, unlike the body’s peripheral veins, the IO space does not collapse when the patient is in shock (Communicore, 2006). An IO insertion can be performed at several different points on a patient’s body depending on the equipment available and the injury location, including the sternum, the tibia, and the humeral head (Foex, 2000). Though IO was used with the U.S. military during the Second World War, its prevalence faded with the introduction of the plastic intravenous (IV) catheter. IO access re-emerged as a viable field alternative to IV fluid introduction during the recent conflicts in Iraq and Afghanistan (Mott et al., 2013). As of 2010, the U.S. Committee on the TCCC guidelines recommends using IO infusion in any resuscitation scenario in which IV access is not feasible (Tactical Combat Casualty Care Guidelines, 2015).
+The U.S. Army Research Laboratory (ARL) Human Research and Engineering Directorate (HRED) Advanced Training and Simulation
+Directorate (ATSD)
+This paper will discuss the user-centric methodology used and challenges encountered when developing a high fidelity model to support the training of medical personnel during Phase II. The feedback received as part of the usability study was utilized to guide the Phase II design.
+BACKGROUND
+During Phase I of the SIBR effort, the team developed a static, single arm model to assess the feasibility of developing a low-cost PTT to support humeral head intraosseous HHIO training. The resulting PTT allowed trainees to perform the entire procedure with the exception of positioning the arm prior to beginning, since the PTT arm is static. Figure 1 depicts the Phase I PTT that was delivered and allows the trainee to palpate the upper arm to identify and locate the humeral head, drill into the bone using the equipment mandated by the Army doctrine, aspirate the simulated bone marrow, and infuse fluids and medications. The Phase I SBIR focused on developing a PTT that was durable, realistic, and reusable.
+MODSIM World 2016
+ The Department of Defense’s increasing incorporation of and reliance on simulation for training of its warfighters is a viable and effective solution to provide training during a period of budgetary restraint. Economic austerity has
+ increased the focus on developing affordable innovations in life-saving technology.
+ has established partnerships with various organizations and facilities to develop and implement
+ affordable new technologies for simulation-based training environments to conduct Army medical training. A Small Business Innovative Research (SBIR) Phase II entitled “Humeral Head Intraosseous Training System” was exercised to assess the technical feasibility of developing a low-cost Part Task Trainer (PTT) to support training for military medical personnel. During Phase I, a prototype system was developed and evaluated with the user community (Sotomayor and Alban, 2015). Results of the evaluation indicated that a Phase II effort would result in a
+ usable training technology that could be transitioned to military and civilian first responders.
+2016 Paper No. 16 Page 2 of 9
+
+     Figure 1. HHIO Insertion PTT Prototype
+During Phase II of the SBIR effort, the focus is to develop a PTT that consists of a full torso, with two articulating arms, that can be positioned to practice all the necessary steps involved in performing the HHIO insertion procedure. The following overarching findings are being addressed as a part of the Phase II effort:
+• Improve the Phase I prototype PTT for practical use in the field.
+• Incorporate recommendations, findings, and new requirements elicited from military and civilian end users
+and Subject Matter Experts (SMEs) during Phase I.
+• Apply the Phase I technology to the creation of a HHIO training capability for Human Patient Simulators
+(HPS) currently fielded at the U.S. Army Medical Simulation Training Centers (MSTCs).
+• Simplify end-user operation, maintenance, and logistical support.
+• Identify and reduce cost drivers for better positioning in the commercial medical training device market.
+TECHNICAL APPROACH
+The team utilized a user centric approach to develop the initial concept and requirements for the HHIO PTT design. Incorporating the user community early on during the different phases of the program helped mitigate risks. The Phase I effort was divided in three distinct phases: requirements analysis, prototype development, and user evaluation.
+During Phase II, the team, working closely with the user community, revised the initial set of requirements by incorporating lessons learned from the Phase I effort. The HHIO procedure consists of a series of tasks that begin with correctly positioning the arm to facilitate procedure execution by identifying proper anatomical landmarks (Harcke et al., 2011). In order to complete the initial task, the PTT must include a full torso and two rotating and articulating arms, such that the user can practice locating the humeral head anatomical landmark and inserting the needle catheter (Figure 2).
+2016 Paper No. 16 Page 3 of 9
+MODSIM World 2016
+
+Figure 2. Humeral Head Anatomy
+User feedback emphasized that the final design of the PTT should allow for correct and incorrect positioning of the arm. When the arm is incorrectly positioned, the anatomical landmarks are not visible or as accessible as they would be when the arm is properly positioned. Since it is critical to provide a realistic experience to the user with opportunities for remediation, a task analysis of the learning objectives was conducted to finalize the requirements for Phase II. The generalized task process is depicted below in Figure 3.
+MODSIM World 2016
+ Greater Tubercle of the Humerus
+       Figure 3. Demonstration of the HHIO procedure on the PTT prototype
+Results from the task analysis done during the first phase of the program are summarized as follows:
+Terminal Learning Objective #1
+Given a casualty and the IO device in a combat situation, safely assemble and use the IO device in agreement with established protocols.
+Enabling Objectives
+• Identify IO device components and other required equipment.
+• Identify IO device capabilities and limitations.
+• Recognize cautions and warnings for use of the IO device.
+• Observe guidelines for device protection during transport or movement.
+2016 Paper No. 16 Page 4 of 9
+
+Terminal Learning Objective #2
+Given a casualty and the IO device in a combat situation, determine the conditions requiring the use of Humeral Head IO insertion procedure in agreement with the established protocols.
+Enabling Objectives
+• Recognize the benefits and contraindications of performing the Humeral Head IO insertion procedure on various patients.
+• Identify criteria for use of Humeral Head IO insertion procedure.
+• Distinguish between patients who do and do not require Humeral Head IO insertion procedure.
+Terminal Learning Objective #3
+Given a casualty and the IO device in a combat situation, demonstrate timely and appropriate Humeral Head IO insertion procedure in agreement with the established protocols.
+Enabling Objectives
+• Identify two acceptable anatomical landmarks for IO insertion, especially in heavily muscled patients and patients with excess adipose tissue at insertion site.
+• Apply proper method for locating the humeral head insertion site.
+• Identify the Proximal Humerus.
+• Determine the appropriate size needle for the patient.
+• Apply proper sterilization to site prior to insertion.
+• Demonstrate proper procedure to insert the IO needle.
+• Recognize the visible confirmation of adequate needle length.
+• Use proper technique to confirm that the needle is firmly seated in the bone.
+• Demonstrate proper removal of stylet.
+Terminal Learning Objective #4
+Given a casualty and the IO device in a combat situation, identify conditions for use of lidocaine. Determine the proper amount to administer and demonstrate proper procedure for delivery of the drug.
+Enabling Objectives
+• Determine patient’s responsiveness to pain.
+• Demonstrate proper procedures to follow for patients unresponsive to pain.
+• Apply institutional protocols to determine appropriate lidocaine dosage for patients responsive to
+pain.
+• Perform procedure while following guidelines to infuse lidocaine, flush the IO catheter and
+administer a subsequent dose of lidocaine after the flush.
+• Recognize signs of extravasation.
+Terminal Learning Objective #5
+Given a casualty and the IO device in a combat situation, demonstrate proper removal of the device.
+Enabling Objectives
+• Demonstrate proper placement of the arm to stabilize it for removal of the needle.
+• Demonstrate correct rotation direction to remove syringe from the needle hub.
+• Use proper technique to confirm site stabilization.
+• Apply proper dressing for sterilization.
+• Demonstrate proper disposal of needle with syringe.
+Terminal Learning Objective #6
+Given a casualty and the IO device in a combat situation, document injury and care in agreement with established protocols.
+2016 Paper No. 16 Page 5 of 9
+MODSIM World 2016
+
+Enabling Objectives
+• Demonstrate proper aspiration of fluid exchange occurs when a syringe or fluid bag is connected to humeral head incision site.
+• Apply medication quickly and with ease following medication administration protocols.
+• Document patient status and prognosis once procedure has been performed.
+Conducting the task analysis and gathering feedback from the user resulted in a comprehensive list of requirements that drove the concept for the phase II design.
+RESULTS
+User feedback was analyzed and compared against the learning objectives derived during the task analysis. In order to address the Phase I findings as well as meet the learning objectives, the team finalized the following Phase II goals derived in response to user feedback:
+• Expand the HHIO PTT into a complete torso with two fully articulating arms, allowing performance of the complete HHIO procedure on either side of the torso.
+• Add requested features from Phase I usability studies and focus groups, including support for sternal IO.
+• Add automation capability to simplify device set up and reset, reducing instructor burden.
+• Research and develop HHIO capability that can be integrated into existing HPS arms.
+• Create commercial-grade documentation for end users (Operation and Maintenance Manuals).
+• Research methods to lower lifecycle cost and ease of use/storage/transport.
+• Engineer the device design to facilitate manufacturing and production (commercialization).
+Usability testing of the Phase II device will take place iteratively throughout PTT development. Initial tests will be conducted prior to completing the PTT design. During testing, feedback will be gathered on the Phase II features. Test events will occur in time to incorporate user feedback into the final device. Final testing will occur once the HHIO PTT has been completed, to demonstrate its capabilities and readiness.
+Since conducting usability studies with participants across the continuum of care with military and civilian populations proved to be beneficial during Phase I, the same approach will be followed during Phase II. Phase II will culminate in a Training Effectiveness Evaluation (TEE) to evaluate and quantify the effects on training when incorporating this training device into a Program of Instruction (POI). At the end of Phase II, a final version of the commercially ready device, to include a retrofit kit for existing HPS and user / maintenance documentation, will be delivered and ready for transition to military first responders.
+Having provided a working prototype during Phase I of the SBIR allowed for the collection of feedback and design influence leading into Phase II. Normally this type of hands on feedback occurs much later in a Phase II SBIR effort. This user-centric approach coupled with early prototyping has provided validated feedback and design input for the Phase II efforts.
+CHALLENGES
+User feedback collected in Phase I of the SBIR and new requirements gathered during Phase II provided the initial targets for the PTT design but also identified constraints and challenges that must be addressed. As the design matures, assessments of early prototypes will provide opportunities for additional user feedback to improve the design. In addition, as part of the front-end analysis, a literature review of the HHIO procedure was conducted to include the following topic areas: removal of the catheter, effectiveness of an IO drill, vascularity of proximal humerus, humerus site identification, and the anatomy.
+Performing this empirically driven research during system design proved useful because it uncovered technical challenges that have to be addressed as part of Phase II. The fundamental design of the PTT is based on the anatomy of the arm and shoulder. The objective is to provide an immersive experience when performing the HHIO procedure on the PTT. As part of this research, it was important to study and evaluate the underlying skeletal structure and anatomical landmarks since these are critical in providing increased fidelity of the training experience. When
+2016 Paper No. 16 Page 6 of 9
+MODSIM World 2016
+
+conceptualizing the design, it was important to incorporate the lessons learned from previous work done on similar efforts. Shoulder joints are an important part of a PTT or HPS and require thorough analysis, but when coupled with the requirement to also provide a realistic humeral head anatomical landmark, the anatomy has to be the primary focus while also providing the functionality and durability required. As a result, it was important to research and consider the types of anatomical structures depicted in Figure 4 with the functional design to address the challenges anticipated with the shoulder joint anatomy and movement.
+Figure 4. Shoulder Anatomy Design Considerations and Analysis
+Lessons learned from previous work indicated that the design of the elbow joint was also critical. In the case of the HHIO PTT, the elbow and shoulder joints are especially important because the PTT arms need to bend at the elbow so that the entire arm can be rotated and placed over the umbilicus for proper protrusion of the humeral head. Achieving the desired range of motion (150 degrees) for the elbow joint proved to be a challenge due to the complexity of the joint and its interactions with the humerus bone. The range of motion was studied and compared against the usability of the PTT. Figure 5 depicts the elements considered in the design of the elbow joints.
+Figure 5. Elbow Design Consideration
+MODSIM World 2016
+     2016 Paper No. 16 Page 7 of 9
+
+Balancing accurate recreation of the shoulder and elbow joints with durability and cost factors is a major consideration as well. The shoulder and elbow need to work together as a system. Replicating the actual joint structures and connections may provide the most realistic movement but at the expense of durability and unit costs. Evaluation of the requirements is also a consideration to ensure the system is not over designed to provide full range of motion for the shoulder and elbow joints when only small movements are required to achieve learning objectives.
+Given the complexity of the form, fit, and function of these two joints, these are being modeled with 3D computer- aided design (CAD) software and then prototyped using a 3D printer to allow for thorough analysis and evaluation by medical subject matter experts (SMEs) prior to manufacturing the parts. Development of a highly realistic shoulder and elbow joints with correct anatomical landmarks is currently ongoing.
+Another challenge is providing a capability to rapidly reset the PTT for the next trainee or set of trainees. The design of the humeral head is of significant concern. Creating a product that can self-seal after each catheter insertion (drilling) event needs to be weighed against the issue of negative training that may occur if the material is too soft and does not provide the proper feedback to the trainee. If the material has the appropriate rigidness or strength, insertion near a previous trainees’ hole may cause erratic jerking of the drill if the needle were to jump to the path of least resistance left by a previous catheter insertion. Each of these factors are being considered in the Phase II prototype design and will be evaluated as the design matures and user feedback is gathered on these components. In order to address the challenge of a rapid reset of the device, several approaches are being considered. Materials research is underway to evaluate self-healing aspects of the insertion site and underlying fluid chambers. Design considerations for rapid removal and replacement of the humeral head are also being considered with regard to manufacturing complexity and life cycle cost of the PTT.
+CONCLUSIONS
+As a part of the Phase II effort, a task analysis was conducted to identify required capabilities for a more thorough and robust training capability. A new prototype was designed consisting of a full torso with anatomically correct landmarks facilitating proper training of the HHIO insertion procedure; this includes landmark identification, as well as proper and improper positioning of the arms. The team focused on researching and developing new materials that simulate tissue, allowing for improved fidelity and haptic feedback incorporating the necessary cues. The team focused on developing a PTT that was durable, realistic, and reusable, and will continue to advance the materials science and system design, such that the PTT supports a maximum number of IO insertions prior to maintenance or replacement.
+The work involved for the Phase I prototype has provided invaluable feedback in several design areas. Interaction with the user community during prototype development provided invaluable information that was incorporated into the design much earlier than a typical development lifecycle would normally allow. The Phase I prototype also provided a platform for early user testing of key subsystems at the beginning of the Phase II effort. As the Phase II prototype is developed, design questions can be evaluated at the subsystem level (Bone Density and self-healing materials, fluid interconnects, fluid pressure management). . The feedback from these subsystem level evaluations will be incorporated in the design to make sure that the PTT supports the established learning objectives. As the design is matured through Phase II, the new prototype will evolve into a closer representation of the final PTT. Relying on the collaboration with multiple user communities across the continuum of care in the military and civilian sectors will ensure that the resulting PTT can address training gaps and provide a commercially viable solution.
+2016 Paper No. 16 Page 8 of 9
+MODSIM World 2016
+
+REFERENCES
+Drinker, C. K., Drinker, K. R., & Lund, C. C. (1922). The circulation in mammalian bone marrow. American Journal of Physiology, 62(1).
+Foex, B. A. (2000). Discovery of the intraosseous route for fluid administration. Journal of accident & emergency medicine, 17(2), 136-137.
+Harcke, H. T., Crawley, G., Mabry, R., & Mazuchowski, E. (2011). Placement of tibial intraosseous infusion devices. Military medicine, 824-827.
+Mott, J., Hill, B., Parsons, D. (2013). Tactical Combat Casualty Care Handbook-13-10. Observations, Insights and Lessons. Center for Army Lessons Learned, Fort Leavenworth, KS: 66027
+Sotomayor, T. D., & Alban, A.M. (2015). Augmenting Training of the Humeral Head Intraosseous (IO) Procedure with a High Fidelity Anatomical Model. ModSim World. Virginia Beach, Va., 1-9.
+Tactical Combat Casualty Care (TC3) Guidelines (2015). Retrieved on September 1, 2015 from https://www.naemt.org/education/TCCC/guidelines_curriculum
+2016 Paper No. 16 Page 9 of 9
+MODSIM World 2016
