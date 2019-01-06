@@ -1,10 +1,1 @@
-The advantages and limitations of different terrain generation techniques that are often used to meet
-specific simulation requirements.
-visualization system.
-How source GIS data is loaded, stored and served up; how the earthâs surface and man-made objects are
-modeled; and how high resolution detail can be procedurally added to the scene on the fly.
-How different terrain techniques can be mixed to support different use cases and how correlation can be
-achieved across disparate simulations, even with dynamic terrains.
-  New techniques and technology that can achieve the desired goal of a ubiquitous, multi-purpose
- Iâll conclude by providing specific examples and applications that have been delivered using this new technology.
- 
+The advantages and limitations of different terrain generation techniques that are often used to meet specific simulation requirements. visualization system. How source GIS data is loaded, stored and served up; how the earths surface and man-made objects are modeled; and how high resolution detail can be procedurally added to the scene on the fly. How different terrain techniques can be mixed to support different use cases and how correlation can be achieved across disparate simulations, even with dynamic terrains.   New techniques and technology that can achieve the desired goal of a ubiquitous, multi-purpose  Ill conclude by providing specific examples and applications that have been delivered using this new technology.  
